@@ -47,3 +47,10 @@ Historical user Windows environment observed during NEW-V0003:
 "برای مرحلهٔ A، اجازه می‌دهی **فقط یک جست‌وجوی دستی و فقط‌خواندنی** با Python موجود روی همین **دو کپی غیرحساس قبلی** انجام دهیم و نتیجه را در PowerShell به‌صورت فارسی خوانا ببینیم؟ به‌صورت پیش‌فرض عبارت `Windows` را استفاده می‌کنیم؛ اگر عبارت دیگری مدنظر داری، همان را بگو. هیچ نصب یا تغییری در فایل‌ها انجام نمی‌شود."
 
 **Status at plan creation:** **NO USER APPROVAL TO RUN RECEIVED; NO PILOT EXECUTED; NO CODE IMPLEMENTED.** This file is a proposal/fixture for fresh approval, not a passed test.
+
+## 2026-10-21 USER APPROVAL UPDATE — bounded pilot now authorized, not yet run
+
+**User explicitly replied «بله» to the exact preceding consent question.** This authorizes **one manually user-executed read-only pilot** using the **two already approved non-sensitive Windows downloaded Markdown copies**, **query `Windows`**, existing Python 3.14.7 interpreter and existing extracted CAP-006 `docsearch_v0.py` program. Scope: ONE call with two explicit `--file` arguments; stdout-only human-readable Persian original lines, line numbers, file names and source SHA256; independent before/after SHA256 validation; PowerShell session-only temporary UTF-8 output encoding with restoration. No installation, network/cloud/API, account, GitHub/Notion write from test, saved report, original-file modifications, new dependency, elevated permissions, script changes or broader filesystem traversal approved.
+
+**Execution status: AUTHORIZED / NOT YET EXECUTED; awaiting user PowerShell console output.** This consent supersedes prior "not authorized to run" statements *for precisely this narrow one-off run only*. All other tests, code changes and future tasks still require separate authorization.
+
