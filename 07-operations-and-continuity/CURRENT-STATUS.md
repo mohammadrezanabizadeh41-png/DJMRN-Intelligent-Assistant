@@ -21,13 +21,19 @@
 - **پژوهش قبلی کاربر وارد و مستقلاً بازخوانی شد:** [SRC-0001](../08-project-knowledge-base/inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md) دقیقاً 607 خط/41,901 بایت و Blob `6e1fcf18ce4cc86f4c52f70107e434d639b6d9da` برابر نسخهٔ اصلی است؛ 9 مدخل KB-0001..0009 به‌صورت CURATED-UNVERIFIED در [INDEX](../08-project-knowledge-base/INDEX.md) ثبت شده است.** منبع با انتشار/نسخه و claim/verification ادعایی مخلوط نشده؛ هیچ نتیجه‌ای SELECTED نیست. قدم بعدی: gapهای دانشنامه/Applied را بررسی و در صورت ضرورت WQ0001 طراحی کنید.
 - نقشهٔ راه/Stack/فناوری منتخب تغییری نکرد؛ عملیات محلی، نصب و پژوهش Work جدید انجام نشده است.
 
+## پژوهش در حال انتظار — WQ0001 (2026-10-20)
+- کاربر صریحاً تحقیق تعیین **ترتیب کار** را درخواست کرده: قابلیت بدون Agent ابتدا، قرارداد حداقلی مدیریت منابع، manager کامل ابتدا، یا ابزار آماده، با سرعت رسیدن به نخستین خروجی و توسعه‌پذیری امن.
+- [درخواست پژوهشی WQ0001](../04-work-research-bridge/requests/WQ0001.md) به عنوان **REQUEST-COMMITTED / AWAITING USER DISPATCH TO WORK** ثبت شد؛ **WA0001 هنوز وجود ندارد؛ تصمیم معماری هنوز تصویب نشده**.
+- منابع ورودی: [KB-0001..0009](../08-project-knowledge-base/INDEX.md)، [Applied Capability Index](https://app.notion.com/p/3fdc8c684690817a9b5acef3c108253f) با عنوان مشاهده‌شدهٔ **v0.48 در 2026-10-20**؛ گزارش‌های خام [A0010](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge/blob/main/responses/A0010.md), [A0011](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge/blob/main/responses/A0011.md), [A0012](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge/blob/main/responses/A0012.md).
+- **قصد کاربر برای پژوهش و ثبت نتیجه تأیید شده است؛ ساخت manager، نصب، انتخاب زبان/engine/model، و اجرای تست روی لپ‌تاپ تأیید نشده.** پس از پاسخ، Coordinator صحت منبع و verdict را جدا ثبت کرده و تصمیم اجرایی کاربر را در D-009 پیگیری می‌کند.
+
 ## وضعیت پژوهش، انتخاب و اجرای واقعی
 | آیتم | وضعیت |
 |---|---|
 | New Work transport T0001 | **PASS / read-write-readback verified 2026-10-20, work commit `d70a9a4`** |
-| First project research WQ0001 | **NOT CREATED** |
+| First project research WQ0001 | **REQUEST COMMITTED / NOT DISPATCHED; WA0001 PENDING** |
 | Project-specific research Work reports WA | **NONE** — synthetic T0001 only |
-| Applied library checkpoint read | **v0.47**, accepted A0011 in Notion (as of observed 2026-10-20) |
+| Applied library checkpoint read | **v0.48** title observed in live Notion 2026-10-20; prior v0.47 historical only |
 | Project architecture / inference engine / host | **NOT SELECTED** |
 | New code/app/Windows install/test/deploy | **NONE** |
 | Old historical P1-A synthetic test | **USER-REPORTED PASS** (not operational assistant) |
@@ -38,7 +44,7 @@
 2. **P0 core GitHub documentation written/read back.** اگر سؤال/اطلاعات جدید از کاربر آمد، با provenance آن را به inventory و CURRENT اضافه کنید؛ از بازتعریف کامل خودداری کنید.
 3. **T0001 موفق و بازخوانی‌شده است؛ تکرار نشود.** پس از تعریف یک نیاز/شکاف مشخص و review منابع، نخستین WQ واقعی را می‌توان تهیه کرد.
 4. نیاز و acceptance نخستین کاربرد واقعی را با user نهایی کنید (resource management first یا یک وظیفهٔ محدود دیگر). P0–P6 نباید بدون بررسی با user تبدیل به stack شود.
-5. برای gap پژوهشی متناسب، پس از review Applied/General و official search یک WQ0001 دقیق تولید کنید و چرخهٔ ثبت/بازبینی را اجرا کنید؛ بعد انتخاب ابزار.
+5. **WQ0001 آماده و در همین repo ثبت شده**؛ متن درخواست را به Work ارسال کنید و پس از بازخوانی WA0001 با approval کاربر دربارهٔ ترتیب کار تصمیم بگیرید. درخواست تکراری نسازید.
 
 ## ناتمام/blocked
 - **T0001 synthetic Work transport شاهد واقعی دارد**؛ هنوز هیچ Work Q/A **پژوهشی** در پروژه انجام نشده.

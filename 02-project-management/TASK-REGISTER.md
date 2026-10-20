@@ -15,4 +15,6 @@
 
 | TASK-0010 | ورود پژوهش قبلی معماری و استخراج دانشی بدون انتخاب stack | **DONE / SOURCE & KB VERIFIED IN GITHUB 2026-10-20** | [SRC-0001](../08-project-knowledge-base/inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md), [INDEX KB-0001..0009](../08-project-knowledge-base/INDEX.md)؛ raw 607 lines / 41,901 bytes / SHA256 `1ce5db388e76f01d222753ac9cad09073be918a39c7c827947815869a664582f` / Git blob `6e1fcf18ce4cc86f4c52f70107e434d639b6d9da` **MATCHED** | بررسی منابع رسمی و gapها در زمان پژوهش؛ WQ0001 هنوز صادر نشده |
 
+| TASK-0011 | پاسخ به ترتیب ساخت: capability-first یا resource-controller-first با پژوهش مستقل Work | **REQUEST WRITTEN / NOT DISPATCHED — 2026-10-20** | [WQ0001](../04-work-research-bridge/requests/WQ0001.md), [Applied v0.48 observed](https://app.notion.com/p/3fdc8c684690817a9b5acef3c108253f), [KB entries](../08-project-knowledge-base/INDEX.md) | انتقال WQ0001 به Work؛ دریافت WA0001، بازخوانی، بازبینی و سپس تصمیم کاربر؛ **فعلاً بدون پیاده‌سازی** |
+
 **در هر تغییر:** وضعیت، خطا، لینک output/commit، source/observed date، وابستگی، مالک، next action؛ sync CURRENT-STATUS. هیچ task صرفاً به خاطر ساخت فایل DONE اجرایی نمی‌شود.

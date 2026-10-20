@@ -10,4 +10,6 @@
 | D-007 | استفاده از Notion به‌عنوان source research بیرونی و GitHub برای تمام اسناد پروژه | USER DIRECTIVE | پایداری windows/Work | research catalogs not duplicated wholesale |
 | D-008 | ایجاد دانشنامهٔ اختصاصی در همان مخزن پروژه، مستقل از raw Work correspondence | USER DIRECTIVE / DOCUMENTATION DECISION 2026-10-20 | نیاز به بازیابی پژوهش و استفادهٔ معماری/ساخت از نتایج | [08-project-knowledge-base](../08-project-knowledge-base/README.md) با source/raw→verified KB→decision/test و تفکیک پژوهش از اجرا؛ بدون انتخاب فناوری |
 
+| D-009 | ترتیب شروع پیاده‌سازی: capability-first، قرارداد حداقلی منابع، manager-first یا ready-host-first | **PENDING WORK WA0001 + USER APPROVAL / NOT SELECTED** | [WQ0001](../04-work-research-bridge/requests/WQ0001.md)، [KB-0001..0009](../08-project-knowledge-base/INDEX.md)، Applied v0.48، A0010–A0012 | پس از بازبینی واقعی WA0001 فقط همراه با user approval در register تصمیم نهایی/معیار rollback نوشته شود |
+
 **قالب تصمیم آینده:** problem → options (including simpler) → official evidence/versions → security/cost/region → test results → rejected alternatives → decision owner/date → approved/not approved → as-built evidence → reversibility → effects on Notion governance. تغییر consequential معماری را در Notion canonical cross-project هم ثبت/لینک کنید و در این register مرجع immutable داشته باشید.

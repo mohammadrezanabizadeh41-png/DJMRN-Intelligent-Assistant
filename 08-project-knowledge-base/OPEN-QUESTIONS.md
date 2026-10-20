@@ -14,3 +14,8 @@
 - [ ] بررسی عملی normalization/search فارسی در fixture مشترک و تفاوت FTS/BM25/ML/LLM در [KB-0004](knowledge-search-and-memory/KB-0004-non-llm-nlp-persian.md).
 - [ ] idle RSS، unload واقعی/زمان راه‌اندازی و child-process ownership روی دستگاه، **فقط بعد از تعیین کار واقعی و مجوز تست**؛ [KB-0006](hardware-and-performance/KB-0006-local-memory-budget.md).
 - [ ] تطبیق موجودی Applied v0.47 در زمان مشاهده و منابع رسمی تازه؛ ثبت alias/dedupe قبل از تخصیص WQ0001. 
+
+## WQ0001 — research commissioned, no answer yet
+- [ ] Decision: best **sequence** between no-agent capability-first / thin resource-contract-first / custom manager first / ready-made Windows environment, and valid hybrid staging. [WQ0001](../04-work-research-bridge/requests/WQ0001.md) **REQUEST COMMITTED, WA0001 NONE**.
+- [ ] Reconcile v0.48 Applied library and old A0010–A0012 conflicting proposals; separate manual operation from resource-aware autonomous scheduling; verify against new official source docs. 
+- [ ] Only after WA0001: coordinator review, knowledge entries if worthwhile, D-009 user-approved sequencing decision; no automatic implementation.

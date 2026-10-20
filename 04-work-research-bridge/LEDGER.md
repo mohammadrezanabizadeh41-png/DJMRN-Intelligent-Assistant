@@ -2,7 +2,7 @@
 | ID | Request | Response | Coordinator review | State | Next |
 |---|---|---|---|---|---|
 | T0001 | [request](requests/T0001.md) | [response](responses/T0001.md) | [verified review](reviews/T0001.md) | **PASS / COORDINATOR READBACK VERIFIED 2026-10-20** | Define precise WQ0001 topic before research |
-| WQ0001 ↔ WA0001 | NONE (not allocated) | NONE | NONE | NOT STARTED | after T0001 success; only after use-case/gap review |
+| WQ0001 ↔ WA0001 | [request committed](requests/WQ0001.md) | **NONE** | **NONE** | **REQUEST-COMMITTED / NOT DISPATCHED / NOT ANSWERED** | User sends request to Work; coordinator later verifies WA0001 and reviews |
 
 **قانون تغییر:** بعد از هر create/fetch با شواهد commit SHA و URL، وضعیت مربوط را update و READ BACK کنید؛ log «تحویل شد» فقط با فایل واقعی Work معتبر است. اگر Work یک پاسخ partial/failed ایجاد کرد، گزارش را overwrite نکنید؛ gap را ثبت و با amendment/new request پیگیری کنید.
 
