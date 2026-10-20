@@ -44,3 +44,8 @@
 - [Review](../04-work-research-bridge/reviews/WQ0001.md) records **ACCEPTED-PARTIAL**: internal WQ and bridge README SHA receipts wrong, report substance relevant. Official Task Scheduler/Job Objects, Dagu best-effort and Ollama unload request selectively cross-checked. No device testing.
 - Knowledge extraction [KB-0010](../08-project-knowledge-base/architecture/KB-0010-sequencing-thin-contract-first.md), SRC-0002 references Work report without copying it. D-009 coordinator proposal only; user approval and V0 choice pending. [Milestone proposal](../02-project-management/PROPOSED-FIRST-MILESTONE.md).
 - No source data, model, language, service, automation or manager selected/executed; no Notion change.
+
+## 2026-10-20 — D-010: explicit full-name Work destination guard
+- User requested preventing confusion between `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` (this project) and separate `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` (Applied research) in Work research instructions and reports.
+- Added `04-work-research-bridge/REPOSITORY-LOCK.md`, strengthened bridge instructions and request/response templates, HANDOFF, PROJECT-RULES, SOURCES-AND-AUTHORITY and request/response READMEs. Full `repository_full_name`, URL, branch `main` and exact WQ/WA paths must be validated before **and after** a Work commit; alternate repository fallback prohibited.
+- Historical WQ0001/WA0001 not edited. No new Work research, external account action, Notion change, code, installation or Windows operation.

@@ -8,6 +8,11 @@
 - Bootstrap GitHub commit: [`6b9cee93db61b515574834e627b41648aa908dbf`](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/6b9cee93db61b515574834e627b41648aa908dbf), branch `main`, 45 blob files returned via recursive tree; 14 critical files independently fetched with SHAs; **verified repository documentation readback**.
 - Scope: documented hardware/software history, proposed architecture evaluation, Work request/response protocol, stage status and continuity; no real agent action.
 
+## سیاست جدید D-010 — مقصد دقیق Work (2026-10-20)
+- کاربر الزام کرد برای جلوگیری از اشتباه، در **همهٔ دستورهای Work** نام کامل مخزن و URL و branch درج شود. تنها مقصد پژوهش اختصاصی این پروژه `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`، main، `04-work-research-bridge/responses/WA####.md` است.
+- [REPOSITORY-LOCK](../04-work-research-bridge/REPOSITORY-LOCK.md) اجرای پیش‌شرط live `full_name` check و post-commit same-repo readback را اجباری می‌کند؛ `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` **مخزن مجزای Applied** است و برای این WQ/WA فقط read-only.
+- سیاست مربوط به **درخواست‌های آتی** است؛ WQ0001/WA0001 تغییر نکردند؛ هیچ پژوهش/نصب/انتخاب معماری تازه انجام نشده است.
+
 ## آنچه قطعی/مستند شده
 - User created private repo `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`, connector read/write permission confirmed; `main` + original README read on 2026-10-20.
 - Old device records were reviewed: Lenovo 81W1 / IdeaPad3 15ADA05, Ryzen5 3500U, Vega8, 8GiB physical RAM, 5.88GiB usable at Oct19, typically ~2–3GiB available historically, Windows 11 Pro at Oct19. See 01; history != live.

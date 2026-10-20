@@ -26,3 +26,6 @@
 
 ## نمونهٔ خروجی هر اقدام
 `ID | intent | before-state | action | source | actual artifact/commit | verification | result | risk | next step`. وضعیت UNKNOWN را نگه دارید تا شاهد بیاید؛ برای failed write ابتدا read-back کنید.
+
+## D-010 — جلوگیری از اختلاط مخزن‌ها در تبادل Work (دستور مستقیم کاربر، 2026-10-20)
+همهٔ درخواست‌های جدید Work باید **owner/repo کامل، URL، branch، مسیر WQ و مسیر WA** را در دستور داشته باشند. فقط `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` مجاز است؛ `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` برای این پروژه **صرفاً منبع مطالعه** است. Work باید هویت واقعی repo را از GitHub پیش از نوشتن بررسی و پس از Commit همان repo/path را با SHA بازخوانی کند. پاسخ در مخزن اشتباه حتی با محتوای درست **FAILED/BLOCKED** است؛ fallback ممنوع. قرارداد کامل در [REPOSITORY-LOCK](04-work-research-bridge/REPOSITORY-LOCK.md). این سیاست مجوز اجرای جدیدی ایجاد نمی‌کند.

@@ -32,3 +32,6 @@
 - [Lenovo official PSREF IdeaPad 3 15ADA05](https://psref.lenovo.com/syspool/Sys/PDF/IdeaPad/IdeaPad_3_15ADA05/IdeaPad_3_15ADA05_Spec.pdf)
 - [GitHub REST Git tree](https://docs.github.com/en/rest/git/trees) / [README guidance](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 - قیمت، quota، نسخه و حقوق استفاده از سرویس‌ها باید برای **زمان تصمیم** از docs رسمی‌شان جداگانه کنترل شود؛ هیچ جدول قیمت تاریخی را فعال‌سازی مجاز فرض نکنید.
+
+## قطعی‌کردن هویت مخزن در Work — D-010 (2026-10-20)
+برای هر WQ/WA پروژه فقط `repository_full_name: mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` و URL https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant در branch `main` مقصد مجاز است. مخزن `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` می‌تواند **به‌عنوان منبع پژوهش خوانده شود ولی اجازهٔ نوشتن پاسخ این پروژه را ندارد**. باید metadata واقعی repo قبل از نوشتن و URL/path/commit/blob بعد از نوشتن طبق [REPOSITORY-LOCK](04-work-research-bridge/REPOSITORY-LOCK.md) سنجیده شود. نام نسبی مسیر فایل بدون exact full_name کافی نیست.

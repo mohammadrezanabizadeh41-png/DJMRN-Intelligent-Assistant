@@ -17,3 +17,9 @@
 
 ## پروندهٔ اصلی برای مخاطب انسانی
 [README](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/README.md) → [CURRENT](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/07-operations-and-continuity/CURRENT-STATUS.md) → [Work bridge](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/04-work-research-bridge/README.md).
+
+## Guard against confusing Work GitHub repositories — D-010
+در همهٔ پیام‌های Work از **نام کامل** `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` و URL `https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` با branch `main` و exact paths استفاده کنید؛ نه عبارت کوتاه «مخزن DJMRN». Work اول [REPOSITORY-LOCK](../04-work-research-bridge/REPOSITORY-LOCK.md) را بخواند، live repo `full_name` را بسنجد و فقط در `responses/WA####.md` در **همان** repo Commit و readback کند. `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` فقط input read-only است. اگر اشتباه/ابهام = BLOCKED، بدون نوشتن در مخزن دیگر.
+
+### نمونهٔ دستور آماده (شناسه‌ها فقط بعد از ثبت WQ واقعی جایگزین شوند)
+«تنها مخزن مقصد برای این کار **`mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`** به آدرس **https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant** و شاخهٔ **`main`** است. ابتدا هویت مخزن `full_name` را از GitHub بررسی کن؛ سپس `04-work-research-bridge/REPOSITORY-LOCK.md` و `README.md` همان بخش و درخواست **`requests/WQ####.md`** را بخوان. فقط پاسخ **`responses/WA####.md`** را در **همین repo** ثبت کن، Commit بزن، از همین repo بازخوانی کن و **repository_full_name، commit، blob و نتیجهٔ readback** را اعلام کن. مخزن `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` مقصد نیست؛ اگر هویت مخزن/دسترسی تأیید نشد، توقف و BLOCKED. هیچ تغییر دیگری مجاز نیست.»

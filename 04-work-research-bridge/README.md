@@ -2,6 +2,10 @@
 
 **این bridge فقط برای پژوهش اختصاصی پروژهٔ جدید است و در همین private repo اجرا می‌شود.** مخزن قدیمی [Applied Research Bridge](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge) را برای این WQ/WA تغییر ندهید. آزمایش انتقال T0001 در 2026-10-20 **PASS** (خواندن، نوشتن و بازخوانی روی همین repo؛ [commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/d70a9a406a7057a7b40e11ad99e70d2574536e5c), blob `8094f76e732305fcc8d22a48639cb0e347325874`). این به معنی دسترسی تضمین‌شده در sessionهای بعدی، پژوهش معتبر یا Agent/اجرای عملی نیست.
 
+## قفل هویت مخزن — D-010 (الزامی برای همهٔ WQ/WA آینده)
+
+**Only write target:** `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` → https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant (branch `main`). Work باید [REPOSITORY-LOCK.md](REPOSITORY-LOCK.md) را بخواند، `full_name` واقعی و branch را با این مقدار مطابقت دهد و **فقط پس از تأیید هویت مخزن** گزارش را به مسیر WQ/WA آن بنویسد. `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` یک مخزن پژوهشی **جدا و فقط منبع خواندنی** برای همین وظایف است. mismatch یا نبودِ امکان تأیید repository = **BLOCKED و توقف؛ بدون انتخاب مقصد جایگزین**. بعد از Commit، fetch باید از **همان مخزن** باشد و رسید Work شامل `repository_full_name`, commit، blob و readback باشد. هماهنگ‌کننده نیز مستقل بررسی می‌کند. درخواست/پاسخ‌های قدیمی تغییر نمی‌کنند.
+
 ## چرخهٔ دقیق
 1. **هماهنگ‌کننده** از `README.md`, `PROJECT-RULES.md`, `07/CURRENT-STATUS.md`, نیاز واقعی، [دانشنامهٔ اختصاصی پروژه](../08-project-knowledge-base/README.md) و [INDEX آن](../08-project-knowledge-base/INDEX.md) و فایل‌های 01/03 شروع می‌کند. **SRC-0001 / KB-0001..KB-0009 پژوهش معماری قبلی کاربر است، نه خروجی Work؛ به عنوان input فاقد تأیید رسمی بخوان و سؤال‌های تکراری بی‌دلیل صادر نکن.** سپس از [Applied Library](https://app.notion.com/p/3fdc8c684690817a9b5acef3c108253f)، [General Discovery](https://app.notion.com/p/3fbc8c684690817d8c94cce0bfaa1a59) و شواهد قبلی مرتبط استفاده می‌کند؛ محصول تکراری را با alias/identities dedupe می‌کند.
 2. اگر gap معنادار هنوز موجود است، **درخواست هدفمند Work** را در `requests/WQ0001.md` (شماره بعدی از LEDGER و خود پوشه بعد از بررسی GitHub) ثبت می‌کند: goal, exact acceptance, independent alternatives, sources, out-of-scope, negative evidence, hardware/remote locality, current free/cost/region/security gates. Write successful = readback needed.
@@ -21,7 +25,7 @@
 
 ## شمارنده
 - `T0001` = آزمون انتقال غیرحساس؛ درخواست آماده در requests/T0001.md، پاسخ Work [ثبت و مستقل تأیید شده](responses/T0001.md).
-- `WQ0001/WA0001` = اولین پژوهش واقعی **NOT YET CREATED**. `LEDGER.md` را برای وضعیت/شناسه ببینید.
+- `WQ0001/WA0001` = اولین پژوهش واقعی ثبت، پاسخ و بازبینی شده است؛ به‌علت خطاهای دو source SHA در WA0001، بازبینی هماهنگ‌کننده `ACCEPTED-PARTIAL` است. `LEDGER.md` را برای وضعیت و شمارهٔ بعدی ببینید.
 - گزارش‌های شماره‌دار قدیمی `Q0001/A0001...` در مخزن کتابخانهٔ قبلی متعلق به این کانال جدید نیستند.
 
 ## ورودی/خروجی الگو

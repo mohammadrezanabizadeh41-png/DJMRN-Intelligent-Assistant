@@ -1,4 +1,13 @@
 # WA#### — response to WQ#### — Template
+
+## Repository identity proof (MANDATORY)
+- `repository_full_name: mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`
+- `repository_url: https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`
+- `branch: main`
+- `request_path: 04-work-research-bridge/requests/WQ####.md`
+- `response_path: 04-work-research-bridge/responses/WA####.md`
+- `preflight_repo_full_name_verified: YES / NO`; `write_commit_sha:`; `response_blob_sha:`; `same_repo_readback: VERIFIED / NOT VERIFIED`.
+- Validate through [REPOSITORY-LOCK](../REPOSITORY-LOCK.md), **do not write to `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge`**; missing proof or identity mismatch = BLOCKED.
 - Request URL, source commit SHA, date and report author/session
 - Status: FULL / PARTIAL / BLOCKED; repository response commit/readback verification result
 - What sources were actually read: current repo scope + Applied/General checkpoints
