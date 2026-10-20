@@ -10,6 +10,8 @@
 5. **پایگاه کامل پروژه در همین GitHub**: هدف، سخت‌افزار، کارهای done/not done، پژوهش Work، هزینه، کد/تست/خطا/عملیات/continuity برای هر پنجرهٔ بعدی.
 6. **نقشهٔ زندهٔ Observability کم‌مصرف**: نمایش بصری و near-live اجزای دستیار، workflowها، engine/modelها، search/API/data sources، local/cloud endpoints و جریان request/response همراه با status/latency/bytes/RAM/CPU در حد ممکن، بدون شنود payload و با نقش Observer؛ شرح و shortlist در [REQ-OBS-001](LIVE-OBSERVABILITY-MAP-REQUIREMENT.md).
 
+7. **دستیارهای تخصصی شخصیت‌دار و منطقی در آینده:** امکان تعریف چندین Assistant Profile مستقل با مأموریت، رفتار، Skills، Knowledge و permissions مخصوص، با مدل و مکانیزم‌های مشترک/on-demand و همکاری workflow-first؛ بدون فرض چند مدل resident یا Agent daemon به ازای هر Profile. [REQ-MPA-001](MULTI-PERSONA-SPECIALIST-ASSISTANTS-REQUIREMENT.md) **نیاز آینده/پژوهش لازم، نه تصمیم معماری یا دستور ساخت فعلی**.
+
 ## اصول الزام‌آور
 - **Greenfield:** نرم‌افزارهای نصب‌شده/کد قدیمی به‌عنوان گزینه و تجربه بررسی شوند؛ حتی اگر بهترین نباشند کنار گذاشته شوند بدون پاک‌کردن تاریخچه.
 - **Free-First؛ Iran/legal/card/overage/privacy gates.** سرویس ابری پولی یا دارای هزینهٔ نامعلوم بدون تأیید فعال نشود.
