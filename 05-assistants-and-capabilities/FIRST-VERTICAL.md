@@ -1,9 +1,7 @@
-# اولین قابلیت اجرایی — طراحی هنوز باز است
-**وضعیت PENDING USER REVIEW.** هدف «اول ابزار/Agent نصب کنیم» نیست. اولین کار کوچک باید:
-- ورودی واقعی ولی غیرحساس، خروجی کاربردی قابل بررسی، مرز دسترسی، معیار قبولی و زمان/بودجه داشته باشد؛
-- امکان عملکرد بدون AI، نرم‌افزار آماده و مدل محلی/هیبریدی را مقایسه کند؛
-- روی RAM واقعی معمول دستگاه و توقف سریع قابل تست باشد؛
-- در خطا عدم ارسال/نوشتن ناخواسته و قابلیت resume/reconcile را نشان دهد؛
-- محرک نصب/وصل سرویس/داده را کاربر مشخصاً تصویب کند.
-
-اولویت کاربر تا پژوهش پیشین: پایهٔ مدیریت منابع **قبل از تعداد زیاد دستیارها**؛ اما اجرای خاص (آماده یا custom) انتخاب نشده است. دربارهٔ ترتیب کاربرد نخست با user decision کنید و در 02/DECISION-REGISTER ثبت کنید.
+# First bounded vertical — CAP-006 read-only document source lookup
+**User approved D-009/D-012 on 2026-10-20.** First prototype is a bounded deterministic read-only local document text lookup, a potential building block for Knowledge Center/Research Curator, **not a new Agent or resource manager**.
+- [Decision and explicit scope](../02-project-management/V0-BUILD-DECISION.md)
+- [Technical method comparison](../03-architecture-and-tools/V0-TECH-CHOICE.md)
+- [Source, fixtures, usage and caveats](src/document_search_v0/README.md)
+- [16 synthetic test results](../06-tests-and-evidence/logs/NEW-V0001-20261020.md)
+**Current:** source published in repo, 16 tests PASS in isolated assistant Linux container. Does not establish Windows compatibility or real usefulness. Any on-device execution/install/reading private user files needs separate approval. P0–P6 general roadmap still proposed.

@@ -1,4 +1,4 @@
-# V0 — نخستین قابلیت پیشنهادی DJMRN (DRAFT, USER APPROVAL PENDING)
+# V0 — نخستین قابلیت DJMRN (USER APPROVED 2026-10-20; SOURCE BUILT / TESTED-SYNTHETIC)
 
 Date: 2026-10-20 | Sources: [WA0001](../04-work-research-bridge/responses/WA0001.md), [review](../04-work-research-bridge/reviews/WQ0001.md), [KB-0010](../08-project-knowledge-base/architecture/KB-0010-sequencing-thin-contract-first.md).
 
@@ -18,3 +18,6 @@ Date: 2026-10-20 | Sources: [WA0001](../04-work-research-bridge/responses/WA0001
 4. Choose the smallest adequate implementation approach on merits (ready Windows tools or a code language); installation history is not an architecture vote.
 
 **Current state: proposal only, no software, build or test.** The later manager decision is triggered by measured concurrent-heavy-work RAM admission, model lease/unload, durable unattended recovery, safe process ownership or required cross-machine runtime.
+
+## Approval and observed implementation update — 2026-10-20
+User accepted the proposed sequencing and approved beginning the bounded first capability build. [Canonical scope and authorization](V0-BUILD-DECISION.md) supersedes earlier **DRAFT/USER PENDING** text in this proposal. Source: [CAP-006](../05-assistants-and-capabilities/src/document_search_v0/README.md). 16 isolated synthetic tests PASS; Windows and real documents have **not** been run. Future local smoke requires distinct approval, with no install or external account implied. Earlier gate language above describes the former proposal, not present status.

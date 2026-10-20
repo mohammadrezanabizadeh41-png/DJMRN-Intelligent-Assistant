@@ -1,8 +1,14 @@
 # DJMRN INTELLIGENT ASSISTANT — SINGLE CURRENT STATUS
-**Snapshot date:** 2026-10-20. **Authority:** this private GitHub repo. **Phase:** P0 repository knowledge foundation; map P0–P6 still PROPOSED for user review.
+**Snapshot date:** 2026-10-20. **Authority:** this private GitHub repo. **Phase:** first bounded V0 source and synthetic tests after user approval; general P0–P6 still PROPOSED.
 
 ## خلاصهٔ یک‌جمله‌ای
-مخزن اختصاصی پروژهٔ Windows-local/hybrid assistant با ۴۵ فایل مستند و بازخوانی‌شده و پل پژوهش Work آمادهٔ آغاز پژوهش مستقل است؛ **هیچ معماری فنی، پلتفرم Agent، مدل منتخب یا نصب تازه‌ای تصویب/اجرا نشده است**.
+پس از تأیید کاربر در 2026-10-20، **D-009: قرارداد سبک + قابلیت بدون Agent در ابتدا** تصویب شد؛ **CAP-006** نخستین کد محدودِ جست‌وجوی سند است که با ۱۶ آزمون ساختگی در محیط جداگانه PASS شده. **هیچ مدل/Agent/مدیر مرکزی/سرویس نصب نشده و روی Windows کاربر هنوز آزمایش نشده است.**
+
+## آخرین اقدام عملی تأییدشده — D-009, D-011, D-012 / CAP-006 (2026-10-20)
+- User **APPROVED** the first-step sequencing and starting a bounded no-Agent, read-only document-search V0 with synthetic files. [Rationale/permission scope](../02-project-management/V0-BUILD-DECISION.md); [scoped language choice](../03-architecture-and-tools/V0-TECH-CHOICE.md).
+- Code under [CAP-006](../05-assistants-and-capabilities/src/document_search_v0/README.md), no dependency install; **16/16 synthetic tests PASS in separate Python 3.13.5 Linux container** and CLI found exactly `sample_alpha.txt:1`, `sample_beta.md:2`. Code blobs checked against tested bytes, see [NEW-V0001](../06-tests-and-evidence/logs/NEW-V0001-20261020.md). GitHub commit/readback after write required.
+- **NOT** a full agent, not real Windows I/O, not production operational, no inference engine, no central RAM manager, no GitHub repository search integration. Next: separate user approval for Windows synthetic-only smoke (no install), then separately approved specific real non-sensitive files if useful.
+- Full roadmap P0–P6 remains PROPOSED; D-011 is for CAP-006 only and does not choose global Python architecture.
 
 ## تأیید پایگاه پروژه
 - Bootstrap GitHub commit: [`6b9cee93db61b515574834e627b41648aa908dbf`](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/6b9cee93db61b515574834e627b41648aa908dbf), branch `main`, 45 blob files returned via recursive tree; 14 critical files independently fetched with SHAs; **verified repository documentation readback**.
@@ -26,11 +32,11 @@
 - **پژوهش قبلی کاربر وارد و مستقلاً بازخوانی شد:** [SRC-0001](../08-project-knowledge-base/inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md) دقیقاً 607 خط/41,901 بایت و Blob `6e1fcf18ce4cc86f4c52f70107e434d639b6d9da` برابر نسخهٔ اصلی است؛ 9 مدخل KB-0001..0009 به‌صورت CURATED-UNVERIFIED در [INDEX](../08-project-knowledge-base/INDEX.md) ثبت شده است.** منبع با انتشار/نسخه و claim/verification ادعایی مخلوط نشده؛ هیچ نتیجه‌ای SELECTED نیست. قدم بعدی: gapهای دانشنامه/Applied را بررسی و در صورت ضرورت WQ0001 طراحی کنید.
 - نقشهٔ راه/Stack/فناوری منتخب تغییری نکرد؛ عملیات محلی، نصب و پژوهش Work جدید انجام نشده است.
 
-## پژوهش در حال انتظار — WQ0001 (2026-10-20)
+## تاریخچهٔ درخواست پژوهش WQ0001 — قبلاً تکمیل‌شده (2026-10-20)
 - کاربر صریحاً تحقیق تعیین **ترتیب کار** را درخواست کرده: قابلیت بدون Agent ابتدا، قرارداد حداقلی مدیریت منابع، manager کامل ابتدا، یا ابزار آماده، با سرعت رسیدن به نخستین خروجی و توسعه‌پذیری امن.
-- [درخواست پژوهشی WQ0001](../04-work-research-bridge/requests/WQ0001.md) به عنوان **REQUEST-COMMITTED / AWAITING USER DISPATCH TO WORK** ثبت شد؛ **WA0001 در GitHub ثبت/تأیید و توسط هماهنگ‌کننده بازبینی شده؛ تصمیم D-009 هنوز تصویب نشده**.
+- [درخواست WQ0001](../04-work-research-bridge/requests/WQ0001.md) و [پاسخ WA0001](../04-work-research-bridge/responses/WA0001.md) ثبت و بازبینی شدند؛ **D-009 در 2026-10-20 پس از این پژوهش توسط کاربر تأیید شد**.
 - منابع ورودی: [KB-0001..0009](../08-project-knowledge-base/INDEX.md)، [Applied Capability Index](https://app.notion.com/p/3fdc8c684690817a9b5acef3c108253f) با عنوان مشاهده‌شدهٔ **v0.48 در 2026-10-20**؛ گزارش‌های خام [A0010](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge/blob/main/responses/A0010.md), [A0011](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge/blob/main/responses/A0011.md), [A0012](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge/blob/main/responses/A0012.md).
-- **قصد کاربر برای پژوهش و ثبت نتیجه تأیید شده است؛ ساخت manager، نصب، انتخاب زبان/engine/model، و اجرای تست روی لپ‌تاپ تأیید نشده.** پس از پاسخ، Coordinator صحت منبع و verdict را جدا ثبت کرده و تصمیم اجرایی کاربر را در D-009 پیگیری می‌کند.
+- **وضعیت پس از تصمیم:** شروع کد CAP-006 و تست ساختگی خارج دستگاه تأیید شده؛ manager/install/engine/Agent/Windows run هنوز تأیید نشده است.
 
 ## وضعیت پژوهش، انتخاب و اجرای واقعی
 | آیتم | وضعیت |
@@ -39,24 +45,23 @@
 | First project research WQ0001 | **WA0001 VERIFIED / COORDINATOR REVIEWED ACCEPTED-PARTIAL** |
 | Project-specific research Work reports WA | **WA0001 received and reviewed; T0001 synthetic previously verified** |
 | Applied library checkpoint read | **v0.48** title observed in live Notion 2026-10-20; prior v0.47 historical only |
-| Project architecture / inference engine / host | **NOT SELECTED** |
-| New code/app/Windows install/test/deploy | **NONE** |
+| Project architecture / inference engine / host | **NOT SELECTED**; D-009 applies only to sequence |
+| New code/app/Windows install/test/deploy | **CAP-006 source + isolated synthetic tests (16 PASS); Windows install/run/deploy NONE** |
 | Old historical P1-A synthetic test | **USER-REPORTED PASS** (not operational assistant) |
 | Roadmap P0–P6 | **PROPOSED — user discussion pending** |
 
 ## اقدام بعدی به ترتیب
-1. **پژوهش معماری قبلی دریافت و در دانشنامه ثبت شد:** [SRC-0001](../08-project-knowledge-base/inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md) و [KB-0001..0009](../08-project-knowledge-base/INDEX.md). شواهد بدون آزمایش مستقل‌اند؛ قبل از هر Work research، gapهای واقعی و دادهٔ Applied/General را مرور کن.
-2. **P0 core GitHub documentation written/read back.** اگر سؤال/اطلاعات جدید از کاربر آمد، با provenance آن را به inventory و CURRENT اضافه کنید؛ از بازتعریف کامل خودداری کنید.
-3. **T0001 موفق و بازخوانی‌شده است؛ تکرار نشود.** پس از تعریف یک نیاز/شکاف مشخص و review منابع، نخستین WQ واقعی را می‌توان تهیه کرد.
-4. نیاز و acceptance نخستین کاربرد واقعی را با user نهایی کنید (resource management first یا یک وظیفهٔ محدود دیگر). P0–P6 نباید بدون بررسی با user تبدیل به stack شود.
-5. **WA0001 received/reviewed**: [review](../04-work-research-bridge/reviews/WQ0001.md), [KB-0010](../08-project-knowledge-base/architecture/KB-0010-sequencing-thin-contract-first.md), [proposed V0](../02-project-management/PROPOSED-FIRST-MILESTONE.md). Ask user to decide D-009 and first capability; no code or installation without separate authorization.
+1. **CAP-006 V0 کد و آزمون ساختگی دارد:** [README/usage](../05-assistants-and-capabilities/src/document_search_v0/README.md), [Evidence](../06-tests-and-evidence/logs/NEW-V0001-20261020.md). نیازی به پژوهش گستردهٔ Work یا ساخت manager در این مرحله نیست.
+2. با اجازهٔ جداگانهٔ کاربر، تنها **آزمون smoke با دو fixture ساختگی روی Windows** اجرا شود؛ ابتدا وجود Python بررسی و بدون نصب یا دسترسی به فایل‌های خصوصی متوقف شوید اگر ابزار در دسترس نبود.
+3. اگر مرحلهٔ قبل موفق بود، دربارهٔ **فایل‌های واقعیِ مشخص، غیرحساس و مجاز** و معیار خروجی کاربر تصمیم بگیرد؛ بعد واقعاً usefulness/زمان/منابع را اندازه‌گیری کنید.
+4. فقط با رخداد واقعی نیاز به صف/پایداری/Agent/model/RAM admission، تحلیل و مجوز جدید ثبت کنید؛ مخزن Applied مستقل و REPOSITORY-LOCK باقی بماند.
 
 ## WA0001 coordinator review and D-009 (2026-10-20)
 - WA0001 [Work commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/6b29c81f4e90d45207e56a3e39eba66e3213d143) with verified blob `907cdb29dfec0393aa31c75e1e9bdcf78f64ce81`. [Review](../04-work-research-bridge/reviews/WQ0001.md) **ACCEPTED-PARTIAL** due to two incorrect SHA source receipts inside WA, though artifact itself is authentic and relevant.
-- Recommendation: **thin task/permission/result contract → one real read-only no-Agent capability → evidence-gated durable state/model/resource manager**. [KB-0010](../08-project-knowledge-base/architecture/KB-0010-sequencing-thin-contract-first.md). **User has NOT adopted D-009 or first V0**, and no Windows implementation approved.
+- Recommendation: **thin task/permission/result contract → one real read-only no-Agent capability → evidence-gated durable state/model/resource manager**. [KB-0010](../08-project-knowledge-base/architecture/KB-0010-sequencing-thin-contract-first.md). **Historical report proposal was subsequently ADOPTED by user as D-009 and V0 (D-012)**; no Windows execution approved.
 
 ## ناتمام/blocked
-- **T0001 synthetic Work transport شاهد واقعی دارد**؛ هنوز هیچ Work Q/A **پژوهشی** در پروژه انجام نشده.
+- **T0001 و WQ0001/WA0001 پژوهشی هر دو ثبت و بازخوانی شده‌اند**؛ در مورد WA0001 دو مغایرت SHA داخلی در review ثبت است.
 - فقدان current realtime RAM/process/installation verification به معنی نبود شواهد تاریخی نیست؛ فقط وقتی تست مقرر شد اندازه‌گیری محدود.
 - Full software/model disk paths و storage capacity هنوز UNKNOWN؛ در زمان relevant بررسی شوند.
 - ثبت اولیهٔ GitHub انجام و بازخوانی شد؛ **Work T0001 PASS و در GitHub بازخوانی شده**. این فایل باید در هر ادامهٔ مهم مجدداً از live main خوانده شود.

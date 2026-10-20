@@ -23,3 +23,8 @@
 
 ### نمونهٔ دستور آماده (شناسه‌ها فقط بعد از ثبت WQ واقعی جایگزین شوند)
 «تنها مخزن مقصد برای این کار **`mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`** به آدرس **https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant** و شاخهٔ **`main`** است. ابتدا هویت مخزن `full_name` را از GitHub بررسی کن؛ سپس `04-work-research-bridge/REPOSITORY-LOCK.md` و `README.md` همان بخش و درخواست **`requests/WQ####.md`** را بخوان. فقط پاسخ **`responses/WA####.md`** را در **همین repo** ثبت کن، Commit بزن، از همین repo بازخوانی کن و **repository_full_name، commit، blob و نتیجهٔ readback** را اعلام کن. مخزن `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` مقصد نیست؛ اگر هویت مخزن/دسترسی تأیید نشد، توقف و BLOCKED. هیچ تغییر دیگری مجاز نیست.»
+
+## Newest V0 step — user-approved but not Windows-tested (2026-10-20)
+- [D-009/D-011/D-012](../02-project-management/V0-BUILD-DECISION.md): sequence adopted: thin task contract → small no-Agent capability; resource controller only on observed triggers. Python stdlib is **scoped to CAP-006**.
+- [CAP-006 source/usage](../05-assistants-and-capabilities/src/document_search_v0/README.md) and [16-test synthetic receipt](../06-tests-and-evidence/logs/NEW-V0001-20261020.md). Checked code/fixture SHA identity; no Windows local smoke, no private source use. Do not ask user to rebuild from scratch or rerun all system inventories.
+- Ask for separate explicit authorization before any on-device code execution or installation; if approved, start only with bundled synthetic fixtures. Preserve [Work Repository Lock](../04-work-research-bridge/REPOSITORY-LOCK.md) for future Work tasks.

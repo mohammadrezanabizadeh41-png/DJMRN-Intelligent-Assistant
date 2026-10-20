@@ -16,19 +16,19 @@
 | [02-project-management](02-project-management/README.md) | هدف‌ها، نیازمندی‌ها، نقشهٔ راه پیشنهادی، وضعیت کارها، تصمیم‌های باز |
 | [03-architecture-and-tools](03-architecture-and-tools/README.md) | گزینه‌های مستقل، مقایسهٔ فناوری، منابع و معماری، هزینه و ریسک |
 | [04-work-research-bridge](04-work-research-bridge/README.md) | پرسش شماره‌دار به Work، گزارش کامل Work، بازبینی و چرخهٔ نتایج |
-| [05-assistants-and-capabilities](05-assistants-and-capabilities/README.md) | طراحی و بعداً کد/قابلیت عملی؛ فعلاً هیچ پلتفرمی تصویب نشده |
+| [05-assistants-and-capabilities](05-assistants-and-capabilities/README.md) | **CAP-006 V0:** ابزار اولیهٔ مستقل بدون Agent ساخته و فقط با دادهٔ ساختگی در محیط جداگانه آزموده شد؛ هیچ Agent/host منتخب نیست |
 | [06-tests-and-evidence](06-tests-and-evidence/README.md) | آزمون‌های قدیمی/جدید، خروجی، شکست، اندازه‌گیری، صحت شواهد |
 | [07-operations-and-continuity](07-operations-and-continuity/README.md) | وضعیت یکتا، ادامهٔ کار، بازیابی، ثبت تغییرات |
 | [08-project-knowledge-base](08-project-knowledge-base/README.md) | **دانشنامهٔ پروژه**: منابع خام پژوهش، مدخل‌های موضوعی قابل جست‌وجو، یافته‌های معماری و ساخت، درجهٔ اعتبار و شکاف‌های دانشی |
 
 ## اطلاعات مهم
 - مخزن پروژه: https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant (خصوصی). مالک مرتبط در GitHub تأیید شد؛ این README منبع اطلاعات جاری پروژه است.
-- **کتابخانهٔ کاربردی DJMRN** در [Notion Applied Capability Index](https://app.notion.com/p/3fdc8c684690817a9b5acef3c108253f) آخرین checkpoint خوانده‌شده **v0.47 (2026-10-20)**؛ [General Discovery](https://app.notion.com/p/3fbc8c684690817d8c94cce0bfaa1a59) checkpoint خوانده‌شده Discovery 054 / v52. **این‌ها کاتالوگ پژوهشی هستند، نه فهرست اجبار نصب.**
+- **کتابخانهٔ کاربردی DJMRN** در [Notion Applied Capability Index](https://app.notion.com/p/3fdc8c684690817a9b5acef3c108253f) آخرین checkpoint زندهٔ مشاهده‌شده در پژوهش قبلی **v0.48 (2026-10-20)**؛ [General Discovery](https://app.notion.com/p/3fbc8c684690817d8c94cce0bfaa1a59) checkpoint خوانده‌شده Discovery 054 / v52. **این‌ها کاتالوگ پژوهشی هستند، نه فهرست اجبار نصب.**
 - [نقشهٔ راه قدیمی A–G](https://app.notion.com/p/3fcc8c684690813a82b3d0ce909534e3) و [دفتر تاریخی Windows](https://app.notion.com/p/3fbc8c6846908184b4bbe32c586686e3) منابع اولیهٔ انتقال شواهد هستند؛ خلاصهٔ مستند مرتبط در خود این repo آمده است.
 - مخزن مستقل [DJMRN-Research-Bridge](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge) برای پژوهش *کتابخانهٔ کاربردی* است. **مکاتبهٔ مخصوص این پروژه فقط در بخش 04 همین repo ثبت می‌شود.**
 - فارسی زبان اصلی تعامل؛ English نام فایل/شناسه/برخی اصطلاحات فنی. اطلاعات حساس و رازها هرگز در Git commit نشوند.
 
 ## وضعیت در زمان آغاز
-**INIT / REPOSITORY DOCUMENTATION ONLY:** اطلاعات تاریخی وارد سند شده؛ یک معماری فنی/عامل/مدل/host انتخاب یا روی لپ‌تاپ نصب نشده است. T0001 **PASS** — [پاسخ واقعی Work](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/04-work-research-bridge/responses/T0001.md), [commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/d70a9a406a7057a7b40e11ad99e70d2574536e5c), blob `8094f76e732305fcc8d22a48639cb0e347325874` با بازخوانی مستقل تأیید شد؛ پژوهش واقعی `WQ0001` هنوز ایجاد نشده. رویدادهای تازه فقط پس از شواهد در CURRENT-STATUS ثبت شوند.
+**LATEST 2026-10-20:** تصمیم D-009 (قرارداد سبک + قابلیت قطعی نخست) با تأیید کاربر تصویب شد. [CAP-006 V0](05-assistants-and-capabilities/src/document_search_v0/README.md) ساخته و ۱۶ آزمون **فقط در محیط جداگانه و دادهٔ ساختگی** موفق بوده‌اند؛ هنوز روی Windows کاربر اجرا نشده است. [تصمیم/دلایل](02-project-management/V0-BUILD-DECISION.md)، [مقایسهٔ روش](03-architecture-and-tools/V0-TECH-CHOICE.md)، [شواهد آزمون](06-tests-and-evidence/logs/NEW-V0001-20261020.md). WQ0001/WA0001 پیش‌تر ثبت و بازبینی شده؛ هیچ Agent، موتور استنتاج یا مدیر دائمی RAM انتخاب نشده. آخرین وضعیت را از CURRENT-STATUS بخوانید.
 
 > مسیر سریع: برای **دانش پژوهشی قابل استفاده**، 08/INDEX و 08/INTAKE-PROTOCOL؛ برای پرسیدن از Work، 04/README؛ برای فهم کارهای انجام‌شده، 07/CURRENT-STATUS؛ برای RAM، 01/hardware-baseline و resource-observations؛ برای انتخاب ابزار، PROJECT-RULES و 03.

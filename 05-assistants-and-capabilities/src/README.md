@@ -1,2 +1,5 @@
-# Source code target (EMPTY)
-هیچ runtime/language/framework یا source application در initialization انتخاب/ایجاد نشده است. نخستین فایل اجرایی تنها پس از target use case، گزینه‌های رقیب، approval و تست/rollback plan وارد شود. Source و dependency manifest و test کنار هر component ثبت شود. **کد تاریخی در مخزن دیگر را خودکار کپی نکنید.**
+# Source code registry — scoped V0 only
+[document_search_v0/](document_search_v0/README.md) is the **first user-approved bounded source component** (D-009/D-012), Python standard library without Agent/LLM/DB/background controller.
+- Status: **TESTED-SYNTHETIC / NOT VERIFIED-REAL**, 16 isolated tests PASS.
+- Reference: [approval and rationale](../../02-project-management/V0-BUILD-DECISION.md).
+- Tool choice only for CAP-006, **NOT** the host, model or complete architecture. All previous "EMPTY" claims belong to the old repository initialization stage.
