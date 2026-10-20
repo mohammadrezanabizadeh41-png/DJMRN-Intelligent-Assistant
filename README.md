@@ -1,5 +1,9 @@
 # DJMRN — Intelligent Assistant System | نقطهٔ ورود پروژه
 
+## New saved future requirement — 2026-10-21
+**Many logical specialist assistant profiles on shared/on-demand models** (not many permanent Agent/model processes) was submitted in full by the user and is now an explicitly **deferred future requirement**, not a selected architecture or current build. [REQ-MPA-001](02-project-management/MULTI-PERSONA-SPECIALIST-ASSISTANTS-REQUIREMENT.md) / [full original SRC-0004 (1,583 lines)](08-project-knowledge-base/inbox/SRC-0004-djmrn-multi-persona-logical-assistants-future-20261020.md) / TASK-0014. The separate [future low-RAM Live Observability Map](02-project-management/LIVE-OBSERVABILITY-MAP-REQUIREMENT.md) remains deferred as TASK-0013. **See [CURRENT-STATUS](07-operations-and-continuity/CURRENT-STATUS.md) for the latest CAP-006 Windows verified-real and UTF-8 results; earlier smoke-status notes in this README are historical.** No new vendor/agent/stack/Windows/Cloud action approved.
+
+
 **Private project repository — 2026-10-20.** این مخزن «دفتر جامع قابل بازیابی» پروژهٔ احیاشدهٔ دستیار هوشمند Windows 11 است: مشخصات لپ‌تاپ، تاریخچهٔ واقعی، پژوهش، مقایسهٔ گزینه‌ها، ارتباط با Work، کدهای آینده، آزمایش‌ها، تصمیم‌ها و وضعیت ادامهٔ کار. **وجود سند به معنی نصب/اجرای قابلیت نیست.**
 
 ## اگر این اولین باری است که وارد پروژه می‌شوید
