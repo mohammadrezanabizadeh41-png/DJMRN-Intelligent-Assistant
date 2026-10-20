@@ -1,4 +1,10 @@
 # Project Changelog — immutable summaries and real commit receipts
+
+## 2026-10-21 — CAP-006 FIRST BOUNDED REAL DOCUMENT WINDOWS VALIDATION
+- User approved search of two non-sensitive local copies of official DJMRN project Markdown docs. Python 3.14.7 direct installed executable ran on user's Windows 11; `هوشمند` matched charter line 3 and `منابع` matched resource document line 1. Two JSON `succeeded`, normalized matches, independent 1-line confirmations and unchanged pre/post SHA256 of both sources.
+- Evidence: [NEW-V0003](../06-tests-and-evidence/logs/NEW-V0003-20261021.md), original log commit `78544fcdd1d09f0fb3b4563b9bd9548d422a3425`, blob `66dc96057cfbd48bc4452d5b01d2cce44a3f04c4`, readback exact match.
+- Verdict **VERIFIED-REAL, BOUNDED; NOT OPERATIONAL**. Remaining Windows PowerShell native stdout mojibake of Persian fields; remote repo file byte identity not proved; prior Windows symlink skip remains open. No install, Windows modification, Agent/manager deployment, customer or external-account read/send.
+
 ## 2026-10-20 — INITIAL REPOSITORY KNOWLEDGE FOUNDATION
 - User created private GitHub project repository. Existing original main README was read via connector before edits; original head `c2fdd7c1f6387e767a8ca0207ae78015fd21f171` with base tree `f6d2e7389a96ca59acb47f8dfff1fb02dd740bb0`.
 - Plan: create full self-contained project rulebook, Windows history, old vs new roadmap, use-case and task registers, architecture research matrix, independent project Work request/response/review bridge, tests and continuation; **initial commit and readback succeeded**.
