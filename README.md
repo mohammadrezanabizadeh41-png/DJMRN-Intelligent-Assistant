@@ -28,6 +28,6 @@
 - فارسی زبان اصلی تعامل؛ English نام فایل/شناسه/برخی اصطلاحات فنی. اطلاعات حساس و رازها هرگز در Git commit نشوند.
 
 ## وضعیت در زمان آغاز
-**INIT / REPOSITORY DOCUMENTATION ONLY:** اطلاعات تاریخی وارد سند شده؛ یک معماری فنی/عامل/مدل/host انتخاب یا روی لپ‌تاپ نصب نشده است. اولین آزمایش اتصال Work در بخش 04 **آماده اما هنوز اجرا/تأیید نشده**؛ اولین پژوهش واقعی WQ0001 هنوز باز نشده. رویدادهای تازه فقط پس از شواهد در CURRENT-STATUS ثبت شوند.
+**INIT / REPOSITORY DOCUMENTATION ONLY:** اطلاعات تاریخی وارد سند شده؛ یک معماری فنی/عامل/مدل/host انتخاب یا روی لپ‌تاپ نصب نشده است. T0001 **PASS** — [پاسخ واقعی Work](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/04-work-research-bridge/responses/T0001.md), [commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/d70a9a406a7057a7b40e11ad99e70d2574536e5c), blob `8094f76e732305fcc8d22a48639cb0e347325874` با بازخوانی مستقل تأیید شد؛ پژوهش واقعی `WQ0001` هنوز ایجاد نشده. رویدادهای تازه فقط پس از شواهد در CURRENT-STATUS ثبت شوند.
 
 > مسیر سریع: برای پرسیدن از Work، 04/README؛ برای فهم این که الان چه چیزی انجام شده، 07/CURRENT-STATUS؛ برای وضعیت دقیق RAM، 01/hardware-baseline و 01/resource-observations؛ برای انتخاب ابزار جدید، PROJECT-RULES و 03.
