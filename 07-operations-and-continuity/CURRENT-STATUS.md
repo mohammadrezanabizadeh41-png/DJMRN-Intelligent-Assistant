@@ -2,7 +2,11 @@
 **Snapshot date:** 2026-10-20. **Authority:** this private GitHub repo. **Phase:** P0 repository knowledge foundation; map P0–P6 still PROPOSED for user review.
 
 ## خلاصهٔ یک‌جمله‌ای
-مخزن اختصاصی پروژهٔ Windows-local/hybrid assistant با امکان بازیابی مستقل و پل پژوهش Work در حال راه‌اندازی مستنداتی است؛ **هیچ معماری فنی، پلتفرم Agent، مدل منتخب یا نصب تازه‌ای تصویب/اجرا نشده است**.
+مخزن اختصاصی پروژهٔ Windows-local/hybrid assistant با ۴۵ فایل مستند و بازخوانی‌شده و پل پژوهش Work آمادهٔ آغاز پژوهش مستقل است؛ **هیچ معماری فنی، پلتفرم Agent، مدل منتخب یا نصب تازه‌ای تصویب/اجرا نشده است**.
+
+## تأیید پایگاه پروژه
+- Bootstrap GitHub commit: [`6b9cee93db61b515574834e627b41648aa908dbf`](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/6b9cee93db61b515574834e627b41648aa908dbf), branch `main`, 45 blob files returned via recursive tree; 14 critical files independently fetched with SHAs; **verified repository documentation readback**.
+- Scope: documented hardware/software history, proposed architecture evaluation, Work request/response protocol, stage status and continuity; no real agent action.
 
 ## آنچه قطعی/مستند شده
 - User created private repo `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`, connector read/write permission confirmed; `main` + original README read on 2026-10-20.
@@ -24,7 +28,7 @@
 | Roadmap P0–P6 | **PROPOSED — user discussion pending** |
 
 ## اقدام بعدی به ترتیب
-1. پس از ثبت GitHub، **خواندن مجدد** README, this file, inventory and repo tree برای اطمینان از ایجاد.
+1. **P0 core GitHub documentation written/read back.** اگر سؤال/اطلاعات جدید از کاربر آمد، با provenance آن را به inventory و CURRENT اضافه کنید؛ از بازتعریف کامل خودداری کنید.
 2. برای اثبات دسترسی Work، از user بخواهید متن کوتاه T0001 را به Work منتقل کند؛ سپس پاسخ `responses/T0001.md` را بازخوانی و LEDGER را فقط با شاهد آپدیت کنید.
 3. نیاز و acceptance نخستین کاربرد واقعی را با user نهایی کنید (resource management first یا یک وظیفهٔ محدود دیگر). P0–P6 نباید بدون بررسی با user تبدیل به stack شود.
 4. برای gap پژوهشی متناسب، پس از review Applied/General و official search یک WQ0001 دقیق تولید کنید و چرخهٔ ثبت/بازبینی را اجرا کنید؛ بعد انتخاب ابزار.
@@ -33,6 +37,6 @@
 - **هیچ evidence از Work روی repo جدید نداریم**؛ همهٔ Work Q/A پروژهٔ جدید فعلاً pending.
 - فقدان current realtime RAM/process/installation verification به معنی نبود شواهد تاریخی نیست؛ فقط وقتی تست مقرر شد اندازه‌گیری محدود.
 - Full software/model disk paths و storage capacity هنوز UNKNOWN؛ در زمان relevant بررسی شوند.
-- **این فایل باید بعد از commit اولیهٔ repo با commit verified link در CHANGELOG تکمیل شود**؛ وضعیت را صرفاً از وجود این متن نهایی قلمداد نکنید.
+- ثبت اولیهٔ GitHub انجام و بازخوانی شد؛ **Work T0001 هنوز اجرا نشده**. این فایل باید در هر ادامهٔ مهم مجدداً از live main خوانده شود.
 
 **Do not auto-dispatch Work, install, connect provider, modify machine or make purchases.**

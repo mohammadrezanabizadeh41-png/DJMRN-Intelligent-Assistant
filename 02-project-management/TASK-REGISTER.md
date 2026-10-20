@@ -4,8 +4,8 @@
 | ID | کار | وضعیت | شواهد/پیش‌نیاز | بعدی |
 |---|---|---|---|---|
 | TASK-0001 | ساخت private GitHub repo | DONE USER / VERIFIED CONNECTOR | GitHub repository + main README fetched 2026-10-20 | نگهداری |
-| TASK-0002 | ساخت ساختار و قوانین self-contained | IN PROGRESS UNTIL READBACK | این commit اولیه (پس از commit verification) | بازخوانی tree/file |
-| TASK-0003 | انتقال تاریخچهٔ دستگاه/نرم‌افزار/تست | DRAFT DOCUMENTED | 01 and 06, original Notion Journal | gap review only, no full D0 |
+| TASK-0002 | ساخت ساختار و قوانین self-contained | DONE / VERIFIED 2026-10-20 | 45 blob files + 14 core file readbacks; bootstrap commit [6b9cee93](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/6b9cee93db61b515574834e627b41648aa908dbf) | نگهداری/اصلاح با ثبت شاهد |
+| TASK-0003 | انتقال تاریخچهٔ دستگاه/نرم‌افزار/تست | HISTORICAL INVENTORY DOCUMENTED / GAPS TAGGED | 01 and 06, original Notion Journal | gap review only, no full D0 |
 | TASK-0004 | تبادل T0001 برای Work در repo جدید | READY / NOT EXECUTED | 04/requests/T0001.md | user sends T0001 to Work؛ observe & verify |
 | TASK-0005 | تأیید نقشهٔ P0–P6 و use case نخست | PENDING USER REVIEW | ROADMAP, REQUIREMENTS | پرسش کاربردی و acceptance |
 | TASK-0006 | پژوهش هدفمند مقایسهٔ معماری | NOT STARTED IN THIS REPO | پس از TASK-0004/5، WQ0001 | هدف و فیلتر پژوهش |
