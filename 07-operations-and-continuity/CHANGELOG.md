@@ -23,3 +23,7 @@
 - Cross-linked the KB in project README, SOURCE authority map, PROJECT-RULES, research bridge, architecture folder, HANDOFF and single CURRENT; registered D-008 and TASK-0009.
 - No research content has been received from user yet, so **no actual KB-0001/SRC-0001 entry** has been created; no Work WQ, install, test or architecture selection resulted from scaffolding.
 - GitHub commit SHA and persistence must be verified by reading back main/ref + knowledge index and key linking docs after this change.
+
+### Repository verification receipt — 2026-10-20
+- [Commit `afbe4f48f8a3ee79177500b1db3bf24a3626994b`](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/afbe4f48f8a3ee79177500b1db3bf24a3626994b) was published to `main` and independently confirmed by fresh HEAD read. Recursive tree returned **64 blob files, not truncated**, of which **17** in new `08-project-knowledge-base/` directory. Eleven key files read back with valid blob hashes (KB README/INDEX/INTAKE/SOURCE, inbox/topic, root README, bridge, CURRENT, TASK and HANDOFF). The present receipt itself is a later commit; consult `main` history for final commit.
+- Knowledge base contains **0 received research records and 0 curated KB articles** until user provides the promised prior research text. No Work WQ allocated or software run.

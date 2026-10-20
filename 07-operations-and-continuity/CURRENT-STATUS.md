@@ -15,7 +15,8 @@
 - Free-first, greenfield, architecture-neutral, single project repo + separate Applied/general catalogs policy in PROJECT-RULES.
 - Work research transport design uses `04/.../requests/WQ####`, `responses/WA####`, coordinator `reviews/WQ####`; T0001 **PASS / independent readback** ([response](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/04-work-research-bridge/responses/T0001.md), [commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/d70a9a406a7057a7b40e11ad99e70d2574536e5c), blob `8094f76e732305fcc8d22a48639cb0e347325874`).
 
-## افزودهٔ مستنداتی 2026-10-20 — دانشنامهٔ اختصاصی پروژه
+## افزودهٔ مستنداتی 2026-10-20 — دانشنامهٔ اختصاصی پروژه (GITHUB VERIFIED)
+- Initial [commit afbe4f48](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/afbe4f48f8a3ee79177500b1db3bf24a3626994b), main head verified, full recursive tree 64 blobs total, including **17 new KB files**, 11 key docs fetched from GitHub; Work bridge and handoff linking verified.
 - بخش مستقل [08-project-knowledge-base](../08-project-knowledge-base/README.md) برای گردآوری سازمان‌یافتهٔ یافته‌های معماری، ساخت، مدل/موتور، ابزار، Work، منابع رسمی و تجربهٔ تست به ساختار افزوده شد. [INDEX](../08-project-knowledge-base/INDEX.md)، [SOURCE-REGISTER](../08-project-knowledge-base/SOURCE-REGISTER.md)، [INTAKE-PROTOCOL](../08-project-knowledge-base/INTAKE-PROTOCOL.md)، قالب‌ها و دسته‌های موضوعی ایجاد شد.
 - **هیچ متن پژوهشی تازه از کاربر هنوز دریافت/در این بخش ثبت نشده است؛ تعداد مدخل KB = 0 و تعداد SRC آرشیوشده = 0.** گام بعدی: دریافت متن قبلی کاربر → sanitize/copyright/provenance → raw archive → claims check → KB article/index؛ Work تنها برای gap واقعی و با WQ دقیق.
 - نقشهٔ راه/Stack/فناوری منتخب تغییری نکرد؛ عملیات محلی، نصب و پژوهش Work جدید انجام نشده است.
