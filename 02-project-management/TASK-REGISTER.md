@@ -23,3 +23,6 @@
 
 ## TASK-0012 latest V0 smoke gate (2026-10-20)
 Windows user-reported read-only ZIP/extraction comparison **PASS for all 4 files and ZIP SHA**; actual Python smoke not yet run. See [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). Next use already-extracted dummy-fixture directory for 16 Python unit tests and CLI, no install.
+
+## TASK-0012 final milestone update (2026-10-20, supersedes earlier failure/pending lines)
+User's Windows **synthetic-only** CAP-006 smoke PASSED: Python 3.14.7, ZIP/4 SHA comparisons matched, **15 unit tests passed + 1 symlink test skipped**, two source-citing Persian search hits. [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). This completes first on-device **synthetic smoke** milestone only. `TASK-0012` remains **IN PROGRESS FOR REAL VALUE VALIDATION**. Next explicitly authorize a limited set of non-sensitive real files; no host/model/resource manager selection.

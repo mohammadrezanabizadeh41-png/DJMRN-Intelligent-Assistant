@@ -1,5 +1,8 @@
 # DJMRN — SELF-CONTAINED CANONICAL PROJECT HANDOFF (2026-10-20)
 
+## LATEST FOLLOW-UP (2026-10-20) — Windows smoke evidence finally succeeded
+**Supersedes any older PENDING/BLOCKED status below:** [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md) now has user-provided PowerShell proof: original package ZIP and 4 extracted fixture checks TRUE; Python 3.14.7; `Ran 16 tests in 0.992s`, `OK (skipped=1)` (**15 passed, 1 skipped symbolic-link test**); CLI source-based normalized Persian search returned two correct lines and hashes. **First real Windows synthetic smoke PASS**, not production. Initial two SHA failures remain recorded without diagnosed cause. **Do not ask to repeat the same smoke by default.** Next meaningful step is choose explicitly permitted non-sensitive real files and acceptance criteria, then propose bounded read-only real-file usefulness evaluation requiring user consent; keep high-risk symlink case unverified.
+
 **READ THIS FIRST IN A NEW CHAT OR A DIFFERENT ASSISTANT.** This is a project-local, source-linked snapshot of objectives, real baseline, decisions, evidence, code and next actions. It is **not** a substitute for fresh GitHub HEAD and does **not** copy the Notion Applied/General research catalogs. When a detail changes, update this file + CURRENT/REGISTER, preserving evidence.
 
 ## 0. Exact repository identity / authorities

@@ -1,5 +1,8 @@
 # DJMRN — OPEN A NEW CHAT / RESUME FROM GITHUB ONLY
 
+**LATEST SUPERSEDING ALL OLDER INSTRUCTIONS BELOW:** [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md) **Windows synthetic smoke PASSED**, user executed Python 3.14.7, 15 unit tests successful / 1 symlink test skipped, 2 correct source-cited search results. The previous hash-related BLOCKED status described below is *historic*. **Do not rerun baseline smoke or repeat Work WQ research**; obtain user-approved specific non-sensitive use case to evaluate real data next. [Current](CURRENT-STATUS.md), [full snapshot](PROJECT-STATE-HANDOFF-20261020.md).
+
+
 **One message to a new assistant:**
 
 «پروژهٔ خصوصی DJMRN را فقط از مخزن GitHub **`mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`** و شاخهٔ **main** ادامه بده؛ این مخزن را با `DJMRN-Research-Bridge` اشتباه نگیر. ابتدا live `repository.full_name` و HEAD را تأیید کن؛ بعد **`07-operations-and-continuity/PROJECT-STATE-HANDOFF-20261020.md`**، `CURRENT-STATUS.md`، `PROJECT-RULES.md`، `02-project-management/DECISION-REGISTER.md`، `TASK-REGISTER.md`، `05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-PROTOCOL.md` و `06-tests-and-evidence/TEST-REGISTER.md` را از GitHub واقعاً بخوان. بر اساس وضعیت و شواهد ثبت‌شده پیش برو؛ نه حافظهٔ چت و نه تکرار پژوهش WQ0001. D-009 و CAP-006 تصویب و کدنویسی شده‌اند و ۱۶ آزمون **فقط در محیط جدا** پاس شده؛ کاربر اکنون آزمون صرفاً ساختگی روی Windows را اجازه داده ولی **نتیجهٔ تلاش اول برگشته: توقف در کنترل هش `fixtures/sample_alpha.txt`، قبل از Python؛ آزمون Windows موفق نشده**. پس خروجی PowerShell را از من بگیر و اعتبارسنجی و در GitHub ثبت کن؛ در صورت خطا بدون نصب یا دستکاری سیستم توقف. کتابخانهٔ Notion فقط برای پژوهش‌های تازه لازم است، همهٔ وضعیت‌های لازم پروژه در مخزن ثبت شده‌اند.»

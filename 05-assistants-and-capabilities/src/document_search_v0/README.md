@@ -36,3 +36,6 @@ User authorized **synthetic-only Windows smoke**; **not executed yet**. Follow [
 
 ## Windows first attempt was blocked (NEW-V0002, 2026-10-20)
 User reported SHA mismatch for `fixtures/sample_alpha.txt` after extraction and **before any Python tests**. Original ZIP + embedded file hashes match published values in assistant container; user Windows extracted hash and cause unknown. [Failure record](../../../06-tests-and-evidence/logs/NEW-V0002-20261020.md). Do not skip integrity check or mark Windows PASS; inspect existing extracted file with read-only diagnostic.
+
+## Windows on-device success — NEW-V0002 (2026-10-20)
+The user successfully ran the verified-ZIP script on Windows 11 Pro with existing **Python 3.14.7**: all four ZIP-to-disk files `MATCH=True`; 16 unit tests attempted with **15 passed / 1 skipped** (`test_reject_symlink`: symbolic links unavailable), duration 0.992s for the suite, then standalone synthetic Persian lookup returned `status=succeeded`, exactly 2 expected file/line/hash matches. [Full receipt](../../../06-tests-and-evidence/logs/NEW-V0002-20261020.md). Prior SHA preflights failed before Python and their cause remains unknown. Current status **PASS/SYNTHETIC/USER-WINDOWS**, not production-ready / real documents validated.

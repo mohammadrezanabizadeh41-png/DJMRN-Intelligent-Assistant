@@ -1,4 +1,9 @@
 # DJMRN — CANONICAL CURRENT STATUS (2026-10-20)
+
+## CURRENT VERIFIED OUTCOME — latest 2026-10-20 (read first)
+**CAP-006 FIRST WINDOWS SYNTHETIC SMOKE SUCCEEDED.** User supplied PowerShell output: four ZIP-to-extracted SHA/length `MATCH=True`, **Python 3.14.7**, `Ran 16 tests in 0.992s, OK (skipped=1)` (**15 passed, 1 symlink test skipped**), then JSON `status=succeeded` with **2 correct source-cited sample hits** (`sample_alpha.txt:1`, `sample_beta.md:2`). See [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). This is **user-executed actual Windows smoke with synthetic data**, not a production/real-customer workload. Earlier failed hash-preflight attempts remain historical evidence; cause unresolved. **Next: ask user which exact 2–3 non-sensitive real files/use case, gain scoped consent, then prepare a separate read-only real-I/O validation; optionally add Windows symlink test under appropriate privileges only if needed.** No new install/Agent/manager/cloud needed.
+
+
 **Repo:** `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` / `main` — exact repo verification is mandatory.  
 **For exhaustive handoff read:** [PROJECT-STATE-HANDOFF-20261020.md](PROJECT-STATE-HANDOFF-20261020.md); [rules](../PROJECT-RULES.md); [TASKS](../02-project-management/TASK-REGISTER.md); [DECISIONS](../02-project-management/DECISION-REGISTER.md).
 
@@ -28,4 +33,4 @@ No Windows installation or benchmark, no model/engine/Agent resource manager/UI/
 
 ## Latest: repeated SHA preflight halt (2026-10-20)
 - User re-ran previous PowerShell with four manually transcribed expected hash strings. It stopped again at `STOP: Hash changed: fixtures/sample_alpha.txt` **before Python started**, despite earlier read-only direct ZIP vs extracted check showing four matching pairs. Contradiction unresolved; do NOT assume file corruption, Windows bug or Python failure.
-- A new [same-loop ZIP-derived SHA integrity + Python smoke script](../05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-VERIFIED-ZIP.ps1) was prepared. It compares files to authenticated original ZIP bytes, not manually copied fixture hash literals, and then runs synthetic Python unit tests ONLY if all four pass. **Await actual user run/results**; no on-device test success yet.
+- A new [same-loop ZIP-derived SHA integrity + Python smoke script](../05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-VERIFIED-ZIP.ps1) was prepared. It compares files to authenticated original ZIP bytes, not manually copied fixture hash literals, and then runs synthetic Python unit tests ONLY if all four pass. **ACTUAL user-run Windows smoke now PASSED** (15 pass / 1 skipped; two sample hits), see top CURRENT and NEW-V0002. Earlier gate errors are history.
