@@ -1,5 +1,13 @@
 # REQ-OBS-001 — DJMRN Live Observability Map
-**Status:** USER-REQUESTED FUTURE REQUIREMENT / RESEARCHED 2026-10-20 / NOT IMPLEMENTED / NO PROVIDER SELECTED
+**Status (2026-10-21):** USER-REQUESTED FUTURE REQUIREMENT / DEFERRED / NOT IMPLEMENTED / NO PROVIDER SELECTED; PRIOR TOOL RESEARCH IS PRELIMINARY AND REQUIRES NEW VERIFICATION
+
+## یادداشت تداوم و تفکیک وضعیت — 2026-10-21
+- متن کامل درخواست کاربر (853 خط / 29,906 بایت / SHA256 `c17585bf5f7b4a9e321a983d48e7847d1f6754e797293433cb4f656b56926998`) بدون تغییر در [SRC-0003](../08-project-knowledge-base/inbox/SRC-0003-djmrn-low-ram-live-observability-request-20261020.md) نگهداری می‌شود. Git blob `c25bf9eec4703a7882e4d863340dda94b02bc644` به‌صورت مستقل بازخوانی و تطبیق شد.
+- تغییر اولیهٔ [commit a3fd3fdf](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/a3fd3fdf8fa8cacaa07e46592c2b8e1dac944dda) پیش از تأیید ثبت این نیاز انجام شده بود. این سند قبلی **DRAFT / RESEARCH INPUT** است؛ حفظ `REQ-OBS-001` فقط برای شناسه و تداوم ارجاع است، نه تأیید معماری یا ارائه‌دهنده.
+- **دستور جاری کاربر:** نیاز و پژوهش آن برای بعد نگهداری شود؛ هیچ نصب، حساب، provider activation، telemetry یا benchmark اکنون انجام نشود. `TASK-0013` برای پیگیری بعدی است و CAP-006 در اولویت فعلی باقی می‌ماند.
+- نیازها: Live/near-live web map، node و edge واقعی، trace قابل پیگیری، LOCAL/CLOUD، وضعیت و منابع، حداقل RAM، حریم خصوصی و عدم اختلال اجرای اصلی هنگام خرابی observer. Cloud-first/Direct OTLP و هدف کمتر از 200–300MB **ترجیح/هدف مهندسی** هستند، نه طراحی تصویب‌شده یا مقدار اندازه‌گیری‌شده.
+- فهرست Grafana Cloud، New Relic، Uptrace، Jaeger، SigNoz و custom viewer **نامزد پژوهشی** است، نه برنده. ادعاهای قیمت، سهمیه، قابلیت و محدودیت منطقه‌ایِ مندرج در ثبت قدیمی تا بررسی رسمی روز `UNVERIFIED FOR ACTIVATION` باقی می‌مانند؛ Trial را Free فرض نکن.
+- این قابلیت در صورت اجرای آینده فقط **OBSERVER / PROJECTION** خواهد بود و مجوز کنترل، خواندن prompt/payload/secret یا جانشینی state authority ندارد.
 
 ## نیاز کاربر
 DJMRN باید در آینده یک **نقشهٔ زندهٔ مانیتورینگ/Observability** داشته باشد که اجزای واقعی سیستم و ارتباط میان آن‌ها را به‌صورت بصری و نزدیک به لحظه نمایش دهد؛ ترجیحاً در یک صفحهٔ وب و با حداقل مصرف RAM روی لپ‌تاپ.
