@@ -27,3 +27,7 @@
 
 ## نحوهٔ نگهداری
 ثبت ورودی و وضعیت را طبق [INTAKE-PROTOCOL](INTAKE-PROTOCOL.md) انجام دهید. در پایان هر دریافت، source register، KB entry، INDEX، relevant topic README/index، OPEN-QUESTIONS و اگر واقعاً وظیفه تغییر کرد TASK/CURRENT را با commit/readback به‌روزرسانی کنید. تاریخچهٔ قدیمی را پاک نکنید.
+
+## Source-only future requirements (NOT verified KB articles or architecture decisions)
+- [SRC-0003](inbox/SRC-0003-djmrn-low-ram-live-observability-request-20261020.md) — future low-RAM Live Observability Map, [REQ-OBS-001](../02-project-management/LIVE-OBSERVABILITY-MAP-REQUIREMENT.md), TASK-0013, **DEFERRED**.
+- [SRC-0004](inbox/SRC-0004-djmrn-multi-persona-logical-assistants-future-20261020.md) — full 1,583-line **verbatim** user future concept: many logical/persona specialist assistants, shared/on-demand models, role/skill/permission/knowledge boundaries, deterministic collection, workflow-first and selective Agents. [REQ-MPA-001](../02-project-management/MULTI-PERSONA-SPECIALIST-ASSISTANTS-REQUIREMENT.md), TASK-0014, **DEFERRED / no KB validation or vendor selection yet**. Do not inflate the count of the 10 existing verified/curated KB articles.
