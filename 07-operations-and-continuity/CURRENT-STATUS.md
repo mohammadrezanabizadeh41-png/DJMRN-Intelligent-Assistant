@@ -1,5 +1,9 @@
 # DJMRN — CANONICAL CURRENT STATUS (2026-10-20)
 
+## USER AUTHORIZED THE OPTION A TWO-FILE PILOT — AWAITING USER EXECUTION (2026-10-21)
+The user explicitly replied **«بله»** to the coordinator's exact request to run a **single manual, read-only** test with query `Windows` on the **same two previously authorized non-sensitive local copied project documents** with existing Python/CAP-006, temporary session-only UTF-8 stdout and independent pre/post file SHA256 checks. [Exact scope and receipt](../02-project-management/CAP-006-OPTION-A-USER-WORKFLOW-PILOT-PLAN-20261021.md). **APPROVED TO RUN THAT ONE TEST / NOT YET EXECUTED; NO PASS result.** User will run PowerShell and send output. No code/installation/account/file report write/new model or Agent is authorized.
+
+
 ## USER SELECTED OPTION A — PILOT APPROVAL PENDING (2026-10-21)
 - The user expressly answered **"A"**, choosing a real, usable Persian-readable, source-citing **CAP-006 document lookup workflow** as the next target after accepted Work `WA0002`. This is a *directional choice* recorded in [D-013](../02-project-management/DECISION-REGISTER.md) and [TASK-0016](../02-project-management/TASK-REGISTER.md), **not authorization for execution, code editing, installing or account/Cloud actions**.
 - [Minimal future pilot plan](../02-project-management/CAP-006-OPTION-A-USER-WORKFLOW-PILOT-PLAN-20261021.md) reuses the same previously permitted two local downloaded non-sensitive Markdown copies, existing Python 3.14.7 and already extracted CAP-006 script, plus a user-chosen literal query (default example `Windows` if expressly approved). Expected result: one bounded TWO-file query, readable Persian file/line/original text/SHA256, checked against originals; terminal-only stdout, no output file writes.
