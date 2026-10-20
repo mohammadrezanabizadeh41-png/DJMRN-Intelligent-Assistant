@@ -17,3 +17,5 @@
 | NEW-V0002 | user-authorized 2026-10-20 | CAP-006 synthetic-only Windows smoke | **FIRST USER WINDOWS ATTEMPT BLOCKED: EXTRACTED FIXTURE HASH MISMATCH; PYTHON NOT RUN** | [incident NEW-V0002](logs/NEW-V0002-20261020.md); read-only hash diagnostics of existing extracted file next; do not mark Windows PASS |
 
 **NEW-V0002 update, 2026-10-20:** read-only Windows user PowerShell diagnostic shows ZIP SHA and **all four ZIP-entry/extracted-file SHA256 and byte sizes match (True)**. [Details](logs/NEW-V0002-20261020.md). The first reported SHA mismatch remains unexplained; **Python/unittests/CLI on Windows STILL PENDING**. Status: `INTEGRITY VERIFIED / AWAITING PYTHON TEST RESULTS`.
+
+**NEW-V0002 second attempt (2026-10-20):** original expected-hash PowerShell run again stopped at `STOP: Hash changed: fixtures/sample_alpha.txt` **before Python started**, despite prior direct ZIP/disk comparison 4/4 MATCH. Cause UNKNOWN. Use the [pinned-ZIP-derived hash and safe Python script](../05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-VERIFIED-ZIP.ps1); no bypass, install, re-extraction or file deletion. **Windows unit tests still PENDING.**

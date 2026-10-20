@@ -69,3 +69,7 @@
 ## 2026-10-20 — NEW-V0002 read-only ZIP vs Windows disk verification PASS
 - New user PowerShell output reports pinned ZIP SHA and four files' ZIP/disk sizes and SHA256 all matching (`MATCH: True`), without error. Original earlier checksum mismatch cause not established. [NEW-V0002 receipt](../06-tests-and-evidence/logs/NEW-V0002-20261020.md) updated, no Windows application tests yet.
 - Now permitted next gated step: execute only the existing Python 16-unit-tests and read-only dummy sample CLI in same existing extracted directory; no re-download/extraction, no real files, install, Manager or Agent.
+
+## 2026-10-20 — second Windows PowerShell SHA gate stopped before Python; compare to trusted ZIP dynamically
+- User pasted a second attempt with hardcoded `$checks` SHA values, ending `STOP: Hash changed: fixtures/sample_alpha.txt` before Python. Prior read-only ZIP vs extracted hash diagnostic showed all four True, so cause **UNKNOWN**; nothing installed or modified by this attempt.
+- Added standalone [WINDOWS-SMOKE-VERIFIED-ZIP.ps1](../05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-VERIFIED-ZIP.ps1): first validate SHA of original ZIP, then calculate SHA of each embedded file and compare to disk SHA/size in same loop; only if all match run Python tests. Do not bypass integrity checks, erase directory or claim Windows PASS without actual user console output. [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md) remains unresolved until next run.

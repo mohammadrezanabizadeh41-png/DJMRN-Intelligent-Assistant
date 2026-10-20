@@ -25,3 +25,7 @@ No Windows installation or benchmark, no model/engine/Agent resource manager/UI/
 ## Latest UPDATE after NEW-V0002 read-only diagnostic (2026-10-20)
 - User's PowerShell ZIP and extracted file check returned **4/4 MATCH=True**, correct lengths/hashes and ZIP SHA256, no exception. [Observed evidence](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). The earlier `sample_alpha.txt` discrepancy cause is **UNKNOWN** but current files match; no modifications made.
 - **Next now: run existing Python against the already-extracted, checked dummy-file directory** (no new extraction, install or Administrator). Await exact 16-unit-test and CLI console result; do not mark CAP-006 Windows PASS prematurely.
+
+## Latest: repeated SHA preflight halt (2026-10-20)
+- User re-ran previous PowerShell with four manually transcribed expected hash strings. It stopped again at `STOP: Hash changed: fixtures/sample_alpha.txt` **before Python started**, despite earlier read-only direct ZIP vs extracted check showing four matching pairs. Contradiction unresolved; do NOT assume file corruption, Windows bug or Python failure.
+- A new [same-loop ZIP-derived SHA integrity + Python smoke script](../05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-VERIFIED-ZIP.ps1) was prepared. It compares files to authenticated original ZIP bytes, not manually copied fixture hash literals, and then runs synthetic Python unit tests ONLY if all four pass. **Await actual user run/results**; no on-device test success yet.

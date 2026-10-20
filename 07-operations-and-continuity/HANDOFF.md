@@ -14,3 +14,6 @@
 
 ## Update after SHA diagnostic — 2026-10-20
 The previous first-run SHA error was followed by user-controlled **read-only** inspection: ZIP and all four extracted dummy files matched length and SHA256 (`MATCH: True`). [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). **Not a Windows Python test PASS.** Next: manually run the existing 16 tests and a synthetic CLI example from same extracted folder, no re-extraction, no new install/real files. Keep exact repository lock and all decisions.
+
+## Next-script update 2026-10-20
+A second previous hash-literal script attempt stopped before Python (`fixtures/sample_alpha.txt`), even though preceding independent SHA readout showed all files match. **No diagnosis is established.** A new pinned archive-derived SHA verification + conditional Python smoke, [WINDOWS-SMOKE-VERIFIED-ZIP.ps1](../05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-VERIFIED-ZIP.ps1), is the recommended next user script. If mismatch, print both actual digests; if all match, run tests. User must paste output for NEW-V0002; no installation or folder reset.
