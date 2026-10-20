@@ -1,5 +1,9 @@
 # DJMRN — Intelligent Assistant System | نقطهٔ ورود پروژه
 
+## Core product clarification — chat-first assistants (2026-10-21)
+**The user expressly corrected the product objective**: PowerShell was only for CAP-006 testing, **not** an acceptable recurring user workflow. End-state: **message-based collaboration and supervision of assistants and later approved managerial Agents**. A source-grounded document lookup, B data validation and C official research/evidence are composable background capabilities, not three mandatory CLI products. Read [REQ-012](02-project-management/CHAT-FIRST-ASSISTANT-INTERACTION-REQUIREMENT.md), [D-014](02-project-management/DECISION-REGISTER.md) and [TASK-0017](02-project-management/TASK-REGISTER.md). `NEW-V0004` remains technical PASS, **not an operational conversational assistant**. Next: evidence-led selection of a permissioned chat→CAP-006 tool bridge, only after separate approval for implementation. No framework/Agent/host chosen.
+
+
 ## Technology Radar additional source enrichment — 2026-10-21
 User's additional **494-line** research note about tracing the original sources behind Instagram/YouTube introductions, manual links/screenshots/video, accurate attribution and discovering practical/freelance ideas is stored verbatim as [SRC-0006](08-project-knowledge-base/inbox/SRC-0006-djmrn-social-source-discovery-idea-intelligence-amendment-20261020.md). **Merged into the existing [REQ-TDR-001](02-project-management/TECHNOLOGY-DISCOVERY-RADAR-REQUIREMENT.md) / TASK-0015** — not a separate duplicated capability, not an adopted API/tool/architecture. **Deferred; no automated media collection/monitoring or new tool. WQ0002 remains the active pending Work request.**
 
