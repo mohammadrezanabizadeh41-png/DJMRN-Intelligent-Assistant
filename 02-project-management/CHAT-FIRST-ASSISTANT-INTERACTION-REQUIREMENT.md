@@ -67,6 +67,14 @@ Before building it:
 
 **Current state:** The user has **corrected and clarified the end-state requirement**. The new chat→tool implementation is **not yet built or approved**. We should stop repeating manual CLI demos as if they were product milestones; their engineering evidence is already captured in NEW-V0004.
 
+## 2026-10-21 ADDENDUM — User explicitly chose both conversational surfaces
+
+After reading the fully verified Work [WA0003](../04-work-research-bridge/responses/WA0003.md) and [coordinator review](../04-work-research-bridge/reviews/WQ0003.md), the user explicitly requested **BOTH**: future DJMRN control from ChatGPT and from a separately hosted Windows/private chat interface. This closes the earlier unresolved *which conversational surface?* question; it **does not** grant access to local files from this chat, choose a technical host/model or approve installation/runtime changes.
+
+The only **PROPOSED** solution for user sign-off is a **portable shared DJMRN tool and policy core** with host-specific adapters (possibly distinct stdio child processes, not a compulsory always-running shared service). Initial PRIMARY local-chat pilot may try **Jan Desktop v0.8.7** only with Shell OFF, other broad tools OFF, autoapprove OFF, actual permission checks, measured RAM/quality and user consent. **Cherry Studio** remains fallback, and **ChatGPT Desktop local MCP** is the future second interface subject to actual feature availability, separate transfer privacy and consent. No unverified Cloud API/tunnel or model activation is authorized. Read [full architecture proposal](../03-architecture-and-tools/DUAL-SURFACE-CHAT-TOOL-CORE-PROPOSAL-20261021.md) and [D-015](DECISION-REGISTER.md).
+
+Once/if user endorses the DESIGN, G1 readiness inspection, G2 code/adapter work, G3 local pilot and G4 ChatGPT integration require separate granular permissions, gates and actual evidence. On failure Jan must not be installed/upgraded anyway; an alternative can be proposed without sacrificing a host-independent tool schema. A/B/C remain shared future capability roles, not three separate manual applications.
+
 ## 6. Research governance and next gate
 
 Any future Work search about interface/tool-host architecture follows the [Work Bridge protocol](../04-work-research-bridge/README.md): **read actual relevant Applied Notion library + Mission plus independent official search, merge receipts and compare alternatives**. No separate Applied Research Bridge write. User has not explicitly ordered a new Work WQ in this message; it may be proposed once the scope is agreed rather than implying Work research is already dispatched.
