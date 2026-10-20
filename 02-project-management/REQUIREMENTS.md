@@ -14,4 +14,6 @@
 
 | REQ-011 | CAP-006 V0 جست‌وجوی فارسی فقط‌خواندنی و منشأدار | 16 synthetic tests in isolated assistant container PASS؛ Windows/real workload NOT TESTED؛ [scope](V0-BUILD-DECISION.md) |
 
+| REQ-012 | **Chat-first / Message-driven assistants**: کاربر فقط با پیام، نظارت و همکاری با دستیار/Agent تعامل می‌کند؛ نه استفادهٔ دوره‌ای از PowerShell و CLI؛ دستیار باید A (اسناد)، B (داده)، C (پژوهش) را پشت صحنه با ابزارهای دارای مجوز و شواهد اجرا/ترکیب کند | **CORE USER DIRECTIVE / REQUIREMENT CONFIRMED, INTEGRATION UNBUILT**؛ [spec](CHAT-FIRST-ASSISTANT-INTERACTION-REQUIREMENT.md)، [D-014](DECISION-REGISTER.md)، [task](TASK-REGISTER.md). معیار گیت: یک پیام فارسی → فراخوانی واقعی محدود CAP-006 بدون دستور دستی هر بار → پاسخ منبع‌دار و رفتار permission/FAIL درست؛ انتخاب runtime/رابط و approval ساخت جدا. چند Agent دائمی الزام نیست |
+
 هر نیاز جدید فقط با use case مشخص، معیار قبول و اولویت وارد شود. Unknown ≠ Failed؛ reported PASS ≠ independently verified production.
