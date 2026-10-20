@@ -22,3 +22,6 @@
 
 ## Latest evidence superseding older NEW-V0002 pending notes — 2026-10-20
 **[NEW-V0002](logs/NEW-V0002-20261020.md): WINDOWS SYNTHETIC SMOKE PASS**, user-provided actual PowerShell result: original ZIP + four file hashes match; Python 3.14.7; `Ran 16 tests in 0.992s — OK (skipped=1)` = **15 pass / 1 skipped (symlink unavailable)**; synthetic search returns 2 correct source-linked matches. Prior `BLOCKED/PENDING` entries above are **earlier attempts only**, not the current result. No real data or production validation.
+
+## LATEST — NEW-V0003 (2026-10-21)
+| NEW-V0003 | 2026-10-21 | CAP-006 Windows actual read-only keyword search on two non-sensitive downloaded DJMRN project Markdown files | **VERIFIED-REAL BOUNDED / PASS WITH UTF-8 CONSOLE DISPLAY ISSUE; NOT OPERATIONAL** | User-supplied Windows Python 3.14.7 console: `هوشمند` charter line 3; `منابع` resources line 1; `status=succeeded` each; independent 1/1 reference line and original SHA256 before/after equal; [full NEW-V0003](logs/NEW-V0003-20261021.md). Native stdout mojibake remains open; Windows symlink test still unverified. |
