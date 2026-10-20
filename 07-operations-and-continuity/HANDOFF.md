@@ -11,3 +11,6 @@
 4. After actual test, save sanitized evidence as NEW-V0002 and update CURRENT, task/implementation register, CHANGELOG and snapshot. Escalations (real-file access, install, background service, model, Agent, manager) need separate authorization.
 
 **For future Work messages:** [REPOSITORY-LOCK](../04-work-research-bridge/REPOSITORY-LOCK.md) requires explicit exact `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` in request and response. Notion Applied research library and other GitHub research repo stay separate.
+
+## Update after SHA diagnostic — 2026-10-20
+The previous first-run SHA error was followed by user-controlled **read-only** inspection: ZIP and all four extracted dummy files matched length and SHA256 (`MATCH: True`). [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). **Not a Windows Python test PASS.** Next: manually run the existing 16 tests and a synthetic CLI example from same extracted folder, no re-extraction, no new install/real files. Keep exact repository lock and all decisions.

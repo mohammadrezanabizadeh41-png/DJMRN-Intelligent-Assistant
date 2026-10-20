@@ -15,3 +15,5 @@
 **No current Windows benchmark or operational assistant execution was performed during repo setup.** CAP-006 synthetic tests were executed later in an isolated environment; still **no Windows device test**.
 
 | NEW-V0002 | user-authorized 2026-10-20 | CAP-006 synthetic-only Windows smoke | **FIRST USER WINDOWS ATTEMPT BLOCKED: EXTRACTED FIXTURE HASH MISMATCH; PYTHON NOT RUN** | [incident NEW-V0002](logs/NEW-V0002-20261020.md); read-only hash diagnostics of existing extracted file next; do not mark Windows PASS |
+
+**NEW-V0002 update, 2026-10-20:** read-only Windows user PowerShell diagnostic shows ZIP SHA and **all four ZIP-entry/extracted-file SHA256 and byte sizes match (True)**. [Details](logs/NEW-V0002-20261020.md). The first reported SHA mismatch remains unexplained; **Python/unittests/CLI on Windows STILL PENDING**. Status: `INTEGRITY VERIFIED / AWAITING PYTHON TEST RESULTS`.

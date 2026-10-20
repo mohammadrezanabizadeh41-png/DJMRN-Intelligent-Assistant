@@ -21,3 +21,7 @@
 No Windows installation or benchmark, no model/engine/Agent resource manager/UI/remote host, no live website/email/customer data or payments, no Notion modification; no project-wide language or DB selected. PowerShell smoke must not inspect real folders or install software. If Python absent/hash wrong, STOP and report.
 
 **Always:** verify exact repo fullname and HEAD; preserve Work other repository separation, source status and user permissions; update CURRENT/HANDOFF/CHANGELOG with evidence only.
+
+## Latest UPDATE after NEW-V0002 read-only diagnostic (2026-10-20)
+- User's PowerShell ZIP and extracted file check returned **4/4 MATCH=True**, correct lengths/hashes and ZIP SHA256, no exception. [Observed evidence](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). The earlier `sample_alpha.txt` discrepancy cause is **UNKNOWN** but current files match; no modifications made.
+- **Next now: run existing Python against the already-extracted, checked dummy-file directory** (no new extraction, install or Administrator). Await exact 16-unit-test and CLI console result; do not mark CAP-006 Windows PASS prematurely.

@@ -73,3 +73,6 @@ If portable ZIP is lost after switching windows, use [source in canonical GitHub
 5. After any mutation: commit, read back same repo/head/blob, update CURRENT/CHANGELOG/TASK/TEST and this snapshot when materially changed. No async promise or work when laptop off. [Recovery](RECOVERY-PROTOCOL.md).
 
 **One-line continuity:** Project is past architecture-sequencing research; D-009 approved, CAP-006 first deterministic source exists and only synthetic Linux tests passed; Windows synthetic smoke **attempted but blocked at SHA integrity gate before Python**, then record result and decide on real bounded usage.
+
+## Latest factual continuation note — Windows file-integrity diagnostic PASS (2026-10-20)
+The user ran the documented read-only ZIP/Win-extracted comparison. Reported ZIP SHA equals pinned original; all four original entries and the *already-extracted* files have identical SHA256 and byte size (4/4 `MATCH: True`). [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). Earlier reported checksum error remains unexplained; do not repeat destructive download/extract. **Python has still not been invoked/tested on Windows.** Next run `py -3` or `python` to execute existing 16-unit-test suite and dummy-file CLI using the same folder, then record actual Windows result. No real data or install approved.

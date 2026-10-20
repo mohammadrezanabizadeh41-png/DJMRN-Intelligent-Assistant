@@ -20,3 +20,6 @@
 | TASK-0012 | نخستین قابلیت بدون Agent: جست‌وجو و استخراج خطی با منشأ دقیق | **16 ISOLATED TESTS PASS; FIRST WINDOWS ATTEMPT BLOCKED AT EXTRACTED SHA GATE 2026-10-20** | [D-009/011/012](V0-BUILD-DECISION.md), [source](../05-assistants-and-capabilities/src/document_search_v0/README.md), [test evidence](../06-tests-and-evidence/logs/NEW-V0001-20261020.md) | [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md): user-reported file hash mismatch before Python; read-only SHA and length inspection required, no real-file access |
 
 **در هر تغییر:** وضعیت، خطا، لینک output/commit، source/observed date، وابستگی، مالک، next action؛ sync CURRENT-STATUS. هیچ task صرفاً به خاطر ساخت فایل DONE اجرایی نمی‌شود.
+
+## TASK-0012 latest V0 smoke gate (2026-10-20)
+Windows user-reported read-only ZIP/extraction comparison **PASS for all 4 files and ZIP SHA**; actual Python smoke not yet run. See [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). Next use already-extracted dummy-fixture directory for 16 Python unit tests and CLI, no install.

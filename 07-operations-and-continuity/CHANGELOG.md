@@ -65,3 +65,7 @@
 ## 2026-10-20 — NEW-V0002 first on-Windows smoke halted safely on integrity check
 - User posted PowerShell output ending `STOP: File hash mismatch: fixtures/sample_alpha.txt` before any Python test/CLI. Test registered as [NEW-V0002 BLOCKED](../06-tests-and-evidence/logs/NEW-V0002-20261020.md); no Windows app PASS.
 - Original ZIP SHA and embedded fixture SHA independently rechecked in assistant container against protocol (both exact); extracted **Windows** file size/hash unknown, root cause UNKNOWN. Do not reinstall/download/overwrite/destroy the old test folder; read-only diagnostic first. The original 16/16 synthetic Linux test is separate and unchanged.
+
+## 2026-10-20 — NEW-V0002 read-only ZIP vs Windows disk verification PASS
+- New user PowerShell output reports pinned ZIP SHA and four files' ZIP/disk sizes and SHA256 all matching (`MATCH: True`), without error. Original earlier checksum mismatch cause not established. [NEW-V0002 receipt](../06-tests-and-evidence/logs/NEW-V0002-20261020.md) updated, no Windows application tests yet.
+- Now permitted next gated step: execute only the existing Python 16-unit-tests and read-only dummy sample CLI in same existing extracted directory; no re-download/extraction, no real files, install, Manager or Agent.
