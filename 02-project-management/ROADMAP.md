@@ -28,3 +28,8 @@ Cross-cutting: امنیت، observability، cost gates و tests از P0/P1 مط�
 
 ## Future cross-cutting capability — Live Observability Map
 نیاز کاربر برای یک **نقشهٔ زندهٔ کم‌مصرف** از اجزا و ارتباطات سیستم ثبت شد: [REQ-OBS-001](LIVE-OBSERVABILITY-MAP-REQUIREMENT.md). این capability باید از P4 به بعد همراه با real I/O تکامل یابد، ولی provider/stack آن هنوز انتخاب نشده است. اولویت فعلی cloud-first/direct-OTLP برای کمینه‌کردن RAM محلی است؛ local all-in-one فقط پس از benchmark. این requirement مسیر فعلی CAP-006 را متوقف یا جابه‌جا نمی‌کند.
+
+## Future requirement — Logical Specialized Assistants / Persona Profiles (REQ-MPA-001)
+- [REQ-MPA-001](MULTI-PERSONA-SPECIALIST-ASSISTANTS-REQUIREMENT.md), original [SRC-0004](../08-project-knowledge-base/inbox/SRC-0004-djmrn-multi-persona-logical-assistants-future-20261020.md) and future `TASK-0014` preserve the user's full concept. This **does not change the approved first vertical or P0–P6 proposed sequence**.
+- Keep future contracts extensible for identity/role, explicitly scoped knowledge/skills/tools, permissions, output validation, model-agnostic profile execution, independent durable state and traces. Reuse one shared/on-demand engine if suitable; no mandatory resident Agent/process per persona.
+- **Trigger:** after user requests prioritization or a real use case justifies it. Future research must compare ready-made cloud/local workflow+persona platforms with light custom alternatives, official Free-First/cost/region/security and Windows RAM tests; only then propose a minimal pilot with consent. No choice, signup, install, model download or implementation now.
