@@ -54,3 +54,14 @@ Historical user Windows environment observed during NEW-V0003:
 
 **Execution status: AUTHORIZED / NOT YET EXECUTED; awaiting user PowerShell console output.** This consent supersedes prior "not authorized to run" statements *for precisely this narrow one-off run only*. All other tests, code changes and future tasks still require separate authorization.
 
+## 2026-10-21 EXECUTION UPDATE — actual user Windows two-file technical PASS; daily usefulness OPEN
+
+The user subsequently executed the exact approved PowerShell block once and supplied the real console output. **The planned pilot has now run**; prior "NOT YET EXECUTED" lines above are **historical pre-execution states**, not current facts.
+
+Actual stdout: Python **3.14.7**, query `Windows`, `status=succeeded`, **2 searched files**, **4 results**: `02-project-managementPROJECT-CHARTER.md.md` line 3 (1) and `03-architecture-and-toolsRESOURCE-MANAGEMENT.md.md` lines 1, 5, 8 (3). All results had `match_mode=normalized`; an independent `Select-String -SimpleMatch -CaseSensitive -Encoding UTF8` source comparison checked file, exact line and original text and per-hit SHA; original pre/post SHA256 unchanged:
+- Charter: `EC5B75577768F12285B8FCEFD6E1E827CC977F676763F052715882DDE2D2D180`.
+- Resource-management: `71C41C864C251C2A027DFDED24112296821E706612BDA0733582F689DAD0D066`.
+
+PowerShell displayed original Persian text legibly. Final banner explicitly: `TECHNICAL VALIDATION: PASS` and `Independent line and SHA256 checks passed.` The user output ended `User-value evaluation is still pending.` The standalone evidence and limitations are [NEW-V0004](../06-tests-and-evidence/logs/NEW-V0004-20261021.md) (created and GitHub readback-verified, commit `eba223fac1ed24ecf5bafb065ae211d30b341786`, blob `f341687509ef819d196d32a8c4241193b049ef03`).
+
+**Current verdict: TWO-FILE PRACTICAL-LOOKUP TECHNICAL PILOT PASS / USER DAILY WORKFLOW & UX ACCEPTANCE PENDING.** No broader corpus/semantic/Agent/performance/Windows security proof and no approval to build wrapper or run new pilot. Next ask whether the output is personally useful and whether current manual PowerShell is good enough. A wrapper is optional only after a demonstrated user need and separately approved scope.
