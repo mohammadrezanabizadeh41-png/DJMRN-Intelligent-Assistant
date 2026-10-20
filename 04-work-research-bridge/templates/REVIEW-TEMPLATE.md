@@ -1,0 +1,11 @@
+# Coordinator review — WQ#### / WA#### — TEMPLATE
+- Actual repo file SHA/commit and full readback: PASS/FAIL
+- Request/answer alignment and exact scope
+- Quality/provenance: original official sources verified? any stale versions? unsupported claims?
+- Historical overlap: General/Applied alias duplicate? previous answers contradict? source recency?
+- Free/card/overage/geo/legal/security/privacy ratings: VERIFIED / UNKNOWN / HOLD
+- Alternatives: simpler/no-LLM/ready program; architecture testability and recovery
+- Extracted verified findings; rejected/partial/unknown items with reasons
+- Decision: ACCEPT, PARTIAL, REJECT, BLOCKED; **report acceptance ≠ user authorization**
+- Canonical landing: project path link; if cross-project architecture changes then corresponding Notion decision ID
+- Next bounded user-approved research or action and request ID after ledger refresh
