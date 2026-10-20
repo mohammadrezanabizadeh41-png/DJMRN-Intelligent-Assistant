@@ -1,5 +1,9 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-21 — Prepared WQ0003 to research first REAL conversational assistant connection
+- [WQ0003](../04-work-research-bridge/requests/WQ0003.md) committed and reread in exact repo/main; commit `25f3df341c412ee9e081f7d23cd6df688b45fdd2`, blob `917beb0fedcb36cef5a457d58711e89456d46e2b`. Scope: compare actual ready chat/host, minimal native local app, trusted ChatGPT↔Windows tool bridge and hybrid options; official Free-First/Iran/privacy/performance/security checks; no ordinary per-task user PowerShell.
+- Ledger updated to **REQUEST-COMMITTED / AWAITING USER DISPATCH**; Work authorized only to create `responses/WA0003.md` after live Notion Applied plus independent source research. Neither a response nor a verified architecture/host/tool bridge exists yet, and no code/download/login or Windows action occurred.
+
 ## 2026-10-21 — User clarifies product MUST be conversational, not manual CLI
 - User explicitly corrected coordinator's post-`NEW-V0004` "short PowerShell vs current CLI vs GUI" options: their use of PowerShell was **test-only**; real product must let them give natural-language messages and control/collaborate with assistants and, later, delegated manager Agents. Multiple future capability families A document lookup, B CSV/data, C research/evidence are **composable behind one assistant experience**, not separate permanent user interfaces.
 - Created core [REQ-012](../02-project-management/CHAT-FIRST-ASSISTANT-INTERACTION-REQUIREMENT.md), initial commit `92812857c1e714ff83dfc24f7c62afafbe118ac3`; registered [D-014](../02-project-management/DECISION-REGISTER.md) and next [TASK-0017](../02-project-management/TASK-REGISTER.md). Updated Charter, Requirements, Roadmap, CAP-006 A pilot plan (explicit superseding UX note) and Implementation register. No new architectural stack/host selected.
