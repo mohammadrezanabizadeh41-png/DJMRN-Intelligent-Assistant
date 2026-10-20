@@ -19,3 +19,8 @@
 - [ ] Decision: best **sequence** between no-agent capability-first / thin resource-contract-first / custom manager first / ready-made Windows environment, and valid hybrid staging. [WQ0001](../04-work-research-bridge/requests/WQ0001.md) **REQUEST COMMITTED, WA0001 NONE**.
 - [ ] Reconcile v0.48 Applied library and old A0010–A0012 conflicting proposals; separate manual operation from resource-aware autonomous scheduling; verify against new official source docs. 
 - [ ] Only after WA0001: coordinator review, knowledge entries if worthwhile, D-009 user-approved sequencing decision; no automatic implementation.
+
+## WA0001 readback / remaining decision
+- [x] WA0001 genuine report stored by Work, commit+blob verified; [review](../04-work-research-bridge/reviews/WQ0001.md) records two wrong internal file SHA receipts and accepts sequencing only as a conditional proposal.
+- [ ] Await user response on [D-009 and V0 proposal](../02-project-management/PROPOSED-FIRST-MILESTONE.md). Actual language, first capability, machine tests and installation remain unapproved.
+- [ ] Specific runtime RAM, model unload, Compose minima, ProcessKit race, product terms remain unverified and not prerequisites for paper V0 acceptance.

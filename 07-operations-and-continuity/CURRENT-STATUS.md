@@ -23,7 +23,7 @@
 
 ## پژوهش در حال انتظار — WQ0001 (2026-10-20)
 - کاربر صریحاً تحقیق تعیین **ترتیب کار** را درخواست کرده: قابلیت بدون Agent ابتدا، قرارداد حداقلی مدیریت منابع، manager کامل ابتدا، یا ابزار آماده، با سرعت رسیدن به نخستین خروجی و توسعه‌پذیری امن.
-- [درخواست پژوهشی WQ0001](../04-work-research-bridge/requests/WQ0001.md) به عنوان **REQUEST-COMMITTED / AWAITING USER DISPATCH TO WORK** ثبت شد؛ **WA0001 هنوز وجود ندارد؛ تصمیم معماری هنوز تصویب نشده**.
+- [درخواست پژوهشی WQ0001](../04-work-research-bridge/requests/WQ0001.md) به عنوان **REQUEST-COMMITTED / AWAITING USER DISPATCH TO WORK** ثبت شد؛ **WA0001 در GitHub ثبت/تأیید و توسط هماهنگ‌کننده بازبینی شده؛ تصمیم D-009 هنوز تصویب نشده**.
 - منابع ورودی: [KB-0001..0009](../08-project-knowledge-base/INDEX.md)، [Applied Capability Index](https://app.notion.com/p/3fdc8c684690817a9b5acef3c108253f) با عنوان مشاهده‌شدهٔ **v0.48 در 2026-10-20**؛ گزارش‌های خام [A0010](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge/blob/main/responses/A0010.md), [A0011](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge/blob/main/responses/A0011.md), [A0012](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge/blob/main/responses/A0012.md).
 - **قصد کاربر برای پژوهش و ثبت نتیجه تأیید شده است؛ ساخت manager، نصب، انتخاب زبان/engine/model، و اجرای تست روی لپ‌تاپ تأیید نشده.** پس از پاسخ، Coordinator صحت منبع و verdict را جدا ثبت کرده و تصمیم اجرایی کاربر را در D-009 پیگیری می‌کند.
 
@@ -31,8 +31,8 @@
 | آیتم | وضعیت |
 |---|---|
 | New Work transport T0001 | **PASS / read-write-readback verified 2026-10-20, work commit `d70a9a4`** |
-| First project research WQ0001 | **REQUEST COMMITTED / NOT DISPATCHED; WA0001 PENDING** |
-| Project-specific research Work reports WA | **NONE** — synthetic T0001 only |
+| First project research WQ0001 | **WA0001 VERIFIED / COORDINATOR REVIEWED ACCEPTED-PARTIAL** |
+| Project-specific research Work reports WA | **WA0001 received and reviewed; T0001 synthetic previously verified** |
 | Applied library checkpoint read | **v0.48** title observed in live Notion 2026-10-20; prior v0.47 historical only |
 | Project architecture / inference engine / host | **NOT SELECTED** |
 | New code/app/Windows install/test/deploy | **NONE** |
@@ -44,7 +44,11 @@
 2. **P0 core GitHub documentation written/read back.** اگر سؤال/اطلاعات جدید از کاربر آمد، با provenance آن را به inventory و CURRENT اضافه کنید؛ از بازتعریف کامل خودداری کنید.
 3. **T0001 موفق و بازخوانی‌شده است؛ تکرار نشود.** پس از تعریف یک نیاز/شکاف مشخص و review منابع، نخستین WQ واقعی را می‌توان تهیه کرد.
 4. نیاز و acceptance نخستین کاربرد واقعی را با user نهایی کنید (resource management first یا یک وظیفهٔ محدود دیگر). P0–P6 نباید بدون بررسی با user تبدیل به stack شود.
-5. **WQ0001 آماده و در همین repo ثبت شده**؛ متن درخواست را به Work ارسال کنید و پس از بازخوانی WA0001 با approval کاربر دربارهٔ ترتیب کار تصمیم بگیرید. درخواست تکراری نسازید.
+5. **WA0001 received/reviewed**: [review](../04-work-research-bridge/reviews/WQ0001.md), [KB-0010](../08-project-knowledge-base/architecture/KB-0010-sequencing-thin-contract-first.md), [proposed V0](../02-project-management/PROPOSED-FIRST-MILESTONE.md). Ask user to decide D-009 and first capability; no code or installation without separate authorization.
+
+## WA0001 coordinator review and D-009 (2026-10-20)
+- WA0001 [Work commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/6b29c81f4e90d45207e56a3e39eba66e3213d143) with verified blob `907cdb29dfec0393aa31c75e1e9bdcf78f64ce81`. [Review](../04-work-research-bridge/reviews/WQ0001.md) **ACCEPTED-PARTIAL** due to two incorrect SHA source receipts inside WA, though artifact itself is authentic and relevant.
+- Recommendation: **thin task/permission/result contract → one real read-only no-Agent capability → evidence-gated durable state/model/resource manager**. [KB-0010](../08-project-knowledge-base/architecture/KB-0010-sequencing-thin-contract-first.md). **User has NOT adopted D-009 or first V0**, and no Windows implementation approved.
 
 ## ناتمام/blocked
 - **T0001 synthetic Work transport شاهد واقعی دارد**؛ هنوز هیچ Work Q/A **پژوهشی** در پروژه انجام نشده.

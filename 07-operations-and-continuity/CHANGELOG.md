@@ -38,3 +38,9 @@
 - User authorized writing a Work research brief asking **which sequencing first** (no-Agent capability now versus minimal resource policy versus central manager versus ready-made environment), using GitHub KB source, Notion Applied, old A0010–A0012 and independent official search.
 - Created `04-work-research-bridge/requests/WQ0001.md` report-only; constrained Work to `responses/WA0001.md`, with real GitHub commit/readback required. Added TASK-0011, D-009 PENDING and updated bridge LEDGER + CURRENT.
 - Not a user-approved architecture; no Work response/decision/implementation/cost/service/device action yet. Work must be dispatched by user; register evidence after WA readback. Applied Notion INDEX live title observed **v0.48**.
+
+## 2026-10-20 — Work WA0001 independently verified and reviewed
+- Report `04-work-research-bridge/responses/WA0001.md` in [Work commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/6b29c81f4e90d45207e56a3e39eba66e3213d143) blob `907cdb29dfec0393aa31c75e1e9bdcf78f64ce81` was independently fetched; only WA was changed by Work.
+- [Review](../04-work-research-bridge/reviews/WQ0001.md) records **ACCEPTED-PARTIAL**: internal WQ and bridge README SHA receipts wrong, report substance relevant. Official Task Scheduler/Job Objects, Dagu best-effort and Ollama unload request selectively cross-checked. No device testing.
+- Knowledge extraction [KB-0010](../08-project-knowledge-base/architecture/KB-0010-sequencing-thin-contract-first.md), SRC-0002 references Work report without copying it. D-009 coordinator proposal only; user approval and V0 choice pending. [Milestone proposal](../02-project-management/PROPOSED-FIRST-MILESTONE.md).
+- No source data, model, language, service, automation or manager selected/executed; no Notion change.

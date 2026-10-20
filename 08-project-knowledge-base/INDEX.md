@@ -1,5 +1,5 @@
 # فهرست اصلی دانشنامه — Knowledge Index
-**Current:** 2026-10-20 | **9 مدخل استخراجی از 1 منبع پژوهشی واقعی** | **همهٔ 9 مورد CURATED-UNVERIFIED و هیچ معماری منتخب نیست**. این سند برای خواندن آغازین توسط دستیار/Work و پیدا کردن منابع موردنیاز است.
+**Current:** 2026-10-20 | **10 مدخل دانشی از SRC-0001 و SRC-0002** | **KB-0010 research proposal; هیچ معماری منتخب نیست**. این سند برای خواندن آغازین توسط دستیار/Work و پیدا کردن منابع موردنیاز است.
 
 ## جدول مدخل‌ها
 | KB ID | عنوان | حوزه | Keywords/aliases | Source ID(s) | وضعیت اعتبار | مرتبط با تصمیم/تست | آخرین بازبینی |
@@ -13,6 +13,8 @@
 | [KB-0007](tools-and-integrations/KB-0007-ready-made-workflow-products.md) | ابزارهای آمادهٔ Workflow | tools-and-integrations | Task Scheduler, n8n, Activepieces | [SRC-0001](inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md) | CURATED-UNVERIFIED | [P3 comparison](../03-architecture-and-tools/COMPARISON-PLAN.md), no adoption | 2026-10-20 |
 | [KB-0008](architecture/KB-0008-three-build-bundles.md) | سه مسیر مقایسهٔ معماری | architecture | Windows-native, modular, workflow | [SRC-0001](inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md) | CURATED-UNVERIFIED | [P3 comparison](../03-architecture-and-tools/COMPARISON-PLAN.md), no adoption | 2026-10-20 |
 | [KB-0009](security-cost-and-operations/KB-0009-hybrid-placement-and-gates.md) | مکان‌یابی Hybrid و مجوز/هزینه | security-cost-and-operations | local, cloud, quotas | [SRC-0001](inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md) | CURATED-UNVERIFIED | [P3 comparison](../03-architecture-and-tools/COMPARISON-PLAN.md), no adoption | 2026-10-20 |
+
+| [KB-0010](architecture/KB-0010-sequencing-thin-contract-first.md) | ترتیب شروع با قرارداد سبک و قابلیت مستقل | architecture | thin contract, sequencing, no-Agent, resource manager | [SRC-0002](SOURCE-REGISTER.md), [WA0001](../04-work-research-bridge/responses/WA0001.md) | CURATED / SELECTIVE OFFICIAL CHECK / NOT ADOPTED | [D-009](../02-project-management/DECISION-REGISTER.md), [V0 proposal](../02-project-management/PROPOSED-FIRST-MILESTONE.md) | 2026-10-20 |
 
 ## راهنمای شماره‌گذاری
 - وقتی اولین متن واقعاً به GitHub وارد شد و ساختار مدخل مشخص شد، با بررسی **فایل‌های واقعی** و این Index شناسهٔ `KB-0001` ایجاد شود؛ سپس `KB-0002`...
