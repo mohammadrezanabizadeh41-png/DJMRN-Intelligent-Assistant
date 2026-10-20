@@ -20,3 +20,6 @@
 
 ## CAP-006 UTF-8 display follow-up — 2026-10-21
 The user independently verified readable Persian query and source line after setting session-local PowerShell `[Console]::OutputEncoding` to UTF-8 and `PYTHONIOENCODING=utf-8`: `PERSIAN UTF8 ROUND-TRIP: PASS`, charter line 3. [NEW-V0003](../06-tests-and-evidence/logs/NEW-V0003-20261021.md). Treat this as a **shell-output presentation fix**, not a new Python source version or security/production validation. CAP-006 status: **VERIFIED-REAL (TWO AUTHORIZED PROJECT TEXT FILES) / NOT OPERATIONAL**. No repeated test or new install needed.
+
+## Future multi-persona capability requirement — 2026-10-21
+[REQ-MPA-001](../02-project-management/MULTI-PERSONA-SPECIALIST-ASSISTANTS-REQUIREMENT.md) records a **user-requested, deferred, unimplemented** logical specialist-persona environment (with existing CAP-002/003/004/005 specialist goals in view). It **does not assign a new implemented CAP ID** or imply multiple Agents/models/daemons. Raw source [SRC-0004](../08-project-knowledge-base/inbox/SRC-0004-djmrn-multi-persona-logical-assistants-future-20261020.md); future work TASK-0014. Selection/testing requires separate explicit user approval; CAP-006 bounded real search remains current completed test evidence.
