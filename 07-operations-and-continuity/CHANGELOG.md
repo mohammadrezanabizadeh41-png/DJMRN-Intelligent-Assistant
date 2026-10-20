@@ -1,5 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-21 — Future observability source archived / CAP-006 UTF-8 resolved
+- User supplied a full 853-line, 29,906-byte future design-and-research request for `REQ-OBS-001`, the low-RAM Live Observability Map. Exact original CRLF text stored at [SRC-0003](../08-project-knowledge-base/inbox/SRC-0003-djmrn-low-ram-live-observability-request-20261020.md); SHA256 `c17585bf5f7b4a9e321a983d48e7847d1f6754e797293433cb4f656b56926998`, Git blob `c25bf9eec4703a7882e4d863340dda94b02bc644`, exact GitHub readback PASS; initial archive commit `a65fa2228335351b2f639440058d77932797f256`.
+- Inspected prematurely-created [commit `a3fd3fdf`](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/a3fd3fdf8fa8cacaa07e46592c2b8e1dac944dda). Preserved `REQ-OBS-001` / `TASK-0013` as future identifiers, explicitly **DEFERRED / DRAFT OR RESEARCH INPUT, NOT USER-ADOPTED ARCHITECTURE**, with full source linked from requirement and source/task register. No official vendor re-verification/activation performed at this deferred stage.
+- CAP-006 user executed a limited session-local UTF-8 capture correction: Persian query/text and cited charter line 3 displayed correctly, round-trip asserted **PASS**. [NEW-V0003 follow-up](../06-tests-and-evidence/logs/NEW-V0003-20261021.md), no code/install modifications or new source hash gate required. Work priority remains practical CAP-006 and next approved capability.
+
+
 ## 2026-10-21 — CAP-006 FIRST BOUNDED REAL DOCUMENT WINDOWS VALIDATION
 - User approved search of two non-sensitive local copies of official DJMRN project Markdown docs. Python 3.14.7 direct installed executable ran on user's Windows 11; `هوشمند` matched charter line 3 and `منابع` matched resource document line 1. Two JSON `succeeded`, normalized matches, independent 1-line confirmations and unchanged pre/post SHA256 of both sources.
 - Evidence: [NEW-V0003](../06-tests-and-evidence/logs/NEW-V0003-20261021.md), original log commit `78544fcdd1d09f0fb3b4563b9bd9548d422a3425`, blob `66dc96057cfbd48bc4452d5b01d2cce44a3f04c4`, readback exact match.
