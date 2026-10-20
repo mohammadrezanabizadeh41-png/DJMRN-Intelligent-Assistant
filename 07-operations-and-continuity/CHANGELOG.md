@@ -61,3 +61,7 @@
 - Updated stale root/roadmap/open-questions/handoff/CURRENT status so D-009 & V0 user approval and actual synthetic 16/16 PASS are not confused with still-proposed P0–P6 or not-run Windows test.
 - User **authorized** synthetic-only on-device smoke with existing Python but **no result yet**. Added [Windows PowerShell guide](../05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-PROTOCOL.md) with download ZIP SHA `f6228e06b9efc565c971e08f6404e05f8fc9dbc4e625879d420130a9f0026af4`, expected SHA256 for four files, no-admin stop gates. NEW-V0002 is PENDING USER RUN.
 - Original code/test Git blob SHA verify and portable ZIP build succeeded in assistant environment; **no command has run on user's Windows**. No Notion edits, other GitHub repo mutations, program installs, customer data, subscription or resource controller.
+
+## 2026-10-20 — NEW-V0002 first on-Windows smoke halted safely on integrity check
+- User posted PowerShell output ending `STOP: File hash mismatch: fixtures/sample_alpha.txt` before any Python test/CLI. Test registered as [NEW-V0002 BLOCKED](../06-tests-and-evidence/logs/NEW-V0002-20261020.md); no Windows app PASS.
+- Original ZIP SHA and embedded fixture SHA independently rechecked in assistant container against protocol (both exact); extracted **Windows** file size/hash unknown, root cause UNKNOWN. Do not reinstall/download/overwrite/destroy the old test folder; read-only diagnostic first. The original 16/16 synthetic Linux test is separate and unchanged.

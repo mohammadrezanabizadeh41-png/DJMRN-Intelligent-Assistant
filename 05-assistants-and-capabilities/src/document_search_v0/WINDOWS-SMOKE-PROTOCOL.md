@@ -1,6 +1,6 @@
 # CAP-006 — Windows 11 synthetic-only smoke protocol (approved preparation)
 
-**Target:** user-owned Windows 11 Pro laptop, no Administrator, no new install. **Permission:** user approved this *synthetic-only* next test in chat 2026-10-20. **Status before test: NOT EXECUTED ON USER DEVICE.**
+**Target:** user-owned Windows 11 Pro laptop, no Administrator, no new install. **Permission:** user approved this *synthetic-only* next test in chat 2026-10-20. **Current status: first attempted on user Windows but STOPPED at `fixtures/sample_alpha.txt` extracted SHA mismatch before Python execution; see [NEW-V0002](../../../06-tests-and-evidence/logs/NEW-V0002-20261020.md).**
 
 ## Exact source and package identity
 - **Canonical GitHub:** `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` branch `main`; [source](docsearch_v0.py) blob `0376c8d4a800d0a60b5137d08de6071e46178398`; [tests](test_docsearch_v0.py) blob `982a63f72e4fe0f0b080ba57effcf86fa65fc727`.
@@ -64,3 +64,6 @@ This command extracts into a **new** Downloads subdirectory, checks archive and 
 
 ## Repeatability in future sessions
 If current-chat ZIP is unavailable, get those **four pinned exact blobs from the canonical GitHub commit** [4d2b9801](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/4d2b9801e3a985fb34462ee912f89d41363a6115), regenerate the ZIP, compute and document its new SHA256; **never fabricate a sandbox link** or ask user to install an unverified third-party tool.
+
+## 2026-10-20: first user Windows attempt and troubleshooting
+The user's first copy/paste stopped at `STOP: File hash mismatch: fixtures/sample_alpha.txt` before Python. Assistant original ZIP SHA and *ZIP-entry* SHA match published expected values, but Windows-extracted file hash/length and cause are **UNKNOWN**. Preserve the existing folder; **DO NOT rerun the same folder-creation command, change hash, disable antivirus, delete files or install Python**. Have user run a read-only `Get-FileHash` / `Get-Item Length` diagnostic on that folder and compare the embedded archive entry directly; review output before deciding on new extraction/testing. [Evidence NEW-V0002](../../../06-tests-and-evidence/logs/NEW-V0002-20261020.md).

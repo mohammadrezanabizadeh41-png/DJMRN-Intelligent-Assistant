@@ -15,7 +15,7 @@
 - **User has NOW authorized this bounded synthetic-only Windows test** (2026-10-20), after asking for comprehensive repo handoff first.
 - [PowerShell procedure](../05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-PROTOCOL.md), package 5 files, ZIP SHA256 `f6228e06b9efc565c971e08f6404e05f8fc9dbc4e625879d420130a9f0026af4`.
 - User manually downloads package to Downloads, pastes a non-admin PowerShell block; it checks archive/file SHA, extracts into a fresh folder, invokes existing Python `py -3`/fallback and runs 16 dummy unittest cases + one dummy JSON search.
-- **PENDING USER EXECUTION AND OUTPUT. No `NEW-V0002` PASS yet**. After screenshot/log, check Windows/Python/result and persist test receipt & CURRENT in GitHub; then consider specifically approved *real non-sensitive* files.
+- **NEW-V0002 USER WINDOWS ATTEMPT BLOCKED before Python:** error `STOP: File hash mismatch: fixtures/sample_alpha.txt`. [Incident receipt](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). Original ZIP and ZIP-contained sample hash match expected in assistant container; **actual extracted file hash unknown**. Next: read-only hash/size diagnostic, no reinstall/overwrite. After screenshot/log, check Windows/Python/result and persist test receipt & CURRENT in GitHub; then consider specifically approved *real non-sensitive* files.
 
 ## Not done/not approved
 No Windows installation or benchmark, no model/engine/Agent resource manager/UI/remote host, no live website/email/customer data or payments, no Notion modification; no project-wide language or DB selected. PowerShell smoke must not inspect real folders or install software. If Python absent/hash wrong, STOP and report.

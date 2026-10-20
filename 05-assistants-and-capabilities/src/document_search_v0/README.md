@@ -33,3 +33,6 @@ The command displays results on stdout only; it does **not** modify, rewrite, cr
 
 ## User-approved next test (2026-10-20)
 User authorized **synthetic-only Windows smoke**; **not executed yet**. Follow [WINDOWS-SMOKE-PROTOCOL](WINDOWS-SMOKE-PROTOCOL.md). The packaged 4 code/fixture files are byte-identical with this repo's source blobs; the temporary chat ZIP is SHA256 `f6228e06b9efc565c971e08f6404e05f8fc9dbc4e625879d420130a9f0026af4`. Stop on any verification failure; no Python install and no private document read. [Self-contained continuity](../../../07-operations-and-continuity/PROJECT-STATE-HANDOFF-20261020.md).
+
+## Windows first attempt was blocked (NEW-V0002, 2026-10-20)
+User reported SHA mismatch for `fixtures/sample_alpha.txt` after extraction and **before any Python tests**. Original ZIP + embedded file hashes match published values in assistant container; user Windows extracted hash and cause unknown. [Failure record](../../../06-tests-and-evidence/logs/NEW-V0002-20261020.md). Do not skip integrity check or mark Windows PASS; inspect existing extracted file with read-only diagnostic.

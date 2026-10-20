@@ -14,4 +14,4 @@
 
 **No current Windows benchmark or operational assistant execution was performed during repo setup.** CAP-006 synthetic tests were executed later in an isolated environment; still **no Windows device test**.
 
-| NEW-V0002 | user-authorized 2026-10-20 | CAP-006 synthetic-only Windows smoke | **AUTHORIZED / AWAITING USER RUN / NO RESULT YET** | [exact safe procedure](../05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-PROTOCOL.md); do not declare Windows PASS until real user output returned and recorded |
+| NEW-V0002 | user-authorized 2026-10-20 | CAP-006 synthetic-only Windows smoke | **FIRST USER WINDOWS ATTEMPT BLOCKED: EXTRACTED FIXTURE HASH MISMATCH; PYTHON NOT RUN** | [incident NEW-V0002](logs/NEW-V0002-20261020.md); read-only hash diagnostics of existing extracted file next; do not mark Windows PASS |
