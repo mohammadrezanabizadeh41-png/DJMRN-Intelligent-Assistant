@@ -11,6 +11,8 @@
 | TASK-0006 | پژوهش هدفمند مقایسهٔ معماری | NOT STARTED IN THIS REPO | TASK-0004 PASS; first real WQ0001 after task/scope confirmation | هدف و فیلتر پژوهش |
 | TASK-0007 | انتخاب حداقل stack/تست | NOT AUTHORIZED | نتیجهٔ 0006، consent | NONE |
 | TASK-0008 | توسعهٔ اولین قابلیت واقعی | NOT AUTHORIZED | تصویب P3، real I/O | NONE |
-| TASK-0009 | ساخت دانشنامهٔ پروژه با INDEX/SRC/KB/protocol و موضوعات | DONE / VERIFIED GITHUB READBACK 2026-10-20 | [08-project-knowledge-base](../08-project-knowledge-base/README.md)، [initial commit afbe4f4](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/afbe4f48f8a3ee79177500b1db3bf24a3626994b)، main tree 64/64 blobs | دریافت متن پژوهش قبلی و ثبت نخستین SRC/KB پس از بررسی؛ WQ صادر نشده |
+| TASK-0009 | ساخت دانشنامهٔ پروژه با INDEX/SRC/KB/protocol و موضوعات | DONE / VERIFIED GITHUB READBACK 2026-10-20 | [08-project-knowledge-base](../08-project-knowledge-base/README.md)، [initial commit afbe4f4](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/afbe4f48f8a3ee79177500b1db3bf24a3626994b)، main tree 64/64 blobs | نخستین پژوهش کاربر در TASK-0010 وارد شد؛ توسعهٔ پایگاه ادامه دارد |
+
+| TASK-0010 | ورود پژوهش قبلی معماری و استخراج دانشی بدون انتخاب stack | INGESTION DOCUMENTED / VERIFY GITHUB AFTER COMMIT | [SRC-0001](../08-project-knowledge-base/inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md), [INDEX KB-0001..0009](../08-project-knowledge-base/INDEX.md)؛ کامل بودن raw باید با SHA256 و blob تأیید شود | بررسی منابع رسمی و gapها در زمان پژوهش؛ WQ0001 هنوز صادر نشده |
 
 **در هر تغییر:** وضعیت، خطا، لینک output/commit، source/observed date، وابستگی، مالک، next action؛ sync CURRENT-STATUS. هیچ task صرفاً به خاطر ساخت فایل DONE اجرایی نمی‌شود.

@@ -1,4 +1,6 @@
 # طرح مقایسهٔ مستقل — بدون انتخاب winner
+
+**ورودی دانشی تازه:** [SRC-0001](../08-project-knowledge-base/inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md) و [KB-0001..KB-0009](../08-project-knowledge-base/INDEX.md) (CURATED-UNVERIFIED) را هنگام طراحی آزمون ببینید؛ به‌خصوص [سه بستهٔ پیشنهادی KB-0008](../08-project-knowledge-base/architecture/KB-0008-three-build-bundles.md)، [معماری بدون Agent KB-0001](../08-project-knowledge-base/architecture/KB-0001-capability-first-hybrid.md)، [گزینه‌های زبان KB-0002](../08-project-knowledge-base/build-and-implementation/KB-0002-language-runtime-role-matrix.md). این‌ها تصمیم یا بنچمارک معتبر نیستند و باید با کتابخانهٔ Applied و منابع روز مقایسه شوند.
 ## از کاربرد به اجزا
 1. وظیفهٔ واقعی و معیار قبول را تعیین کن (مثلاً خواندن مستند فارسی با cite، مدیریت process خودی، وقفه/بازیابی).
 2. نقش‌ها را جدا مقایسه کن: **desktop app/GUI**؛ **agent host**؛ **inference engine**؛ **model weights/quantization**؛ **tool/skills/MCP**؛ **Windows process scheduler**؛ **durable state/retrieval**؛ **web/cloud/remote search**؛ **permissions/approval**؛ **monitoring**.

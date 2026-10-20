@@ -18,7 +18,7 @@
 ## افزودهٔ مستنداتی 2026-10-20 — دانشنامهٔ اختصاصی پروژه (GITHUB VERIFIED)
 - Initial [commit afbe4f48](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/afbe4f48f8a3ee79177500b1db3bf24a3626994b), main head verified, full recursive tree 64 blobs total, including **17 new KB files**, 11 key docs fetched from GitHub; Work bridge and handoff linking verified.
 - بخش مستقل [08-project-knowledge-base](../08-project-knowledge-base/README.md) برای گردآوری سازمان‌یافتهٔ یافته‌های معماری، ساخت، مدل/موتور، ابزار، Work، منابع رسمی و تجربهٔ تست به ساختار افزوده شد. [INDEX](../08-project-knowledge-base/INDEX.md)، [SOURCE-REGISTER](../08-project-knowledge-base/SOURCE-REGISTER.md)، [INTAKE-PROTOCOL](../08-project-knowledge-base/INTAKE-PROTOCOL.md)، قالب‌ها و دسته‌های موضوعی ایجاد شد.
-- **هیچ متن پژوهشی تازه از کاربر هنوز دریافت/در این بخش ثبت نشده است؛ تعداد مدخل KB = 0 و تعداد SRC آرشیوشده = 0.** گام بعدی: دریافت متن قبلی کاربر → sanitize/copyright/provenance → raw archive → claims check → KB article/index؛ Work تنها برای gap واقعی و با WQ دقیق.
+- **متن پژوهش قبلی کاربر اکنون در [SRC-0001](../08-project-knowledge-base/inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md) وارد شد؛ 607 خط متن اصلی و 9 مدخل KB-0001..0009 به‌صورت CURATED-UNVERIFIED در [INDEX](../08-project-knowledge-base/INDEX.md) ثبت شده است.** منبع با انتشار/نسخه و claim/verification ادعایی مخلوط نشده؛ هیچ نتیجه‌ای SELECTED نیست. قدم بعدی: gapهای دانشنامه/Applied را بررسی و در صورت ضرورت WQ0001 طراحی کنید.
 - نقشهٔ راه/Stack/فناوری منتخب تغییری نکرد؛ عملیات محلی، نصب و پژوهش Work جدید انجام نشده است.
 
 ## وضعیت پژوهش، انتخاب و اجرای واقعی
@@ -34,7 +34,7 @@
 | Roadmap P0–P6 | **PROPOSED — user discussion pending** |
 
 ## اقدام بعدی به ترتیب
-1. **دانشنامه اختصاصی آمادهٔ دریافت پژوهش:** متن پژوهش قبلی را از پیام بعدی کاربر بگیر؛ طبق 08/INTAKE-PROTOCOL ثبت/اعتبارسنجی و INDEX کن؛ قبل از ایجاد WQ، شکاف‌های دانشنامه را بررسی کن.
+1. **پژوهش معماری قبلی دریافت و در دانشنامه ثبت شد:** [SRC-0001](../08-project-knowledge-base/inbox/SRC-0001-djmrn-assistant-architecture-research-20261020.md) و [KB-0001..0009](../08-project-knowledge-base/INDEX.md). شواهد بدون آزمایش مستقل‌اند؛ قبل از هر Work research، gapهای واقعی و دادهٔ Applied/General را مرور کن.
 2. **P0 core GitHub documentation written/read back.** اگر سؤال/اطلاعات جدید از کاربر آمد، با provenance آن را به inventory و CURRENT اضافه کنید؛ از بازتعریف کامل خودداری کنید.
 3. **T0001 موفق و بازخوانی‌شده است؛ تکرار نشود.** پس از تعریف یک نیاز/شکاف مشخص و review منابع، نخستین WQ واقعی را می‌توان تهیه کرد.
 4. نیاز و acceptance نخستین کاربرد واقعی را با user نهایی کنید (resource management first یا یک وظیفهٔ محدود دیگر). P0–P6 نباید بدون بررسی با user تبدیل به stack شود.
