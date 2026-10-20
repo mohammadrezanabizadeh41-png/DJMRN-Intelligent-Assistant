@@ -42,6 +42,9 @@
 6. پس از بازبینی واقعی، **یافته‌های قابل استفادهٔ Work ابتدا با SRC/KB و provenance طبق [پروتکل دانشنامه](../08-project-knowledge-base/INTAKE-PROTOCOL.md) به [دانشنامه پروژه](../08-project-knowledge-base/README.md) ارجاع/استخراج می‌شوند**. سپس نتایج تصمیم/اقدام تأییدشده در `03-architecture-and-tools` و/یا `05` و `02/TASK-REGISTER` ثبت می‌شوند؛ اگر **کاتالوگ عمومی/Applied** جدید لازم شد، از روال canonical Notion و مسئول مربوط ثبت شود، نه خودسرانه تغییر کتابخانه. مهم: **گزارش Work = evidence candidate، نه اجازهٔ نصب، نوشتن فایل حساس یا پذیرش معماری**.
 7. `LEDGER.md`, `07/CURRENT-STATUS.md`, `07/CHANGELOG.md` و ارتباط source/commit همیشه بعد از پذیرش و action به‌روز شوند. سؤال بعدی فقط از gapهای واقعی، نه پاسخ تکراری.
 
+### Self-referential commit SHA / audit note (added 2026-10-21)
+A Work response **cannot truthfully contain its own final GitHub commit SHA or Git blob SHA before that artifact has been written**: writing the SHA into the same file changes its content and SHA. In `WA####.md`, identify exact repo, WQ, expected path, source-reading receipts and report content; mark own future commit/blob as `PENDING UNTIL PERSISTENCE` (do not invent a value). **After one successful commit, re-fetch the response and present the actual commit + blob + readback in the final Work chat receipt**, which the coordinator independently verifies against GitHub and records in LEDGER/review. For prior-source blobs (WQ/protocol/KB), cite hashes **only if actually freshly fetched/verified**. This rule clarifies any template/request wording that appears to demand precomputed self-referential hashes; do not overwrite committed response to make it self-reference.
+
 ## مالکیت فایل‌ها و شناسه‌ها
 - Coordinator فقط نویسندهٔ `requests/WQ####.md`, `reviews/WQ####.md` و LEDGER/STATUS است.
 - Work فقط گزارش پاسخ `responses/WA####.md` را ایجاد می‌کند و نباید دیگر اسناد پروژه، کد، Notion یا عملیات حساب را تغییر دهد.
