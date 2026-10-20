@@ -1,5 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-21 — User authorizes one-time read-only G1; protocol committed, no device run
+- User replied `بله` to coordinator's explicit request to check current Windows/Jan/ChatGPT MCP readiness (G1) **without install, upgrade, changing settings or Agent execution**. This authorizes only a deliberately narrow read-only local inspection, not writing adapter code or attaching MCP.
+- Created [G1 protocol](../06-tests-and-evidence/protocols/G1-DUAL-CHAT-READONLY-READINESS-20261021.md), commit `686dda7c963e72391d0440028135a129049da7aa`, blob `bd606008dbcbabc05b2b9752a55a5e0acbf02d15`, verified exact GitHub readback. It specifies privacy scrub (no secret/key/path/username/personal chat), no privilege/escalation/network/writes, a single local snapshot via PowerShell user-run only and UI views for already-open programs.
+- [TASK-0017](../02-project-management/TASK-REGISTER.md), CURRENT and handoff revised to **G1 AUTHORIZED / NOT YET RUN / USER-REPORTED EVIDENCE PENDING**. Current Jan/ChatGPT installed state and free RAM remain unknown; no action ran on user Windows from connected tools. After output perform evidence reconciliation and choose next small technical gate, separately authorize G2/G3/G4.
+
+
 ## 2026-10-21 — G0 dual-surface approval and ChatGPT Plus entitlement correction
 - User approved the **two conversational surfaces / shared low-RAM tool core design direction** with `اوکی`, while correctly clarifying their **current ChatGPT plan is Plus**, not Pro; warned custom MCP may require Pro. This is design consent **G0**, not the separately required G1 Windows inspection, G2 adapter build, G3 local test or G4 ChatGPT installation/tunnel/account action.
 - Checked current official [OpenAI custom MCP help](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt) on 2026-10-21: Pro custom MCP **read/fetch**; full custom MCP **Business/Enterprise/Edu**; Plus custom self-created connection not verified/entitled from that documentation. Distinct [local Codex/Desktop host MCP](https://learn.chatgpt.com/docs/extend/mcp) and [ready-made Plugins](https://learn.chatgpt.com/docs/plugins) are to be checked for actual Plus availability before activation. Do not assert entire MCP ecosystem is unavailable to Plus; no plan upgrade/adoption recommended.
