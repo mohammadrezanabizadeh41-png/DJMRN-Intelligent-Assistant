@@ -13,3 +13,5 @@
 | NEW-V0001 | 2026-10-20 | CAP-006 no-Agent deterministic text search with synthetic Persian/UTF-8 data | **16/16 PASS / ISOLATED ASSISTANT CONTAINER PYTHON 3.13.5 / TESTED-SYNTHETIC** | [test receipt](logs/NEW-V0001-20261020.md), exact code/fixtures SHA + CLI demo; not Windows/user data or resource benchmark |
 
 **No current Windows benchmark or operational assistant execution was performed during repo setup.** CAP-006 synthetic tests were executed later in an isolated environment; still **no Windows device test**.
+
+| NEW-V0002 | user-authorized 2026-10-20 | CAP-006 synthetic-only Windows smoke | **AUTHORIZED / AWAITING USER RUN / NO RESULT YET** | [exact safe procedure](../05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-PROTOCOL.md); do not declare Windows PASS until real user output returned and recorded |

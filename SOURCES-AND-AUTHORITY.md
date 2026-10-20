@@ -35,3 +35,6 @@
 
 ## قطعی‌کردن هویت مخزن در Work — D-010 (2026-10-20)
 برای هر WQ/WA پروژه فقط `repository_full_name: mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` و URL https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant در branch `main` مقصد مجاز است. مخزن `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` می‌تواند **به‌عنوان منبع پژوهش خوانده شود ولی اجازهٔ نوشتن پاسخ این پروژه را ندارد**. باید metadata واقعی repo قبل از نوشتن و URL/path/commit/blob بعد از نوشتن طبق [REPOSITORY-LOCK](04-work-research-bridge/REPOSITORY-LOCK.md) سنجیده شود. نام نسبی مسیر فایل بدون exact full_name کافی نیست.
+
+## Self-contained project handoff guarantee (2026-10-20)
+For any new conversation, project decisions, user-authorized scope, detailed hardware/software history, prior research receipts/limitations, code, tests and current next action are **documented here in GitHub**: [PROJECT-STATE-HANDOFF-20261020](07-operations-and-continuity/PROJECT-STATE-HANDOFF-20261020.md). Notion Applied/General remains an external research catalog, **not an operational prerequisite** to reading current project state or continuing an already approved synthetic Windows smoke. Unobserved live machine/region/vendor facts are explicitly UNKNOWN, not fabricated.

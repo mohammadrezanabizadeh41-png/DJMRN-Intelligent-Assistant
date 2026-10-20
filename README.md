@@ -3,7 +3,7 @@
 **Private project repository — 2026-10-20.** این مخزن «دفتر جامع قابل بازیابی» پروژهٔ احیاشدهٔ دستیار هوشمند Windows 11 است: مشخصات لپ‌تاپ، تاریخچهٔ واقعی، پژوهش، مقایسهٔ گزینه‌ها، ارتباط با Work، کدهای آینده، آزمایش‌ها، تصمیم‌ها و وضعیت ادامهٔ کار. **وجود سند به معنی نصب/اجرای قابلیت نیست.**
 
 ## اگر این اولین باری است که وارد پروژه می‌شوید
-1. [قواعد مستقل کار در پروژه](PROJECT-RULES.md) را بخوانید؛ برای ادامهٔ عادی نیازی به بازتعریف پروژه از گفتگو یا خواندن اجباری Notion نیست.
+1. **ابتدا [خلاصهٔ جامع و خودبسندهٔ پروژه](07-operations-and-continuity/PROJECT-STATE-HANDOFF-20261020.md) را بخوانید؛** سپس [قواعد مستقل کار در پروژه](PROJECT-RULES.md) را بخوانید؛ برای ادامهٔ عادی نیازی به بازتعریف پروژه از گفتگو یا خواندن اجباری Notion نیست.
 2. [وضعیت جاری — فقط یک CURRENT](07-operations-and-continuity/CURRENT-STATUS.md) و [راهنمای انتقال به گفتگو/دستیار جدید](07-operations-and-continuity/HANDOFF.md) را بخوانید.
 3. [اهداف](02-project-management/PROJECT-CHARTER.md)، [نقشهٔ راه](02-project-management/ROADMAP.md)، [ثبت وظایف](02-project-management/TASK-REGISTER.md) و [نقشهٔ منابع](SOURCES-AND-AUTHORITY.md) را بخوانید.
 4. برای دستگاه [موجودی سیستم](01-system-inventory/README.md)؛ برای پژوهش [دانشنامهٔ اختصاصی پروژه](08-project-knowledge-base/README.md) و [پروتکل Work](04-work-research-bridge/README.md)؛ برای پیاده‌سازی [دفتر اجرا](05-assistants-and-capabilities/IMPLEMENTATION-REGISTER.md)؛ برای شواهد [دفتر آزمایش](06-tests-and-evidence/TEST-REGISTER.md) را بخوانید.
@@ -32,3 +32,6 @@
 **LATEST 2026-10-20:** تصمیم D-009 (قرارداد سبک + قابلیت قطعی نخست) با تأیید کاربر تصویب شد. [CAP-006 V0](05-assistants-and-capabilities/src/document_search_v0/README.md) ساخته و ۱۶ آزمون **فقط در محیط جداگانه و دادهٔ ساختگی** موفق بوده‌اند؛ هنوز روی Windows کاربر اجرا نشده است. [تصمیم/دلایل](02-project-management/V0-BUILD-DECISION.md)، [مقایسهٔ روش](03-architecture-and-tools/V0-TECH-CHOICE.md)، [شواهد آزمون](06-tests-and-evidence/logs/NEW-V0001-20261020.md). WQ0001/WA0001 پیش‌تر ثبت و بازبینی شده؛ هیچ Agent، موتور استنتاج یا مدیر دائمی RAM انتخاب نشده. آخرین وضعیت را از CURRENT-STATUS بخوانید.
 
 > مسیر سریع: برای **دانش پژوهشی قابل استفاده**، 08/INDEX و 08/INTAKE-PROTOCOL؛ برای پرسیدن از Work، 04/README؛ برای فهم کارهای انجام‌شده، 07/CURRENT-STATUS؛ برای RAM، 01/hardware-baseline و resource-observations؛ برای انتخاب ابزار، PROJECT-RULES و 03.
+
+## Latest next step — 2026-10-20
+User authorized a **synthetic-only on-Windows CAP-006 smoke test** (not yet run). [Exact PowerShell guide](05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-PROTOCOL.md) and [self-contained project snapshot](07-operations-and-continuity/PROJECT-STATE-HANDOFF-20261020.md) are canonical. Original Work WQ0001/WA0001 and 10 project KB entries already persisted. No Notion library duplication or further Agent/resource manager research prerequisite.

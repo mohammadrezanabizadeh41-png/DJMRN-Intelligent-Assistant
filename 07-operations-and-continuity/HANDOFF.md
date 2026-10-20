@@ -1,30 +1,13 @@
-# HANDOFF — شروع در گفتگوی تازه یا برای دستیار دیگری
+# DJMRN — OPEN A NEW CHAT / RESUME FROM GITHUB ONLY
 
-## متن کوتاه قابل ارسال در گفتگو
-«پروژهٔ DJMRN Intelligent Assistant System را از مخزن خصوصی `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` ادامه بده. ابتدا README.md، PROJECT-RULES.md، 07-operations-and-continuity/CURRENT-STATUS.md، 02-project-management/TASK-REGISTER.md، 01-system-inventory/، 08-project-knowledge-base/INDEX.md و پروتکل 04-work-research-bridge/README.md را واقعاً از GitHub بخوان. همهٔ وضعیت‌ها را بر اساس ثبت زنده و شواهد بخوان؛ هیچ معماری/نصب/اجرای Work را فرض نکن. قبل از تصمیم نیازمحور کتابخانهٔ Applied در Notion و منابع رسمی تازه را بررسی کن. آخرین وضعیت/شناسهٔ research ledger را بخوان و از اقدام ناتمام ادامه بده.»
+**One message to a new assistant:**
 
-## دستورالعمل برای خود دستیار
-1. Read **real GitHub** (not a cached chat snippet); verify repository visibility, main HEAD and this file. If inaccessible → BLOCKED and ask for access/link, no guessing.
-2. Read PROJECT-RULES / CURRENT / TASK-REGISTER / DECISION-REGISTER / relevant subject docs. Reconcile last commit SHA, historical vs current, provenance. This repo should be self-contained for project objectives, current progress and procedures.
-3. Research needed? First read **08-project-knowledge-base/INDEX.md, SOURCE-REGISTER.md and relevant KB entries** to reuse project-specific knowledge; then exact Applied Library / General as source catalogs if relevant; only if a gap remains use project Work protocol/LEDGER; compare current official sources, do not blindly ask Work broad repetitions; allocate next ID only after checking actual files.
-4. Distinguish `USER-REPORTED TEST PASS` from source-tested tool behavior and real deployment. Software installed historically has no ranking bonus.
-5. Each finished substantive action: create actual artifact/commit, fetch readback, log evidence, update task register and CURRENT with next step. If important architecture decision approved, link/update global Notion rationale as required by governance.
-6. On errors, report path/step/source exactly, do not issue fictitious commit/SHA or mark unverified DONE.
-7. Sensitive secrets and private customer data never go into GitHub, even if private. Work is research-only until user expressly authorizes other effects.
+«پروژهٔ خصوصی DJMRN را فقط از مخزن GitHub **`mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`** و شاخهٔ **main** ادامه بده؛ این مخزن را با `DJMRN-Research-Bridge` اشتباه نگیر. ابتدا live `repository.full_name` و HEAD را تأیید کن؛ بعد **`07-operations-and-continuity/PROJECT-STATE-HANDOFF-20261020.md`**، `CURRENT-STATUS.md`، `PROJECT-RULES.md`، `02-project-management/DECISION-REGISTER.md`، `TASK-REGISTER.md`، `05-assistants-and-capabilities/src/document_search_v0/WINDOWS-SMOKE-PROTOCOL.md` و `06-tests-and-evidence/TEST-REGISTER.md` را از GitHub واقعاً بخوان. بر اساس وضعیت و شواهد ثبت‌شده پیش برو؛ نه حافظهٔ چت و نه تکرار پژوهش WQ0001. D-009 و CAP-006 تصویب و کدنویسی شده‌اند و ۱۶ آزمون **فقط در محیط جدا** پاس شده؛ کاربر اکنون آزمون صرفاً ساختگی روی Windows را اجازه داده ولی **هنوز نتیجه‌ای برنگشته**. پس خروجی PowerShell را از من بگیر و اعتبارسنجی و در GitHub ثبت کن؛ در صورت خطا بدون نصب یا دستکاری سیستم توقف. کتابخانهٔ Notion فقط برای پژوهش‌های تازه لازم است، همهٔ وضعیت‌های لازم پروژه در مخزن ثبت شده‌اند.»
 
-## How to brief Work
-«مخزن `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`، `04-work-research-bridge/README.md` و درخواست `04-work-research-bridge/requests/[EXACT-ID].md` را از GitHub بخوان، فقط پاسخ متناظر را در `responses/` ثبت و بازخوانی کن.» بدون فایل درخواست واقعی هرگز ID حدسی نسازید.
+## Recovery rules
+1. Exact repository full_name + branch + HEAD or BLOCKED. Never write project reports in separate Applied Bridge.
+2. Consult [project snapshot](PROJECT-STATE-HANDOFF-20261020.md), [CURRENT](CURRENT-STATUS.md), [TASK](../02-project-management/TASK-REGISTER.md), [DECISIONS](../02-project-management/DECISION-REGISTER.md), [CODE](../05-assistants-and-capabilities/src/document_search_v0/README.md), [TEST](../06-tests-and-evidence/TEST-REGISTER.md).
+3. User Windows result is still **NOT EXECUTED/UNKNOWN** until provided and audited. Do not ask again for already-recorded specs, Work WQ results or copy whole Applied library.
+4. After actual test, save sanitized evidence as NEW-V0002 and update CURRENT, task/implementation register, CHANGELOG and snapshot. Escalations (real-file access, install, background service, model, Agent, manager) need separate authorization.
 
-## پروندهٔ اصلی برای مخاطب انسانی
-[README](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/README.md) → [CURRENT](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/07-operations-and-continuity/CURRENT-STATUS.md) → [Work bridge](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/04-work-research-bridge/README.md).
-
-## Guard against confusing Work GitHub repositories — D-010
-در همهٔ پیام‌های Work از **نام کامل** `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` و URL `https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` با branch `main` و exact paths استفاده کنید؛ نه عبارت کوتاه «مخزن DJMRN». Work اول [REPOSITORY-LOCK](../04-work-research-bridge/REPOSITORY-LOCK.md) را بخواند، live repo `full_name` را بسنجد و فقط در `responses/WA####.md` در **همان** repo Commit و readback کند. `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` فقط input read-only است. اگر اشتباه/ابهام = BLOCKED، بدون نوشتن در مخزن دیگر.
-
-### نمونهٔ دستور آماده (شناسه‌ها فقط بعد از ثبت WQ واقعی جایگزین شوند)
-«تنها مخزن مقصد برای این کار **`mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`** به آدرس **https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant** و شاخهٔ **`main`** است. ابتدا هویت مخزن `full_name` را از GitHub بررسی کن؛ سپس `04-work-research-bridge/REPOSITORY-LOCK.md` و `README.md` همان بخش و درخواست **`requests/WQ####.md`** را بخوان. فقط پاسخ **`responses/WA####.md`** را در **همین repo** ثبت کن، Commit بزن، از همین repo بازخوانی کن و **repository_full_name، commit، blob و نتیجهٔ readback** را اعلام کن. مخزن `mohammadrezanabizadeh41-png/DJMRN-Research-Bridge` مقصد نیست؛ اگر هویت مخزن/دسترسی تأیید نشد، توقف و BLOCKED. هیچ تغییر دیگری مجاز نیست.»
-
-## Newest V0 step — user-approved but not Windows-tested (2026-10-20)
-- [D-009/D-011/D-012](../02-project-management/V0-BUILD-DECISION.md): sequence adopted: thin task contract → small no-Agent capability; resource controller only on observed triggers. Python stdlib is **scoped to CAP-006**.
-- [CAP-006 source/usage](../05-assistants-and-capabilities/src/document_search_v0/README.md) and [16-test synthetic receipt](../06-tests-and-evidence/logs/NEW-V0001-20261020.md). Checked code/fixture SHA identity; no Windows local smoke, no private source use. Do not ask user to rebuild from scratch or rerun all system inventories.
-- Ask for separate explicit authorization before any on-device code execution or installation; if approved, start only with bundled synthetic fixtures. Preserve [Work Repository Lock](../04-work-research-bridge/REPOSITORY-LOCK.md) for future Work tasks.
+**For future Work messages:** [REPOSITORY-LOCK](../04-work-research-bridge/REPOSITORY-LOCK.md) requires explicit exact `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` in request and response. Notion Applied research library and other GitHub research repo stay separate.

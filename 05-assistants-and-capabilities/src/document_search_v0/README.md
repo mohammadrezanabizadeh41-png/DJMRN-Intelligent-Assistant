@@ -30,3 +30,6 @@ The command displays results on stdout only; it does **not** modify, rewrite, cr
 - `test_docsearch_v0.py` Git blob `982a63f72e4fe0f0b080ba57effcf86fa65fc727`
 - [Test register](../../../06-tests-and-evidence/TEST-REGISTER.md) and [evidence](../../../06-tests-and-evidence/logs/NEW-V0001-20261020.md).
 - [Decision and scope](../../../02-project-management/V0-BUILD-DECISION.md), [technology comparison](../../../03-architecture-and-tools/V0-TECH-CHOICE.md).
+
+## User-approved next test (2026-10-20)
+User authorized **synthetic-only Windows smoke**; **not executed yet**. Follow [WINDOWS-SMOKE-PROTOCOL](WINDOWS-SMOKE-PROTOCOL.md). The packaged 4 code/fixture files are byte-identical with this repo's source blobs; the temporary chat ZIP is SHA256 `f6228e06b9efc565c971e08f6404e05f8fc9dbc4e625879d420130a9f0026af4`. Stop on any verification failure; no Python install and no private document read. [Self-contained continuity](../../../07-operations-and-continuity/PROJECT-STATE-HANDOFF-20261020.md).

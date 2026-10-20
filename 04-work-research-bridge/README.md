@@ -30,3 +30,6 @@
 
 ## ورودی/خروجی الگو
 [قالب درخواست](templates/REQUEST-TEMPLATE.md)؛ [قالب پاسخ](templates/RESPONSE-TEMPLATE.md)؛ [قالب بازبینی](templates/REVIEW-TEMPLATE.md)؛ [دفتر اتصال](LEDGER.md).
+
+## New-chat continuity after WQ0001 (2026-10-20)
+Research pair WQ0001/WA0001 already finished and reviewed. The user **approved D-009 sequencing**, and code CAP-006 is in repo; **do not repeat the research** as a condition for synthetic-only Windows test. Read [project snapshot](../07-operations-and-continuity/PROJECT-STATE-HANDOFF-20261020.md) and [current status](../07-operations-and-continuity/CURRENT-STATUS.md). Keep the mandatory exact-repository lock for any *future* Work research.
