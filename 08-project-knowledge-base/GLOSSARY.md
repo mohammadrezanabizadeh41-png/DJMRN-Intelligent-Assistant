@@ -1,0 +1,12 @@
+# واژه‌نامهٔ وضعیت و مرزها
+- **Raw source / SRC:** اصل متن یا لینک منبع با provenance؛ هنوز لزوماً راستی‌آزمایی نشده.
+- **KB entry:** یک گزاره یا مجموعهٔ کوچک دانش قابل بازیابی با source، تاریخ، aliases، limitations و relevance.
+- **Applied Library / General Discovery:** کتابخانه‌های اصلی Notion برای جست‌وجو و مقایسهٔ گسترده، نه طرح نصب.
+- **WQ/WA / Work review:** سند دستور، پاسخ کامل و ارزیابی هماهنگ‌کننده؛ در 04 Work Bridge.
+- **Technology candidate:** گزینهٔ پژوهشی؛ بدون امتیازِ نصب‌شده‌بودن و بدون مجوز اجرا.
+- **Decision / D:** انتخاب تصویب‌شدهٔ نیاز/معماری با owner/dated evidence؛ در 02.
+- **Actual implementation/test:** کد/تغییر واقعی و شواهد از 05/06؛ مستقل از تأیید منبع دانش.
+- **FACT:** مستند رسمی/آزمایش قابل بررسی در محدودهٔ مشخص؛ **CLAIM** ادعای نویسنده؛ **INFERENCE** استنباط؛ **UNKNOWN** دادهٔ ناکافی.
+- **SOURCE-CHECKED:** منبع از اصلش بازبینی شد؛ **TEST-SUPPORTED:** آزمون مستند روی شرایط مشخص؛ هیچ‌کدام ضمانت همهٔ workloadها نیست.
+- **SUPERSEDED:** نتیجهٔ قبلی با مرجع جدید/شاهد مخالف اصلاح شده؛ تاریخچه حفظ می‌شود.
+- **Local vs Remote vs Hybrid:** محل پردازش/داده را به‌صورت جزء‌به‌جزء مشخص کن؛ CPU/GPU cloud از RAM لپ‌تاپ استفادهٔ اصلی نمی‌کند اما browser/client/local adapter منابع مصرف می‌کنند.

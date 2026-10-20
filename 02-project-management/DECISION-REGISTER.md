@@ -8,5 +8,6 @@
 | D-005 | انتخاب language/runtime/database/agent host/inference engine | **NOT DECIDED** | نیاز به نیازمندی و مقایسهٔ معتبر | NONE |
 | D-006 | اولین کاربرد عملی و اولویت resource-host | **NOT FINAL** | سناریوهای A/B/C نامزد | User review |
 | D-007 | استفاده از Notion به‌عنوان source research بیرونی و GitHub برای تمام اسناد پروژه | USER DIRECTIVE | پایداری windows/Work | research catalogs not duplicated wholesale |
+| D-008 | ایجاد دانشنامهٔ اختصاصی در همان مخزن پروژه، مستقل از raw Work correspondence | USER DIRECTIVE / DOCUMENTATION DECISION 2026-10-20 | نیاز به بازیابی پژوهش و استفادهٔ معماری/ساخت از نتایج | [08-project-knowledge-base](../08-project-knowledge-base/README.md) با source/raw→verified KB→decision/test و تفکیک پژوهش از اجرا؛ بدون انتخاب فناوری |
 
 **قالب تصمیم آینده:** problem → options (including simpler) → official evidence/versions → security/cost/region → test results → rejected alternatives → decision owner/date → approved/not approved → as-built evidence → reversibility → effects on Notion governance. تغییر consequential معماری را در Notion canonical cross-project هم ثبت/لینک کنید و در این register مرجع immutable داشته باشید.

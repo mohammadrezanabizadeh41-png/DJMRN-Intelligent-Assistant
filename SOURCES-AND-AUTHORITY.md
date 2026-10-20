@@ -12,6 +12,7 @@
 | سوابق قدیمی نصب/تست | [Windows Journal](https://app.notion.com/p/3fbc8c6846908184b4bbe32c586686e3) | سند تاریخ‌دار منتخب در 01 و 06؛ هیچ run تازه‌ای ادعا نشود |
 | گزارش‌های طولانی پژوهش Applied | [DJMRN-Research-Bridge](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Research-Bridge) | زمینهٔ قبلی/مرجع مستقل؛ در پروژهٔ جدید بازنویسی نکن |
 | گزارش‌های پژوهش مخصوص این پروژه | 04-work-research-bridge همین مخزن | PRIMARY for project requests/reports |
+| **دانش قابل استفادهٔ استخراج‌شده برای تصمیم/ساخت همین پروژه** | [08-project-knowledge-base](08-project-knowledge-base/README.md) | INDEX + source metadata + source-backed KB entry؛ بدون تکرار ناخواستهٔ متن اصلی |
 | پایگاه دادهٔ عملیاتی/اجرای تولید | **هنوز انتخاب نشده** | DON’T INVENT |
 
 ## نسخه‌های خوانده‌شده در 2026-10-20
@@ -22,7 +23,7 @@
 
 ## مسیر بازخوانی
 1. README و PROJECT-RULES و CURRENT-STATUS همین repo؛ 
-2. فایل موضوعی سیستم/وظیفه/تست؛
+2. [08/INDEX دانشنامه](08-project-knowledge-base/INDEX.md) و فایل موضوعی سیستم/وظیفه/تست؛
 3. اسناد منبع اصلی (Notion/رسمی vendor) **در صورت پژوهش یا تغییر اثرگذار**؛
 4. بازگشت به گزارش/شواهد دقیق و ثبت تصمیم/نسخه.
 هدف repo **قابل بازیابی‌بودن مستقل از حافظهٔ چت** است، نه تبدیل شدن به یک کپی دائم و ناسازگار از همه منابع.

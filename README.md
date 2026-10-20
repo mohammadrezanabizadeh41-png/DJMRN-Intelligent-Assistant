@@ -6,7 +6,7 @@
 1. [قواعد مستقل کار در پروژه](PROJECT-RULES.md) را بخوانید؛ برای ادامهٔ عادی نیازی به بازتعریف پروژه از گفتگو یا خواندن اجباری Notion نیست.
 2. [وضعیت جاری — فقط یک CURRENT](07-operations-and-continuity/CURRENT-STATUS.md) و [راهنمای انتقال به گفتگو/دستیار جدید](07-operations-and-continuity/HANDOFF.md) را بخوانید.
 3. [اهداف](02-project-management/PROJECT-CHARTER.md)، [نقشهٔ راه](02-project-management/ROADMAP.md)، [ثبت وظایف](02-project-management/TASK-REGISTER.md) و [نقشهٔ منابع](SOURCES-AND-AUTHORITY.md) را بخوانید.
-4. برای دستگاه [موجودی سیستم](01-system-inventory/README.md)؛ برای پژوهش [پروتکل Work](04-work-research-bridge/README.md)؛ برای پیاده‌سازی [دفتر اجرا](05-assistants-and-capabilities/IMPLEMENTATION-REGISTER.md)؛ برای شواهد [دفتر آزمایش](06-tests-and-evidence/TEST-REGISTER.md) را بخوانید.
+4. برای دستگاه [موجودی سیستم](01-system-inventory/README.md)؛ برای پژوهش [دانشنامهٔ اختصاصی پروژه](08-project-knowledge-base/README.md) و [پروتکل Work](04-work-research-bridge/README.md)؛ برای پیاده‌سازی [دفتر اجرا](05-assistants-and-capabilities/IMPLEMENTATION-REGISTER.md)؛ برای شواهد [دفتر آزمایش](06-tests-and-evidence/TEST-REGISTER.md) را بخوانید.
 5. **قبل از هر نوشتن:** وضعیت و commit واقعی GitHub را بازخوانی کنید؛ حق ایجاد فایل/تغییر تنظیمات/هزینه را از دستور جاری کاربر استنباط کنید، نه از یک گزارش.
 
 ## نقشهٔ پوشه‌ها
@@ -19,6 +19,7 @@
 | [05-assistants-and-capabilities](05-assistants-and-capabilities/README.md) | طراحی و بعداً کد/قابلیت عملی؛ فعلاً هیچ پلتفرمی تصویب نشده |
 | [06-tests-and-evidence](06-tests-and-evidence/README.md) | آزمون‌های قدیمی/جدید، خروجی، شکست، اندازه‌گیری، صحت شواهد |
 | [07-operations-and-continuity](07-operations-and-continuity/README.md) | وضعیت یکتا، ادامهٔ کار، بازیابی، ثبت تغییرات |
+| [08-project-knowledge-base](08-project-knowledge-base/README.md) | **دانشنامهٔ پروژه**: منابع خام پژوهش، مدخل‌های موضوعی قابل جست‌وجو، یافته‌های معماری و ساخت، درجهٔ اعتبار و شکاف‌های دانشی |
 
 ## اطلاعات مهم
 - مخزن پروژه: https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant (خصوصی). مالک مرتبط در GitHub تأیید شد؛ این README منبع اطلاعات جاری پروژه است.
@@ -30,4 +31,4 @@
 ## وضعیت در زمان آغاز
 **INIT / REPOSITORY DOCUMENTATION ONLY:** اطلاعات تاریخی وارد سند شده؛ یک معماری فنی/عامل/مدل/host انتخاب یا روی لپ‌تاپ نصب نشده است. T0001 **PASS** — [پاسخ واقعی Work](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/04-work-research-bridge/responses/T0001.md), [commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/d70a9a406a7057a7b40e11ad99e70d2574536e5c), blob `8094f76e732305fcc8d22a48639cb0e347325874` با بازخوانی مستقل تأیید شد؛ پژوهش واقعی `WQ0001` هنوز ایجاد نشده. رویدادهای تازه فقط پس از شواهد در CURRENT-STATUS ثبت شوند.
 
-> مسیر سریع: برای پرسیدن از Work، 04/README؛ برای فهم این که الان چه چیزی انجام شده، 07/CURRENT-STATUS؛ برای وضعیت دقیق RAM، 01/hardware-baseline و 01/resource-observations؛ برای انتخاب ابزار جدید، PROJECT-RULES و 03.
+> مسیر سریع: برای **دانش پژوهشی قابل استفاده**، 08/INDEX و 08/INTAKE-PROTOCOL؛ برای پرسیدن از Work، 04/README؛ برای فهم کارهای انجام‌شده، 07/CURRENT-STATUS؛ برای RAM، 01/hardware-baseline و resource-observations؛ برای انتخاب ابزار، PROJECT-RULES و 03.

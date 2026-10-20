@@ -11,5 +11,6 @@
 | TASK-0006 | پژوهش هدفمند مقایسهٔ معماری | NOT STARTED IN THIS REPO | TASK-0004 PASS; first real WQ0001 after task/scope confirmation | هدف و فیلتر پژوهش |
 | TASK-0007 | انتخاب حداقل stack/تست | NOT AUTHORIZED | نتیجهٔ 0006، consent | NONE |
 | TASK-0008 | توسعهٔ اولین قابلیت واقعی | NOT AUTHORIZED | تصویب P3، real I/O | NONE |
+| TASK-0009 | ساخت دانشنامهٔ پروژه با INDEX/SRC/KB/protocol و موضوعات | DOCUMENTATION SETUP / VERIFY AFTER COMMIT | [08-project-knowledge-base](../08-project-knowledge-base/README.md)، درخواست 2026-10-20 | دریافت متن پژوهش قبلی و ثبت نخستین SRC/KB پس از بررسی؛ WQ صادر نشده |
 
 **در هر تغییر:** وضعیت، خطا، لینک output/commit، source/observed date، وابستگی، مالک، next action؛ sync CURRENT-STATUS. هیچ task صرفاً به خاطر ساخت فایل DONE اجرایی نمی‌شود.

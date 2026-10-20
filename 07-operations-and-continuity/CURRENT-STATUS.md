@@ -15,6 +15,11 @@
 - Free-first, greenfield, architecture-neutral, single project repo + separate Applied/general catalogs policy in PROJECT-RULES.
 - Work research transport design uses `04/.../requests/WQ####`, `responses/WA####`, coordinator `reviews/WQ####`; T0001 **PASS / independent readback** ([response](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/04-work-research-bridge/responses/T0001.md), [commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/d70a9a406a7057a7b40e11ad99e70d2574536e5c), blob `8094f76e732305fcc8d22a48639cb0e347325874`).
 
+## افزودهٔ مستنداتی 2026-10-20 — دانشنامهٔ اختصاصی پروژه
+- بخش مستقل [08-project-knowledge-base](../08-project-knowledge-base/README.md) برای گردآوری سازمان‌یافتهٔ یافته‌های معماری، ساخت، مدل/موتور، ابزار، Work، منابع رسمی و تجربهٔ تست به ساختار افزوده شد. [INDEX](../08-project-knowledge-base/INDEX.md)، [SOURCE-REGISTER](../08-project-knowledge-base/SOURCE-REGISTER.md)، [INTAKE-PROTOCOL](../08-project-knowledge-base/INTAKE-PROTOCOL.md)، قالب‌ها و دسته‌های موضوعی ایجاد شد.
+- **هیچ متن پژوهشی تازه از کاربر هنوز دریافت/در این بخش ثبت نشده است؛ تعداد مدخل KB = 0 و تعداد SRC آرشیوشده = 0.** گام بعدی: دریافت متن قبلی کاربر → sanitize/copyright/provenance → raw archive → claims check → KB article/index؛ Work تنها برای gap واقعی و با WQ دقیق.
+- نقشهٔ راه/Stack/فناوری منتخب تغییری نکرد؛ عملیات محلی، نصب و پژوهش Work جدید انجام نشده است.
+
 ## وضعیت پژوهش، انتخاب و اجرای واقعی
 | آیتم | وضعیت |
 |---|---|
@@ -28,10 +33,11 @@
 | Roadmap P0–P6 | **PROPOSED — user discussion pending** |
 
 ## اقدام بعدی به ترتیب
-1. **P0 core GitHub documentation written/read back.** اگر سؤال/اطلاعات جدید از کاربر آمد، با provenance آن را به inventory و CURRENT اضافه کنید؛ از بازتعریف کامل خودداری کنید.
-2. **T0001 موفق و بازخوانی‌شده است؛ تکرار نشود.** پس از تعریف یک نیاز/شکاف مشخص و review منابع، نخستین WQ واقعی را می‌توان تهیه کرد.
-3. نیاز و acceptance نخستین کاربرد واقعی را با user نهایی کنید (resource management first یا یک وظیفهٔ محدود دیگر). P0–P6 نباید بدون بررسی با user تبدیل به stack شود.
-4. برای gap پژوهشی متناسب، پس از review Applied/General و official search یک WQ0001 دقیق تولید کنید و چرخهٔ ثبت/بازبینی را اجرا کنید؛ بعد انتخاب ابزار.
+1. **دانشنامه اختصاصی آمادهٔ دریافت پژوهش:** متن پژوهش قبلی را از پیام بعدی کاربر بگیر؛ طبق 08/INTAKE-PROTOCOL ثبت/اعتبارسنجی و INDEX کن؛ قبل از ایجاد WQ، شکاف‌های دانشنامه را بررسی کن.
+2. **P0 core GitHub documentation written/read back.** اگر سؤال/اطلاعات جدید از کاربر آمد، با provenance آن را به inventory و CURRENT اضافه کنید؛ از بازتعریف کامل خودداری کنید.
+3. **T0001 موفق و بازخوانی‌شده است؛ تکرار نشود.** پس از تعریف یک نیاز/شکاف مشخص و review منابع، نخستین WQ واقعی را می‌توان تهیه کرد.
+4. نیاز و acceptance نخستین کاربرد واقعی را با user نهایی کنید (resource management first یا یک وظیفهٔ محدود دیگر). P0–P6 نباید بدون بررسی با user تبدیل به stack شود.
+5. برای gap پژوهشی متناسب، پس از review Applied/General و official search یک WQ0001 دقیق تولید کنید و چرخهٔ ثبت/بازبینی را اجرا کنید؛ بعد انتخاب ابزار.
 
 ## ناتمام/blocked
 - **T0001 synthetic Work transport شاهد واقعی دارد**؛ هنوز هیچ Work Q/A **پژوهشی** در پروژه انجام نشده.

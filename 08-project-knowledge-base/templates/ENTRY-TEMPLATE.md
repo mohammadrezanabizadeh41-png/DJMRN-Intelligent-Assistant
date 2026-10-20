@@ -1,0 +1,21 @@
+# KB-#### — عنوان فارسی کوتاه / English title
+> **TEMPLATE — NOT AN ACTUAL KNOWLEDGE ENTRY**
+- **ID:** KB-####
+- **Status:** RAW-RECEIVED | CURATED-UNVERIFIED | SOURCE-CHECKED | TEST-SUPPORTED | APPROVED-FOR-REFERENCE | SUPERSEDED
+- **Category / primary path:** 08-project-knowledge-base/[category]/KB-####-[slug].md
+- **Keywords (FA/EN) & aliases:** 
+- **Created at / reviewed at / review due:**
+- **Source IDs & precise citations:** SRC-####; original URL + section, Work WQ/WA number/commit where applicable, Notion page/version, source date
+- **Context / problem:** کدام نیاز یا سؤال واقعی DJMRN؟
+- **Summary:** چه دانشی می‌تواند به طراحی کمک کند؟
+- **Atomic observations:** جدول statement | FACT/CLAIM/INTERPRETATION/HYPOTHESIS/UNKNOWN | evidence link | time/version | confidence
+- **Competing alternatives / disconfirming evidence:** گزینه‌های متفاوت و نقایص
+- **Local/Remote/Hybrid placement:** کدام مؤلفه روی لپ‌تاپ و کدام remote؟
+- **Windows hardware implications:** 8GiB installed, ~5.88GiB usable snapshot Oct19 و معماری Ryzen/Vega؛ requirement documented vs machine-tested را جدا کنید
+- **Cost / license / region / privacy / security:** price/card/quota/overage/Iran/legal terms if applicable; UNKNOWN until verified
+- **Actionable design implications:** چه شرط یا الگوی طراحی مطرح می‌کند؟ هیچ adoption خودکار
+- **Implementation reference:** 03 candidate, 05 code, 06 test (if exists); otherwise NONE
+- **Related KB / Task / D / TEST IDs:** 
+- **Gaps & next checks:** 
+- **Coordinator judgment vs approved user decision:** PROPOSAL vs APPROVED
+- **Superseded by / revision notes:** never silently erase prior evidence

@@ -17,3 +17,9 @@
 - Work [commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/d70a9a406a7057a7b40e11ad99e70d2574536e5c) contains only `04-work-research-bridge/responses/T0001.md`; response Blob SHA `8094f76e732305fcc8d22a48639cb0e347325874`, main HEAD matched at time of verification.
 - **Scope: PASS for transport only; no research WQ/WA, Windows operations, installation, Agent readiness, or future-session access implied.** Coordinator receipt at `04-work-research-bridge/reviews/T0001.md`.
 - Next: review first real work-use-case and technology research gap before allocating WQ0001.
+
+## 2026-10-20 — Project-specific knowledge base established (requested)
+- Added independent `08-project-knowledge-base/` organized topic areas, source register, full-text intake protocol, raw inbox, article template and searchable metadata-based index.
+- Cross-linked the KB in project README, SOURCE authority map, PROJECT-RULES, research bridge, architecture folder, HANDOFF and single CURRENT; registered D-008 and TASK-0009.
+- No research content has been received from user yet, so **no actual KB-0001/SRC-0001 entry** has been created; no Work WQ, install, test or architecture selection resulted from scaffolding.
+- GitHub commit SHA and persistence must be verified by reading back main/ref + knowledge index and key linking docs after this change.
