@@ -14,3 +14,6 @@
 
 ## CAP-006 stage update (2026-10-20)
 **SCOPED WINDOWS SYNTHETIC SMOKE PASS** (user-reported console, [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md)): Python 3.14.7, archive and 4 extracted SHA matching, 15 successful unit tests and 1 skipped symlink case, 2 correct synthetic Persian search matches with file/line/SHA. This **does not** qualify as `OPERATIONAL` on real work or justify an Agent/LLM/central manager. Next gate: user-consented non-sensitive real-file read-only assessment; Windows symlink behavior remains untested.
+
+## CAP-006 limited real-file gate — 2026-10-21
+**VERIFIED-REAL (BOUNDED)** on two user-authorized non-sensitive copied DJMRN Markdown files in Windows 11 / Python 3.14.7. Both Persian queries returned one correct cited line each (charter line 3, resources line 1); independent line search confirmed; pre/post source SHA256 unchanged. [NEW-V0003](../06-tests-and-evidence/logs/NEW-V0003-20261021.md). **NOT OPERATIONAL** / no general host/Agent/LLM. Unicode output is visibly mojibake when the JSON is captured through Windows PowerShell; fix and recheck that presentation. Earlier `TESTED-SYNTHETIC` row is historical and superseded for this narrow capability, not for unverified security/use cases.
