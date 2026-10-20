@@ -1,5 +1,9 @@
 # DJMRN — SELF-CONTAINED CANONICAL PROJECT HANDOFF (2026-10-20)
 
+## NEWEST CONTINUATION UPDATE — 2026-10-21 (after 2026-10-20 handoff)
+**CAP-006 NEW-V0003 VERIFIED-REAL, BOUNDED.** User agreed to real non-sensitive project docs and executed existing V0 on Windows Python 3.14.7, querying local GitHub Markdown downloads `PROJECT-CHARTER.md` (`هوشمند`, line 3) and `RESOURCE-MANAGEMENT.md` (`منابع`, line 1), one independently matching line each, two succeeded JSON results with source line/SHA, both pre/post SHA256 unchanged. Local downloads have flattened doubled `.md.md` names; original remote byte identity not proven. Windows PowerShell captured Persian JSON text appears mojibake (presentation to fix), even though matches succeeded. [Complete NEW-V0003 evidence](../06-tests-and-evidence/logs/NEW-V0003-20261021.md). This does not prove production readiness or justify any Agent/manager. **Do not repeat the previous synthetic test. Next: session-only PowerShell UTF-8 output verification, then practical value/next capability decision.**
+
+
 ## LATEST FOLLOW-UP (2026-10-20) — Windows smoke evidence finally succeeded
 **Supersedes any older PENDING/BLOCKED status below:** [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md) now has user-provided PowerShell proof: original package ZIP and 4 extracted fixture checks TRUE; Python 3.14.7; `Ran 16 tests in 0.992s`, `OK (skipped=1)` (**15 passed, 1 skipped symbolic-link test**); CLI source-based normalized Persian search returned two correct lines and hashes. **First real Windows synthetic smoke PASS**, not production. Initial two SHA failures remain recorded without diagnosed cause. **Do not ask to repeat the same smoke by default.** Next meaningful step is choose explicitly permitted non-sensitive real files and acceptance criteria, then propose bounded read-only real-file usefulness evaluation requiring user consent; keep high-risk symlink case unverified.
 
