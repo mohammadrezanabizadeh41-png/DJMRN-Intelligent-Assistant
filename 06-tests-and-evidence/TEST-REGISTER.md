@@ -25,3 +25,6 @@
 
 ## LATEST — NEW-V0003 (2026-10-21)
 | NEW-V0003 | 2026-10-21 | CAP-006 Windows actual read-only keyword search on two non-sensitive downloaded DJMRN project Markdown files | **VERIFIED-REAL BOUNDED / PASS WITH UTF-8 CONSOLE DISPLAY ISSUE; NOT OPERATIONAL** | User-supplied Windows Python 3.14.7 console: `هوشمند` charter line 3; `منابع` resources line 1; `status=succeeded` each; independent 1/1 reference line and original SHA256 before/after equal; [full NEW-V0003](logs/NEW-V0003-20261021.md). Native stdout mojibake remains open; Windows symlink test still unverified. |
+
+## NEW-V0003 UTF-8 follow-up — 2026-10-21
+**PASS / user-executed Windows session:** One limited `هوشمند` repeat with Python 3.14.7 and explicit `[Console]::OutputEncoding` UTF-8; JSON query/line/text legible in Persian, checks `$result.query -eq $query` and `text.Contains($query)` succeeded, terminal `PERSIAN UTF8 ROUND-TRIP: PASS`. No source mutation, installation or code change requested; previous independent two-document SHA validation already recorded. [Updated NEW-V0003](logs/NEW-V0003-20261021.md). Status **VERIFIED-REAL BOUNDED; NOT OPERATIONAL**; prior mojibake display issue **RESOLVED via PowerShell session configuration**.
