@@ -17,3 +17,6 @@
 
 ## CAP-006 limited real-file gate — 2026-10-21
 **VERIFIED-REAL (BOUNDED)** on two user-authorized non-sensitive copied DJMRN Markdown files in Windows 11 / Python 3.14.7. Both Persian queries returned one correct cited line each (charter line 3, resources line 1); independent line search confirmed; pre/post source SHA256 unchanged. [NEW-V0003](../06-tests-and-evidence/logs/NEW-V0003-20261021.md). **NOT OPERATIONAL** / no general host/Agent/LLM. Unicode output is visibly mojibake when the JSON is captured through Windows PowerShell; fix and recheck that presentation. Earlier `TESTED-SYNTHETIC` row is historical and superseded for this narrow capability, not for unverified security/use cases.
+
+## CAP-006 UTF-8 display follow-up — 2026-10-21
+The user independently verified readable Persian query and source line after setting session-local PowerShell `[Console]::OutputEncoding` to UTF-8 and `PYTHONIOENCODING=utf-8`: `PERSIAN UTF8 ROUND-TRIP: PASS`, charter line 3. [NEW-V0003](../06-tests-and-evidence/logs/NEW-V0003-20261021.md). Treat this as a **shell-output presentation fix**, not a new Python source version or security/production validation. CAP-006 status: **VERIFIED-REAL (TWO AUTHORIZED PROJECT TEXT FILES) / NOT OPERATIONAL**. No repeated test or new install needed.
