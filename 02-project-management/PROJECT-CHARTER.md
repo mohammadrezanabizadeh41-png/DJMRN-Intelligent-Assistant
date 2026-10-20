@@ -8,6 +8,7 @@
 3. **منبع دانش مطمئن**: تاریخچه و منابع قابل ارجاع از GitHub/Notion، از جمله Applied و General، با permission boundaries، provenance و تشخیص stale.
 4. **دستیارهای تخصصی تدریجی**: فرصت فریلنسری/پیام کامل در خود سایت، پژوهش و Curator، کدنویسی، فایل، داده و محتوا به اقتضای use case. چنددستیار = الزام چند موتور resident نیست.
 5. **پایگاه کامل پروژه در همین GitHub**: هدف، سخت‌افزار، کارهای done/not done، پژوهش Work، هزینه، کد/تست/خطا/عملیات/continuity برای هر پنجرهٔ بعدی.
+6. **نقشهٔ زندهٔ Observability کم‌مصرف**: نمایش بصری و near-live اجزای دستیار، workflowها، engine/modelها، search/API/data sources، local/cloud endpoints و جریان request/response همراه با status/latency/bytes/RAM/CPU در حد ممکن، بدون شنود payload و با نقش Observer؛ شرح و shortlist در [REQ-OBS-001](LIVE-OBSERVABILITY-MAP-REQUIREMENT.md).
 
 ## اصول الزام‌آور
 - **Greenfield:** نرم‌افزارهای نصب‌شده/کد قدیمی به‌عنوان گزینه و تجربه بررسی شوند؛ حتی اگر بهترین نباشند کنار گذاشته شوند بدون پاک‌کردن تاریخچه.

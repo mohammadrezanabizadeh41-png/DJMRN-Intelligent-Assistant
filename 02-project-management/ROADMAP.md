@@ -24,3 +24,7 @@
 Cross-cutting: امنیت، observability، cost gates و tests از P0/P1 مطرح می‌شوند؛ P6 به معنی تعویق امنیت نیست. کار پژوهش Work بخشی از P2 و حتی P4 در صورت نیاز است، نه یک پروژهٔ research بی‌پایان.
 
 **پیشرفت واقعی 2026-10-20:** نخستین قابلیت کوچک CAP-006 (جست‌وجوی خطیِ فقط‌خواندنی با منبع) با تأیید کاربر انتخاب و کد آن ثبت شد؛ 16 آزمون ساختگیِ خارج از دستگاه موفق‌اند. طبق D-009 قرارداد سبک پیش از ساخت مدیر مرکزی انتخاب شد. **اجرای smoke ساختگی روی Windows اکنون توسط کاربر مجاز است اما هنوز نتیجه ندارد.** نقشهٔ گستردهٔ P0–P6 همچنان پیشنهاد کلی است، نه الزام stack یا وعدهٔ اجرای همهٔ مراحل. برای ادامه [Snapshot](../07-operations-and-continuity/PROJECT-STATE-HANDOFF-20261020.md).
+
+
+## Future cross-cutting capability — Live Observability Map
+نیاز کاربر برای یک **نقشهٔ زندهٔ کم‌مصرف** از اجزا و ارتباطات سیستم ثبت شد: [REQ-OBS-001](LIVE-OBSERVABILITY-MAP-REQUIREMENT.md). این capability باید از P4 به بعد همراه با real I/O تکامل یابد، ولی provider/stack آن هنوز انتخاب نشده است. اولویت فعلی cloud-first/direct-OTLP برای کمینه‌کردن RAM محلی است؛ local all-in-one فقط پس از benchmark. این requirement مسیر فعلی CAP-006 را متوقف یا جابه‌جا نمی‌کند.

@@ -26,3 +26,5 @@ Windows user-reported read-only ZIP/extraction comparison **PASS for all 4 files
 
 ## TASK-0012 final milestone update (2026-10-20, supersedes earlier failure/pending lines)
 User's Windows **synthetic-only** CAP-006 smoke PASSED: Python 3.14.7, ZIP/4 SHA comparisons matched, **15 unit tests passed + 1 symlink test skipped**, two source-citing Persian search hits. [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md). This completes first on-device **synthetic smoke** milestone only. `TASK-0012` remains **IN PROGRESS FOR REAL VALUE VALIDATION**. Next explicitly authorize a limited set of non-sensitive real files; no host/model/resource manager selection.
+
+| TASK-0013 | تعریف و پژوهش نقشهٔ زندهٔ Observability برای اجزای local/cloud و جریان ارتباطات | **REQUIREMENT RECORDED / RESEARCHED; NOT IMPLEMENTED** | [REQ-OBS-001](LIVE-OBSERVABILITY-MAP-REQUIREMENT.md)؛ official research 2026-10-20: Grafana Cloud, New Relic, Uptrace, Jaeger; Grafana OSS/SigNoz constraints | بعداً synthetic direct-OTLP comparison با approval جداگانه؛ هیچ signup/install/telemetry activation هنوز مجاز نیست |
