@@ -47,3 +47,7 @@
 |---|---|---|---|
 | H3-DOC | Five-path original H3 commit and blobs; D-009 narrow approval; CAP-006 user-Windows bounded vs MAIL-P001 synthetic; canonical-current historical suffix | **PASS — STATIC DOCUMENT/SOURCE CHECK ONLY** | [H3 original Git commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/96f9006435a24bec6eb723f080d7551f1c30536e), [journal](../07-operations-and-continuity/WORK-JOURNAL.md); not an actual assistant test |
 | H3-B01–B12 | Fresh-assistant real evidence retrieval, conflicts, permissions, recovery, latency/accuracy/token usage | **NOT RUN / UNKNOWN** | WA0006 designed scenarios only; require a separately approved bounded test under TASK-0020 |
+
+
+## H4-EVAL-001 — bounded source retrieval probes (2026-10-22)
+| H4-B01/B03/B08-RETRIEVAL | 2026-10-22 | Pinned-GitHub read-only case fetches and grounded status/authority interpretation in CURRENT conversation | **PASS — SAME-SESSION SOURCE-RETRIEVAL SMOKE ONLY; NOT FRESH-AGENT BENCHMARK** | [Full scope, per-file blob/range/character counts, original B01 budget failure, nonclaims](logs/H4-B01-B03-B08-20261022.md). B01 constrained 4 fetch/13,046 chars, B03 4/12,790, B08 3/13,984; first B01 attempt 21,774 >18,000 budget; account/send/install actions 0. Previous conversational context present; timing/tokens, blind-model comparison and 12-case fresh-agent run NOT RUN. |
