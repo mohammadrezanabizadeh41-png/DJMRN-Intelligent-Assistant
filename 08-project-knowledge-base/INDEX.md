@@ -24,6 +24,8 @@
 
 | [KB-0013](architecture/KB-0013-agent-native-repository-architecture.md) | معماری مخزن Agent-Native، ناوبری همیاران و منشأ دانش | architecture | agent-native, repo readmap, AGENTS.md, authority, ADR, provenance, current/history, مدیریت دانش و بازیابی | [SRC-0015](SOURCE-REGISTER.md), [WA0006](../04-work-research-bridge/responses/WA0006.md) | CURATED / CONDITIONALLY REVIEWED; NO MIGRATION OR BENCHMARK | [TASK-0020](../02-project-management/TASK-REGISTER.md), [review](../04-work-research-bridge/reviews/WQ0006.md) | 2026-10-21 |
 
+| [KB-0014](tools-and-integrations/KB-0014-r2-m1-ready-solution-source-atlas.md) | اطلس منابع یافتن همیار آماده برای R2/M1 | tools-and-integrations | ready app, reference starter, source atlas, GitHub, AlternativeTo, Chainlit, Microsoft samples, MCP, Hugging Face, ADOPT vs BUILD (future) | [SRC-0016](SOURCE-REGISTER.md), [WA0007](../04-work-research-bridge/responses/WA0007.md) | CURATED / STAGE1 ACCEPTED WITH ACCESS GAPS / NO PRODUCT TESTED | [review WQ0007](../04-work-research-bridge/reviews/WQ0007.md), [WQ0008 Stage2 queued](../04-work-research-bridge/requests/WQ0008.md), TASK-0017 | 2026-10-22 |
+
 ## راهنمای شماره‌گذاری
 - وقتی اولین متن واقعاً به GitHub وارد شد و ساختار مدخل مشخص شد، با بررسی **فایل‌های واقعی** و این Index شناسهٔ `KB-0001` ایجاد شود؛ سپس `KB-0002`...
 - متن اصلی طولانی در `inbox/` با شناسهٔ منبع `SRC-####` نگهداری و لینک شود؛ هر یک از مدخل‌های موضوعی ممکن است یک یا چند `SRC` داشته باشند.
