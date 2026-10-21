@@ -173,3 +173,8 @@ error_code              # sanitized
 5. custom viewer فقط اگر گزینهٔ آماده نتوانست requirement را با RAM/هزینه/امنیت مناسب برآورده کند.
 
 این سند **نیاز آینده و shortlist پژوهشی** است؛ مجوز نصب، signup، token creation، ارسال telemetry، cloud activation یا انتخاب معماری نهایی نیست.
+
+## 2026-10-21 Research source cross-reference — Ruflo console only partial observability
+- [SRC-0009 verbatim user source](../08-project-knowledge-base/inbox/SRC-0009-ruflo-multi-agent-orchestration-future-20261021.md) proposes [Ruflo](https://github.com/ruvnet/ruflo) as a **future agent/orchestration** candidate whose console might show its own swarm/agent/cost/mission/event data. This is **not verified as a universal DJMRN Live Map**: CAP-006, arbitrary outside model hosts, DB, cloud services and external tools would require separate instrumentation/adapter and permissioned trace identity. Do not create a second observer or equate vendor's console with REQ-OBS-001.
+- [SRC-0010](../08-project-knowledge-base/inbox/SRC-0010-hybrid-inference-plane-multi-engine-model-routing-future-20261021.md) / [INF-001](../03-architecture-and-tools/FUTURE-INFERENCE-PLANE-RESEARCH-REQUIREMENT.md) proposes tracking model load/unload, routing decisions, per-backend availability, RAM after unload, latency, cost and cloud egress as **possible future metrics only**. Observability must stay read-only, bounded, source-/time-linked and not an execution authority.
+- **Status remains FUTURE/DEFERRED / NO MONITORING, PLUGIN, CONSOLE OR AGENT INSTALLED.** G1 user-approved Windows readiness check not yet completed.
