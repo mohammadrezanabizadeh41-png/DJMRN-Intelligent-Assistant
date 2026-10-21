@@ -28,6 +28,8 @@
 
 | [KB-0015](tools-and-integrations/KB-0015-r2-m1-implementable-candidate-inventory.md) | فهرست واقعی راهکارهای آمادهٔ گفت‌وگو/ابزار (R2/M1 Stage2) | tools-and-integrations | Jan, Cherry Studio, AnythingLLM, Conduit, 5ire, Chainlit, Python, C#, Go, Rust, MCP, CAP-006, ready-app, source-first | [SRC-0017](SOURCE-REGISTER.md), [WA0008](../04-work-research-bridge/responses/WA0008.md) | CURATED / STAGE2 ACCEPTED WITH GAPS / NO PRODUCT TESTED OR SELECTED | [independent review WQ0008](../04-work-research-bridge/reviews/WQ0008.md); [WQ0009 Stage3 queued](../04-work-research-bridge/requests/WQ0009.md); TASK-0017 | 2026-10-22 |
 
+| [KB-0016](architecture/KB-0016-r2-m1-three-stage-conclusion-and-decision-gates.md) | نتیجهٔ سه‌مرحله‌ای یافتن/ارزیابی همیار آماده و تصمیم‌های باز | architecture | reuse-before-build, WA0009, HYBRID, Jan, native small shell, CAP-006, trusted executor, two-file permission, no adopted stack | [SRC-0018](SOURCE-REGISTER.md), [WA0009](../04-work-research-bridge/responses/WA0009.md) | CURATED / STAGE3 SOURCE RESEARCH ACCEPTED WITH GAPS / NO MEASURED WINNER | [review WQ0009](../04-work-research-bridge/reviews/WQ0009.md), TASK-0017, Master R2/M1 | 2026-10-22 |
+
 ## راهنمای شماره‌گذاری
 - وقتی اولین متن واقعاً به GitHub وارد شد و ساختار مدخل مشخص شد، با بررسی **فایل‌های واقعی** و این Index شناسهٔ `KB-0001` ایجاد شود؛ سپس `KB-0002`...
 - متن اصلی طولانی در `inbox/` با شناسهٔ منبع `SRC-####` نگهداری و لینک شود؛ هر یک از مدخل‌های موضوعی ممکن است یک یا چند `SRC` داشته باشند.
