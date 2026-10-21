@@ -1,5 +1,9 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-22 — R2/M1 Work WA0007 reviewed; Stage2 request WQ0008 queued
+- Independent [WA0007](../04-work-research-bridge/responses/WA0007.md) full file/blob match, Work commit sole-path verification, 29 channels/8 families (21 observed /8 documentary) with search access caveats. [review](../04-work-research-bridge/reviews/WQ0007.md) **Stage1 accepted with gaps**; [KB-0014](../08-project-knowledge-base/tools-and-integrations/KB-0014-r2-m1-ready-solution-source-atlas.md)/SRC-0016 curated; exact Git history and receipt in [WORK-JOURNAL](WORK-JOURNAL.md).
+- [WQ0008](../04-work-research-bridge/requests/WQ0008.md) created for **Stage2 actual candidate inventory ONLY**, Work `WA0008` **NOT RECEIVED**; Stage3 and implementation not performed. Linked LEDGER, SOURCE-REGISTER, INDEX, TASK-0017, Master Roadmap and single canonical CURRENT. No selection/model/Agent, install, Windows/account/cloud/privacy mutation.
+
 ## 2026-10-22 — TASK-0017 R2 source-first Work mission WQ0007 registered
 - User explicitly proposed sequential source atlas → ready solution inventory → build/adapt/adopt comparison for current first conversational assistant, to avoid wasteful custom coding. Registered [R2 three-stage protocol](../02-project-management/R2-REUSE-FIRST-THREE-STAGE-DISCOVERY-PROTOCOL-20261022.md) and **Stage1 ONLY [WQ0007](../04-work-research-bridge/requests/WQ0007.md)**; full new-file readbacks verified. Indexed LEDGER, Master Roadmap, existing TASK-0017, Decision Register and canonical CURRENT; see [WORK-JOURNAL](WORK-JOURNAL.md) for commits/blob/provenance.
 - **WA0007 NOT RECEIVED; Work NOT DISPATCHED by coordinator, Stage2/Stage3 NOT STARTED.** No vendor/model/adopt decision, no code, install, real Windows test, accounts, cloud, money or actions. Readiness G1 PARTIAL, G2–G4 not approved.
