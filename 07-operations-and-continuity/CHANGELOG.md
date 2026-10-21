@@ -1,5 +1,10 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-21 — G1 shortcut Jan-Desktop.exe observed, earlier filename probe corrected
+- User submitted a screenshot of `Jan Properties → Shortcut` during visual-only G1. It shows Jan Start shortcut target `%LOCALAPPDATA%\Programs\Jan\Jan-Desktop.exe`, whereas prior one-off PowerShell searched for **`Jan.exe`**, a **different basename**. Previous missing-path inference corrected; exe existence and version remain **unverified** until viewing actual file.
+- [G1-R0001](../06-tests-and-evidence/logs/G1-R0001-20261021.md) has a sanitized screenshot evidence addendum; the original personally identifying Windows path/image **was not saved in GitHub**. Updated protocol erratum, software inventory and open verification register, [TASK-0017](../02-project-management/TASK-REGISTER.md) and project continuity. No new PowerShell command, Windows change, application/model launch or software installation. G1 still PARTIAL, user can read exe Properties → Details after Open File Location. G2–G4 not approved.
+
+
 ## 2026-10-21 — G1 first real user Windows read-only snapshot; 1.73 GiB available
 - Received actual **user-run** authorized G1 PowerShell command and complete sanitized output (not a coordinator-executed Windows test). [G1-R0001](../06-tests-and-evidence/logs/G1-R0001-20261021.md) new evidence created/verified, commit `aeed9e18b0a3afc63b03795224eda3681fcb35a1`, Git blob `e538d7f092abfd761858bb306fc939322459e381`.
 - Windows 11 Pro build 26300, reported OS usable 5.88GiB and 1.73GiB available; `PHYSICAL_RAM_GIB` printed 5.88 because G1's `Win32_ComputerSystem.TotalPhysicalMemory` is not a module-level installed DIMM measure here. **Keep prior 8GiB installed** + ~2.1GiB hardware-reserved evidence. Jan START app present, guessed Jan.exe paths fail; ChatGPT Store package absent in narrow query ≠ no desktop application or Plus MCP; app-version and GUI settings unobserved. No target process matched narrow set; not proof all model processes absent.
