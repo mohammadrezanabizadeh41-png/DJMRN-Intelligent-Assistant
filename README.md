@@ -6,7 +6,7 @@
 
 ساخت محیط شخصی **فارسی، مکالمه‌محور، کم‌مصرف و قابل توسعهٔ چندهمیاری** روی Windows 11، با امکان ابزارهای محلی یا آنلاینِ مجاز و تأیید انسانی برای اقدامات حساس. کاربر در جریان معمول با پیام کار می‌کند؛ PowerShell فقط ابزار آزمون و توسعه است. هدف‌ها شامل جست‌وجوی فایل و داده، تحلیل Gmail و فرصت‌های فریلنسری، مرور مجاز پنل سایت‌ها، پژوهش مستند و انتخاب ابزار، تولید محتوا، حافظهٔ قابل ارجاع، مدیریت منابع و نقش‌های تخصصی آینده است. **نیاز آینده ≠ قابلیت نصب‌شده یا عملیاتی.**
 
-[منشور اهداف](02-project-management/PROJECT-CHARTER.md) · [الزام رابط گفت‌وگویی](02-project-management/CHAT-FIRST-ASSISTANT-INTERACTION-REQUIREMENT.md) · [مرزهای اختیار و منابع](SOURCES-AND-AUTHORITY.md)
+[نقشهٔ راه جامع پیشنهادی v1.1](02-project-management/MASTER-SYSTEM-ROADMAP-20261022.md) · [تحلیل معماری و انتخاب اجزا](03-architecture-and-tools/ARCHITECTURE-RESEARCH-SYNTHESIS-20261022.md) · [منشور اهداف](02-project-management/PROJECT-CHARTER.md) · [الزام رابط گفت‌وگویی](02-project-management/CHAT-FIRST-ASSISTANT-INTERACTION-REQUIREMENT.md) · [مرزهای اختیار و منابع](SOURCES-AND-AUTHORITY.md)
 
 ## شروع سریع برای انسان یا همیار تازه
 
