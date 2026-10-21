@@ -1,5 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-21 — WQ0006 professional agent-native repository architecture research brief
+- User requested global best-practices research for repository architecture serving all future assistants, cross-domain knowledge, decision evidence, true state, fail-safe Work coordination, context efficiency, long-term growth and project self-recovery. This is **RESEARCH ONLY**, distinct from choosing runtime/agents.
+- Verified current `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` `main` HEAD `0e04e3e5b60629e0dd0ecb40bf52848c7421616f`; tree 138 blobs, eight core domains; retrieved real critical project files and live Notion sources for prompt design; category-first official web examples checked. [WQ0006](../04-work-research-bridge/requests/WQ0006.md) created; Work is to write only WA0006 after independent three-way research. Task-0020, Work LEDGER, CURRENT, append-only JOURNAL updated; no change to WQ0001–0005 or code/KB.
+- Research should compare at least four architecture approaches and 10+ scenario-based retrieval/continuity tests, with practical safe incremental migration. AGENTS.md/CI/KB database/Notion authority changes are **candidates**, not newly adopted settings. Next: user passes request to Work, then coordinator independently verifies its single response and proposes implementation choices.
+
+
 ## 2026-10-21 — GitHub recovered; 10 exact original MAIL-P001 entries archived
 - [Verified original import](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/cd700167fd7cb4b8a884ae2f2a0931e6a3f4de21): 9 synthetic test/code/result files plus new WORK-JOURNAL, every staged Git SHA matching original ZIP; independent HEAD, file and commit readbacks PASS. Previously disconnected GitHub tool cause UNKNOWN; no privileges changed.
 - 7/7 Python 3.13.5 Linux isolated unit tests PASS, report exact match. No live Gmail, browser/portal, Windows, API, model, paid tool, Email Triage demo or same-corpus ChatGPT comparison. Real assistant **NOT OPERATIONAL**.
