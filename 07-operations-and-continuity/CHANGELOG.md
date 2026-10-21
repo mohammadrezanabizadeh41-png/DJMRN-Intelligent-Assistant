@@ -1,5 +1,9 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-22 — Integrated Master Roadmap v1.1 and official-source architecture research (DOCUMENTATION)
+- [Master System Roadmap v1.1](../02-project-management/MASTER-SYSTEM-ROADMAP-20261022.md) and [official-source architecture research](../03-architecture-and-tools/ARCHITECTURE-RESEARCH-SYNTHESIS-20261022.md) recorded in existing private GitHub main after actual project/Notion Applied+General and current external official source checks; two new files full GitHub readbacks PASS. Prior historical ROADMAP, D-009/D-014/D-015 and prior WA findings are preserved.
+- Indexed links in README/ROADMAP, proposal-only note in DECISION-REGISTER, existing task linkage in TASK-REGISTER and single CURRENT preface; H2 canonical front remains under 6,000 chars, historical archive preserved verbatim. **Registration is user-requested; proposed selection weights, host/model/workflow choices and G2/G3/G4 Windows/account implementation are NOT automatically approved.** User review is next.
+
 ## 2026-10-22 — H4-EVAL-001 bounded GitHub case retrieval (no new Agent)
 - [Pinned-ref report](../06-tests-and-evidence/logs/H4-B01-B03-B08-20261022.md) committed after H3, with explicit B01/B03/B08 returned source blobs/ranges and answers. Initial B01 broad read exceeded 18k budget (21,774 chars), corrected same-session B01 13,046/4 fetches; B03 12,790/4; B08 13,984/3. These are **same-conversation GitHub retrieval probes**, not blind fresh-agent accuracy, time/token benchmark or comparison with the pre-H1 structure.
 - Existing TASK-0020, TEST-REGISTER, WORK-JOURNAL and single leading CURRENT record the narrow result; no Work original, software, provider, local Windows, user account, Notion, new AGENTS, CI or architecture changed. Next independent/context-free assistant evaluation remains NOT RUN.
