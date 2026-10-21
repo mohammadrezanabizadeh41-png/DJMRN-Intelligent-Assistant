@@ -1,5 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-21 — GitHub recovered; 10 exact original MAIL-P001 entries archived
+- [Verified original import](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/cd700167fd7cb4b8a884ae2f2a0931e6a3f4de21): 9 synthetic test/code/result files plus new WORK-JOURNAL, every staged Git SHA matching original ZIP; independent HEAD, file and commit readbacks PASS. Previously disconnected GitHub tool cause UNKNOWN; no privileges changed.
+- 7/7 Python 3.13.5 Linux isolated unit tests PASS, report exact match. No live Gmail, browser/portal, Windows, API, model, paid tool, Email Triage demo or same-corpus ChatGPT comparison. Real assistant **NOT OPERATIONAL**.
+- User requests durable append-only operations record; policy and latest journal/CURRENT updated. The original “NOT COMMITTED” package entry is historical; current committed status follows real GitHub evidence. Separate TEST/TASK indexes can link to [pilot](../06-tests-and-evidence/pilots/MAIL-P001-20261021/README.md).
+
+
 ## 2026-10-21 — WA0005 coordinator readback and conditional knowledge
 - Work sole-file [commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/69b60c557501b7c909353cd3201d092311bfc35a) / WA0005 blob `c3ec981d2fb79e8999b8829b6e8ad84c78054868`, 73,546 chars read-back from both file and raw Git blob MATCH; earlier Work 46 results unrecovered, so do NOT claim a complete reconstructed candidate set.
 - Independent [review](../04-work-research-bridge/reviews/WQ0005.md) **ACCEPTED-PARTIAL**; [KB-0012](../08-project-knowledge-base/tools-and-integrations/KB-0012-browser-first-mail-account-routes.md), `SRC-0014`, INDEX/LEDGER/CURRENT and TASK-0017 continuity pointer recorded. No new Radar/task/engine.
