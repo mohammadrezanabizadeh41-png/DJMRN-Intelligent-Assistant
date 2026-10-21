@@ -10,9 +10,13 @@
 | 2026-10-19، P0 پیش از P1-A | 8 GiB | 5.88 GiB | **2.24 GiB** | **5.49 / 7.50 GiB** | C: **141.85 GiB** free |
 | 2026-10-19، Task Manager screenshots | 8 GiB | ~5.9 GiB | ~2.2 GiB | **4.3 / 7.5 GiB** | hardware reserved 2.1 GiB; Vega 8 dedicated preallocated 2.0 GiB |
 
+| 2026-10-21، G1 نخستین snapshot فقط‌خواندنی توسط کاربر | **8 GiB historical installed, NOT remeasured here** | **5.88 GiB** | **1.73 GiB** | NOT MEASURED | NOT MEASURED; no installs/tests |
+
 - **RAM آزاد با Commit headroom یا اندازهٔ GGUF یکی نیست**؛ Pagefile SSD جایگزین RAM سریع نمی‌شود.
 - P1-A PASS به معنی ثبت RAM اوج پردازش P1-A **نیست**؛ اوج بار/بازیابی در مدل انتخاب‌شده باید جداگانه، فقط وقتی واقعاً تست می‌شود، اندازه‌گیری شود.
 - وقتی کاربر اجازهٔ benchmark محدود داد، snapshot کوتاه **قبل/حین/بعد یک workload** با CPU، RAM، commit، GPU، proc child tree و latency و منابع معتبر کافی است؛ D0 کامل تاریخی مجدد نخواهید.
 - پردازش‌های سرویس‌های remote از RAM لپ‌تاپ مصرف اصلی خود را نمی‌گیرند؛ client/browser محلی هنوز هزینه دارد.
 
 Evidence: [Journal](https://app.notion.com/p/3fbc8c6846908184b4bbe32c586686e3), Windows user PowerShell logs Oct17/19 and Task Manager screenshots referenced therein. No new user-machine test for this file.
+
+**2026-10-21 data-quality note:** [G1-R0001](../06-tests-and-evidence/logs/G1-R0001-20261021.md) user-run script printed `PHYSICAL_RAM_GIB: 5.88` by dividing `Win32_ComputerSystem.TotalPhysicalMemory`; this value represented ~OS-usable capacity in this execution, **NOT independently measured installed DIMM memory**. Historical separately observed **8 GiB installed + ~2.1 GiB hardware reserved** remains in hardware baseline. `AVAILABLE_GIB=1.73` is ONE unrepeatable snapshot, not Jan's memory use or baseline idle.
