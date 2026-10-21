@@ -19,3 +19,8 @@
 **ممنوعیت تبدیل حدس به توصیه:** تغییر BIOS، unlock مخفی، فلش‌کردن firmware، خرید RAM یا تغییر VGA preallocation بدون نیاز واقعی، منبع رسمی و تأیید کاربر انجام نشود. 8GB physical را هرگز به «6GB نصب‌شده» تقلیل ندهید. OS-usable 5.88Gb با RAM فیزیکی 8GiB تفاوت دارد.
 
 **نکات باز:** مدل دقیق ماژول قابل تعویض و وضعیت فعلی نصب (اگر تغییری در سخت‌افزار داده شده باشد)، ظرفیت/سلامت کل دیسک، رفتار منابع هنگام موتور انتخاب‌شده. این‌ها با «UNKNOWN / VERIFY ON DEMAND» مشخص شده‌اند و مانع تشکیل پرونده نیستند.
+
+## G1 real user Windows metadata — 2026-10-21 (NOT a new installed-DIMM measurement)
+- [User-run G1-R0001](../06-tests-and-evidence/logs/G1-R0001-20261021.md): `Windows 11 Pro, build 26300`; usable memory `5.88 GiB`; available `1.73 GiB` at that moment. **Installed RAM remains historical 8GiB observed via two 4GiB DIMM records**; no new module-level memory query was executed.
+- Erratum: G1 script labels `PHYSICAL_RAM_GIB` but derives it from `Win32_ComputerSystem.TotalPhysicalMemory`, which output 5.88 here. It does **not** prove installed 8GiB dropped to 5.88; use historical installed and current usable as separate categories and avoid making BIOS/upgrade recommendations from this result.
+- Current RAM pressure suggests measure actual host/model workload only after separately approved test. This G1 result itself has no model process benchmark.
