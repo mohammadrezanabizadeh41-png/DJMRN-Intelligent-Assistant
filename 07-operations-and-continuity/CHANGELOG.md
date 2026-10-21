@@ -1,5 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-21 — WA0006 report readback, independent research review and KB-0013
+- Verified exact repo `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`, Work [sole-file commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/e3bcf6f7df62354f916cffd2872b5056ae5ba46d), original WA0006 `c8b4252f80512a179eab303a8d0747815fa85266` 110,606 chars independently compared to Git raw blob, match. Three research legs reported targeted, with coverage limits, 18 actual-site findings, 5 option strategies + baseline, 12 **designed / not run** scenarios. No adoption implied.
+- New [coordinator review](../04-work-research-bridge/reviews/WQ0006.md), conditional [KB-0013](../08-project-knowledge-base/architecture/KB-0013-agent-native-repository-architecture.md), [SRC-0015](../08-project-knowledge-base/SOURCE-REGISTER.md), LEDGER, INDEX, CURRENT, journal and TASK-0020 updated. Original WQ/WA/code/test/Notion untouched.
+- Verified README historical Windows next-step and HANDOFF old quote still misleading when isolated; KB-0010 D-009 old status contradicts actual Decision Register approval. These await **specific authorized correction patch**. First recommendation A: keep eight directories, no moves, H1 README+HANDOFF first, H2 short CURRENT later, optional B components after benchmark. No new AGENTS.md/CI/schema/DB yet.
+
+
 ## 2026-10-21 — WQ0006 professional agent-native repository architecture research brief
 - User requested global best-practices research for repository architecture serving all future assistants, cross-domain knowledge, decision evidence, true state, fail-safe Work coordination, context efficiency, long-term growth and project self-recovery. This is **RESEARCH ONLY**, distinct from choosing runtime/agents.
 - Verified current `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant` `main` HEAD `0e04e3e5b60629e0dd0ecb40bf52848c7421616f`; tree 138 blobs, eight core domains; retrieved real critical project files and live Notion sources for prompt design; category-first official web examples checked. [WQ0006](../04-work-research-bridge/requests/WQ0006.md) created; Work is to write only WA0006 after independent three-way research. Task-0020, Work LEDGER, CURRENT, append-only JOURNAL updated; no change to WQ0001–0005 or code/KB.

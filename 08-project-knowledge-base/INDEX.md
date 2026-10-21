@@ -1,5 +1,5 @@
 # فهرست اصلی دانشنامه — Knowledge Index
-**Current:** 2026-10-20 | **12 مدخل دانشی؛ KB-0012 مربوط به WA0005/SRC-0014 مشروط** | **KB-0010 research proposal; هیچ معماری منتخب نیست**. این سند برای خواندن آغازین توسط دستیار/Work و پیدا کردن منابع موردنیاز است.
+**Current:** 2026-10-20 | **13 مدخل دانشی؛ KB-0013 مربوط به WA0006/SRC-0015 و **صرفاً پژوهش معماری مخزن**؛ KB-0012 مربوط به ایمیل** | **KB-0010 research proposal; هیچ معماری منتخب نیست**. این سند برای خواندن آغازین توسط دستیار/Work و پیدا کردن منابع موردنیاز است.
 
 ## جدول مدخل‌ها
 | KB ID | عنوان | حوزه | Keywords/aliases | Source ID(s) | وضعیت اعتبار | مرتبط با تصمیم/تست | آخرین بازبینی |
@@ -19,6 +19,8 @@
 | [KB-0011](tools-and-integrations/KB-0011-cross-forge-radar-source-map.md) | نقشهٔ منابع فناوری جهانی و نامزدهای مشروط | tools-and-integrations | cross-forge, source map, Radar, ecosyste.ms, Monty | [SRC-0013](SOURCE-REGISTER.md), [WA0004](../04-work-research-bridge/responses/WA0004.md) | CURATED / SELECTIVE OFFICIAL CHECK / ACCEPTED-PARTIAL | [REQ-TDR-001](../02-project-management/TECHNOLOGY-DISCOVERY-RADAR-REQUIREMENT.md), [review](../04-work-research-bridge/reviews/WQ0004.md) | 2026-10-21 |
 
 | [KB-0012](tools-and-integrations/KB-0012-browser-first-mail-account-routes.md) | معماری و ابزارهای مرورگرمحور ایمیل/فرصت‌های کاری | tools-and-integrations | Gmail, Email Triage, OpenSidekick, Octopus Mail, Automa, Cloudflare Browser Run | [SRC-0014](SOURCE-REGISTER.md), [WA0005](../04-work-research-bridge/responses/WA0005.md) | CURATED / SELECTIVE PRIMARY CHECK / ACCEPTED-PARTIAL + NUMERIC CORRECTION | [REQ-012](../02-project-management/CHAT-FIRST-ASSISTANT-INTERACTION-REQUIREMENT.md), [review](../04-work-research-bridge/reviews/WQ0005.md) | 2026-10-21 |
+
+| [KB-0013](architecture/KB-0013-agent-native-repository-architecture.md) | معماری مخزن Agent-Native، ناوبری همیاران و منشأ دانش | architecture | agent-native, repo readmap, AGENTS.md, authority, ADR, provenance, current/history, مدیریت دانش و بازیابی | [SRC-0015](SOURCE-REGISTER.md), [WA0006](../04-work-research-bridge/responses/WA0006.md) | CURATED / CONDITIONALLY REVIEWED; NO MIGRATION OR BENCHMARK | [TASK-0020](../02-project-management/TASK-REGISTER.md), [review](../04-work-research-bridge/reviews/WQ0006.md) | 2026-10-21 |
 
 ## راهنمای شماره‌گذاری
 - وقتی اولین متن واقعاً به GitHub وارد شد و ساختار مدخل مشخص شد، با بررسی **فایل‌های واقعی** و این Index شناسهٔ `KB-0001` ایجاد شود؛ سپس `KB-0002`...
