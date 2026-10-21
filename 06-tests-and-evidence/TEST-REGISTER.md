@@ -39,3 +39,11 @@
 | H1-READMAP-STATIC | 2026-10-21 | H1 live README/HANDOFF safe routing, 49 bounded internal Markdown links, B01/B03/B08 document-only gold checks | **PASS / STATIC DOC VALIDATION; NOT AN AGENT BENCHMARK** | [two-file H1 commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/d8eede400109e1ddc0267c687c4aece628d7da0d); exact new blobs `b4ce1edebfd59788789d782072c2e052dcd44774`/`e7845f199f962db0b7535fc16e8d3522464e619b`; static route/text expectations pass; 0 missing relative-file targets / 4 external URLs unverified / anchors and reference links untested; **NO 12-case same-model timing or token measurements**. |
 
 | H2-CURRENT-STATIC | 2026-10-21 | `CURRENT-STATUS.md` single short canonical current, intact complete legacy history, internal route/read budget | **PASS / STATIC DOC & GITHUB BOUNDED-FETCH; NO AGENT BENCHMARK** | [H2 commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/78016b9ec95c9b456cc68d482b3872b52fdff7ae) only CURRENT; 21 leading current lines/5,326 chars, historical suffix byte-for-byte same decoded text as `main` at `f28d5db9c5c3cfb1c55855d7cd5a340503309e33` (62,840 chars); 20 local links valid/0 missing, 1 external URL not tested; 1–23 line fetch 5,370 chars and excludes actual archive. Git blob `6dcca5bc21f423be72a44f38c3f3ce7f4766587e`. 12 B cases, timed models, Persian retrieval, anchors and browser/Gmail account tests **NOT RUN**. |
+
+
+## H3-KNOWLEDGE-STATUS-RECONCILIATION — 2026-10-22
+
+| Test/Check | Scope | Outcome | Provenance / limitation |
+|---|---|---|---|
+| H3-DOC | Five-path original H3 commit and blobs; D-009 narrow approval; CAP-006 user-Windows bounded vs MAIL-P001 synthetic; canonical-current historical suffix | **PASS — STATIC DOCUMENT/SOURCE CHECK ONLY** | [H3 original Git commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/96f9006435a24bec6eb723f080d7551f1c30536e), [journal](../07-operations-and-continuity/WORK-JOURNAL.md); not an actual assistant test |
+| H3-B01–B12 | Fresh-assistant real evidence retrieval, conflicts, permissions, recovery, latency/accuracy/token usage | **NOT RUN / UNKNOWN** | WA0006 designed scenarios only; require a separately approved bounded test under TASK-0020 |
