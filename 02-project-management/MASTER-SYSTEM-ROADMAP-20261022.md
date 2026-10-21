@@ -177,3 +177,8 @@ For each case: input ID, fixture hash/source SHA, authorization, environment, ac
 5. Postpone broad multi-Agent, service dashboard, model router, massive source syncing and other expensive components until measured conditions justify them.
 
 **Decision packet awaiting user review:** approve/disagree with prioritization U1→U2→U3, architecture principle *minimal trusted core + replaceable UI/model/workflow*, scoring weights and minimal-build scope. **This is a recorded plan, not an implicit upgrade of D-005 from NOT DECIDED.**
+
+
+## 13. 2026-10-22 — User-requested reuse-first staged discovery before R2 build (THIS IS A METHOD, NOT A WINNER)
+
+The user explicitly prioritized saving engineering time by searching for **ready-made reusable solutions before coding** and requested a sequential three-stage Work process **specifically for current R2/M1**, not a generic all-project technology crawler. The approved scope of this action is documenting and initiating the **source-discovery stage only**: [Three-stage protocol](R2-REUSE-FIRST-THREE-STAGE-DISCOVERY-PROTOCOL-20261022.md) → [WQ0007 stage-one Work request](../04-work-research-bridge/requests/WQ0007.md). Later Stage 2 (source-backed real app/library/template/model inventory) and Stage 3 (fit/security/cost/Windows/G1, **ADOPT vs ADAPT vs BUILD** comparison) are **proposed/NOT RUN**, must follow independently verified prior Work response and a separately scoped next WQ. This updates R2 research sequencing, **not** D-005 host/engine choice, D-015 dual-surface permissions or authorization to implement G2/G3/G4. Keep U1 local chat-to-permitted-tool request fixed; U2 mail/freelance and specialist expansion remain future requirements, not reasons for a generic market survey.
