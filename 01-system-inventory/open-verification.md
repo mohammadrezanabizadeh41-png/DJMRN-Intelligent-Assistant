@@ -12,3 +12,7 @@
 
 ## 2026-10-21 G1 partially observed — remaining focused gaps
 [User reported G1-R0001](../06-tests-and-evidence/logs/G1-R0001-20261021.md) verified Windows 11 Pro build 26300, OS visible 5.88GiB and available 1.73GiB in one timestamp-less snapshot; Jan Start entry present but two guessed exe paths absent. **Still UNKNOWN**: Jan shortcut target/exe version, whether its UI/tool approval/Shell settings are accessible or safe, genuine ChatGPT Desktop build and whether user's **Plus** ordinary conversation has an MCP servers option; Cherry install outside narrow paths. GPU and RAM installed hardware historical state not invalidated by mislabeled Win32_ComputerSystem `TotalPhysicalMemory` output. Avoid full D0 rerun or any model/Agent start just to resolve them.
+
+## Jan G1 shortcut location found, version pending (2026-10-21)
+
+Visual user screenshot confirms Start shortcut `Jan` → `%LOCALAPPDATA%\Programs\Jan\Jan-Desktop.exe`. Earlier `Jan.exe` probe used **wrong filename**. **Still to verify by read-only GUI:** whether the target `Jan-Desktop.exe` actually exists, its **Product/File version** from executable Properties → Details, and later existing Jan MCP/Shell/Allow All settings only when safely visible without starting model/Agent. ChatGPT Plus MCP feature remains unobserved. No path containing Windows account name stored. [G1-R0001](../06-tests-and-evidence/logs/G1-R0001-20261021.md).
