@@ -1,6 +1,6 @@
 # نقشهٔ راه بازتعریف‌شده — Proposed P0–P6 | 2026-10-20
 
-## 2026-10-21 Future-only Raflo and Hybrid Inference research registrations
+## 2026-10-21 Future-only Ruflo and Hybrid Inference research registrations
 - [SRC-0009 full original](../08-project-knowledge-base/inbox/SRC-0009-ruflo-multi-agent-orchestration-future-20261021.md), Git blob `06101bdc123caa4b13549b2005365b113c760797`: Ruflo (formerly Claude Flow), agent harness/MCP/orchestrator and SDK/framework alternatives; **ENRICH EXISTING [REQ-MPA-001](MULTI-PERSONA-SPECIALIST-ASSISTANTS-REQUIREMENT.md) and TASK-0014**, not new agent program or another active runtime.
 - [SRC-0010 full original](../08-project-knowledge-base/inbox/SRC-0010-hybrid-inference-plane-multi-engine-model-routing-future-20261021.md), Git blob `7c4e1c7bba451ade5f11998cc11aef103da5771c`: [INF-001](../03-architecture-and-tools/FUTURE-INFERENCE-PLANE-RESEARCH-REQUIREMENT.md) / TASK-0018, distinct OPTIONAL future multi-engine model lifecycle/router and local-cloud/remote GPU options; compare native load/unload/direct one model before new proxy/gateway.
 - **NO CHANGE IN ACTIVE IMPLEMENTATION PRIORITY:** G1 one-time read-only Jan/ChatGPT/Windows inspection explicitly user-approved but **awaiting user output**; G2 code and G3 local chat-first CAP-006 tool pilot not yet authorized. Zero Ruflo/agent/Model Gateway/GPU installation or benchmark. Neither the two source files nor their vendor claims are an architecture adoption.
