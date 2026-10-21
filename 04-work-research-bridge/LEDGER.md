@@ -17,3 +17,5 @@
 **قانون تغییر:** بعد از هر create/fetch با شواهد commit SHA و URL، وضعیت مربوط را update و READ BACK کنید؛ log «تحویل شد» فقط با فایل واقعی Work معتبر است. اگر Work یک پاسخ partial/failed ایجاد کرد، گزارش را overwrite نکنید؛ gap را ثبت و با amendment/new request پیگیری کنید.
 
 **واژه‌نامه:** DRAFT (not on GitHub), REQUEST-COMMITTED, DISPATCHED, RESPONSE-COMMITTED, VERIFIED-RECEIPT, REVIEWED, ACCEPTED-PARTIAL, ACCEPTED, BLOCKED, SUPERSEDED. هر update با زمان و evidence.
+
+| WQ0007 ↔ WA0007 | [WQ0007](requests/WQ0007.md), stage 1 [three-stage protocol](../02-project-management/R2-REUSE-FIRST-THREE-STAGE-DISCOVERY-PROTOCOL-20261022.md) | **NOT RECEIVED**; future only: responses/WA0007.md | **PENDING** | **REQUEST-COMMITTED / AWAITING USER DISPATCH TO WORK — 2026-10-22** | Stage 1 = source atlas for R2/M1 reusable chat→permitted CAP-006 tools; stage 2 candidate inventory and stage 3 build/adapt/adopt evaluation **NOT RUN** and require separate later requests after independent coordinator review. Work may write ONLY WA0007. |
