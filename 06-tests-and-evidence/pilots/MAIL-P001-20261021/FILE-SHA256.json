@@ -1,0 +1,39 @@
+{
+  "scope": "synthetic-only, Linux container, no live accounts",
+  "git_status": "NOT COMMITTED -- GitHub connector unavailable during user session",
+  "files": {
+    "mail_triage_v0.py": {
+      "sha256": "9847f7a709ee8f2bb4d69f6b214821ebfd13807d461c5e033be5292e01379e1c",
+      "bytes": 5785
+    },
+    "synthetic_inbox.json": {
+      "sha256": "ea6d1af404bef2049888514cc81384a6c2fd0cc62c2a458939659e01f2aa0a98",
+      "bytes": 8558
+    },
+    "test_mail_triage_v0.py": {
+      "sha256": "dfbbff1701111d7cda4e43ee3b4170444bb4f356087de02def33b05144ba01f7",
+      "bytes": 2425
+    },
+    "ACTUAL_SYNTHETIC_REPORT.md": {
+      "sha256": "ce397bf45b85d9d8c66944eb2fff9e5f76dd974bab650e4af2e1d50b11a884d1",
+      "bytes": 2800
+    },
+    "README.md": {
+      "sha256": "129eeda166b87a908b13e8406fc5514319574e4bd70be6e7a9ec4add947bc8e3",
+      "bytes": 6024
+    },
+    "THREE-ROUTE-COMPARISON.md": {
+      "sha256": "9495fe0c3aa13e05f22c610712d90afa08c534343214c162ae096fbd69f7cb30",
+      "bytes": 2820
+    },
+    "EVIDENCE.md": {
+      "sha256": "c012d942e41d96e1166c7115b8d273fb6a2df7fad2126356c83d69509f42f39b",
+      "bytes": 3116
+    },
+    "PACKAGE-INSTRUCTIONS.md": {
+      "sha256": "32bd1df05778ab2fc33587111aa2a5c6823266cdcc9cc92f7275000e90f69dae",
+      "bytes": 2221
+    }
+  },
+  "journal_sha256": "867e8bb94bd27c80d2e674ce4de6338ebf4497ca2845b58c35e4d41ab293711e"
+}
