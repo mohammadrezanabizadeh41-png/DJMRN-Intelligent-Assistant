@@ -1,5 +1,12 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-21 — WA0005 coordinator readback and conditional knowledge
+- Work sole-file [commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/69b60c557501b7c909353cd3201d092311bfc35a) / WA0005 blob `c3ec981d2fb79e8999b8829b6e8ad84c78054868`, 73,546 chars read-back from both file and raw Git blob MATCH; earlier Work 46 results unrecovered, so do NOT claim a complete reconstructed candidate set.
+- Independent [review](../04-work-research-bridge/reviews/WQ0005.md) **ACCEPTED-PARTIAL**; [KB-0012](../08-project-knowledge-base/tools-and-integrations/KB-0012-browser-first-mail-account-routes.md), `SRC-0014`, INDEX/LEDGER/CURRENT and TASK-0017 continuity pointer recorded. No new Radar/task/engine.
+- Independently found official Gmail quota correction: `messages.get 20` vs WA 60 and `threads.get 40` vs WA 120; same twice-daily illustrative scenario **1,214** vs **3,614** units/day. Original WA not rewritten. Vendor trials/access/region/RAM unknown.
+- Research-only; no vendor selected or authorized Gmail/browser account action, Windows install, real data transfer, cloud provider, payment, API usage or Notion edit.
+
+
 ## 2026-10-21 — WQ0005 requested: Browser-first Gmail + job-site copilot open-world research
 - User now prioritizes first genuine Gmail/job-site working assistant and asks for new broad Work research to expand beyond previous candidate lists; prefers local browser and cloud/browser when laptop OFF **if legally viable and truly free**, but no preemptive Gmail API rejection. Distinguish laptop ON+Internet, offline internet, OFF/sleep explicitly.
 - [WQ0005](../04-work-research-bridge/requests/WQ0005.md) prepared from verified next available ID, exact repository lock, required Notion Applied/General + this project's actual GitHub + independent up-to-date global official research with exhaustive novelty/dedupe/negative cost/region/RAM/source receipts. Work may create **only WA0005**, user to dispatch. Existing [REQ-012](../02-project-management/CHAT-FIRST-ASSISTANT-INTERACTION-REQUIREMENT.md)/TASK-0017; no second Radar, workflow registry, architecture adoption or account activation.
