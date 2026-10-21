@@ -1,5 +1,9 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-22 — TASK-0017 R2 source-first Work mission WQ0007 registered
+- User explicitly proposed sequential source atlas → ready solution inventory → build/adapt/adopt comparison for current first conversational assistant, to avoid wasteful custom coding. Registered [R2 three-stage protocol](../02-project-management/R2-REUSE-FIRST-THREE-STAGE-DISCOVERY-PROTOCOL-20261022.md) and **Stage1 ONLY [WQ0007](../04-work-research-bridge/requests/WQ0007.md)**; full new-file readbacks verified. Indexed LEDGER, Master Roadmap, existing TASK-0017, Decision Register and canonical CURRENT; see [WORK-JOURNAL](WORK-JOURNAL.md) for commits/blob/provenance.
+- **WA0007 NOT RECEIVED; Work NOT DISPATCHED by coordinator, Stage2/Stage3 NOT STARTED.** No vendor/model/adopt decision, no code, install, real Windows test, accounts, cloud, money or actions. Readiness G1 PARTIAL, G2–G4 not approved.
+
 ## 2026-10-22 — Integrated Master Roadmap v1.1 and official-source architecture research (DOCUMENTATION)
 - [Master System Roadmap v1.1](../02-project-management/MASTER-SYSTEM-ROADMAP-20261022.md) and [official-source architecture research](../03-architecture-and-tools/ARCHITECTURE-RESEARCH-SYNTHESIS-20261022.md) recorded in existing private GitHub main after actual project/Notion Applied+General and current external official source checks; two new files full GitHub readbacks PASS. Prior historical ROADMAP, D-009/D-014/D-015 and prior WA findings are preserved.
 - Indexed links in README/ROADMAP, proposal-only note in DECISION-REGISTER, existing task linkage in TASK-REGISTER and single CURRENT preface; H2 canonical front remains under 6,000 chars, historical archive preserved verbatim. **Registration is user-requested; proposed selection weights, host/model/workflow choices and G2/G3/G4 Windows/account implementation are NOT automatically approved.** User review is next.
