@@ -5,6 +5,10 @@
 **Future task:** [TASK-0015](TASK-REGISTER.md)  
 **Verbatim source:** [SRC-0005 — user's complete 2,115-line research and product idea](../08-project-knowledge-base/inbox/SRC-0005-djmrn-technology-discovery-innovation-radar-future-20261020.md). Original `Pasted text(20261020-211342).txt`: **53,456 UTF-8 bytes**, SHA256 `87950ed73a9f0bd8d2344f331f0774f924f3cc113dc478fa3d768fd2cde4b23a`, Git blob `b10e0d62874120e7623ff9976c39a71fed63d65f`, exact readback verified.
 
+## CURRENT 2026-10-21 — WA0004 research accepted-partial, supersedes queued wording below
+- [WA0004](../04-work-research-bridge/responses/WA0004.md) Work commit `965ef67cb5f1617ceb1c6c6012063a342efba3fe`, blob `5a217200589a48ecec981ceb0b9c43b32ea5b161`, exact response verified. [Coordinator review](../04-work-research-bridge/reviews/WQ0004.md) **ACCEPTED-PARTIAL FOR RESEARCH**, [KB-0011](../08-project-knowledge-base/tools-and-integrations/KB-0011-cross-forge-radar-source-map.md) curated.
+- This is the SAME existing REQ-TDR-001/TASK-0015. No monitoring, new Radar, provider, installation, cost or architecture. G1 practical task unchanged.
+
 ## 2026-10-21 ADDENDUM — Cross-Forge high-impact Project Discovery research (same Radar)
 
 New user brief [SRC-0012, original 1,764 lines](../08-project-knowledge-base/inbox/SRC-0012-cross-forge-technology-radar-global-discovery-work-brief-20261021.md), 36,360 UTF-8/CRLF bytes, SHA256 `f76467dd134da0d5a08aeb2a64e870ceb2777c38afe01256c4da895f1615bc0a`, verified blob `f8614e69031b9880234d4a8585fae68622d30d22`. This **ENRICHES this exact `REQ-TDR-001/TASK-0015`** with explicit international source-map/cross-forge discovery + trending/forge/model/package/research/official release coverage, deduped fresh high-impact project candidates, critical hype/primary verification, momentum evidence, sources prioritization and cross-technology idea generation. It **does not authorize permanent Radar operation, extra task, new Applied taxonomy, vendor selection or monitoring**.
