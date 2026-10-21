@@ -1,5 +1,10 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-22 — H4-EVAL-001 bounded GitHub case retrieval (no new Agent)
+- [Pinned-ref report](../06-tests-and-evidence/logs/H4-B01-B03-B08-20261022.md) committed after H3, with explicit B01/B03/B08 returned source blobs/ranges and answers. Initial B01 broad read exceeded 18k budget (21,774 chars), corrected same-session B01 13,046/4 fetches; B03 12,790/4; B08 13,984/3. These are **same-conversation GitHub retrieval probes**, not blind fresh-agent accuracy, time/token benchmark or comparison with the pre-H1 structure.
+- Existing TASK-0020, TEST-REGISTER, WORK-JOURNAL and single leading CURRENT record the narrow result; no Work original, software, provider, local Windows, user account, Notion, new AGENTS, CI or architecture changed. Next independent/context-free assistant evaluation remains NOT RUN.
+
+
 ## 2026-10-22 — H3-KNOWLEDGE-STATUS-RECONCILIATION
 - Verified [five-file H3 source commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/96f9006435a24bec6eb723f080d7551f1c30536e): KB-0010/D-009 scoped approval, INDEX, CAP-006 bounded current implementation, TASK pointers and authority map.
 - Closure: appended WORK-JOURNAL; corrected leading CURRENT H3-next statement while preserving historical suffix; TEST REGISTER documents static-source PASS / B01–B12 NOT RUN; TASK-0020 existing task records next benchmark proposal. No Work originals, source code, test code, runtime, Notion, account, AGENTS, CI or migration modified.
