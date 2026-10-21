@@ -27,3 +27,7 @@
 
 ## 2026-10-22 — Master Roadmap record (DOCUMENTED PROPOSAL; NOT D-016)
 - User requested precise additional architecture research and **registration of a coherent intelligent-system roadmap**. Documents: [Master Roadmap v1.1](MASTER-SYSTEM-ROADMAP-20261022.md), [research/options and official receipts](../03-architecture-and-tools/ARCHITECTURE-RESEARCH-SYNTHESIS-20261022.md). Registration and comparative study **performed**; user review of suggested priorities/weights still pending. D-009/D-014/D-015 remain intact, D-005 stack/model/host **NOT DECIDED**. The roadmap does not authorize G2/G3/G4, Jan/Agent setup, Gmail/site/account access, local Windows code execution, external sends, paid providers or telemetry.
+
+
+## 2026-10-22 — Stage-gated reusable solution discovery requested (DOCUMENTATION METHOD; NOT D-016)
+- Before R2/M1 coding, user proposes/requests a three-step serial Work discovery: **source hubs → actual ready solutions → suitability vs own build**, preserving [protocol](R2-REUSE-FIRST-THREE-STAGE-DISCOVERY-PROTOCOL-20261022.md) and first [WQ0007](../04-work-research-bridge/requests/WQ0007.md). **Research method, not architecture/vendor adoption or build permission.** No other WQ dispatched or Stage 2/3 search initiated. D-005 remains NOT DECIDED; D-009/D-014/D-015 unchanged.
