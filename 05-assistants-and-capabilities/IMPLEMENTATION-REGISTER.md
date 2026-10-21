@@ -1,4 +1,9 @@
-# Capability/Implementation Register — 2026-10-20 INITIAL
+# Capability/Implementation Register — living current with dated historic entries
+## Current implementation snapshot — checked 2026-10-21 (not a product release)
+- `CAP-006` is a **deterministic no-Agent Python source lookup**, **user-run Windows technical PASS on two authorized project document copies only** (NEW-V0004). All broader device/sandbox/security/UX/monitoring capabilities remain **NOT VERIFIED/NOT OPERATIONAL**. The initial register snapshot that predated this evidence is preserved [at pre-H3 revision](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/a850550f04e5e891915ba43f91cbe35be000c9f2/05-assistants-and-capabilities/IMPLEMENTATION-REGISTER.md).
+- `CAP-002` broader chat-led assistant and `CAP-003` real Gmail/platform copilot still **FUTURE**; [MAIL-P001](../06-tests-and-evidence/pilots/MAIL-P001-20261021/README.md) belongs to **isolated synthetic pilot evidence** in 06 and **does not create an implemented CAP-003 or mailbox connector**. `CAP-004/005` remain future logical capabilities, not deployed agents.
+- A capability's **current status** is determined by this first register summary, scoped [user decisions](../02-project-management/DECISION-REGISTER.md), and [test evidence](../06-tests-and-evidence/TEST-REGISTER.md); dated lower `## ...` sections are chronological **events**, not mutually competing live status fields. Windows performance/RAM, real Gmail and tool bridge remain unknown/pending.
+
 | Capability | هدف | Status | Implemented artifact | Observation |
 |---|---|---|---|---|
 | CAP-001 | کنترل منابع Windows و نوبت‌دهی | RESEARCH CANDIDATE | **NONE** | مقایسه ابزار آماده / lightweight controller؛ صرفاً پژوهش Applied A0011 |
@@ -7,7 +12,13 @@
 | CAP-004 | Research Curator | FUTURE | **NONE** | source provenance, independent official research, draft/approval for catalog |
 | CAP-005 | code/data/media specialists | FUTURE | **NONE** | اول تأیید نیاز؛ shared host ممکن، multiple agent servers اجباری نیست |
 
+| CAP-006 | جست‌وجوی مجاز و محدود متن/اسناد محلی با خط و SHA256 | **VERIFIED-REAL BOUNDED (USER-RUN WINDOWS 2026-10-21) / NOT OPERATIONAL, NOT A CONVERSATIONAL ASSISTANT** | [V0 source](src/document_search_v0/README.md), Python standard library, [NEW-V0001 synthetic](../06-tests-and-evidence/logs/NEW-V0001-20261020.md), [NEW-V0004 real bounded evidence](../06-tests-and-evidence/logs/NEW-V0004-20261021.md) | Python 3.14.7 Windows; two authorized copies; four `Windows` line/SHA verified matches, SHA unchanged. Shell UTF-8 follow-up NEW-V0003. No Agent/LLM/connector, no general sandbox/performance validation or product approval. |
+
+**Original CAP-006 initial table row from 2026-10-20 (historical as captured, no longer CURRENT):**
+
+```text
 | CAP-006 | جست‌وجوی مجاز و محدود اسناد محلی با تطبیق فارسی، خط و SHA256 | **TESTED-SYNTHETIC / NOT VERIFIED ON USER WINDOWS** | [V0 source](src/document_search_v0/README.md), Python stdlib / no third-party, [test NEW-V0001](../06-tests-and-evidence/logs/NEW-V0001-20261020.md) | approved D-012 for repo+off-device; no Agent/LLM/index/server/real deployment |
+```
 
 **قانون ثبت اجرا:** capability ID → I/O → ownership & authorization → tool/engine/model/host version + installation status → source commit → command to reproduce (sanitize) → test result + resources + safe rollback → integration contract → security review → user approval → deployment/use → monitoring.
 هر خطای test، نصب، config، crash و recovery باید در TEST-REGISTER نیز cross-link شود. `OPERATIONAL` فقط وقتی value واقعی و durability مشاهده شد.
