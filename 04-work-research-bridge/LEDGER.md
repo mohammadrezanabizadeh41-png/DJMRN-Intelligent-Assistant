@@ -10,6 +10,8 @@
 
 | WQ0004 ↔ WA0004 | [WQ0004](requests/WQ0004.md) blob `5d30695ae74926a71feabc5f00146acbb3b31878` | [WA0004](responses/WA0004.md), [Work commit 965ef67](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/965ef67cb5f1617ceb1c6c6012063a342efba3fe), blob `5a217200589a48ecec981ceb0b9c43b32ea5b161` | [review](reviews/WQ0004.md), [KB-0011](../08-project-knowledge-base/tools-and-integrations/KB-0011-cross-forge-radar-source-map.md) | **TRANSPORT VERIFIED / RESEARCH REVIEW ACCEPTED-PARTIAL 2026-10-21** | Three-source receipts and conditional source matrix present; no implementation, extra Radar, account, provider or model approved. G1 PARTIAL. |
 
+| WQ0005 ↔ WA0005 | [WQ0005 browser-first email/account copilot open-world search](requests/WQ0005.md) | **PENDING / NOT CREATED** — Work authorized ONLY [WA0005](responses/WA0005.md) | **NOT YET REVIEWED** | **REQUEST-COMMITTED / AWAITING USER DISPATCH — 2026-10-21** | Explicit user browser-first preference but no Gmail API prohibition; compare local ON, offline without internet, laptop OFF cloud/remote. Three source legs, live official 2026 Gmail price/quota, global new open-source/ready app discovery; no Gmail/site login/Windows tests or tech adoption. |
+
 **قانون تغییر:** بعد از هر create/fetch با شواهد commit SHA و URL، وضعیت مربوط را update و READ BACK کنید؛ log «تحویل شد» فقط با فایل واقعی Work معتبر است. اگر Work یک پاسخ partial/failed ایجاد کرد، گزارش را overwrite نکنید؛ gap را ثبت و با amendment/new request پیگیری کنید.
 
 **واژه‌نامه:** DRAFT (not on GitHub), REQUEST-COMMITTED, DISPATCHED, RESPONSE-COMMITTED, VERIFIED-RECEIPT, REVIEWED, ACCEPTED-PARTIAL, ACCEPTED, BLOCKED, SUPERSEDED. هر update با زمان و evidence.

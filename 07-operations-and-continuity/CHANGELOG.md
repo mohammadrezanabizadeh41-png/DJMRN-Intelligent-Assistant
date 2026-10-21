@@ -1,5 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-21 — WQ0005 requested: Browser-first Gmail + job-site copilot open-world research
+- User now prioritizes first genuine Gmail/job-site working assistant and asks for new broad Work research to expand beyond previous candidate lists; prefers local browser and cloud/browser when laptop OFF **if legally viable and truly free**, but no preemptive Gmail API rejection. Distinguish laptop ON+Internet, offline internet, OFF/sleep explicitly.
+- [WQ0005](../04-work-research-bridge/requests/WQ0005.md) prepared from verified next available ID, exact repository lock, required Notion Applied/General + this project's actual GitHub + independent up-to-date global official research with exhaustive novelty/dedupe/negative cost/region/RAM/source receipts. Work may create **only WA0005**, user to dispatch. Existing [REQ-012](../02-project-management/CHAT-FIRST-ASSISTANT-INTERACTION-REQUIREMENT.md)/TASK-0017; no second Radar, workflow registry, architecture adoption or account activation.
+- Gmail API 2026 quota/billing changes and Google OAuth restricted scopes must be checked afresh; website/browser permitted access and real session security separate. **REQUEST ONLY; WA0005 not yet received; no Windows/test/Notion/account action.**
+
+
 ## 2026-10-21 — WA0004 research returned, verified and curated
 - Private project GitHub `main` WA0004 single-file Work commit `965ef67cb5f1617ceb1c6c6012063a342efba3fe`, blob `5a217200589a48ecec981ceb0b9c43b32ea5b161`, verified against user receipt and WQ0004.
 - [Coordinator review](../04-work-research-bridge/reviews/WQ0004.md) ACCEPTED-PARTIAL: selected official-source verification, Notion Applied/General and actual project knowledge; 24 reported candidates not all independently audited. New [KB-0011](../08-project-knowledge-base/tools-and-integrations/KB-0011-cross-forge-radar-source-map.md), source-register pointer SRC-0013, updated LEDGER/TASK-0015/REQ-TDR-001/CURRENT.
