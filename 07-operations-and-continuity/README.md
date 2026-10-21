@@ -1,4 +1,5 @@
 # عملیات، بازیابی و ادامهٔ همکاری
+- **[WORK-JOURNAL](WORK-JOURNAL.md)** — دفتر وقایع append-only، برای شرح گام‌ها، آزمون واقعی، خطا، Commit/readback و نقطهٔ ادامه؛ همراه CURRENT خوانده شود.
 - [CURRENT-STATUS](CURRENT-STATUS.md) — یگانه وضعیت جاری پروژه
 - **[PROJECT-STATE-HANDOFF-20261020](PROJECT-STATE-HANDOFF-20261020.md)** — کامل‌ترین خلاصهٔ مستقل اهداف، baseline، source، تصمیم‌ها، کد، تست، next step برای پنجرهٔ جدید
 - [HANDOFF](HANDOFF.md) — دستور شروع پنجرهٔ جدید/Work

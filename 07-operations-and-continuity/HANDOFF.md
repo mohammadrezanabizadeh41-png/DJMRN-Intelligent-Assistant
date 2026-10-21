@@ -1,5 +1,11 @@
 # DJMRN — OPEN A NEW CHAT / RESUME FROM GITHUB ONLY
 
+## LATEST 2026-10-21 — original MAIL-P001 archived, prior pending notes superseded
+- First verify exact private repository owner/branch/HEAD, then read [CURRENT](CURRENT-STATUS.md), **latest [WORK-JOURNAL](WORK-JOURNAL.md) entry**, [TEST-REGISTER](../06-tests-and-evidence/TEST-REGISTER.md), [TASK-REGISTER](../02-project-management/TASK-REGISTER.md), [MAIL-P001 source/evidence](../06-tests-and-evidence/pilots/MAIL-P001-20261021/README.md); other historic handoff paragraphs below are not today's instructions.
+- GitHub read/write resumed after tool errors (underlying cause UNKNOWN); [10 original ZIP files committed exactly](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/cd700167fd7cb4b8a884ae2f2a0931e6a3f4de21). Reproduced 7/7 Linux Python 3.13.5 **synthetic** mail/site tests and Persian output, NOT on the user's Windows; NOT connected Gmail, not live portal access, not an operational chatbot. Route A current supervised Gmail and B Email Triage demo have not been tested on same corpus. G1 Jan executable/MCP remains PARTIAL, no selected app/engine; prior Work WA0005 original kept immutable.
+- User has explicitly requested durable audit trail; append each meaningful project action or failure to WORK-JOURNAL with scope, result, file paths, receipt and next step. Actual personal Gmail/third-party installs/browser automation/mail send require distinct permission.
+
+
 **LATEST SUPERSEDING ALL OLDER INSTRUCTIONS BELOW:** [NEW-V0002](../06-tests-and-evidence/logs/NEW-V0002-20261020.md) **Windows synthetic smoke PASSED**, user executed Python 3.14.7, 15 unit tests successful / 1 symlink test skipped, 2 correct source-cited search results. The previous hash-related BLOCKED status described below is *historic*. **Do not rerun baseline smoke or repeat Work WQ research**; obtain user-approved specific non-sensitive use case to evaluate real data next. [Current](CURRENT-STATUS.md), [full snapshot](PROJECT-STATE-HANDOFF-20261020.md).
 
 
