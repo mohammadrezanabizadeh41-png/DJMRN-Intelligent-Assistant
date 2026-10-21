@@ -1,5 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-21 — H1 documentation-only assistant onboarding route updated
+- User approved the [two-file README + HANDOFF patch](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/d8eede400109e1ddc0267c687c4aece628d7da0d) on exact `main`; no repo restructure. README 8,897→4,938 and HANDOFF 5,648→4,021 Unicode chars; original versions pinned to `a66f62ff6471f659646cc161a20d3c80506b8ad3` via Git history. Outdated copied "smoke never ran" instructions removed from *active* onboarding; single current state still [CURRENT](CURRENT-STATUS.md).
+- GitHub independent commit and changed-path readback PASS: only `README.md` and `07-operations-and-continuity/HANDOFF.md`. Bounded static check 49 in-repo relative destinations valid/0 absent, four external URLs not tested, no anchor audit. B01/B03/B08 semantic *document-only* spotchecks PASS; **no actual assistant benchmark, Windows/Gmail test, authorization change or agent router installed**.
+- Evidence and approval are appended to [WORK-JOURNAL](WORK-JOURNAL.md), TASK-0020 and TEST-REGISTER; H2 CURRENT compaction and H3 KB correction still need separately scoped decision.
+
+
 ## 2026-10-21 — WA0006 report readback, independent research review and KB-0013
 - Verified exact repo `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`, Work [sole-file commit](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/e3bcf6f7df62354f916cffd2872b5056ae5ba46d), original WA0006 `c8b4252f80512a179eab303a8d0747815fa85266` 110,606 chars independently compared to Git raw blob, match. Three research legs reported targeted, with coverage limits, 18 actual-site findings, 5 option strategies + baseline, 12 **designed / not run** scenarios. No adoption implied.
 - New [coordinator review](../04-work-research-bridge/reviews/WQ0006.md), conditional [KB-0013](../08-project-knowledge-base/architecture/KB-0013-agent-native-repository-architecture.md), [SRC-0015](../08-project-knowledge-base/SOURCE-REGISTER.md), LEDGER, INDEX, CURRENT, journal and TASK-0020 updated. Original WQ/WA/code/test/Notion untouched.
