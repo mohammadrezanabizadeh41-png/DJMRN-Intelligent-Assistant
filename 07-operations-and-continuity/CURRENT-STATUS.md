@@ -61,6 +61,8 @@
 
 - **KYNXA H3 status/focus 2026-10-22:** [read-only user 1.64GiB RAM, 0.64GiB estimated budget, 1B waiting-resource](../06-tests-and-evidence/logs/KYNXA-H3-1P64GIB-ADMISSION-TO-JAN-API-PIVOT-20261022.md). User prioritizes ending this troubleshooting and returning to main DJMRN; requested temporary resource guard disable, but native KYNXA engine requires resource service and no supported guard-off UI switch found. **No disable or Windows change made.** Short alternative: Jan Desktop existing Gemma3 1B via local API `127.0.0.1:1337/v1` attached using KYNXA `Local API (direct)`; this avoids KYNXA private model admission only, does not eliminate actual RAM limits. User has not yet started Jan API or validated Chat reply. If unresponsive, park KYNXA and return main task, D-005 OPEN, G3B CLOSED.
 
+- **KYNXA H3 external Jan connection saved, no chat output (user 2026-10-22):** [current user screenshots](../06-tests-and-evidence/logs/KYNXA-H3-JAN-DIRECT-CONNECTION-SAVED-NO-OUTPUT-20261022.md) show 1 SAVED `DJMRN - Jan Local` connection (Provider `Custom service`, loopback `http://127.0.0.1:1337/v1`, Models 1), Jan model `gemma-3-1b-it-qat-Q4_0.gguf` selected in actual **Chat** UI, yet earlier generation stopped with no text and new generation shows no tokens after **3 seconds**. Jan API actual inference **NOT VERIFIED**, 3s screenshot alone cannot prove indefinite stall. Native KYNXA waiting-resource not automatically applicable to external Jan route. Next ONE bounded direct Jan API GET models then one POST chat test (no tools/files/keys exposed) to distinguish Jan server vs KYNXA client; if slow/fails, PARK KYNXA and resume core DJMRN per user preference. Global D-005 OPEN, file guard G3B CLOSED.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
