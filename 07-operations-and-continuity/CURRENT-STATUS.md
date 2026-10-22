@@ -59,6 +59,8 @@
 
 - **KYNXA H3 RESOURCE GUARD PROPOSAL / USER RAM 2.59GiB (2026-10-22):** [actual user memory reading and native budget review](../06-tests-and-evidence/logs/KYNXA-H3-2P59GIB-RESOURCE-GUARD-DECISION-20261022.md). Windows free RAM **2.59 GiB**; old PowerShell helper displayed budget 1 because of likely integer-overload coercion; double calculation **~1.31 GiB** from source `0.7*free - 0.5`, before other leases. Gemma3 1B estimated CPU minimum ~1.20 GiB with buffers/context; marginal possible admission. User suggested temporarily disabling native resource guard; **NO SUCH ACTION TAKEN / not supported as simple Settings option in inspected v1.7.0**, service is required to start llama-server. Next use a single short Gemma3 1B plain Chat with guard ON, no tools or other models; status GET afterward if still waiting. All permissions/G3B guard unchanged; D-005 OPEN.
 
+- **KYNXA H3 status/focus 2026-10-22:** [read-only user 1.64GiB RAM, 0.64GiB estimated budget, 1B waiting-resource](../06-tests-and-evidence/logs/KYNXA-H3-1P64GIB-ADMISSION-TO-JAN-API-PIVOT-20261022.md). User prioritizes ending this troubleshooting and returning to main DJMRN; requested temporary resource guard disable, but native KYNXA engine requires resource service and no supported guard-off UI switch found. **No disable or Windows change made.** Short alternative: Jan Desktop existing Gemma3 1B via local API `127.0.0.1:1337/v1` attached using KYNXA `Local API (direct)`; this avoids KYNXA private model admission only, does not eliminate actual RAM limits. User has not yet started Jan API or validated Chat reply. If unresponsive, park KYNXA and return main task, D-005 OPEN, G3B CLOSED.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
