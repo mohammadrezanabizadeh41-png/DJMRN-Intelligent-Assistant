@@ -39,7 +39,7 @@ if not defined PYEXE (
   exit /b 2
 )
 rem Verify the reviewed G3B runner itself BEFORE importing it or attempting fixtures.
-"%PYEXE%" %PYARGS% -B -c "import hashlib,pathlib,sys;d=pathlib.Path('g3b_synthetic_probe.py').read_bytes();h=hashlib.sha1(b'blob '+str(len(d)).encode('ascii')+bytes([0])+d).hexdigest();sys.exit(0 if h=='db2a96eb7cc34ea6b8986ba3214dece0aa94cb35' else 2)"
+"%PYEXE%" %PYARGS% -B -c "import hashlib,pathlib,sys;d=pathlib.Path('g3b_synthetic_probe.py').read_bytes();h=hashlib.sha1(b'blob '+str(len(d)).encode('ascii')+bytes([0])+d).hexdigest();sys.exit(0 if h=='dc7ad400f6a25749f4ad7c47d6f121f26aa67465' else 2)"
 if errorlevel 1 (
   echo HOLD: G3B_RUNNER_BLOB_MISMATCH or file absent. No test executed.
   pause
