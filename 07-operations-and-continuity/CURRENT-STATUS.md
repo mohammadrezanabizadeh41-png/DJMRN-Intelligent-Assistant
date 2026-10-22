@@ -47,6 +47,8 @@
 
 - **KYNXA H3 GUI import path confirmed from version-tagged source 2026-10-22:** [screen/source receipt](../06-tests-and-evidence/logs/KYNXA-H3-LOCAL-GGUF-IMPORT-NAVIGATION-20261022.md). User's Models > My connections screen is **API provider connections**, not GGUF importer. Native file import is main **Settings gear > Local Models > Import GGUF**, with **Copy to model folder unchecked** enabling external file reference. Historical Notion GGUF Gemma3 1B ~0.67GiB available in Hugging Face cache as of past inventory; current file not yet reconfirmed. Next ask user screenshot of Settings Local Models, no automatic model download/enable. H3 runtime/test still NOT_RUN; OS RAM available 1.18GiB in prior measurement.
 
+- **KYNXA H3 LOCAL MODELS screenshot 2026-10-22:** [actual UI observation](../06-tests-and-evidence/logs/KYNXA-H3-QWEN4B-INSTALLED-LOCAL-MODELS-UI-20261022.md) **Qwen3 4B Q4_K_M installed (~2.33 GiB disk) and enabled**, 62 catalogued / 1 installed, despite prior external connection picker `No models configured`. No chat/inference/tool/VRAM validation, UI warns `Model not yet verified / Tool capability not yet checked`. Loading policy screenshot `Automatic scheduling`; recommend **On demand** due low previous 1.18GiB OS available, plus optional **Import GGUF external reference** of historical Gemma3 1B after verifying file; user has not reported either action or memory/model test. D-005 OPEN, G3B unchanged.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
