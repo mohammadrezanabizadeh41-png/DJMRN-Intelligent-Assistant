@@ -148,3 +148,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 H0 user UI-close recheck and resource coordination candidate
 - [KYNXA H0 ChatGPT closed evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-CHATGPT-CLOSED-20261022.md) `ChatGPT_Processes=0`, available RAM **1.79 GiB**, up from **0.99 GiB**. User expects potential restart improvement (NOT_RUN) and suggests resource scheduling for future specialist assistants. Proposed one-model-at-a-time native-resource-controller evaluation, **not separate installed manager or adopted architecture**. No app install, model benchmark, system changes or production permission. H2 NOT_RUN.
+
+## 2026-10-22 — TASK-0021 KYNXA H0 post-restart memory update
+- User read-only result [recorded](../06-tests-and-evidence/logs/KYNXA-H0-POST-RESTART-20261022.md): 2.55 GiB RAM available, 3.37 GiB committed, ChatGPT processes 0. Resource headroom improved from 1.79 GiB after app exit and 0.99 GiB initially. **No app install, run, model RAM measurement or architecture decision.** Next gate: Microsoft Defender scan of extracted unsigned, vendor-unverified installer and review before any execution.
