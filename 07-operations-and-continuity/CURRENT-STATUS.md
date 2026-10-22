@@ -65,6 +65,8 @@
 
 - **KYNXA H3 PowerShell-to-Ollama proposed (2026-10-22):** [bounded local-model bridge plan](../06-tests-and-evidence/logs/KYNXA-H3-POWERSHELL-OLLAMA-BRIDGE-PROPOSED-20261022.md) responds to user preference for a short PowerShell path and urgent return to main DJMRN. Existing Gemma3 1B GGUF can be registered with Ollama via local Modelfile (`ollama create`, **may duplicate ~0.67GiB disk**, no redownload), tested once through loopback Ollama HTTP, then KYNXA Provider **Ollama** at `http://127.0.0.1:11434/v1`. KYNXA private native resource guard remains UNCHANGED. Script **only supplied to user, NOT_RUN; no live Ollama model registration/response or new KYNXA connection verified**. Native H3 stuck at waiting-resource, Jan connection saved without verified reply. D-005 OPEN and G3B CLOSED.
 
+- **2026-10-22 H3 single-route KYNXA native-engine override analysis:** [sourced, user-not-run test plan](../06-tests-and-evidence/logs/KYNXA-H3-DIRECT-BUNDLED-LLAMA-SERVER-NO-GUARD-PATCH-20261022.md) confirms no supported guard-off toggle in examined KYNXA 1.7.0 source; internal GGUF execution requires resource-service admission, removing it means patch/build. **Alternative:** run *bundled private KYNXA b11669 CPU llama-server* directly from PowerShell on loopback `127.0.0.1:11888`, pointing to existing GGUF Gemma3 1B and context 512; in unchanged KYNXA desktop add **Local API (direct)** for same endpoint. This bypasses private model admission only, not physical RAM/Windows safety. Runtime executable presence and response NOT VERIFIED on user's Windows; script proposed, NOT RUN; all guards/settings remain unchanged, D-005 OPEN and G3B CLOSED.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
