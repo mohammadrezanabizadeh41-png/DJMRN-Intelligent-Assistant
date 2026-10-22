@@ -172,3 +172,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 H3 user first no-reply test after GGUF imports
 - Screenshot [H3 chat diagnostic](../06-tests-and-evidence/logs/KYNXA-H3-USER-CHAT-NO-REPLY-20261022.md): `Work` mode `سلام` first generation stopped without reply; subsequent `hi` generating without visible tokens; selected model `import-027ad2ad30124ed0` exact file not identified. **H3 inference NOT PASSED; no exact root cause yet.** Next user plain Chat/1B short test, inspect KYNXA runtime state and read-only free RAM/private llama-server PID. Keep imported weights, avoid 4B+ concurrent inference and any tool access; D-005 OPEN.
+
+## 2026-10-22 — TASK-0021 H3 llama-server absent in user snapshot
+- [Direct user RAM/process output](../06-tests-and-evidence/logs/KYNXA-H3-LLAMA-PROCESS-ZERO-LOCAL-GATEWAY-DIAG-20261022.md): 1.85 GiB free RAM, 5.48 GiB committed, `llama-server` 0, KYNXA Desktop/gateway/resource service running. Cause undetermined; no evidence of successful model replies or live engine. Next v1.7 source-backed **read-only GET 127.0.0.1:5218/api/local-models** to inspect installed/enabled/status/runtime state and failure codes, without exposing private file paths/keys or modifying installed models. H3 NOT PASSED, D-005 OPEN.
