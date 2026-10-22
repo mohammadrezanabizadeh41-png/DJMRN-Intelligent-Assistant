@@ -63,6 +63,8 @@
 
 - **KYNXA H3 external Jan connection saved, no chat output (user 2026-10-22):** [current user screenshots](../06-tests-and-evidence/logs/KYNXA-H3-JAN-DIRECT-CONNECTION-SAVED-NO-OUTPUT-20261022.md) show 1 SAVED `DJMRN - Jan Local` connection (Provider `Custom service`, loopback `http://127.0.0.1:1337/v1`, Models 1), Jan model `gemma-3-1b-it-qat-Q4_0.gguf` selected in actual **Chat** UI, yet earlier generation stopped with no text and new generation shows no tokens after **3 seconds**. Jan API actual inference **NOT VERIFIED**, 3s screenshot alone cannot prove indefinite stall. Native KYNXA waiting-resource not automatically applicable to external Jan route. Next ONE bounded direct Jan API GET models then one POST chat test (no tools/files/keys exposed) to distinguish Jan server vs KYNXA client; if slow/fails, PARK KYNXA and resume core DJMRN per user preference. Global D-005 OPEN, file guard G3B CLOSED.
 
+- **KYNXA H3 PowerShell-to-Ollama proposed (2026-10-22):** [bounded local-model bridge plan](../06-tests-and-evidence/logs/KYNXA-H3-POWERSHELL-OLLAMA-BRIDGE-PROPOSED-20261022.md) responds to user preference for a short PowerShell path and urgent return to main DJMRN. Existing Gemma3 1B GGUF can be registered with Ollama via local Modelfile (`ollama create`, **may duplicate ~0.67GiB disk**, no redownload), tested once through loopback Ollama HTTP, then KYNXA Provider **Ollama** at `http://127.0.0.1:11434/v1`. KYNXA private native resource guard remains UNCHANGED. Script **only supplied to user, NOT_RUN; no live Ollama model registration/response or new KYNXA connection verified**. Native H3 stuck at waiting-resource, Jan connection saved without verified reply. D-005 OPEN and G3B CLOSED.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
