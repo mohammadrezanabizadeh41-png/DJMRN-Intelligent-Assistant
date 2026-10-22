@@ -30,6 +30,8 @@
 
 | [KB-0016](architecture/KB-0016-r2-m1-three-stage-conclusion-and-decision-gates.md) | نتیجهٔ سه‌مرحله‌ای یافتن/ارزیابی همیار آماده و تصمیم‌های باز | architecture | reuse-before-build, WA0009, HYBRID, Jan, native small shell, CAP-006, trusted executor, two-file permission, no adopted stack | [SRC-0018](SOURCE-REGISTER.md), [WA0009](../04-work-research-bridge/responses/WA0009.md) | CURATED / STAGE3 SOURCE RESEARCH ACCEPTED WITH GAPS / NO MEASURED WINNER | [review WQ0009](../04-work-research-bridge/reviews/WQ0009.md), TASK-0017, Master R2/M1 | 2026-10-22 |
 
+| [KB-0017](architecture/KB-0017-r2-m1-pre-g2-implementation-blueprint-and-holds.md) | طرح تصمیم پیش از G2 برای همیار مکالمهٔ محدود دو سند | architecture | WA0010, shared executor, 2-file IDs, human grant, Jan MCP, WPF, Win32 guard, TOCTOU, CAP-006, G2A/G3 gate | [SRC-0019](SOURCE-REGISTER.md), [WA0010](../04-work-research-bridge/responses/WA0010.md) | CURATED / PRE-G2 RESEARCH ACCEPTED WITH CRITICAL FILE-IDENTITY HOLD / NO BUILD | [review WQ0010](../04-work-research-bridge/reviews/WQ0010.md), TASK-0017, D-005 NOT DECIDED | 2026-10-22 |
+
 ## راهنمای شماره‌گذاری
 - وقتی اولین متن واقعاً به GitHub وارد شد و ساختار مدخل مشخص شد، با بررسی **فایل‌های واقعی** و این Index شناسهٔ `KB-0001` ایجاد شود؛ سپس `KB-0002`...
 - متن اصلی طولانی در `inbox/` با شناسهٔ منبع `SRC-####` نگهداری و لینک شود؛ هر یک از مدخل‌های موضوعی ممکن است یک یا چند `SRC` داشته باشند.
