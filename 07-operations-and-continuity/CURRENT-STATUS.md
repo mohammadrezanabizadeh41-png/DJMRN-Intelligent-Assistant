@@ -49,6 +49,8 @@
 
 - **KYNXA H3 LOCAL MODELS screenshot 2026-10-22:** [actual UI observation](../06-tests-and-evidence/logs/KYNXA-H3-QWEN4B-INSTALLED-LOCAL-MODELS-UI-20261022.md) **Qwen3 4B Q4_K_M installed (~2.33 GiB disk) and enabled**, 62 catalogued / 1 installed, despite prior external connection picker `No models configured`. No chat/inference/tool/VRAM validation, UI warns `Model not yet verified / Tool capability not yet checked`. Loading policy screenshot `Automatic scheduling`; recommend **On demand** due low previous 1.18GiB OS available, plus optional **Import GGUF external reference** of historical Gemma3 1B after verifying file; user has not reported either action or memory/model test. D-005 OPEN, G3B unchanged.
 
+- **KYNXA H3 nine GGUF files fresh user readout 2026-10-22:** [full sanitized path inventory](../06-tests-and-evidence/logs/KYNXA-H3-GGUF-NINE-FILES-USER-INVENTORY-20261022.md). Four pre-scoped locations produced **9 present GGUFs = 6 chat models + 2 mmproj vision companions + 1 embedding-only**; KYNXA Qwen3 4B already installed/enabled and **five other chat models eligible for import-by-reference** (Gemma3 1B/4B/12B, Jan-v3.5 4B, LMStudio Gemma4 E4B). File paths verified by user scan (not assistant direct machine access), model compatibility/unloading and inference NOT TESTED. Import reference with Copy unchecked, load policy On demand, start 1B only given last 1.18 GiB OS available. No new model copy/download/import or broader Windows permission. D-005 remains OPEN.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
