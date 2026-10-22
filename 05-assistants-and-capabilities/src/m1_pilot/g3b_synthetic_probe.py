@@ -116,7 +116,7 @@ def execute_synthetic() -> dict:
     # Zero local file changes until every preflight below has succeeded.
     if sys.platform != "win32":
         raise ProbeHold("WINDOWS_ONLY")
-    if sys.version_info < (3, 10):
+    if sys.version_info < (3, 12):
         raise ProbeHold("PYTHON_TOO_OLD")
     root = Path(__file__).resolve().parent
     verify_pinned_sources(root)
