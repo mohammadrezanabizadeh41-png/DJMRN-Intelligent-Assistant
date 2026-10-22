@@ -29,6 +29,8 @@
 
 - **KYNXA H0 RAM IMPROVEMENT (2026-10-22):** [user manually closed ChatGPT Desktop](../06-tests-and-evidence/logs/KYNXA-H0-USER-CHATGPT-CLOSED-20261022.md): `ChatGPT_Processes=0`, RAM available **1.79 GiB**, previously 0.99 GiB (+0.80 GiB). Reboot/installer/app/model still **NOT_RUN**. User raised future shared memory/model scheduling need; first evaluate KYNXA native admission and model-on-demand before extra tooling; **no architecture/resource-manager selection**. Installer unsigned/unverified security remains separate gate. Next optional restart, read-only fresh baseline then provenance/Defender caution; TASK-0021 remains H0 PARTIAL.
 
+- **KYNXA H0 post-restart 2026-10-22:** [User RAM sample](../06-tests-and-evidence/logs/KYNXA-H0-POST-RESTART-20261022.md) available 2.55 GiB, committed 3.37 GiB, ChatGPT process count 0 (initial free 0.99; after app closure 1.79 GiB). Only H0 resource baseline improved; KYNXA installer is still unsigned/unverified and NOT_RUN, app/model memory untested. Next manual Defender scan and risk review; no stack selection or Windows installation approval.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
