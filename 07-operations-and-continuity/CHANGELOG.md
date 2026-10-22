@@ -1,5 +1,8 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-22 — WA0010 report verified, reviewed and G2A limited design decision pending
+- [WA0010](../04-work-research-bridge/responses/WA0010.md) pinned Work one-file commit `7daa2e6391ae8addd057e02f9ba3ea4486f5073e`, raw Git blob `e754f097c295a80cd622d2efb2f7db860c5b1060`, full 55,706-char file/blob exact match; independent [review WQ0010](../04-work-research-bridge/reviews/WQ0010.md) accepts source-only plan **with hard CAP reopen/Win32 file identity/TOCTOU HOLD** and [KB-0017](../08-project-knowledge-base/architecture/KB-0017-r2-m1-pre-g2-implementation-blueprint-and-holds.md)/SRC-0019 curates conditional G2A source-only next permission scope. LEDGER, TASK-0017, Master Roadmap and CURRENT now supersede queued status. **No G2 source written, no actual tests/G3 device, Jan/model adopted, install or account/provider action.** D-005 still NOT DECIDED. [Journal](WORK-JOURNAL.md) records SHAs and spotchecks.
+
 ## 2026-10-22 — WQ0010 Work pre-build two-path readiness research queued
 - User requested a final focused Work examination before moving from **three completed R2/M1 research stages** to practical G2. [WQ0010](../04-work-research-bridge/requests/WQ0010.md) created as source-only two-path pilot readiness: ready chat GUI+private CAP-006 exact-file tool versus small local GUI+same executor, security/rights/8GiB/RTL/typed contract and proposed later G2/G3 tests. Work may write ONLY future WA0010. **Report NOT RECEIVED; Work NOT EXECUTED**, no G2/G3 license, code, install, Windows or account/model/cloud action. Updated LEDGER, existing TASK-0017, Master Roadmap and canonical CURRENT (history preserved). Full receipts in [journal](WORK-JOURNAL.md).
 
