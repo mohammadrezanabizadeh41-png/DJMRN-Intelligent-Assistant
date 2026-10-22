@@ -47,7 +47,11 @@ def verify_local_sources() -> None:
 
 
 # Verify source bytes BEFORE importing potentially altered local project modules.
-verify_local_sources()
+try:
+    verify_local_sources()
+except (OSError, RuntimeError):
+    print("G3 HOLD: source file missing or not the pinned Git blob; no test executed.")
+    raise SystemExit(2)
 
 from core.manifest import ApprovedFile, Manifest
 from core import windows_reader as wr
@@ -139,7 +143,7 @@ def run_synthetic() -> dict:
             report["cases"][name] = {"status": "PASS", "detail": str(detail or "OK")}
         except Exception as e:
             report["cases"][name] = {"status": "FAIL", "detail": type(e).__name__}
-            raise
+            raise RuntimeError("CASE_FAILED:" + name) from None
 
     # NEVER create a fixture if the environment is not explicitly Windows.
     checked(sys.platform == "win32", "WINDOWS_ONLY")
@@ -179,9 +183,13 @@ def run_synthetic() -> dict:
                         "SHA_DIFFERENCE")
                 return "TWO_SAME_HANDLE_SNAPSHOTS"
             run_case("G3-01", happy)
-            run_case("G3-02", lambda: denial(
-                lambda: wr.read_manifest_snapshots_source_only(
-                    manifest, ("doc-alpha", "doc-third")), ("OUTSIDE_MANIFEST",)))
+            def outside():
+                before = len(tracker.opened)
+                code = denial(lambda: wr.read_manifest_snapshots_source_only(
+                    manifest, ("doc-alpha", "doc-third")), ("OUTSIDE_MANIFEST",))
+                checked(len(tracker.opened) == before, "UNAPPROVED_OPEN_ATTEMPT")
+                return code
+            run_case("G3-02", outside)
             run_case("G3-02B", lambda: denial(
                 lambda: wr.read_manifest_snapshots_source_only(
                     manifest, ("doc-alpha", "doc-alpha")), ("INVALID_SELECTION",)))
@@ -249,6 +257,7 @@ def main(argv: list[str] | None = None) -> int:
         # Never print filesystem paths, usernames or secrets in error report.
         print(json.dumps({"phase": "G3_SYNTHETIC_PROBE", "overall": "FAIL_HOLD",
                           "error_type": type(e).__name__,
+                          "case": str(e).split(":", 1)[1] if str(e).startswith("CASE_FAILED:") else "PRECHECK",
                           "error_code": e.code if isinstance(e, wr.VerifiedReaderHold) else "CHECK_FAILED"}))
         return 2
 
