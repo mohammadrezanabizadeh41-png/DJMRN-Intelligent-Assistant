@@ -1,6 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
 
+## 2026-10-22 — KYNXA 1.7.0 wizard reviewed; optional model disabled; installation pending
+- [User screenshot of installer](../06-tests-and-evidence/logs/KYNXA-H2-INSTALLER-WIZARD-20261022.md) confirms no local model chosen for download, English current-user defaults, desktop shortcut checkbox, setup page; suggested manual Install within user-approved limited trial. **No completed installer or actual KYNXA RAM/CPU benchmark reported**. SmartScreen/unsigned-release risk remains documented.
+
+
+
 ## 2026-10-22 — KYNXA SmartScreen warning; guided installation held
 - User screenshot showed Windows Defender SmartScreen "Windows protected your PC" warning for an unrecognized program before installer wizard. User advised Don't run; no approval to bypass warning or change admin controls. [H2 evidence](../06-tests-and-evidence/logs/KYNXA-H2-SMARTSCREEN-USER-BLOCK-20261022.md). Unsigned and publisher-install-untested v1.7.0 remains HOLD; no KYNXA runtime benchmark or adopted stack.
 
