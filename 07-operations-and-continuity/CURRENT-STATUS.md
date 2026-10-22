@@ -37,6 +37,8 @@
 
 - **KYNXA H2 SECURITY REPORT SEARCH 2026-10-22:** [Targeted English/Chinese web + GitHub issues review](../06-tests-and-evidence/logs/KYNXA-H2-PUBLIC-SECURITY-SEARCH-20261022.md): **no credible publicly reported KYNXA-specific malware or exploitable vulnerability found**, but release published same day, repo new and little third-party scrutiny; published advisory endpoint not accessible for exhaustive check. Prior unsigned, installer-untested and SmartScreen warning remain unresolved risks. User wants to advance informed **per-file** install trial; may choose More info > Run anyway without disabling global security, stop on malware detection/elevation; screenshot setup wizard BEFORE Install. **No install/result observed, H2 user-choice step pending, D-005 OPEN**.
 
+- **KYNXA H2 WIZARD VISIBLE (2026-10-22):** [user setup screenshot review](../06-tests-and-evidence/logs/KYNXA-H2-INSTALLER-WIZARD-20261022.md): `Setup - KYNXA version 1.7.0` opened, optional Qwen3 1.7B Q8_0 **Download and enable unchecked**; app/data/extensions user-local defaults, English, shortcut selected. User instructed to click Install if accepting known unsigned/untested risks and only with no optional model; stop on further warnings. **INSTALL SUCCESS NOT REPORTED, no actual KYNXA RAM/CPU results, D-005 OPEN.**
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
