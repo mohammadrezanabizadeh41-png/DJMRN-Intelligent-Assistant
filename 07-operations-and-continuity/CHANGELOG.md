@@ -1,6 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
 
+## 2026-10-22 — KYNXA SmartScreen warning; guided installation held
+- User screenshot showed Windows Defender SmartScreen "Windows protected your PC" warning for an unrecognized program before installer wizard. User advised Don't run; no approval to bypass warning or change admin controls. [H2 evidence](../06-tests-and-evidence/logs/KYNXA-H2-SMARTSCREEN-USER-BLOCK-20261022.md). Unsigned and publisher-install-untested v1.7.0 remains HOLD; no KYNXA runtime benchmark or adopted stack.
+
+
+
 ## 2026-10-22 — KYNXA RAM headroom after restart recorded
 - User reported available 2.55 GiB, committed 3.37 GiB, ChatGPT process count 0. [Actual evidence](../06-tests-and-evidence/logs/KYNXA-H0-POST-RESTART-20261022.md). This is a Windows read-only resource snapshot, not a KYNXA benchmark. EXE security scan and installation remain NOT_RUN; candidate #1 KYNXA / #2 goose unchanged.
 
