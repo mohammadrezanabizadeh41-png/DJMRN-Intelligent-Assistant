@@ -151,3 +151,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 KYNXA H0 post-restart memory update
 - User read-only result [recorded](../06-tests-and-evidence/logs/KYNXA-H0-POST-RESTART-20261022.md): 2.55 GiB RAM available, 3.37 GiB committed, ChatGPT processes 0. Resource headroom improved from 1.79 GiB after app exit and 0.99 GiB initially. **No app install, run, model RAM measurement or architecture decision.** Next gate: Microsoft Defender scan of extracted unsigned, vendor-unverified installer and review before any execution.
+
+## 2026-10-22 — TASK-0021 SmartScreen trust gate
+- User supplied [SmartScreen warning screenshot](../06-tests-and-evidence/logs/KYNXA-H2-SMARTSCREEN-USER-BLOCK-20261022.md) after attempting to start unsigned KYNXA v1.7.0 installer. **H2 SMARTSCREEN HOLD / INSTALL NOT_RUN**, no wizard or KYNXA running memory measurement seen. Next seek signed/reproducible publisher verification or safer isolated evaluation. Do not bypass Windows security warning. D-005 stack NOT DECIDED; goose remains comparison #2.
