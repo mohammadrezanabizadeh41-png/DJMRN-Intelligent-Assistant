@@ -51,3 +51,9 @@
 - [Microsoft GetVolumeInformationByHandleW](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getvolumeinformationbyhandlew)
 - [Microsoft ReadFile](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-readfile)
 - [Microsoft Canceling Pending I/O Operations](https://learn.microsoft.com/en-us/windows/win32/fileio/canceling-pending-i-o-operations)
+
+## 2026-10-22 — source-only harness addition (NOT Windows G3 approval)
+
+The review-only protocol above now has a narrow [opt-in G3 runner](../../05-assistants-and-capabilities/src/m1_pilot/g3_synthetic_probe.py), [seven source-level Linux tests](../../05-assistants-and-capabilities/src/m1_pilot/tests/test_g3_offdevice_source.py), and an [opt-in Windows .cmd launcher](../../05-assistants-and-capabilities/src/m1_pilot/G3-REVIEW-AND-RUN.cmd). **Provenance, exact Git blobs, synthetic test results and hard remaining gaps** are in [G3 harness receipt](../logs/G3-SYNTHETIC-HARNESS-SOURCE-20261022.md). No real Windows call has been performed.
+
+**User-facing future launch path:** From the privately downloaded and extracted *full exact project repository*, open `05-assistants-and-capabilities/src/m1_pilot/G3-REVIEW-AND-RUN.cmd` on Windows 11. It first runs a no-file-test plan and asks for literal `RUN`; pressing Enter instead aborts. Python must already be on PATH. Use normal user rights; do not bypass SmartScreen or alter OS settings if blocked. The script checks pinned sources before imports and refuses altered/missing files. Its result is **PARTIAL_G3_HOLD at best**, because cancellation, reparse/concurrent race and network instrumentation have not been implemented. Do not send screenshots containing usernames, local full paths or system identifiers; the JSON result is designed to avoid them. New user device-run approval remains a separate gate.
