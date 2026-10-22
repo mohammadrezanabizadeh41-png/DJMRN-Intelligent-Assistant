@@ -140,6 +140,102 @@ def search(root_path: str | Path, selected: list[str], query: str,
             "note": "relaxed-whitespace matches may cross word boundaries; verify original line"}
 
 
+
+def search_preloaded_bytes(documents: list[tuple[str, bytes]], query: str,
+                           limit: int = 8) -> dict:
+    """Search caller-supplied immutable byte snapshots, with ZERO filesystem reads.
+
+    This is a pure calculation seam for a FUTURE trusted file-handle reader.
+    It neither opens paths nor validates who approved these bytes. Its caller
+    MUST enforce trusted manifest/file ID, Windows handle identity and grant
+    BEFORE supplying data; the current M1 dispatch remains fail-closed.
+    Existing search(root, selected, query) and CLI retain their original path
+    semantics and do not invoke this entrypoint.
+    """
+    if type(documents) not in (list, tuple) or not 1 <= len(documents) <= 2:
+        raise InputRejected("PRELOADED_FILE_COUNT")
+    if type(query) is not str or not 1 <= len(query) <= 512:
+        raise InputRejected("PRELOADED_QUERY")
+    if any(0xD800 <= ord(char) <= 0xDFFF for char in query):
+        raise InputRejected("PRELOADED_QUERY")
+    if type(limit) is not int or not 1 <= limit <= 8:
+        raise InputRejected("PRELOADED_LIMIT")
+
+    needle = normalize(query)
+    if not needle:
+        raise InputRejected("PRELOADED_QUERY")
+    entries = []
+    seen = set()
+    for record in documents:
+        if type(record) not in (list, tuple) or len(record) != 2:
+            raise InputRejected("PRELOADED_RECORD")
+        label, raw = record
+        if type(label) is not str or not label or any(
+            ord(char) < 32 or ord(char) == 127 or
+            0xD800 <= ord(char) <= 0xDFFF for char in label
+        ):
+            raise InputRejected("PRELOADED_LABEL")
+        win = PureWindowsPath(label)
+        segments = label.replace("\\", "/").split("/")
+        if (win.is_absolute() or win.drive or label.startswith(("/", "\\"))
+                or any(s in ("", ".", "..") or ":" in s for s in segments)
+                or not label.lower().endswith(".md")):
+            raise InputRejected("PRELOADED_LABEL")
+        label = "/".join(segments)
+        if label in seen:
+            raise InputRejected("PRELOADED_DUPLICATE")
+        seen.add(label)
+        if type(raw) is not bytes or len(raw) > MAX_FILE_BYTES:
+            raise InputRejected("PRELOADED_BYTES")
+        entries.append((label, raw))
+    entries.sort(key=lambda item: item[0])
+
+    verified = []
+    matches = []
+    total_hits = 0
+    for label, raw in entries:
+        try:
+            content = raw.decode("utf-8-sig")
+        except UnicodeDecodeError as ex:
+            raise InputRejected("PRELOADED_UTF8_INVALID") from ex
+        digest = hashlib.sha256(raw).hexdigest()
+        verified.append({"file": label, "sha256": digest, "bytes": len(raw)})
+        for line_no, line in enumerate(content.splitlines(), 1):
+            normalized = normalize(line)
+            if not normalized:
+                continue
+            if needle in normalized:
+                mode = "normalized"
+            elif _compact(needle) in _compact(normalized):
+                mode = "relaxed-whitespace"
+            else:
+                continue
+            total_hits += 1
+            if len(matches) < limit:
+                matches.append({"file": label, "line": line_no,
+                                "source_sha256": digest, "match_mode": mode,
+                                "text": line})
+    fingerprint = json.dumps([needle, verified], ensure_ascii=False,
+                             sort_keys=True, separators=(",", ":"))
+    task_id = hashlib.sha256(fingerprint.encode("utf-8")).hexdigest()[:20]
+    return {
+        "contract_version": "djmrn.document-search.v0",
+        "task_id": task_id,
+        "capability": "read-only-line-search",
+        "permission_scope": "caller-supplied-bytes/NOT-OS-authorized",
+        "status": "succeeded",
+        "query": query,
+        "normalized_query": needle,
+        "searched": verified,
+        "matches": matches,
+        "match_count_returned": len(matches),
+        "truncated": total_hits > limit,
+        "error": None,
+        "note": "Caller alone must verify Windows file identity and user approval; "
+                "relaxed-whitespace matches may cross word boundaries",
+    }
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="DJMRN V0 read-only Persian-aware source search")
     parser.add_argument("--root", required=True, help="Explicit directory containing allowed files")

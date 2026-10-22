@@ -115,5 +115,58 @@ class V0SearchTests(unittest.TestCase):
         self.assertEqual(json.loads(bad.stdout)["status"], "rejected")
 
 
+
+    def test_preloaded_bytes_parity_with_legacy_without_second_open(self):
+        from unittest.mock import patch
+        from docsearch_v0 import search_preloaded_bytes
+        original = search(self.root, ["beta.md"], "كتاب", limit=8)
+        payload = self.beta.read_bytes()
+        with patch.object(Path, "read_bytes", side_effect=AssertionError("NO_FILE_OPEN")):
+            new = search_preloaded_bytes([("beta.md", payload)], "كتاب", limit=8)
+        for field in ("task_id", "searched", "matches", "truncated",
+                      "normalized_query", "match_count_returned", "status"):
+            self.assertEqual(new[field], original[field], field)
+        self.assertEqual(new["permission_scope"],
+                         "caller-supplied-bytes/NOT-OS-authorized")
+
+    def test_preloaded_untrusted_bytes_no_filesystem(self):
+        from unittest.mock import patch
+        from docsearch_v0 import search_preloaded_bytes
+        raw = "اين يك كتاب است.\n".encode("utf-8")
+        with patch.object(Path, "read_bytes", side_effect=AssertionError("READ")):
+            out = search_preloaded_bytes([("alpha.md", raw)], "کتاب")
+        self.assertEqual(out["matches"][0]["line"], 1)
+        self.assertEqual(out["matches"][0]["source_sha256"],
+                         hashlib.sha256(raw).hexdigest())
+
+    def test_preloaded_fail_closed_inputs(self):
+        from docsearch_v0 import search_preloaded_bytes
+        variants = (
+            [("../bad.md", b"bad")],
+            [(r"C:\secret.md", b"bad")],
+            [("third.txt", b"bad")],
+            [("alpha.md", b"\xff")],
+            [("alpha.md", b"a"), ("alpha.md", b"b")],
+            [("alpha.md", b"a"), ("beta.md", b"b"), ("gamma.md", b"c")],
+            [("alpha.md", "text-not-bytes")],
+            [("alpha.md", b"x" * (1024 * 1024 + 1))],
+        )
+        for candidate in variants:
+            with self.subTest(candidate=repr(candidate)[:90]):
+                with self.assertRaises(InputRejected):
+                    search_preloaded_bytes(candidate, "کتاب")
+
+    def test_preloaded_limit_and_normalization(self):
+        from docsearch_v0 import search_preloaded_bytes
+        raw = "كتاب\nکتاب\nگزارش ١٢\n".encode("utf-8")
+        result = search_preloaded_bytes([("alpha.md", raw)], "كتاب", limit=1)
+        self.assertEqual(result["matches"][0]["text"], "كتاب")
+        self.assertTrue(result["truncated"])
+        digits = search_preloaded_bytes([("alpha.md", raw)], "۱۲")
+        self.assertEqual(digits["matches"][0]["line"], 3)
+        with self.assertRaises(InputRejected):
+            search_preloaded_bytes([("alpha.md", raw)], "کتاب", limit=True)
+
+
 if __name__ == "__main__":
     unittest.main()
