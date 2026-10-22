@@ -163,3 +163,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 first KYNXA actual GUI launch (USER-REPORTED)
 - KYNXA setup completed and GUI visibly open according to user screenshot: [evidence](../06-tests-and-evidence/logs/KYNXA-H2-USER-INSTALLED-GUI-20261022.md). H2 install/GUI user PASS; **H2 memory and underlying services NOT_RUN, H3 model NOT_RUN**, no architecture choice, no model/tools/account permissions. Next user-run read-only RAM/process baseline and then bounded model trials if suitable.
+
+## 2026-10-22 — TASK-0021 measured KYNXA base host, Jan GGUF reuse candidate
+- [Observed user H2 RAM + Notion historical model list and KYNXA v1.7 code](../06-tests-and-evidence/logs/KYNXA-H2-NO-MODEL-RAM-AND-EXISTING-GGUF-20261022.md): 1.18 GiB available OS RAM / 4.94 GiB commit; KYNXA-related 11 processes / 611 MiB grouped working set, 235 MiB private page count. App picker no connection configured. User wants no repeat downloads; prefer KYNXA native Import GGUF of existing Jan Gemma 3 1B Q4_0 with Copy unchecked, as candidate, not yet executed or benchmarked. H3 NOT_RUN, D-005 OPEN.
