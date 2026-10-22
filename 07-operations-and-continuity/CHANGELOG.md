@@ -1,6 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
 
+## 2026-10-22 — KYNXA installed and first real GUI visible (user-reported), idle benchmark pending
+- [KYNXA first user desktop screenshot](../06-tests-and-evidence/logs/KYNXA-H2-USER-INSTALLED-GUI-20261022.md) shows Work/Chat, selectable model and Ask for approval; user reports setup succeeded. **Observed: GUI open; not observed: model, tools, memory, source verification or gateway performance**. Next bounded read-only OS/host process-tree memory measurement. D-005 not selected; old G3B guard unchanged.
+
+
+
 ## 2026-10-22 — KYNXA 1.7.0 wizard reviewed; optional model disabled; installation pending
 - [User screenshot of installer](../06-tests-and-evidence/logs/KYNXA-H2-INSTALLER-WIZARD-20261022.md) confirms no local model chosen for download, English current-user defaults, desktop shortcut checkbox, setup page; suggested manual Install within user-approved limited trial. **No completed installer or actual KYNXA RAM/CPU benchmark reported**. SmartScreen/unsigned-release risk remains documented.
 
