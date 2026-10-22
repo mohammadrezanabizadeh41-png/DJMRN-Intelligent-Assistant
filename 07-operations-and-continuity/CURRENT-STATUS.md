@@ -53,6 +53,8 @@
 
 - **KYNXA H3 first chat NO TEXT screenshot (2026-10-22):** [user-reported Work-mode test](../06-tests-and-evidence/logs/KYNXA-H3-USER-CHAT-NO-REPLY-20261022.md) `سلام` ended with `Generation stopped` and no assistant text (cause unknown, could include user stop), `hi` was still `Replying/Generating` with no text; selected internal model id `import-027ad2ad30124ed0` not matched to file. No evidence of successful KYNXA local inference despite imports. Source KYNXA 1.7 uses private llama-server with resource admission; last 1.18 GiB available RAM before test. Next isolate **Chat tab** with **Gemma3 1B Enabled / On demand**, no tools, short safe prompt, inspect model runtime state and read-only RAM/llama process if no result. **Cause unresolved, no CPU/GPU override or reinstall.** D-005 OPEN, G3B CLOSED.
 
+- **KYNXA H3 user Windows snapshot 2026-10-22:** [no llama-server process / read-only local API diagnostic plan](../06-tests-and-evidence/logs/KYNXA-H3-LLAMA-PROCESS-ZERO-LOCAL-GATEWAY-DIAG-20261022.md). User observed 1.85 GiB OS available RAM, 5.48 GiB committed, **llama-server count 0**, while KYNXA.Desktop/gateway/resource-service running. Exact cause unknown; importing models and selecting an ID do not establish inference. Versioned source identifies KYNXA gateway GET `http://127.0.0.1:5218/api/local-models` for read-only per-model `runtime.state/code` and enable/status; next user to run scoped GET output only. **No model response/engine readiness proven, no files/config touched, D-005 OPEN.**
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
