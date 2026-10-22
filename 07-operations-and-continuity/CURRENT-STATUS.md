@@ -35,6 +35,8 @@
 
 - **KYNXA H2 SmartScreen (2026-10-22):** [user screenshot of Windows protected your PC / unrecognized app](../06-tests-and-evidence/logs/KYNXA-H2-SMARTSCREEN-USER-BLOCK-20261022.md). User launched extracted unsigned v1.7.0 EXE, Windows SmartScreen prevented start; **wizard/install/runtime NOT OBSERVED**. Prior Defender scan 0 detections and ZIP matching publisher hash do not resolve untested unsigned installer trust. Advise **Don't run**, no bypass, no elevation. H2 ON HOLD pending source/publisher assurance or safer isolated validation; RAM was 2.55 GiB free before launch; D-005 OPEN, G3B unchanged.
 
+- **KYNXA H2 SECURITY REPORT SEARCH 2026-10-22:** [Targeted English/Chinese web + GitHub issues review](../06-tests-and-evidence/logs/KYNXA-H2-PUBLIC-SECURITY-SEARCH-20261022.md): **no credible publicly reported KYNXA-specific malware or exploitable vulnerability found**, but release published same day, repo new and little third-party scrutiny; published advisory endpoint not accessible for exhaustive check. Prior unsigned, installer-untested and SmartScreen warning remain unresolved risks. User wants to advance informed **per-file** install trial; may choose More info > Run anyway without disabling global security, stop on malware detection/elevation; screenshot setup wizard BEFORE Install. **No install/result observed, H2 user-choice step pending, D-005 OPEN**.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
