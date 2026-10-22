@@ -31,6 +31,8 @@
 
 - **KYNXA H0 post-restart 2026-10-22:** [User RAM sample](../06-tests-and-evidence/logs/KYNXA-H0-POST-RESTART-20261022.md) available 2.55 GiB, committed 3.37 GiB, ChatGPT process count 0 (initial free 0.99; after app closure 1.79 GiB). Only H0 resource baseline improved; KYNXA installer is still unsigned/unverified and NOT_RUN, app/model memory untested. Next manual Defender scan and risk review; no stack selection or Windows installation approval.
 
+- **KYNXA installer H1 scan (2026-10-22):** [user screenshot full Windows Defender scan 0 detections](../06-tests-and-evidence/logs/KYNXA-H1-DEFENDER-FULL-SCAN-USER-20261022.md); not file-specific security proof. User requests guided installation; prior KYNXA v1.7.0 ZIP publisher hash matches, EXE NotSigned, vendor installer execution not tested. **H2 NOT_RUN**, guide stepwise with warning-block stop and no model/account/files/shell or startup auto-enable. Existing Windows RAM free 2.55 GiB is pre-install only, D-005 OPEN.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
