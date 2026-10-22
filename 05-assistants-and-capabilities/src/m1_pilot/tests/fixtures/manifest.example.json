@@ -1,0 +1,13 @@
+{
+  "note": "DOCUMENTATION ONLY / INACTIVE EXAMPLE; no path, hash or OS identity has been validated.",
+  "schema_version": "djmrn.m1.search.v1",
+  "active": false,
+  "approved_file_ids": [],
+  "user_granted": false,
+  "network": false,
+  "source_fixture_paths": [
+    "tests/fixtures/alpha.md",
+    "tests/fixtures/beta.md"
+  ],
+  "forbidden_fixture": "tests/fixtures/forbidden-third.md"
+}

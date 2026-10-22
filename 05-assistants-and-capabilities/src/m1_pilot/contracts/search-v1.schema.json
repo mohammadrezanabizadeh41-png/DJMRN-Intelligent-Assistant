@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:djmrn:m1:search:v1",
+  "title": "DJMRN M1 single read-only tool contract",
+  "description": "Design schema: runtime Python parser is the enforcer. No paths, root, shell, URL, owner or permission in model arguments.",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "query",
+        "file_ids"
+      ],
+      "properties": {
+        "query": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "file_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{1,31}$"
+          }
+        },
+        "max_matches": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "request_id",
+        "operation",
+        "manifest_revision",
+        "arguments"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "djmrn.m1.search.v1"
+        },
+        "request_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "operation": {
+          "const": "search_approved_documents"
+        },
+        "manifest_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "query",
+            "file_ids"
+          ],
+          "properties": {
+            "query": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "file_ids": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 2,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]{1,31}$"
+              }
+            },
+            "max_matches": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "model_args": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "query",
+        "file_ids"
+      ],
+      "properties": {
+        "query": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "file_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{1,31}$"
+          }
+        },
+        "max_matches": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        }
+      }
+    },
+    "trusted_envelope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "request_id",
+        "operation",
+        "manifest_revision",
+        "arguments"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "djmrn.m1.search.v1"
+        },
+        "request_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "operation": {
+          "const": "search_approved_documents"
+        },
+        "manifest_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "query",
+            "file_ids"
+          ],
+          "properties": {
+            "query": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "file_ids": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 2,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]{1,31}$"
+              }
+            },
+            "max_matches": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8
+            }
+          }
+        }
+      }
+    }
+  }
+}
