@@ -39,6 +39,8 @@
 
 - **KYNXA H2 WIZARD VISIBLE (2026-10-22):** [user setup screenshot review](../06-tests-and-evidence/logs/KYNXA-H2-INSTALLER-WIZARD-20261022.md): `Setup - KYNXA version 1.7.0` opened, optional Qwen3 1.7B Q8_0 **Download and enable unchecked**; app/data/extensions user-local defaults, English, shortcut selected. User instructed to click Install if accepting known unsigned/untested risks and only with no optional model; stop on further warnings. **INSTALL SUCCESS NOT REPORTED, no actual KYNXA RAM/CPU results, D-005 OPEN.**
 
+- **KYNXA H2 optional-model recommendation 2026-10-22:** [versioned KYNXA/Qwen catalog check](../06-tests-and-evidence/logs/KYNXA-H2-LOCAL-MODEL-SIZING-20261022.md): 1.7B Q8_0 initial model test; 4B Q4_K_M highest marginal experiment only after host RAM measurement. 8B+ unsuitable for OS-visible 5.88 GiB. Installer `Download and enable` remains recommended OFF; no installation completion/model download/benchmark yet, D-005 OPEN.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
