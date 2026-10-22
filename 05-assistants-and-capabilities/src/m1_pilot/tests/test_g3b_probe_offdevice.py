@@ -93,4 +93,29 @@ class ProbeHarnessOfflineTests(unittest.TestCase):
         self.assertNotIn("shutil.rmtree",s)
         self.assertNotIn("os.symlink(",s)
 
+    def test_16_cleanup_refuses_unexpected_filename(self):
+        with tempfile.TemporaryDirectory() as d:
+            folder=Path(d)/"fixture";folder.mkdir()
+            third=folder/"third.md";third.write_bytes(b"fake")
+            self.assertEqual(mod.fixture_cleanup(folder,[third]),"MANUAL_CLEANUP_REQUIRED")
+            self.assertTrue(third.is_file())
+
+    def test_17_cleanup_refuses_symlinked_directory(self):
+        with tempfile.TemporaryDirectory() as d:
+            actual=Path(d)/"actual";actual.mkdir()
+            linked=Path(d)/"linked";linked.symlink_to(actual,target_is_directory=True)
+            self.assertEqual(mod.fixture_cleanup(linked,[]),"MANUAL_CLEANUP_REQUIRED")
+            self.assertTrue(actual.exists())
+
+    def test_18_verify_source_does_not_run_device(self):
+        with patch.object(mod,'verify_pinned_sources') as verify, contextlib.redirect_stdout(io.StringIO()) as s:
+            self.assertEqual(mod.main(["--verify-source"]),0)
+        verify.assert_called_once()
+        self.assertIn("SOURCE PREFLIGHT PASS",s.getvalue())
+
+    def test_19_verify_source_bad_pin_holds(self):
+        with patch.object(mod,'verify_pinned_sources',side_effect=mod.ProbeHold('SOURCE_BLOB_MISMATCH')), contextlib.redirect_stdout(io.StringIO()) as s:
+            self.assertEqual(mod.main(["--verify-source"]),2)
+        self.assertIn("HOLD",s.getvalue())
+
 if __name__ == "__main__": unittest.main()
