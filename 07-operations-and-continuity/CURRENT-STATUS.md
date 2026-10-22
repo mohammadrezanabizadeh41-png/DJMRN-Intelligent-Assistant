@@ -45,6 +45,8 @@
 
 - **KYNXA first no-model Windows RAM check (2026-10-22):** [user screenshot, PowerShell and Notion-source evidence](../06-tests-and-evidence/logs/KYNXA-H2-NO-MODEL-RAM-AND-EXISTING-GGUF-20261022.md): KYNXA UI running; OS available **1.18 GiB**, committed 4.94 GiB; 11 related processes grouped Working Set 611 MiB, private page count 235 MiB. Model picker says `No models are configured` (not proof a local download has not been queued). Notion inventory confirms four Jan-imported GGUFs historically, Ollama earlier empty, LM Studio large model load stalled. KYNXA v1.7 source supports **Import GGUF external reference without copy** for existing Gemma3 1B Q4_0; fallback Jan local API via loopback (not tested). **No GGUF imported/model loaded**, H3 NOT_RUN, D-005 OPEN.
 
+- **KYNXA H3 GUI import path confirmed from version-tagged source 2026-10-22:** [screen/source receipt](../06-tests-and-evidence/logs/KYNXA-H3-LOCAL-GGUF-IMPORT-NAVIGATION-20261022.md). User's Models > My connections screen is **API provider connections**, not GGUF importer. Native file import is main **Settings gear > Local Models > Import GGUF**, with **Copy to model folder unchecked** enabling external file reference. Historical Notion GGUF Gemma3 1B ~0.67GiB available in Hugging Face cache as of past inventory; current file not yet reconfirmed. Next ask user screenshot of Settings Local Models, no automatic model download/enable. H3 runtime/test still NOT_RUN; OS RAM available 1.18GiB in prior measurement.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
