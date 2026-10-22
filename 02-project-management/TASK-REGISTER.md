@@ -154,3 +154,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 SmartScreen trust gate
 - User supplied [SmartScreen warning screenshot](../06-tests-and-evidence/logs/KYNXA-H2-SMARTSCREEN-USER-BLOCK-20261022.md) after attempting to start unsigned KYNXA v1.7.0 installer. **H2 SMARTSCREEN HOLD / INSTALL NOT_RUN**, no wizard or KYNXA running memory measurement seen. Next seek signed/reproducible publisher verification or safer isolated evaluation. Do not bypass Windows security warning. D-005 stack NOT DECIDED; goose remains comparison #2.
+
+## 2026-10-22 — TASK-0021 H2 targeted security search and user-controlled installer option
+- [Exact vendor/GitHub/public security search evidence](../06-tests-and-evidence/logs/KYNXA-H2-PUBLIC-SECURITY-SEARCH-20261022.md): no credible publicly reported KYNXA-specific incident found, but release new, installer unsigned and not installation-tested; no clean-security conclusion. User requested proceeding with an informed manual installer attempt. Next: user may elect per-file SmartScreen More info > Run anyway, pause BEFORE wizard Install to review options; never disable antivirus or accept malware detections. **Actual installer execution, successful installation and model/memory benchmark NOT_RUN**, D-005 open.
