@@ -77,10 +77,19 @@ def fixture_cleanup(folder: Path | None, created: list[Path]) -> str:
     """No recursive delete. Only own two known filenames and empty directory."""
     if folder is None:
         return "NO_FIXTURE_CREATED"
+    # Refuse unexpected filenames or parent switching, even in a synthetic probe.
+    allowed = {folder / "alpha.md", folder / "beta.md"}
+    if len(created) > 2 or len(set(created)) != len(created) or any(p not in allowed for p in created):
+        return "MANUAL_CLEANUP_REQUIRED"
     try:
+        # is_junction was added in Python 3.12; refuse reparse directories where available.
+        junction = getattr(folder, "is_junction", lambda: False)
+        if folder.is_symlink() or junction():
+            return "MANUAL_CLEANUP_REQUIRED"
         for path in created:
-            # Do not follow any inserted symlink or reparse target during cleanup.
-            if path.is_symlink():
+            # Do not follow an inserted symlink/junction, including a renamed fixture.
+            entry_junction = getattr(path, "is_junction", lambda: False)
+            if path.is_symlink() or entry_junction():
                 return "MANUAL_CLEANUP_REQUIRED"
             if path.is_file():
                 path.unlink()
@@ -244,9 +253,20 @@ def execute_synthetic() -> dict:
 
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="DJMRN G3-B synthetic-only candidate")
-    parser.add_argument("--run-synthetic", action="store_true",
-                        help="Only after separate user authorization for new G3-B Windows run")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--run-synthetic", action="store_true",
+                       help="Only after separate user authorization for new G3-B Windows run")
+    group.add_argument("--verify-source", action="store_true",
+                       help="Check pinned Git blobs only; no device test or fixture creation")
     args = parser.parse_args(argv)
+    if args.verify_source:
+        try:
+            verify_pinned_sources(Path(__file__).resolve().parent)
+        except (OSError, ProbeHold):
+            print("G3-B HOLD: SOURCE_BLOB_MISMATCH / NO DEVICE TEST")
+            return 2
+        print("G3-B SOURCE PREFLIGHT PASS / NO DEVICE TEST")
+        return 0
     if not args.run_synthetic:
         print("G3-B PLAN ONLY / DEVICE NOT RUN / GUARD CLOSED / NO USER APPROVAL ASSUMED")
         return 0
