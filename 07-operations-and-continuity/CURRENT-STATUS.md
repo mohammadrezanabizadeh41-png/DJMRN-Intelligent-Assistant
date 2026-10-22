@@ -51,6 +51,8 @@
 
 - **KYNXA H3 nine GGUF files fresh user readout 2026-10-22:** [full sanitized path inventory](../06-tests-and-evidence/logs/KYNXA-H3-GGUF-NINE-FILES-USER-INVENTORY-20261022.md). Four pre-scoped locations produced **9 present GGUFs = 6 chat models + 2 mmproj vision companions + 1 embedding-only**; KYNXA Qwen3 4B already installed/enabled and **five other chat models eligible for import-by-reference** (Gemma3 1B/4B/12B, Jan-v3.5 4B, LMStudio Gemma4 E4B). File paths verified by user scan (not assistant direct machine access), model compatibility/unloading and inference NOT TESTED. Import reference with Copy unchecked, load policy On demand, start 1B only given last 1.18 GiB OS available. No new model copy/download/import or broader Windows permission. D-005 remains OPEN.
 
+- **KYNXA H3 first chat NO TEXT screenshot (2026-10-22):** [user-reported Work-mode test](../06-tests-and-evidence/logs/KYNXA-H3-USER-CHAT-NO-REPLY-20261022.md) `سلام` ended with `Generation stopped` and no assistant text (cause unknown, could include user stop), `hi` was still `Replying/Generating` with no text; selected internal model id `import-027ad2ad30124ed0` not matched to file. No evidence of successful KYNXA local inference despite imports. Source KYNXA 1.7 uses private llama-server with resource admission; last 1.18 GiB available RAM before test. Next isolate **Chat tab** with **Gemma3 1B Enabled / On demand**, no tools, short safe prompt, inspect model runtime state and read-only RAM/llama process if no result. **Cause unresolved, no CPU/GPU override or reinstall.** D-005 OPEN, G3B CLOSED.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
