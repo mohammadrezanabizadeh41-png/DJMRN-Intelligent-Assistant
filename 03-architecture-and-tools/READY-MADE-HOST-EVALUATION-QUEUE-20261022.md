@@ -27,3 +27,6 @@
 ## Authority and continuity
 
 Read [PROJECT-RULES](../PROJECT-RULES.md), [CURRENT](../07-operations-and-continuity/CURRENT-STATUS.md), [TASK-REGISTER](../02-project-management/TASK-REGISTER.md), [WORK-JOURNAL](../07-operations-and-continuity/WORK-JOURNAL.md) and relevant [TEST-REGISTER](../06-tests-and-evidence/TEST-REGISTER.md) before recording runtime results. D-005 global stack remains **NOT DECIDED**, G3/G3B fail-closed status remains unchanged. Applied/General library and Notion Tool Governance remain independent authorities for discovery and policy.
+
+## 2026-10-22 — First user-device H0/H1 preflight evidence
+User-reported [preflight](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-PREFLIGHT-20261022.md): Build 26300, Windows usable 5.88 GiB, available 0.87 GiB, C: free 117.73 GiB; download ZIP present and publisher SHA-256 MATCH, Setup EXE present and `NotSigned`. Initial script's `RAM_Physical_GB=5.88` is **not proof of installed DIMM total**; use `Win32_PhysicalMemory.Capacity` for current installed RAM. Status `H0_PARTIAL/H1_ZIP_HASH_PASS_USER-REPORTED/NO_INSTALL`. Next: read-only current process+DIMM+commit snapshot. No app/memory benchmark or architecture approval yet.

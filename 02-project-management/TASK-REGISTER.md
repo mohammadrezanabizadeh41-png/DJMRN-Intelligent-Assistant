@@ -139,3 +139,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 ready-made host evaluation (USER-PRIORITIZED / NO INSTALL)
 - **TASK-0021 | First KYNXA, second goose | STATUS: EVALUATION QUEUED; H0 RAM BASELINE NOT_RUN; KYNXA INSTALL/LAUNCH NOT_RUN.** User chose KYNXA priority #1 (feature-complete candidate) and goose priority #2 (comparative fallback). [Pinned versions, official download, SHA and staged read-only benchmark plan](../03-architecture-and-tools/READY-MADE-HOST-EVALUATION-QUEUE-20261022.md). The next user-visible step is a fresh small read-only memory baseline, then verify downloaded ZIP before even considering a separately approved install. **D-005 not decided; no fork, new runtime, external account, Windows test or source change.**
+
+## 2026-10-22 — TASK-0021 evidence update (H0 PARTIAL, H1 HASH VERIFIED USER-REPORTED)
+- User completed KYNXA 1.7 ZIP download and extraction and ran a read-only preflight. [Exact sanitized output and caveats](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-PREFLIGHT-20261022.md): ZIP hash MATCH, unsigned EXE detected, RAM OS-visible 5.88 GiB / available 0.87 GiB, C: free 117.73 GiB. No independent installer test or app run. Next user-run *read-only* process and DIMM baseline. Keep goose #2, host selection D-005 open.

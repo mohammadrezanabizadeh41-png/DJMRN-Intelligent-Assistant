@@ -1,5 +1,9 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-22 — KYNXA user ZIP/hash check PASS; low-RAM H0 remains partial
+- Documented [sanitized user-device preflight](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-PREFLIGHT-20261022.md): official ZIP hash matched; setup EXE found and unsigned, Windows usable 5.88 GiB/free 0.87 GiB, C: free 117.73 GiB. H0 PARTIAL / H1 hash USER-PASS. No installer execution, benchmark, app connection, G3B change or selected global stack. Continue with read-only DIMM/process/commit snapshot.
+
+
 ## 2026-10-22 — User-prioritized ready-made host pilot queue: KYNXA first, goose second (DOCUMENTATION)
 - User-requested evaluation ranking, official KYNXA v1.7.0 setup ZIP link/publisher SHA and bounded read-only RAM-baseline/testing gates registered in [candidate plan](../03-architecture-and-tools/READY-MADE-HOST-EVALUATION-QUEUE-20261022.md) and TASK-0021. **No host choice (D-005 open), no installation, hardware benchmark or Windows execution**, and G3B/CAP-006 statuses unchanged. KYNXA vendor has not attested actual installation test or production signature. See [Work Journal](WORK-JOURNAL.md).
 

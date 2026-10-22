@@ -23,6 +23,8 @@
 
 - **NEW USER-PRIORITIZED READY-MADE HOST EVALUATION (2026-10-22; DOCUMENTATION ONLY):** [KYNXA #1, goose #2 queue and vendor release/benchmark plan](../03-architecture-and-tools/READY-MADE-HOST-EVALUATION-QUEUE-20261022.md), [TASK-0021](../02-project-management/TASK-REGISTER.md). User wants to download/check KYNXA and measure the actual Windows RAM footprint before choosing whether to replace homegrown host. **No host selected**, no device RAM preflight/ZIP download/install/app/model execution observed; H0–H5 NOT_RUN, installer unsigned and not installation-tested by vendor. D-005 OPEN, CAP-006/G3B unchanged.
 
+- **KYNXA USER-DEVICE H0/H1 PREFLIGHT 2026-10-22:** [user-reported sanitized evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-PREFLIGHT-20261022.md): installer ZIP downloaded/extracted, official SHA256 matches, EXE `NotSigned`; Windows build 26300, OS-usable RAM 5.88 GiB, available 0.87 GiB, C: free 117.73 GiB. **H0 PARTIAL / H1 HASH PASS USER-REPORTED**, actual installed DIMM total still to be checked, NO installer/app/model benchmark, RAM headroom poor. Do not run installer yet; next read-only process/DIMM/commit snapshot, no automatic kills. D-005/G3B unchanged.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
