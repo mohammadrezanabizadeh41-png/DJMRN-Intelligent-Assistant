@@ -1,5 +1,9 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-23 — WA0011 received and independently verified; Cloud-First research PARTIAL
+- [WA0011](../04-work-research-bridge/responses/WA0011.md) Work-only commit [0fde04f](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/commit/0fde04fa6be632403a1a524fd6de332515866f5b), blob `73e0b672393cb6ef8698c430e8a0303fd6e3ceea`, complete 65,929-character raw-blob/commit-pinned equality; [bounded coordinator review](../04-work-research-bridge/reviews/WQ0011.md) registered. LEDGER, TASK-0023, canonical CURRENT and WORK-JOURNAL reconciled from false "not received" state. Three-leg research receipts present, but legal/provider free quotas and Windows deployment remain conditional and unverified for actual use. No D-005 decision, G3B still CLOSED; no new provider, install, API call, code or test. **Next: await user information; no next Work request yet.**
+
+
 
 ## 2026-10-22 — KYNXA installed and first real GUI visible (user-reported), idle benchmark pending
 - [KYNXA first user desktop screenshot](../06-tests-and-evidence/logs/KYNXA-H2-USER-INSTALLED-GUI-20261022.md) shows Work/Chat, selectable model and Ask for approval; user reports setup succeeded. **Observed: GUI open; not observed: model, tools, memory, source verification or gateway performance**. Next bounded read-only OS/host process-tree memory measurement. D-005 not selected; old G3B guard unchanged.
