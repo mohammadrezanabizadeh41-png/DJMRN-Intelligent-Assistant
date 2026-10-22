@@ -25,6 +25,8 @@
 
 - **KYNXA USER-DEVICE H0/H1 PREFLIGHT 2026-10-22:** [user-reported sanitized evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-PREFLIGHT-20261022.md): installer ZIP downloaded/extracted, official SHA256 matches, EXE `NotSigned`; Windows build 26300, OS-usable RAM 5.88 GiB, available 0.87 GiB, C: free 117.73 GiB. **H0 PARTIAL / H1 HASH PASS USER-REPORTED**, actual installed DIMM total still to be checked, NO installer/app/model benchmark, RAM headroom poor. Do not run installer yet; next read-only process/DIMM/commit snapshot, no automatic kills. D-005/G3B unchanged.
 
+- **KYNXA H0 second user snapshot (2026-10-22):** [8GiB installed RAM and process/commit evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-RAM-PROCESSES-20261022.md) 8.00GiB installed DIMMs, 5.88GiB OS-visible, **0.99GiB available**, 9.58/11.66GiB committed/limit, 5.78GiB pagefile allocated; Chrome and ChatGPT have largest voluntary foreground working sets. H0 `USER-OBSERVED LOW_HEADROOM`, **KYNXA installer and app NOT RUN**. Next optional UI closure of unused apps and read-only resample; do not kill services or assume pagefile/working-set frees RAM precisely. KYNXA #1, goose #2, D-005 OPEN.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---

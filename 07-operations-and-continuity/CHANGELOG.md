@@ -1,5 +1,9 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-22 — KYNXA second user Windows RAM baseline; installed 8 GiB confirmed
+- [Sanitized evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-RAM-PROCESSES-20261022.md): 8 GiB installed physical RAM / 5.88 GiB visible / 0.99 GiB available; 9.58/11.66 GiB committed, pagefile 5.78 GiB. Top grouped working sets include Chrome 1495 MiB, ChatGPT 966 MiB, svchost 953 MiB. H0 observed limited headroom. No KYNXA installation/benchmark, process kill or model run; all other gates unchanged.
+
+
 ## 2026-10-22 — KYNXA user ZIP/hash check PASS; low-RAM H0 remains partial
 - Documented [sanitized user-device preflight](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-PREFLIGHT-20261022.md): official ZIP hash matched; setup EXE found and unsigned, Windows usable 5.88 GiB/free 0.87 GiB, C: free 117.73 GiB. H0 PARTIAL / H1 hash USER-PASS. No installer execution, benchmark, app connection, G3B change or selected global stack. Continue with read-only DIMM/process/commit snapshot.
 

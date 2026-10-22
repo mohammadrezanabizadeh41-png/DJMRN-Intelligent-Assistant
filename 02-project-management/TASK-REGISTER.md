@@ -142,3 +142,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 evidence update (H0 PARTIAL, H1 HASH VERIFIED USER-REPORTED)
 - User completed KYNXA 1.7 ZIP download and extraction and ran a read-only preflight. [Exact sanitized output and caveats](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-PREFLIGHT-20261022.md): ZIP hash MATCH, unsigned EXE detected, RAM OS-visible 5.88 GiB / available 0.87 GiB, C: free 117.73 GiB. No independent installer test or app run. Next user-run *read-only* process and DIMM baseline. Keep goose #2, host selection D-005 open.
+
+## 2026-10-22 — TASK-0021 second RAM preflight (H0 low headroom)
+- [Read-only user-reported DIMM/process/commit evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-RAM-PROCESSES-20261022.md) confirms 8.00 GiB installed, 5.88 GiB usable, 0.99 GiB available, committed 9.58 of 11.66 GiB, pagefile allocated 5.78 GiB. KYNXA not installed, host compatibility not benchmarked. Next user's optional normal closing of unneeded apps + small read-only recheck; no Windows service or background developer process termination. H2 install remains UNAPPROVED/NOT_RUN.
