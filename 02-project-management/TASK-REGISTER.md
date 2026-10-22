@@ -145,3 +145,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 second RAM preflight (H0 low headroom)
 - [Read-only user-reported DIMM/process/commit evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-RAM-PROCESSES-20261022.md) confirms 8.00 GiB installed, 5.88 GiB usable, 0.99 GiB available, committed 9.58 of 11.66 GiB, pagefile allocated 5.78 GiB. KYNXA not installed, host compatibility not benchmarked. Next user's optional normal closing of unneeded apps + small read-only recheck; no Windows service or background developer process termination. H2 install remains UNAPPROVED/NOT_RUN.
+
+## 2026-10-22 — TASK-0021 H0 user UI-close recheck and resource coordination candidate
+- [KYNXA H0 ChatGPT closed evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-CHATGPT-CLOSED-20261022.md) `ChatGPT_Processes=0`, available RAM **1.79 GiB**, up from **0.99 GiB**. User expects potential restart improvement (NOT_RUN) and suggests resource scheduling for future specialist assistants. Proposed one-model-at-a-time native-resource-controller evaluation, **not separate installed manager or adopted architecture**. No app install, model benchmark, system changes or production permission. H2 NOT_RUN.

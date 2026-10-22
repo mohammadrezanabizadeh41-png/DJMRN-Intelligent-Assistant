@@ -27,6 +27,8 @@
 
 - **KYNXA H0 second user snapshot (2026-10-22):** [8GiB installed RAM and process/commit evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-WIN11-RAM-PROCESSES-20261022.md) 8.00GiB installed DIMMs, 5.88GiB OS-visible, **0.99GiB available**, 9.58/11.66GiB committed/limit, 5.78GiB pagefile allocated; Chrome and ChatGPT have largest voluntary foreground working sets. H0 `USER-OBSERVED LOW_HEADROOM`, **KYNXA installer and app NOT RUN**. Next optional UI closure of unused apps and read-only resample; do not kill services or assume pagefile/working-set frees RAM precisely. KYNXA #1, goose #2, D-005 OPEN.
 
+- **KYNXA H0 RAM IMPROVEMENT (2026-10-22):** [user manually closed ChatGPT Desktop](../06-tests-and-evidence/logs/KYNXA-H0-USER-CHATGPT-CLOSED-20261022.md): `ChatGPT_Processes=0`, RAM available **1.79 GiB**, previously 0.99 GiB (+0.80 GiB). Reboot/installer/app/model still **NOT_RUN**. User raised future shared memory/model scheduling need; first evaluate KYNXA native admission and model-on-demand before extra tooling; **no architecture/resource-manager selection**. Installer unsigned/unverified security remains separate gate. Next optional restart, read-only fresh baseline then provenance/Defender caution; TASK-0021 remains H0 PARTIAL.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
