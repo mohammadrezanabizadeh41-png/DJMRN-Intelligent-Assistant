@@ -169,3 +169,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 H3 actual GGUF paths confirmed by user (9 existing files)
 - [GGUF manifest from on-device read-only scan](../06-tests-and-evidence/logs/KYNXA-H3-GGUF-NINE-FILES-USER-INVENTORY-20261022.md): **6 chat weights, 2 vision projectors, 1 embeddings model** in Hugging Face/Jan/LMStudio/KYNXA roots. Already-installed Qwen3 4B kept in KYNXA; **five other chat GGUFs can be imported as reference**, no duplication or redownload. Next GUI Settings > Local models > Import GGUF one at a time (Copy unchecked), start Gemma3 1B; no large model loaded. Runtime compatibility, model visibility and RAM after import NOT_RUN. D-005 OPEN.
+
+## 2026-10-22 — TASK-0021 H3 user first no-reply test after GGUF imports
+- Screenshot [H3 chat diagnostic](../06-tests-and-evidence/logs/KYNXA-H3-USER-CHAT-NO-REPLY-20261022.md): `Work` mode `سلام` first generation stopped without reply; subsequent `hi` generating without visible tokens; selected model `import-027ad2ad30124ed0` exact file not identified. **H3 inference NOT PASSED; no exact root cause yet.** Next user plain Chat/1B short test, inspect KYNXA runtime state and read-only free RAM/private llama-server PID. Keep imported weights, avoid 4B+ concurrent inference and any tool access; D-005 OPEN.
