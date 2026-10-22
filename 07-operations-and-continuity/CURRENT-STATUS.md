@@ -74,6 +74,8 @@
 
 - **GOOSE-G1 Windows Desktop LAUNCHED by user (2026-10-22):** [actual user welcome screenshot + bounded evidence](../06-tests-and-evidence/logs/GOOSE-G1-DESKTOP-WELCOME-RUNNING-20261022.md). Windows Goose welcome GUI visibly offers `Use a Local Model` (no API key/account, warns model download) vs `Connect to a Provider` (cloud/providers). Official goose documentation supports built-in llama.cpp inference inside Desktop (no separate Jan/Ollama server required), but GGUF reuse from existing model file paths **NOT VERIFIED** and actual inference/tool support **NOT TESTED**. Instructed user to click local-model tile and STOP before any model download/extension/shell grant; next inspect selection. Earlier legacy installation ledger confirmed only historic models, do not assert direct import. D-005 OPEN; G3B CLOSED; KYNXA PARKED.
 
+- **GOOSE-G2 user screenshot (2026-10-22):** [direct local model-picker UI evidence](../06-tests-and-evidence/logs/GOOSE-G2-USER-LOCAL-CACHED-MODELS-READY-20261022.md) shows native goose `Use a Local Model` has **three pre-existing GGUF models all green Ready**: Gemma3 **1B Q4_0 687MB** (selected, Best for your machine), Gemma3 4B Q4_0 2.4GB, Gemma3 12B Q2_K 4.4GB. This indicates Goose found existing model cache without renewed GGUF search/download. **Ready is NOT a working inference test**. User instructed to click blue `Use ggml-org/gemma-3-1b-it-qat-GGUF:Q4_0` once, then inspect screen before any tools/permissions; no actual model load/reply yet. Maintain D-005 OPEN, G3B CLOSED, KYNXA HOLD.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
