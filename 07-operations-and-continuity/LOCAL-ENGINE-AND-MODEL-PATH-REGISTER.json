@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "updated_utc_date": "2026-10-22",
+  "authority": "historical recorded paths, NOT a current registry scan",
+  "reading_instructions": "Read the Markdown companion first. NOT_VERIFIED executable path must not be used or guessed. No private credentials. Expand %USERPROFILE%, %APPDATA%, %LOCALAPPDATA% locally.",
+  "counts": {
+    "software_status_rows": 17,
+    "models_total": 9,
+    "chat": 6,
+    "vision_projector": 2,
+    "embedding": 1,
+    "endpoints": 5
+  },
+  "software": [
+    {
+      "name": "KYNXA Desktop",
+      "version_or_evidence": "1.7.0",
+      "executable_path": "NOT_VERIFIED",
+      "status_and_caveats": "**user-installed/GUI-launched**; HOLD, native managed 1B waiting-resource; six imported chat model records; no successful response observed"
+    },
+    {
+      "name": "KYNXA managed llama.cpp",
+      "version_or_evidence": "b11669 per source tag, runtime binary build not user checked",
+      "executable_path": "UNVERIFIED; if bundled see <KYNXA_APPLICATION_ROOT>\\runtime\\local-llm\\llama.cpp\\b11669\\<cpu/vulkan>\\...\\llama-server.exe or KYNXA data root LocalRuntime\\llama.cpp\\b11669\\<cpu/vulkan>\\...",
+      "status_and_caveats": "**runtime source path identified; binary path UNVERIFIED**; No safe on/off guard setting verified; do not label EXE present without live check"
+    },
+    {
+      "name": "Jan Desktop + internal llama.cpp",
+      "version_or_evidence": "app version NOT_VERIFIED; llama.cpp engine 0.5.0 build b11146 per historical Notion",
+      "executable_path": "NOT_VERIFIED",
+      "status_and_caveats": "**installed, GUI launched, prior local Persian inference user-reported**; Jan-v3.5-4B, Gemma3 1B/4B/12B imported historically; model concurrency 1"
+    },
+    {
+      "name": "Jan Agent CLI",
+      "version_or_evidence": "0.8.6-64 agent-nightly",
+      "executable_path": "%USERPROFILE%\\.local\\bin\\jan.exe",
+      "status_and_caveats": "**CLI installed/version user-tested 2026-10-17**; distinct from Jan Desktop; tool calling/sandbox integration not validated"
+    },
+    {
+      "name": "Ollama",
+      "version_or_evidence": "0.40.6-rc1 per Oct 17 record",
+      "executable_path": "NOT_VERIFIED",
+      "status_and_caveats": "**CLI and local service previously tested**; One-shot Ollama registration was PROPOSED in chat only; no run result, no guaranteed model now installed"
+    },
+    {
+      "name": "LM Studio",
+      "version_or_evidence": "NOT_VERIFIED",
+      "executable_path": "NOT_VERIFIED",
+      "status_and_caveats": "**installed UI launched**; Gemma4 E4B not verified as able to load/respond"
+    },
+    {
+      "name": "LM Studio Bionic/llmster",
+      "version_or_evidence": "NOT_VERIFIED",
+      "executable_path": "NOT_VERIFIED",
+      "status_and_caveats": "**installed, GUI launched per user**; do not merge with LM Studio classic; AI/tool success not tested"
+    },
+    {
+      "name": "Llama desktop app / LlamaApp",
+      "version_or_evidence": "0.12.0 previously user-reported, exact application identity not reverified",
+      "executable_path": "NOT_VERIFIED",
+      "status_and_caveats": "**user-reported installed and launched**; possible independent app; distinguish from llama.cpp library"
+    },
+    {
+      "name": "ChatGPT Desktop",
+      "version_or_evidence": "NOT_VERIFIED",
+      "executable_path": "NOT_VERIFIED",
+      "status_and_caveats": "**user-installed/UI previously used**; not a local GGUF engine"
+    },
+    {
+      "name": "Python",
+      "version_or_evidence": "3.14.7",
+      "executable_path": "%LOCALAPPDATA%\\Programs\\Python\\Python314\\python.exe",
+      "status_and_caveats": "**CLI tested in user environment**; Bare python in PATH depends on shell environment"
+    },
+    {
+      "name": "Git for Windows",
+      "version_or_evidence": "2.55.0.windows.5",
+      "executable_path": "C:\\Program Files\\Git\\cmd\\git.exe",
+      "status_and_caveats": "**CLI tested**; installed via WinGet"
+    },
+    {
+      "name": "VS Code",
+      "version_or_evidence": "1.142.0 user historical, not independently version tested in Oct 17 Notion",
+      "executable_path": "NOT_VERIFIED",
+      "status_and_caveats": "**installed user-reported**; do not treat as inference engine"
+    },
+    {
+      "name": "WinGet/App Installer",
+      "version_or_evidence": "1.11.510",
+      "executable_path": "system App Installer resolved by winget; exact filesystem executable path NOT_VERIFIED",
+      "status_and_caveats": "**CLI tested**; install-on-demand policy"
+    },
+    {
+      "name": "SQLite Python module",
+      "version_or_evidence": "3.50.4 historically",
+      "executable_path": "bundled Python sqlite3 module, not a separate database engine exe",
+      "status_and_caveats": "**built-in Python sqlite3 tested**; do not claim independent SQLite server installed"
+    },
+    {
+      "name": "WSL",
+      "version_or_evidence": "distribution unverified",
+      "executable_path": "NOT_VERIFIED",
+      "status_and_caveats": "**WSL feature present (historical), no confirmed Ubuntu runtime**; do not require WSL/Docker for goose GUI"
+    },
+    {
+      "name": "Hermes Agent",
+      "version_or_evidence": "old Windows installation only",
+      "executable_path": "NOT_PRESENT",
+      "status_and_caveats": "**NOT INSTALLED on current clean Win11 per user report**; exclude from installed count"
+    },
+    {
+      "name": "goose Desktop",
+      "version_or_evidence": "v1.55.0 latest official checked 2026-10-22",
+      "executable_path": "NOT_PRESENT",
+      "status_and_caveats": "**NOT_INSTALLED / NEXT CANDIDATE**; candidate #2, candidate evaluation not same as adoption"
+    }
+  ],
+  "models": [
+    {
+      "index": 1,
+      "role": "chat",
+      "name": "Gemma 3 1B Q4_0",
+      "user_reported_size_GiB": 0.67,
+      "path_env_normalized": "%USERPROFILE%\\.cache\\huggingface\\hub\\models--ggml-org--gemma-3-1b-it-qat-GGUF\\snapshots\\c2531de7eec944fecd05bb2c23804c50d5a915c4\\gemma-3-1b-it-qat-Q4_0.gguf",
+      "path_provenance": "USER_POWERSHELL_READONLY_2026-10-22"
+    },
+    {
+      "index": 2,
+      "role": "chat",
+      "name": "Gemma 3 4B Q4_0",
+      "user_reported_size_GiB": 2.35,
+      "path_env_normalized": "%USERPROFILE%\\.cache\\huggingface\\hub\\models--ggml-org--gemma-3-4b-it-qat-GGUF\\snapshots\\bbcac0d065076c47042838c0675c602411b0dd4c\\gemma-3-4b-it-qat-Q4_0.gguf",
+      "path_provenance": "USER_POWERSHELL_READONLY_2026-10-22"
+    },
+    {
+      "index": 3,
+      "role": "vision_projector",
+      "name": "Gemma 3 4B mmproj F16",
+      "user_reported_size_GiB": 0.79,
+      "path_env_normalized": "%USERPROFILE%\\.cache\\huggingface\\hub\\models--ggml-org--gemma-3-4b-it-qat-GGUF\\snapshots\\bbcac0d065076c47042838c0675c602411b0dd4c\\mmproj-model-f16-4B.gguf",
+      "path_provenance": "USER_POWERSHELL_READONLY_2026-10-22"
+    },
+    {
+      "index": 4,
+      "role": "chat",
+      "name": "Gemma 3 12B Q2_K",
+      "user_reported_size_GiB": 4.44,
+      "path_env_normalized": "%USERPROFILE%\\.cache\\huggingface\\hub\\models--tensorblock--gemma-3-12b-it-GGUF\\snapshots\\ab7d363cf93e3786c6853083170681d86b946492\\gemma-3-12b-it-Q2_K.gguf",
+      "path_provenance": "USER_POWERSHELL_READONLY_2026-10-22"
+    },
+    {
+      "index": 5,
+      "role": "chat",
+      "name": "Jan-v3.5 4B Q4_K_XL",
+      "user_reported_size_GiB": 2.79,
+      "path_env_normalized": "%APPDATA%\\Jan\\data\\llamacpp\\models\\Jan-v3.5-4B-Q4_K_XL\\model.gguf",
+      "path_provenance": "USER_POWERSHELL_READONLY_2026-10-22"
+    },
+    {
+      "index": 6,
+      "role": "embedding",
+      "name": "sentence-transformer-mini",
+      "user_reported_size_GiB": 0.04,
+      "path_env_normalized": "%APPDATA%\\Jan\\data\\llamacpp\\models\\sentence-transformer-mini\\model.gguf",
+      "path_provenance": "USER_POWERSHELL_READONLY_2026-10-22"
+    },
+    {
+      "index": 7,
+      "role": "chat",
+      "name": "Qwen3 4B Q4_K_M",
+      "user_reported_size_GiB": 2.33,
+      "path_env_normalized": "%LOCALAPPDATA%\\Programs\\KYNXA\\Data\\Models\\Local\\q3-4b-q4km\\Qwen3-4B-Q4_K_M.gguf",
+      "path_provenance": "USER_POWERSHELL_READONLY_2026-10-22"
+    },
+    {
+      "index": 8,
+      "role": "chat",
+      "name": "Gemma 4 E4B Q4_K_M",
+      "user_reported_size_GiB": 4.97,
+      "path_env_normalized": "%USERPROFILE%\\.lmstudio\\models\\lmstudio-community\\gemma-4-E4B-it-GGUF\\gemma-4-E4B-it-Q4_K_M.gguf",
+      "path_provenance": "USER_POWERSHELL_READONLY_2026-10-22"
+    },
+    {
+      "index": 9,
+      "role": "vision_projector",
+      "name": "Gemma 4 E4B mmproj BF16",
+      "user_reported_size_GiB": 0.92,
+      "path_env_normalized": "%USERPROFILE%\\.lmstudio\\models\\lmstudio-community\\gemma-4-E4B-it-GGUF\\mmproj-gemma-4-E4B-it-BF16.gguf",
+      "path_provenance": "USER_POWERSHELL_READONLY_2026-10-22"
+    }
+  ],
+  "endpoints": [
+    {
+      "name": "KYNXA model gateway",
+      "base_url": "http://127.0.0.1:5218/api/local-models",
+      "observed_or_historical_status": "user verified GET (2026-10-22); **6 installed, 1 enabled, waiting-resource 1B when last checked**"
+    },
+    {
+      "name": "Jan Local API Server",
+      "base_url": "http://127.0.0.1:1337/v1",
+      "observed_or_historical_status": "Notion historical Running/GET; latest KYNXA Saved connection; **Jan API actual model response in latest KYNXA attempt NOT VERIFIED**"
+    },
+    {
+      "name": "Ollama local API",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "observed_or_historical_status": "source-documented KYNXA preset; Ollama historically installed; **not freshly checked for responsiveness, models then EMPTY**"
+    },
+    {
+      "name": "LM Studio local API",
+      "base_url": "http://127.0.0.1:1234/v1",
+      "observed_or_historical_status": "source-documented KYNXA preset; not proven started; **NOT VERIFIED on this PC**"
+    },
+    {
+      "name": "KYNXA direct llama.cpp trial",
+      "base_url": "http://127.0.0.1:11888/v1",
+      "observed_or_historical_status": "previously PROPOSED only, not existing listening endpoint; **NOT STARTED/NOT VERIFIED**"
+    }
+  ],
+  "canonical_text_file": "07-operations-and-continuity/LOCAL-ENGINE-AND-MODEL-PATH-REGISTER.md"
+}
