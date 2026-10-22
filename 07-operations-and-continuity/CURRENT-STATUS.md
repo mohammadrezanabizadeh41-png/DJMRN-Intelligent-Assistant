@@ -55,6 +55,8 @@
 
 - **KYNXA H3 user Windows snapshot 2026-10-22:** [no llama-server process / read-only local API diagnostic plan](../06-tests-and-evidence/logs/KYNXA-H3-LLAMA-PROCESS-ZERO-LOCAL-GATEWAY-DIAG-20261022.md). User observed 1.85 GiB OS available RAM, 5.48 GiB committed, **llama-server count 0**, while KYNXA.Desktop/gateway/resource-service running. Exact cause unknown; importing models and selecting an ID do not establish inference. Versioned source identifies KYNXA gateway GET `http://127.0.0.1:5218/api/local-models` for read-only per-model `runtime.state/code` and enable/status; next user to run scoped GET output only. **No model response/engine readiness proven, no files/config touched, D-005 OPEN.**
 
+- **KYNXA H3 Gemma3 1B ACTIVE BUT WAITING RESOURCE (2026-10-22):** [actual user loopback GET and code analysis](../06-tests-and-evidence/logs/KYNXA-H3-WAITING-RESOURCE-ADMISSION-20261022.md): local models global ON, load policy on-demand, installed six; ONLY `gemma-3-1b-it-qat-Q4_0` / `import-027ad2ad30124ed0` enabled, `RuntimeState=waiting-resource, Verified=False`; other five disabled/stopped. KYNXA source sets waiting-resource **before native ResourceService admission and launching llama-server**. With prior 1.85GiB Windows RAM available, official capacity rule (~70% of free minus 512MiB) yields ~0.8GiB available vs min ~1.2GiB Gemma3 1B host reservation without GPU offload, so **MEMORY BUDGET BLOCK LIKELY but not verified server admission receipt**. Next save work/voluntarily close optional foreground GUI to approach ~3GiB RAM, retest one 1B plain Chat, no stops of services or security overrides. H3 inference FAILED/NOT PASSED, D-005 OPEN, G3B CLOSED.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
