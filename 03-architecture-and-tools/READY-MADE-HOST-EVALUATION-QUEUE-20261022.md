@@ -36,3 +36,6 @@ User-reported [read-only installed DIMM/process/commit snapshot](../06-tests-and
 
 ## 2026-10-22 — H0 user manually closed ChatGPT Desktop; RAM headroom increased
 [User-reported evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-CHATGPT-CLOSED-20261022.md): `ChatGPT_Processes=0`; available RAM **1.79 GiB** versus prior **0.99 GiB** (**+0.80 GiB**, temporal comparison, not controlled causation). Restart suggested by user but NOT_RUN; setup/model NOT_RUN. Consider one saved-work restart then read-only baseline. User requested *future* shared assistant/model RAM orchestration: inspect native KYNXA `resources/admission.rs`, `coordination.rs` and local model lifecycle before adding separate software. Native integration is code/doc evidence, not actual v1.7 device verification. Unsigned untested installer still independent HOLD.
+
+## 2026-10-22 — User RAM baseline after restart
+The user [reported](../06-tests-and-evidence/logs/KYNXA-H0-POST-RESTART-20261022.md) Windows available RAM = 2.55 GiB, committed = 3.37 GiB, ChatGPT process count = 0. Earlier values were 0.99 and 1.79 GiB available. KYNXA remains NOT_RUN. Next: manual antivirus check of the extracted installer and an installation risk decision.
