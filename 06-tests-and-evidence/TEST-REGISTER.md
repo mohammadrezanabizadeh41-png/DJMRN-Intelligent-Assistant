@@ -1,6 +1,7 @@
 # Test Register — historical vs new
 | ID | تاریخ | موضوع | وضعیت | اعتماد/فاصلهٔ شاهد |
 |---|---|---|---|---|
+| G3-SRC-001 | 2026-10-22 | Two-fake-file Win32 G3 test harness source/static checks | **7/7 PASS in isolated Linux Python 3.13.5; Win11 G3 NOT_RUN/HOLD** | [exact evidence](logs/G3-SYNTHETIC-HARNESS-SOURCE-20261022.md), Git blob runner `19882829...`, tests `f079cb39...`; no Win32 execution, no cancellation or reparse/race guarantee |
 | HIST-T01 | 2026-10-17 | Python/pip/Git/SQLite CLI smoke | HISTORICAL PASS | user-executed/Journal; not modern stack validation |
 | HIST-T02 | 2026-10-17 | Jan Desktop API catalog | HISTORICAL PASS | localhost catalog request; not reliable tool calling |
 | HIST-T03 | 2026-10-18 | Gemma 3 1B basic local inference/stream | HISTORICAL PARTIAL PASS | basic model response; not safe Agent proof |
