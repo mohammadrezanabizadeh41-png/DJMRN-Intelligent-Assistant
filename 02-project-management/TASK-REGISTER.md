@@ -160,3 +160,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 KYNXA guided installer wizard observed
 - User supplied a [real KYNXA 1.7.0 installer screenshot](../06-tests-and-evidence/logs/KYNXA-H2-INSTALLER-WIZARD-20261022.md). Optional Qwen3 1.7B Q8_0 `Download and enable` is unchecked, default user-local directories, English, free disk 120.4 GiB shown in wizard. Given user consent to limited manual install trial and known unsigned/unverified risk, suggested Install with optional model unchecked; STOP on unexpected security/elevation. **Installer completion and KYNXA no-model RAM/CPU NOT_RUN/NOT_OBSERVED**, do not upgrade H2 to PASS until screenshot/result. D-005 still undecided.
+
+## 2026-10-22 — TASK-0021 first KYNXA actual GUI launch (USER-REPORTED)
+- KYNXA setup completed and GUI visibly open according to user screenshot: [evidence](../06-tests-and-evidence/logs/KYNXA-H2-USER-INSTALLED-GUI-20261022.md). H2 install/GUI user PASS; **H2 memory and underlying services NOT_RUN, H3 model NOT_RUN**, no architecture choice, no model/tools/account permissions. Next user-run read-only RAM/process baseline and then bounded model trials if suitable.
