@@ -166,3 +166,6 @@ CAP-006 progressed beyond previous synthetic-only notes to **VERIFIED-REAL / BOU
 
 ## 2026-10-22 — TASK-0021 measured KYNXA base host, Jan GGUF reuse candidate
 - [Observed user H2 RAM + Notion historical model list and KYNXA v1.7 code](../06-tests-and-evidence/logs/KYNXA-H2-NO-MODEL-RAM-AND-EXISTING-GGUF-20261022.md): 1.18 GiB available OS RAM / 4.94 GiB commit; KYNXA-related 11 processes / 611 MiB grouped working set, 235 MiB private page count. App picker no connection configured. User wants no repeat downloads; prefer KYNXA native Import GGUF of existing Jan Gemma 3 1B Q4_0 with Copy unchecked, as candidate, not yet executed or benchmarked. H3 NOT_RUN, D-005 OPEN.
+
+## 2026-10-22 — TASK-0021 H3 actual GGUF paths confirmed by user (9 existing files)
+- [GGUF manifest from on-device read-only scan](../06-tests-and-evidence/logs/KYNXA-H3-GGUF-NINE-FILES-USER-INVENTORY-20261022.md): **6 chat weights, 2 vision projectors, 1 embeddings model** in Hugging Face/Jan/LMStudio/KYNXA roots. Already-installed Qwen3 4B kept in KYNXA; **five other chat GGUFs can be imported as reference**, no duplication or redownload. Next GUI Settings > Local models > Import GGUF one at a time (Copy unchecked), start Gemma3 1B; no large model loaded. Runtime compatibility, model visibility and RAM after import NOT_RUN. D-005 OPEN.
