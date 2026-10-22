@@ -76,6 +76,8 @@
 
 - **GOOSE-G2 user screenshot (2026-10-22):** [direct local model-picker UI evidence](../06-tests-and-evidence/logs/GOOSE-G2-USER-LOCAL-CACHED-MODELS-READY-20261022.md) shows native goose `Use a Local Model` has **three pre-existing GGUF models all green Ready**: Gemma3 **1B Q4_0 687MB** (selected, Best for your machine), Gemma3 4B Q4_0 2.4GB, Gemma3 12B Q2_K 4.4GB. This indicates Goose found existing model cache without renewed GGUF search/download. **Ready is NOT a working inference test**. User instructed to click blue `Use ggml-org/gemma-3-1b-it-qat-GGUF:Q4_0` once, then inspect screen before any tools/permissions; no actual model load/reply yet. Maintain D-005 OPEN, G3B CLOSED, KYNXA HOLD.
 
+- **GOOSE-G3 First real local chat output USER-VERIFIED (2026-10-22):** [redacted screenshot-based evidence](../06-tests-and-evidence/logs/GOOSE-G3-LOCAL-GEMMA1B-FIRST-RESPONSE-20261022.md): native goose local Gemma3 1B Q4_0 (selected G2) responded to actual user greeting «سلام» with «سلام» **plus raw «<turn-context>» tags**, local time and a user home working-directory field (user-identifying path **not copied to GitHub**). Thus **basic text inference works** without observed Jan/Ollama external daemon; chat quality / prompt metadata isolation **NOT PASS** and raw context may be a small-model instruction-following/template issue (hypothesis only). This does NOT imply user files were read nor tools run. Next **one GUI-only innocuous one-sentence Persian chat check** for recurring tags; keep all tools/workspace/shell permissions CLOSED. D-005 OPEN; KYNXA HOLD.
+
 <!-- DJMRN-CURRENT-H2-CANONICAL-END -->
 
 ---
