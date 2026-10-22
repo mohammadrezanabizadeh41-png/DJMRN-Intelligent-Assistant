@@ -297,3 +297,8 @@ This entry documents static source and consistency checks, not actual AI retriev
 - **User-performed action/readout:** after normal UI closing ChatGPT Desktop, `Get-Process ChatGPT` found **0 processes**; Windows available RAM **1.79 GiB**. No coordinator Windows session; gain vs prior readout **0.80 GiB** temporally. Restart suggested but NOT_RUN.
 - **Action by coordinator:** reviewed KYNXA original code for admission/coordination and older scoped local model documentation; recorded observed H0 evidence and proposal for one-model sequential shared resource policy in the ready-host plan, not in global adopted stack. User wishes to avoid unnecessary RAM cleaners and automate safely. Existing KYNXA installer security risks unchanged.
 - **Status:** documentation only, user-device H0 `PARTIAL_HEADROOM_IMPROVED`, H1 ZIP hash USER PASS, H2 onward NOT_RUN. No KYNXA installation, Windows settings/process changes by coordinator, KYNXA memory measurements or replacement of DJMRN fail-closed guard. Record commit/blob via actual GitHub history and verify affected paths on main.
+
+## 2026-10-22 — KYNXA post-restart Windows RAM sample
+- **User observation (read-only):** AvailableRAM_GiB = 2.55, CommitUsed_GiB = 3.37, ChatGPTProcesses = 0. Prior available = 1.79 after ChatGPT closure, initially 0.99; the different snapshots are not an app benchmark.
+- **Evidence:** [KYNXA H0 post-restart readout](../06-tests-and-evidence/logs/KYNXA-H0-POST-RESTART-20261022.md); user-run only.
+- **Status:** H0 improved baseline, H2 installer and KYNXA performance NOT_RUN. Next optional Windows Defender GUI scan of extracted installer and assessment of the security findings. No extra user Windows activity performed by assistant; D-005 remains undecided.
