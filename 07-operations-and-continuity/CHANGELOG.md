@@ -1,5 +1,10 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+
+## 2026-10-22 — KYNXA RAM headroom after restart recorded
+- User reported available 2.55 GiB, committed 3.37 GiB, ChatGPT process count 0. [Actual evidence](../06-tests-and-evidence/logs/KYNXA-H0-POST-RESTART-20261022.md). This is a Windows read-only resource snapshot, not a KYNXA benchmark. EXE security scan and installation remain NOT_RUN; candidate #1 KYNXA / #2 goose unchanged.
+
+
 ## 2026-10-22 — KYNXA H0 user-closed ChatGPT Desktop; 1.79 GiB RAM available
 - User-reported read-only check `ChatGPT_Processes=0` and RAM 1.79 GiB vs prior 0.99 GiB, improvement 0.80 GiB. [Sanitized evidence](../06-tests-and-evidence/logs/KYNXA-H0-USER-CHATGPT-CLOSED-20261022.md). Added conditional idea to evaluate KYNXA's existing resource admission and on-demand model lifecycle before separate RAM manager. **No reboot, install, runtime benchmark, model load, agent permissions, Windows settings change by coordinator or global stack choice**.
 
