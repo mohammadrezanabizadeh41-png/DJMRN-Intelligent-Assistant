@@ -1,4 +1,7 @@
 # DJMRN Windows Bifrost v2.3.2 — NPX `.exe-0` EFTYPE real-device blocker and guarded workaround
+## SUPERSEDING EVIDENCE — 2026-10-23 / STOP previous fix
+User's subsequent read-only PowerShell: `LOCAL_SIZE_BYTES=57943`, `PE_SIGNATURE_VALID=True`, `AMD64_MACHINE=True`, `PE32_PLUS=True`, and official publisher URL `HEAD 200` / `Content-Length=134305792`. **Cached Bifrost file is only ~0.0431% of vendor-advertised complete binary size.** The old **rename-only** workaround `DJMRN-Windows-Bifrost-EFTYPE-Fix-20261023.zip` **MUST NOT BE EXECUTED** with this truncated file. Source-level suffix issue may coexist, but format header does not establish integrity. [Latest actual-user evidence](../06-tests-and-evidence/logs/WINDOWS-BIFROST-TRUNCATED-PE-20261023.md); [software/install statistics](../01-system-inventory/INSTALLATION-AND-DEPLOYMENT-STATISTICS-20261023.md). No Windows Bifrost health, Groq live call or Jan-to-Bifrost connection yet. Compromised first-admin token must not be reused.
+
 **Date:** 2026-10-23; **STATUS:** DEVICE REPORTED REAL ERROR / REPAIR ZIP PREPARED, **USER FIX EXECUTION NOT_YET_VERIFIED**. No real model provider/API connected. No successful Gateway startup or paid activity claim.
 
 ## User's actual Windows observation

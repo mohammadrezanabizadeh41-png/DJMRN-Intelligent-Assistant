@@ -5,6 +5,9 @@
 - [Windows و درایورها](windows-baseline.md)
 - [مشاهده‌های RAM/Commit/دیسک](resource-observations.md) — زمان‌مند
 - [نرم‌افزارهای توسعه و سیستم](software-inventory.md)
+- [آمار نصب و عملیات DJMRN — snapshot روز](INSTALLATION-AND-DEPLOYMENT-STATISTICS-20261023.md)
+- [CSV موجودی نرم‌افزارها](installed-software-snapshot-20261023.csv)
+- [CSV دفتر رویدادهای نصب، اجرا و بررسی](installation-events.csv)
 - [موتورهای AI و مدل‌های محلی](models-and-engines.md)
 - [ابهام‌ها و موارد نیازمند اندازه‌گیری محدود](open-verification.md)
 

@@ -1,5 +1,8 @@
 # DJMRN — User-authorized Windows LIVE rollout, first-start packet (2026-10-23)
 
+## IMPORTANT 2026-10-23 corrected real-device result
+First-start was **attempted on user's Windows but failed**. Current user read-only PowerShell: Node.js v24.22.1 works; Bifrost cache `bifrost-http.exe-0` is 57,943 bytes versus official 134,305,792. **Do not rename or run the incomplete cached binary, nor the previously prepared rename-only ZIP.** [Latest evidence](../06-tests-and-evidence/logs/WINDOWS-BIFROST-TRUNCATED-PE-20261023.md) and [software statistics](../01-system-inventory/INSTALLATION-AND-DEPLOYMENT-STATISTICS-20261023.md). User-device startup remains BLOCKED; synthetic Github Bifrost tests are separate.
+
 **Stage: PREPARED FOR USER EXECUTION / USER WINDOWS RUN NOT YET OBSERVED. NOT production deployed; NO provider/account credentials entered, NO real Groq request attempted, NO installer executed on the user's PC by the coordinator.**
 
 The user explicitly concluded the P2C–P2F synthetic evaluation is sufficient for proceeding to actual installation and use on their existing Windows 11 Pro 8GiB Ryzen 5 3500U laptop. They want a lightweight Cloud-First assistant via official Maxim Bifrost local gateway and their already-installed Jan Desktop.

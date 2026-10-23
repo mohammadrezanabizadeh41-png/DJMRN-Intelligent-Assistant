@@ -16,3 +16,12 @@
 ## Jan G1 shortcut location found, version pending (2026-10-21)
 
 Visual user screenshot confirms Start shortcut `Jan` → `%LOCALAPPDATA%\Programs\Jan\Jan-Desktop.exe`. Earlier `Jan.exe` probe used **wrong filename**. **Still to verify by read-only GUI:** whether the target `Jan-Desktop.exe` actually exists, its **Product/File version** from executable Properties → Details, and later existing Jan MCP/Shell/Allow All settings only when safely visible without starting model/Agent. ChatGPT Plus MCP feature remains unobserved. No path containing Windows account name stored. [G1-R0001](../06-tests-and-evidence/logs/G1-R0001-20261021.md).
+
+## 2026-10-23 — Bifrost download/integrity and actual use gates
+- [x] Win64 confirmed; Node.js v24.22.1 CLI confirmed by user.
+- [x] Cached Bifrost `.exe-0` has MZ/PE/AMD64/PE32+ header **but is only 57,943 bytes vs 134,305,792 official advertised bytes**. **STOP rename-only ZIP**; not executable-ready.
+- [ ] Get complete official native Windows/AMD64 Bifrost transport and verify file length plus publisher digest/signature when available.
+- [ ] Confirm loopback `127.0.0.1:18080` health and admin authentication with NEW token (previous token exposed).
+- [ ] Independently verify actual Groq Free account tier/no billable fallback and single model; then first real call.
+- [ ] Jan-to-Bifrost actual Persian chat and Windows memory/CPU footprint; guard file access closed.
+[Evidence](../06-tests-and-evidence/logs/WINDOWS-BIFROST-TRUNCATED-PE-20261023.md); [statistics](INSTALLATION-AND-DEPLOYMENT-STATISTICS-20261023.md).
