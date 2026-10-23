@@ -59,7 +59,7 @@ for item in 'A djmrn-mock-a' 'B djmrn-mock-b'; do
 done
 
 echo 'Launching digest-pinned actual Maxim Bifrost with fake providers and no external container egress.'
-docker run --detach --rm --name "$GATE" --network "$NETWORK" \
+docker run --detach --name "$GATE" --network "$NETWORK" \
   --publish 127.0.0.1:18080:8080 \
   --cap-drop ALL --security-opt no-new-privileges --memory 1536m --cpus 2 \
   -e APP_HOST=0.0.0.0 \
