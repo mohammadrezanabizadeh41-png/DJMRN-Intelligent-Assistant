@@ -9,8 +9,8 @@ import os
 import urllib.error
 import urllib.request
 
-URL = 'http://127.0.0.1:18080/v1/chat/completions'
-assert URL.startswith('http://127.0.0.1:')
+URL = os.environ.get('DJMRN_GATEWAY_TEST_URL', 'http://127.0.0.1:18080/v1/chat/completions')
+assert URL in ('http://127.0.0.1:18080/v1/chat/completions', 'http://djmrn-bifrost-p2c:8080/v1/chat/completions'), 'Refuse any non-test endpoint'
 ADMIN = os.environ['BIFROST_ADMIN_USERNAME']
 PASSWORD = os.environ['BIFROST_ADMIN_PASSWORD']
 VK = os.environ['BIFROST_TEST_VIRTUAL_KEY']
