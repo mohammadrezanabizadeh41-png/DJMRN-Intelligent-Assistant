@@ -1,6 +1,6 @@
 # ROUTER-P002D — Shared Free-Only Admission / Synthetic Quota Ledger
 
-2026-10-23. **EVALUATION ONLY, TESTED-SYNTHETIC**, NOT a Bifrost plugin/production admission service, no provider account, network, key, billing or Windows access. Source matches an independent Linux standard-library Python 3.13.5 synthetic test (25/25; GitHub workflow evidence must be independently checked after push).
+2026-10-23. **EVALUATION ONLY, TESTED-SYNTHETIC**, NOT a Bifrost plugin/production admission service, no provider account, network, key, billing or Windows access. Source matches an independent Linux standard-library Python 3.13.5 synthetic test (25/25 initial; live GitHub 26/26 after fail-closed hardening).
 
 Design source: [DJMRN P0 policy contract](../../../03-architecture-and-tools/DJMRN-CLOUD-ROUTER-P0-REQUEST-POLICY-CONTRACT-20261023.md). Bifrost real gateway with fake providers already passed [P2C](../../logs/ROUTER-P002C-REAL-BIFROST-SYNTHETIC-GATEWAY-PASS-20261023.md); **P2D is a separate pre-router policy proof and has not been connected to Bifrost**.
 
@@ -13,6 +13,8 @@ Design source: [DJMRN P0 policy contract](../../../03-architecture-and-tools/DJM
 - No model ranking performance empirical benchmark yet. Model tiers are synthetic classification values, NOT real provider model ratings.
 - Run: `python3 -W error::ResourceWarning -m unittest -v test_admission.py`. Python standard library only.
 - Native P2C Bifrost gateway and this conceptual pre-router have not been integrated; D-016 evaluation preference and D-005 undecided remain unchanged.
+
+**Latest live GitHub Actions verification:** [run 39958980545](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/actions/runs/39958980545) completed SUCCESS, 26/26 tests including default `trusted=False`; original [25/25 run](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/actions/runs/39958750766) also SUCCESS. Full evidence: [P2D source/test receipt](../../logs/ROUTER-P002D-FREE-QUOTA-ADMISSION-TESTED-SYNTHETIC-20261023.md).
 
 ## Current public API candidates (RESEARCH ONLY; not approved/activated)
 - [Groq rate limits](https://console.groq.com/docs/rate-limits): organizational/account model-specific quotas; actual limits must be read from the account.
