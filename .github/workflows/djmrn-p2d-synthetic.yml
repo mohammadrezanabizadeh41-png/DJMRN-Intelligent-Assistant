@@ -1,0 +1,22 @@
+name: DJMRN P2D synthetic free quota ledger checks
+on:
+  push:
+    branches: [main]
+    paths:
+      - '06-tests-and-evidence/pilots/ROUTER-P002D-20261023/admission.py'
+      - '06-tests-and-evidence/pilots/ROUTER-P002D-20261023/test_admission.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: djmrn-p2d-synthetic
+  cancel-in-progress: true
+jobs:
+  synthetic-admission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Run Python standard library offline only
+        working-directory: 06-tests-and-evidence/pilots/ROUTER-P002D-20261023
+        run: python3 -W error::ResourceWarning -m unittest -v test_admission.py
