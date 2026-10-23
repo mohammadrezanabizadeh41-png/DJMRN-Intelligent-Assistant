@@ -1,11 +1,16 @@
 # DJMRN — software installation and deployment statistics snapshot (2026-10-23)
 
+## Follow-up 2026-10-23 — complete direct Windows download (LATEST)
+- New direct official HTTPS Windows x64 v2.3.2 binary **134305792/134305792** expected bytes, user-computed SHA256 `430D365584D6F47CC8167AC65A747163AB6FB1ECCF666978F37B263E63C377B2`.
+- Windows Authenticode **NotSigned**; no publisher hash for this exact file independently verified. **EXECUTION NOT_ATTEMPTED**, so native Bifrost is still NOT operational and is NOT an installation success. [User command evidence](../06-tests-and-evidence/logs/WINDOWS-BIFROST-FULL-SIZE-DOWNLOAD-20261023.md).
+- Original NPX-cache file **57943 bytes**, `EFTYPE`, and earlier rename-only repair remain historical failure and must NOT be launched. Current snapshot 21 items, chronological events 15; no real Groq or Jan communication.
+
 ## Interpretation
 **Historical device claims ≠ installed right now; downloaded ≠ installed; package created in ChatGPT ≠ program executed; Github CI PASS ≠ user Windows installed.** This snapshot is a time-bounded register with explicit evidence. Do not sum all rows as simultaneously active programs. Sources are pinned as per-row relative repository paths and original past observation dates; no private username/keys/token in the CSV.
 
 ## Snapshot metrics (derived from CSV at creation)
 - Software/OS/provider components individually classified: **21**.
-- Chronological action/evidence ledger records: **14**.
+- Chronological action/evidence ledger records: **15**.
 - **Current direct user PowerShell CLI**: Node.js v24.22.1 **VERIFIED**; Windows x64 **VERIFIED**. Other current versions not blanket revalidated.
 - **Bifrost v2.3.2 on user's Windows:** one FAILED NPX start (`EFTYPE/-4028`), one 57,943-byte `CACHED_TRUNCATED` file, **zero observed successful user-device Bifrost health checks**, **zero observed Groq real inference**, **zero observed Jan-to-Bifrost successful conversations**.
 - **Official Bifrost Windows amd64 HEAD**: HTTP 200, Content-Length 134,305,792 bytes. Local fraction **0.0431%**; missing **134,247,849** advertised bytes. `MZ/PE/AMD64/PE32+` headers validate superficial structure only, not full binary.
@@ -17,7 +22,7 @@
 
 | Snapshot `state` | Number of rows |
 |---|---:|
-| `CACHED_TRUNCATED_NOT_OPERATIONAL` | 1 |
+| `DOWNLOADED_FULL_SIZE_NOT_EXECUTED` | 1 |
 | `FEATURE_PRESENT_HISTORICAL` | 1 |
 | `INSTALLED_CLI_HISTORICAL` | 4 |
 | `INSTALLED_CLI_VERIFIED_CURRENT` | 1 |
