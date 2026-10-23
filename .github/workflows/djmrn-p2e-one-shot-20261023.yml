@@ -11,7 +11,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   real-gateway-fake-only:
-    if: github.event.head_commit.message == 'ci(p2e): one-time integrated synthetic admission on Bifrost 20261023'
+    if: >-
+      github.event.head_commit.message == 'ci(p2e): one-time integrated synthetic admission on Bifrost 20261023'
     runs-on: ubuntu-latest
     timeout-minutes: 8
     env:
