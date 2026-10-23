@@ -41,7 +41,7 @@ class Request:
     allow_paid_fallback: bool = False
     allow_tier_downgrade: bool = False
     max_attempts: int = 2
-    trusted: bool = True
+    trusted: bool = False
     privacy_class: str = 'normal'
 
 

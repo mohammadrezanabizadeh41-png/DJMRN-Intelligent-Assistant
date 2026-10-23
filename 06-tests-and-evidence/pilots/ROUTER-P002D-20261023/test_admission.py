@@ -15,7 +15,7 @@ class AdmissionTests(unittest.TestCase):
     def setUp(self):
         self.d=tempfile.TemporaryDirectory(); self.ledger=QuotaLedger(os.path.join(self.d.name,'q.db'))
     def tearDown(self):self.d.cleanup()
-    def req(self,n='r',**changes):return replace(Request(n,'lite',frozenset({'chat','persian'}),100),**changes)
+    def req(self,n='r',**changes):return replace(Request(n,'lite',frozenset({'chat','persian'}),100,trusted=True),**changes)
     def deny(self,code,req,routes,attempted=()):
         with self.assertRaises(Denied) as c:self.ledger.reserve(req,routes,DAY,attempted)
         self.assertEqual(c.exception.code,code)
@@ -66,6 +66,8 @@ class AdmissionTests(unittest.TestCase):
         self.assertEqual(self.ledger.reserve(self.req('next'),(A,),'2026-10-24'),'mock-lite-a')
     def test_24_conflicting_reserves_deny(self):
         self.deny('CONFLICTING_SHARED_QUOTA',self.req(),(H,replace(H,route_id='other',protected_daily_reserve=1)))
+    def test_26_default_untrusted_deny(self):
+        self.deny('POLICY_DENIED',Request('untrusted','lite',frozenset({'chat'}),100),(A,))
     def test_25_unsupported_error_no_fallback(self):self.assertEqual(next_step(422),'STOP_UNSUPPORTED_ERROR')
 
 if __name__ == '__main__':unittest.main()
