@@ -32,7 +32,7 @@ class StaticAdmission(unittest.TestCase):
             self.assertNotIn('*',p['allowed_models'])
             self.assertTrue(all(m.startswith('fixture-') for m in p['allowed_models']))
     def test_03_manual_workflow_source_only(self):
-        text=(ROOT/'djmrn-p2c-manual.yml').read_text()
+        text=(ROOT.parents[2]/'.github'/'workflows'/'djmrn-p2c-manual.yml').read_text()
         self.assertIn('workflow_dispatch:', text)
         self.assertNotIn('schedule:',text)
         self.assertNotIn('push:',text)
