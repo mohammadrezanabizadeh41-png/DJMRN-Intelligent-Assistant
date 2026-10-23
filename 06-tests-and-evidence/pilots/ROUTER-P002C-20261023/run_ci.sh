@@ -68,12 +68,37 @@ docker run --detach --rm --name "$GATE" --network "$NETWORK" \
   --mount "type=bind,source=$HERE/config.json,target=/app/data/config.json,readonly" \
   "$BIN" >/dev/null
 
+# Docker --internal may prohibit host->published-port access. Verify health inside the
+# running container and exercise real requests over the same private Docker bridge.
 STATUS='NOT_READY'
-for _ in $(seq 1 45); do
-  if curl -sf --connect-timeout 2 --max-time 2 'http://127.0.0.1:18080/health' >/dev/null; then STATUS='READY'; break; fi
+for _ in $(seq 1 35); do
+  if docker exec "$GATE" wget -q -O /dev/null 'http://127.0.0.1:8080/health' >/dev/null 2>&1; then
+    STATUS='READY'
+    break
+  fi
   sleep 1
 done
-[[ "$STATUS" == 'READY' ]] || { echo 'BLOCKED: pinned Bifrost container did not answer /health; no PASS claimed'; exit 96; }
+if [[ "$STATUS" != 'READY' ]]; then
+  echo 'BLOCKED: Bifrost container itself did not answer /health.'
+  docker inspect --format 'docker_state={{.State.Status}} exit_code={{.State.ExitCode}} oom_killed={{.State.OOMKilled}}' "$GATE" 2>/dev/null || true
+  # Sanitize any ephemeral credentials, do not print provider requests/prompts.
+  python3 - <<'PYSANITIZE' || true
+import os, subprocess, re
+p=subprocess.run(['docker','logs','--tail','40','djmrn-bifrost-p2c'],capture_output=True,text=True)
+out=(p.stdout+'\n'+p.stderr).splitlines()
+for value in [os.getenv(k,'') for k in ('BIFROST_ADMIN_PASSWORD','BIFROST_SETUP_TOKEN','BIFROST_TEST_VIRTUAL_KEY','DJMRN_FAKE_PROVIDER_TOKEN')]:
+    if value: out=[line.replace(value,'[REDACTED]') for line in out]
+for line in out[-24:]:
+    if any(term in line.lower() for term in ('error','fatal','panic','invalid','config','failed','permission','startup','server','sqlite','virtual')):
+        print('DIAGNOSTIC: '+re.sub(r'sk-bf-[a-zA-Z0-9_-]+','[REDACTED-VK]',line)[:450])
+PYSANITIZE
+  exit 96
+fi
 
-python3 "$HERE/probe_gateway.py"
+echo 'BIFROST_HEALTH_INSIDE_CONTAINER_PASS'
+docker run --rm --network "$NETWORK" --cap-drop ALL --security-opt no-new-privileges --memory 256m \
+  -e DJMRN_GATEWAY_TEST_URL="http://$GATE:8080/v1/chat/completions" \
+  -e BIFROST_ADMIN_USERNAME -e BIFROST_ADMIN_PASSWORD -e BIFROST_TEST_VIRTUAL_KEY \
+  --mount "type=bind,source=$HERE/probe_gateway.py,target=/opt/probe_gateway.py,readonly" \
+  python:3.13-slim python -u /opt/probe_gateway.py
 echo 'P2C_GATEWAY_PROBE_SCRIPT_COMPLETED (see individual printed probes; not provider quota or Windows proof)'
