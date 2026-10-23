@@ -3,6 +3,8 @@
 
 [Exact pre-H3 task register version](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/a850550f04e5e891915ba43f91cbe35be000c9f2/02-project-management/TASK-REGISTER.md) preserves the initial rows and all prior event chronology. Current line edits made to TASK-0005/0008/0012 and TASK-0018's G1 pointer only; historic WA/test evidence was not changed.
 
+**2026-10-23 TASK-0028 latest event — TESTED-SYNTHETIC GENUINE BIFROST GATEWAY PASS (not production):** [run 39955366862](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/actions/runs/39955366862) SUCCESS, 16/16 CI preflight and 7 real Bifrost gateway core probes PASS including 429/503 fallback; partial SSE was visibly incomplete. See [P2C detailed evidence](../06-tests-and-evidence/logs/ROUTER-P002C-REAL-BIFROST-SYNTHETIC-GATEWAY-PASS-20261023.md); preceding run 39955043170 failed 502 and is preserved. GitHub public repository status was explicitly acknowledged by user; standard public `ubuntu-latest` Actions usage free. The older TASK-0028 manual-ready/CI-NOT_RUN text lower in this historical register is **superseded**. Next separate Windows and real provider gates remain NOT_RUN, D-016 evaluation only, D-005 OPEN.
+
 | ID | کار | وضعیت | شواهد/پیش‌نیاز | بعدی |
 |---|---|---|---|---|
 | TASK-0001 | ساخت private GitHub repo | DONE USER / VERIFIED CONNECTOR | GitHub repository + main README fetched 2026-10-20 | نگهداری |
