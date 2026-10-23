@@ -1,0 +1,31 @@
+# DJMRN P2C ONE-SHOT CI ONLY: temporary trigger exactly for a named sentry file.
+# This does not access live provider APIs or Windows. Delete after recording result.
+name: DJMRN P2C one-shot synthetic Bifrost 20261023
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/djmrn-p2c-one-shot-20261023.trigger
+permissions:
+  contents: read
+concurrency:
+  group: djmrn-p2c-one-shot-20261023
+  cancel-in-progress: false
+jobs:
+  pinned-synthetic-gateway:
+    if: github.event.head_commit.message == 'ci(p2c): one-time pinned synthetic Bifrost run 20261023'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      DJMRN_APPROVED_FREE_ACTIONS_MINUTES: 'yes'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Check local source and mock admission
+        run: |
+          cd 06-tests-and-evidence/pilots/ROUTER-P002C-20261023
+          python3 -W error::ResourceWarning -m unittest -v test_p2c_preflight.py
+      - name: Run genuine pinned Bifrost with only private mock upstreams
+        shell: bash
+        run: |
+          bash 06-tests-and-evidence/pilots/ROUTER-P002C-20261023/run_ci.sh
