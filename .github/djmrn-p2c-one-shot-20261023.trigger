@@ -5,3 +5,5 @@ Single CI execution for already authorized fake upstream gateway integration. No
 Retry 1 after fixing only YAML parser (previous two workflow-level failures had zero jobs). This sentinel must never be changed again.
 
 Final diagnostic execution: check health from inside isolated Docker network, capture sanitized startup reason, probe localhost gateway only. No live provider APIs.
+
+Last diagnostic: preserve failed container for sanitized startup log inspection, then cleanup.
