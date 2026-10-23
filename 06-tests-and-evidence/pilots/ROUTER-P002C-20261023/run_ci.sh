@@ -23,9 +23,12 @@ FIXTURES="$(mktemp -d -t djmrn-p2c.XXXXXXXX)"
 A='djmrn-mock-a'
 B='djmrn-mock-b'
 GATE='djmrn-bifrost-p2c'
+FRONT="djmrn-p2f-front-$(date +%s)-$"
+ADAPTER='djmrn-p2f-admission'
 
 cleanup() {
-  docker rm -f "$GATE" "$A" "$B" >/dev/null 2>&1 || true
+  docker rm -f "$ADAPTER" "$GATE" "$A" "$B" >/dev/null 2>&1 || true
+  docker network rm "$FRONT" >/dev/null 2>&1 || true
   docker network rm "$NETWORK" >/dev/null 2>&1 || true
   rm -rf -- "$FIXTURES"
   echo 'DJMRN P2C ephemeral containers/network cleanup completed'
@@ -122,4 +125,49 @@ if [[ "${DJMRN_P2E_SYNTHETIC_INTEGRATION:-}" == 'yes' ]]; then
     --mount "type=bind,source=$P2E_DIR,target=/opt/ROUTER-P002E-20261023,readonly" \
     python:3.13-slim python -u /opt/ROUTER-P002E-20261023/integration.py
   echo 'P2E_ADMITTED_GENUINE_BIFROST_SYNTHETIC_PROBE_COMPLETED'
+fi
+
+if [[ "$(printenv DJMRN_P2F_SYNTHETIC_INTEGRATION || true)" == 'yes' ]]; then
+  P2D_DIR="$HERE/../ROUTER-P002D-20261023"
+  P2E_DIR="$HERE/../ROUTER-P002E-20261023"
+  P2F_DIR="$HERE/../ROUTER-P002F-20261023"
+  for f in "$P2D_DIR/admission.py" "$P2E_DIR/integration.py" "$P2F_DIR/server.py" "$P2F_DIR/front_probe.py"; do
+    [[ -f "$f" ]] || { echo 'STOP: P2F source missing'; exit 97; }
+  done
+  mkdir -m 700 "$FIXTURES/p2f-ledger"
+  docker network create --driver bridge --internal "$FRONT" >/dev/null
+  [[ "$(docker network inspect --format '{{.Internal}}' "$FRONT")" == 'true' ]] || {
+    echo 'STOP: front network has egress'; exit 95;
+  }
+  export P2F_CLIENT_TOKEN="$(python3 -c 'import secrets;print(secrets.token_urlsafe(32))')"
+  printf '::add-mask::%s\n' "$P2F_CLIENT_TOKEN"
+  start_adapter() {
+    local bootstrap="$1"
+    docker run --detach --name "$ADAPTER" --network "$NETWORK" \
+      --cap-drop ALL --security-opt no-new-privileges --memory 256m --cpus 1 \
+      -e "DJMRN_P2F_ALLOW_BOOTSTRAP=$bootstrap" \
+      -e DJMRN_P2F_SYNTHETIC_ONLY=yes -e DJMRN_P2F_LEDGER_DIR=/ledger \
+      -e DJMRN_GATEWAY_TEST_URL="http://$GATE:8080/v1/chat/completions" \
+      -e P2F_CLIENT_TOKEN -e BIFROST_ADMIN_USERNAME -e BIFROST_ADMIN_PASSWORD \
+      -e BIFROST_TEST_VIRTUAL_KEY \
+      --mount "type=bind,source=$P2D_DIR,target=/opt/ROUTER-P002D-20261023,readonly" \
+      --mount "type=bind,source=$P2E_DIR,target=/opt/ROUTER-P002E-20261023,readonly" \
+      --mount "type=bind,source=$P2F_DIR,target=/opt/ROUTER-P002F-20261023,readonly" \
+      --mount "type=bind,source=$FIXTURES/p2f-ledger,target=/ledger" \
+      python:3.13-slim python -u /opt/ROUTER-P002F-20261023/server.py >/dev/null
+    docker network connect "$FRONT" "$ADAPTER"
+  }
+  probe_front() {
+    docker run --rm --network "$FRONT" \
+      --cap-drop ALL --security-opt no-new-privileges --memory 256m \
+      -e P2F_CLIENT_TOKEN -e "P2F_PHASE=$1" \
+      --mount "type=bind,source=$P2F_DIR/front_probe.py,target=/opt/front_probe.py,readonly" \
+      python:3.13-slim python -u /opt/front_probe.py
+  }
+  start_adapter yes
+  probe_front first
+  docker rm -f "$ADAPTER" >/dev/null
+  start_adapter no
+  probe_front second
+  echo 'P2F_GENUINE_BIFROST_FRONTEND_ISOLATION_AND_RESTART_PASS'
 fi
