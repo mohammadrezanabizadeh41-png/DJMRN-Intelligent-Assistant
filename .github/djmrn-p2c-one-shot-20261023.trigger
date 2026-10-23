@@ -9,3 +9,5 @@ Final diagnostic execution: check health from inside isolated Docker network, ca
 Last diagnostic: preserve failed container for sanitized startup log inspection, then cleanup.
 
 User confirmed public repository, 2026-10-23. Retry 2: local SQLite + pinned file:// catalogs + client-side health; only synthetic 2-provider isolation. No real API/Windows. Standard ubuntu-latest public repo zero cost.
+
+Retry 3: Bifrost source-pinned documented network_config.allow_private_network true ONLY for fake-a/fake-b across --internal Docker bridge; keeps no host ports/no egress, trace safe 502 reason. 2026-10-23.

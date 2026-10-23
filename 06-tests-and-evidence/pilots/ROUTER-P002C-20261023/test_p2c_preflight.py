@@ -88,6 +88,8 @@ class StaticAdmission(unittest.TestCase):
         self.assertIn('wait_for_gateway()', (ROOT/'probe_gateway.py').read_text())
         self.assertIn("--internal",s)
     def test_11_deny_nonfixture_targets(self):
+        for p in CONFIG['providers'].values():
+            self.assertIs(p['network_config'].get('allow_private_network'),True)
         for provider in CONFIG['providers'].values():
             self.assertTrue(all(x.startswith('fixture-') for x in provider['keys'][0]['models']))
             self.assertIn(provider['network_config']['base_url'],('http://djmrn-mock-a:8081','http://djmrn-mock-b:8081'))

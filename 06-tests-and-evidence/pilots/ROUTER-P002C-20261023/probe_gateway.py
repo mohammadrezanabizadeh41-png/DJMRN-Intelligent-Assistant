@@ -70,7 +70,17 @@ def check(name, test):
 
 
 def require_status(status, body, acceptable, content=None):
-    assert status in acceptable, f'status={status}; wanted {acceptable}'
+    if status not in acceptable:
+        # Safe fixture-only diagnostic, not a request-body dump or external payload.
+        try:
+            data=json.loads(body)
+            description=str(data.get('error', data))[:220]
+        except (ValueError, AttributeError):
+            description='non-JSON gateway error'
+        for secret in (PASSWORD,VK):
+            description=description.replace(secret,'[REDACTED]')
+        print(json.dumps({'probe_failure_status':status,'gateway_error':description}))
+        raise AssertionError(f'status={status}; wanted {acceptable}')
     if content is not None:
         assert content in body, 'expected fixture content not observed'
     return status, True

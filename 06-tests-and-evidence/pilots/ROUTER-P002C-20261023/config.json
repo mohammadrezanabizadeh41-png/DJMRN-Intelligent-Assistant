@@ -72,7 +72,8 @@
       "network_config": {
         "base_url": "http://djmrn-mock-a:8081",
         "default_request_timeout_in_seconds": 5,
-        "max_retries": 0
+        "max_retries": 0,
+        "allow_private_network": true
       },
       "custom_provider_config": {
         "base_provider_type": "openai",
@@ -103,7 +104,8 @@
       "network_config": {
         "base_url": "http://djmrn-mock-b:8081",
         "default_request_timeout_in_seconds": 5,
-        "max_retries": 0
+        "max_retries": 0,
+        "allow_private_network": true
       },
       "custom_provider_config": {
         "base_provider_type": "openai",
