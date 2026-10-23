@@ -1,9 +1,12 @@
 name: DJMRN P2E one-shot synthetic quota admitted Bifrost
 on:
-  push:
-    branches: [main]
-    paths:
-      - .github/djmrn-p2e-one-shot-20261023.trigger
+  workflow_dispatch:
+    inputs:
+      synthetic_only:
+        description: 'Explicitly approve running fake-only gateway integration on standard free public runner'
+        required: true
+        default: false
+        type: boolean
 permissions:
   contents: read
 concurrency:
@@ -11,8 +14,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   real-gateway-fake-only:
-    if: >-
-      github.event.head_commit.message == 'ci(p2e): one-time integrated synthetic admission on Bifrost 20261023'
+    if: ${{ inputs.synthetic_only == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 8
     env:

@@ -6,6 +6,8 @@ Design issue: if Bifrost makes multiple automatic upstream attempts invisibly, a
 
 Safety: only \`djmrn-fake-a/b\` with model \`fixture-*\`; internal Docker bridge \`--internal\`, no host published ports, dummy token and ephemeral auth values, only public pinned OCI and vendor JSON assets, source-only admission, no real provider APIs, no secrets or Windows. The registered price/free/quota metadata is entirely **fictional** and does not establish entitlement to any cloud model.
 
+**Verified live CI:** [run 39962472056](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/actions/runs/39962472056) COMPLETED SUCCESS: P2C 16/16, P2D 26/26, P2E 15/15, 10 P2E guarded live checks through real Bifrost and mock A/B. First [workflow 39962290198](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/actions/runs/39962290198) failed at YAML parse before any job and was fixed. [Independent receipt](../../logs/ROUTER-P002E-LIVE-GATEWAY-ADMISSION-SYNTHETIC-PASS-20261023.md). The one-shot workflow was subsequently disabled for push; manual opt-in only.
+
 Run: Python standard-library P2E 15 unit tests; then \`DJMRN_P2E_SYNTHETIC_INTEGRATION=yes\` adds the integration probe to the existing P2C CI runner. GitHub one-shot workflow triggers only when designated sentry file changes and matching commit message is used. Public standard \`ubuntu-latest\` uses GitHub's no-cost runner tier. No always-on service or schedule.
 
 Gates: If the gateway or admission tests fail, do not silently promote; keep D-016 evaluation only, D-005 undecided, G3B/M1 closed. Real API / billing / account availability / Windows/localhost permissions still NOT APPROVED.
