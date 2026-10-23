@@ -165,7 +165,23 @@ if [[ "$(printenv DJMRN_P2F_SYNTHETIC_INTEGRATION || true)" == 'yes' ]]; then
       python:3.13-slim python -u /opt/front_probe.py
   }
   start_adapter yes
-  probe_front first
+  if ! probe_front first; then
+    echo 'P2F_FRONT_FAILURE_DIAGNOSIS_BEGIN'
+    docker inspect --format 'p2f_adapter={{.State.Status}} exit={{.State.ExitCode}} oom={{.State.OOMKilled}}' "$ADAPTER" || true
+    docker network inspect --format '{{range .Containers}}{{.Name}} {{end}}' "$FRONT" || true
+    python3 - <<'PY_SANITIZE_P2F'
+import os,subprocess
+p=subprocess.run(['docker','logs','--tail','60','djmrn-p2f-admission'],capture_output=True,text=True,timeout=8)
+lines=(p.stdout+'\n'+p.stderr).splitlines()
+for key in ('P2F_CLIENT_TOKEN','BIFROST_ADMIN_PASSWORD','BIFROST_SETUP_TOKEN','BIFROST_TEST_VIRTUAL_KEY'):
+    s=os.environ.get(key,'')
+    if s:lines=[line.replace(s,'[REDACTED]') for line in lines]
+for line in lines[-24:]:
+    if any(term in line.lower() for term in ('traceback','error','exception','runtime','stop','sqlite','import','permission','ready','nameerror','notfound')):
+        print('P2F_SAFE_STARTUP: '+line[:300])
+PY_SANITIZE_P2F
+    exit 96
+  fi
   docker rm -f "$ADAPTER" >/dev/null
   start_adapter no
   probe_front second
