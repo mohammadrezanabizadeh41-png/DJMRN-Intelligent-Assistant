@@ -1,5 +1,7 @@
 # P2F — Synthetic-only admission boundary and restart ledger recovery
 
+**REAL GitHub Actions confirmation:** [39966632465](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/actions/runs/39966632465) completed SUCCESS, job 120458069853: P2C 16 + P2D 26 + P2E 15 + P2F 16 Python tests PASS, real OCI Bifrost mock regression and 19 live P2F front-only assertions PASS. First two [39965861881](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/actions/runs/39965861881) and [39966303514](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/actions/runs/39966303514) failed while diagnosing front readiness and POSIX owner-only ledger mismatch. [Full receipt](../../logs/ROUTER-P002F-LIVE-SEGREGATED-FRONT-AND-RESTART-PASS-20261023.md). One-shot workflow is now manual-only.
+
 2026-10-23; scope: **fake models/providers and authenticated transport through real pinned Bifrost OCI**, never production API, account, Windows, payment or user documents.
 
 ## Purpose

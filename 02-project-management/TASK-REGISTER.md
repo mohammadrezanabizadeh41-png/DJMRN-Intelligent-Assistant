@@ -9,6 +9,8 @@
 
 **LATEST 2026-10-23 ROUTER-P002E / successor of TASK-0028:** [CI 39962472056](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/actions/runs/39962472056) SUCCESS; 57 Python unit tests and 10 P2E live integration assertions through actual pinned Bifrost with only mock A/B PASS. Includes separate test of pre-router-account quota reservation before each HTTP attempt; [receipt](../06-tests-and-evidence/logs/ROUTER-P002E-LIVE-GATEWAY-ADMISSION-SYNTHETIC-PASS-20261023.md). **Next:** privacy/authorization boundary for direct gateway bypass, account-level supplier no-overage and scope-limited Windows resource probe separately; real provider, model quality and production still NOT_RUN. D-016 candidate only, D-005 OPEN.
 
+**CURRENT 2026-10-23 P2F successor to TASK-0028:** [run 39966632465](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/actions/runs/39966632465) SUCCESS; 73 Python unit checks + 19 genuine pinned Bifrost synthetic front-network checks, 2 networks prevent front-only bypass, SQLite same-volume quota survives adapter removal/recreate; fail history and explicit limits in [P2F receipt](../06-tests-and-evidence/logs/ROUTER-P002F-LIVE-SEGREGATED-FRONT-AND-RESTART-PASS-20261023.md). **Next:** provider-account free API/billing permission and/or explicitly scoped Windows low-RAM test, each separate gate. D-016 evaluation only, D-005 OPEN, no real API/model claimed.
+
 | ID | کار | وضعیت | شواهد/پیش‌نیاز | بعدی |
 |---|---|---|---|---|
 | TASK-0001 | ساخت private GitHub repo | DONE USER / VERIFIED CONNECTOR | GitHub repository + main README fetched 2026-10-20 | نگهداری |
