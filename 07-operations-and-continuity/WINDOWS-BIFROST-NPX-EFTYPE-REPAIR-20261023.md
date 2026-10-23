@@ -1,0 +1,25 @@
+# DJMRN Windows Bifrost v2.3.2 — NPX `.exe-0` EFTYPE real-device blocker and guarded workaround
+**Date:** 2026-10-23; **STATUS:** DEVICE REPORTED REAL ERROR / REPAIR ZIP PREPARED, **USER FIX EXECUTION NOT_YET_VERIFIED**. No real model provider/API connected. No successful Gateway startup or paid activity claim.
+
+## User's actual Windows observation
+- User launched prior attached `DJMRN-Windows-Live-Start-20261023.zip`; first run found no `npx.cmd`, asked permission to install Node.js LTS; user subsequently ran launcher again and it proceeded to Bifrost bootstrap, suggesting npx became available. Exact Node version, install result and machine process list not independently inspected.
+- Bifrost emitted `Failed to start Bifrost. Error: spawnSync ...\\bifrost\\v2.3.2\\bin\\bifrost-http.exe-0 EFTYPE`, `Error code: EFTYPE`, `System error: -4028`, `Bifrost exited with code 1`. The cache is within the user's `%LOCALAPPDATA%`; the program did not remain running. DO NOT claim Groq/Jan used or a productive installation.
+- A randomly generated **first-admin setup token was exposed in chat**. **Do not copy/reproduce it in any repository, log, script, response or command**. Treat it as compromised; use a new token before enabling an administrator account. As the gateway did not boot, first token likely had no opportunity for admin setup, but do not assume privacy.
+- Existing local `%LOCALAPPDATA%\\DJMRN\\Bifrost\\config.json` was observed preserved by startup script. No destructive cleanup approved.
+
+## Precise source-level diagnosis (not yet proven repaired on Windows)
+The vendor's exact tagged official Node gateway launcher [`npx/bifrost/bin.js`](https://github.com/maximhq/bifrost/blob/a05ea20e68bf116a35e9f05b1a3d749624b3935e/npx/bifrost/bin.js) (Git SHA `a05ea20e68bf116a35e9f05b1a3d749624b3935e`, Git blob `5ecc75a76632cbae8ebe0fb0598a6f631d9c2163`) selects Windows `binaryName = "bifrost-http.exe"` but stores the downloaded binary under `join(bifrostBinDir, \`\${binaryName}-\${i}\`)`, for the first URL yielding `bifrost-http.exe-0`, then calls `execFileSync(binaryPath, remainingArgs)`. The Windows executable suffix is now `.exe-0`, matching the observed error. Root cause is **strongly supported by exact source and error**, but the device-specific success of the workaround is not yet observed. Not a model/account/token error.
+
+Official pinned download path in vendor code: `https://downloads.getmaxim.ai/bifrost/v2.3.2/windows/amd64/bifrost-http.exe`; no auto-downgrade/version switch.
+
+## Attached repair artifact
+- **Conversation ZIP:** `DJMRN-Windows-Bifrost-EFTYPE-Fix-20261023.zip` with SHA256 **`37b72d4ded41c5ac583504fe5534b3155ed52b634b506a89310ef71f199494da`**, size **6279 bytes**, ZIP CRC verification PASS. **Located in 2026-10-23 originating ChatGPT conversation attachments, NOT in GitHub.**
+- 5 files in ZIP: `START-DJMRN.cmd`, `Start-DJMRN.ps1`, `CHECK-DJMRN.cmd`, `Check-DJMRN.ps1`, `README-FA.md`. Source script SHA256 `55a00696448bef8e03a3d69ee2d83092d4ba715ea5a70d0dde6c2ead58cd61be`.
+- Action: only use cached path `%LOCALAPPDATA%\\bifrost\\v2.3.2\\bin\\bifrost-http.exe-0`. Confirm its size and Windows **MZ + PE signature, machine AMD64 (0x8664), PE32+ (0x20B)**; create verified matching-SHA256 copy under `%LOCALAPPDATA%\\DJMRN\\Native\\v2.3.2\\bifrost-http.exe`; run *that* binary directly on `127.0.0.1:18080` with exact user-local existing `-app-dir`. The artifact performs no downloads, no new installations, no Docker, no WSL, no global PATH/security/firewall updates, no scheduled task, no user-file access, no provider API call and no config overwrite.
+- **Integrity limitation:** PE structural check and cache-vs-copy SHA equality are NOT authentic software-vendor code signing/known-good published digest verification; cache provenance originally comes from the official npx launcher, downloaded over HTTPS. If cached bytes are not valid Windows AMD64 PE, **STOP** without executing them; do not disable Windows Defender/SmartScreen.
+- Always generate and use a fresh 256-bit first-admin setup token. The new token appears only in **user console**, never in this document/GitHub or chat.
+- Run new `START-DJMRN.cmd` from extracted **new ZIP in separate folder**, not original launcher. Confirm localhost dashboard/health, admin setup; then ONLY after account verified genuine Free and no billable/overage options, connect a single Groq Free model and then Jan. Existing P2D/F simulated Python ledger is not native deployed Windows protection.
+
+## Outstanding
+- **USER ACTION PENDING:** run guarded fix; if error, share only sanitized error lines with no token, API key, password or personal data. Could be a damaged/non-PE cached binary; if so determine separately without guessing.
+- D-016 selected bounded router evaluation/initial rollout only. D-005 overall stack still open. G3B/M1 Windows file access guards CLOSED. Bifrost + Jan + Groq actual request NOT_RUN on user's Windows.
