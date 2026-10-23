@@ -1,7 +1,17 @@
 {
-  "config_store": {"enabled": false},
-  "logs_store": {"enabled": false},
-  "client": {"enforce_auth_on_inference": true},
+  "config_store": {
+    "enabled": true,
+    "type": "sqlite",
+    "config": {
+      "path": "/tmp/djmrn-p2c-config.db"
+    }
+  },
+  "logs_store": {
+    "enabled": false
+  },
+  "client": {
+    "enforce_auth_on_inference": true
+  },
   "governance": {
     "auth_config": {
       "is_enabled": true,
@@ -9,35 +19,112 @@
       "admin_password": "env.BIFROST_ADMIN_PASSWORD",
       "setup_token": "env.BIFROST_SETUP_TOKEN"
     },
-    "virtual_keys": [{
-      "id": "djmrn-p2b-synthetic-vk",
-      "name": "DJMRN P2B Fake Model Only",
-      "value": "env.BIFROST_TEST_VIRTUAL_KEY",
-      "is_active": true,
-      "provider_configs": [
-        {"provider": "djmrn-fake-a", "allowed_models": ["fixture-ok","fixture-rate429","fixture-down503","fixture-no-done"], "key_ids": ["*"]},
-        {"provider": "djmrn-fake-b", "allowed_models": ["fixture-ok","fixture-rate429","fixture-down503","fixture-no-done"], "key_ids": ["*"]}
-      ]
-    }]
+    "virtual_keys": [
+      {
+        "id": "djmrn-p2b-synthetic-vk",
+        "name": "DJMRN P2B Fake Model Only",
+        "value": "env.BIFROST_TEST_VIRTUAL_KEY",
+        "is_active": true,
+        "provider_configs": [
+          {
+            "provider": "djmrn-fake-a",
+            "allowed_models": [
+              "fixture-ok",
+              "fixture-rate429",
+              "fixture-down503",
+              "fixture-no-done"
+            ],
+            "key_ids": [
+              "*"
+            ]
+          },
+          {
+            "provider": "djmrn-fake-b",
+            "allowed_models": [
+              "fixture-ok",
+              "fixture-rate429",
+              "fixture-down503",
+              "fixture-no-done"
+            ],
+            "key_ids": [
+              "*"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "providers": {
     "djmrn-fake-a": {
-      "keys": [{"name": "fake-key-a", "value": "env.DJMRN_FAKE_PROVIDER_TOKEN", "models": ["fixture-ok","fixture-rate429","fixture-down503","fixture-no-done"], "weight": 1.0}],
-      "network_config": {"base_url": "http://djmrn-mock-a:8081", "default_request_timeout_in_seconds": 5, "max_retries": 0},
+      "keys": [
+        {
+          "name": "fake-key-a",
+          "value": "env.DJMRN_FAKE_PROVIDER_TOKEN",
+          "models": [
+            "fixture-ok",
+            "fixture-rate429",
+            "fixture-down503",
+            "fixture-no-done"
+          ],
+          "weight": 1
+        }
+      ],
+      "network_config": {
+        "base_url": "http://djmrn-mock-a:8081",
+        "default_request_timeout_in_seconds": 5,
+        "max_retries": 0
+      },
       "custom_provider_config": {
         "base_provider_type": "openai",
-        "allowed_requests": {"chat_completion": true,"chat_completion_stream": true},
-        "request_path_overrides": {"chat_completion": "/v1/chat/completions", "chat_completion_stream": "/v1/chat/completions"}
+        "allowed_requests": {
+          "chat_completion": true,
+          "chat_completion_stream": true
+        },
+        "request_path_overrides": {
+          "chat_completion": "/v1/chat/completions",
+          "chat_completion_stream": "/v1/chat/completions"
+        }
       }
     },
     "djmrn-fake-b": {
-      "keys": [{"name": "fake-key-b", "value": "env.DJMRN_FAKE_PROVIDER_TOKEN", "models": ["fixture-ok","fixture-rate429","fixture-down503","fixture-no-done"], "weight": 1.0}],
-      "network_config": {"base_url": "http://djmrn-mock-b:8081", "default_request_timeout_in_seconds": 5, "max_retries": 0},
+      "keys": [
+        {
+          "name": "fake-key-b",
+          "value": "env.DJMRN_FAKE_PROVIDER_TOKEN",
+          "models": [
+            "fixture-ok",
+            "fixture-rate429",
+            "fixture-down503",
+            "fixture-no-done"
+          ],
+          "weight": 1
+        }
+      ],
+      "network_config": {
+        "base_url": "http://djmrn-mock-b:8081",
+        "default_request_timeout_in_seconds": 5,
+        "max_retries": 0
+      },
       "custom_provider_config": {
         "base_provider_type": "openai",
-        "allowed_requests": {"chat_completion": true,"chat_completion_stream": true},
-        "request_path_overrides": {"chat_completion": "/v1/chat/completions", "chat_completion_stream": "/v1/chat/completions"}
+        "allowed_requests": {
+          "chat_completion": true,
+          "chat_completion_stream": true
+        },
+        "request_path_overrides": {
+          "chat_completion": "/v1/chat/completions",
+          "chat_completion_stream": "/v1/chat/completions"
+        }
       }
+    }
+  },
+  "$schema": "https://www.getbifrost.ai/schema",
+  "version": 2,
+  "framework": {
+    "pricing": {
+      "pricing_url": "file:///app/data/pricing.json",
+      "pricing_sync_interval": 86400,
+      "model_parameters_url": "file:///app/data/model-parameters.json"
     }
   }
 }

@@ -1,10 +1,10 @@
-# Manual-only: no push, schedule, PR triggers, and no privileged repository token.
+# Manual-only: no automatic push, schedule, PR triggers, and no privileged repository token.
 name: DJMRN P2C pinned Bifrost synthetic-only manual CI
 on:
   workflow_dispatch:
     inputs:
       billing_guard_confirmed:
-        description: 'I verified remaining free Actions minutes and a strict zero-overage budget for this private repo'
+        description: 'I confirmed this is a public repository using free standard ubuntu-latest Actions'
         required: true
         default: false
         type: boolean

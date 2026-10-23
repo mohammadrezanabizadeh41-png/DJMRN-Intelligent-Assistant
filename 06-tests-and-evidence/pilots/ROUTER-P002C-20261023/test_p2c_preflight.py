@@ -41,7 +41,7 @@ class StaticAdmission(unittest.TestCase):
         self.assertIn('permissions:',text)
     def test_04_safety_runner_shell_guards(self):
         script=(ROOT/'run_ci.sh').read_text()
-        for literal in ('--internal','127.0.0.1:18080:8080','--cap-drop ALL', 'DJMRN_APPROVED_FREE_ACTIONS_MINUTES', 'sha256:d53775fd4b1d444c350443d2487ceb8aa8c0bab722cd5dc7b0001a7fa88ecd7f'):
+        for literal in ('--internal','--tmpfs','--cap-drop ALL', 'DJMRN_APPROVED_FREE_ACTIONS_MINUTES', 'sha256:d53775fd4b1d444c350443d2487ceb8aa8c0bab722cd5dc7b0001a7fa88ecd7f'):
             self.assertIn(literal, script)
     def test_05_no_approval_refuses_before_docker(self):
         env=dict(os.environ);env.pop('DJMRN_APPROVED_FREE_ACTIONS_MINUTES',None)
@@ -68,5 +68,47 @@ class StaticAdmission(unittest.TestCase):
         self.assertNotIn('http://djmrn-mock-',src)
         self.assertIn('unauthenticated_denied',src)
         self.assertIn('bifrost_429_fallback',src)
+
+    def test_08_config_store_sqlite_is_ephemeral(self):
+        self.assertEqual(CONFIG['config_store']['enabled'],True)
+        self.assertEqual(CONFIG['config_store']['type'],'sqlite')
+        self.assertEqual(CONFIG['config_store']['config']['path'],'/tmp/djmrn-p2c-config.db')
+        self.assertEqual(CONFIG['logs_store']['enabled'],False)
+    def test_09_offline_catalogs_pinned(self):
+        p=CONFIG['framework']['pricing']
+        self.assertEqual(p['pricing_url'],'file:///app/data/pricing.json')
+        self.assertEqual(p['model_parameters_url'],'file:///app/data/model-parameters.json')
+        s=(ROOT/'run_ci.sh').read_text()
+        self.assertIn('b12642f6808eca16adfdcf6dcdf656e3f145bcf7',s)
+        self.assertIn('31532d0f1f48af3ddd0a916543f36ccc367b7e00',s)
+    def test_10_no_host_port_and_local_health(self):
+        s=(ROOT/'run_ci.sh').read_text()
+        self.assertNotIn('--publish',s)
+        self.assertNotIn('docker exec',s)
+        self.assertIn('wait_for_gateway()', (ROOT/'probe_gateway.py').read_text())
+        self.assertIn("--internal",s)
+    def test_11_deny_nonfixture_targets(self):
+        for provider in CONFIG['providers'].values():
+            self.assertTrue(all(x.startswith('fixture-') for x in provider['keys'][0]['models']))
+            self.assertIn(provider['network_config']['base_url'],('http://djmrn-mock-a:8081','http://djmrn-mock-b:8081'))
+    def test_12_fallback_probe_present(self):
+        s=(ROOT/'probe_gateway.py').read_text()
+        self.assertIn('bifrost_429_fallback',s)
+        self.assertIn('bifrost_503_fallback',s)
+    def test_13_auth_error_guard(self):
+        s=(ROOT/'probe_gateway.py').read_text()
+        self.assertIn('missing_virtual_key_denied',s)
+        self.assertIn('unauthenticated_denied',s)
+    def test_14_denied_paid_fixture(self):
+        s=(ROOT/'probe_gateway.py').read_text()
+        self.assertIn('explicit_nonallowlisted_model_denied',s)
+        self.assertTrue(CONFIG['client']['enforce_auth_on_inference'])
+    def test_15_stream_incomplete_diagnostic(self):
+        s=(ROOT/'probe_gateway.py').read_text()
+        self.assertIn('partial_stream_observed',s)
+        self.assertIn('valid_gateway_stream',s)
+    def test_16_positive_guard_not_hardcoded(self):
+        self.assertIn("DJMRN_APPROVED_FREE_ACTIONS_MINUTES", (ROOT/'run_ci.sh').read_text())
+        self.assertIn("DJMRN_APPROVED_FREE_ACTIONS_MINUTES: 'yes'", (ROOT.parents[2]/'.github/workflows/djmrn-p2c-manual.yml').read_text())
 
 if __name__=='__main__':unittest.main()

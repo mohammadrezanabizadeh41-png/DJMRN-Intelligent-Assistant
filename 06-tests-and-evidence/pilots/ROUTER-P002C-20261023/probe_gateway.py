@@ -6,6 +6,7 @@ Failure is reported rather than silently switching to a test-client fallback.
 import base64
 import json
 import os
+import time
 import urllib.error
 import urllib.request
 
@@ -15,6 +16,21 @@ ADMIN = os.environ['BIFROST_ADMIN_USERNAME']
 PASSWORD = os.environ['BIFROST_ADMIN_PASSWORD']
 VK = os.environ['BIFROST_TEST_VIRTUAL_KEY']
 assert PASSWORD and VK.startswith('sk-bf-')
+
+
+def wait_for_gateway(timeout_seconds=35):
+    health = URL.rsplit('/v1/chat/completions',1)[0] + '/health'
+    deadline = time.monotonic() + timeout_seconds
+    while time.monotonic() < deadline:
+        try:
+            with urllib.request.urlopen(health, timeout=2) as response:
+                if response.status == 200:
+                    print('GATEWAY_HEALTH_ENDPOINT_PASS')
+                    return
+        except (OSError, urllib.error.URLError):
+            pass
+        time.sleep(1)
+    raise RuntimeError('Bifrost health check timeout; NOT READY')
 
 
 def post(model, fallbacks=(), *, authorized=True, with_vk=True, stream=False):
@@ -61,6 +77,7 @@ def require_status(status, body, acceptable, content=None):
 
 
 def main():
+    wait_for_gateway()
     # 1. Fail before allowing any successful inference if auth/vk is bypassed.
     check('unauthenticated_denied', lambda: require_status(*post('djmrn-fake-a/fixture-ok',authorized=False,with_vk=False), {401,403}))
     check('missing_virtual_key_denied', lambda: require_status(*post('djmrn-fake-a/fixture-ok',with_vk=False), {401,403}))

@@ -3,7 +3,7 @@
 set -Eeuo pipefail
 
 if [[ "${DJMRN_APPROVED_FREE_ACTIONS_MINUTES:-}" != 'yes' ]]; then
-  echo 'STOP: account owner must verify available free Actions minutes and a zero-overage spending budget before manually dispatching.'
+  echo 'STOP: free public-repository standard-runner approval is required.'
   exit 90
 fi
 if [[ "$(uname -s)" != 'Linux' || "$(uname -m)" != 'x86_64' ]]; then
@@ -12,10 +12,14 @@ if [[ "$(uname -s)" != 'Linux' || "$(uname -m)" != 'x86_64' ]]; then
 fi
 command -v docker >/dev/null || { echo 'STOP: Docker not installed'; exit 92; }
 command -v python3 >/dev/null || { echo 'STOP: Python 3 not installed'; exit 93; }
+command -v curl >/dev/null || { echo 'STOP: curl is not installed'; exit 93; }
+command -v git >/dev/null || { echo 'STOP: git is not installed'; exit 93; }
 
 HERE="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 NETWORK="djmrn-p2c-${GITHUB_RUN_ID:-manual}-$$"
 BIN="maximhq/bifrost@sha256:d53775fd4b1d444c350443d2487ceb8aa8c0bab722cd5dc7b0001a7fa88ecd7f"
+
+FIXTURES="$(mktemp -d -t djmrn-p2c.XXXXXXXX)"
 A='djmrn-mock-a'
 B='djmrn-mock-b'
 GATE='djmrn-bifrost-p2c'
@@ -23,9 +27,20 @@ GATE='djmrn-bifrost-p2c'
 cleanup() {
   docker rm -f "$GATE" "$A" "$B" >/dev/null 2>&1 || true
   docker network rm "$NETWORK" >/dev/null 2>&1 || true
+  rm -rf -- "$FIXTURES"
   echo 'DJMRN P2C ephemeral containers/network cleanup completed'
 }
 trap cleanup EXIT
+
+VENDOR_SOURCE_COMMIT='a05ea20e68bf116a35e9f05b1a3d749624b3935e'
+for entry in \
+  'pricing.json b12642f6808eca16adfdcf6dcdf656e3f145bcf7' \
+  'model-parameters.json 31532d0f1f48af3ddd0a916543f36ccc367b7e00'; do
+  read -r filename blob <<< "$entry"
+  url="https://raw.githubusercontent.com/maximhq/bifrost/${VENDOR_SOURCE_COMMIT}/examples/configs/withlocalpricingfiles/${filename}"
+  curl --proto '=https' --tlsv1.2 -fLsS --max-time 30 --retry 1 --output "$FIXTURES/$filename" "$url"
+  if [[ "$(git hash-object -- "$FIXTURES/$filename")" != "$blob" ]]; then echo "STOP: vendor Git blob mismatch: $filename"; exit 98; fi
+done
 
 echo 'Checking pinned official linux/amd64 OCI image (no latest tag).'
 docker pull --platform linux/amd64 "$BIN" >/dev/null
@@ -60,45 +75,34 @@ done
 
 echo 'Launching digest-pinned actual Maxim Bifrost with fake providers and no external container egress.'
 docker run --detach --name "$GATE" --network "$NETWORK" \
-  --publish 127.0.0.1:18080:8080 \
   --cap-drop ALL --security-opt no-new-privileges --memory 1536m --cpus 2 \
+  --tmpfs '/tmp:rw,nosuid,nodev,size=64m,uid=1000,gid=0' \
   -e APP_HOST=0.0.0.0 \
   -e BIFROST_SETUP_TOKEN -e BIFROST_ADMIN_USERNAME -e BIFROST_ADMIN_PASSWORD \
   -e BIFROST_TEST_VIRTUAL_KEY -e DJMRN_FAKE_PROVIDER_TOKEN \
   --mount "type=bind,source=$HERE/config.json,target=/app/data/config.json,readonly" \
+  --mount "type=bind,source=$FIXTURES/pricing.json,target=/app/data/pricing.json,readonly" \
+  --mount "type=bind,source=$FIXTURES/model-parameters.json,target=/app/data/model-parameters.json,readonly" \
   "$BIN" >/dev/null
 
-# Docker --internal may prohibit host->published-port access. Verify health inside the
-# running container and exercise real requests over the same private Docker bridge.
-STATUS='NOT_READY'
-for _ in $(seq 1 35); do
-  if docker exec "$GATE" wget -q -O /dev/null 'http://127.0.0.1:8080/health' >/dev/null 2>&1; then
-    STATUS='READY'
-    break
-  fi
-  sleep 1
-done
-if [[ "$STATUS" != 'READY' ]]; then
-  echo 'BLOCKED: Bifrost container itself did not answer /health.'
+# Probe from a separate ephemeral client within the internal-only Docker network.
+if ! docker run --rm --network "$NETWORK" --cap-drop ALL --security-opt no-new-privileges --memory 256m \
+  -e DJMRN_GATEWAY_TEST_URL="http://$GATE:8080/v1/chat/completions" \
+  -e BIFROST_ADMIN_USERNAME -e BIFROST_ADMIN_PASSWORD -e BIFROST_TEST_VIRTUAL_KEY \
+  --mount "type=bind,source=$HERE/probe_gateway.py,target=/opt/probe_gateway.py,readonly" \
+  python:3.13-slim python -u /opt/probe_gateway.py; then
+  echo 'P2C_GATEWAY_PROBE_FAILED: inspect state and scrubbed startup errors; NOT PASS'
   docker inspect --format 'docker_state={{.State.Status}} exit_code={{.State.ExitCode}} oom_killed={{.State.OOMKilled}}' "$GATE" 2>/dev/null || true
-  # Sanitize any ephemeral credentials, do not print provider requests/prompts.
   python3 - <<'PYSANITIZE' || true
 import os, subprocess, re
 p=subprocess.run(['docker','logs','--tail','40','djmrn-bifrost-p2c'],capture_output=True,text=True)
-out=(p.stdout+'\n'+p.stderr).splitlines()
-for value in [os.getenv(k,'') for k in ('BIFROST_ADMIN_PASSWORD','BIFROST_SETUP_TOKEN','BIFROST_TEST_VIRTUAL_KEY','DJMRN_FAKE_PROVIDER_TOKEN')]:
-    if value: out=[line.replace(value,'[REDACTED]') for line in out]
-for line in out[-24:]:
-    if any(term in line.lower() for term in ('error','fatal','panic','invalid','config','failed','permission','startup','server','sqlite','virtual')):
+lines=(p.stdout+'\n'+p.stderr).splitlines()
+for v in [os.getenv(k,'') for k in ('BIFROST_ADMIN_PASSWORD','BIFROST_SETUP_TOKEN','BIFROST_TEST_VIRTUAL_KEY','DJMRN_FAKE_PROVIDER_TOKEN')]:
+    if v: lines=[line.replace(v,'[REDACTED]') for line in lines]
+for line in lines[-24:]:
+    if any(term in line.lower() for term in ('error','fatal','panic','invalid','config','failed','permission','startup','server','sqlite','virtual','pricing')):
         print('DIAGNOSTIC: '+re.sub(r'sk-bf-[a-zA-Z0-9_-]+','[REDACTED-VK]',line)[:450])
 PYSANITIZE
   exit 96
 fi
-
-echo 'BIFROST_HEALTH_INSIDE_CONTAINER_PASS'
-docker run --rm --network "$NETWORK" --cap-drop ALL --security-opt no-new-privileges --memory 256m \
-  -e DJMRN_GATEWAY_TEST_URL="http://$GATE:8080/v1/chat/completions" \
-  -e BIFROST_ADMIN_USERNAME -e BIFROST_ADMIN_PASSWORD -e BIFROST_TEST_VIRTUAL_KEY \
-  --mount "type=bind,source=$HERE/probe_gateway.py,target=/opt/probe_gateway.py,readonly" \
-  python:3.13-slim python -u /opt/probe_gateway.py
 echo 'P2C_GATEWAY_PROBE_SCRIPT_COMPLETED (see individual printed probes; not provider quota or Windows proof)'
