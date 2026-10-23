@@ -106,3 +106,20 @@ PYSANITIZE
   exit 96
 fi
 echo 'P2C_GATEWAY_PROBE_SCRIPT_COMPLETED (see individual printed probes; not provider quota or Windows proof)'
+if [[ "${DJMRN_P2E_SYNTHETIC_INTEGRATION:-}" == 'yes' ]]; then
+  P2D_DIR="$HERE/../ROUTER-P002D-20261023"
+  P2E_DIR="$HERE/../ROUTER-P002E-20261023"
+  for needed in "$P2D_DIR/admission.py" "$P2E_DIR/integration.py"; do
+    [[ -f "$needed" ]] || { echo 'STOP: missing P2E source'; exit 97; }
+  done
+  echo 'Launching P2E integrated metered-admission probe: only fake upstreams.'
+  docker run --rm --network "$NETWORK" --cap-drop ALL --security-opt no-new-privileges \
+    --memory 256m \
+    -e DJMRN_P2E_SYNTHETIC_ONLY=yes \
+    -e DJMRN_GATEWAY_TEST_URL="http://$GATE:8080/v1/chat/completions" \
+    -e BIFROST_ADMIN_USERNAME -e BIFROST_ADMIN_PASSWORD -e BIFROST_TEST_VIRTUAL_KEY \
+    --mount "type=bind,source=$P2D_DIR,target=/opt/ROUTER-P002D-20261023,readonly" \
+    --mount "type=bind,source=$P2E_DIR,target=/opt/ROUTER-P002E-20261023,readonly" \
+    python:3.13-slim python -u /opt/ROUTER-P002E-20261023/integration.py
+  echo 'P2E_ADMITTED_GENUINE_BIFROST_SYNTHETIC_PROBE_COMPLETED'
+fi

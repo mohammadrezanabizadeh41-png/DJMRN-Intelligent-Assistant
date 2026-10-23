@@ -1,0 +1,35 @@
+name: DJMRN P2E one-shot synthetic quota admitted Bifrost
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/djmrn-p2e-one-shot-20261023.trigger
+permissions:
+  contents: read
+concurrency:
+  group: djmrn-p2e-once
+  cancel-in-progress: false
+jobs:
+  real-gateway-fake-only:
+    if: github.event.head_commit.message == 'ci(p2e): one-time integrated synthetic admission on Bifrost 20261023'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      DJMRN_APPROVED_FREE_ACTIONS_MINUTES: 'yes'
+      DJMRN_P2E_SYNTHETIC_INTEGRATION: 'yes'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: P2C baseline regression test
+        working-directory: 06-tests-and-evidence/pilots/ROUTER-P002C-20261023
+        run: python3 -W error::ResourceWarning -m unittest -v test_p2c_preflight.py
+      - name: P2D shared quota ledger regression test
+        working-directory: 06-tests-and-evidence/pilots/ROUTER-P002D-20261023
+        run: python3 -W error::ResourceWarning -m unittest -v test_admission.py
+      - name: P2E offline transport-admission regression test
+        working-directory: 06-tests-and-evidence/pilots/ROUTER-P002E-20261023
+        env:
+          PYTHONPATH: ../ROUTER-P002D-20261023
+        run: python3 -W error::ResourceWarning -m unittest -v test_integration.py
+      - name: Run actual pinned Bifrost on internal-only Docker fixture network
+        shell: bash
+        run: bash 06-tests-and-evidence/pilots/ROUTER-P002C-20261023/run_ci.sh
