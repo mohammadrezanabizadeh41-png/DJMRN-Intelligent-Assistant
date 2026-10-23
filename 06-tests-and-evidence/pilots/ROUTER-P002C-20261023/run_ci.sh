@@ -144,6 +144,7 @@ if [[ "$(printenv DJMRN_P2F_SYNTHETIC_INTEGRATION || true)" == 'yes' ]]; then
   start_adapter() {
     local bootstrap="$1"
     docker run --detach --name "$ADAPTER" --network "$NETWORK" \
+      --user "$(id -u):$(id -g)" \
       --cap-drop ALL --security-opt no-new-privileges --memory 256m --cpus 1 \
       -e "DJMRN_P2F_ALLOW_BOOTSTRAP=$bootstrap" \
       -e DJMRN_P2F_SYNTHETIC_ONLY=yes -e DJMRN_P2F_LEDGER_DIR=/ledger \
