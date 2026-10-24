@@ -1,4 +1,12 @@
 # Test Register — historical vs new
+
+## 2026-10-24 — Cross-window router tests and installer checkpoint
+- **BIFROST-WIN-REAL-BOOT:** Maxim Bifrost v2.3.2 native exe ran on user Windows: file SHA-length and PE64 PASS, sqlite migration PASS, remote `getbifrost.ai/datasheet` timed out, process EXIT1, **gateway NOT_OPERATIONAL**. [Real device log](logs/WINDOWS-BIFROST-USER-NATIVE-BOOT-PRICING-TIMEOUT-20261023.md).
+- **BIFROST-CI-P2C-P2F:** genuine Bifrost with FAKE provider servers in GitHub Actions, last P2F 73/73 Python checks and 19 synthetic live assertions PASS; **NOT real cloud quotas, models, billing or Windows device**. [P2F](logs/ROUTER-P002F-LIVE-SEGREGATED-FRONT-AND-RESTART-PASS-20261023.md).
+- **OMNIROUTE-WIN-SETUP-001:** User downloaded Windows v3.8.52 installer, says execution permission/install blocked despite retries; **BLOCKED WITHOUT ERROR DIAGNOSTIC / NOT INSTALLED**. No verified local checksum, AV classification or working server; no inference. [Specific evidence](logs/OMNIROUTE-WINDOWS-INSTALL-BLOCKED-WEB-PWA-CLARIFICATION-20261024.md).
+- **CLOUDFARE-WEB-ACCESS-001:** Cloudflare AI Gateway browser availability, Dynamic Routing Beta, quota/budgets and account terms = **NOT_RUN**, NEXT candidate. New API and remaining 25 other researched candidates not tested.
+- Complete [new-chat handoff](../07-operations-and-continuity/ROUTER-WINDOW-RESTART-HANDOFF-20261024.md) and [18-event statistical snapshot](../01-system-inventory/ROUTER-INSTALL-AND-TEST-SNAPSHOT-20261024.md). No tool/system install nor provider traffic occurred in this documentation step.
+
 | ID | تاریخ | موضوع | وضعیت | اعتماد/فاصلهٔ شاهد |
 |---|---|---|---|---|
 | G3-SRC-001 | 2026-10-22 | Two-fake-file Win32 G3 test harness source/static checks | **7/7 PASS in isolated Linux Python 3.13.5; Win11 G3 NOT_RUN/HOLD** | [exact evidence](logs/G3-SYNTHETIC-HARNESS-SOURCE-20261022.md), Git blob runner `19882829...`, tests `f079cb39...`; no Win32 execution, no cancellation or reparse/race guarantee |
