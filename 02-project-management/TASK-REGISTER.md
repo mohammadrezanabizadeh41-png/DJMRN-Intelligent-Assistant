@@ -3,6 +3,8 @@
 
 [Exact pre-H3 task register version](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/a850550f04e5e891915ba43f91cbe35be000c9f2/02-project-management/TASK-REGISTER.md) preserves the initial rows and all prior event chronology. Current line edits made to TASK-0005/0008/0012 and TASK-0018's G1 pointer only; historic WA/test evidence was not changed.
 
+**2026-10-24 TASK-0029 UPDATE — OmniRoute attempted Windows installation user-reported BLOCKED (no error code); PWA requires backend; next evaluation candidate is Cloudflare AI Gateway hosted web.** No OmniRoute operational evidence, no Cloudflare account verified, no model API connected. [Latest note](../06-tests-and-evidence/logs/OMNIROUTE-WINDOWS-INSTALL-BLOCKED-WEB-PWA-CLARIFICATION-20261024.md) and [queue CSV](ROUTER-CANDIDATE-TEST-QUEUE-20261024.csv) hold current states. All 27 candidates retained, use Cloudflare next, then New API. This does NOT mark software failure proven; install blocker is undiagnosed.
+
 ## 2026-10-24 — TASK-0029: ready-made multi-provider free router candidates, FIRST OmniRoute (USER-ORDERED)
 **Status:** APPROVED_EVALUATION_SEQUENCE / FIRST_PILOT_NOT_RUN / NO_INSTALL_AUTHORIZATION.
 - Primary: OmniRoute native Windows official installer; [first pilot P01–P10](../06-tests-and-evidence/plans/OMNIROUTE-WINDOWS-FIRST-PILOT-20261024.md). **Next actual action:** pre-install review of publisher artifacts/security and ask for precise permission; do not automatically install, proxy, sniff TLS, connect free providers, create keys or run a script.
