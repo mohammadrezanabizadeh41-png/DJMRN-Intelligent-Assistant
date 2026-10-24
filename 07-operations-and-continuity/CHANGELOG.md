@@ -1,5 +1,11 @@
 # Project Changelog — immutable summaries and real commit receipts
 
+## 2026-10-24 — User-requested complete router history handoff to a new chat
+- Created [comprehensive Persian START HERE report](ROUTER-WINDOW-RESTART-HANDOFF-20261024.md), [dated installed/test snapshot](../01-system-inventory/ROUTER-INSTALL-AND-TEST-SNAPSHOT-20261024.md), and appended user-reported OmniRoute blocked setup **I018** to [18-event ledger](../01-system-inventory/installation-events.csv); historical 21-item component snapshot unchanged.
+- Linked handoff at README, canonical CURRENT, TASK-0029 and TEST register. Consolidates Bifrost (native Windows executable actually started and SQLite initialized but external pricing fetch timed out, exit 1), P2C–P2F bounded synthetic GitHub checks, OmniRoute downloaded but user-reported install blocked without error log, 27 research candidates, next Cloudflare fully hosted website pilot and New API fallback.
+- **No newly installed software, no live provider/API access, no payment/key/Windows Security change by coordinator in this documentation step.** D-017 evaluation order retained; D-005 overall stack open, G3B/M1 file guard closed.
+
+
 ## 2026-10-24 — OmniRoute Windows installer blocked (user reported), next Cloudflare web
 - User tried official OmniRoute Windows Setup without success; error details unavailable. **BLOCKED / NOT DIAGNOSED**, not a proven invalid application. Verified OmniRoute PWA only manages a self-hosted gateway process; product website is not equivalent to a hosted free account. Cheaper Inference is wallet-funded hosted paid API distinct from the open-source router.
 - Queue rank #1 changed to `BLOCKED_USER_REPORTED_INSTALL_NO_LOG`, rank #2 Cloudflare AI Gateway to `NEXT_WEB_PILOT_PENDING_ACCESS_CHECK`; 25 others retained. No installs/API calls performed by coordinator. See [evidence](../06-tests-and-evidence/logs/OMNIROUTE-WINDOWS-INSTALL-BLOCKED-WEB-PWA-CLARIFICATION-20261024.md), [CSV](../02-project-management/ROUTER-CANDIDATE-TEST-QUEUE-20261024.csv), [current](CURRENT-STATUS.md).
