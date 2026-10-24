@@ -6,6 +6,13 @@
 
 `date/time | context/request | intended scope | inputs and permissions | actual step and affected paths | evidence/test environment + PASS/FAIL/NOT_RUN | Git commit/blob/readback | blockers/uncertainty | precise next step`. Mark **NOT VERIFIED** for missing independent proof, and never invent background work. For non-sensitive data, link original WQ/WA, KB, test log and source version. Never store Gmail credentials, OTPs, browser cookies, raw private inbox/customer contents or API keys.
 
+## 2026-10-24 — Complete router continuity handoff (user explicitly requested)
+- **Request:** persist all tried, failed, downloaded, researched and shortlisted central model routers with explanation to resume in a new conversation.
+- **Read:** live repo `main` and project rules, canonical current, D-016/D-017 and TASK-0029, 27-row model-router queue, Bifrost Windows user logs vs CI synthetic tests, OmniRoute Windows installer blocked and web/PWA research, 21-item component snapshot, installation events.
+- **Committed artifacts:** [START HERE comprehensive 2026-10-24 handoff](ROUTER-WINDOW-RESTART-HANDOFF-20261024.md), [2026-10-24 test/install stats](../01-system-inventory/ROUTER-INSTALL-AND-TEST-SNAPSHOT-20261024.md), I018 [event ledger](../01-system-inventory/installation-events.csv); current/task/readme/test/changelog links.
+- **Status:** Bifrost native user Windows v2.3.2 actual start + SQLite PASS but pricing timeout Exit1; OmniRoute Windows Setup user-reported cannot execute/install, diagnosis unknown; OmniRoute web dashboard requires hosted/local backend, not verified independent free hosted SaaS; Cloudflare browser UI next and New API second. Preserve all 27 researched entries, old failure chronology, P2C–P2F fake-provider CI proof.
+- **No new Windows execution, gateway service, provider key/real model traffic, purchased credit or file permission change during this documentation work.** Repo PUBLIC; no secrets copied; D-005 OPEN and G3B/M1 CLOSED.
+
 ## 2026-10-21 — MAIL-P001 synthetic-only minimum triage baseline (new, TESTED-SYNTHETIC)
 
 **User goal:** start the first useful Gmail and freelance opportunity assistant, with a persistent record of *every* research/build/test action in the canonical private GitHub project. Do not prematurely choose Jan, browser agent or paid API. Earlier official research WQ0005/WA0005 and coordinator KB-0012 are the starting knowledge. Existing V0 CAP-006 (document lookup) is NOT this mail assistant.
