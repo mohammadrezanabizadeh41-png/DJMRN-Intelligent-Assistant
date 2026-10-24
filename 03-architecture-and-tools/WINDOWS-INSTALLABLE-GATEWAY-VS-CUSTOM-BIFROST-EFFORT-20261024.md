@@ -1,0 +1,32 @@
+# DJMRN — Windows installable ready-made AI gateway versus repackaging Bifrost (research and decision gate, 2026-10-24)
+
+**Status:** desktop-gateway replacement feasibility study / NO new local installation, no vendor registration, no credentials accessed. This memo does not supersede user approval. User strongly prefers an **official Windows installer, native UI, repeatable installation on new PC and documented backup/restore**, with centrally managed free-tier provider/model routing, cost/quotas/fallback for autonomous assistants. They expressly reject ongoing PowerShell interventions and prefer not to build custom GUI/wrappers unless justified.
+
+## Distinguish core engine from Windows install UX
+The currently attempted Maxim HQ Bifrost v2.3.2 file is a real compiled Go **native Windows AMD64 executable**; PowerShell was only used to invoke it; Bifrost model traffic does NOT run in PowerShell scripts. Last actual user boot: SQLite initial migrations PASS; remote `https://getbifrost.ai/datasheet` pricing fetch timed out, process exited 1; health and provider inference **NOT PASS**. Official file-backed datasheet bootstrap exists and has NOT been tested on user laptop. No `.msi` GUI installer for Maxim HQ **Gateway** in the inspected official releases. Maxim **Edge** has a corporate `.msi` endpoint agent but is NOT the gateway replacement. Unrelated `bifrost-proxy/bifrost` project has `.msi` yet is a network interception proxy and irrelevant. See [product identities](BIFROST-MAXIM-GATEWAY-VS-EDGE-VS-UNRELATED-DESKTOP-20261023.md) and [native boot logs](../06-tests-and-evidence/logs/WINDOWS-BIFROST-USER-NATIVE-BOOT-PRICING-TIMEOUT-20261023.md).
+
+## Native installable product options found (no install)
+1. **CherryHQ Cherry Studio** — official Windows x64 Installer and Portable; cross-provider desktop AI interface; built-in loopback OpenAI/Anthropic/Gemini-compatible **API Gateway** (`127.0.0.1:23333`), authenticates client requests, optional auto-start gateway when Cherry launched, local/WedDAV/S3 backups including sensitive API keys. **Specific equivalence to Bifrost advanced virtual keys, budget per independent assistant, cross-provider 429 fallbacks and dynamic remaining provider free quota NOT verified in published docs. Do not claim it is equal.** The GUI is an Electron-style larger AI workstation, may cost more RAM on 8GB laptop; measure before adoption.
+   - https://github.com/CherryHQ/cherry-studio/releases
+   - https://cherryai.com/docs/en/cherry-studio/installation/windows/
+   - https://www.cherryai.com/docs/en/advanced-basic/developer-tools/api-gateway/
+   - https://github.com/CherryHQ/cherry-studio/blob/main/docs/references/api-gateway/README.md
+   - https://cherryai.com/docs/en/pre-basic/data-settings/
+2. **Inference Gateway Desktop** — real Windows desktop app (Tauri + React) using bundled/downloaded CLI and local inference-gateway; user-scoped YAML persisted config and multi-provider. **Gateway-native routing Phase 1 is only per-replica round_robin; weighted selection, failover/retries/circuit breaker and per-route metrics explicitly deferred.** Not feature-parity replacement today, despite installer.
+   - https://docs.inference-gateway.com/desktop/
+   - https://docs.inference-gateway.com/model-routing/
+   - https://github.com/inference-gateway/desktop/releases
+3. **OpenRouter (hosted service, no installer)** — free models + one central OpenAI-compatible API, provider fallbacks but Free tier as of latest pricing has limited daily free requests, lacks platform-level budgeting/spend controls/auto-routing in Free plan; does NOT combine every provider's independent free allowance. Free `openrouter/free` selection and paid Auto Router are distinct. Evaluated only as optional managed compromise, not equivalent to cross-provider native aggregator.
+   - https://openrouter.ai/pricing
+   - https://openrouter.ai/support
+   - https://openrouter.ai/openrouter/auto
+
+## Engineering *order-of-magnitude* effort bands for an experienced Windows integrator (NOT a ChatGPT delivery estimate or firm commitment)
+- **Stock service manager + browser UI using Bifrost** (WinSW standard open-source wrapper, not custom GUI): **several hours to one workday** for a tested single computer once startup bug is fixed. Provides managed background service and web UI, but not a native GUI installer by itself.
+- **Repeatable packaged installer + backup/restore + a clean second-Windows-machine test**: **roughly 2–5 experienced-developer workdays**, complexity rises for secrets encryption, relative paths, upgrade rollback and permissions. Usually composed from installer framework + WinSW, little shell code required. This still maintains extra custom packaging.
+- **Polished fully native desktop application with installer, tray/status/start-stop/health, updates, portability testing, security**: **several weeks of engineering** (range varies heavily with scope). Is a bespoke app maintenance project and is not recommended for DJMRN initial phase.
+These bands are *generic implementation complexity estimates*, neither user-specific performance measurements nor time-to-delivery promises by this assistant. The Bifrost engine core is not being written in PowerShell. Linux containers/WSL not required for native executable, and a first-boot network timeout is independent of installation UX.
+
+## Decision gate
+**Default now:** PAUSE custom Bifrost GUI/installer programming. Preserve already downloaded Bifrost without deleting or claiming it works. Validate an actual native-installable program **Cherry Studio Windows x64** on the user's approval in a small, scoped pilot: GUI launches; configured provider responds; gateway provides API to an independent assistant; attempt source-neutral fallback on 429 with fake/test providers if safe; inspect separate virtual keys, budgets, per-model tier and free-provider quota. Backup + restore/portable paths and 8GB RAM footprint must be measured. Any missing crucial capability is explicitly documented as FAIL/NOT_VERIFIED, not assumed. If no candidate meets nonnegotiable routing needs, reconsider **Bifrost core with standard WinSW service and robust backup/install, NO custom GUI**, or a hosted gateway with known free-tier constraints.
+**No new tools installed, user approvals or secrets stored in repo.** Decision policy: choose ready installable if genuinely feature-parity sufficient; otherwise present accepted compromises and generic engineering burden instead of forcing unproven native GUI project.
