@@ -25,3 +25,7 @@
 وضعیت محافظ‌های Windows Security پس از تلاش نصب OmniRoute **نامعلوم** است؛ اگر تغییری انجام شده باید محافظت بررسی و فعال بماند، بدون دورزدن هشدار. GitHub مخزن **PUBLIC** است؛ رمزها، setup token، شمارهٔ تلفن، API key و جزئیات خصوصی نباید ثبت شوند.
 
 **گام بعدی طبق D-017:** بررسی رابط [Cloudflare AI Gateway](https://dash.cloudflare.com/) به‌صورت مرورگری، بدون فعال‌کردن سرویس پولی یا کلید؛ اگر مناسب نبود New API. تمام جزئیات در [CURRENT](../07-operations-and-continuity/CURRENT-STATUS.md) و [Handoff](../07-operations-and-continuity/ROUTER-WINDOW-RESTART-HANDOFF-20261024.md).
+
+## 2026-10-24 same-day correction: OmniRoute sign-in screenshot (supersedes I018 present status)
+- **NEW I019 (19 events total):** user says Desktop OmniRoute installed and shows a running Windows app *Sign in* page. This is **USER_REPORTED_INSTALLED + UI LAUNCHED**, not proof of dashboard login, backend HTTP health, version 3.8.52, active provider or quota system. [Evidence](../06-tests-and-evidence/logs/OMNIROUTE-WINDOWS-SIGNIN-UI-VISIBLE-20261024.md). Original 18-count table above represents the *earlier* snapshot and no longer reflects the total.
+- Earlier I018 attempt/blocked status is retained as history, but not current product install status. Resume OmniRoute login/security/GUI pilot; Cloudflare follows if necessary. No spend, API, account or provider connection verified.
