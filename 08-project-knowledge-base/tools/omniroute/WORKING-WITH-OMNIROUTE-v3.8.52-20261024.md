@@ -136,3 +136,12 @@
 - `IP Access Control` displays Disabled/Blacklist/Whitelist/WL Priority; **Disabled selected**. Do not enable Whitelist until actual local bind/firewall exposure and rollback behavior are verified; this avoids accidental lockout. Whether `/v1` API authentication is mandatory remains UNKNOWN even though dashboard login is ON.
 - **Detailed sanitized observation:** [OMNIROUTE-SECURITY-UI-PASSWORD-UPDATE-20261024.md](../../../06-tests-and-evidence/logs/OMNIROUTE-SECURITY-UI-PASSWORD-UPDATE-20261024.md). No password or keys stored.
 - **Immediate next screen:** `OmniProxy → Endpoints` for read-only inspection of local base URL and endpoint authentication. Blur/cover keys, tokens and any token-bearing URLs in screenshots. No provider login or real call yet.
+
+## ۷. Endpoints — تصاویر واقعی ۲۴ اکتبر ۲۰۲۶
+- کاربر سه اسکرین‌شات جدید از کل صفحهٔ **OmniProxy → Endpoints** ارسال کرد. همهٔ عکس‌ها بدون تغییر و با هش مستقل در Library به‌صورت ZIP حفظ شدند: `/DJMRN/OmniRoute/2026-10-24/DJMRN_OmniRoute_Endpoints_Screenshots_20261024.zip`، شناسه `libfile_3c1be637e36c8191ae114a4a196ea92a`. فایل‌های تصویری خام در GitHub عمومی قرار نگرفتند.
+- **جزئیات دقیق و آدرس‌ها، وضعیت سرور، Tunnelها و مدل‌ها:** [شواهد و هش‌های قابل بازیابی](../../../06-tests-and-evidence/logs/OMNIROUTE-ENDPOINTS-UI-20261024.md).
+- در صفحه یک API محلی OpenAI-compatible با نشانی `http://localhost:20128/v1` و وضعیت سبز `Local Server Running` دیده می‌شود؛ آدرس شبکه خصوصی LAN نیز دیده می‌شود، ولی امکان اتصال سایر دستگاه‌ها آزمایش نشده است.
+- مدل مکالمه، تصویر، صوت و ویدئو: **۰ مدل در کاتالوگ جاری**؛ شمارش **۲۸ مورد Web Search** به معنای سهمیه رایگان واقعی یا مدل چت نیست. هیچ ارائه‌دهنده و مدل بیرونی واقعاً تست نشده است.
+- Tunnelهای خارجی فعال نیستند (۰/۳)، Cloud OmniRoute غیرفعال، Cloudflare و Tailscale نصب نیستند، ngrok نیازمند احراز هویت است؛ گزینهٔ Custom System Prompt خاموش است.
+- **اولویت امنیتی جدید:** روشن‌بودن Require Login لزوماً /v1 را محافظت نمی‌کند. مستند سازنده در بعضی محیط‌ها `REQUIRE_API_KEY=false` و bind عمومی `0.0.0.0` را ذکر می‌کند؛ وضعیت نصب کاربر **نامشخص** است. پیش از اتصال هر Provider، فقط به‌صورت خواندنی `Configuration → Advanced` را بررسی کنیم، اگر وضعیت host/auth مشخص نشد فقط یک آزمون خواندنی محدود؛ تغییر IP ACL یا خاموش‌کردن فایروال مجاز نیست.
+- **از کاربر عکس تکراری Endpoints نخواهید.** اگر صفحه Advanced یا Providers برای ارزیابی داخلی باز شد، فقط همان را درخواست کنید. `Test endpoint`، `Install & Enable`، فعال‌سازی حساب و Token را فعلاً اجرا نکنید.
