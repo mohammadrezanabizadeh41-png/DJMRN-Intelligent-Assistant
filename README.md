@@ -1,5 +1,7 @@
 # DJMRN — Intelligent Assistant System | راهنمای ورود به پروژه
 
+> **پنجرهٔ جدید / ادامهٔ پروژهٔ روتر مدل‌های رایگان DJMRN:** از [گزارش جامع START HERE (24 اکتبر 2026)](07-operations-and-continuity/ROUTER-WINDOW-RESTART-HANDOFF-20261024.md) شروع کنید. همهٔ نرم‌افزارهای آزموده‌شده، وضعیت OmniRoute و Bifrost، صف 27 نامزد، و مرحلهٔ بعد Cloudflare در آن ثبت شده است؛ سپس [CURRENT](07-operations-and-continuity/CURRENT-STATUS.md) را بخوانید.
+
 > **راهنمای پایدار، نه گزارش وضعیت امروز.** این مخزن خصوصی مرجع اصلی پروژهٔ DJMRN است. برای «آخرین وضعیت و قدم بعدی» فقط به [CURRENT-STATUS](07-operations-and-continuity/CURRENT-STATUS.md) و شواهد ارجاع‌شدهٔ آن مراجعه کنید. یادداشت‌های تاریخی این README در [نسخهٔ ثابت پیش از اصلاح H1](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/a66f62ff6471f659646cc161a20d3c80506b8ad3/README.md) باقی می‌مانند.
 
 ## هدف محصول
