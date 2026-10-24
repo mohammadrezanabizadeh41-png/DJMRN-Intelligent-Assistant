@@ -130,3 +130,9 @@
 - [پیش‌زمینه: اجرای Home و اعلان zero-config](../../../06-tests-and-evidence/logs/OMNIROUTE-WINDOWS-HOME-DASHBOARD-AUTHENTICATED-20261024.md).
 - داده‌های حساس از تصاویر استخراج و ذخیره نشده است. مسیر `%APPDATA%\omniroute\server.env` متعلق به اسرار محلی است؛ **محتوا را درخواست/کپی/آپلود نکنید**.
 - این سند شناسهٔ ثابت دارد؛ تغییرات گزینه‌ها در نسخه‌های بعدی باید در همین مسیر به‌عنوان نسخهٔ تاریخ‌دار و با تصاویر واقعی یا اسناد رسمی بررسی شوند؛ از ساخت منبع CURRENT موازی بپرهیزید.
+
+## ۶. 2026-10-24 — Security screen observed (current actual UI)
+- **User screenshot:** `Configuration → Security` is accessible on Windows Desktop v3.8.52. `Require login` toggle is ON; a green `Password updated successfully` message is visible after password update. **UI success only**: persistence/re-login and password rejection of previous default still NOT_VERIFIED.
+- `IP Access Control` displays Disabled/Blacklist/Whitelist/WL Priority; **Disabled selected**. Do not enable Whitelist until actual local bind/firewall exposure and rollback behavior are verified; this avoids accidental lockout. Whether `/v1` API authentication is mandatory remains UNKNOWN even though dashboard login is ON.
+- **Detailed sanitized observation:** [OMNIROUTE-SECURITY-UI-PASSWORD-UPDATE-20261024.md](../../../06-tests-and-evidence/logs/OMNIROUTE-SECURITY-UI-PASSWORD-UPDATE-20261024.md). No password or keys stored.
+- **Immediate next screen:** `OmniProxy → Endpoints` for read-only inspection of local base URL and endpoint authentication. Blur/cover keys, tokens and any token-bearing URLs in screenshots. No provider login or real call yet.
