@@ -1,5 +1,11 @@
 # DJMRN — وضعیت معتبر کنونی | CANONICAL PROJECT CURRENT
 
+
+
+## 2026-10-25 — FREE MODEL ROLE/QUOTA POLICY ADOPTED; AI HORDE #001 GUI ENABLED BUT NO INFERENCE YET
+- **User-directed rule formalized:** [Free model quota & role routing policy](../02-project-management/FREE-CLOUD-MODEL-QUOTA-AND-ROLE-ROUTING-POLICY-20261025.md), D-018, PROJECT-RULES link. Cheap deterministic L0, lightweight Persian L1 primary, stronger L2/L3 only as needed; keep sticky primary + confirmed-free fallback; track requests, tokens, quotas, kudos, queue/worker availability, no paid auto-routes. **Governance only, not implemented auto-routing.**
+- **User GUI images of OmniRoute AI Horde:** Enabled=ON, zero PAT connections (No-auth), three built-in models marked Free *Assumed*, Playground selected model `2DN` (image, wrong for text), user opened large model menu. [Sanitized UI/preflight note](../06-tests-and-evidence/logs/OMNIROUTE-AIHORDE-001-UI-AND-LIGHT-MODEL-20261025.md). **Status = UI_ENABLED_NO_INFERENCE** (not connected+verified, no real text answer yet).
+- **Suggested one-message first test:** `koboldcpp/gemma-4-E4B-it` (if found in live picker), key `(default)`, short Persian answer, max output ~64 tokens *only if available in UI*; anonymous AI Horde priority via Kudos, no documented fixed renewing daily token allocation. **Await user's real Playground result**, then update Provider #001 tracker, do not invent result or perform repeat full scans.
 <!-- DJMRN-CURRENT-H2-CANONICAL-BEGIN -->
 
 ## 2026-10-25 — USER-REQUESTED NUMBERED OMNIROUTE PROVIDER CONNECTION TRACKER COMMITTED (CURRENT NEXT ACTION)
