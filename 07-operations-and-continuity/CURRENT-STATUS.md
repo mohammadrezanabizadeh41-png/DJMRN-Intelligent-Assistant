@@ -15,6 +15,77 @@
 
 
 
+## 2026-10-25 — DJMRN-MULTIAGENT-FOUNDATION-RESEARCH-AND-ROADMAP-001
+
+**STATUS: USER-REQUESTED RESEARCH/ARCHITECTURE ROADMAP RECORDED; NO NEW PLATFORM/DB/AGENT/SCHEMA SELECTED OR DEPLOYED.**
+**Date:** 2026-10-25. The user asks to retain the preceding GitHub open-source source searches and their new architecture decision question for later continuity: should DJMRN define the platform before the first assistant, or the assistant first? **Answer: establish a MINIMUM shared platform contract first, then build one real assistant as a vertical slice, then expand to multi-agent.** Do not build an elaborate unused orchestration platform before proving a useful assistant. Research candidates remain hypotheses, not permission to install, activate, connect accounts or spend.
+
+### User's intended capabilities — persistent project product requirements
+- A **Chat-first central DJMRN interface** for human interaction; numerous later **logical assistants** each with `agent_id`, explicit role, name, persona/communication style, instructions, task goals, tool allowlist, memory visibility, authority level and review requirements. Assistants may be logically instantiated on-demand without loading a separate local LLM/process for each persona. Hardware constraint: Windows 11 laptop Ryzen 5 3500U, 8 GB RAM (usually much less free); cloud-first inference, no gratuitous always-on local heavy services.
+- **OmniRoute remains the inference/data-plane gateway**: model-provider/account connection and explicitly named role-based Combos (primary-first routing and later verified failover/quotas). Real user-completed `DJMRN-Persian-L1` Combo POST to `http://127.0.0.1:20128/v1/chat/completions` with `model: DJMRN-Persian-L1` yielded HTTP 200, model Gemma 4 E4B and correctly decoded Persian answer in 9.84 s. **One target only, no true failover yet.** Never ask assistant to select arbitrary paid `auto` gateway targets.
+- **A DIFFERENT DJMRN assistant control-plane/orchestrator**, not OmniRoute, handles human approvals, agent registry/personas, role selection, work decomposition, task assignment, inbox/outbox, handoffs, idempotency, progress, tools, audit and results. Control-plane may *use* OmniRoute but may not collapse identity/task/memory into model routing.
+- **Shared durable operational memory/blackboard** with `project/scope/agent` boundaries and provenance: tasks, conversations, agent messages, work outputs, accepted facts, sources, permissions, decisions, event/activity log. Agents share *authorized* records and can communicate through an addressable message/task system; private memory and common memory are not implicitly global. An LLM's raw text must NOT silently become verified fact, an approved decision or a permission grant.
+- Preserve existing canonical authority split: **Notion = architecture/canonical broader operating decision context; GitHub this repository = code/verified project continuity; Neon/Postgres = intended durable operational/runtime state only after schema/account suitability approval; OmniRoute = inference gateway**. No replacing these with one AI vendor's opaque state. Existing CAP-006 deterministic, source-attributed read-only document search remains a possible later tool through a permissioned adapter; file-access G3B/M1 guard CLOSED pending explicit authorization.
+
+### GitHub OSS discovery inventory — classify by role; status is CANDIDATE, not adopted
+**Agent platforms / orchestration:** 
+- [OpenClaw](https://github.com/openclaw/openclaw) — self-hosted assistant; multi-agent workspaces/channels/session coordination and custom model providers; initial ready-agent/UI candidate. Its own state is NOT automatically DJMRN's central source of truth.
+- [Paperclip](https://github.com/paperclipai/paperclip) — organizational agent/control-plane/role/goal/approval and UI, connects external agent harnesses. Possible future management platform; extra deployment/runtime complexity for first pilot.
+- [Agno](https://github.com/agno-agi/agno) — Python agents/teams/workflows, persistent services, knowledge/memory and PostgreSQL templates; candidate for first programmable host.
+- [LangGraph](https://github.com/langchain-ai/langgraph) — low-level stateful and durable workflow framework, checkpointing, memory, human-in-the-loop; candidate for stronger future orchestration.
+- [CrewAI](https://github.com/crewAIInc/crewAI) — persona/role/goal/backstory/Crews/Flows; task-team candidate.
+- [Mastra](https://github.com/mastra-ai/mastra) — TypeScript agents, workflows and memory candidate.
+- [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) — Python/.NET multi-agent handoff/group workflow candidate.
+- [nanobot](https://github.com/HKUDS/nanobot) — small Python self-hosted agent, chat/web UI, memory, delegation, OpenAI-compatible models; candidate lightweight pilot host, not assumed low RAM until measured.
+- [Pydantic AI](https://github.com/pydantic/pydantic-ai), [Google ADK Python](https://github.com/google/adk-python), [CAMEL](https://github.com/camel-ai/camel), [Agent Zero](https://github.com/agent0ai/agent-zero), [Letta Code](https://github.com/letta-ai/letta-code) — additional specialized candidates, not accepted.
+- [AutoGen](https://github.com/microsoft/autogen), [Gas Town](https://github.com/steveyegge/gastown) — historical/contrast research, **not first-build picks**; verify maintenance, specialization and license before any reuse.
+
+**Shared memory / graph/semantic retrieval:**
+- [Mem0](https://github.com/mem0ai/mem0) — agent/user/session memory layer; [Cognee](https://github.com/topoteretes/cognee) — semantic + graph/knowledge pipeline; [Graphiti](https://github.com/getzep/graphiti) — temporal knowledge graph. These are optional memory enhancements, NOT substitutes for controlled operational task/message tables and fact promotion. Some deployment/license/features may be commercial or have infrastructure requirements; verify before selection.
+
+**Message and collaboration infrastructure:**
+- [PGMQ](https://github.com/pgmq/pgmq) — PostgreSQL-backed durable queue, possible future messaging implementation. Do **not** assume the currently available Neon configuration supports the extension without official verification.
+- [MCP Agent Mail Rust](https://github.com/Dicklesworthstone/mcp_agent_mail_rust) — per-agent identity/inbox/outbox/threading but specializes in coding agents, not direct drop-in for general DJMRN personas.
+- [NATS/JetStream](https://github.com/nats-io/nats-server) — dedicated message/event broker, likely unjustified extra service initially.
+- [LangGraph Swarm](https://github.com/langchain-ai/langgraph-swarm-py) — handoff/routing pattern; [bMAS](https://github.com/arvarik/bmas) — blackboard-style research candidate, verify upstream repo details before using.
+
+**Evidence level:** On 2026-10-25 official GitHub README contents were directly fetched for OpenClaw, Agno, LangGraph, Paperclip, PGMQ, MCP Agent Mail Rust, Mem0, nanobot, Microsoft Agent Framework and CrewAI. Other inventory links are retained as **PREVIOUS-DISCOVERY / NOT RE-READ IN THIS PASS**. Feature and compatibility claims remain candidate-level, NOT end-to-end tests with DJMRN. Nothing installed, billed or selected. Do not mistake the list of source repos for an approved shopping/install list.
+
+### Proposed reference architecture — one modular monolith FIRST, separable domain interfaces
+```
+Human -> DJMRN Chat UI -> DJMRN Assistant Control Plane / Orchestrator
+                          |-- Agent Registry: persona, role, model_group, tool scopes
+                          |-- Task Coordinator: run/hand-off/approval/audit
+                          |-- Memory API: private/project/shared, evidence/provenance
+                          |-- Message API: agent inbox/outbox, status, acknowledgements
+                          |-- Tool Gate: allowlist, human approval, bounded CAP-006 later
+                          '-- Inference Adapter -> OmniRoute localhost API
+                                                   model = DJMRN-Persian-L1
+Durable operational state: future Neon/PostgreSQL (not yet provisioned/verified).
+Canonical project code/status: GitHub; broad decisions/research: Notion.
+```
+**Crucial implementation invariants:** same stable `agent_id` independent of chosen LLM; `model_group` is an OmniRoute Combo name, not upstream vendor model; assistant persona prompt kept in agent registry/config, not tied to Combo; messages/tasks persist independently of prompt context window; a memory record has source, author, timestamp, scope, confidence/status, approved version; bounded retries, idempotent external operations, auditable status and explicit approval for mutations; no implicit permissions from inter-agent messages. Avoid unnecessary resident agents, microservices, queue servers or global data-scraping.
+
+### First-assistant roadmap / stage gates
+0. **Bound the use case and acceptance**: one concrete Persian user-facing assistant; exact first task selected by user next, not guessed here. Chat-first UI, initial non-sensitive synthetic/sample data. User confirms what tools/data the first assistant may access. Decide first package/runtime (Python/TypeScript/ready host) **AFTER** mapping the use case to above candidates; D-005 remains OPEN.
+1. **Define minimal shared foundation BEFORE building agent:** stable agent profile schema (`agent_id, name, role, persona, goal, model_group, tool_allowlist, memory_scope, permissions`), conversation IDs, project IDs, message and task envelopes, permissions/provenance and storage/adapter boundaries. **Design only**, no massive full network, no real DB schema migrations yet.
+2. **End-to-end single assistant vertical slice:** a minimal chat surface and one profile, connect through inference adapter to existing **`DJMRN-Persian-L1`** at local `http://127.0.0.1:20128/v1` with existing privately entered local gateway key. Verify Persian input -> returned Persian answer in actual assistant UI. Start with `stream=false` ordinary messages; no tool calling assumptions.
+3. **Persistence:** bind one agent's conversations and runs to minimal operational store with recoverable IDs; target PostgreSQL/Neon when costs/availability/permissions/schema are checked, and provider independence is preserved. No duplicate canonical truth or private-data cloud transfer without approval.
+4. **One bounded deterministic tool:** only after inference/chat PASS, bridge one previously authorized simple READ-ONLY function (e.g. CAP-006 for synthetic documents) via explicit controlled dispatch; test using a model with unproven tool-calling ability separately. User approves every new access scope. Model behavior alone does not grant file/email/Windows access.
+5. **Minimal multi-agent proof:** add a SECOND **synthetic** agent profile; send a real persisted task message A→B→A, test ack, visibility isolation, provenance, dedupe, handoff and recovery. Only then connect real specialist agents and consider PGMQ, Mem0, Paperclip or stronger orchestrator as NEEDS arise.
+6. **Expansion/controls:** add actual specialist assistant personas, model role Combos, verified-free backup targets, model/agent monitoring and quotas/cost-deny as separate tested milestones. Hard STOP before paid/unknown endpoints or unauthorized external action.
+
+**Explicit answer on sequencing:** NOT `build all infrastructure -> assistants`, and NOT `make throwaway standalone assistant -> retrofit all infrastructure`. Instead: **platform CONTRACT/BOUNDARIES first -> first minimal working assistant -> shared persistent runtime store -> real inter-agent messaging -> broader platform**. Agent profile may be drafted alongside contract; implementation proceeds one real agent at a time.
+
+### Decision-gate shortlist for FIRST runtime
+- **OpenClaw**: fastest ready chat assistant candidate, BUT native workspace state/permissions/tools must be reviewed to avoid replacing durable central DB.
+- **Agno / LangGraph**: strongest first code-centric references for agent workflows/persistence (different abstraction levels); better architectural ownership, more initial implementation.
+- **nanobot**: alternative potentially smaller ready Python/WebUI path with compatible gateway; test actual Windows runtime RAM and controls.
+- **Paperclip**: credible *later* supervisory dashboard, but do not start by spinning up an org/manager stack before any real first assistant/task.
+**No final product/runtime vendor decision now.** Study one first-assistant workload and score model/tool compatibility (especially whether AI Horde Gemma supports actual tool calls and JSON, **UNVERIFIED**), RAM, license, free/self-host terms, ease of integration, persistence/permissions, Windows compatibility, restart behavior and upgrade/export.
+
+**User/assistant continuation:** This request authorizes this single source-inventory + roadmap **documentation** update only. Next user can describe the first assistant's actual role; then choose smallest host based on grounded task and user approval; **do not automatically install, run servers, change DB schema, give network/file permissions, write to Notion, create recurring tasks, or alter OmniRoute**.
+
 ## 2026-10-25 — OMNIROUTE-PERSIAN-COMBO-REAL-001: PERSISTENT ROLE COMBO CREATED + HEALTH AND REAL NAME-ROUTED API PASS
 
 **CURRENT VERIFIED USER-DEVICE CHECKPOINT — SUPERSEDES ONLY THE EARLIER "NOT YET CONFIGURED / NOT TESTED" STATUS IN OMNIROUTE-ROLE-COMBOS-001 BELOW.** The user explicitly requested recording the complete just-finished first-Combo setup and validation in this single canonical GitHub file. Evidence is the user's exact OmniRoute GUI text/screenshot and Windows PowerShell stdout supplied in the conversation; no direct remote inspection of Windows. **STATUS: COMBO-CREATED / SINGLE TARGET HEALTH PASS / REAL COMBO-NAME HTTP 200 + PERSIAN CONTENT PASS; FIRST ASSISTANT UI STILL NOT CONNECTED.** Keep prior research and failures as historical.
