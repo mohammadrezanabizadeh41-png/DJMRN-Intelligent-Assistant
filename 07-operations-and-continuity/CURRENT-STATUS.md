@@ -1,5 +1,17 @@
 # DJMRN — وضعیت معتبر کنونی | CANONICAL PROJECT CURRENT
 
+## 2026-10-25 — FAST-LANE / ONE-LIVE-CHECKPOINT — USER-DIRECTED WORKFLOW RULE
+**Effective now / user explicit direction:** Reduce assistant latency, source sprawl and GitHub write amplification. **This CURRENT-STATUS.md is the ONE ACTIVE CONTINUATION CHECKPOINT** for everyday DJMRN development and OmniRoute onboarding. Existing PROJECT-RULES, DECISION-REGISTER, 375-row tracker, Notion governance, evidence logs and Work records remain preserved historical/source authority; **do not fan out every ordinary chat or minor result into multiple file updates**. One designated active file for concise operational status; reference stable source documents instead of duplicating their text.
+
+- **Default for every ordinary user turn:** Answer and guide directly from known context. **No GitHub/Notion/web calls unless current evidence, a needed external fact, or an actual authorized change requires them.** Do not repeatedly fetch the whole repo or both Notion pages for routine UI help. One essential check only when necessary, using the narrowest file/range.
+- **Persistence gate:** No automatic GitHub write on every screenshot, chat question, command or small trial. Maintain details within conversation until a meaningful verified milestone or explicit user request to save; then **one consolidated write to this CURRENT-STATUS.md** (readback/commit verify in that call). Update a second specialized source only if technically indispensable, explicitly requested, or if an adopted architectural decision must be reflected by the established authority; batch changes.
+- **Evidence minimalism:** link existing 375-row CSV and historical scans, don't rewrite or copy them every turn. Keep prior tests as evidence; do not re-run large provider tests. Record state as observed vs inferred, and don't label unsuccessful calls as connected.
+- **Fast response priority:** first give the next precise UI action and reason in Persian, with minimal research. Avoid unsolicited tools, extra docs, duplicate reports, model lists or complex administrative side-work. The user can separately request a full audit/writeback.
+- **Free API onboarding:** Signup/OAuth/obtaining a provider API key is explicitly allowed and NOT a rejection criterion; prefer it where it improves quota/priority. No spending/paid activation without separate explicit user choice. Account registration is not payment.
+- **Immediate active item:** OmniRoute AI Horde #001. User's first short Persian Playground request actually returned HTTP 401 missing Bearer authorization. This is **NOT connected/verified**; exact error also reported upstream in OmniRoute discussion #15232. Next practical option is official personal AI Horde account/API key then `AI Horde → Add PAT`, select this key in Playground and test one short message. If 401 persists, park this integration and advance in the numbered queue without broad retests.
+- **Known tradeoff:** this file already has substantial historical content; do NOT spawn more operational tracking files just to summarize it. Future restructuring/deletions require a separate explicit user decision, not automatic cleanup here.
+
+
 
 
 ## 2026-10-25 — FREE MODEL ROLE/QUOTA POLICY ADOPTED; AI HORDE #001 GUI ENABLED BUT NO INFERENCE YET
