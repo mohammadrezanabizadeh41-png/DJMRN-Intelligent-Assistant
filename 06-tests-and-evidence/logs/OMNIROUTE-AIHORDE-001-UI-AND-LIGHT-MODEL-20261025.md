@@ -15,6 +15,22 @@
 - [Provider reference for OmniRoute v3.8.52](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.52/docs/reference/PROVIDER_REFERENCE.md) identifies `aihorde` as `No-auth` and optional account improves priority; provider feature support does not prove native function-calling.
 - [Official user/readme](https://github.com/Haidra-Org/AI-Horde/blob/main/README.md), [provider site](https://aihorde.net/), [text usage instructions](https://horde-sdk.readthedocs.io/en/stable/how-to/generate-text/), [live endpoint](https://aihorde.net/api/v2/status/models?type=text) are sources. An external live read of last endpoint in this discussion found `koboldcpp/gemma-4-E4B-it` with one worker; model counts constantly change.
 
+## Observed subsequent real user test and root-cause investigation (2026-10-25)
+
+The previously proposed test WAS executed by the user (one short Persian instruction), but **failed with 401** without an AI model answer:
+
+```text
+[Error: [401]: You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer [REDACTED] (i.e. Authorization: [REDACTED]]
+```
+
+Treat the subsequent `## Minimal trial chosen (not yet executed)` section as HISTORICAL before this result; it no longer represents the latest testing stage. Exact model selected by user at time of test was not independently confirmed.
+
+An identical AI Horde/OmniRoute 401 was reported by a different user in [official OmniRoute discussion #15232](https://github.com/cheaper-inference/OmniRoute/discussions/15232) on 2026-10-01, including after the reporter added a personally registered Horde key. Maintainer on 2026-10-02 said integration should use official anonymous key but actual 401 could not be explained and requested logs + whether key added in Provider connection. This is a credible **upstream integration issue hypothesis**, not independently proven definitive code defect or Iranian censorship.
+
+**New user instruction:** signup and provider API keys must never be treated as exclusion factors; a personal account may be preferred for quota/priority. Next: official AI Horde [signup](https://stablehorde.net/register) (recoverable GitHub/Google/Discord OAuth preferable), local OmniRoute `AI Horde → Add PAT`, and choose that specific provider key in Playground for ONE short test. If still 401, park #001 and advance; no repeated network scan. No key copied into GitHub or chat.
+
+**Current status: `HTTP_401_AUTH_ERROR_IN_PLAYGROUND`; provider account `NOT_CREATED` (unknown if user has an existing one), personal key `NOT_PROVIDED`; inference `FAIL_401`.**
+
 ## Minimal trial chosen (not yet executed)
 
 - **Preferred L1 text model:** exact live Horde model string `koboldcpp/gemma-4-E4B-it` (if OmniRoute lists it). Don't assume it is shown unless user confirms. If absent, use model-import/list search flow; **do not accidentally choose 2DN/image**.
