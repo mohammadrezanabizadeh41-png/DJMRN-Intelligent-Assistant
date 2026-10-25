@@ -132,11 +132,11 @@ foreach($h in $failedHosts){
    }else{$dns[$h]='DNS_TIMEOUT'}
  }catch{$dns[$h]='DNS_ERROR:'+$_.Exception.GetBaseException().Message}
  if($ips.Count -eq 0){continue}
- $private=@($ips|Where-Object {$_ -match '^(127\.|10\.|192\.168\.|169\.254\.|172\.(1[6-9]|2[0-9]|3[01])\.|::1$|fe80:)'})
- if($private.Count -eq $ips.Count){$tcp[$h]='DNS_ONLY_PRIVATE_IPS_SKIP';continue}
+ $publicIPs=@($ips|Where-Object {$_ -notmatch '^(127\.|10\.|192\.168\.|169\.254\.|172\.(1[6-9]|2[0-9]|3[01])\.|::1$|fe80:)'})
+ if($publicIPs.Count -eq 0){$tcp[$h]='DNS_ONLY_PRIVATE_IPS_SKIP';continue}
  $socket=New-Object Net.Sockets.TcpClient
  try{
-   $ar=$socket.BeginConnect($h,443,$null,$null)
+   $ar=$socket.BeginConnect(([Net.IPAddress]::Parse($publicIPs[0])),443,$null,$null)
    if($ar.AsyncWaitHandle.WaitOne(2500)){$socket.EndConnect($ar);$tcp[$h]='TCP443_CONNECTED_HTTP_OR_TLS_FAILED'}
    else{$tcp[$h]='TCP443_TIMEOUT'}
  }catch{$tcp[$h]='TCP443_ERROR:'+$_.Exception.GetBaseException().Message}
