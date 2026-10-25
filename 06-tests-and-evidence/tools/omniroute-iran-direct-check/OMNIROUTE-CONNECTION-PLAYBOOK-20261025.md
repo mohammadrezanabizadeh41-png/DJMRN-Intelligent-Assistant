@@ -2,6 +2,8 @@
 
 **تاریخ تهیه:** 2026-10-25 · **وضعیت:** CURRENT *connection-candidate tracking plan* (نه اتصال انجام‌شده) · **نسخه OmniRoute:** `v3.8.52` · **Authority:** GitHub project evidence; no live account/inference proof.
 
+**قانون جدید مصوب برای تمام ردیف‌ها:** [انتخاب نقش‌محور مدل و مدیریت سهمیه واقعی Free API](../../../02-project-management/FREE-CLOUD-MODEL-QUOTA-AND-ROLE-ROUTING-POLICY-20261025.md) (D-018). Provider #001 AI Horde در UI فعال است، اما **هیچ inference موفق ثبت نشده**؛ [جزئیات پیش‌آزمون](../../logs/OMNIROUTE-AIHORDE-001-UI-AND-LIGHT-MODEL-20261025.md). مدل سبک پیشنهادی برای اولین آزمایش `koboldcpp/gemma-4-E4B-it` است؛ نوع API Horde: volunteer/Kudos/queue، نه quota روزانه توکن ثابت.
+
 > این سند **فهرست اجرایی پیگیری** است. «HTTP پاسخ داده» مساوی «مدل کار می‌کند»، «ایران مجاز است»، «رایگان است» یا «به OmniRoute متصل شده» نیست. هیچ Provider در زمان تهیه این لیست با کلید واقعی فعال نشده است. همهٔ ۳۷۵ شناسه یک شماره پایدار در snapshot حاضر دارند و در [CSV مکمل](OMNIROUTE-PROVIDER-CONNECTION-TRACKER-20261025.csv) قابل فیلتر و به‌روزرسانی وضعیت هستند.
 
 ## هدف و نحوه استفاده
