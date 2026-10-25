@@ -1,5 +1,11 @@
 # DJMRN — OmniRoute v3.8.52 Iran direct-access 375-provider census
 
+
+## CURRENT next: Complete 375-provider numbered connection worklist (2026-10-25)
+- **[Read the Persian connection playbook](./OMNIROUTE-CONNECTION-PLAYBOOK-20261025.md)**: 375 numbered IDs, ordered practical queues, observed endpoint GET codes, reasons for priority/hold and one-by-one instructions.
+- **[Download the 375-row tracking CSV](./OMNIROUTE-PROVIDER-CONNECTION-TRACKER-20261025.csv)**: progress column (`NOT_CONNECTED` initially), provider ID/official inference host/free evidence/rationale; no secrets.
+- Built solely from existing 51-path, 817 URL, latest 314-path user scan and offline v3 summaries; no new scan; no verified inference, account eligibility or activated route yet.
+
 **Created 2026-10-25**; source snapshot: official `release/v3.8.52`, [Provider Reference](https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.52/docs/reference/PROVIDER_REFERENCE.md), last generated 2026-10-18. User wants to check all **375** registered OmniRoute provider/integration IDs on **their own Iranian ISP without VPN**. User originally reported Groq console inaccessible, and direct `curl.exe` to OVHcloud `https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/models` returned `curl: (35) Recv failure: Connection was reset` and `HTTP 000`; this is evidence only for that ISP/test time, not a blanket countrywide censorship conclusion.
 
 ## Canonical full catalog
