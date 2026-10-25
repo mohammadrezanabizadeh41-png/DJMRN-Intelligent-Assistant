@@ -1,5 +1,19 @@
 # DJMRN — وضعیت معتبر کنونی | CANONICAL PROJECT CURRENT
 
+## DJMRN-SINGLE-RECORD-ONLY-20261025 — قانون قطعی کاربر: فقط یک محل ثبت، فقط به درخواست کاربر
+
+**STATUS: USER-APPROVED, IMMEDIATE, SUPERSEDES ALL OLDER MULTI-DESTINATION DOCUMENTATION HABITS. 2026-10-25.**
+
+۱. **تنها محل ثبت پیشرفت اجرایی، نتایج و ادامهٔ همین پروژه:** همین فایل `07-operations-and-continuity/CURRENT-STATUS.md` در شاخه `main` مخزن `mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant`. ایجاد فایل گزارش، tracker، log، snapshot، checklist یا پروژهٔ موازی برای هر کار عادی ممنوع است؛ فایل‌های تاریخی می‌مانند ولی مقصد ثبت‌های جدید نیستند.
+۲. **اصل عدم ثبت خودکار:** پاسخ به پیام، توضیح نرم‌افزار، بررسی عکس، تنظیم Provider، آزمایش کوچک و حتی پیشرفت روزمره **به‌خودیِ‌خود مجوز write به هیچ ابزار یا منبعی نیست**. فقط وقتی کاربر صریحاً خواست «ثبت کن / ذخیره کن / به‌روزرسانی کن»، همان موضوع مشخص به‌طور خلاصه در همین فایل نوشته می‌شود. در غیر این صورت به کار اجرایی پاسخ داده شود و در همین گفت‌وگو ادامه پیدا کند.
+۳. **حداکثر یک write برای ثبت معمول:** یک به‌روزرسانی منسجم/کم‌حجم همین فایل با حفظ بقیه محتوا، یک بررسی نتیجه؛ بدون بازنویسی/کپی موضوع در سایر فایل‌ها. از بررسی بی‌دلیل همهٔ Notion/GitHub/ابزارها برای هر پیام خودداری شود. خواندن یک منبع ضروری برای صحت اجرای دستور در صورت نیاز مجاز است؛ **خواندن ≠ ثبت/انتشار**.
+۴. **استثنا صرفاً با دستور صریح جدید کاربر:** ثبت در Notion، فایل‌های دیگر GitHub، مخزن‌های دیگر، اسناد تخصصی یا چند مقصد فقط اگر کاربر **همان نوبت** مقصد یا دامنهٔ اضافی را مشخص و مجاز کند؛ اجازهٔ قبلی برای ثبت چندجا به دفعات بعد تعمیم نمی‌یابد. این نوبت خاص کاربر **فقط یک‌بار** ثبت خود این قانون را در **همین فایل GitHub و یک صفحه حافظهٔ مرکزی Notion** خواسته است.
+۵. **تفکیک عملیات از ثبت:** وقتی کاربر می‌گوید «وصل کن/بررسی کن/بساز»، به همان عمل لازم بپرداز و خودسرانه آن را به مأموریت مستندسازی چندگانه تبدیل نکن. اگر ساخت کد و چند فایل خروجی برای خود محصول ذاتاً ضروری است، این «ساخت» با «ثبت تکراری وضعیت در منابع مختلف» فرق دارد؛ از تولید فایل‌های گزارش غیرضروری پرهیز کن.
+۶. **اولویت: سرعت، کمینه‌سازی ابزار و جلوگیری از پراکندگی.** منبع نهایی ادامهٔ پروژه همین فایل است. Notion صرفاً این قانون سراسری را در همین نوبت می‌گیرد، **نه گزارش کار روزانه**. این بند بر راهنماهای قدیمی «هر تغییر را در Notion+GitHub+چند log ثبت کن» تقدم دارد؛ بقیهٔ قوانین ایمنی/مجوز پرداخت/حریم خصوصی تغییر نکرده‌اند.
+
+**عملکردی که باید به دستیار بعدی منتقل شود:** قبل از هر ثبت از خود بپرس «آیا کاربر در همین پیام صریحاً ثبت خواسته؟»؛ اگر خیر **هیچ ثبت جدیدی انجام نده**؛ اگر بله **فقط همین فایل و فقط همین مورد**؛ اگر کاربر خودش استثنای مقصد دیگری تعیین کرده بود، فقط همان استثنای صریح.
+
+
 ## 2026-10-25 — FAST-LANE / ONE-LIVE-CHECKPOINT — USER-DIRECTED WORKFLOW RULE
 **Effective now / user explicit direction:** Reduce assistant latency, source sprawl and GitHub write amplification. **This CURRENT-STATUS.md is the ONE ACTIVE CONTINUATION CHECKPOINT** for everyday DJMRN development and OmniRoute onboarding. Existing PROJECT-RULES, DECISION-REGISTER, 375-row tracker, Notion governance, evidence logs and Work records remain preserved historical/source authority; **do not fan out every ordinary chat or minor result into multiple file updates**. One designated active file for concise operational status; reference stable source documents instead of duplicating their text.
 
