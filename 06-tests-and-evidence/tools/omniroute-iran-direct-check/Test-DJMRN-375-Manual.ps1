@@ -86,7 +86,7 @@ $handler=New-Object System.Net.Http.HttpClientHandler
 $handler.UseProxy=$false
 $handler.UseCookies=$false
 $handler.AllowAutoRedirect=$false
-$http=New-Object System.Net.Http.HttpClient($handler)
+$http=New-Object -TypeName System.Net.Http.HttpClient -ArgumentList $handler
 $http.Timeout=[timespan]::FromSeconds($TimeoutSeconds)
 $http.DefaultRequestHeaders.UserAgent.ParseAdd('DJMRN-Reachability/1.0')
 $cache=@{}
