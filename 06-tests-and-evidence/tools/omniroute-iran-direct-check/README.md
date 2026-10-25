@@ -1,6 +1,10 @@
 # DJMRN — OmniRoute v3.8.52 Iran direct-access 375-provider census
 
 
+## 2026-10-25 — Adopted per-role model/quota policy and Pilot #001 evidence
+- [User-directed Free model quota, budgeting and role-based routing policy](../../../02-project-management/FREE-CLOUD-MODEL-QUOTA-AND-ROLE-ROUTING-POLICY-20261025.md) (D-018).
+- [AI Horde #001 user GUI evidence](../../logs/OMNIROUTE-AIHORDE-001-UI-AND-LIGHT-MODEL-20261025.md): Enabled/no-auth seen, 0 personal connections, no successful inference; Gemma 4 E4B proposed for small Persian message; credits/kudos and dynamic worker priority are different from fixed daily tokens.
+
 ## CURRENT next: Complete 375-provider numbered connection worklist (2026-10-25)
 - **[Read the Persian connection playbook](./OMNIROUTE-CONNECTION-PLAYBOOK-20261025.md)**: 375 numbered IDs, ordered practical queues, observed endpoint GET codes, reasons for priority/hold and one-by-one instructions.
 - **[Download the 375-row tracking CSV](./OMNIROUTE-PROVIDER-CONNECTION-TRACKER-20261025.csv)**: progress column (`NOT_CONNECTED` initially), provider ID/official inference host/free evidence/rationale; no secrets.
