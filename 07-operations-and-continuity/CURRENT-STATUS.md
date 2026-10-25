@@ -1,6 +1,12 @@
 # DJMRN — وضعیت معتبر کنونی | CANONICAL PROJECT CURRENT
 
 <!-- DJMRN-CURRENT-H2-CANONICAL-BEGIN -->
+
+## 2026-10-25 — USER-REQUESTED NUMBERED OMNIROUTE PROVIDER CONNECTION TRACKER COMMITTED (CURRENT NEXT ACTION)
+- Full [375-provider Persian numbered follow-up playbook](../06-tests-and-evidence/tools/omniroute-iran-direct-check/OMNIROUTE-CONNECTION-PLAYBOOK-20261025.md) and [375-row detailed CSV tracker](../06-tests-and-evidence/tools/omniroute-iran-direct-check/OMNIROUTE-PROVIDER-CONNECTION-TRACKER-20261025.csv) created in canonical repo `main` at commits `dbb89e1f4006bab872730189f8a5fb276b62fe29` and `0c8afcf4823e0a811b714fa9c1662581e192fbd4`, readback matched original content. The 375 ordered IDs include 5 keyless HTTP leads, 10 model-catalog leads, 82 API key auth/method leads, 57 other API HTTP leads, 28 special HTTP connectors, 53 HTTP-denied reviews, 12 other HTTP reviews, 37 no-HTTP paused, 2 officially Iran-unsupported, 89 no-fixed-public-API. `286` provider rows trace to the actual user 314-URL run, `89` came from the pinned 375 catalog set difference; previous 51/817 and v3 aggregate results separately retained.
+- This is a **research/evidence-based ordered onboarding worklist**, not evidence that 375 are free, reachable for inference, eligible for Iranian accounts or connected. Initial `OnboardingProgress=NOT_CONNECTED` for all; no credential, inference, signup, payment, installation or network tests performed during publishing. User explicitly asked to stop mass scans and work through the list one by one. Starting item **001: AI Horde (conditional anonymous access)**; if unavailable proceed sequentially, avoid inference/paid routing before exact free terms and model confirmed; retain manual connection outcomes by ID.
+- v3 real local detailed CSVs have not been uploaded to GitHub; absence acknowledged, not replaced with synthetic data. G3B/M1 remains CLOSED; no architecture change, D-005 still OPEN.
+
 **As of:** 2026-10-25 (project record; real-time main HEAD must be fetched). **Authority:** THIS section is single canonical project CURRENT; project rules and source-ownership remain unchanged. Prior checkpoints below are retained as history where newer real user evidence differs.
 
 ## 2026-10-25 — USER INLINE POWERSHELL: 314 DIRECT API GETS / 375 PROVIDER GROUPS (NEWEST USER NETWORK EVIDENCE)
