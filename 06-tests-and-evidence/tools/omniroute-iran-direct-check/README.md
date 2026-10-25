@@ -28,3 +28,17 @@ The script first loads the **bundled CSV offline**; it falls back to downloading
 4. Preserve exact false positives (website open/API blocked), provider throttling and read-only network evidence. Do not revive Groq/OVH without a changed ISP/path.
 
 **State:** TOOL_DELIVERED, DEVICE_RUN_PENDING, CONNECTED_FREE_PROVIDER_NONE_VERIFIED, cost controls remain explicit, D-005 OPEN; G3B/M1 file guard CLOSED.
+
+## Direct manual copy/paste alternative — no ZIP or double-click needed (2026-10-25)
+When user wants to manually paste a PowerShell command and return its answer as plain chat text, use the project-maintained [Test-DJMRN-375-Manual.ps1](./Test-DJMRN-375-Manual.ps1) together with this [pinned 375-record catalog](./OmniRoute_v3.8.52_375_providers.csv). Fetch these two **static reviewed files** into `$env:TEMP\DJMRN-375` via `Invoke-WebRequest`, then run `powershell.exe -NoProfile -ExecutionPolicy Bypass -File ...` to change execution policy for just the subprocess (no permanent machine changes). This does not use `Invoke-Expression`, `irm | iex`, administrator rights or system/registry edits.
+
+The script checks each of 375 catalog IDs for a usable HTTPS site origin, marks unknown/local missing entries separately, and performs 51 separately curated public API probes, with batched .NET HttpClient GET requests and `UseProxy=false`. It saves complete CSV on Desktop and **prints four text-only lines** with `API_HTTP_RESPONDED=` and `API_NO_HTTP=` to paste into chat. This is *network reachability only* (not proof of model inference, free account, service eligibility, or absence of ISP filtering). If `raw.githubusercontent.com` itself is inaccessible from the user ISP, use the earlier offline ZIP fallback instead of inventing a partial catalog.
+
+Direct-copy bootstrap for Windows PowerShell 5.1 (all 4 lines are part of the command):
+```powershell
+$dir = Join-Path $env:TEMP 'DJMRN-375'; New-Item -ItemType Directory -Force -Path $dir | Out-Null
+$root = 'https://raw.githubusercontent.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/main/06-tests-and-evidence/tools/omniroute-iran-direct-check'
+Invoke-WebRequest "$root/Test-DJMRN-375-Manual.ps1" -UseBasicParsing -OutFile "$dir/Test-DJMRN-375-Manual.ps1"
+Invoke-WebRequest "$root/OmniRoute_v3.8.52_375_providers.csv" -UseBasicParsing -OutFile "$dir/OmniRoute_v3.8.52_375_providers.csv"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$dir/Test-DJMRN-375-Manual.ps1"
+```
