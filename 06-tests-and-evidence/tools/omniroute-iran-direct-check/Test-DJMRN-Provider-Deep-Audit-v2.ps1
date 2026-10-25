@@ -166,7 +166,7 @@ foreach($p0 in $providers){
    if($x.Count -eq 0){return 'NOT_DOCUMENTED_OR_NOT_APPLICABLE'}
    return (($x|ForEach-Object { $_.HTTP.ToString()+':'+$_.ReasonCode }) -join ';')
  }
- $apiRows=@($items|Where-Object {$_.ProbeKind -like 'API*' -or $_.ProbeKind -match 'DISCOVERY'})
+ $apiRows=@($items|Where-Object {$_.ProbeKind -like 'API*' -or $_.ProbeKind -match 'DISCOVERY' -or $_.ProbeKind -eq 'SOURCE_REGISTRY_MODELS'})
  $ok=@($apiRows|Where-Object {$_.HTTP -ge 200})
  $known=@($items|Where-Object {$_.ProbeKind -eq 'API_ACTUAL_ROUTE_GET'})
  $status='NO_FIXED_PUBLIC_API_IN_SNAPSHOT'
@@ -180,6 +180,7 @@ foreach($p0 in $providers){
    WebsiteResult=(Summ 'WEBSITE_ORIGIN');ApiHostResult=(Summ 'API_HOST')
    ActualApiRouteResult=(Summ 'API_ACTUAL_ROUTE_GET')
    DiscoveryResult=(Summ 'CURATED_PUBLIC_DISCOVERY')
+   PublicModelsResult=(Summ 'SOURCE_REGISTRY_MODELS');RegistrationDashboard=(Summ 'SIGNUP_DASHBOARD')
    ProviderAssessment=$status;ApiTargets=$apiRows.Count
    RespondingApiTargets=$ok.Count
    FreePlanVerified='NO';IranAccountEligibilityVerified='NO';ActualInferenceVerified='NO'
