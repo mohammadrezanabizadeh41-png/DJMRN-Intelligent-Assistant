@@ -1,0 +1,27 @@
+{
+  "mission": "DJMRN-OMNIROUTE-PROVIDER-GATE-V3-20261025",
+  "evidence": "USER_PASTED_WINDOWS_OFFLINE_CONSOLE",
+  "date": "2026-10-25",
+  "script_version": "3.0.0",
+  "mode": "AnalyzeExisting",
+  "run_status": "COMPLETE",
+  "providers": 375,
+  "queues": {
+    "A": 0,
+    "B": 158,
+    "C": 40,
+    "D": 0,
+    "E": 149,
+    "PENDING_EVIDENCE": 28
+  },
+  "new_unique_url_tests": 0,
+  "imported_rows": 977,
+  "http_rows": 885,
+  "warnings": 0,
+  "input_folder": "DJMRN-DEEP-375-20261025-042141",
+  "output_folder": "DJMRN-PROVIDER-GATE-V3-20261025-140557-971",
+  "raw_device_csv_received": false,
+  "powershell_version": "NOT_REPORTED",
+  "inference": "NOT_TESTED",
+  "free_account_eligibility": "NOT_VERIFIED"
+}

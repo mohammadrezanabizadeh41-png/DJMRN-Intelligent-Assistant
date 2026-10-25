@@ -1,6 +1,8 @@
 # DJMRN — Intelligent Assistant System | راهنمای ورود به پروژه
 
-> **پنجرهٔ جدید / ادامهٔ پروژهٔ روتر مدل‌های رایگان DJMRN:** از [گزارش جامع START HERE (24 اکتبر 2026)](07-operations-and-continuity/ROUTER-WINDOW-RESTART-HANDOFF-20261024.md) شروع کنید. همهٔ نرم‌افزارهای آزموده‌شده، وضعیت OmniRoute و Bifrost، صف 27 نامزد، و مرحلهٔ بعد Cloudflare در آن ثبت شده است؛ سپس [CURRENT](07-operations-and-continuity/CURRENT-STATUS.md) را بخوانید.
+> **آخرین ادامهٔ OmniRoute — 25 اکتبر:** [Provider Gate v3: کد، پژوهش، آزمون و نتیجهٔ واقعی اجرای آفلاین](06-tests-and-evidence/tools/omniroute-iran-direct-check/provider-gate-v3/INDEX.md). هر ۳۷۵ شناسه تحلیل شد؛ درخواست جدید صفر. CSVهای واقعی صف و endpoint هنوز دریافت نشده‌اند؛ ابتدا [CURRENT](07-operations-and-continuity/CURRENT-STATUS.md) را بخوانید.
+
+> **گزارش تاریخی روتر تا 24 اکتبر؛ ادامهٔ جاری در لینک v3 بالا و CURRENT:** [گزارش جامع START HERE (24 اکتبر 2026)](07-operations-and-continuity/ROUTER-WINDOW-RESTART-HANDOFF-20261024.md) شامل تاریخچهٔ نرم‌افزارهای آزموده‌شده، وضعیت آن زمان OmniRoute و Bifrost، صف 27 نامزد و پیشنهاد آن زمان Cloudflare است؛ برای قدم بعد امروز [CURRENT](07-operations-and-continuity/CURRENT-STATUS.md) را بخوانید.
 
 > **راهنمای پایدار، نه گزارش وضعیت امروز.** این مخزن خصوصی مرجع اصلی پروژهٔ DJMRN است. برای «آخرین وضعیت و قدم بعدی» فقط به [CURRENT-STATUS](07-operations-and-continuity/CURRENT-STATUS.md) و شواهد ارجاع‌شدهٔ آن مراجعه کنید. یادداشت‌های تاریخی این README در [نسخهٔ ثابت پیش از اصلاح H1](https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/a66f62ff6471f659646cc161a20d3c80506b8ad3/README.md) باقی می‌مانند.
 

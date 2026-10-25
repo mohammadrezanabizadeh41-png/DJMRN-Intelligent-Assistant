@@ -1,0 +1,387 @@
+{
+  "Environment": "Linux PowerShell 7.4.6 (.NET 8), NOT Windows PowerShell 5.1",
+  "Tests": [
+    {
+      "Test": "Process exit ('-SelfTest', '-OutputDirectory')",
+      "Status": "PASS"
+    },
+    {
+      "Test": "SelfTest all passed",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Process exit ('-InputDirectory', PosixPath('/tmp/DJMRN-GATE-SELFTEST-0e079e561b924bb2bc3ea1f7a030a719/input'))",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Offline zero requests",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 04_AUTH_OR_SIGNUP_PENDING.csv",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 10_FULL_AUDIT_RESULTS.json",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 11_PERSIAN_EXECUTIVE_REPORT.md",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 12_COPY_SUMMARY_TO_CHAT.txt",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 01_ALL_375_PROVIDERS.csv",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 07_FREE_TIER_VERIFICATION.csv",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 09_DIAGNOSTIC_REASON_COUNTS.csv",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 03_REACHABLE_API_CANDIDATES.csv",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in checkpoint.json",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 05_POLICY_REGION_OR_WAF_REVIEW.csv",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 08_OMNIROUTE_CONNECTION_QUEUE.csv",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 06_NETWORK_UNAVAILABLE.csv",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No synthetic secret in 02_ALL_API_ENDPOINT_TESTS.csv",
+      "Status": "PASS"
+    },
+    {
+      "Test": "12 mandatory outputs",
+      "Status": "PASS"
+    },
+    {
+      "Test": "375 rows in CSV",
+      "Status": "PASS"
+    },
+    {
+      "Test": "375 unique IDs JSON",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Process exit ('-Mode', 'ExportShortlist')",
+      "Status": "PASS"
+    },
+    {
+      "Test": "ExportShortlist same queues",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Process exit ('-Mode', 'ExportShortlist')",
+      "Status": "PASS"
+    },
+    {
+      "Test": "V3 offline evidence reused",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Process exit ('-OutputDirectory', PosixPath('/tmp/djmrn-gate-validation-_wpjjky9/full'))",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Mock full kept375",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Mock full actually completes",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Mock 429 retained",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Unvetted legacy not fresh tested",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Process exit ('-OutputDirectory', PosixPath('/tmp/djmrn-gate-validation-_wpjjky9/partial'))",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Interrupted yields PARTIAL and 375",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Process exit ('-OutputDirectory', PosixPath('/tmp/djmrn-gate-validation-_wpjjky9/partial'))",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Resume retains completed results",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Resume no duplicate URLs",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Process exit ('-Mode', 'RetestFailed')",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Retest controls recorded",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Synthetic cannot earn D",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Retest only previous noHTTP or controls",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Process exit ('-InputDirectory', PosixPath('/tmp/djmrn-gate-validation-_wpjjky9/bad-input'))",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Malformed input gets report",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Process exit ('-InputDirectory', PosixPath('/tmp/djmrn-gate-validation-_wpjjky9/missing'))",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Missing input stays offline",
+      "Status": "PASS"
+    }
+  ],
+  "SelfTest": [
+    {
+      "Test": "HTTP_405",
+      "Status": "PASS"
+    },
+    {
+      "Test": "HTTP_200",
+      "Status": "PASS"
+    },
+    {
+      "Test": "HTTP_301",
+      "Status": "PASS"
+    },
+    {
+      "Test": "HTTP_403",
+      "Status": "PASS"
+    },
+    {
+      "Test": "HTTP_401",
+      "Status": "PASS"
+    },
+    {
+      "Test": "HTTP_400",
+      "Status": "PASS"
+    },
+    {
+      "Test": "HTTP_451",
+      "Status": "PASS"
+    },
+    {
+      "Test": "HTTP_500",
+      "Status": "PASS"
+    },
+    {
+      "Test": "HTTP_429",
+      "Status": "PASS"
+    },
+    {
+      "Test": "HTTP_404",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Legacy_DNS_FAILURE",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Legacy_TIMEOUT",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Legacy_TLS_ERROR",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Legacy_CONNECTION_RESET",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Legacy_TCP_REFUSED",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Offline_network_failure",
+      "Status": "PASS"
+    },
+    {
+      "Test": "DotNetException_DNS_FAILURE",
+      "Status": "PASS"
+    },
+    {
+      "Test": "DotNetException_TCP_TIMEOUT",
+      "Status": "PASS"
+    },
+    {
+      "Test": "DotNetException_CONNECTION_RESET",
+      "Status": "PASS"
+    },
+    {
+      "Test": "DotNetException_TCP_REFUSED",
+      "Status": "PASS"
+    },
+    {
+      "Test": "DotNetException_NETWORK_UNREACHABLE",
+      "Status": "PASS"
+    },
+    {
+      "Test": "DotNetException_TLS",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_127.0.0.1",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_10.0.0.1",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_172.16.0.1",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_192.168.0.1",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_169.254.169.254",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_100.64.0.1",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_::1",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_fc00::1",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_fe80::1",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_::ffff:127.0.0.1",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_IP_2001:db8::1",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Public_IPv4",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_unsafe_URL",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_unsafe_URL",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_unsafe_URL",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_unsafe_URL",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_unsafe_URL",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_unsafe_URL",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Reject_unsafe_URL",
+      "Status": "PASS"
+    },
+    {
+      "Test": "ImportCsv_fixture_all_rows",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Duplicate_ID_rejected",
+      "Status": "PASS"
+    },
+    {
+      "Test": "375_preserved_including_no_endpoint",
+      "Status": "PASS"
+    },
+    {
+      "Test": "401_not_removed",
+      "Status": "PASS"
+    },
+    {
+      "Test": "No_false_QueueA",
+      "Status": "PASS"
+    },
+    {
+      "Test": "CSV_injection_escaped",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Empty_CSV_header",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Resume_checkpoint_recovery",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Resume_backup_after_truncation",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Resume_identity_mismatch_denied",
+      "Status": "PASS"
+    },
+    {
+      "Test": "Credential_text_redacted",
+      "Status": "PASS"
+    }
+  ],
+  "NetworkRequests": 0,
+  "WindowsPS51Parser": "NOT_RUN",
+  "WindowsRealNetwork": "NOT_RUN",
+  "TestDirectory": "/tmp/djmrn-gate-validation-_wpjjky9"
+}

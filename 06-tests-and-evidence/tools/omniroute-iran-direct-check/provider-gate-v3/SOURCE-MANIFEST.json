@@ -1,0 +1,2029 @@
+{
+  "ProjectHEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+  "UpstreamHEAD": "c754707d0edf250107a386168d4e324f51b24135",
+  "Sources": [
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "PROJECT-RULES.md",
+      "BlobSHA": "078d043088103729863384e681d66eb2c05221a9",
+      "Bytes": 12375
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "SOURCES-AND-AUTHORITY.md",
+      "BlobSHA": "e3a38be4ce34adbd26fef93f1ef78dd03777c993",
+      "Bytes": 10628
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "07-operations-and-continuity/CURRENT-STATUS.md",
+      "BlobSHA": "902c56b9a9440b99b69f4c0ef58c0cd8b3784cb0",
+      "Bytes": 154621
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "04-work-research-bridge/README.md",
+      "BlobSHA": "fa5fdf56ad50714e6e4479fe5111ec6f1036be27",
+      "Bytes": 25285
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "04-work-research-bridge/REPOSITORY-LOCK.md",
+      "BlobSHA": "231778be56580deedcd1d5c0c5de54bc093552fc",
+      "Bytes": 3594
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "02-project-management/DECISION-REGISTER.md",
+      "BlobSHA": "d59463ec013e238b54d99ec35ae8238b124c3543",
+      "Bytes": 13743
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "06-tests-and-evidence/plans/OMNIROUTE-WINDOWS-FIRST-PILOT-20261024.md",
+      "BlobSHA": "23e22557d886c02d22584eda49b0327ba51e70f3",
+      "Bytes": 5244
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "06-tests-and-evidence/logs/OMNIROUTE-375-DEEP-AUDIT-V2-USER-RUN-20261025.md",
+      "BlobSHA": "cbc1315c289411d50c6117fdfaa0b7c3b87f0692",
+      "Bytes": 6919
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "06-tests-and-evidence/tools/omniroute-iran-direct-check/DEEP-AUDIT-v2-INSTRUCTIONS.md",
+      "BlobSHA": "8738a48f0e397eed53703a65a9aaa287b00dba1d",
+      "Bytes": 6609
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "06-tests-and-evidence/tools/omniroute-iran-direct-check/OmniRoute_v3.8.52_375_providers.csv",
+      "BlobSHA": "90e600e1f4e3f31a25e2ecf6ab6cb71241079d07",
+      "Bytes": 75127
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "06-tests-and-evidence/tools/omniroute-iran-direct-check/OmniRoute_v3.8.52_api_discovery_additions.csv",
+      "BlobSHA": "4f2df962b1c0d20520ec581fbcb3216ad3d87981",
+      "Bytes": 5185
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "06-tests-and-evidence/tools/omniroute-iran-direct-check/OmniRoute_v3.8.52_upstream_api_snapshot.csv",
+      "BlobSHA": "1b9866784325018e9ac0fb2194d473aaf163f8fd",
+      "Bytes": 47226
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "06-tests-and-evidence/tools/omniroute-iran-direct-check/README.md",
+      "BlobSHA": "e7dc3c832a61f0c2d16f1381b28273f55d01287f",
+      "Bytes": 7776
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "06-tests-and-evidence/tools/omniroute-iran-direct-check/Test-DJMRN-375-Manual.ps1",
+      "BlobSHA": "3d566870f5adfe9add8db3891bd4403bc4a45661",
+      "Bytes": 7809
+    },
+    {
+      "Repository": "mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant",
+      "HEAD": "505330b455385c384f2143f6a35ca96dadb26806",
+      "Path": "06-tests-and-evidence/tools/omniroute-iran-direct-check/Test-DJMRN-Provider-Deep-Audit-v2.ps1",
+      "BlobSHA": "04f8c45b2fa594958ab195fa7c62a56befe10ea8",
+      "Bytes": 16253
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "docs/reference/PROVIDER_REFERENCE.md",
+      "BlobSHA": "9b539254c537a7a909edfd44f8492d5cd77f0704",
+      "Bytes": 73681
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "docs/reference/FREE_TIERS.md",
+      "BlobSHA": "70ed4138577b54cf62c7daae51f89263ba04b12c",
+      "Bytes": 59875
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "tests/snapshots/provider/translate-path.json",
+      "BlobSHA": "ab0ad1d38e83e2a80fe87d5516d3961a82ec8007",
+      "Bytes": 201912
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "docs/architecture/RESILIENCE_GUIDE.md",
+      "BlobSHA": "7603dac82d5362a67e58fd939c93505478476cea",
+      "Bytes": 65167
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "src/shared/constants/providers.ts",
+      "BlobSHA": "111fec7bdbf78473b62dc1ace2ceae6af146d54b",
+      "Bytes": 15812
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/freeModelCatalog.data.ts",
+      "BlobSHA": "b098502de4bde756bc0e4555773831670248c00d",
+      "Bytes": 104213
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/adapta-web/index.ts",
+      "BlobSHA": "0b13f6a4b71968282434c531c46065490048ef69",
+      "Bytes": 877
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/agentrouter/index.ts",
+      "BlobSHA": "00aec580784bcbae3d2521bbfa68377b9e52a491",
+      "Bytes": 1662
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/agnes/index.ts",
+      "BlobSHA": "8d40931499c9b3aaee49acf542956d91f4e496df",
+      "Bytes": 2370
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/agy/index.ts",
+      "BlobSHA": "4a49f9574d032e1d82492768dd3d65bdf576d11c",
+      "Bytes": 862
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/ai21/index.ts",
+      "BlobSHA": "739f0d321426d10a6dfa02d9117e16a0d2e07104",
+      "Bytes": 388
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/aihorde/index.ts",
+      "BlobSHA": "31a118827e6178e575d2a03f7425fd5bf8f98cad",
+      "Bytes": 3273
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/aimlapi/index.ts",
+      "BlobSHA": "e84d248a677c97eb13915d90aae8558467307a36",
+      "Bytes": 858
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/ainative/index.ts",
+      "BlobSHA": "564120f42a18db9bbb0b748a6b30ec6bb207226e",
+      "Bytes": 1529
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/aion/index.ts",
+      "BlobSHA": "697f1c40217fba7fd4e9ef5c193f36ac66980da8",
+      "Bytes": 1022
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/alibaba/index.ts",
+      "BlobSHA": "3f17f42720f15741f20d51aa5a1987f761122434",
+      "Bytes": 1257
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/ant-ling/index.ts",
+      "BlobSHA": "167c2fa7932faef797db40bd7ed580c8eea11de7",
+      "Bytes": 988
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/anthropic/index.ts",
+      "BlobSHA": "4af138a6eea21258cbbe817a349c9a8fd01442f0",
+      "Bytes": 3770
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/antigravity/index.ts",
+      "BlobSHA": "4456e67758a5f2e53d585a9e28ee2714fe9adf28",
+      "Bytes": 893
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/anyapi/index.ts",
+      "BlobSHA": "fcb118a7715c8a37f857b06c84ebcd3942b6b4c0",
+      "Bytes": 391
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/api-airforce/index.ts",
+      "BlobSHA": "b7edbbe53e1368fcd8b318398863ea96e79223fe",
+      "Bytes": 1471
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/apmix/index.ts",
+      "BlobSHA": "eb748719b6e217cd2f95f0f034b5c63e3538529c",
+      "Bytes": 859
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/arcee-ai/index.ts",
+      "BlobSHA": "e75ebe0957390ee6ec40fb929cf8805f45a5c981",
+      "Bytes": 348
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/auggie/index.ts",
+      "BlobSHA": "1415c627a7ab0502c3f1a163ab298840553e0ce4",
+      "Bytes": 3433
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/auriko/index.ts",
+      "BlobSHA": "8e9319c9c5aeebb9adf715d08a1ebf48d8f0ef58",
+      "Bytes": 391
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/bai/index.ts",
+      "BlobSHA": "6423f1c2ec4a7fdbf9b1d2a6a2da6b8c6d0d513c",
+      "Bytes": 569
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/baichuan/index.ts",
+      "BlobSHA": "ea2857db3f0da314997631383801197c5862869e",
+      "Bytes": 856
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/baidu/index.ts",
+      "BlobSHA": "e048c66320433ed149c5e6eb2ccfa87d624b4fb9",
+      "Bytes": 1694
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/bailian-coding-plan/index.ts",
+      "BlobSHA": "11af75db81584d59a807eed556c9e20562fce51e",
+      "Bytes": 2096
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/baseten/index.ts",
+      "BlobSHA": "4a1f3810ccfd8606e2cab1cbd3138ed338cdbb2b",
+      "Bytes": 401
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/bazaarlink/index.ts",
+      "BlobSHA": "dd5a3bdec8444c0967f2fd0b26d9c5716cdfb9fa",
+      "Bytes": 2185
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/beatapi/index.ts",
+      "BlobSHA": "54453093a9436b571c8b06ea3f632e815506684a",
+      "Bytes": 455
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/bedrock/index.ts",
+      "BlobSHA": "32186f856c08390f98fdfc5734663d31c0130835",
+      "Bytes": 2292
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/bigmodel/index.ts",
+      "BlobSHA": "dd43d5196e600aff11d2b93420212b4e73df8ac4",
+      "Bytes": 1065
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/blackbox/index.ts",
+      "BlobSHA": "5348310e5ff6c3b52b8e8c4370da4a0edc3be37c",
+      "Bytes": 1540
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/bluesminds/index.ts",
+      "BlobSHA": "59b1cf7d2cd1878a4f8786ed725778210d85ab6b",
+      "Bytes": 1676
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/byteplus/index.ts",
+      "BlobSHA": "2acadce50ad265facfb324cd4aa0fa77e6fb2437",
+      "Bytes": 810
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/bytez/index.ts",
+      "BlobSHA": "80f6d46febb9cf6a69018148d69a5519124be6e7",
+      "Bytes": 748
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/cerebras/index.ts",
+      "BlobSHA": "5791b16affe02b9c0f2d02d354261e5ee9d84464",
+      "Bytes": 551
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/charm-hyper/index.ts",
+      "BlobSHA": "dfbf994891ba15a1662c26d2e0748eb7f16c4918",
+      "Bytes": 440
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/chat-oripe/index.ts",
+      "BlobSHA": "4aac54edebd45c77c32704c1315f6ae351d1d698",
+      "Bytes": 488
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/chatanywhere/index.ts",
+      "BlobSHA": "6c99250b203d447d1c8d8de67b082e5935073d34",
+      "Bytes": 504
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/chatgpt-web/index.ts",
+      "BlobSHA": "8fe6fd7e969062fd0fb11a0098c9182d003985e6",
+      "Bytes": 1508
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/chatgpt-web-codex/index.ts",
+      "BlobSHA": "9019f30a5291c25475932ec166f2ccadf715c84e",
+      "Bytes": 1099
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/chatplayground/index.ts",
+      "BlobSHA": "a0dcb8da6904c94055f6e2bf218a84f9e9acf778",
+      "Bytes": 524
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/cheaperinference/index.ts",
+      "BlobSHA": "8348f30595ad6fadcf6e0d703f3029b983436dd5",
+      "Bytes": 6932
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/chenzk/index.ts",
+      "BlobSHA": "ee74a4d46fb634abafc937fd9d601f23b5395dec",
+      "Bytes": 400
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/chutes/index.ts",
+      "BlobSHA": "0b6e3686214e88a3a17af605faff6cf7ae0ad0f5",
+      "Bytes": 350
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/claude/index.ts",
+      "BlobSHA": "e173f2742a6706d9acac585a2200d6c7395fb13a",
+      "Bytes": 5249
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/cline/index.ts",
+      "BlobSHA": "b5ad1f0d6878629a340d98be757bb7f8dd992c57",
+      "Bytes": 5487
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/clinepass/index.ts",
+      "BlobSHA": "8a3e319080a9bfb1e01571b9e0ff2432aa4eb63d",
+      "Bytes": 4574
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/cloudcode-one/index.ts",
+      "BlobSHA": "e9f8bc211d3622c6191faf29ea3dd11dd7f8e2ac",
+      "Bytes": 764
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/cloudflare-ai/index.ts",
+      "BlobSHA": "5ab3eca4523c3e77de174028446d727846bfc65d",
+      "Bytes": 1456
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/cloudflare-playground/index.ts",
+      "BlobSHA": "7ef9bd0315c6b1fb1d1d60341843ce4d417b1db8",
+      "Bytes": 2982
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/clova-studio/index.ts",
+      "BlobSHA": "dd371a0336168663e4bac1680f4019c1c69e5ba4",
+      "Bytes": 3229
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/codebuddy-cn/index.ts",
+      "BlobSHA": "25908f19de1d895aa471bee2c69725c1125fbd6d",
+      "Bytes": 3984
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/codebuddy-intl/index.ts",
+      "BlobSHA": "a00779b54beee8540b117ee9c01bf53eddbad430",
+      "Bytes": 4873
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/codestral/index.ts",
+      "BlobSHA": "ea23a1ccdd3af16a062750d80a33f87355baaaa2",
+      "Bytes": 409
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/codex/index.ts",
+      "BlobSHA": "f773df5d944d23c079db74c86d3e1dbfc023d10f",
+      "Bytes": 9140
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/codex-app-server/index.ts",
+      "BlobSHA": "06a8589212cec2d397a5d836538a5da4ae871a6c",
+      "Bytes": 1625
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/cohere/index.ts",
+      "BlobSHA": "249a889af259052d27d06fcf9c0ae21805307fbe",
+      "Bytes": 1384
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/command-code/index.ts",
+      "BlobSHA": "6d8790c1a993b8c851e3cff81e21d8f82104264c",
+      "Bytes": 6708
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/conol-web/index.ts",
+      "BlobSHA": "046e105b0e66d317d9b8657c9508c2c6b93e58f8",
+      "Bytes": 415
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/copilot-m365-web/index.ts",
+      "BlobSHA": "c5baab9166692df4545bffd927cc3367f725d4b2",
+      "Bytes": 788
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/copilot-web/index.ts",
+      "BlobSHA": "c09342d58bb1d2111b05a0a3d02cbff3ef7a07db",
+      "Bytes": 558
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/coze/index.ts",
+      "BlobSHA": "6fb8cf9231e1e884c4910d1447ee2cdc8de7750f",
+      "Bytes": 355
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/crof/index.ts",
+      "BlobSHA": "7f7855f40a5b8f3d975995bf544684fb2734e6ec",
+      "Bytes": 2762
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/cursor/index.ts",
+      "BlobSHA": "dc87a831fd294174a6b5195a6be6b4286c8f5166",
+      "Bytes": 14126
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/dahl/index.ts",
+      "BlobSHA": "0f6ee655c98caea8541de86db147007e7a751ece",
+      "Bytes": 895
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/daoxe/index.ts",
+      "BlobSHA": "1dcc8695e71f85d44a0a4ae33ac7c2099b49d562",
+      "Bytes": 1565
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/databricks/index.ts",
+      "BlobSHA": "3382ce72332b743a9b5051cc2ba447773c34c085",
+      "Bytes": 433
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/deepai/index.ts",
+      "BlobSHA": "966df64a391fce9209eded4c6b8006e17afa6246",
+      "Bytes": 331
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/deepinfra/index.ts",
+      "BlobSHA": "141efa21a0e341d5fdb137b7e8252d4bb94ef5ce",
+      "Bytes": 413
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/deepseek/index.ts",
+      "BlobSHA": "3236de9368bacc92f5e8a51d5e91edb3e7f60b4d",
+      "Bytes": 1691
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/demonroute/index.ts",
+      "BlobSHA": "c4d2bbcf62a3f6f12928cff17cb589f70e5feeb6",
+      "Bytes": 2090
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/devin-cli/index.ts",
+      "BlobSHA": "01692abaf6f6cfe57d15286c21a7b811d328ded0",
+      "Bytes": 704
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/devin-cli-agentic/index.ts",
+      "BlobSHA": "3001936e253bb4efb27a4ada6c6218c4eded3382",
+      "Bytes": 682
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/devin-desktop/index.ts",
+      "BlobSHA": "146a00150353652e4b73b35eabb7fbd56e5d73fe",
+      "Bytes": 424
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/dgrid/index.ts",
+      "BlobSHA": "e759bc13566fd612dedece54ae15b6360af1a157",
+      "Bytes": 457
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/dify/index.ts",
+      "BlobSHA": "80c9c7690fbee0e278f026a7f5eef6ad308c1fc9",
+      "Bytes": 602
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/digitalocean/index.ts",
+      "BlobSHA": "af1186934c14cd507cd36d5974e7afb2ab866cd2",
+      "Bytes": 421
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/dit/index.ts",
+      "BlobSHA": "70c459ae959afebae3ca8ea15f67ab2d4aaa2c5e",
+      "Bytes": 1474
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/doubao/index.ts",
+      "BlobSHA": "f161983a9408f5140f64fa30ea80143b955b5adb",
+      "Bytes": 1317
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/duckduckgo-web/index.ts",
+      "BlobSHA": "41566a8323e60fd6f72e2ef80efa9add6cb07613",
+      "Bytes": 1139
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/dxnt/index.ts",
+      "BlobSHA": "2a70c339c31418780dfb1844712a46519ef6628c",
+      "Bytes": 611
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/electronhub/index.ts",
+      "BlobSHA": "b1b0cce56fab3e7a2df283d4281b5768e9c7a94e",
+      "Bytes": 416
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/eurouter/index.ts",
+      "BlobSHA": "045c921feea1ee80d3c4f72eaa6b0d2712b7e650",
+      "Bytes": 401
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/factory/index.ts",
+      "BlobSHA": "fc0d4eb08d934be62ebc062ec995caefc6ca9e61",
+      "Bytes": 1857
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/fastrouter/index.ts",
+      "BlobSHA": "622c6120655e77697bc49d46d9024e878ce75146",
+      "Bytes": 419
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/featherless-ai/index.ts",
+      "BlobSHA": "ea374bf3768f1f9e151a6fa48c660d359a83d7c6",
+      "Bytes": 427
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/fireworks/index.ts",
+      "BlobSHA": "c81541287242027daf23af63c1335aebbcff76f6",
+      "Bytes": 1169
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/free-ai/index.ts",
+      "BlobSHA": "a055dab8db90c235d4d065051256c96d953d42fb",
+      "Bytes": 378
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/freeaiapikey/index.ts",
+      "BlobSHA": "d9a43b395978e4082e97dab33c926d886e4ede68",
+      "Bytes": 2288
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/freebuff/index.ts",
+      "BlobSHA": "d8c7bbc8b982a661f677d6d7eadf883c7fd41134",
+      "Bytes": 1698
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/freeinference/index.ts",
+      "BlobSHA": "25c02dbaad1e8ef3cfabdc6e2ee89028c32176b9",
+      "Bytes": 420
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/freemodel-dev/index.ts",
+      "BlobSHA": "80bc995d7fd35a2db273bcce03fcaad3cae5e549",
+      "Bytes": 629
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/freetheai/index.ts",
+      "BlobSHA": "04b357f6372d9adc1e3e3cbf2ba3e798cc35f4e9",
+      "Bytes": 1217
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/friendliai/index.ts",
+      "BlobSHA": "d4dd98179f635e2e09a82de30cd6e7b884713429",
+      "Bytes": 657
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/g4f-gemini/index.ts",
+      "BlobSHA": "ec022ee11b2c9b39648ca4b319469e022873e7c7",
+      "Bytes": 810
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/g4f-groq/index.ts",
+      "BlobSHA": "07a45fdee0c50c83ee9e46b8e6a27eea3625c303",
+      "Bytes": 797
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/g4f-nvidia/index.ts",
+      "BlobSHA": "1a50249d3eb5a1afe3037f18cbfb0816f7cf3f45",
+      "Bytes": 879
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/g4f-ollama/index.ts",
+      "BlobSHA": "d528d0b4a180a1ddb921a720fbd25d6b3a32a925",
+      "Bytes": 710
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/g4f-pollinations/index.ts",
+      "BlobSHA": "5e9c4d14a245b2db84365bc1b0e859585f67e09e",
+      "Bytes": 809
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/galadriel/index.ts",
+      "BlobSHA": "bce19a067bb310b0200203a331e3fe6612fd25ac",
+      "Bytes": 405
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/gemini/index.ts",
+      "BlobSHA": "6a51f8c5021ca38c3984b5f5597c2a4be64624c0",
+      "Bytes": 1940
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/ghe-copilot/index.ts",
+      "BlobSHA": "d7330d9d4d3f0d629b80d21a9b4e9957535c50a4",
+      "Bytes": 6618
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/gigachat/index.ts",
+      "BlobSHA": "c029aef448012187a9a9eed1fa138ecc1acfc85a",
+      "Bytes": 400
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/github/index.ts",
+      "BlobSHA": "0758b8659e3f4c52efb1005c737a6ab4fd4a5fb8",
+      "Bytes": 7608
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/gitlab-duo/index.ts",
+      "BlobSHA": "715c03f97afe305d827f8c02971985c815de6e22",
+      "Bytes": 1392
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/gitlawb/index.ts",
+      "BlobSHA": "1fac76b4a86efc019e6cc4095cbdd263aee52a58",
+      "Bytes": 562
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/glm/index.ts",
+      "BlobSHA": "80ac70d9c78895ef58ae9f3d0216e378ab10f85b",
+      "Bytes": 797
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/greenpt/index.ts",
+      "BlobSHA": "b4643382a52b4e1569e4bfc75f6fb25a835c42f9",
+      "Bytes": 396
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/grok-cli/index.ts",
+      "BlobSHA": "89e836938edbaa298373985b86c52f880d17d15b",
+      "Bytes": 2422
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/grok-web/index.ts",
+      "BlobSHA": "44e84c5f2a05f7ff958468f84bb099e894b5aa8e",
+      "Bytes": 619
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/groq/index.ts",
+      "BlobSHA": "6e6c0d5fa48db37ca5fdba0df4e266a9064546bb",
+      "Bytes": 1314
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/haiper/index.ts",
+      "BlobSHA": "b9813a3458b6f2664f2f2de734e3be7e82726feb",
+      "Bytes": 373
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/hcnsec/index.ts",
+      "BlobSHA": "dba2b690dafb3d6c31c107e1c80d107b9336d73d",
+      "Bytes": 2875
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/helixmind/index.ts",
+      "BlobSHA": "c8f4d3a529c26eab5cdf41fcec0297e658ecccae",
+      "Bytes": 818
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/helyxai/index.ts",
+      "BlobSHA": "e0b3fd1ea0a330ba65be3c75fad6844860e9c4d0",
+      "Bytes": 394
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/heroku/index.ts",
+      "BlobSHA": "8cde2535e8986f91dabcf9162686077eadc34e34",
+      "Bytes": 400
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/huggingchat/index.ts",
+      "BlobSHA": "4be26b8d9bbd7af831c639678534df12a1955476",
+      "Bytes": 3817
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/huggingface/index.ts",
+      "BlobSHA": "dfc94ae9d8a67a094deda2f03f78e889c5804ca3",
+      "Bytes": 756
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/hyperagent/index.ts",
+      "BlobSHA": "b7c1efe62e55d9431d96f89a2065a178ccc29bc8",
+      "Bytes": 1021
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/hyperbolic/index.ts",
+      "BlobSHA": "4ffc6dd0bdfc2b42f2c9c53083a9ba297e3ebe5f",
+      "Bytes": 830
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/ideogram/index.ts",
+      "BlobSHA": "07dfe9fb921f907b7648d082631aba5640f65c43",
+      "Bytes": 369
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/iflytek/index.ts",
+      "BlobSHA": "747cd57c921f2cd6dc4e103c02dcba900fc4a343",
+      "Bytes": 1171
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/inception/index.ts",
+      "BlobSHA": "9efd0bfc476ba39dba61d859de13dd06c1161749",
+      "Bytes": 562
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/inference-net/index.ts",
+      "BlobSHA": "656bd1fbb04f57868befc61de5c9383575628cca",
+      "Bytes": 416
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/inner-ai/index.ts",
+      "BlobSHA": "f4d212c8ad51829fbe58a84e2e2e4500629ee068",
+      "Bytes": 1784
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/internlm/index.ts",
+      "BlobSHA": "43b161d1f2258438a67956860e30748b5f3ffb84",
+      "Bytes": 671
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/kenari/index.ts",
+      "BlobSHA": "26a85caa7946db65084b6db022f7b1e72c00bb0b",
+      "Bytes": 366
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/kie/index.ts",
+      "BlobSHA": "81e1f3fce4681de6d8f52d872fa7c64763a79542",
+      "Bytes": 1123
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/kilo-gateway/index.ts",
+      "BlobSHA": "67b57f1fa734e789ba46b9c892af7d2bcf31b512",
+      "Bytes": 1071
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/kilocode/index.ts",
+      "BlobSHA": "2e69e3e378e4f490690d32a8ca2873e305fcdb22",
+      "Bytes": 2363
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/kimi/index.ts",
+      "BlobSHA": "7b5efe7d3eff34c0ffd21fd637ba30183bcddf8b",
+      "Bytes": 523
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/kiro/index.ts",
+      "BlobSHA": "0124fff9a5a38ba6a07303cfd219dcf1cce504fc",
+      "Bytes": 2645
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/lambda-ai/index.ts",
+      "BlobSHA": "e66cf19f044e509891e0efef346ed96a8648beb6",
+      "Bytes": 402
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/leonardo/index.ts",
+      "BlobSHA": "6311ece863cb91bf2d8325e952e58c2a9a0ea2d3",
+      "Bytes": 373
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/liquid/index.ts",
+      "BlobSHA": "2ab17cbdcaa6ad88e0c1a58ee6d89044547d6387",
+      "Bytes": 782
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/literouter/index.ts",
+      "BlobSHA": "fd13e540eb1b3e39f68c9310bb2dc799b1549b86",
+      "Bytes": 413
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/llamagate/index.ts",
+      "BlobSHA": "515a9afd41e4848e6759d01ed0d888bcd3cf17ac",
+      "Bytes": 401
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/llm-kiwi/index.ts",
+      "BlobSHA": "d929afec29eba840e08ff45863998d43c4e04578",
+      "Bytes": 466
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/llm7/index.ts",
+      "BlobSHA": "9bd6237dca6074ec48920d3ad11d12bd768f64d1",
+      "Bytes": 793
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/llmgateway/index.ts",
+      "BlobSHA": "972a3a893026d41e047f5b1c6d664a7ab4b93496",
+      "Bytes": 411
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/lmarena/index.ts",
+      "BlobSHA": "ab91a6a9e5f87e91f27493c373091d6cb929a446",
+      "Bytes": 568
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/logfare/index.ts",
+      "BlobSHA": "9b16b5a2f4e09d3d5a6fe9b2bd63057ffdc6d602",
+      "Bytes": 1097
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/longcat/index.ts",
+      "BlobSHA": "d53c2a32ef00b788d9e62ca7bc46cdc232208835",
+      "Bytes": 874
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/lyceum/index.ts",
+      "BlobSHA": "6ba9244418243e96b48881c6360d64c132686e51",
+      "Bytes": 421
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/magnific/index.ts",
+      "BlobSHA": "63c83d5b1ca3ec3fb91e475bdc560475e710c2bd",
+      "Bytes": 1155
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/maritalk/index.ts",
+      "BlobSHA": "c102ec3849a15f7001e3dd93b1e2c3f0b2eca2f7",
+      "Bytes": 404
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/maxai/index.ts",
+      "BlobSHA": "d35a023e4987cb53ac1a8574104418a97c34dfd0",
+      "Bytes": 1126
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/meganova-ai/index.ts",
+      "BlobSHA": "e5c61d01df96f668cb48f168f406de013e5931f5",
+      "Bytes": 409
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/meta-llama/index.ts",
+      "BlobSHA": "07363a63ddcd956c3a962eacc5a7347af40b267a",
+      "Bytes": 410
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/minimax/index.ts",
+      "BlobSHA": "54fc7b3058c57101c74f8fbaf4725014f466d8cb",
+      "Bytes": 813
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/mistral/index.ts",
+      "BlobSHA": "04ec182021215abd7d8725a32808776e3bccba6b",
+      "Bytes": 592
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/mixlayer/index.ts",
+      "BlobSHA": "63f4ab771571f5c41767dfc2d2eb1dca64b148f4",
+      "Bytes": 465
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/mlx/index.ts",
+      "BlobSHA": "24d3e8b2324481120021f0eeb7304849c347c89c",
+      "Bytes": 3058
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/mnn-ai/index.ts",
+      "BlobSHA": "f1d7e2317fa8355df34900197e7b55c7df35a435",
+      "Bytes": 388
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/modal/index.ts",
+      "BlobSHA": "b0d20dd271c597123c647be13b68f2bfcd83b153",
+      "Bytes": 354
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/modelscope/index.ts",
+      "BlobSHA": "f82b7cbe7212abfa44f2f9b93e5bbff7980eb55f",
+      "Bytes": 1261
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/monsterapi/index.ts",
+      "BlobSHA": "6ca84f86eb991d633a1302632841ecd2f3db0d8b",
+      "Bytes": 654
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/moonshot/index.ts",
+      "BlobSHA": "76e9bd6b937e7226398768e809d62b5d1ae89fa9",
+      "Bytes": 2682
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/morph/index.ts",
+      "BlobSHA": "f4466ad33b94049557d7bb865045cb9cbd59e93e",
+      "Bytes": 389
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/muse-code/index.ts",
+      "BlobSHA": "eab9a20a8277814b4d2be860187212d04adb48a1",
+      "Bytes": 4682
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/muse-spark-web/index.ts",
+      "BlobSHA": "03021bdfff2eb70d6f546c65b03e4a0e7b7c130f",
+      "Bytes": 615
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/naga-ac/index.ts",
+      "BlobSHA": "4627c2b92144cdad5fb296939e18af596671556d",
+      "Bytes": 575
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/naga-ai/index.ts",
+      "BlobSHA": "3918bd55859975927e7aad122af6dfd8d7c926db",
+      "Bytes": 483
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/nan/index.ts",
+      "BlobSHA": "36884957da094b6e14cbad1a53150e309173e450",
+      "Bytes": 1278
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/nanogpt/index.ts",
+      "BlobSHA": "1c95c8bb52c34fb38f507338f5275d7031bb2d14",
+      "Bytes": 509
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/nara/index.ts",
+      "BlobSHA": "177e8f39bafb1bc824e29b833545cef4f53c43b5",
+      "Bytes": 1863
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/navy/index.ts",
+      "BlobSHA": "605feb37e949ee2add0d92efa17af0ba611bdae6",
+      "Bytes": 1717
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/nebius/index.ts",
+      "BlobSHA": "b49bd34e8106e878caaa73a72df397d8260b71a1",
+      "Bytes": 405
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/nlpcloud/index.ts",
+      "BlobSHA": "6a72d10b20ce47f5f12604e2746dbd063c026a22",
+      "Bytes": 681
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/notion-web/index.ts",
+      "BlobSHA": "bfe4ead073ff0528c2057d19f67314e9111529ae",
+      "Bytes": 962
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/notrack-web/index.ts",
+      "BlobSHA": "5d6b7848ebe1da8a6605c1faa9c5e609df5165b8",
+      "Bytes": 850
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/nous-research/index.ts",
+      "BlobSHA": "e118dbcae7e833a1dbbfd7245a0416cd7817f355",
+      "Bytes": 465
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/novita/index.ts",
+      "BlobSHA": "48227c6a143cede1515a0f62a9d4841133838825",
+      "Bytes": 5964
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/nscale/index.ts",
+      "BlobSHA": "e6af269a126885cbf870d308bb441fafdeff8324",
+      "Bytes": 401
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/nube/index.ts",
+      "BlobSHA": "f0e25b56b938267977179859bfa4a5c9907e9bc4",
+      "Bytes": 631
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/nvidia/index.ts",
+      "BlobSHA": "dab45294d37d1e1780187518942bb86bf674ad8d",
+      "Bytes": 1899
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/ofoxai/index.ts",
+      "BlobSHA": "ada7b5eef2d2be84d42530a9215b9bda7d6b54d8",
+      "Bytes": 387
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/ollama-cloud/index.ts",
+      "BlobSHA": "fb68aae61e51e95209e3c08acaa694c2ce615b59",
+      "Bytes": 2445
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/oneminai/index.ts",
+      "BlobSHA": "16a623313fed1fe9c98f6a19ef511c59baf49adc",
+      "Bytes": 1599
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/onomeo/index.ts",
+      "BlobSHA": "b51dcc43a9480feb1c348e422200ada9dd2944f0",
+      "Bytes": 385
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/openadapter/index.ts",
+      "BlobSHA": "6723e5ed710a418a0a48b0c2fa6766b73b6b0423",
+      "Bytes": 1129
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/openai/index.ts",
+      "BlobSHA": "70d7d58bd8528fe389f14194178de56b855f6d62",
+      "Bytes": 3728
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/openference/index.ts",
+      "BlobSHA": "9ef2cfc768ad5986949f51f523c28b3bcd9e6934",
+      "Bytes": 1084
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/openference-api/index.ts",
+      "BlobSHA": "01c394848238803b39c2346797cdeba9f31ce30b",
+      "Bytes": 949
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/openrouter/index.ts",
+      "BlobSHA": "b8302c95800ccd5bcc9f896be78a67c5cda5f32c",
+      "Bytes": 1412
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/openvecta/index.ts",
+      "BlobSHA": "25753438b54dcbdd5a7f3911bb9d8ac75d8a5dbe",
+      "Bytes": 1623
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/opper/index.ts",
+      "BlobSHA": "e95084bd023ec1b40ef4a8978c3e53f88eca007b",
+      "Bytes": 400
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/orcarouter/index.ts",
+      "BlobSHA": "11f9f94525620bd24b28c44185d41fcb4997fccd",
+      "Bytes": 2570
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/ovhcloud/index.ts",
+      "BlobSHA": "78782c7e4a0f7f872439622f089d685c87174a9a",
+      "Bytes": 964
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/perplexity/index.ts",
+      "BlobSHA": "45222ebc62effb33b53a7fab3dac19518b475419",
+      "Bytes": 715
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/pioneer/index.ts",
+      "BlobSHA": "c577ff3ff5fd88558a833a778df8795ffaed4f57",
+      "Bytes": 1804
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/plamo/index.ts",
+      "BlobSHA": "4a4f6c81ee76f63d320e3b51f88f48cedaaf72c1",
+      "Bytes": 445
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/poe/index.ts",
+      "BlobSHA": "051bf994a3e2ed43222c4ddd9a640f1ceef97239",
+      "Bytes": 3915
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/poixe-ai/index.ts",
+      "BlobSHA": "100d0ed0acd68d9c49ba5ee46e2c380e3c5a8ccf",
+      "Bytes": 511
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/pollinations/index.ts",
+      "BlobSHA": "6d7e384da598efc1b32bcb8ed0101b4d4c902249",
+      "Bytes": 3083
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/poolside/index.ts",
+      "BlobSHA": "8a72a761a4a47bff515e3822b62d2c2838d68302",
+      "Bytes": 1857
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/predibase/index.ts",
+      "BlobSHA": "03d70ca27f99ddf9bb61fa86662292f84d1a7743",
+      "Bytes": 414
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/promptql/index.ts",
+      "BlobSHA": "aa4216455517a93f2147861cdf38eaf3010146bf",
+      "Bytes": 736
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/publicai/index.ts",
+      "BlobSHA": "e8068082a7dd6639ff336d0427645d935edbf93e",
+      "Bytes": 400
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/qianfan/index.ts",
+      "BlobSHA": "2fdb7521fafa05c63051827b203c6e409f6c43b6",
+      "Bytes": 587
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/qiniu/index.ts",
+      "BlobSHA": "1bbf5021d8fdea8c73bc2c1bb187cc2a834c9406",
+      "Bytes": 405
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/qoder/index.ts",
+      "BlobSHA": "4e2bf66ed78ef416ea5100dd03ca0e0c899589fd",
+      "Bytes": 1945
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/qwen-cloud/index.ts",
+      "BlobSHA": "a72aa3bd4bc7e4f44e54c6702ea9444eb8ece798",
+      "Bytes": 1301
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/qwen-cloud-token-plan/index.ts",
+      "BlobSHA": "dbb45bda215ccf220b5e7e96532362557929f3f9",
+      "Bytes": 3111
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/regolo/index.ts",
+      "BlobSHA": "6e52112dac7370909c1288b67db0c8f59042c60c",
+      "Bytes": 841
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/reka/index.ts",
+      "BlobSHA": "c933eeb20d6c75dff304824c189c92c655bb97b4",
+      "Bytes": 680
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/requesty/index.ts",
+      "BlobSHA": "6fc063bce243b74840d219cadd5115192c4647c0",
+      "Bytes": 407
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/routeway/index.ts",
+      "BlobSHA": "43c426e82eebfe7c425663b5cc945d02a572c3a3",
+      "Bytes": 1713
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/sambanova/index.ts",
+      "BlobSHA": "3440dcd2f124006578a5b189a9a50af0ddf3d697",
+      "Bytes": 401
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/sarvam/index.ts",
+      "BlobSHA": "2cbc440d409c67d592f70ebdbd26f156a632b8db",
+      "Bytes": 441
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/scaleway/index.ts",
+      "BlobSHA": "93be3486f16556e6e980a5d54b44ef03dea2ec24",
+      "Bytes": 837
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/sealion/index.ts",
+      "BlobSHA": "4987c3d9d678a9a6809e654ba722273a7d5a11c8",
+      "Bytes": 1117
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/seekai/index.ts",
+      "BlobSHA": "e37550cc52800124d10c646c550cca1cf66457d0",
+      "Bytes": 692
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/sensenova/index.ts",
+      "BlobSHA": "fb7d2435d12ad362154e299d98f1f7be7d8b8bdf",
+      "Bytes": 1338
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/siliconflow/index.ts",
+      "BlobSHA": "238cf60e972acc7d2d1ae1022dcf672ab0abec74",
+      "Bytes": 4790
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/snowflake/index.ts",
+      "BlobSHA": "5086b02df9e855ecab8aa911fc062eaf964309f5",
+      "Bytes": 408
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/sparkdesk/index.ts",
+      "BlobSHA": "4df1fa1150204536f464a3285503ecc1f4880c13",
+      "Bytes": 1078
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/speka/index.ts",
+      "BlobSHA": "04f1f17c7eb59150173d31e3fb56e6d68f3d7793",
+      "Bytes": 378
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/stepfun/index.ts",
+      "BlobSHA": "1d1b1534b5b2a693337ff2dabe67c1dd8b0c36dd",
+      "Bytes": 1564
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/sumopod/index.ts",
+      "BlobSHA": "1a5414e87939c3fe0b594f30eb43bdd898ae0b4f",
+      "Bytes": 411
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/synthetic/index.ts",
+      "BlobSHA": "cc9ab28e8f843ebaea8b9364bf712cca56472670",
+      "Bytes": 2200
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/syntx/index.ts",
+      "BlobSHA": "3256be38847a2b575ff6aa567746501f544cc033",
+      "Bytes": 573
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/t3-web/index.ts",
+      "BlobSHA": "7b9339365dcd5894cfdb027adafec4639c22c35f",
+      "Bytes": 2295
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/tabitoken/index.ts",
+      "BlobSHA": "4aa7d913daf8e54fd48dc9827154b5af59cd84af",
+      "Bytes": 2981
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/tencent/index.ts",
+      "BlobSHA": "4822a837ce5ab9094c2e9babd8f5372ab7d31a52",
+      "Bytes": 1215
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/tencent-aistudio-web/index.ts",
+      "BlobSHA": "8cd3397f5b03fe5950b546074fb351ad08980a97",
+      "Bytes": 675
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/tinycms/index.ts",
+      "BlobSHA": "7f1e741d016609fd85cbf2698a2a28d0f11366f7",
+      "Bytes": 2011
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/together/index.ts",
+      "BlobSHA": "c185804b08e41604c715cebcbc9937be4bd3d461",
+      "Bytes": 922
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/token-kiosk/index.ts",
+      "BlobSHA": "319747828cfcbbbf6143acc8746e49549e63e300",
+      "Bytes": 973
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/tokenmarket/index.ts",
+      "BlobSHA": "0aada45f0d51bff61b1cfb0c819dc921a2be8eae",
+      "Bytes": 634
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/tokenreply/index.ts",
+      "BlobSHA": "835225c4713127a926b237663d9a9ba34c766d2f",
+      "Bytes": 413
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/tokenrouter/index.ts",
+      "BlobSHA": "a3c39f26448cb7aee8a7e14afeff56fedbe61bc7",
+      "Bytes": 1791
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/trae/index.ts",
+      "BlobSHA": "44ebd0679021c51dc535db434b4ac0a9d80b2cda",
+      "Bytes": 841
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/twinmind/index.ts",
+      "BlobSHA": "8e77f277a479ba8e87c75cb685e2a4927886aabb",
+      "Bytes": 510
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/typhoon/index.ts",
+      "BlobSHA": "83aa76d6f42d4539e6d48d54750c3bcb8e4a6e3c",
+      "Bytes": 440
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/uc/index.ts",
+      "BlobSHA": "93a65011301cf367efa475f9e45f65969c4ec546",
+      "Bytes": 1239
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/uc-direct/index.ts",
+      "BlobSHA": "07b9c56ef4babfbcae6b40d082d26c206e333ea1",
+      "Bytes": 7966
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/udio/index.ts",
+      "BlobSHA": "ac7d1dd1a349e8090a92ce96c328c138e9e193f4",
+      "Bytes": 335
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/uncloseai/index.ts",
+      "BlobSHA": "cc840578333b410db595958050583317d1ab880c",
+      "Bytes": 1630
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/unifically/index.ts",
+      "BlobSHA": "0e73a07508287c7252c69c4a3825da73c4f03ebb",
+      "Bytes": 616
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/unorouter/index.ts",
+      "BlobSHA": "a84c38387d12162059be888b36dac1bc0dc06ec0",
+      "Bytes": 408
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/upstage/index.ts",
+      "BlobSHA": "a6ddf216e44796f6c44be9fe4c88f2d258082a2a",
+      "Bytes": 395
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/v0-vercel/index.ts",
+      "BlobSHA": "afc2618781df8f9975e862a1c9a805e77bec1787",
+      "Bytes": 395
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/venice/index.ts",
+      "BlobSHA": "7d2947b8fc53b0c564407338fb73b3ee47080fe9",
+      "Bytes": 394
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/veoaifree-web/index.ts",
+      "BlobSHA": "961aedec0e7871d6ff28471e1603ecb5667b4c63",
+      "Bytes": 442
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/vercel-ai-gateway/index.ts",
+      "BlobSHA": "f9e6038009ad5b012f39e7fb1bd8b41496c01136",
+      "Bytes": 457
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/vertex/index.ts",
+      "BlobSHA": "03674462787bdbfbc34b1c267a1d38d843785e84",
+      "Bytes": 3858
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/void-ai/index.ts",
+      "BlobSHA": "95a4e8fff900e665f0f225feba61ceca3ff99909",
+      "Bytes": 454
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/volcengine/index.ts",
+      "BlobSHA": "db808512598e74628755e8ea78a53282f7393dec",
+      "Bytes": 422
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/wafer/index.ts",
+      "BlobSHA": "21be94662599b6c03211edce055f5e1d61584609",
+      "Bytes": 598
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/wandb/index.ts",
+      "BlobSHA": "7237cfdbb48361cbdfd4a321e7a46fd3f4322fa9",
+      "Bytes": 395
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/workbuddy/index.ts",
+      "BlobSHA": "75e6af36d5d3055fc8a78ad02678804916951f48",
+      "Bytes": 3504
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/writer/index.ts",
+      "BlobSHA": "9f0e26290a603814d92a877e9ed113e808fcdc15",
+      "Bytes": 442
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/x5lab/index.ts",
+      "BlobSHA": "ac5112a3a1c792913e7642a246ffae0e84ab8611",
+      "Bytes": 403
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/xai/index.ts",
+      "BlobSHA": "c1ce885312d1f201bdd97e1517d39b37e30b83f8",
+      "Bytes": 2829
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/xiaomi-mimo/index.ts",
+      "BlobSHA": "dcf8cbd7c5df00e0165235816a6eda1074e4eb76",
+      "Bytes": 851
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/xiaomi-mimo-token-plan/index.ts",
+      "BlobSHA": "f15042adcda051960388884011280e6f0531df9a",
+      "Bytes": 1249
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/xkiro/index.ts",
+      "BlobSHA": "4e76ae2ba9def2c0860d02c76c93311fc7af4e4c",
+      "Bytes": 6944
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/y-api/index.ts",
+      "BlobSHA": "1d2f78c7fb68d83e5a62f3bfbf18df8f37ce934e",
+      "Bytes": 421
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/yi/index.ts",
+      "BlobSHA": "25acaba96b8c8210f893e2bb24e891618bbf3949",
+      "Bytes": 329
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/yolo-auto/index.ts",
+      "BlobSHA": "6b90dc1a7521afd1f27f393273982c49faf87482",
+      "Bytes": 687
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/yuanbao-web/index.ts",
+      "BlobSHA": "b4e70a7fcae5a329db2c923ce5b0bcf5d87f2a73",
+      "Bytes": 1136
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/zai/index.ts",
+      "BlobSHA": "f09a2d1de6271fcc9e5e282ce30c2d1cd5befb06",
+      "Bytes": 1898
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/zai-web/index.ts",
+      "BlobSHA": "59b2b61c31274c74e35132710ca5a7dced59e5a2",
+      "Bytes": 1173
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/zcode/index.ts",
+      "BlobSHA": "9531cfd45ce13cb330d2be6f8400dc82ba28f094",
+      "Bytes": 1122
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/zed-hosted/index.ts",
+      "BlobSHA": "a5578e6dba83ea6918e04813b3fb8b16238a22c8",
+      "Bytes": 1384
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/zenmux/index.ts",
+      "BlobSHA": "54a0c78fb2287081b3d70b904cfc81e11346c759",
+      "Bytes": 2223
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/zenmux-free/index.ts",
+      "BlobSHA": "21ff0139bd2ab0aeebac9ce8293d1799aa8a9e5f",
+      "Bytes": 1729
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/zerolimitai/index.ts",
+      "BlobSHA": "5ad779d6d790ec170513b993a55c4c8369ed8776",
+      "Bytes": 426
+    },
+    {
+      "Repository": "cheaper-inference/OmniRoute",
+      "HEAD": "c754707d0edf250107a386168d4e324f51b24135",
+      "Path": "open-sse/config/providers/registry/zylo-api/index.ts",
+      "BlobSHA": "285a16d27dc3f45c81c85cbc7beed5e85b23aea5",
+      "Bytes": 394
+    }
+  ]
+}

@@ -42,3 +42,8 @@ Invoke-WebRequest "$root/Test-DJMRN-375-Manual.ps1" -UseBasicParsing -OutFile "$
 Invoke-WebRequest "$root/OmniRoute_v3.8.52_375_providers.csv" -UseBasicParsing -OutFile "$dir/OmniRoute_v3.8.52_375_providers.csv"
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$dir/Test-DJMRN-375-Manual.ps1"
 ```
+
+
+## 2026-10-25 — Provider Gate v3 and user offline analysis (latest continuation)
+
+[**START HERE: v3 archive, source, receipts and exact next step**](provider-gate-v3/INDEX.md). The original v2 artifacts above remain historical and unchanged. v3 reuses existing local evidence without network by default; all original deliverables and 52+42 Linux synthetic checks are preserved. [Actual later user Windows AnalyzeExisting result](../../logs/OMNIROUTE-PROVIDER-GATE-V3-USER-ANALYZE-20261025.md): 375; A0/B158/C40/D0/E149/pending28; imported977, HTTP885, new requests0, warnings0. The full real queue and endpoint CSVs have **not** been provided to Work; next collect those (or one offline text export), not another scan. No inference, free eligible account, approved connection or failover established.
