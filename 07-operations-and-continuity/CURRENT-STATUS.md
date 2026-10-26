@@ -1,3 +1,51 @@
+## 2026-10-27 — OMNIROUTE-GEMINI-403-HTML-PROXY-RECOVERY-20261027 | Verified Gemini 403/HTML recovery (OmniRoute v3.8.52)
+
+**Purpose / reuse by other DJMRN agents:** A tightly scoped operational troubleshooting receipt, **not** a model onboarding batch, a new provider, a general fix for every HTTP 403, or a claim that all Gemini models are working. Evidence comes from the user's own Windows PowerShell outputs. Only the existing Google Gemini provider connection was adjusted. Do not copy credentials or silently modify the other models, Combos, Notion, billing, or network settings.
+
+### Symptom and independent controls
+- Target provider connection: `DJMRN-OmniRoute-Gemini`, provider `gemini`, existing on local OmniRoute Desktop **v3.8.52**, gateway `http://127.0.0.1:20128`; target model under investigation `gemini/gemma-4-26b-a4b-it` (already stored as one Custom model; do **not** re-create).
+- Real gateway `POST /v1/chat/completions` for **Gemma 4 26B** initially failed **HTTP 403, HTML_ERROR**, latency **23.43 s**. Earlier `gemini/gemini-3.1-flash-lite` gateway also returned **403** with `<!DOCTYPE html>` and `reset after 24s` (31.46 s overall); this second model was explicitly deferred, **not retested after repair**.
+- Direct Google `POST https://generativelanguage.googleapis.com/v1beta/models/gemma-4-26b-a4b-it:generateContent`, with the **Google upstream API key** supplied privately by user, returned **HTTP 200**, generated a nonempty answer, latency **3.22 s**. Direct `gemini-3.1-flash-lite` likewise returned **HTTP 200** with its separately supplied Google key (13.59 s). These establish **upstream reachability with the tested key**, not bytewise equivalence to the key stored inside OmniRoute, and not that every model is functional.
+- The existing connection's management GET reported `ACTIVE=True`, `TEST_STATUS=active`, `STORED_KEY_PRESENT=True`, `PROXY_ENABLED=True`, `PER_KEY_PROXY_ENABLED=False`, `LAST_ERROR_TYPE=forbidden`, `ERROR_CODE=403.0`. **A proxy-enabled toggle is not proof that an actual proxy was assigned.**
+
+### Root-cause isolation — observed facts vs inference
+1. Read-only `GET /api/usage/proxy-logs?provider=gemini&limit=30` with **OmniRoute Management Token** showed 10 prior error entries: `upstreamStatus=403`, `proxy=null` (script reported `PROXY_USED=False`), `attemptNumber=1` on each displayed row. `upstreamStatus=403` is a status recorded by OmniRoute; alone it **cannot prove whether the Google origin or an intermediary generated the HTML**. `proxy=null` describes the router's logged proxy object; it does not prove there was no operating-system/network-level intermediary.
+2. Windows per-user proxy at `HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings`: `ProxyEnable=1`, `ProxyServer=127.0.0.1:20809`, no PAC. The read-only `GET /api/settings/proxy?resolve=<existing Gemini connection id>` returned **no resolved proxy** despite `PROXY_ENABLED=True`.
+3. An explicit HTTP-proxy connectivity preflight `curl.exe --proxy http://127.0.0.1:20809 ... https://generativelanguage.googleapis.com/v1beta/models` completed and returned **403 without upstream API authentication**. This was **not an authenticated Google inference call**; 403 here must **not** be treated as a model or API key failure, only evidence that the HTTP proxy responded and returned an HTTP status.
+4. **Likely local cause, operationally resolved:** OmniRoute's configured Gemini connection had no effective proxy, whereas the working Windows request was using the user's local proxy path. We did **not** packet-trace either route, so describe this as **strong inference supported by the controlled before/after**, not a universally proven diagnosis of every 403.
+
+### Verified fix — scoped to the existing connection, not global proxy
+- Discover the actual existing Gemini connection ID with management-authorized `GET /api/providers?provider=gemini`; select **exactly one** matching `DJMRN-OmniRoute-Gemini`. Use **Management Token** only for management endpoints. **Do not write API key, token, email, or personal identifiers to GitHub/logs.**
+- Configure its *connection/key-scoped* HTTP proxy through management-authorized **`PUT /api/settings/proxy`** using this JSON structure (replace only `<existing-connection-id>` with the locally returned ID):
+
+```json
+{
+  "level": "key",
+  "id": "<existing-connection-id>",
+  "proxy": {
+    "type": "http",
+    "host": "127.0.0.1",
+    "port": 20809
+  }
+}
+```
+
+- Management-authorized `GET /api/settings/proxy?resolve=<existing-connection-id>` immediately reported `level=key`, `proxy.type=http`, `proxy.host=127.0.0.1`, `proxy.port=20809`; operator's script printed `OMNIROUTE_PROXY=CONFIGURED`.
+- Without changing the model ID or upstream credentials, the next **single-model** gateway request to `gemini/gemma-4-26b-a4b-it` returned **HTTP 200**, output **`READY`**, latency **2.95 s**; `GEMMA_GATEWAY_TEST=SUCCESS`. The *text chat path* is operational through OmniRoute. This successful before/after result supports the proxy-routing explanation.
+- Afterwards the user used `PUT /api/provider-models` to update **the same existing model row only** to `isFree=True`, `supportsVision=True`; management `GET /api/provider-models?provider=gemini` read-back confirmed one row, `apiFormat=chat-completions`, `supportedEndpoints=chat`, both booleans True. **These are metadata labels, not a hard zero-cost limit, and do not themselves prove successful vision execution. Vision call still unverified at this checkpoint.** No duplicate registration.
+
+### Reusable agent runbook for a similar error (read-first, smallest adequate fix)
+1. Confirm precisely **one** failing model and account, and compare a minimal authenticated **direct upstream** call to the **same model through OmniRoute Gateway**; preserve status code, response type (HTML vs JSON), latency, and safe snippets only. Do not assume the model itself is broken.
+2. Read connection details (`GET /api/providers?provider=gemini`), call/proxy logs (`GET /api/usage/proxy-logs?provider=gemini`) and effective per-connection route (`GET /api/settings/proxy?resolve=<id>`) with Management Token; distinguish `proxyEnabled=True` from an actually resolved proxy.
+3. Compare effective OmniRoute route with current Windows local proxy. **Verify proxy protocol, address, port, reachability and user approval first**; a Windows proxy port can change when VPN/proxy client changes. `127.0.0.1:20809` is **this machine's observed configuration**, not a universal constant. Never assume a `curl` 403 without API authentication is a definitive upstream denial.
+4. If the same mismatch is confirmed and the proxy is working, apply a **connection-scoped `level=key`** proxy assignment, then GET read-back. Avoid turning off the VPN/firewall or changing OmniRoute's global proxy and other connections by default. Connection-scoped assignments still affect **all models sharing that same provider connection**, so measure downstream impact.
+5. Re-run only that same user-selected model from the **Gateway**, using the private Gateway key; require an actual **HTTP 200 and nonempty response** before declaring text inference operational. Do not group/batch-test other models automatically. An `isFree=True` tag or positive daily rate-limit screenshot is **not** a billing enforcement mechanism; keep the DJMRN Free-first / no-surprise-cost gate.
+6. If still failing, retain raw errors **privately** for sanitized diagnostics, check model ID/endpoint, proxy transport, upstream-key equivalence without exposing keys, and routing logs; do not blindly create duplicate Custom models or reissue costly retries.
+
+**Scope of completion:** `gemma-4-26b-a4b-it` **TEXT_GATEWAY_PASS** + local Gemini connection proxy **CONFIGURED**; Gemma Vision execution **PENDING**; other Gemini models **NOT VERIFIED**; no Combo/Agno integration or free-cost enforcement asserted. **Only this canonical CURRENT-STATUS file was updated by the assistant for this user-requested troubleshooting receipt.**
+
+---
+
 ## 2026-10-26 — POST-RESET OMNIROUTE-FIRST OPERATIONAL SCOPE (USER CLARIFICATION)
 
 **USER-CONFIRMED reset context (supersedes earlier speculation):** OmniRoute settings were accidentally reset on 2026-10-25 night. Prior AI Horde provider and the previously tested `DJMRN-Persian-L1` Combo are historical successful evidence, **not currently stored or active**. Fresh read-only user PowerShell audit on 2026-10-26: server RUNNING; `GET /api/providers` reports **1 connection**, `DJMRN-OmniRoute-Gemini` (isActive=True/testStatus=active); `GET /api/provider-models?provider=gemini` reports **9 Custom rows**; `GET /api/combos` reports **0 Combos**. Connection status and stored model metadata are **not proof of successful Gemini inference**. No restoration of reset settings is required by default; no new provider added. Four existing Custom mismatches remain reported (two TTS `apiFormat=chat-completions` with `audio-speech` endpoints, two embeddings `apiFormat=chat-completions` with `embeddings` endpoints); a proposed corrective PowerShell command was shared but **no post-fix execution/readback has yet been received**, so all four fixes are NOT VERIFIED.
