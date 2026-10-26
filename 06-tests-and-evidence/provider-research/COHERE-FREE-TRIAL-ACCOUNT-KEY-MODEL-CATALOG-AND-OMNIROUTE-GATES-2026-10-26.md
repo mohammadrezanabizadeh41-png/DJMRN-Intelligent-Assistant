@@ -1,5 +1,47 @@
 # Cohere — DJMRN Trial Account, Model Catalog, Free Quotas and OmniRoute Integration Dossier
 
+## 2026-10-26 — VERIFIED KEY RENAME + MODEL ONBOARDING HANDOFF (USER SCREENSHOT)
+
+**Most recent account-key observation / supersedes only earlier `default` key-label notes**:
+- The user's actual screenshot of Cohere Dashboard → API Keys → Trial keys visibly shows **NAME = `DJMRN-OmniRoute-Cohere`**, **CREATED = Oct 26, 2026**, with the key masked. User explicitly reports renaming the existing key. **KEY_RENAME_CONFIRMED / EXISTING_TRIAL_KEY_RETAINED**. This is the **API key's display name**, NOT proof the underlying Cohere account or organization was renamed.
+- **Never save** the actual key, its displayed suffix/fingerprint, registered personal email, cookie or screenshot with credentials in this public repository. Its key value remains available only to the owner for later private OmniRoute entry. No additional key was generated.
+- Evidence for plan and spend remains the user screenshots: **Cohere Free Account**, **Trial keys are free and rate-limited and prohibited for commercial purposes**, **Billing & Usage 0.00 USD / no tracked usage 2026-10-19 through 2026-10-26**. Payment method, spending-limit controls, future billing rules and Data Controls are **NOT OBSERVED**.
+- **Status contract:** `COHERE_TRIAL_KEY_EXISTS_AND_RENAMED` / `NO_COHERE_HTTP_TEST` / `NOT_CONNECTED_TO_OMNIROUTE` / `NO_PRODUCTION_APPROVAL`.
+
+### 2026-10-26 free-trial model/route selection shortlist (research only)
+
+**Rule:** Trial-key API calls are free within evaluation limits, but the account-specific model entitlement and real `200` responses are **not independently established**. Do not call any candidate `VERIFIED_WORKING_FREE_IN_OMNIROUTE`. The official Cohere rate-limit guide sets **1,000 total Trial API calls/month**, not independent pools for each model. `20 RPM` shown below is the documented Chat *rate limit* where named, not a daily free allowance. No model receives autonomous agent production/freelance traffic on a noncommercial Trial key.
+
+| Role for future DJMRN | Candidate exact Cohere native `model` ID | Public vendor evidence / access status | Trial RPM and confidence | OmniRoute handling |
+|---|---|---|---|---|
+| Persian/intent light L1 | `tiny-aya-earth`, `tiny-aya-global` | Live Chat models; Persian supported by Tiny Aya family, Earth focused on West Asian/African languages; **access with this key untested** | Official specific Chat model RPM row not stated; default endpoint rule documented separately; **validate** | Candidate to benchmark under existing `DJMRN-Persian-L1` only after actual call |
+| General small/faster | `command-r7b-12-2024` | Live Chat, RAG/tool candidate; not yet account tested | Trial 20 RPM per model, 1k/month shared | Candidate for L1/L2, quality bench required |
+| General agent/tool/RAG | `command-a-03-2025` | Live Chat, current model public catalog | Trial 20 RPM per model, 1k/month shared | L2 candidate; verify tool use separately |
+| Advanced multilingual reasoning | `command-a-reasoning-08-2025` | Official model page explicitly says **free for Trial and Production keys up to rate limits**; trial noncommercial remains | Trial 20 RPM per model, 1k/month shared | L3 optional, do not treat reasoning as everyday default |
+| Advanced flagship (Persian/text+vision) | `command-a-plus-05-2026` | Official model page explicitly says **free for Trial and Production keys until rate limits**; Persian listed as supported; text+image | Trial 20 RPM per model, 1k/month shared | L3/vision candidate, not a built Combo route |
+| Translation Persian | `command-a-translate-08-2025`, `c4ai-aya-expanse-32b` | Public Live Chat; Persian explicitly in vendor language lists | Command A Translate 20 RPM; Aya-specific exact RPM not published; shared trial overall | Task-specific translation benchmark |
+| Coding | `north-mini-code-1-0` | Public Live Chat agentic coding, North API evaluation supported | Trial 20 RPM, shared 1k/month | Future coding Combo when needed |
+| Vision/document analysis | `command-a-vision-07-2025`, `c4ai-aya-vision-32b` | Public Live Chat with image input; **Command A Vision official language list omits Persian**; Aya Vision family includes Persian | Command A Vision 20 RPM, Aya exact RPM not identified | Validate image input via actual adapter; no assumed automatic bridge |
+| Contextual retrieval | `embed-v5.0-fast`, `embed-multilingual-v3.0`, `rerank-v5.0-fast` | Public Embed/Rerank candidates, not chat | Embed text 2000 **inputs**/min; Rerank 10 **requests**/min; shared trial cap applicability to specific endpoints verify | Separate Embeddings/Rerank tool adapter **NOT** Chat Combo |
+
+**Other live public Chat candidates retained in the original catalogue below:** `command-r-08-2024`, `command-r-plus-08-2024`, `north-small-translate-09-2026`, `tiny-aya-fire`, `tiny-aya-water`. Public **33-model inventory** in section 3 includes all live Chat+Embed+Rerank+Parse+Audio models; it is **NOT** a count of currently verified free/authorized account routes.
+
+**Official integration contract (not yet executed):**
+- Cohere **OpenAI-compatible base URL**: `https://api.cohere.ai/compatibility/v1`; `/chat/completions` with native exact model ID and private upstream Cohere token. Native Cohere API alternatively `https://api.cohere.com/v2/chat`. OmniRoute's public guide identifies `cohere/` provider prefix but **the running user's v3.8.52 connector was not inspected/tested**. Final OmniRoute request should use *actual* registered model ID/prefix from UI; never assume documentation prefix is proof of routing.
+- Authenticated account enumeration after Hugging Face onboarding: `GET https://api.cohere.com/v1/models?page_size=100` with user-held Bearer key, paginate, filter Chat-compatible endpoints and nondeprecated entries, compare to this public snapshot; never paste key into chat/GitHub.
+- Next real test only after user chooses: **one small synthetic Persian prompt**, observe HTTP status/body model/429/quota headers/latency/usage, then decide if a specific free and noncommercial model should enter a Combo. Do not create arbitrary separate Combo per public model or duplicate quota by renaming key.
+- Recheck actual remaining trial allowance/month reset, model-specific 403/404, data controls, billing/payment and account-level quota before assigning automated routes. Unknown price/right = STOP routing.
+
+**Primary sources re-checked 2026-10-26:**
+- Cohere model inventory: https://docs.cohere.com/docs/models
+- Cohere Trial/Production limits: https://docs.cohere.com/docs/rate-limits
+- Official Command A+ trial/prod free-with-caps: https://docs.cohere.com/docs/command-a-plus
+- Official Command A Reasoning trial/prod free-with-caps: https://docs.cohere.com/docs/command-a-reasoning
+- Persian Tiny Aya family: https://docs.cohere.com/docs/tiny-aya
+- Official Compatibility API: https://docs.cohere.com/docs/compatibility-api
+- Authenticated model list docs: https://docs.cohere.com/reference/list-models
+- OmniRoute integration guide: https://omniroute.hagicode.com/en-US/getting-started/providers-guide/
+
 **Observed/researched:** 2026-10-26. **Source:** user-provided Cohere dashboard screenshots + Cohere official current documentation (URLs and caveats below).  
 **Provider queue slot:** #7 Cohere; **next user priority:** #8 Hugging Face; after both, return to installed OmniRoute and role-based multi-provider setup.  
 **Overall state:** `ACCOUNT_CREATED / FREE_PLAN_VISIBLE / DEFAULT_TRIAL_KEY_EXISTS / BILLED_USAGE_0_USD / PUBLIC_MODEL_CATALOG_RESEARCHED / ACCOUNT_MODEL_LIST_NOT_QUERIED / DATA_CONTROLS_NOT_INSPECTED / API_INFERENCE_NOT_TESTED / OMNIROUTE_NOT_CONNECTED`.  
@@ -11,10 +53,10 @@
 - `What do you plan to do with Cohere?`: proposed `Text Classification, Semantic Search, User Intent Recognition, Text Generation, Entity Extraction, Text Summarization, Chat`; `Content Moderation` optional. Actual saved choices **not independently confirmed**.
 - User successfully entered Cohere dashboard; later screenshot **Platform → API Keys** displayed `You're using a Cohere Free Account`; `Trial keys / FREE` and an existing masked `default` key created Oct 26, 2026.
 - The screenshot explicitly states **Trial key calls are free of charge, rate-limited, and cannot be used for commercial purposes**. This is decisive even if the long-term DJMRN system may later earn income.
-- Assistant suggested optionally renaming key `default` to `DJMRN-OmniRoute-Cohere`. **Rename NOT verified**, hence the observed key name remains `default`. Existing key is enough: no duplicate trial key needed.
+- Assistant initially suggested renaming `default` to `DJMRN-OmniRoute-Cohere`; **user later supplied a screenshot confirming the API key label change**, as recorded in the leading 2026-10-26 addendum. No duplicate trial key needed.
 - User screenshot **Settings → Billing & Usage → Usage** displayed `Subtotal: 0.00 USD`, updated Oct 26, 2026; date range `Last 7 days`, message `You don't have any usage between 10/19/2026–10/26/2026`. **This does not prove absence of a payment method, a verified zero-spend hard cap, or future usage remaining zero.**
 - The UI contained `Invoices`, `Spending Limit`, `Payment` tabs but their actual contents were **NOT inspected**. `Data Controls` menu exists but settings/toggle state are **NOT inspected**. `Get your Production key` is an upgrade/application path and was **not used**.
-- **Key status:** `EXISTS (MASKED), VALUE NOT RECORDED, ACTUAL API VALIDITY UNTESTED`. No Python/API tests and no OmniRoute Provider account created in this onboarding step.
+- **Key status:** `EXISTS AND RENAMED (MASKED), VALUE NOT RECORDED, ACTUAL API VALIDITY UNTESTED`. No Python/API tests and no OmniRoute Provider account created in this onboarding step.
 
 ## 2. Verified Trial terms, rate limits, pricing separation
 
@@ -39,7 +81,7 @@
 | Embed images | 5 inputs/min | As above | Separate from text embeds | Future multimodal RAG |
 | Audio transcription | 5 req/min | General trial monthly calls | 25 MB files by model catalog | Future audio |
 | Embed jobs | 5 req/min | General trial monthly calls | Async/batch semantics; not free bulk bypass | Test only if needed |
-| Parse | Source table currently does not specify its own RPM | General trial monthly calls; account reality unknown | Separate parse endpoint | Future document extraction |
+| Parse | 500 req/min (official Default/Parse row, verified 2026-10-26) | General trial monthly calls; account reality unknown | Separate parse endpoint | Future document extraction |
 | Tokenize | 100 req/min | Endpoint billing/call applicability to confirm | Not inference | No priority |
 
 **Control policy:** account/key-level budget tracking, per-model cooldown for HTTP 429, bounded retry, no retry loop that burns the 1,000 shared monthly calls, and no unverified price/paid automatic route. `free_only=true` and global fail-closed must be tested in actual OmniRoute, not assumed supported from sidebar labels.
@@ -128,7 +170,7 @@ Catalog source includes other deprecated/retired variants; source count above is
 
 ## 6. Next action queue and outstanding verification (NO EXECUTION YET)
 
-1. **Cohere dashboard optional final audit:** check `Data Controls` status; `Billing & Usage → Payment` for any card; `Spending Limit` availability; on `API Keys` whether key was renamed. Screenshot must obscure secrets. Do not toggle/change anything without user's instruction.
+1. **Cohere dashboard optional final audit:** check `Data Controls` status; `Billing & Usage → Payment` for any card; `Spending Limit` availability. The `API Keys` label rename was independently confirmed by user screenshot, and the API key value must never be shown. Do not toggle/change anything without user's instruction.
 2. Preserve the user-confirmed `Free/Trial` account and existing key; do not create a duplicate key or request a paid Production Key simply for a higher allowance.
 3. **Next provider:** Hugging Face personal account + appropriately scoped **read** or `inference` token for API use, evaluate Inference Providers/credits and real free recurring allowance separately (the provider queue explicitly warns this may not be recurring production-free inference). User will do account/token creation in dashboard; no key exposure.
 4. After the provider enrollment phase, private key into OmniRoute `Providers` → select supported Cohere connector or exact OpenAI-compatible custom endpoint; keep the existing live `DJMRN-Persian-L1` Combo untouched until a Cohere model is individually qualified.
