@@ -1,5 +1,32 @@
 # DJMRN — وضعیت معتبر کنونی | CANONICAL PROJECT CURRENT
 
+
+## 2026-10-26 — FUTURE ARCHITECTURE RESEARCH: HYBRID MULTI-AGENT + COMPLEMENTARY SOFTWARE
+
+STATUS: RESEARCH / DESIGN CANDIDATE ONLY; NOT DEPLOYED OR APPROVED FOR IMPLEMENTATION. User explicitly requested this research be saved in the existing canonical CURRENT-STATUS.md, not duplicated in a new architecture log.
+
+USER HARDWARE CLARIFICATION: Additional free useful software, including Docker, is welcome if it materially improves capabilities and RAM footprint is tolerable; do not impose a blanket no-install rule. Chrome occupies a large share of RAM. User reports closing Chrome can free approximately 2–3 GB RAM; this is a user report, not a measured benchmark for concurrent services. Prior 0.97 GB free was one snapshot, not a permanent limit. Ryzen 5 3500U, 8 GB installed RAM. Measure idle/active memory with Chrome open and closed before accepting a heavy runtime.
+
+VERIFIED BASELINE FROM EARLIER RECEIPTS: OmniRoute has one successful direct Persian-L1 Combo HTTP 200. Agno 3.1.10, AgentOS imports, Python 3.12.15 isolated environment, FastAPI, Uvicorn, OpenAI SDK installed successfully (64 packages). First Agno-to-OmniRoute agent test failed at PowerShell quoting / Python SyntaxError before inference; no end-to-end AgentOS server, UI, multi-agent messaging, tools, task routing or quota failover verified. Agno framework and Agno AgentOS are related components, not proven separate installed products named Agent and Agno.
+
+PROPOSED MODULAR RESPONSIBILITY MAP:
+- OmniRoute: inference data plane; free cloud provider/model API connections, stable model Combos, per-family provider selection, measured quota/error-aware failover. Real free quotas belong to providers; OmniRoute cannot create additional free quota. Existing Persian-L1 Combo remains only verified example.
+- Agno + AgentOS: candidate agent control plane, persona/role profiles, teams, delegation, tools, workflows and internal API/server. Configure each agent with permissions, scoped memory, allowed model families; route model calls to OmniRoute via stable Combo names. Actual feature integration requires tests.
+- Shared tool layer: one common deterministic web-search connector plus a specialist research agent for complex source analysis; Python processing, document search/FTS, browser automation via Playwright, email connectors. A web-search API has its own limits and need not pass through the LLM router.
+- Operational state and knowledge: one durable authority with scoped task/message/conversation/agent registry, source provenance, timestamp, version, deduplication, retries, idempotency and human approval receipts. Evaluate existing Neon/Postgres or local SQLite, not duplicate competing canonical stores. Notion governance and GitHub source/project-status stay separate from runtime memory.
+- Optional complementary software: n8n for event triggers and external automations, Playwright for browser interaction, Docker for isolation/reproducible services, PostgreSQL for durable operational state, Redis/queue only if a real messaging/throughput need emerges. Free license, dependencies, Windows/WSL2 RAM, reliability and maintenance need verification before each install.
+
+ARCHITECTURAL CHOICE FOR EVALUATION: HYBRID MULTI-AGENT / SHARED TOOLS / TASK-AWARE MODEL SELECTION. Local Python, task queue, message passing and database operations do not intrinsically consume external LLM calls; reasoning/inference steps do. Multiple logical personas do not require multiple simultaneously loaded models. Prefer shared search tools accessible by permission to all assistants, and a research-specialist persona for complex multi-source work, instead of each persona maintaining a duplicate search stack. Distinguish local operational messages from semantic agent-to-agent conversations invoking an LLM.
+
+PROPOSED FAMILY TAXONOMY (NOT YET CREATED): Lite for classification, General for routine conversation, Reasoning for complex analysis, Coding for code/debugging, Research for source synthesis, Vision for image/document. Families reflect capabilities, not fixed agent identities. One agent may use different families per task stage, with routing policy checking required features, model quality, quota headroom, errors, fallback and cost. Neither Agno nor OmniRoute should be assumed to implement intelligent task selection automatically without policy and testing.
+
+FUTURE SCENARIOS: scheduled work-email triage -> extract/dedup -> follow employer link via approved search/browser -> research and eligibility comparison -> model only for needed semantic reasoning -> store sourced result -> alert user and prepare reply draft; send only with explicit approval. Technology radar -> source monitoring -> detect changes -> research verification -> librarian compare -> provenance-backed knowledge update proposal. No autonomous mail send or environment changes authorized.
+
+RESEARCH LINKS (CANDIDATES, NOT VERIFIED ON DEVICE): Agno AgentOS https://docs.agno.com/agent-os/overview ; n8n https://n8n.io ; Playwright https://playwright.dev ; Docker https://www.docker.com ; Redis https://redis.io ; PostgreSQL https://www.postgresql.org . CrewAI, LangGraph, LightAgent, Griffin, Nodal Agents are broader research alternatives only; no live security/source/RAM audit was completed for them in this discussion.
+
+NEXT BOUNDED VALIDATION: (1) fix Python quoting and verify Agno -> OmniRoute first real response; (2) start/test AgentOS local API and measure RAM Chrome open/closed; (3) two synthetic persona profiles with internal A->B->A message and optional no-LLM deterministic step; (4) verify per-task model family selection and safe fallback; (5) evaluate/install complementary n8n/Playwright/DB/Docker only for specific gaps after approval. No settings, credentials, installs or schemas modified by this research registration.
+
+
 ## DJMRN-SINGLE-RECORD-ONLY-20261025 — قانون قطعی کاربر: فقط یک محل ثبت، فقط به درخواست کاربر
 
 **STATUS: USER-APPROVED, IMMEDIATE, SUPERSEDES ALL OLDER MULTI-DESTINATION DOCUMENTATION HABITS. 2026-10-25.**
