@@ -1,3 +1,15 @@
+## 2026-10-27 — GEMMA-4-31B-GATEWAY-500-TEXT-FAIL-20261027 | Real user-run test failure; diagnosis pending
+
+**Evidence (user pasted full PowerShell output):** During single-model testing of *existing* `gemini/gemma-4-31b-it` Custom route in OmniRoute Desktop v3.8.52 at `POST http://127.0.0.1:20128/v1/chat/completions`, with the private **Gateway API Key**, a minimal text-only request `"Reply with exactly READY."`, `max_tokens=384`, `stream=false` failed at the **TEXT** stage. Actual output: `FAILED_STAGE=TEXT`, `HTTP_STATUS=500`, `ERROR_REASON=[500]: Internal error encountered.`, `MODEL_STATUS=NOT_FULLY_VERIFIED`. **The vision stage was NOT reached** and no inference success has been shown for Gemma 4 31B. The error body in that run exposes no more detail; elapsed time was not printed. The connection-scoped local proxy previously repaired `gemma-4-26b-a4b-it` (real 200 text + inline vision) but that success does not establish 31B readiness or the cause of its 500.
+
+**Diagnostic status:** Cause **UNKNOWN**: could be model-specific Google response, request translation/formatting, limits, or another router issue; do not ascribe this 500 to proxy without evidence. No provider/model settings or keys were changed in this test, and no other model was tested.
+
+**Next action:** Read the *most recent matching error* in OmniRoute's management-authorized `GET /api/usage/call-logs?model=gemma-4-31b-it&status=error&limit=10` and, if needed, the matching `GET /api/logs/<id>`, extracting ONLY sanitized status, error type, provider status/message/format and target route (avoid exposing request payloads, upstream/API/gateway/management keys, private identifiers or full URLs). If that does not resolve root cause, perform a **single** direct Google `models/gemma-4-31b-it:generateContent` text request using the separate private **Google upstream API key** to distinguish Google vs OmniRoute, subject to free-tier constraints. Continue ONLY this model; do not start others until verified. Keep `31B_TEXT_GATEWAY_FAIL_500`, `31B_VISION_NOT_RUN`.
+
+**Proven and unchanged:** Gemma 4 26B text + Base64-embedded JPEG Vision **PASS**; Gemini connection local proxy configured at prior checkpoint; Gemma 4 31B current free/vision labels are only metadata; no Combo/Agno steps yet. No secrets stored.
+
+---
+
 ## 2026-10-27 — GEMMA-4-31B-SINGLE-MODEL-VALIDATION-START-20261027 | Next Gemma 4 model, not yet operationally tested
 
 **User direction:** Following the completed `gemma-4-26b-a4b-it` real OmniRoute text + inline JPEG vision validation, proceed to the next model, one by one, with persistent work receipts. Next same-family candidate designated: `gemma-4-31b-it`, provider `gemini`, OmniRoute local gateway model ID `gemini/gemma-4-31b-it`. This is a **plan and handoff**, NOT an executed successful test or user-confirmed activation.
