@@ -1,5 +1,33 @@
 # Hugging Face — DJMRN Account, API Token and Inference Providers / OmniRoute Handoff
 
+## 2026-10-26 — VERIFIED BROWSER INFERENCE SETTINGS (USER SCREENSHOTS; PRIORITY ACCOUNT WARNING)
+
+**Source:** Two user-submitted screenshots of their signed-in browser at `Settings → Inference Providers → Settings`, 2026-10-26. The current account's technical Free status/credit information comes from the other screenshots and vendor policy; no inference call performed.
+
+### Billing/spending admission (CRITICAL for OmniRoute)
+- The editable **Monthly spending limit for Inference Providers** field visibly displays **`$300`**, with a `Save` button. **This is a configured/visible spending cap**, **NOT** free credit, user balance, actual spending, remaining quota or a charge by itself. Whether it is a saved value rather than a prefilled/editable default is not independently proven beyond what the page displays; there is no Save action evidence for this conversation.
+- On-screen vendor description (paraphrased): when total inference spending would exceed this limit, requests fail with error; **does NOT apply to providers with a custom key**.
+- The same screen says HF-routed requests *without a custom provider key* are billed to the user's Hugging Face account, with a registered credit card required for metered billing; actual browser account's **Payment Information tab was not inspected** and no card-on-file is confirmed.
+- An explicitly upsell banner offers PRO with **$2/month included credits** (paid subscription), which is NOT the current Free user's documented **$0.10/month** included promotional allowance. Do not confuse the two.
+- **Immediate action requirement:** treat `$300` as **UNSAFE FOR DJMRN FREE-ONLY AUTOMATION**. Prior to a single call or adding a provider key, inspect `Billing → Payment Information` and determine whether a lower cap can be saved and which charges count (trial credit vs paid usage). No guaranteed `$0`/ `$0.10` setting behavior has been tested. Do not assert an untested zero-spend guarantee. Never purchase credits, add a card, activate PRO, or enable automatic recharge without explicit user approval.
+- For future protected HF-only experimentation, consider requesting the user to set the lowest accepted restrictive spending cap **after** understanding whether it includes existing free credits. If $0 disables even promotional free inference, classify as `FREE_API_TEST_BLOCKED_BY_ZERO_CAP`, not a broken token. A $0.10 cap is not equivalent to no paid charges if the granted allowance is exhausted or the interpretation of cap changes. No cap was changed here.
+
+### Provider routing settings, NOT evidence of free provider entitlements
+- **18 UI provider rows visible** with blue enabled switches: `groq`, `novita`, `cerebras`, `nscale`, `fal`, `together-ai`, `fireworks-ai`, `featherless-ai`, `zai`, `replicate`, `cohere`, `scaleway`, `publicai`, `baseten`, `ovhcloud`, `deepinfra`, `wavespeed`, `hf-inference`. Slugs are normalized research labels for matching current HF routing API; actual internal API names/IDs need exact confirmation from live model catalog and HF UI. **Blue enable switches signal provider availability/allowance in user preferences, NOT free billing, upstream credentials, independent monthly allowance, price certainty or successful API request.**
+- `Together AI` and `Fireworks` rows carry **`BILLING DISABLED`** banners in the screenshot, even though enabled switches are blue. These routes are explicitly **not confirmed usable** until billing/routing is independently resolved.
+- `Last Used` in visible rows is `-`; no actual usage proven. The routing preference can be rearranged by dragging; HF model-page widgets favor the first compatible provider by default. Do not reorder blindly; dynamic default provider may pick paid-priced endpoints. **The API catalog snapshot in the preceding section** reflects 12 providers currently serving listed Chat models; the **18 settings toggles cover broader tasks/provider integrations** and must NOT be treated as 18 live Chat providers in our 267-route audit.
+- In the custom-key setting, entering a `Groq`, `Cohere` or other upstream key means that provider may charge its own account, **outside the HF monthly spending cap and $0.10 HF credit**. DJMRN already has distinct upstream account API keys; connect them directly to installed **OmniRoute** instead of creating duplicate HF-mediated billing paths without a separate reason.
+- **Policy outcome:** `HF_MODEL_CATALOG_PUBLIC_SNAPSHOT_ARCHIVED`; `BROWSER_TOKEN_CREATED_CONFIRMED`; `SPEND_LIMIT_VISIBLE_300_USD`; `PAYMENT_METHOD_UNKNOWN`; `CUSTOM_PROVIDER_KEYS_NOT_CONFIRMED`; `OMNIROUTE_INTEGRATION_PENDING`; `NO_AUTOMATIC_HF_PAID_ROUTES`.
+
+### Next minimal user-side verification, not executed
+1. Browser `Billing → Payment Information` — screenshot showing whether a payment method exists (obscure sensitive fields).
+2. Browser `Billing → Subscriptions` — check actual Free vs PRO, paid features; the “Get PRO” upsell does not by itself substitute for this.
+3. Revisit `Inference Providers → Settings` and agree on a safe cap behavior; do not experiment with dozens of paid-priced provider/model calls just to prove the cap. Record any user-saved change and live error semantics separately.
+4. Then decide whether HF Free $0.10 credit can be spent for one tiny controlled **development-only** call without exposing user to paid usage; account eligibility and per-model prices require this user-bound test. User's broader goal is OmniRoute free-only automatic routing, not maximization of aggregate allowed paid spending.
+
+**Source hierarchy:** screenshots establish UI state; https://huggingface.co/docs/inference-providers/pricing and https://huggingface.co/docs/inference-providers/hub-integration establish distinct HF routed/custom-key billing; https://huggingface.co/docs/hub/billing distinguishes credit, PRO, credit-card and pay-as-you-go.
+
+
 ## 2026-10-26 — LIVE FULL CHAT INFERENCE PROVIDERS MODEL/PRICE SNAPSHOT (LATEST, ACCOUNT-UNTESTED)
 
 **What was really fetched:** Fresh unauthenticated public official `GET https://router.huggingface.co/v1/models`, via a web extraction proxy on 2026-10-26; parsed JSON, not a Google search snippet or a screenshot. **Data rows:** 132 distinct Chat-compatible model IDs, **267** model–provider listings across **12** provider names (`baseten`, `cerebras`, `cohere`, `deepinfra`, `featherless-ai`, `groq`, `novita`, `nscale`, `ovhcloud`, `publicai`, `scaleway`, `zai-org`); 267 with public status `live`; 171 live routes have numeric input **and** output rates; 96 live routes lack one/both rates.
