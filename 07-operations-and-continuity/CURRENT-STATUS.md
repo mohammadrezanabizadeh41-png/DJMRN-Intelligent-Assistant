@@ -604,33 +604,41 @@ nano-banana-pro-preview | generateContent,countTokens,batchGenerateContent
 
 **Count and completeness:** Exactly **18 unique screenshot rows with positive numeric RPD** = **10 general/agent + 8 specialist**. This is an **exhaustive extraction of positive numeric-RPD rows in the saved five screenshots, not a claim to exhaust Google's global Gemini catalog**. All 18 are required candidates for setup and no model is dropped for preference, size or modality. The 6 other Live rows labelled `Unlimited` have an unknown positive numeric daily ceiling/true zero-cost entitlement and are **OUTSIDE THIS 18-MODEL READY QUEUE ONLY**, retained in original research; zero-RPD rows remain archived and inactive, not permanently deleted.
 
+### 2026-10-27 EVIDENCE-BASED ADMISSION CHECKPOINT
+
+**Status as tested on 2026-10-27 (supersedes the historical `PENDING` snapshot in the original 2026-10-26 text):** All **18 original positive-numeric-RPD account rows remain in this ledger**, with **8 first smoke PASS** (6 text chat models incl. Gemma 4 26B/31B, 3.1/3.5 Flash-Lite, 3.6 Flash, 3 Flash Preview; 2 text embedding models), **4 tested but not admissible** (2.5 Flash/Flash-Lite upstream 404 new-user restriction; 3.8 Flash unstable; 3.1 Flash TTS upstream/route 403), **6 entirely untested** (Antigravity managed agent, Robotics ER2, 2.5 Flash TTS, 3.8 Flash TTS, 3.8 Flash Lite TTS, 3.5 Transcribe). Model `gemini-3-flash-preview` text only; five other successful chat models have separately passed inline-JPEG tests. All smoke results were **user-executed on Windows**, not assistant-run. No model has yet been added to new automatic Agno families or connected to vector DB.
+
+**Evidence receipts:** [Model 8 text PASS](../06-tests-and-evidence/logs/GEMINI-3-FLASH-PREVIEW-TEXT-PASS-20261027.md); [3.8 Flash transport/timeout](../06-tests-and-evidence/logs/GEMINI-3.8-FLASH-TEXT-PASS-VISION-WEBEXCEPTION-20261027.md); [2.5 Flash new-user 404](../06-tests-and-evidence/logs/GEMINI-2.5-FLASH-GATEWAY-404-20261027.md); [2.5 Flash-Lite new-user 404](../06-tests-and-evidence/logs/GEMINI-2.5-FLASH-LITE-GATEWAY-404-20261027.md); [Embedding 2 3072d PASS](../06-tests-and-evidence/logs/GEMINI-EMBEDDING-2-GATEWAY-PASS-20261027.md); [Embedding 001 3072d PASS](../06-tests-and-evidence/logs/GEMINI-EMBEDDING-001-GATEWAY-PASS-20261027.md); [3.1 Flash TTS 403 and read-only diagnostics](../06-tests-and-evidence/logs/GEMINI-3.1-FLASH-TTS-GATEWAY-403-20261027.md); additional previous successful chat logs remain under `06-tests-and-evidence/logs`.
+
+**Current recommendation, not user-approved execution:** defer the six as-yet-untested special/managed routes and the unresolved TTS 403, prioritise quality/cost gates and logical candidate routing for the six text-successful chat models plus two independent embeddings paths. 3.8 TTS has a DIFFERENT official speech input schema from 3.1 legacy: https://ai.google.dev/gemini-api/docs/speech-generation ; Antigravity is a managed agent rather than regular chat model: https://ai.google.dev/gemini-api/docs/deprecations ; Robotics ER2 is specialized for embodied/spatial tasks: https://ai.google.dev/gemini-api/docs/robotics-overview . **Do not silently archive/remove any of the six**; keep them deferred only if user chooses. Google RPD screenshot is historical eligibility data, not guaranteed active zero-billing. This update changes **documentation only**, NOT OmniRoute keys, providers, installed services, quotas, proxy, model Combos or Agno.
+
 ### A. Ten text/general/agent account rows — mandatory individual model/API coverage
 
 | Stage status | Google AI Studio display name (NOT API model ID) | RPM | Input TPM | RPD | Proposed use / family (test required) |
 |---|---|---:|---:|---:|---|
-| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 2.5 Flash | 5 | 250K | 20 | GENERAL, RESEARCH, TEXT (candidate) |
-| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 2.5 Flash Lite | 10 | 250K | 20 | LITE, GENERAL (candidate) |
-| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 3 Flash | 5 | 250K | 20 | GENERAL, RESEARCH, REASONING (candidate) |
-| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 3.1 Flash Lite | 15 | 250K | 500 | LITE, GENERAL, TASK-TRIAGE (candidate) |
-| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 3.6 Flash | 5 | 250K | 20 | REASONING, RESEARCH, CODING (candidate) |
-| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 3.5 Flash Lite | 15 | 250K | 500 | LITE, GENERAL, DOCUMENTS (candidate) |
-| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 3.8 Flash | 5 | 250K | 20 | REASONING, CODING, RESEARCH (candidate) |
-| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemma 4 26B | 30 | 16K | 14.4K | GENERAL, CODING, REASONING (candidate) |
-| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemma 4 31B | 30 | 16K | 14.4K | REASONING, CODING, RESEARCH (candidate) |
-| [ ] PENDING_ID_AND_PROVIDER_TEST | Antigravity (Agents) | 60 | 100K | 100 | AGENT-SPECIALIST (separate service, API compatibility unknown) |
+| [x] GATEWAY_404_NEW_USER_RESTRICTED | Gemini 2.5 Flash | 5 | 250K | 20 | GENERAL, RESEARCH, TEXT (candidate) |
+| [x] GATEWAY_404_NEW_USER_RESTRICTED | Gemini 2.5 Flash Lite | 10 | 250K | 20 | LITE, GENERAL (candidate) |
+| [x] TEXT_GATEWAY_PASS_VISION_UNTESTED | Gemini 3 Flash | 5 | 250K | 20 | GENERAL, RESEARCH, REASONING (candidate) |
+| [x] TEXT_AND_VISION_PASS | Gemini 3.1 Flash Lite | 15 | 250K | 500 | LITE, GENERAL, TASK-TRIAGE (candidate) |
+| [x] TEXT_AND_VISION_PASS | Gemini 3.6 Flash | 5 | 250K | 20 | REASONING, RESEARCH, CODING (candidate) |
+| [x] TEXT_AND_VISION_PASS | Gemini 3.5 Flash Lite | 15 | 250K | 500 | LITE, GENERAL, DOCUMENTS (candidate) |
+| [x] TEXT_EVER_PASS_UNSTABLE_DEFER | Gemini 3.8 Flash | 5 | 250K | 20 | REASONING, CODING, RESEARCH (candidate) |
+| [x] TEXT_AND_VISION_PASS | Gemma 4 26B | 30 | 16K | 14.4K | GENERAL, CODING, REASONING (candidate) |
+| [x] TEXT_AND_VISION_PASS | Gemma 4 31B | 30 | 16K | 14.4K | REASONING, CODING, RESEARCH (candidate) |
+| [ ] PENDING_MANAGED_AGENT_ADAPTER | Antigravity (Agents) | 60 | 100K | 100 | AGENT-SPECIALIST (separate service, API compatibility unknown) |
 
 ### B. Eight specialist account rows — mandatory coverage; dedicated adapters where needed
 
 | Stage status | Google AI Studio display name (NOT API model ID) | RPM | Input TPM | RPD | Proposed use / family (test required) |
 |---|---|---:|---:|---:|---|
-| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini Embedding 1 | 100 | 30K | 1K | KNOWLEDGE / EMBEDDING (non-chat endpoint) |
-| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini Embedding 2 | 100 | 30K | 1K | KNOWLEDGE / EMBEDDING (non-chat endpoint) |
-| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini Robotics ER 2 Preview | 5 | 250K | 20 | ROBOTICS / SPECIALIST (special API compatibility unknown) |
-| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini 2.5 Flash TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
-| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini 3.1 Flash TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
-| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini 3.8 Flash TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
-| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini 3.8 Flash Lite TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
-| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini 3.5 Transcribe (Live API) | 3 | 10K | 25 | VOICE / TRANSCRIPTION (Live API adapter) |
+| [x] TEXT_EMBEDDING_3072D_PASS | Gemini Embedding 1 | 100 | 30K | 1K | KNOWLEDGE / EMBEDDING (non-chat endpoint) |
+| [x] TEXT_EMBEDDING_3072D_PASS | Gemini Embedding 2 | 100 | 30K | 1K | KNOWLEDGE / EMBEDDING (non-chat endpoint) |
+| [ ] PENDING_ROBOTICS_ADAPTER | Gemini Robotics ER 2 Preview | 5 | 250K | 20 | ROBOTICS / SPECIALIST (special API compatibility unknown) |
+| [ ] PENDING_TTS_ADAPTER | Gemini 2.5 Flash TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
+| [x] TTS_HTTP_403_UNRESOLVED | Gemini 3.1 Flash TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
+| [ ] PENDING_NEW_TTS_ADAPTER | Gemini 3.8 Flash TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
+| [ ] PENDING_NEW_TTS_ADAPTER | Gemini 3.8 Flash Lite TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
+| [ ] PENDING_TRANSCRIBE_ADAPTER | Gemini 3.5 Transcribe (Live API) | 3 | 10K | 25 | VOICE / TRANSCRIPTION (Live API adapter) |
 
 **Emphasis: Gemma 4 26B AND Gemma 4 31B are mandatory queue members** with **14.4K observed RPD each**, `30 RPM` and **only 16K input TPM** each; do not accidentally omit them when selecting Flash models. Likewise preserve embedding/audio/robotics and Antigravity separately even where the standard OpenAI-compatible Chat route is not supported.
 
@@ -649,11 +657,11 @@ nano-banana-pro-preview | generateContent,countTokens,batchGenerateContent
 ### Outstanding coverage accounting — count must remain 18
 
 - **Must create or assess all 18 records:** no priority shortlist may delete rows. Product suitability only changes family/priority and whether role-specific automated admission is safe.
-- **No hidden successes:** current statuses for all 18 = **PENDING** pending actual OmniRoute UI, exact model IDs and one-call tests. Some Google account-visible routes (especially Antigravity, Live, robotics) may not be normal Gemini chat API and require unsupported-adapter status, not silent promotion to 'connected'.
+- **No hidden successes:** see 2026-10-27 checkpoint above; statuses are **8 SMOKE_PASS / 4 TESTED_UNAVAILABLE_OR_UNSTABLE / 6 NOT_YET_TESTED**. This initial snapshot was valid only before the user performed the subsequent model-by-model Windows tests. Some Google account-visible routes (especially Antigravity, Live, robotics) may not be normal Gemini chat API and require unsupported-adapter status, not silent promotion to 'connected'.
 - **Never assume `Unlimited` means free/unlimited cost**. See original 6 Live rows pending verification; source lists disabled 0-RPD rows too. Do not include them in positive-numeric-RPD progress count.
 - **No automatic file fanout:** follow 2026-10-25 SINGLE-RECORD-ONLY: this is the user's explicit write request to `CURRENT-STATUS.md`; no duplicate tracker, project repo switch, Notion update or key publication. Update this section's [ ] records as each is really connected/tested, with observed identity/evidence rather than declaring success by intent.
 
-**Next live action:** OmniRoute Dashboard → `OmniProxy → Providers` → inspect Google Gemini add-provider UI; enter original AI Studio key **locally**; report provider connection, model list and tests in this one file **only upon new explicit user registration request**.
+**Next action proposed as of 2026-10-27:** after user decision on deferring specialist modalities, classify already smoke-tested chat models into provisional Lite/General/Reasoning/Coding/Research roles with explicit task-quality and free-tier verification; keep Embedding2/001 as separate non-chat services. Do not change provider connections or Combos without separate user instruction.
 
 
 
