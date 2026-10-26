@@ -49,3 +49,19 @@ This record documents user-observed outputs only; neither a configuration change
 **Assessment:** Actual client request deadline expired after 110.02 sec. No direct evidence in this output that Google returned a model-capability rejection or any particular HTTP response. Proxy TCP port LISTENING is not proof of healthy upstream proxy end-to-end. Prior local model logs showed HTTP 499 aborted, 502 proxy ECONNRESET, and 503 high-demand, all preserved above. **Vision remains UNVERIFIED.** Prior text test **PASS**: `HTTP_STATUS=200`, `SECONDS=3.91`, `RESPONSE=READY`.
 
 **User's explicit instruction now:** `بدون عکس امتحان کن` ("test without image"). Therefore **do not retry or send any images**. Provide a single small **text-only** PowerShell Gateway test of `gemini/gemini-3.8-flash`, input one short text message and no image, using privately entered Gateway API key; timeout <= 40 sec and print actual status/time/answer safely. A new text result has **not** yet been supplied. Do not declare Vision operational, do not change the working proxy, and do not switch to another model automatically.
+
+
+## TEXT-ONLY-RETEST-TIMEOUT-40S-20261027: second text-only run also timed out
+
+**Verified user terminal result:** A new **text-only** Gateway request targeting `gemini/gemini-3.8-flash`, no image attached (`IMAGE_ATTACHED=False`), body with `Reply with exactly READY.`, `max_tokens=128`, `stream=false`, and `-TimeoutSec 40` failed without an HTTP response.
+- `HTTP_STATUS=NO_HTTP_RESPONSE`
+- `NETWORK_STATUS=Timeout`
+- `ERROR_TYPE=WebException`
+- `SECONDS=40.05`
+- `TEXT_TEST=FAILED`
+
+**Cumulative state:** The first text-only run of this model returned HTTP 200 with `READY` in 3.91 seconds. This later text-only timeout, alongside the previous 110.02-second Vision timeout and management logs with 499 aborted, 502 proxy ECONNRESET and 503 Google high demand, demonstrates unstable or unavailable inference service through the current route. **Do not mark the model reliably operational for agents**. This user test did not obtain a Google HTTP response or diagnose the definitive root cause, and no settings were changed.
+
+**DJMRN operational disposition:** `gemini/gemini-3.8-flash` = `TEXT_EVER_PASS / CURRENT_TEXT_TIMEOUT / VISION_NOT_VERIFIED / DEFERRED_UNSTABLE_ROUTE`; exclude from automatic routing / Combo until a later evidence-backed controlled retest. Keep five other previously validated routes unchanged. Do not run repeated 3.8 Flash calls or new image trials now. If resuming troubleshooting later, first check local connection-scoped proxy, fresh per-call logs and upstream status; compare direct official API vs Gateway on the *same model* only when useful and within free-use constraints. Record any new evidence before promoting.
+
+**Scope:** Recording a new result in GitHub; no direct user-system access, provider/key/model changes, paid plans, downloads, or deployments.
