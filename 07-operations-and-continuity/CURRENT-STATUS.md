@@ -1,5 +1,33 @@
 # DJMRN — وضعیت معتبر کنونی | CANONICAL PROJECT CURRENT
 
+## 2026-10-26 — VERIFIED GATEWAY CUSTOM MODELS COUNT 9 / ANTIGRAVITY OAUTH DISTINCTION
+
+**ACTUAL USER POWERSHELL read-only audit, success (no secrets received):** `GET http://127.0.0.1:20128/api/provider-models?provider=gemini` authorized with private local **Management** bearer token, returned `CUSTOM_INVENTORY=PASS`, `CUSTOM_COUNT=9`:
+
+| Actual Custom ID | actual apiFormat | actual supportedEndpoints | actual isFree | actual supportsVision |
+| --- | --- | --- | --- | --- |
+| gemini-3.5-flash-lite | chat-completions | chat | True | True |
+| gemini-3.6-flash | chat-completions | chat | True | True |
+| gemini-3.8-flash-lite-tts | chat-completions | audio-speech | True | undefined |
+| gemini-3.8-flash-tts | chat-completions | audio-speech | True | undefined |
+| gemini-embedding-001 | chat-completions | embeddings | unset | undefined |
+| gemini-embedding-2 | chat-completions | embeddings | unset | undefined |
+| gemini-robotics-er-2-preview | chat-completions | chat | True | True |
+| gemma-4-26b-a4b-it | chat-completions | chat | unset | unset |
+| gemma-4-31b-it | chat-completions | chat | True | True |
+
+**Important confirmed metadata anomalies:** 2 TTS Customs retain `apiFormat=chat-completions` despite `supportedEndpoints=["audio-speech"]` and should be `apiFormat=audio-speech`. The 2 embeddings retain `apiFormat=chat-completions` despite `supportedEndpoints=["embeddings"]`, should be `apiFormat=embeddings`. `isFree` blank is not proof billed or not billed; mark free-tier gate metadata as **unset** for 2 embeddings and Gemma4 26B despite positive account observed RPD. Gemma4 26B custom `supportsVision` unset while model actual Google spec supports image inputs; user previously could not fix via edit. All 9 are actually stored, correcting prior provisional "user proceeded" states; **THIS CONFIRMS INVENTORY ONLY, NOT PASS INFERENCE** (Gemini gateway 403 paused). Do not create duplicates. Read-only audit `/api/provider-models?provider=gemini` does not enumerate built-ins, OAuth providers, synced models or separate native adapters, so 9 != 18.
+
+**User asks:** "Antigravity خودش جداگانه گویا تو صفحه پرویدر داره اونجا میشه فعالش کرد ؟"
+**SOURCE-VERIFIED YES, BUT DISTINCT PRODUCTS!** In OmniRoute v3.8.52 Providers there are `antigravity` (Google Antigravity **IDE**) and `agy` (Antigravity **CLI**) OAuth providers using Google OAuth refresh tokens, Google Cloud Code API, shared Google Antigravity IDE/CLI account quota. These can be connected/activated **separately** through dashboard Providers / add or connect account; they are **not** the `antigravity-preview-09-2026` Managed Agent surfaced by the user's Google AI Studio Free Gemini API account. The managed agent is invoked with Gemini API key via **Google Interactions API** `POST /v1beta/interactions` with `agent:"antigravity-preview-09-2026"` and remote Linux environment, and requires a distinct future adapter. OmniRoute `antigravity` OAuth provider instead proxies Google's Cloud Code `streamGenerateContent` for IDE/CLI model list, using a Google Antigravity IDE account OAuth credential and Google Cloud Code `projectId`. Existing Gemini API key does not itself authenticate the IDE OAuth provider; user's 100 RPD for Gemini Managed Agent is not equivalent to IDE/CLI access/quota. **Do NOT claim connecting that provider would enable the managed agent.** 
+**Exact GitHub sources:** https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.52/docs/guides/ANTIGRAVITY-ONBOARDING.md ; https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.52/src/lib/oauth/providers/antigravity.ts ; https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.52/open-sse/executors/antigravity.ts ; official Google Interactions API https://ai.google.dev/gemini-api/docs/managed-agents-quickstart and Antigravity managed-agent doc https://ai.google.dev/gemini-api/docs/antigravity-agent .
+**Suggested NEXT low-risk step:** User opens existing OmniRoute Providers → Antigravity page, captures a screenshot of the page's login/provider options (redact any credentials); review whether provider enabled/on, eligible Free account OAuth, any credit-auto-use settings and projectId requirements **before authorizing external OAuth**; no login/install/purchase/tool activation made yet. Note 2026-07 OmniRoute onboarding doc describes Google One AI Pro but shows Free tier too; plan/quotas of specific account UNKNOWN until inspected. Avoid unauthorized use/paid credits.
+**Next inventory QA after Antigravity check:** Fix 4 Custom mismatched `apiFormat` by verified UI/management PATCH with explicit informed user step and proper validation/confirm read back; set isFree metadata only where official free-tier and account restrictions verified (setting a Free badge is NOT a hard no-charge guarantee), evaluate missing Gemma4 26B vision input; preserve original routes. Separate Gemini native Interactions managed agent from Antigravity IDE OAuth integration; 18 positive numeric RPD discovery queue counted once, do not double-count provider IDE account as 19th Google Gemini API model.
+
+No credentials or API secrets recorded. Only single canonical file modified under previously authorized same-workflow continuity.
+
+---
+
 ## 2026-10-26 — ANTIGRAVITY AGENTS STUDIED / ALL 18 GEMINI FREE-QUOTA ROUTES TRIAGED
 
 **User instruction:** "خب برو بعدی" following Gemini 3.5 Transcribe Live research. This checkpoint marks the final remaining **Antigravity Agents** in the prior screenshot-identified 18 account rows as RESEARCHED/ID-RESOLVED, NOT added to OmniRoute chat or inference-test verified. Existing other Gemini through OmniRoute Chat and TTS HTTP403 debugging is explicitly paused on user's request; preserve all user-created Custom registrations. The 18 status queue remains mandatory; research completeness is not operational integration.
