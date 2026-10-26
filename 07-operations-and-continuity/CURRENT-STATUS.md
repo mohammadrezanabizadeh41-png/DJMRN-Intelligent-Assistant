@@ -1,5 +1,14 @@
 # DJMRN — وضعیت معتبر کنونی | CANONICAL PROJECT CURRENT
 
+## 2026-10-26 — GATEWAY KEY CREATED: AWAITING FIRST TTS SMOKE TEST
+
+- **USER CONFIRMED** that they created their first OmniRoute v3.8.52 **Gateway API Key** through **OmniProxy → API Keys → Create API Key** after preceding screenshot showed `Registered Keys (0)`. The suggested key name was `DJMRN-Local-Gateway-01`; the user confirmed creation but not its exact final name. Creation form screenshot: Management Access **Disabled**, Own Cost and Token Usage **Enabled**, Shared Account Quota **Disabled**, Allow local usage command **Disabled**. These were advised to remain unchanged. Key value is user-private, NOT provided, NOT recorded. Creation is not proof of permission to route a specific model or successful request.
+- **Important identity distinction:** the gateway inference key is separate from Google AI Studio API key, Configuration → Access Tokens management bearer, and OmniRoute UI login password. Previous suggestion that an inference gateway key already existed was corrected by screenshot. Historical successful direct `DJMRN-Persian-L1` HTTP200 remains preserved without assuming the authentication used then.
+- **NEXT ACTION (NOT EXECUTED):** In user Windows PowerShell, one free-tier/account-rate-limited local speech test: POST `http://127.0.0.1:20128/v1/audio/speech` with gateway key privately entered using Read-Host -AsSecureString, JSON `{"model":"google/gemini-2.5-flash-preview-tts","input":"Hello from DJMRN.","voice":"Kore"}`. If successful write `Downloads/DJMRN-Gemini-TTS-Test.wav`, validate HTTP200, positive WAV bytes; collect sanitized error code otherwise. This uses ONE of Google account observed 10 RPD on the 2.5 Flash TTS route. No test result received yet; TTS_GATEWAY_VERIFIED=NO. Exact v3.8.52 open-source code confirms `google` audio provider, linked Gemini credentials and gemini-tts speech executor, but no proof of live call.
+- Keep zero-surprise-cost/free-only governance, no automated paid requests or billing and no credential disclosure. After actual output, log status here and proceed with other free-capable TTS models.
+
+---
+
 ## 2026-10-26 — ROBOTICS USER PROCEEDED / TTS 2.5 BUILT-IN AUDIO REGISTRY DISCOVERED
 
 **USER PROCEEDING to next model** immediately after instructions to add `gemini-robotics-er-2-preview` as Custom. **DO NOT mark Robotics as screenshot-confirmed or API tested**: user said "خب بریم بعدی" but did not paste exact Add receipt. Status USER-PROCEEDED / CREATED-PROBABLE / RECONFIRM BY INVENTORY. Prior advice: modelId `gemini-robotics-er-2-preview`, Chat API format, Chat+Vision capable+Free annotation; no generated media endpoints.
