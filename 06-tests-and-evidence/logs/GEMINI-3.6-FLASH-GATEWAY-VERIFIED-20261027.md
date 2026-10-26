@@ -17,3 +17,8 @@ User's standing DJMRN instruction: each actual action and failure/success must h
 
 ## Pending next stage
 Existing remaining Custom models include specialist TTS (`gemini-3.8-flash-lite-tts`, `gemini-3.8-flash-tts`), embeddings (`gemini-embedding-001`, `gemini-embedding-2`), and robotics (`gemini-robotics-er-2-preview`). Those MUST be validated on matching modality routes and only one at a time; do not treat a Chat endpoint as proof of a non-chat modality. Previously observed TTS/embedding Custom metadata mismatch `apiFormat=chat-completions` with specialized supportedEndpoints requires careful in-place correction after verifying supported adapters. No fifth model tested by this receipt.
+
+## Next single general-chat model: gemini-3.1-flash-lite (not tested after repair)
+Before specialist model adapters, test the **already built-in OmniRoute Gemini model** `gemini/gemini-3.1-flash-lite` without new Custom registration. Official model documentation confirms text and image inputs; official Google pricing lists a free-tier standard text service, but no per-account hard no-charge guard has been verified. Prior user account rate-limit evidence reported 15 RPM / 500 RPD. This specific route previously gave HTTP 403 **before** the connection-scoped proxy remedy, so it needs a fresh one-model test.
+Only send a short Gateway text call first, then an inline Base64 JPEG image-understanding test if text passes. User's exact outputs are pending. This decision does not authorize testing TTS/embeddings in Chat or changing stored model/provider settings.
+References: https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite and https://ai.google.dev/gemini-api/docs/pricing
