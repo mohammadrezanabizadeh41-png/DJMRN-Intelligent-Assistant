@@ -10,3 +10,6 @@ Evidence from user's Windows PowerShell, model `gemini/gemma-4-31b-it`.
 - Verified scope: text and one inline-JPEG vision input through OmniRoute. Other modalities, reliability and free-only billing enforcement not verified.
 - No new model registration, local weight download, proxy changes, billing changes or group creation.
 - Next: choose and test one next existing Custom model at a time; separately verify account-level free-only limits.
+
+## Next candidate (not tested)
+Per single-model progression, the next existing Custom entry is `gemini/gemini-3.5-flash-lite` (saved metadata: chat-completions, chat, isFree=True, supportsVision=True; prior Google account screenshot: 15 RPM, 250K TPM, 500 RPD). This is an API-hosted route, not a local download. No actual Gateway text or vision test result for this candidate is claimed. One model at a time, first Gateway text then optionally inline-JPEG Vision; verify with user Windows output. Free model labels and RPD are not billing guards.
