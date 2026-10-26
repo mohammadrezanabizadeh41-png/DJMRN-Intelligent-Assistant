@@ -1,5 +1,66 @@
 # DJMRN — وضعیت معتبر کنونی | CANONICAL PROJECT CURRENT
 
+## 2026-10-26 — GEMINI-ALL-18-POSITIVE-RPD-OMNIROUTE-STAGED-ADMISSION
+
+**TASK:** DJMRN Gemini full-coverage onboarding / every user-account model or API route with explicit **positive numeric RPD** must be retained for staged OmniRoute connection; user explicitly forbids silently dropping viable models. **Status:** QUEUED / ZERO NEW CONNECTIONS CONFIRMED in this record; **NOT** an assertion that all 18 model IDs, adapters or per-model inference already work. **Canonical record location:** CURRENT only by user request (2026-10-26); preserve previous Combo `DJMRN-Persian-L1`, AI Horde success and all Agno work.
+
+**Evidence and scope:** [Original screenshot-based Google AI Studio Gemini Free Tier account limits, 2026-10-26](../06-tests-and-evidence/provider-research/GEMINI-FREE-TIER-RATE-LIMIT-SNAPSHOT-2026-10-26.md), project `Default Gemini Project`, 28-day view, Free tier, five screenshots with shown **used=0**. `RPM` requests/min, `TPM` input tokens/min, `RPD` requests/day. RPD is a **ceiling observed in the account**, not guaranteed consumption allowance per distinct physical account/key/agent, and daily limits can have shared project-level constraints. Per-model RPD does not automatically imply compatible OmniRoute Chat API or free terms beyond the account's screenshot. Google documents RPD reset around midnight Pacific; verify the current project-specific dashboard before activation.
+
+**Count and completeness:** Exactly **18 unique screenshot rows with positive numeric RPD** = **10 general/agent + 8 specialist**. This is an **exhaustive extraction of positive numeric-RPD rows in the saved five screenshots, not a claim to exhaust Google's global Gemini catalog**. All 18 are required candidates for setup and no model is dropped for preference, size or modality. The 6 other Live rows labelled `Unlimited` have an unknown positive numeric daily ceiling/true zero-cost entitlement and are **OUTSIDE THIS 18-MODEL READY QUEUE ONLY**, retained in original research; zero-RPD rows remain archived and inactive, not permanently deleted.
+
+### A. Ten text/general/agent account rows — mandatory individual model/API coverage
+
+| Stage status | Google AI Studio display name (NOT API model ID) | RPM | Input TPM | RPD | Proposed use / family (test required) |
+|---|---|---:|---:|---:|---|
+| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 2.5 Flash | 5 | 250K | 20 | GENERAL, RESEARCH, TEXT (candidate) |
+| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 2.5 Flash Lite | 10 | 250K | 20 | LITE, GENERAL (candidate) |
+| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 3 Flash | 5 | 250K | 20 | GENERAL, RESEARCH, REASONING (candidate) |
+| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 3.1 Flash Lite | 15 | 250K | 500 | LITE, GENERAL, TASK-TRIAGE (candidate) |
+| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 3.6 Flash | 5 | 250K | 20 | REASONING, RESEARCH, CODING (candidate) |
+| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 3.5 Flash Lite | 15 | 250K | 500 | LITE, GENERAL, DOCUMENTS (candidate) |
+| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemini 3.8 Flash | 5 | 250K | 20 | REASONING, CODING, RESEARCH (candidate) |
+| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemma 4 26B | 30 | 16K | 14.4K | GENERAL, CODING, REASONING (candidate) |
+| [ ] PENDING_ID_AND_PROVIDER_TEST | Gemma 4 31B | 30 | 16K | 14.4K | REASONING, CODING, RESEARCH (candidate) |
+| [ ] PENDING_ID_AND_PROVIDER_TEST | Antigravity (Agents) | 60 | 100K | 100 | AGENT-SPECIALIST (separate service, API compatibility unknown) |
+
+### B. Eight specialist account rows — mandatory coverage; dedicated adapters where needed
+
+| Stage status | Google AI Studio display name (NOT API model ID) | RPM | Input TPM | RPD | Proposed use / family (test required) |
+|---|---|---:|---:|---:|---|
+| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini Embedding 1 | 100 | 30K | 1K | KNOWLEDGE / EMBEDDING (non-chat endpoint) |
+| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini Embedding 2 | 100 | 30K | 1K | KNOWLEDGE / EMBEDDING (non-chat endpoint) |
+| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini Robotics ER 2 Preview | 5 | 250K | 20 | ROBOTICS / SPECIALIST (special API compatibility unknown) |
+| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini 2.5 Flash TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
+| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini 3.1 Flash TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
+| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini 3.8 Flash TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
+| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini 3.8 Flash Lite TTS | 3 | 10K | 10 | VOICE / TTS (non-chat audio output) |
+| [ ] PENDING_ID_AND_ADAPTER_TEST | Gemini 3.5 Transcribe (Live API) | 3 | 10K | 25 | VOICE / TRANSCRIPTION (Live API adapter) |
+
+**Emphasis: Gemma 4 26B AND Gemma 4 31B are mandatory queue members** with **14.4K observed RPD each**, `30 RPM` and **only 16K input TPM** each; do not accidentally omit them when selecting Flash models. Likewise preserve embedding/audio/robotics and Antigravity separately even where the standard OpenAI-compatible Chat route is not supported.
+
+### OmniRoute staged execution checklist — no omitted model, no guessed API IDs
+
+- [ ] **G0 | Inspect current OmniRoute** `OmniProxy → Providers`: identify any existing Gemini provider accounts, keys, version and UI; don't duplicate upstream API keys or overwrite `DJMRN-Persian-L1`. User currently says other newly registered provider accounts have not yet been connected to OmniRoute.
+- [ ] **G1 | Register one Google AI Studio provider account** with existing private Gemini key (no key or suffix in chat/GitHub). Proposed label `DJMRN-Gemini-Free` until saved name confirmed. Verify Free project; no billing/paid toggle.
+- [ ] **G2 | Authenticated model enumeration** using the private key **on user device** via Google's official `models.list` / `GET https://generativelanguage.googleapis.com/v1beta/models`, paging if needed. Map each of **all 18 account display rows** to exact supported API model ID and methods. Never fabricate `models/...` or derive IDs by lowercasing marketing names. Retain entries that do not appear in `models.list` as `MODEL_ID_NOT_RESOLVED` and investigate via official docs/account UI, not delete.
+- [ ] **G3 | Provider model setup**: configure every currently callable model/route with an actual matching OmniRoute provider/endpoint or an authorized dedicated adapter (Chat, embeddings, TTS, Live, robotics, other agent API). Mark unsupported integration as `ADAPTER_PENDING`, not `EXCLUDED`. Gemini 3.x/4.x marketing names must be verified against actual catalog before creation.
+- [ ] **G4 | Quota and accounting**: capture exact RPD/RPM/TPM **and reset state, group-wide/project shared limits**, expected endpoint rate constraints, account remaining/headroom, consumption evidence and zero-charge terms. Do not invent a provider per-model autonomous daily counter if OmniRoute doesn't demonstrably enforce it. Provider quota and Free-Tier Budget UI are a starting point, not a test of enforcement.
+- [ ] **G5 | Verify each compatible model/adapter with one small non-sensitive request** under user approval; report model ID, HTTP status, actual output, quota consumption/429, any activation/billing constraints, and shared-account pool usage; no mass auto-probing or unlimited retries. Status transition: `ACCOUNT_LIMIT_VISIBLE → MODEL_ID_RESOLVED → ROUTE_CONFIGURED → REAL_API_PASS → FAMILY_ELIGIBLE`.
+- [ ] **G6 | Populate role-specific stable `Combo` families** for compatible Chat models: `DJMRN-Lite`, `DJMRN-General`, `DJMRN-Reasoning`, `DJMRN-Coding`, `DJMRN-Research` and, if vision API compatible, `DJMRN-Vision`. One model **may belong to multiple role families** but uses same underlying provider/project quota; do not multiply RPD across Combos. Existing `DJMRN-Persian-L1` is already independently real-tested with AI Horde; retain it as-is until deliberate change. Non-chat tasks get `DJMRN-Knowledge`, `DJMRN-Voice`, `DJMRN-Live`, specialist adapters/tools as technically supported, not fake Chat Combos.
+- [ ] **G7 | Admission/failover**: tasks assigned by capability and measured task suitability; lightweight first only when adequate, stronger when needed; bounded 429/cooldown/failover across **actually free-eligible, verified, compatible** candidates, NEVER toward paid/unknown/no-entitlement paths. Quota sharing is a fact of Google project; don't give every Agent separate fictional budget.
+- [ ] **G8 | Agent integration after routing passes**: Agno `OpenAILike` (in installed Agno 3.1.10) configured with local OmniRoute gateway API Key kept privately; Agent uses stable Combo names, does not individually embed upstream Gemini keys. Fix previous PowerShell quoting error without redoing installed packages; verify one real Agno-to-OmniRoute request before multi-agent expansion.
+
+### Outstanding coverage accounting — count must remain 18
+
+- **Must create or assess all 18 records:** no priority shortlist may delete rows. Product suitability only changes family/priority and whether role-specific automated admission is safe.
+- **No hidden successes:** current statuses for all 18 = **PENDING** pending actual OmniRoute UI, exact model IDs and one-call tests. Some Google account-visible routes (especially Antigravity, Live, robotics) may not be normal Gemini chat API and require unsupported-adapter status, not silent promotion to 'connected'.
+- **Never assume `Unlimited` means free/unlimited cost**. See original 6 Live rows pending verification; source lists disabled 0-RPD rows too. Do not include them in positive-numeric-RPD progress count.
+- **No automatic file fanout:** follow 2026-10-25 SINGLE-RECORD-ONLY: this is the user's explicit write request to `CURRENT-STATUS.md`; no duplicate tracker, project repo switch, Notion update or key publication. Update this section's [ ] records as each is really connected/tested, with observed identity/evidence rather than declaring success by intent.
+
+**Next live action:** OmniRoute Dashboard → `OmniProxy → Providers` → inspect Google Gemini add-provider UI; enter original AI Studio key **locally**; report provider connection, model list and tests in this one file **only upon new explicit user registration request**.
+
+
+
 
 ## 2026-10-26 — FUTURE ARCHITECTURE RESEARCH: HYBRID MULTI-AGENT + COMPLEMENTARY SOFTWARE
 
