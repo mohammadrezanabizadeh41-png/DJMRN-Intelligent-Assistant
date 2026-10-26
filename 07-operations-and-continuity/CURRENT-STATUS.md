@@ -1,3 +1,17 @@
+## 2026-10-27 — GEMMA-4-31B-SINGLE-MODEL-VALIDATION-START-20261027 | Next Gemma 4 model, not yet operationally tested
+
+**User direction:** Following the completed `gemma-4-26b-a4b-it` real OmniRoute text + inline JPEG vision validation, proceed to the next model, one by one, with persistent work receipts. Next same-family candidate designated: `gemma-4-31b-it`, provider `gemini`, OmniRoute local gateway model ID `gemini/gemma-4-31b-it`. This is a **plan and handoff**, NOT an executed successful test or user-confirmed activation.
+
+**Already stored (previous local management evidence):** exactly one Gemma 4 31B existing Custom entry: `apiFormat=chat-completions`, `supportedEndpoints=chat`, `isFree=True`, `supportsVision=True`. The two booleans are metadata and DO NOT guarantee live API readiness, available quota or a zero-spend account; Google AI Studio user-supplied prior account snapshot recorded 30 RPM / 16K TPM / 14,400 RPD. Verify current account constraints before ongoing workload or production. This is hosted through the Google Gemini API; no local 31B-weight installation is required or approved.
+
+**Official source checked:** Google Gemma docs `https://gemma.ai/deployment/gemini-api/` list `gemma-4-31b-it` as Gemini API-hosted and support image understanding. Existing Gemini connection `DJMRN-OmniRoute-Gemini` has the recovered connection-scoped `key` HTTP proxy `127.0.0.1:20809`, but **that port can change** and Gemma 4 31B has not yet been tested after the proxy fix.
+
+**Next exact execution:** Provide user a PowerShell procedure for **only `gemini/gemma-4-31b-it`**: secure read of OmniRoute *Gateway* API key, minimal `POST http://127.0.0.1:20128/v1/chat/completions` text (expect HTTP 200/nonempty answer), then only on text success a single public JPEG sent as `data:image/jpeg;base64,...` in `image_url` (expect HTTP 200 and an image-grounded result). Print safely redacted HTTP status and error reason. Use proven inline data URI path (the previous remote image URL yielded HTTP 400 for Gemma 26B). **Await user's real PowerShell outputs.** Do not mark 31B operational before results. No new provider, duplicate model, Combo, Agno integration, download, local install, paid activation, credential/log disclosure or unrelated model testing.
+
+**Current milestone:** `26B_TEXT_PASS`, `26B_INLINE_VISION_PASS`, `31B_TEST_PENDING`. Continue in this canonical file with observed outcome; all future DJMRN work must be recorded.
+
+---
+
 ## 2026-10-27 — DJMRN-CONTINUOUS-WORK-REPORTING-REQUIREMENT-20261027 | User standing instruction: persist work receipts
 
 **USER DIRECTIVE (persistent operating rule for DJMRN):** Every meaningful action/work performed in the DJMRN project—research, checks, diagnostics, tests, commands/instructions actually executed and reported by the user, implementations, configuration changes, integration steps, decisions, and problems/resolutions—must have a retrievable factual report saved in the **existing project GitHub repository**, so future assistants can reuse evidence, know what changed, and continue without repeating previous work. Include unsuccessful attempts, unresolved blockers, and explicitly unperformed next steps. Do not record a user-run command as executed unless its actual result was shared or independently verified.
