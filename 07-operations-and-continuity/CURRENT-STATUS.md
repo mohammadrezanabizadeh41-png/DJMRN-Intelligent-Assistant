@@ -1,5 +1,134 @@
 # DJMRN — وضعیت معتبر کنونی | CANONICAL PROJECT CURRENT
 
+## 2026-10-26 — GEMINI OMNIROUTE LIVE CHECKPOINT: 60 GOOGLE MODELS + CUSTOM PROGRESS + EMBEDDING-2 NEXT
+
+**USER-REQUESTED PERSISTENCE RECEIPT 2026-10-26**: User explicitly instructed assistant to save the current setup details in this existing canonical record, automatically update it on later confirmed milestones of the SAME Gemini→OmniRoute setup, and preserve a restart point between chat windows. This is a narrow, explicit exception to older requirement of a fresh "save" request each turn. Do NOT spread to other files, Notion or repositories. Do NOT claim any unattended background work: each later change requires a real assistant tool action. Never save keys, bearer tokens or Google private credentials. Evidence comes from screenshots and user-pasted Windows PowerShell, not independent access to the user's device.
+
+### Real Gemini provider / gateway status
+- Windows OmniRoute v3.8.52, localhost port 20128. The Google AI Studio key was privately entered; direct GET https://generativelanguage.googleapis.com/v1beta/models?pageSize=1 yielded HTTP 200 / GOOGLE_API_KEY_TEST=PASS. Its OmniRoute Add Connection UI Check previously rejected two keys as Invalid API key; cause remains unproven.
+- Admin management token privately created in Configuration → Access Tokens; REST GET http://127.0.0.1:20128/api/providers with bearer returned HTTP 200; POST of provider=gemini, name=DJMRN-OmniRoute-Gemini, private apiKey returned HTTP 201; GET verified registered. UI shows Gemini provider enabled/green connected, yet Never synced. No proof that any Gemini routed inference request succeeded.
+- User screenshot of Available Models: initial 10/10 enabled BUILT-IN entries, labeled chat/Assumed, not actual tested. Later 11/11 after Gemma 4 26B. UI Playground showed red catalog_build_timeout. The Import from /models action has NOT been verified successful in OmniRoute, and Auto-Fetch, Auto-Sync, and Test all models stayed unused/off. Some defaults such as Gemini 4 Argon and Gemini 2.5 Pro have no confirmed free daily account quota: do NOT blindly auto-route to all built-ins.
+- Direct PowerShell GET https://generativelanguage.googleapis.com/v1beta/models?pageSize=100 with pagination, header x-goog-api-key private: GOOGLE_CATALOG=PASS; PAGES=1; TOTAL_MODELS=60. All 60 exact upstream model IDs and their supportedGenerationMethods from stdout preserved in inventory below. Catalog-listed does not imply free, enabled in OmniRoute, model endpoint compatible or actual successful call.
+- Actual lower-provider settings UI: Param Filters Blocked/Allowed blank; Auto-learn from 400 errors OFF. Web Tool Interception for web_search/web_fetch OFF; intended interception paths /v1/search and /v1/web/fetch, not proof tools installed. Expose in Claude Code provider default Inherit. No change performed.
+- Minimal direct provider REST POST might not carry prior failed form's Free-only or per-model quota settings. Inspect before free model routing. Preserve previously verified AI Horde Combo DJMRN-Persian-L1; unrelated to this untested Gemini routing.
+- Model admission protocol: first verify official model modality and API methods; then fill Custom Model and label capability correctly; create only models missing from BUILT-IN, avoid duplicates. OmniRoute Supported endpoints Chat, Embeddings, Rerank, Images, Video, Audio Speech, Audio Transcriptions, Music are routes, NOT merely modality of INPUT. Vision capable is separate; reasoning/coding/function calling is in-model functionality, must still be tested through bridge. FREE is descriptive and does not itself enforce non-billing. Under no circumstances turn on paid tier without approval.
+
+### Registered/provisionally registered models at chat handoff
+| Upstream ID | Evidence and exact status |
+|---|---|
+| gemma-4-26b-a4b-it | CONFIRMED with screenshot: CUSTOM / chat Manual. Vision capable was mistakenly not selected at initial creation. User reports proposed pencil path cannot change it. Keep entry; find non-destructive edit remedy and verify Vision through gateway later. |
+| gemma-4-31b-it | User explicitly confirms newly created CUSTOM. Instructions: Chat, Vision capable, FREE, API Format Chat Completions, Target Default(auto). No image or model call tested. |
+| gemini-3.5-flash-lite | Installation instructed and user proceeded by asking next, but **no explicit creation statement/screenshot** in context. Mark USER-PROCEEDED / CATALOG CONFIRM PENDING, not verified. |
+| gemini-3.6-flash | Installation instructed and user proceeded by asking next, but **no explicit creation statement/screenshot**. Mark USER-PROCEEDED / CATALOG CONFIRM PENDING. |
+| gemini-embedding-001 | User explicitly confirms added as CUSTOM. Instructions: API Format Embeddings; Supported endpoint Embeddings and FREE only. No live embedding gateway test. |
+| gemini-3.8-flash | BUILT-IN screenshot confirmed; do not create duplicate. |
+| gemini-3.1-flash-lite; gemini-3-flash-preview; gemini-2.5-flash; gemini-2.5-flash-lite | BUILT-IN screenshot confirmed, labeled Assumed; eligibility and calls not yet validated. |
+| gemini-3.1-flash-tts-preview | BUILT-IN screenshot had Chat/Assumed even though it is TTS. Needs specialist API route correction, not an automatic assumed Chat pass. |
+| gemini-embedding-2 | **NEXT: not yet added.** Official capability settings recorded below. |
+
+### Preserve all 18 account screenshot rows with positive numeric daily request quotas
+Exact upstream IDs were found in the separate 60-row Google models.list result. These are account-observed limits, not proven independent quota pools or all-model operational access.
+
+| Account model or route | Google upstream ID | RPM / TPM / RPD |
+|---|---|---|
+| Gemini 2.5 Flash | gemini-2.5-flash | 5 / 250K / 20 |
+| Gemini 2.5 Flash Lite | gemini-2.5-flash-lite | 10 / 250K / 20 |
+| Gemini 3 Flash | gemini-3-flash-preview | 5 / 250K / 20 |
+| Gemini 3.1 Flash Lite | gemini-3.1-flash-lite | 15 / 250K / 500 |
+| Gemini 3.6 Flash | gemini-3.6-flash | 5 / 250K / 20 |
+| Gemini 3.5 Flash Lite | gemini-3.5-flash-lite | 15 / 250K / 500 |
+| Gemini 3.8 Flash | gemini-3.8-flash | 5 / 250K / 20 |
+| Gemma 4 26B | gemma-4-26b-a4b-it | 30 / 16K / 14400 |
+| Gemma 4 31B | gemma-4-31b-it | 30 / 16K / 14400 |
+| Antigravity (Agents) | antigravity-preview-09-2026 (candidate for exact row) | 60 / 100K / 100 |
+| Gemini Embedding 1 | gemini-embedding-001 | 100 / 30K / 1000 |
+| Gemini Embedding 2 | gemini-embedding-2 | 100 / 30K / 1000 |
+| Gemini Robotics ER 2 Preview | gemini-robotics-er-2-preview | 5 / 250K / 20 |
+| Gemini 2.5 Flash TTS | gemini-2.5-flash-preview-tts | 3 / 10K / 10 |
+| Gemini 3.1 Flash TTS | gemini-3.1-flash-tts-preview | 3 / 10K / 10 |
+| Gemini 3.8 Flash TTS | gemini-3.8-flash-tts | 3 / 10K / 10 |
+| Gemini 3.8 Flash Lite TTS | gemini-3.8-flash-lite-tts | 3 / 10K / 10 |
+| Gemini 3.5 Transcribe Live | gemini-3.5-transcribe-live | 3 / 10K / 25 |
+
+Retain six other Live API rows with dashboard RPD Unlimited as separate ACCOUNT-OBSERVED / PRICING UNKNOWN candidates, and zero-RPD models separately, not auto-enabled or deleted. FREE pricing must be confirmed for exact route/tier; default never charge. Agent quota sharing across models may be project-scoped, not additive.
+
+### Complete 60 upstream models from user PowerShell result: exact ID (prefix models/) and supportedGenerationMethods
+Every line below was reported by the successful paginated Google v1beta models.list call. This is INVENTORY ONLY; no permission to use unverified paid models.
+
+~~~text
+antigravity-preview-05-2026 | generateContent,countTokens
+antigravity-preview-09-2026 | generateContent,countTokens
+antigravity-preview-latest | generateContent,countTokens
+aqa | generateAnswer
+deep-research-max-preview-04-2026 | generateContent,countTokens
+deep-research-preview-04-2026 | generateContent,countTokens
+deep-research-pro-preview-12-2025 | generateContent,countTokens
+gemini-2.5-computer-use-preview-10-2025 | generateContent,countTokens
+gemini-2.5-flash | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-2.5-flash-image | generateContent,countTokens,batchGenerateContent
+gemini-2.5-flash-lite | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-2.5-flash-native-audio-latest | countTokens,bidiGenerateContent
+gemini-2.5-flash-native-audio-preview-09-2025 | countTokens,bidiGenerateContent
+gemini-2.5-flash-native-audio-preview-12-2025 | countTokens,bidiGenerateContent
+gemini-2.5-flash-preview-tts | countTokens,generateContent
+gemini-2.5-pro | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-2.5-pro-preview-tts | countTokens,generateContent,batchGenerateContent
+gemini-3.1-flash-image | generateContent,countTokens,batchGenerateContent
+gemini-3.1-flash-image-preview | generateContent,countTokens,batchGenerateContent
+gemini-3.1-flash-lite | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-3.1-flash-lite-image | generateContent,countTokens,batchGenerateContent
+gemini-3.1-flash-lite-preview | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-3.1-flash-live-preview | bidiGenerateContent
+gemini-3.1-flash-tts-preview | generateContent,countTokens,batchGenerateContent
+gemini-3.1-pro-preview | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-3.1-pro-preview-customtools | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-3.5-flash | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-3.5-flash-lite | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-3.5-live-translate-preview | bidiGenerateContent
+gemini-3.5-transcribe | generateContent,countTokens
+gemini-3.5-transcribe-live | bidiGenerateContent
+gemini-3.6-flash | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-3.7-flash | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-3.8-flash | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-3.8-flash-lite-tts | generateContent,countTokens,batchGenerateContent
+gemini-3.8-flash-tts | generateContent,countTokens,batchGenerateContent
+gemini-3.8-live | bidiGenerateContent
+gemini-3.8-live-extended-thinking | bidiGenerateContent
+gemini-3-flash-preview | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-3-pro-image | generateContent,countTokens,batchGenerateContent
+gemini-3-pro-image-preview | generateContent,countTokens,batchGenerateContent
+gemini-4-argon | generateContent,countTokens,batchGenerateContent
+gemini-embedding-001 | embedContent,countTextTokens,countTokens,asyncBatchEmbedContent
+gemini-embedding-2 | embedContent,countTextTokens,countTokens,asyncBatchEmbedContent
+gemini-embedding-2-preview | embedContent,countTextTokens,countTokens,asyncBatchEmbedContent
+gemini-flash-latest | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-flash-lite-latest | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-nano-banana-2.1 | generateContent,countTokens,batchGenerateContent
+gemini-omni-1.1-flash | generateContent,countTokens
+gemini-omni-flash-preview | generateContent,countTokens
+gemini-pro-latest | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-robotics-er-2-preview | generateContent,countTokens,createCachedContent,batchGenerateContent
+gemini-robotics-er-2-streaming-preview | bidiGenerateContent
+gemma-4-26b-a4b-it | generateContent,countTokens
+gemma-4-31b-it | generateContent,countTokens
+lyria-3.5 | generateContent,countTokens
+lyria-3-clip-preview | generateContent,countTokens
+lyria-3-pro-preview | generateContent,countTokens
+lyria-realtime-exp | bidiGenerateMusic
+nano-banana-pro-preview | generateContent,countTokens,batchGenerateContent
+~~~
+
+### NEXT READY FOR USER: Gemini Embedding 2 — do not confuse with Chat
+- Official docs verified 2026-10-26: https://ai.google.dev/gemini-api/docs/models/gemini-embedding-2 , https://ai.google.dev/gemini-api/docs/embeddings , https://ai.google.dev/gemini-api/docs/pricing . Stable ID **gemini-embedding-2** is direct Google catalog listed, with method embedContent and related token/batch embedding methods; preview alternative separate and not needed.
+- INPUT supported: text max 8192 tokens; JPEG/PNG images max 6/request; MP3/WAV audio max 180 sec; MP4/MOV video max 120 sec, sampled max 32 frames (video audio track not incorporated); PDF max 1 file up to 6 pages. OUTPUT is vector embeddings, dimensions 128–3072 (recommended 768/1536/3072). No Chat generation, independent Rerank, media generation or audio transcription endpoint. The word Vision capable in OmniRoute's Chat model UI must not be equated with upstream embedding multimodality.
+- Pricing official Standard Free Tier text/image/audio/video input Free of charge; Standard vs Batch and project eligibility distinct. User's account screenshot 100 RPM / 30K TPM / 1000 RPD. No charge or upgraded billing authorized.
+- Recommended Custom settings **Model ID: gemini-embedding-2; Display Name: DJMRN Gemini Embedding 2; API Format: Embeddings; Target Format: Default (auto); supported endpoint: Embeddings only; FREE tick based on official Standard Free tier; Chat/Vision capable/Rerank/Images/Video/Audio Speech/Audio Transcriptions/Music unchecked**. Multimedia INPUT may require separate Google native REST/SDK bridge if OmniRoute generic embeddings adapter only handles text. Need real single tiny request later, within quota and with cost gates checked.
+- Embedding 001 and Embedding 2 vectors cannot be assumed in same vector space; use separate vector indexes, or controlled re-embedding migration.
+- When user confirms Embedding 2 created, save that real step to this same file, then finish other models from all 18 (Robotics, TTS 2.5/3.1/3.8/3.8 Lite, Transcribe Live, managed Antigravity), test chat/embedding/TTS/Live separately, add quota controls and Agno model families. No secrets and no silently activating paid models.
+
+---
+
+
 ## 2026-10-26 — AFTER-GEMINI-18: GEMINI-WEB-FREE + G4F.SPACE-GEMINI ROUTING AND WEB-TASKS EVALUATION
 
 **USER DIRECT REQUEST TO ADD FUTURE TASKS — 2026-10-26; Research checked against 3.8.52 provider reference and official source docs. Status: PLANNED/NOT CONNECTED/NOT TESTED.** Preserve the previously persisted **18 positive-numeric-RPD Gemini account model/route** mandatory queue, including **Gemma 4 26B and 31B**, as P0. After those have individually resolved IDs, quota gates, and staged activation/adapters as possible, **do not forget to revisit BOTH additional candidate provider cards seen in user's actual OmniRoute v3.8.52 → OmniProxy → Providers screenshot**. Add them to the work queue, but **NEITHER is yet verified unlimited, stable or compliant free API usage**; no API calls/account actions or authorizations were executed in this research.
