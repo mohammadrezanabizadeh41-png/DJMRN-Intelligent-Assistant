@@ -1,3 +1,9 @@
+## 2026-10-26 — Antigravity provider warning displayed
+User opened Antigravity on OmniRoute v3.8.52. The UI displayed a "Before continuing" warning explaining that its official-product session/OAuth is not authorized for proxy/router use and intensive autonomous agent usage may lead to account restriction. The user has not confirmed proceeding or completing Google OAuth sign-in.
+Recommendation: cancel this onboarding route for the planned multi-agent DJMRN gateway and retain a distinct official Gemini API Interactions adapter investigation for the managed Antigravity agent. Status: IDE_OAUTH_PROVIDER_UNCONNECTED; MANAGED_AGENT_API_UNTESTED.
+Earlier read-only audit confirmed 9 Gemini Custom entries; TTS and embedding entries have API-format versus endpoint mismatches; actual Gemini-through-OmniRoute 403 debugging remains deferred at user's request.
+---
+
 # DJMRN — وضعیت معتبر کنونی | CANONICAL PROJECT CURRENT
 
 ## 2026-10-26 — VERIFIED GATEWAY CUSTOM MODELS COUNT 9 / ANTIGRAVITY OAUTH DISTINCTION
