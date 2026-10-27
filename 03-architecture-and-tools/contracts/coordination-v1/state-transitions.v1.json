@@ -1,0 +1,77 @@
+{
+  "task_statuses": [
+    "RECEIVED",
+    "VALIDATED",
+    "QUEUED",
+    "DISPATCHED",
+    "RUNNING",
+    "WAITING_APPROVAL",
+    "RETRY_WAIT",
+    "SUCCEEDED",
+    "DENIED",
+    "FAILED",
+    "CANCELLED",
+    "UNKNOWN_OUTCOME"
+  ],
+  "terminal": [
+    "SUCCEEDED",
+    "DENIED",
+    "FAILED",
+    "CANCELLED"
+  ],
+  "transitions": {
+    "RECEIVED": [
+      "VALIDATED",
+      "DENIED",
+      "CANCELLED"
+    ],
+    "VALIDATED": [
+      "QUEUED",
+      "DENIED",
+      "CANCELLED"
+    ],
+    "QUEUED": [
+      "DISPATCHED",
+      "CANCELLED",
+      "DENIED"
+    ],
+    "DISPATCHED": [
+      "RUNNING",
+      "RETRY_WAIT",
+      "UNKNOWN_OUTCOME",
+      "FAILED",
+      "CANCELLED"
+    ],
+    "RUNNING": [
+      "SUCCEEDED",
+      "WAITING_APPROVAL",
+      "RETRY_WAIT",
+      "FAILED",
+      "UNKNOWN_OUTCOME",
+      "CANCELLED"
+    ],
+    "WAITING_APPROVAL": [
+      "QUEUED",
+      "RUNNING",
+      "DENIED",
+      "CANCELLED"
+    ],
+    "RETRY_WAIT": [
+      "QUEUED",
+      "FAILED",
+      "CANCELLED"
+    ],
+    "UNKNOWN_OUTCOME": [
+      "RUNNING",
+      "SUCCEEDED",
+      "FAILED",
+      "CANCELLED"
+    ],
+    "SUCCEEDED": [],
+    "DENIED": [],
+    "FAILED": [],
+    "CANCELLED": []
+  },
+  "rule": "UNKNOWN_OUTCOME requires reconciliation receipt before state change; no blind re-execution of external effects",
+  "authority": "Hub Task Ledger only; specialist/workflow runs link by dispatch_id and run_ref. State transitions require atomic compare-and-swap and policy."
+}
