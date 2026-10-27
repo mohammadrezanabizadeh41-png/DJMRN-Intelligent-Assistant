@@ -1,0 +1,117 @@
+{
+  "TASK_SUBMISSION": {
+    "kind": "TASK_SUBMISSION",
+    "contract_version": "djmrn.coord.v1",
+    "request_id": "req-001",
+    "locale": "fa-IR",
+    "capability_id": "research.web",
+    "input_refs": [
+      "resource-company-001"
+    ],
+    "intent": "شرکت فرستنده ایمیل را فقط با منابع عمومی بررسی کن",
+    "idempotency_key": "idem-req-001",
+    "parent_task_id": "task-mail-001",
+    "correlation_id": "corr-001"
+  },
+  "TASK_RECORD": {
+    "kind": "TASK_RECORD",
+    "contract_version": "djmrn.coord.v1",
+    "task_id": "task-search-001",
+    "request_id": "req-001",
+    "capability_id": "research.web",
+    "status": "QUEUED",
+    "created_at": "2026-10-27T11:00:00Z",
+    "version": 1,
+    "owner_principal": "user-djmrn",
+    "parent_task_id": "task-mail-001",
+    "correlation_id": "corr-001"
+  },
+  "DISPATCH_RECORD": {
+    "kind": "DISPATCH_RECORD",
+    "contract_version": "djmrn.coord.v1",
+    "dispatch_id": "dispatch-001",
+    "task_id": "task-search-001",
+    "sender_role": "mail_specialist",
+    "target_role": "search_specialist",
+    "capability_id": "research.web",
+    "status": "AUTH_CHECKED",
+    "attempt": 1,
+    "expires_at": "2026-10-27T11:05:00Z",
+    "input_refs": [
+      "resource-company-001"
+    ],
+    "permission_grant_id": "grant-research-001"
+  },
+  "CAPABILITY_RECORD": {
+    "kind": "CAPABILITY_RECORD",
+    "contract_version": "djmrn.coord.v1",
+    "capability_id": "research.web",
+    "owner_role": "search_specialist",
+    "side_effect": "READ_ONLY",
+    "required_permissions": [
+      "web.search.public"
+    ],
+    "input_schema_ref": "schemas/research-search-input.schema.json",
+    "output_schema_ref": "schemas/research-search-output.schema.json",
+    "knowledge_policy": "FRESHNESS_FIRST",
+    "retry_policy": "READ_ONLY_TRANSIENT",
+    "time_budget_sec": 90,
+    "enabled": true,
+    "privacy_scope": "PUBLIC",
+    "model_budget": {
+      "max_calls": 1,
+      "paid_fallback_allowed": false
+    }
+  },
+  "RESOURCE_REF": {
+    "kind": "RESOURCE_REF",
+    "contract_version": "djmrn.coord.v1",
+    "resource_id": "resource-company-001",
+    "resource_type": "WEB_PAGE",
+    "sensitivity": "PUBLIC",
+    "origin": "https://example.org/company",
+    "observed_at": "2026-10-27T11:01:00Z",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "source_tool": "search_specialist"
+  },
+  "WORKER_RESULT": {
+    "kind": "WORKER_RESULT",
+    "contract_version": "djmrn.coord.v1",
+    "task_id": "task-search-001",
+    "dispatch_id": "dispatch-001",
+    "worker_role": "search_specialist",
+    "status": "SUCCEEDED",
+    "artifact_refs": [
+      "artifact-search-001"
+    ],
+    "evidence_refs": [
+      "resource-company-001"
+    ],
+    "completed_at": "2026-10-27T11:02:00Z",
+    "retryable": false
+  },
+  "APPROVAL_RECORD": {
+    "kind": "APPROVAL_RECORD",
+    "contract_version": "djmrn.coord.v1",
+    "approval_id": "approval-send-001",
+    "task_id": "task-mail-001",
+    "action": "gmail.send",
+    "target_ref": "recipient@example.org",
+    "payload_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "status": "PENDING",
+    "expires_at": "2026-10-27T12:00:00Z"
+  },
+  "AUDIT_EVENT": {
+    "kind": "AUDIT_EVENT",
+    "contract_version": "djmrn.coord.v1",
+    "event_id": "evt-001",
+    "task_id": "task-search-001",
+    "dispatch_id": "dispatch-001",
+    "actor": "hub",
+    "event_type": "DISPATCH_AUTH_CHECKED",
+    "timestamp": "2026-10-27T11:00:10Z",
+    "outcome": "ALLOWED",
+    "evidence_refs": [],
+    "correlation_id": "corr-001"
+  }
+}
