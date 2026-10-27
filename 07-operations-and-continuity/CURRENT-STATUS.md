@@ -1,3 +1,15 @@
+## 2026-10-27 — DJMRN COORDINATION CONTRACT v1.0 DESIGN BASELINE REGISTERED
+
+**User request:** explain whether the prior composite contract was final; provide a design-complete contract and show exactly where/how it is used. Previous OSCP v0.1 was a draft and insufficient as an executable task/control hub.
+
+**Archived canonical design document:** [DJMRN Coordination Contract v1.0](../03-architecture-and-tools/contracts/DJMRN-Coordination-Contract-v1.0.md), commit `416c901440fc833dddad8388a2ee60ab0eb30a4e`, readback confirmed. This extends but does NOT supersede [OSCP v0.1](../03-architecture-and-tools/DJMRN-Open-Standards-Composition-Profile-v0.1.md) or D-005 / D-019. The full companion **13-file machine-readable prototype design ZIP** (JSON Schema, OpenAPI, registry, model-free-only policy, state-machine, examples, offline structural tests) was delivered as a user-downloadable chat artifact in the creating conversation; auxiliary machine files have **not been individually committed to this repo**. For implementers, obtain this bundle from the conversation before starting P1; do not claim the GitHub markdown alone contains the JSON Schema source files.
+
+**Architecture:** lightweight Hub-and-Spoke: HUB owns authoritative Task/Dispatch/Inbox/Outbox/audit and central capability/permission registry, routes role-to-role official tasks, stores only refs and receipts. Knowledge Service owns scoped knowledge and evidence; Search Specialist is the only web search executor; Mail Specialist owns mail tools; Python CAP-006 owns bounded read-only document search; OmniRoute is inference adapter, not policy authority. Supervisor model is optional on ambiguous tasks, never always-on. Per-specialist workflow retry/evidence details stay at specialist; HUB stores summarized official task and referenced result. Internal typed calls first; A2A/MCP/AG-UI adapters activate only at appropriate boundaries.
+
+**Contract status:** **DESIGN BASELINE COMPLETE, NOT USER-APPROVED FOR DEPLOYMENT; NO END-TO-END RUNTIME/CERTIFICATION/WINDOWS TEST.** Standalone structural validation passed schema integrity, 8 valid examples, 6 negative examples and basic API file refs. No Windows/Gmail/model/account/install/paid actions. Next: explicit acceptance and bounded P1 Persian Task→CAP-006→Source evidence→durable restart; compare runtime only when measurable.
+
+---
+
 ## 2026-10-27 — WORK-READY-PLATFORMS-002 + INDEPENDENT-CORE-ARCHITECTURES-003 ARCHIVED (RESEARCH ONLY)
 
 **USER REQUEST, 2026-10-27:** Following earlier preserved 25/26 Oct hybrid multi-assistant design, Work Mission 001, and D-019 conditional “first vertical” recommendation, user explicitly asked to save *all relevant later research findings* in existing project research documents and independently perform a **deep architectural alternatives comparison**. The user did **NOT** approve or request software installation, architecture adoption, implementation, API model grouping, database migration, account access or payments. The original 25/26 Oct architecture MUST REMAIN INTACT, D-005 global stack = NOT DECIDED, D-019 = CONDITIONAL / RESEARCH REVIEW.
