@@ -1,3 +1,17 @@
+## 2026-10-27 — P1 LIGHTWEIGHT HYBRID HUB REFERENCE STARTED
+
+**Current user directive:** start a practical minimal Hub pilot while preserving a **hybrid language-/runtime-neutral future** (Python, Rust, Go, .NET, Docker when needed); Persian persona is a client of Hub, **not** the authoritative ledger or search engine. Agentic supervisor/diagnostic role is **on-demand** and bounded. CAP-006 is an execution specialist, never the task owner. Existing eight candidate/ready OmniRoute models remain separate from this pilot; family assignments and live integration deferred to verified, cost-controlled role policy.
+
+**GitHub reference implementation (readback verified):** [P1 Python stdlib coordination Hub code](../05-assistants-and-capabilities/src/coordination_hub_p1/hub_p1.py), [offline tests](../05-assistants-and-capabilities/src/coordination_hub_p1/test_hub_p1.py), [operator README](../05-assistants-and-capabilities/src/coordination_hub_p1/README.md), [hybrid/persona/repair boundary](../05-assistants-and-capabilities/src/coordination_hub_p1/HYBRID-AND-PERSONA-PLAN.md), [bounded test report](../05-assistants-and-capabilities/src/coordination_hub_p1/VALIDATION-20261027.md). Code commit `12053ee77f36626c4e1d05f96f90ab1e41dc2e6d` and subsequent docs/tests commits are in main. All 5 files reread after GitHub writes.
+
+**Contract artifacts now actually committed:** [v1.0 design document](../03-architecture-and-tools/contracts/DJMRN-Coordination-Contract-v1.0.md), [all 12 machine source/test/example files](../03-architecture-and-tools/contracts/coordination-v1/README.md) including [JSON Schema](../03-architecture-and-tools/contracts/coordination-v1/schemas/hub-record.schema.json) and [OpenAPI](../03-architecture-and-tools/contracts/coordination-v1/openapi/hub.openapi.json). This resolves the earlier note that only a bundle ZIP had machine sources. All repo file writes were reread and matched.
+
+**Actual outcome:** Hub stores UUID task, independent CAP-006 fingerprint, limited dispatch/audit/state/idempotency, validates allowlist, rejects unregistered web/Gmail, persists synthetic evidence and supports bounded read-only recovery. **11 off-device unit tests PASS using a test-only stand-in CAP-006** because exact repo CAP source was inaccessible inside the isolated test container. JSON Schema validates the emitted submission example. **Real CAP-006 integration in repo checkout, Windows execution/RAM, actual multi-language adapter, HTTP, A2A/MCP/AG-UI, OmniRoute model/persona, self-healing workflows/Gmail remain UNTESTED/NOT IMPLEMENTED.** No installed/background processes, accounts, keys, pay-as-you-go calls, or local Windows operations.
+
+**Next gate:** run actual repository-integrated test with official existing CAP-006 and synthetic fixtures in isolated environment; then explicit Windows user-go-ahead for one bounded offline demo; later role-based on-demand supervisor and specialist workflow design. No global stack decision, D-005 remains open, D-019 architectural route conditional, no forced adoption of Python.
+
+---
+
 ## 2026-10-27 — DJMRN COORDINATION CONTRACT v1.0 DESIGN BASELINE REGISTERED
 
 **User request:** explain whether the prior composite contract was final; provide a design-complete contract and show exactly where/how it is used. Previous OSCP v0.1 was a draft and insufficient as an executable task/control hub.
