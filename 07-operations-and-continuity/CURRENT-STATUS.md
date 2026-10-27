@@ -1,3 +1,13 @@
+## 2026-10-27 — PM-01 GEMMA COMBO CREATED IN USER OMNIROUTE UI
+
+**Screenshot-verified user action:** OmniRoute Desktop `OmniProxy → Combos` showed green banner **`Combo ready to validate`** for `DJMRN-PM-Standard` and one saved **Deterministic / PRIORITY** combo entry with target labels `gemini/gemma-4-26b-a4b-it` and `gemini/gemma-4-31b-it` in that order, both listed under connection `DJMRN-OmniRoute-Gemini`. This supersedes previous `COMBO_NOT_CREATED` status for this new family. Earlier screenshot of Review displayed two steps, two account assignments, one provider, and Priority strategy. No paid or extra models present in this combo on the screenshot.
+
+**Status distinction:** `COMBO_CREATED_UI_CONFIRMED`, **not** `COMBO_RUNTIME_TEST_PASS`, **not** `FAILOVER_500_TEST_PASS`, and **not** `AGNT_PERSONA_CONNECTED`. The current banner explicitly requests validation. Next user GUI action: click **Test now** on green `Combo ready to validate` banner; inspect output and only then run one minimal **actual Persian `/v1/chat/completions`** using the combo name as model alias, with low token budget/no tools. Do not assume UI health test proves end-to-end inference or 500 recovery. No config changed by assistant and no API tokens/secret data stored. User attachment `image(20261027-134613).png` is conversation evidence, not a binary GitHub archive.
+
+**Canonical plan:** [Modular Memory and PM Agent Adoption Plan](../03-architecture-and-tools/DJMRN-MODULAR-MEMORY-AND-PM-AGENT-ADOPTION-PLAN-20261027.md), including quota/cognitive family choice and temporary-error policy.
+
+---
+
 ## 2026-10-27 — MODULAR MEMORY + AGNT-FIRST PERSIAN PM ROADMAP
 
 User-directed architecture/archive (no installation, no model/agent connected): [DJMRN-MODULAR-MEMORY-AND-PM-AGENT-ADOPTION-PLAN-20261027.md](../03-architecture-and-tools/DJMRN-MODULAR-MEMORY-AND-PM-AGENT-ADOPTION-PLAN-20261027.md), commit `f5cda09038ed7386d961dab0cdad06b8823694db`. **Current OmniRoute setup is a RESET; older router trials/config are historical only.** Next: AGNT first Persian PM persona with **current** OmniRoute free model, verify actual tool isolation (AGNT restricted mode currently includes baseline web_search), then Hub proposal adapter; only later independent/exportable memory and specialist modules. Mem0, Graphiti, Cognee, Cedar, Agno are future role-scoped choices, NOT approved installs or automatic persona assignments. AGNT is source-available under its restricted Community Core license, not OSI-open-source. No current model IDs/quotas/context windows or local AGNT integration verified.
