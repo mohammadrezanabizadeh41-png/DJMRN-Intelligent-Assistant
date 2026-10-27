@@ -1,3 +1,19 @@
+## 2026-10-27 — WORK-CORE-ARCHITECTURE-RESEARCH-001 ARCHIVED / CONDITIONAL FIRST-VERTICAL RECOMMENDATION
+
+**USER-REQUESTED ARCHIVAL / RESEARCH ONLY / NO STACK ADOPTION OR BUILD APPROVAL.** User supplied the complete first Work research `DJMRN-CORE-ARCHITECTURE-RESEARCH-001` dated 2026-10-27 and requested saving in the main DJMRN repo and analysis of the first practical start, alongside the earlier hybrid architecture.
+
+**Readback-verified detailed research record:** [DJMRN-CORE-ARCHITECTURE-RESEARCH-001-20261027.md](../03-architecture-and-tools/DJMRN-CORE-ARCHITECTURE-RESEARCH-001-20261027.md) — a **detailed structured evidence-preserving synthesis**, not a verbatim transcript. Creation commit `1819338c93d4b64407284bfd9a0a1d7730be723a`, Git blob `c38880ad3329db15014edac5584a9034dafe354a`. Original Work reported `write=NONE`, no verified WQ/WA ID; this new archival is a separate explicitly user-requested write by coordinator, not an invented Work WA result.
+
+**Earlier hybrid design MUST BE PRESERVED:** `2026-10-25 — DJMRN-HYBRID-AGENT-WORKFLOW-AND-PREREQUISITE-INSTALL-PACKET-001`; `2026-10-26 — FUTURE ARCHITECTURE RESEARCH: HYBRID MULTI-AGENT + COMPLEMENTARY SOFTWARE`; original hybrid commit `49a01d7608cdce4573683c5113dc046674962d89`. No Supersede. Keep deterministic workers/workflows, role-based optional OmniRoute inference, Agno/AgentOS as conditional agent control-plane candidate, scoped durable operational state, shared tools, and later optional messaging/browsing/automation. Existing OmniRoute `DJMRN-Persian-L1` unchanged.
+
+**Work recommendation, NOT approved implementation:** start with a bounded working vertical `Persian chat → durable task ID → permissioned CAP-006 read-only lookup of 1–2 approved non-sensitive files → source/line/hash-grounded answer → persisted result and restart recovery`. Use a small modular-monolith-style trusted core, with capability/policy boundary and deterministic no-LLM baseline. Only after proof: optional verified/free OmniRoute model adapter and scoped A/B sequential-review role (possibly Agno). Compare review quality/cost with single-agent baseline. Next real-value vertical after approvals: opportunity/email batch triage and drafts; no sending without specific approval. No premature global knowledge graph, multiple agents, brokers or deployment services.
+
+**Gaps & provenance:** Work reports Agno 3.1.10 import PASS but Agno→OmniRoute end-to-end inference NOT VERIFIED; CAP-006 bounded Windows technical search PASS, not an integrated chat tool; user-submitted Work reviewed `session.py`, `windows_guard.py`, `cap006_adapter.py` blobs but coordinator has not independently located exact paths and must not bypass reported `require_verified_read()` HOLD. No task persistence, UI integration, restart, RAM/latency, model tool-calling, account-specific quota or paid-overage protection test yet. Gemma 4 31B later Google and gateway 500 means not safe to admit. Notion and external research coverage was targeted/partial; several pages `verification=unverified`.
+
+**Next decision:** Await/compare the second ready-made open-source platform research `DJMRN-READY-INTELLIGENCE-PLATFORM-DISCOVERY-002`, then ask user for bounded approval of actual P0/P1 vertical build. No new framework/model/group required to start. Documentation-only change; no Windows/OmniRoute/Agno/DB/schema/key/payment actions performed.
+
+---
+
 ## 2026-10-27 — GEMMA-4-31B-DIRECT-GOOGLE-500-CONFIRMED-20261027 | Google upstream also fails; preserve good 26B path
 
 **Actual new user-supplied Windows PowerShell evidence (bounded read + one Google call, NOT a success):**
