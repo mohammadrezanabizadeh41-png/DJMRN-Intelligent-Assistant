@@ -222,3 +222,40 @@ DJMRN Coordination Contract / Hub adapter (task, authorization, dispatch, audit)
 6. ساخت Persona `DJMRN-PM-01` با شرح وظایف فارسی، اختیارات محدود، memory داخلی حداقلی؛ سپس قرارداد v1 و ابزارها در مراحل بعد.
 
 **BLOCKERS / NOT DONE:** من به OmniRoute localhost کاربر دسترسی ندارم؛ **هیچ Combo/Family، API key، تنظیم Agent، Provider، هزینه یا نصب ایجاد/تغییر نکرده‌ام**. «۸ مدل آماده» و فهرست فعلیِ واقعاً موفق را از نام‌گذاری تاریخی نمی‌سازم. اقدام بعدی روی دستگاه کاربر با GUI است؛ خروجی بدون secrets برای تأیید و ثبت دقیق اعضای خانواده لازم است.
+
+
+## 9. 2026-10-27 — Correction: Eight Tested OmniRoute Models from Final Activation Conversation
+
+**URGENT USER CORRECTION / LATEST CONVERSATION-LEVEL TEST SUMMARY TAKES PRECEDENCE.** In the assistant turn immediately prior, the older snapshot with 9 Gemini Custom registrations and historic Gemma 31B failure was mistakenly treated as the current final operational inventory. User states EIGHT **actually connected, tested and operational** models from the later activation/test session (ending 2026-10-26/27). Context retrieval from that exact prior assistant's 2026-10-26 23:31 UTC final summary reveals the following **eight PASS** across 18 examined entries, not "nine Custom" and not "18 active". This section **supersedes the recommendation and blocker in §8.4** when they conflict. It does **not** assert new localhost API calls or newly authenticated current quotas; no models have been re-tested by this archival action.
+
+| Group | Exact model ID (official upstream spelling) | Latest reported pass | First PM-01 role |
+|---|---|---|---|
+| Chat | \`gemma-4-26b-a4b-it\` | PASS | high-context/general or reasoning fallback |
+| Chat | \`gemma-4-31b-it\` | PASS **later test supersedes earlier HTTP500** | complex analysis/review |
+| Chat | \`gemini-3.1-flash-lite\` | PASS | economical Persian assistant chat fallback, simple classification |
+| Chat | \`gemini-3.5-flash-lite\` | PASS | **recommended primary** Persian everyday dialogue, planning intake |
+| Chat | \`gemini-3.6-flash\` | PASS | **recommended primary** deep project planning/complex decision |
+| Chat | \`gemini-3-flash-preview\` | PASS | second complex-chat/analysis candidate |
+| Embedding | \`gemini-embedding-001\` | PASS | future text memory/retrieval ONLY, not chat |
+| Embedding | \`gemini-embedding-2\` | PASS | future multimodal memory/retrieval ONLY, not chat |
+
+**Evidence scope and open tests:** model pass reported by user and the retrieved last assistant summary of the other conversation; the original eight separate raw tool replies are not attached to this document. Exact OmniRoute *qualified* model IDs, quality rankings for Persian on identical prompts, new rate limits, AGNT OpenAI-compatible **tool-calling**, parser/tool schema handling, failover semantics and authenticated Combo IDs remain to validate during real grouping. Do not resurrect earlier "Gemma 31B failed" as current fact. Two embedding models have **different, incompatible vector spaces**, don't mix vectors or treat them as chat LLMs. Official Google: https://ai.google.dev/gemini-api/docs/embeddings and https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash .
+
+### Grouping proposal grounded in exactly the eight PASS entries
+
+**Start with one tested conversation family** \`DJMRN-PM-Dialogue\` in OmniRoute:
+1. primary \`gemini-3.5-flash-lite\`: optimized for low-latency, cost-efficient assistant dialogue, classification, structured output, 1M input context reported in official docs, but actual quotas per account must use dashboard
+2. fallback \`gemini-3.1-flash-lite\`: other lightweight Gemini; use explicit allowed providers/model mappings from CURRENT OmniRoute, not guessed historical prefixes
+3. fill-first vs priority: prefer an explicit ordered list with a proven fallback policy; precise choice depends on OmniRoute implementation + desired quota semantics. No spending on a paid fallback; no silent retry on unknown effect. **Neither model's "free" status follows just from its name**.
+
+**Later/high-complexity separate family**, provisionally \`DJMRN-PM-Analysis\`:
+1. primary \`gemini-3.6-flash\` (official function calling/structured output/thinking)
+2. alternate \`gemini-3-flash-preview\`
+3. \`gemma-4-31b-it\` and \`gemma-4-26b-a4b-it\` as extra candidates after comparative Persian quality and model API/tool-call validation.
+4. Complexity routing (simple vs hard) is done by a policy/AGNT persona or supervisor, **not** by automatically assuming Combo failover increases reasoning quality. Do not launch a second Combo unless initial PM dialogue is verified and role switching is supported.
+
+**First task**: Use the actual 8 reported successful models; do not run another eight onboarding trials. Build a lightweight chat family with explicit primary/fallback, verify that named Combo gives a Persian response and no unwanted tools; connect the named Combo as the model for PM-01 in AGNT. Add specialized analysis as second family on proven need. Use AGNT to assess structured Task Proposal generated according to existing DJMRN contract while Hub owns task ID and permissions. No change to older archived evidence is necessary; chronological provenance is explicit here.
+
+**Licensing/API:** official model descriptions for the 3.5/3.1 Lite and 3.6 Flash families explain function calling and JSON support. Provider-native availability does NOT guarantee forwarding these features through every OmniRoute Combo. This is an integration acceptance test, not a dispute over whether all eight models were already operational on their existing test paths.
+
+**STATUS: DOCUMENTED/RECONCILED; NOT CONFIGURED HERE.** The user reports all 8 models are already operational. No new Combo/group or AGNT Persona has been created by this write.
