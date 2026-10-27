@@ -1,0 +1,753 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://djmrn.invalid/contracts/coordination/v1/hub-record.schema.json",
+  "title": "DJMRN Hub Domain Records (NOT A2A/MCP schema)",
+  "description": "Internal stable coordination records; adapters map to unmodified upstream protocol schemas.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/TASK_SUBMISSION"
+    },
+    {
+      "$ref": "#/$defs/TASK_RECORD"
+    },
+    {
+      "$ref": "#/$defs/DISPATCH_RECORD"
+    },
+    {
+      "$ref": "#/$defs/CAPABILITY_RECORD"
+    },
+    {
+      "$ref": "#/$defs/RESOURCE_REF"
+    },
+    {
+      "$ref": "#/$defs/WORKER_RESULT"
+    },
+    {
+      "$ref": "#/$defs/APPROVAL_RECORD"
+    },
+    {
+      "$ref": "#/$defs/AUDIT_EVENT"
+    }
+  ],
+  "$defs": {
+    "TASK_SUBMISSION": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "request_id",
+        "locale",
+        "capability_id",
+        "input_refs",
+        "intent",
+        "idempotency_key",
+        "contract_version"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "TASK_SUBMISSION"
+        },
+        "contract_version": {
+          "type": "string",
+          "const": "djmrn.coord.v1"
+        },
+        "request_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "locale": {
+          "type": "string",
+          "const": "fa-IR"
+        },
+        "capability_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 50
+        },
+        "intent": {
+          "type": "string",
+          "maxLength": 2048,
+          "minLength": 1
+        },
+        "idempotency_key": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "parent_task_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "correlation_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        }
+      }
+    },
+    "TASK_RECORD": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "task_id",
+        "request_id",
+        "capability_id",
+        "status",
+        "created_at",
+        "version",
+        "owner_principal",
+        "contract_version"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "TASK_RECORD"
+        },
+        "contract_version": {
+          "type": "string",
+          "const": "djmrn.coord.v1"
+        },
+        "task_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "request_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "capability_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "RECEIVED",
+            "VALIDATED",
+            "QUEUED",
+            "DISPATCHED",
+            "RUNNING",
+            "WAITING_APPROVAL",
+            "RETRY_WAIT",
+            "SUCCEEDED",
+            "DENIED",
+            "FAILED",
+            "CANCELLED",
+            "UNKNOWN_OUTCOME"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "owner_principal": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "parent_task_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "correlation_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "result_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 50
+        },
+        "error_code": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "legacy_cap006_fingerprint_task_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        }
+      }
+    },
+    "DISPATCH_RECORD": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "dispatch_id",
+        "task_id",
+        "sender_role",
+        "target_role",
+        "capability_id",
+        "status",
+        "attempt",
+        "expires_at",
+        "input_refs",
+        "contract_version"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "DISPATCH_RECORD"
+        },
+        "contract_version": {
+          "type": "string",
+          "const": "djmrn.coord.v1"
+        },
+        "dispatch_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "task_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "sender_role": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "target_role": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "capability_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "PENDING",
+            "AUTH_CHECKED",
+            "DELIVERED",
+            "ACKNOWLEDGED",
+            "REJECTED",
+            "EXPIRED",
+            "COMPLETED"
+          ]
+        },
+        "attempt": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "expires_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 50
+        },
+        "permission_grant_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "a2a_task_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "workflow_run_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "correlation_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        }
+      }
+    },
+    "CAPABILITY_RECORD": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "capability_id",
+        "owner_role",
+        "side_effect",
+        "required_permissions",
+        "input_schema_ref",
+        "output_schema_ref",
+        "contract_version"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "CAPABILITY_RECORD"
+        },
+        "contract_version": {
+          "type": "string",
+          "const": "djmrn.coord.v1"
+        },
+        "capability_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "owner_role": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "side_effect": {
+          "type": "string",
+          "enum": [
+            "READ_ONLY",
+            "WRITE_REVERSIBLE",
+            "EXTERNAL_IRREVERSIBLE"
+          ]
+        },
+        "required_permissions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "input_schema_ref": {
+          "type": "string",
+          "maxLength": 2048,
+          "minLength": 1
+        },
+        "output_schema_ref": {
+          "type": "string",
+          "maxLength": 2048,
+          "minLength": 1
+        },
+        "knowledge_policy": {
+          "type": "string",
+          "enum": [
+            "LOOKUP_FIRST",
+            "FRESHNESS_FIRST",
+            "SKIP"
+          ]
+        },
+        "retry_policy": {
+          "type": "string",
+          "enum": [
+            "NONE",
+            "READ_ONLY_TRANSIENT",
+            "RECONCILE_UNKNOWN"
+          ]
+        },
+        "time_budget_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 86400
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "privacy_scope": {
+          "type": "string",
+          "enum": [
+            "PUBLIC",
+            "PROJECT",
+            "RESTRICTED"
+          ]
+        },
+        "model_budget": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "max_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "paid_fallback_allowed": {
+              "type": "boolean",
+              "const": false
+            }
+          }
+        }
+      }
+    },
+    "RESOURCE_REF": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "resource_id",
+        "resource_type",
+        "sensitivity",
+        "origin",
+        "observed_at",
+        "contract_version"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "RESOURCE_REF"
+        },
+        "contract_version": {
+          "type": "string",
+          "const": "djmrn.coord.v1"
+        },
+        "resource_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "resource_type": {
+          "type": "string",
+          "enum": [
+            "FILE",
+            "GMAIL_MESSAGE",
+            "WEB_PAGE",
+            "ARTIFACT",
+            "KNOWLEDGE_ENTRY"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "enum": [
+            "PUBLIC",
+            "PROJECT",
+            "RESTRICTED"
+          ]
+        },
+        "origin": {
+          "type": "string",
+          "maxLength": 2048,
+          "minLength": 1
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{64}$"
+        },
+        "revision": {
+          "type": "string",
+          "maxLength": 2048,
+          "minLength": 1
+        },
+        "line_start": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "line_end": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "owner_principal": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "derived_from": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 50
+        },
+        "source_tool": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        }
+      }
+    },
+    "WORKER_RESULT": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "task_id",
+        "dispatch_id",
+        "worker_role",
+        "status",
+        "artifact_refs",
+        "evidence_refs",
+        "completed_at",
+        "contract_version"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "WORKER_RESULT"
+        },
+        "contract_version": {
+          "type": "string",
+          "const": "djmrn.coord.v1"
+        },
+        "task_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "dispatch_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "worker_role": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "SUCCEEDED",
+            "PARTIAL",
+            "FAILED",
+            "DENIED",
+            "UNKNOWN_OUTCOME"
+          ]
+        },
+        "artifact_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 50
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 50
+        },
+        "completed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "error_code": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "retryable": {
+          "type": "boolean"
+        },
+        "operation_receipt_ref": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "legacy_cap006_fingerprint_task_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        }
+      }
+    },
+    "APPROVAL_RECORD": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "approval_id",
+        "task_id",
+        "action",
+        "target_ref",
+        "payload_sha256",
+        "status",
+        "expires_at",
+        "contract_version"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "APPROVAL_RECORD"
+        },
+        "contract_version": {
+          "type": "string",
+          "const": "djmrn.coord.v1"
+        },
+        "approval_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "task_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "action": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "target_ref": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "payload_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{64}$"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "PENDING",
+            "APPROVED",
+            "REJECTED",
+            "EXPIRED",
+            "CONSUMED"
+          ]
+        },
+        "expires_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "decider_principal": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "decision_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "decision_receipt_ref": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        }
+      }
+    },
+    "AUDIT_EVENT": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "event_id",
+        "task_id",
+        "actor",
+        "event_type",
+        "timestamp",
+        "outcome",
+        "contract_version"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "AUDIT_EVENT"
+        },
+        "contract_version": {
+          "type": "string",
+          "const": "djmrn.coord.v1"
+        },
+        "event_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "task_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "dispatch_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "actor": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "event_type": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "outcome": {
+          "type": "string",
+          "enum": [
+            "ALLOWED",
+            "DENIED",
+            "INFO",
+            "ERROR"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 50
+        },
+        "correlation_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
