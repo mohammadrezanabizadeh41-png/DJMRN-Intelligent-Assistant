@@ -1,0 +1,62 @@
+{
+  "status": "EXAMPLE_NOT_CONFIGURED",
+  "routing_default": "DENY_UNKNOWN_CAPABILITY",
+  "capabilities": [
+    {
+      "capability_id": "knowledge.lookup",
+      "owner_role": "knowledge_service",
+      "side_effect": "READ_ONLY",
+      "knowledge_policy": "LOOKUP_FIRST",
+      "direct_calls_allowed_for": [
+        "djmrn_hub"
+      ],
+      "model_required": false
+    },
+    {
+      "capability_id": "research.web",
+      "owner_role": "search_specialist",
+      "side_effect": "READ_ONLY",
+      "knowledge_policy": "FRESHNESS_FIRST",
+      "direct_calls_allowed_for": [
+        "djmrn_hub"
+      ],
+      "model_required": false,
+      "retry_policy": "READ_ONLY_TRANSIENT"
+    },
+    {
+      "capability_id": "gmail.read",
+      "owner_role": "mail_specialist",
+      "side_effect": "READ_ONLY",
+      "knowledge_policy": "SKIP",
+      "direct_calls_allowed_for": [
+        "djmrn_hub"
+      ],
+      "requires_scopes": [
+        "gmail.readonly"
+      ],
+      "requires_account_authorization": true
+    },
+    {
+      "capability_id": "gmail.send",
+      "owner_role": "mail_specialist",
+      "side_effect": "EXTERNAL_IRREVERSIBLE",
+      "knowledge_policy": "SKIP",
+      "direct_calls_allowed_for": [
+        "djmrn_hub"
+      ],
+      "requires_exact_human_approval": true,
+      "retry_policy": "RECONCILE_UNKNOWN"
+    },
+    {
+      "capability_id": "documents.search.v0",
+      "owner_role": "cap006_adapter",
+      "side_effect": "READ_ONLY",
+      "knowledge_policy": "SKIP",
+      "direct_calls_allowed_for": [
+        "djmrn_hub"
+      ],
+      "requires_exact_file_allowlist": true
+    }
+  ],
+  "advice": "Credential/scopes stored outside manifest; actual permission never inferred from caller supplied role or capability label."
+}
