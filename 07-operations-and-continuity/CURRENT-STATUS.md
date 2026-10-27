@@ -1,3 +1,9 @@
+## 2026-10-27 — MODULAR MEMORY + AGNT-FIRST PERSIAN PM ROADMAP
+
+User-directed architecture/archive (no installation, no model/agent connected): [DJMRN-MODULAR-MEMORY-AND-PM-AGENT-ADOPTION-PLAN-20261027.md](../03-architecture-and-tools/DJMRN-MODULAR-MEMORY-AND-PM-AGENT-ADOPTION-PLAN-20261027.md), commit `f5cda09038ed7386d961dab0cdad06b8823694db`. **Current OmniRoute setup is a RESET; older router trials/config are historical only.** Next: AGNT first Persian PM persona with **current** OmniRoute free model, verify actual tool isolation (AGNT restricted mode currently includes baseline web_search), then Hub proposal adapter; only later independent/exportable memory and specialist modules. Mem0, Graphiti, Cognee, Cedar, Agno are future role-scoped choices, NOT approved installs or automatic persona assignments. AGNT is source-available under its restricted Community Core license, not OSI-open-source. No current model IDs/quotas/context windows or local AGNT integration verified.
+
+---
+
 ## 2026-10-27 — P1 LIGHTWEIGHT HYBRID HUB REFERENCE STARTED
 
 **Current user directive:** start a practical minimal Hub pilot while preserving a **hybrid language-/runtime-neutral future** (Python, Rust, Go, .NET, Docker when needed); Persian persona is a client of Hub, **not** the authoritative ledger or search engine. Agentic supervisor/diagnostic role is **on-demand** and bounded. CAP-006 is an execution specialist, never the task owner. Existing eight candidate/ready OmniRoute models remain separate from this pilot; family assignments and live integration deferred to verified, cost-controlled role policy.
