@@ -329,3 +329,25 @@ Measure correctness (manual rubric), Persian naturalness, schema pass, latency, 
 **Admission criteria:** language and semantic accuracy; valid typed output; AGNT compatibility (including whether platform sends tool schemas when tools hidden); correct user approval boundaries; quota/billing guard; no network access for AGNT PM if Search Specialist only is permitted; tracked prompt tokens and throughput. If 26B underperforms on routine Persian, allow Lite primary rather than forcing it solely for high RPD. If 31B is superior for routine but slows/costs more, only promote where the increased accuracy is worthwhile.
 
 **Updated next step:** explain work classes and planned call budgets to user, inspect actual free-tier and group implementation; only then construct \`DJMRN-PM-Routine\` primary with one confirmed fallback, connect to AGNT PM-01. **No settings, credentials, models, Combo, Agent or Windows operations altered.** This document corrects earlier proposals without falsifying previous test evidence.
+
+
+## 11. 2026-10-27 — PM-01 INITIAL REASONING SUFFICIENCY DECISION
+
+**User correction, decisive evaluation:** Do NOT begin with a quota table or stack every Persian-capable model together; FIRST establish the **current project-manager agent's actual cognitive workload**. Quota is a secondary eligibility constraint. The current PM-01 persona does: Persian dialogue/intake, intent/skill classification, routine scoped project planning, task proposal under DJMRN Contract v1, tentative specialist selection, communicating results, and asking for approval. It does **not yet** independently run high-complexity architecture studies, cross-repository deep code audits, complex web research or tools. This is **light-to-moderate reasoning**, with moderate planning and structured language. **The correct first family for this startup role is the two validated Gemma models**, *not* Flash/Flash-Lite as previously suggested by ungrounded ranking.
+
+**Recommended first Combo name**: \`DJMRN-PM-Standard\`.
+- **Primary:** \`gemma-4-26b-a4b-it\`. The official Gemma 4 card shows strong multilingual, reasoning, thinking, agentic tool-use and coding capability; MoE 26B with ~4B active parameters offers favorable inference efficiency. For Persian comprehension/short multi-step plans/task proposals its capabilities are strong relative to initial PM-01 scope.
+- **Second:** \`gemma-4-31b-it\`. Stronger benchmark results, for same-family backup on qualifying primary unavailability/exhaustion; **not** unconditional second inference/review after every user message. Needs no daily quota drain during successful primary operation.
+- **Account snapshot:** each had a *reported observed* 14,400 RPD, 30 RPM, 16,000 input TPM (2026-10-26). These are **not additive guaranteed free capacity**: shared Google project quotas and token-rate limits need honoring; zero-cost guard and actual API target entitlement must remain in effect. These are not the reason for choosing the models but make the choice practical.
+- **No second higher family at startup:** 3.1/3.5 Flash-Lite (500 RPD each), 3/3.6 Flash (20 RPD each), and the two Embedding models are reserved for later relevant levels and memory, respectively. Do not create all four families simultaneously unless the user later needs them.
+- **Model failure fallback vs intelligence escalation:** within Combo, the router chooses alternate *same-service compatible model* after allowed failure / quota; agentic escalation to a different analysis family happens only after task classifier/policy decides initial models are insufficient. Do not assume \`fill-first\` dynamically detects cognitive inadequacy.
+- **Limits and verification:** official Google Gemma 4 docs support built-in reasoning, system role, multilingual and function calling, but actual \`AGNT → OmniRoute Combo\` model alias, OpenAI-compatible tool call forwarding, constrained system prompt / structured output and Persian project-planning correctness are **not yet end-to-end verified**. Start with tool-disabled Persian chat; only a small role-specific acceptance test, not re-testing the established eight individual model connections. The definitive family selection remains conditional on passing that focused role compatibility test, and billing guard.
+- **Not done:** no Combo, Agent, model role switch, Windows installation or localhost management operation was executed by this review.
+
+**Official model evidence:**
+- https://ai.google.dev/gemma/docs/core/model_card_4
+- https://gemma.ai/models/gemma-4/model-card/
+- https://gemma.ai/deployment/gemini-api/
+- https://agnt.gg/docs/api/agents
+
+**User-approved ordering recommendation:** Create ONLY \`DJMRN-PM-Standard\` with 26B primary and 31B secondary, run minimal Persian PM persona dialogue+JSON output over the named Combo, then create PM-01 AGNT persona; after proving the task scope grows, design secondary 500/day and scarce 20/day analysis families and route by task needs. Existing model setup of all 8 remains intact.
