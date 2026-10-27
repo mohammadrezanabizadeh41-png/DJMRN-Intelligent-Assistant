@@ -259,3 +259,73 @@ DJMRN Coordination Contract / Hub adapter (task, authorization, dispatch, audit)
 **Licensing/API:** official model descriptions for the 3.5/3.1 Lite and 3.6 Flash families explain function calling and JSON support. Provider-native availability does NOT guarantee forwarding these features through every OmniRoute Combo. This is an integration acceptance test, not a dispute over whether all eight models were already operational on their existing test paths.
 
 **STATUS: DOCUMENTED/RECONCILED; NOT CONFIGURED HERE.** The user reports all 8 models are already operational. No new Combo/group or AGNT Persona has been created by this write.
+
+
+## 10. 2026-10-27 — QUOTA-FIRST MODEL ADMISSION CORRECTION / PM-01
+
+**USER PRIORITY CORRECTION:** Architecture and PM Persona selection must begin with **task demand × reasoning adequacy × account-specific free quota (RPM/TPM/RPD) × measured Persian quality × model/AGNT gateway compatibility**. Merely ranking by chat/Persian capability and stacking all models as sequential backup **is WRONG**; the previous §9 "Gemini 3.5 Lite primary + 3.1 Lite fallback" was a proposed starting guess, **NOT accepted**. It is superseded by this quota-aware decision gate. Do **NOT** build or alter Combos until the comparison is accepted. All eight post-reset models remain **user-verified working** for their tested endpoints; no repeated onboarding needed.
+
+### 10.1 Account-observed 2026-10-26 free quota snapshot (not a guarantee of current future limits)
+
+| Operational model | RPD | RPM | TPM (input) | Proposed utilization | Admission note |
+|---|---:|---:|---:|---|---|
+| \`gemma-4-26b-a4b-it\` | **14,400** | 30 | **16,000** | Candidate everyday PM chat/intake/plan; primary **if Persian QA passes** | High RPD, but significant **TPM bottleneck** for long prompt/history; full tool/JSON via AGNT unproven |
+| \`gemma-4-31b-it\` | **14,400** | 30 | **16,000** | Reserve for deeper PM reasoning, review, technical analysis | Stronger on official Gemma 4 benchmark (MMLU Pro 85.2% vs 82.6% for 26B; Tau2 avg 76.9 vs 68.2); higher reasoning alone does not prove better for our Persian prompts |
+| \`gemini-3.5-flash-lite\` | 500 | 15 | 250,000 | Everyday dialogue alternate; larger context/structured output, shorter planning | Preserve its 500/day for large context, AGNT tool compatibility; not automatic main purely because chat |
+| \`gemini-3.1-flash-lite\` | 500 | 15 | 250,000 | Lite classification, structured extraction, alternative general PM | Separate quota/account verification and comparative Persian correctness |
+| \`gemini-3.6-flash\` | **20** | 5 | 250,000 | **Scarce** premium reasoning/long-context/code/agentic validation only | NOT include in default chat/automatic quota-exhaustion fallback |
+| \`gemini-3-flash-preview\` | **20** | 5 | 250,000 | **Scarce** independent complex reasoning/reviewer contingency | NOT include in default chat/automatic quota-exhaustion fallback |
+| \`gemini-embedding-001\` | 1,000 | not confirmed here | not confirmed here | Later Memory/Knowledge indexing and retrieval only | DO NOT include in PM chat Combo; embeddings create distinct vector spaces |
+| \`gemini-embedding-2\` | 1,000 | not confirmed here | not confirmed here | Later multimodal memory/retrieval only | Same separate service rule, vectors not silently mixed |
+
+**Data provenance:** previous user-confirmed Google AI Studio screenshot analysis and final successful post-reset eight-model test summary, retrieved in this conversation. RPD are *per-account/project observed model limits*, not independent additive capacity; Google docs say Gemini API rate limits are per Google Cloud project, not per API key, and three dimensions RPM/TPM/RPD are jointly binding. Snapshot 2026-10-26 can change. **An OmniRoute metadata "Free" tag is NOT a zero billing guard**. Google current Gemma 4 API pricing explicitly lists free input/output, and no paid tier; Gemini tier eligibility should be checked for actual project, with no paid fallback.
+
+Official primary sources checked 2026-10-27:
+- https://ai.google.dev/gemini-api/docs/rate-limits
+- https://ai.google.dev/gemini-api/docs/pricing
+- https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite
+- https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite
+- https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash
+- https://ai.google.dev/gemini-api/docs/thinking
+- https://ai.google.dev/gemma/docs/core/model_card_4
+- https://ai.google.dev/gemma/docs/core/gemma_on_gemini_api
+
+**Important throughput arithmetic:** At 16,000 **input** TPM, one Gemma request with 2,000 input tokens can be limited to ~8 requests/min even though RPM=30; with 8,000 input tokens, ~2/min. Consequently 14,400 RPD does NOT imply that 14,400 long conversations are feasible. Gemini Lite 500 RPD might be the stronger operational choice for unusually long context despite lower request/day count. Context window != usable prompt through per-minute quota; deliberately retrieve relevant memory, not replay all chat text.
+
+### 10.2 Define work buckets first (forecast illustrative, NOT actual usage telemetry)
+
+- **T0 — deterministic/no LLM:** bookkeeping, task ID, status, permission/schema validation, retries, notices.
+- **T1 — frequent low-analysis:** quick Persian chat, clarify intent, classify, brief summary, specialist selection **proposal**. Candidate 26B A4B or Flash-Lite after Persian head-to-head.
+- **T2 — routine PM reasoning:** moderately detailed plan, decomposition, multi-turn Persian dialogue, compact task proposal. 26B A4B first candidate; 3.5/3.1 Lite alternative if superior quality/context. Ask additional planning model call only when task needs one.
+- **T3 — demanding multi-step decision:** inconsistent evidence, architecture tradeoffs, root-cause hypotheses, code architecture; 31B first candidate with measured quality, context limits and controlled thinking. Gemini 3.6 Flash (20/day) explicitly reserve for complex high-context/agentic work rather than default retry.
+- **T4 — verification or escalation:** independent critique/safety/complex technical result; if necessary use one of 20/day Flash models subject to daily reserve cap, human approval for side effects; no automatic invocation per task.
+- **Separate knowledge:** both embedding models only for future index/search capacity, not Persona text.
+
+**Forecast example:** 80 user messages/day × average 1.5 model calls/message = 120 RPD (illustrative). If workflows trigger 3 calls/message, 80 × 3 = 240 RPD. One natural-language message is **NOT** necessarily one API request. Need to measure actual AGNT usage, retries, context, agent subcalls. For 20/day model, even 3 calls per difficult task may support only ~6 such tasks/day before leaving no reserve; therefore never consume for background chit-chat.
+
+### 10.3 Proposed family candidate table — no Combo created or confirmed
+
+**Candidate FIRST** \`DJMRN-PM-Routine\`:
+- Primary candidate \`gemma-4-26b-a4b-it\` (14,400 RPD / 16k TPM), **only if** it passes actual Persian planning+structured JSON+AGNT tool-disabled tests with acceptable latency/context.
+- Alternate candidate \`gemini-3.5-flash-lite\` (500 RPD / 250k TPM), only after same quality test and free/billing guard; reserve for long-context and 26B TPM exhaustion if the semantics are safe and appropriate.
+- \`gemini-3.1-flash-lite\` (500 RPD) candidate as a *separate* lean classifier or tested extra fallback; do not add automatically to every group.
+- **No 20/day model in this family**; no 31B unless an objectively failed 26B quality assessment shows escalation needed (31B otherwise reserved for T3).
+
+**Candidate LATER** \`DJMRN-PM-Reasoning\`:
+- \`gemma-4-31b-it\` (14,400 RPD / 16k TPM) as main strategic reasoning assistant with empirical Persian correctness; 26B optional after same-quality threshold only.
+- \`gemini-3.6-flash\` and \`gemini-3-flash-preview\` each only 20 RPD: protect as separately metered **high-value context/tool/review pools**, not blind global fallback; 20-call ceiling and emergency reserve in explicit local policy. Confirm whether those quotas overlap within Google project and are currently free.
+- **Complexity escalation** (Routine→Reasoning→Review) is a policy/AGNT/Hub decision, not an automatic consequence of OmniRoute fill-first failover.
+
+### 10.4 Objective gate before choosing first target and fallback
+
+Run a **small quality-specific**, not redundant connection test using same *Persian* PM prompts on candidates:
+1. Classify a common request and name required specialist, no actual tool;
+2. Produce a 4-step plan with constraints and no invention;
+3. Produce a structured JSON Task proposal conforming to DJMRN schema (do not hallucinate actual task_id/approval);
+4. One intentionally ambiguous request; detect uncertainty and ask appropriate follow-up;
+5. One medium-length history source with old vs superseded decision, correct current state (check data/context).
+Measure correctness (manual rubric), Persian naturalness, schema pass, latency, input/output tokens, rate limit and errors **without revisiting original 8 basic connectivity tests**. 20-RPD scarce models should be included only for strategically necessary comparative test(s), not burned indiscriminately.
+
+**Admission criteria:** language and semantic accuracy; valid typed output; AGNT compatibility (including whether platform sends tool schemas when tools hidden); correct user approval boundaries; quota/billing guard; no network access for AGNT PM if Search Specialist only is permitted; tracked prompt tokens and throughput. If 26B underperforms on routine Persian, allow Lite primary rather than forcing it solely for high RPD. If 31B is superior for routine but slows/costs more, only promote where the increased accuracy is worthwhile.
+
+**Updated next step:** explain work classes and planned call budgets to user, inspect actual free-tier and group implementation; only then construct \`DJMRN-PM-Routine\` primary with one confirmed fallback, connect to AGNT PM-01. **No settings, credentials, models, Combo, Agent or Windows operations altered.** This document corrects earlier proposals without falsifying previous test evidence.
