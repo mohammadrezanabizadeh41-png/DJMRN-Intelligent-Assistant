@@ -1,0 +1,33 @@
+{
+  "status": "DESIGN_EXAMPLE_NOT_CONNECTING_GATEWAY",
+  "model_gateway": "OmniRoute_adapter",
+  "providers_and_model_ids": "NOT_SET_PENDING_ACCOUNT_LEVEL_VERIFIED_FREE_MODEL_TEST",
+  "default_free_only": true,
+  "paid_fallback_allowed": false,
+  "max_simultaneous_llm_calls": 1,
+  "always_on_supervisor_agent": false,
+  "require_privacy_approval_for_external_email_content": true,
+  "roles": {
+    "router_supervisor": {
+      "activate_only_if": [
+        "AMBIGUOUS_ROUTING",
+        "EVIDENCE_CONFLICT",
+        "USER_REQUESTS_COMPLEX_PLAN"
+      ],
+      "max_model_calls_per_task": 1
+    },
+    "search_specialist": {
+      "prefer_deterministic_fetch": true,
+      "model_analysis_optional": true,
+      "max_model_calls_per_task": 2
+    },
+    "reviewer": {
+      "activate_only_if": [
+        "REQUESTED",
+        "QUALITY_GATE_REQUIRED"
+      ],
+      "max_model_calls_per_task": 1
+    }
+  },
+  "rule": "Any real provider/model alias must be admitted after cost/quota verification and user approved use; no secret in repo."
+}
