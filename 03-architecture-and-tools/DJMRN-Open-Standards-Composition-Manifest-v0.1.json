@@ -1,0 +1,101 @@
+{
+  "profile_id": "djmrn.open-standards-composition",
+  "profile_version": "0.1.0-draft",
+  "date": "2026-10-27",
+  "status": "DESIGN_ONLY_NOT_APPROVED_NOT_DEPLOYED",
+  "purpose": "Reference inventory and mapping of existing standard protocols; this JSON is NOT a new wire protocol or substitute for their normative schemas.",
+  "boundaries": {
+    "assistant_frontend": {
+      "standard": "AG-UI",
+      "source": "https://github.com/ag-ui-protocol/ag-ui",
+      "use": "ui event stream, text, tool progress and approvals",
+      "adoption": "optional_until_ui_integration"
+    },
+    "cross_agent": {
+      "standard": "A2A",
+      "version_reference": "1.0.1",
+      "source": "https://a2a-protocol.org/v1.0.1/specification/",
+      "sdk": "https://github.com/a2aproject/a2a-python",
+      "use": "AgentCard, Message, Task, Artifact, task states",
+      "adoption": "external_agent_boundary_only"
+    },
+    "tools_and_sources": {
+      "standard": "MCP",
+      "version_reference": "2025-11-25",
+      "source": "https://modelcontextprotocol.io/specification/2025-11-25",
+      "sdk": "https://github.com/modelcontextprotocol/python-sdk",
+      "use": "tool definitions, resources and structuredContent",
+      "adoption": "adapter_when_exposing_tool_to_agent_hosts"
+    },
+    "workflows": {
+      "standard": "Open Workflow Specification",
+      "version_reference": "1.0.3",
+      "source": "https://open-workflow-specification.org/",
+      "use": "portable workflow definitions",
+      "adoption": "when_multi_step_workflow_and_runtime_tested"
+    },
+    "api": {
+      "standards": ["OpenAPI 3.1", "JSON Schema Draft 2020-12"],
+      "use": "management API contracts and validation",
+      "adoption": "at_internal_http_api_boundary"
+    },
+    "authorization": {
+      "standard": "Cedar PARC model",
+      "source": "https://docs.cedarpolicy.com/auth/authorization.html",
+      "use": "principal, action, resource, context",
+      "adoption": "policy_definition; engine_when_needed"
+    },
+    "identity": {
+      "standard": "OAuth 2.0 native app RFC 8252 and PKCE",
+      "source": "https://www.rfc-editor.org/rfc/rfc8252",
+      "use": "consented Google API access",
+      "adoption": "only_after_user_authorization"
+    },
+    "provenance": {
+      "standard": "W3C PROV-O",
+      "source": "https://www.w3.org/TR/prov-o/",
+      "use": "source entity, processing activity and responsible agent",
+      "adoption": "metadata_only_then_full_export_if_needed"
+    },
+    "async_events": {
+      "standard": "CloudEvents 1.0",
+      "source": "https://cloudevents.io/",
+      "use": "cross-process event envelope",
+      "adoption": "optional_when_multiple_consumers"
+    }
+  },
+  "candidate_connectors": {
+    "gmail_read": {
+      "primary_candidate": "Google Gmail MCP official Developer Preview",
+      "source": "https://developers.google.com/workspace/gmail/api/reference/mcp",
+      "fallback": "Gmail REST API with OAuth2",
+      "oauth_scopes_when_authorized": ["https://www.googleapis.com/auth/gmail.readonly"],
+      "notes": "Preview availability is not guaranteed; no live connector invoked"
+    },
+    "gmail_draft": {
+      "candidates": ["Google Gmail MCP create_draft", "Gmail REST drafts.create"],
+      "oauth_scope_when_authorized": "https://www.googleapis.com/auth/gmail.compose",
+      "notes": "Scope can authorize sending; local policy must separately prohibit sending without approval"
+    },
+    "gmail_send": {
+      "candidate": "Gmail REST drafts.send/messages.send",
+      "permission": "HUMAN_APPROVAL_FOR_EXACT_RECIPIENT_AND_PAYLOAD",
+      "on_unknown_outcome": "DO_NOT_BLIND_RETRY_RECONCILE_FIRST"
+    },
+    "document_search": {
+      "source": "https://github.com/mohammadrezanabizadeh41-png/DJMRN-Intelligent-Assistant/blob/main/05-assistants-and-capabilities/src/document_search_v0/docsearch_v0.py",
+      "status": "historical_bounded_test_pass_not_chat_integrated",
+      "notes": "CAP-006 deterministic hash fingerprint task_id is not an authoritative durable task instance ID"
+    }
+  },
+  "task_state_authority": "ONE_RUNTIME_OR_BUSINESS_TASK_STORE_TO_BE_SELECTED_BY_CONTROLLED_POC",
+  "integration_rules": [
+    "No untrusted message or LLM output may grant tool permissions",
+    "No copied provider credentials in A2A artifacts or MCP outputs",
+    "A2A Task and workflow run are different identities, linked by reviewed adapter",
+    "UI stream events are not durable task completion receipts",
+    "Source IDs/digests and approval receipts are durable before reporting final completion",
+    "Cloud model and external email data sharing require independent user-authorized scope",
+    "Use no extra resident service without measured need on Windows 8GB"
+  ]
+}
