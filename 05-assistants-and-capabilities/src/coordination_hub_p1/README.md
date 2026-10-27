@@ -25,7 +25,7 @@ python 05-assistants-and-capabilities/src/coordination_hub_p1/hub_p1.py demo pil
 python -m unittest discover -s 05-assistants-and-capabilities/src/coordination_hub_p1 -p 'test_*.py' -v
 ```
 
-`demo` uses *only* the existing sibling `document_search_v0/fixtures/sample_alpha.txt` and `sample_beta.md` under CAP-006, whose contents are synthetic. Local SQLite stores a real Hub UUID task separately from CAP-006's deterministic fingerprint. Running `demo` again returns the existing task because its idempotency key is the same. The results are durable across closing/reopening SQLite. Do **not** use this for real private files or multiuser/remote endpoints yet. Do not run on the user's Windows without explicit scoped approval and path review.
+`demo` uses *only* the existing sibling `document_search_v0/fixtures/sample_alpha.txt` and `sample_beta.md` under CAP-006, whose contents are synthetic. Local SQLite stores a real Hub UUID task separately from CAP-006's deterministic fingerprint. `Hub.get()` emits a schema-compatible `TASK_RECORD` with versioned state; `Hub.get_result()` retrieves the locally persisted capability receipt separately (no network/API endpoint is exposed). Running `demo` again returns the existing task because its idempotency key is the same. The results are durable across closing/reopening SQLite. Do **not** use this for real private files or multiuser/remote endpoints yet. Do not run on the user's Windows without explicit scoped approval and path review.
 
 ## First-persona workflow (planned, NOT implemented)
 
