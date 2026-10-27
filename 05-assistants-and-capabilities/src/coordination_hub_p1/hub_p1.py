@@ -63,6 +63,7 @@ class Hub:
                 payload_digest TEXT NOT NULL, intent TEXT NOT NULL,
                 query TEXT NOT NULL, resource_ids TEXT NOT NULL,
                 capability_id TEXT NOT NULL, status TEXT NOT NULL,
+                version INTEGER NOT NULL DEFAULT 0,
                 attempts INTEGER NOT NULL DEFAULT 0,
                 result_json TEXT, worker_fingerprint TEXT, error_code TEXT,
                 created_at TEXT NOT NULL, updated_at TEXT NOT NULL,
@@ -101,7 +102,7 @@ class Hub:
             (task_id, kind, actor, wire_json(detail), timestamp()))
 
     def _state(self, task_id, expect, state, *, error=None):
-        sql = "UPDATE tasks SET status=?,updated_at=?,error_code=? WHERE task_id=? AND status=?"
+        sql = "UPDATE tasks SET status=?,updated_at=?,error_code=?,version=version+1 WHERE task_id=? AND status=?"
         cur = self.db.execute(sql, (state, timestamp(), error, task_id, expect))
         if cur.rowcount != 1:
             raise ContractError("INVALID_STATE_TRANSITION")
@@ -168,19 +169,31 @@ class Hub:
         return self.get(tid)
 
     def get(self, task_id):
+        """Schema-compatible TASK_RECORD; large CAP output is fetched separately."""
         row = self.db.execute("SELECT * FROM tasks WHERE task_id=?", (task_id,)).fetchone()
         if row is None:
             raise ContractError("TASK_NOT_FOUND")
-        return {
+        result = {
             "kind":"TASK_RECORD", "contract_version":VERSION,
             "task_id":row["task_id"],"request_id":row["request_id"],
             "owner_principal":row["principal"],"capability_id":row["capability_id"],
-            "status":row["status"], "attempts":row["attempts"],
-            "error_code":row["error_code"],
-            "legacy_cap006_fingerprint_task_id":row["worker_fingerprint"],
-            "result":json.loads(row["result_json"]) if row["result_json"] else None,
+            "status":row["status"], "version":row["version"],
             "created_at":row["created_at"],"updated_at":row["updated_at"]
         }
+        if row["error_code"]:
+            result["error_code"] = row["error_code"]
+        if row["worker_fingerprint"]:
+            result["legacy_cap006_fingerprint_task_id"] = row["worker_fingerprint"]
+        if row["result_json"]:
+            result["result_refs"] = ["receipt:"+task_id]
+        return result
+
+    def get_result(self, task_id):
+        """Restricted local trusted-host helper; NOT an unauthenticated endpoint."""
+        row = self.db.execute("SELECT result_json FROM tasks WHERE task_id=?", (task_id,)).fetchone()
+        if row is None:
+            raise ContractError("TASK_NOT_FOUND")
+        return json.loads(row["result_json"]) if row["result_json"] else None
 
     def events(self, task_id):
         return [dict(r) for r in self.db.execute(
@@ -295,7 +308,7 @@ def demo(db_path: str):
                               ("local-demo",req["idempotency_key"])).fetchone()
         r=h.submit(req,query="كتاب",principal="local-demo")
         if r["status"] == "QUEUED": r=h.run(r["task_id"])
-        print(json.dumps(r,ensure_ascii=False,indent=2))
+        print(json.dumps({"task":r,"cap006_receipt":h.get_result(r["task_id"])},ensure_ascii=False,indent=2))
         print("READBACK_EVIDENCE=",len(h.events(r["task_id"])))
         return 0 if r["status"]=="SUCCEEDED" else 1
     finally:
