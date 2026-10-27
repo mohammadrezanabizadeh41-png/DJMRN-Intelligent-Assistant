@@ -36,7 +36,7 @@ class HubPilotTests(unittest.TestCase):
         finished = self.h.run(task["task_id"])
         self.assertEqual(finished["status"], "SUCCEEDED")
         self.assertNotEqual(task["task_id"], finished["legacy_cap006_fingerprint_task_id"])
-        found = finished["result"]
+        found = self.h.get_result(task["task_id"])
         self.assertEqual(len(found["searched"]), 2)
         self.assertGreaterEqual(found["match_count_returned"], 2)
         for item in found["searched"]:
@@ -94,7 +94,8 @@ class HubPilotTests(unittest.TestCase):
         self.h = Hub(self.path, self.root, self.allowlist)
         again = self.h.get(t["task_id"])
         self.assertEqual(again["status"], "SUCCEEDED")
-        self.assertEqual(done["result"], again["result"])
+        self.assertEqual(done["result_refs"], again["result_refs"])
+        self.assertIsNotNone(self.h.get_result(t["task_id"]))
         self.assertGreaterEqual(len(self.h.events(t["task_id"])), 6)
 
     def test_bounded_recovery_for_readonly_only(self):
@@ -123,7 +124,7 @@ class HubPilotTests(unittest.TestCase):
         (self.root / "beta.md").unlink()
         done = self.h.run(t["task_id"])
         self.assertEqual(done["status"], "FAILED")
-        self.assertIsNone(done["result"])
+        self.assertIsNone(self.h.get_result(t["task_id"]))
 
 
 if __name__ == "__main__":
