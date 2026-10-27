@@ -164,3 +164,61 @@ DJMRN Coordination Contract / Hub adapter (task, authorization, dispatch, audit)
 - SQLite FTS5: https://www.sqlite.org/fts5.html
 
 **NEXT ACTION:** آزمون اتصال *جدید* OmniRoute به AGNT و ساخت PM-01 با ابزارهای واقعاً محصور، نه ساخت Agent حافظه یا اجرای کامل چندماژوله.
+
+
+## 8. 2026-10-27 — PM-01 FAMILY ADMISSION & FIRST OMNIROUTE COMBO
+
+**USER DIRECTIVE:** پیش از ایجاد اولین Persona در AGNT، خانواده و سطح مدل‌های مدیر پروژه در OmniRoute فعلی طراحی، اعضا با شواهد تایید و یک Combo قابل اشاره از AGNT آزمایش شود. حافظه، سرچ، Gmail، Python و هسته قرارداد به‌صورت ماژولار و مرحله‌ای بعداً متصل شوند. سایر مکالمه‌ها/پژوهش‌های قبلی در همان نقشه بخش 0–7 محفوظ‌اند. هیچ Group یا Combo بدون خواندن وضعیت واقعی دستگاه به عنوان CREATED گزارش نشود.
+
+### 8.1 مرز نقش‌ها
+
+- **AGNT PM-01:** شخصیت مدیر پروژه فارسی، فهم درخواست، طرح/ارجاع پیشنهادی، مدیریت محاوره و پیگیری در سطح تصمیم. در فاز اول بدون ابزارهای بیرونی.
+- **OmniRoute Combo:** سیاست ترتیبی Failover/Quota/Health بین مدل‌های *هم‌رده و هم‌قابلیت*؛ مدل API ثابت برای AGNT. ساخت خانواده/Combo در OmniRoute به معنی ایجاد Agent یا Workflow نیست.
+- **DJMRN Coordination v1:** رکورد task، permission، dispatch و evidence؛ بعد از استقرار Adapter به AGNT متصل می‌شود.
+- **Model-tier selection:** اینکه کار به مدل L1 یا L2 نیاز دارد **تصمیم سطح وظیفه** در منطق نقش/AGNT/Policy است؛ Failover یک Combo به‌خودی‌خود تشخیص کیفیت تحلیل، تغییر سطح و دسترسی Agent را انجام نمی‌دهد.
+- **No model required:** حفظ Task ID، اعتبارسنجی schema، ذخیره حافظه و retries قطعی نباید به مصرف دائمی LLM وابسته باشد.
+
+### 8.2 خانواده‌های پیشنهادی، نه ساخته‌شده
+
+| سطح | Alias/Family Candidate | نیاز | مصرف |
+|---|---|---|---|
+| L0 Optional | `DJMRN-PM-Lite-Free` | intent ساده و دسته‌بندی؛ فقط اگر آزمون نشان دهد به صرفه است | one verified low-cost/free small model |
+| **L1 FIRST** | **`DJMRN-PM-General-Free`** | گفت‌وگوی فارسی، درک هدف، طرح قدم‌ها، پیشنهاد Task JSON | یک مدل چت تاییدشده اولیه؛ fallback هم‌قابلیت به ترتیب اولویت |
+| L2 LATER | `DJMRN-PM-Reasoning-Free` | تعارض تصمیمات، برنامه‌ریزی چندمرحله‌ای، تحلیل خطای مبهم | مدل reasoning تاییدشده، فعال فقط هنگام نیاز و بر اساس سیاست |
+| L3 conditional | `DJMRN-PM-Tools-Free` | AGNT function/tool calls بعد از اتصال واقعی Hub | فقط مدل‌هایی که tool schema و structured output end-to-end PASS دارند |
+
+**Minimum launch:** تنها L1 نیاز فوری است. حداکثر یک AGNT model alias انتخاب شود؛ از ابتدا ۴ Combo و ده Agent نسازیم. L2 بعد از سنجش پیچیدگی و بودجه. در فاز اول `L3` لازم نیست چون ابزارها غیرفعال‌اند.
+
+### 8.3 نسخه/راهبرد
+
+منابع رسمی نسخه محصول OmniRoute 3.8.52 و پاسخ verified توسعه‌دهنده:
+- https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.52/docs/getting-started/AUTO-COMBO-GUIDE.md
+- https://github.com/diegosouzapw/OmniRoute/discussions/2413
+- https://github.com/diegosouzapw/OmniRoute/discussions/5099
+
+`Dashboard → Combos → Create Combo`, alias پیشنهادی `DJMRN-PM-General-Free`, strategy **`fill-first`** (اولیه تا محدودیت/429، سپس fallback). **`priority`** را انتخاب کن اگر اولویت ثابت و fallback روی خطا مهم‌تر از پرکردن سهمیه است. `round-robin` درخواست‌ها را می‌چرخاند و خواسته «اولی، وقتی تموم شد دومی» را به‌درستی منعکس نمی‌کند. `auto` می‌تواند Providerهای نامطلوب/پرداختی را وارد کند؛ برای اولین مدیر پروژه با شرط free-only بهتر است Combo صریح و allowlist شده باشد. Failover باید در وضعیت واقعی با دو مدل سالم از حساب فعلی آزموده شود، چون راهبرد صحیح به‌تنهایی اثبات عملیات و سهمیه رایگان نیست.
+
+### 8.4 سوابق مرتبط OmniRoute «پس از ریست» (historical evidence, require fresh readback)
+
+طبق رسید ثبت‌شده در `07-operations-and-continuity/CURRENT-STATUS.md` پس از reset، یک Provider Gemini و **۹ Custom entry** در OmniRoute ثبت شده بودند. این **۹ مورد مدل موفق چت نیستند**. مشخصاً:
+- `gemini-3.5-flash-lite`, `gemini-3.6-flash`: Custom chat موجود و Free=True metadata؛ Gateway inference موفق جداگانه در این رسید اثبات نشده. نامزد L0/L1 بعد از retest.
+- `gemma-4-26b-a4b-it`: مدل **چت و vision HTTP 200 واقعی از Gateway** ثبت شده؛ نامزد L1 یا L2 مشروط به free-only gate و context/tool/فارسی؛ Custom `isFree` در snapshot قبلی unset بود، لذا بدون احراز حساب/هزینه در Combo رایگان فعال نکن.
+- `gemma-4-31b-it`: Gateway + direct Google HTTP 500؛ **EXCLUDE** تا pass جدید و بررسی منبع خطا.
+- `gemini-robotics-er-2-preview`: مدل robotics، **NOT** پیش‌فرض مدیر پروژه؛ صرفاً ثبت Custom.
+- `gemini-3.8-flash-tts`, `gemini-3.8-flash-lite-tts`: audio-speech، **EXCLUDE** از Chat Combo. `apiFormat` قبلاً نادرست بوده.
+- `gemini-embedding-001`, `gemini-embedding-2`: embeddings، **EXCLUDE** از Chat Combo؛ آینده حافظه/جست‌وجو فقط بعد از قیمت/format/آزمون.
+- برخی built-inها از جمله `gemini-3.1-flash-lite`, `gemini-3.8-flash`, `gemini-2.5-flash` در تصویر/catalog قبلی بوده‌اند؛ فهرست built-in و نتیجه live Gateway یا free-only همه آنها مستقل از ۹ Custom است.
+- Combo تاریخی `DJMRN-Persian-L1` قبل از reset بوده و **نباید Combo فعلی/قابل اتکا تلقی شود**. درخواست قبلی اشاره به «۸ موتور آماده» دارد، ولی **جدول دقیق و مستند ۸ Gateway HTTP 200 پس از reset از سوابق خوانده‌شده ثابت نشده**؛ انتظار خروجی واقعی inventory/usage از OmniRoute فعلی برای تخصیص قطعی اعضای گروه.
+
+**هیچ نشانه‌ای وجود ندارد که مدل‌ها در یک account/Provider سهمیه مستقل داشته باشند.** quota و free بودن باید در همان provider/account برای هر target و هزینه پرداختی/overage شناخته و کنترل شود. برنامه جایگزین منطقی: پس از اعتبارسنجی کلید/مدل جدید، حداقل یک Provider واقعاً مستقل دیگر (مثلاً اگر در نصب فعلی Groq/Mistral/OpenRouter Free موجود و تست‌شده باشد) به ترتیب اضافه شود؛ صرف اتصال تاریخی API Key مجوز فرض آماده بودن provider در نصب فعلی نیست.
+
+### 8.5 اولین عملیات دقیق AGNT/OmniRoute
+
+1. از **OmniRoute فعلی** در Dashboard، `Providers/Connections`, `Models`, `Combos`, `Usage / request logs`، تنها ردیف‌های بدون کلید و اطلاعات خصوصی را ثبت کن: `provider`, `full model ID`, `chat`, `function_calling`, `vision`, `free tier verified`, `status HTTP`, `quota observed`, `enabled`, `combo membership`.
+2. اعضای L1 را فقط از چت مدل‌های **Gateway HTTP 200 و وضعیت رایگان تأییدشده** انتخاب کن؛ درخواست آزمونی فارسی + JSON، بدون tools، با Token/Quota کم. اگر مدل دارای فقط metadata باشد، هنوز عضو فعال Combo نشود.
+3. `DJMRN-PM-General-Free`، `fill-first`، ترتیب هدف‌ها با primary+fallback؛ حداقل دو هدف سالم برای اثبات fallback. Disable paid/unknown targets و لغو هر paid fallback. هر target باید قابلیت‌های لازم یکسان را داشته باشد.
+4. آزمون با مدل alias Combo روی `/v1/chat/completions`، verify real target headers/logs، زبان فارسی، بازگشت JSON/structured و رفتار 429/timeout با تغییر کنترل‌شده بدون پرداخت/مصرف بی‌هدف. ثبت خطا به‌جای حلقه بی‌پایان.
+5. فقط بعد از PASS، در AGNT Custom/OpenAI-compatible Provider به `http://127.0.0.1:20128/v1` (اگر پورت همان است) با **Gateway API key خصوصی** و مدل `DJMRN-PM-General-Free` وصل شو؛ از Management Token/Upstream Google Key برای inference استفاده نکن. AGNT ممکن است حتی هنگام ابزار disabled از tool schemas استفاده کند؛ این را نسخه نصب‌شده تست کن. Demo اول چتِ بدون ابزار.
+6. ساخت Persona `DJMRN-PM-01` با شرح وظایف فارسی، اختیارات محدود، memory داخلی حداقلی؛ سپس قرارداد v1 و ابزارها در مراحل بعد.
+
+**BLOCKERS / NOT DONE:** من به OmniRoute localhost کاربر دسترسی ندارم؛ **هیچ Combo/Family، API key، تنظیم Agent، Provider، هزینه یا نصب ایجاد/تغییر نکرده‌ام**. «۸ مدل آماده» و فهرست فعلیِ واقعاً موفق را از نام‌گذاری تاریخی نمی‌سازم. اقدام بعدی روی دستگاه کاربر با GUI است؛ خروجی بدون secrets برای تأیید و ثبت دقیق اعضای خانواده لازم است.
