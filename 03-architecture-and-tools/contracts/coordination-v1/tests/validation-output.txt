@@ -1,0 +1,23 @@
+PASS valid TASK_SUBMISSION
+PASS valid TASK_RECORD
+PASS valid DISPATCH_RECORD
+PASS valid CAPABILITY_RECORD
+PASS valid RESOURCE_REF
+PASS valid WORKER_RESULT
+PASS valid APPROVAL_RECORD
+PASS valid AUDIT_EVENT
+PASS rejected no_contract_version {'kind': 'TASK_SUBMISSION', 'request_id': 'req-001', 'locale': 'fa-IR', 'capability_id': 'research.web', 'input_refs': ['resource-company-00
+PASS rejected unauthorized_unknown_field {'kind': 'TASK_SUBMISSION', 'contract_version': 'djmrn.coord.v1', 'request_id': 'req-001', 'locale': 'fa-IR', 'capability_id': 'research.web
+PASS rejected invalid_state {'kind': 'TASK_RECORD', 'contract_version': 'djmrn.coord.v1', 'task_id': 'task-search-001', 'request_id': 'req-001', 'capability_id': 'resea
+PASS rejected bad_digest {'kind': 'APPROVAL_RECORD', 'contract_version': 'djmrn.coord.v1', 'approval_id': 'approval-send-001', 'task_id': 'task-mail-001', 'action': 
+PASS rejected worker_wrong_kind {'kind': 'SOMETHING_ELSE', 'contract_version': 'djmrn.coord.v1', 'task_id': 'task-search-001', 'dispatch_id': 'dispatch-001', 'worker_role':
+PASS rejected wrong_locale {'kind': 'TASK_SUBMISSION', 'contract_version': 'djmrn.coord.v1', 'request_id': 'req-001', 'locale': 'en-US', 'capability_id': 'research.web
+PASS API /v1/tasks
+PASS API /v1/tasks/{task_id}
+PASS API /v1/dispatches
+PASS API /v1/worker-results
+PASS API /v1/capabilities
+PASS API /v1/approvals/{approval_id}/decision
+PASS API /v1/tasks/{task_id}/events
+PASS manifest reviewed, version 1.0.0-design-baseline
+STRUCTURAL TESTS PASSED; NO RUNTIME, A2A TCK, MCP INTEROP, AUTH, CRASH OR WINDOWS TEST PERFORMED
