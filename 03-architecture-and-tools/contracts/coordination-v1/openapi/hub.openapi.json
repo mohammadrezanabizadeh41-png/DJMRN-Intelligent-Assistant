@@ -1,0 +1,265 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "DJMRN Coordination Hub (Design API)",
+    "version": "1.0.0-design-baseline",
+    "description": "Illustrative unimplemented API; not a deployed service. No public access by default."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:{port}",
+      "description": "Proposed local-only server",
+      "variables": {
+        "port": {
+          "default": "20188"
+        }
+      }
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "sessionAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Local authenticated session; NOT OmniRoute token"
+      }
+    },
+    "schemas": {
+      "TaskSubmission": {
+        "$ref": "../schemas/hub-record.schema.json#/$defs/TASK_SUBMISSION"
+      },
+      "TaskRecord": {
+        "$ref": "../schemas/hub-record.schema.json#/$defs/TASK_RECORD"
+      },
+      "DispatchRecord": {
+        "$ref": "../schemas/hub-record.schema.json#/$defs/DISPATCH_RECORD"
+      },
+      "WorkerResult": {
+        "$ref": "../schemas/hub-record.schema.json#/$defs/WORKER_RESULT"
+      },
+      "ApprovalRecord": {
+        "$ref": "../schemas/hub-record.schema.json#/$defs/APPROVAL_RECORD"
+      }
+    }
+  },
+  "security": [
+    {
+      "sessionAuth": []
+    }
+  ],
+  "paths": {
+    "/v1/tasks": {
+      "post": {
+        "operationId": "submitTask",
+        "summary": "Validate and durably register task",
+        "responses": {
+          "200": {
+            "description": "Design response"
+          },
+          "403": {
+            "description": "Not authorized"
+          },
+          "409": {
+            "description": "Conflict or idempotency/revision failure"
+          },
+          "422": {
+            "description": "Bad contract payload"
+          },
+          "201": {
+            "description": "Created, or deduped by authenticated request/idempotency scope"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../schemas/hub-record.schema.json#/$defs/TASK_SUBMISSION"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{task_id}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "task_id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "operationId": "getTask",
+        "summary": "Return authoritative task state",
+        "responses": {
+          "200": {
+            "description": "Design response"
+          },
+          "403": {
+            "description": "Not authorized"
+          },
+          "409": {
+            "description": "Conflict or idempotency/revision failure"
+          },
+          "422": {
+            "description": "Bad contract payload"
+          }
+        }
+      }
+    },
+    "/v1/dispatches": {
+      "post": {
+        "operationId": "createDispatch",
+        "summary": "Policy-checked internal specialist dispatch",
+        "responses": {
+          "200": {
+            "description": "Design response"
+          },
+          "403": {
+            "description": "Not authorized"
+          },
+          "409": {
+            "description": "Conflict or idempotency/revision failure"
+          },
+          "422": {
+            "description": "Bad contract payload"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../schemas/hub-record.schema.json#/$defs/DISPATCH_RECORD"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/worker-results": {
+      "post": {
+        "operationId": "workerResult",
+        "summary": "Validate result and evidence before marking task done",
+        "responses": {
+          "200": {
+            "description": "Design response"
+          },
+          "403": {
+            "description": "Not authorized"
+          },
+          "409": {
+            "description": "Conflict or idempotency/revision failure"
+          },
+          "422": {
+            "description": "Bad contract payload"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../schemas/hub-record.schema.json#/$defs/WORKER_RESULT"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/capabilities": {
+      "get": {
+        "operationId": "listCapabilities",
+        "summary": "List capabilities authorized for caller",
+        "responses": {
+          "200": {
+            "description": "Design response"
+          },
+          "403": {
+            "description": "Not authorized"
+          },
+          "409": {
+            "description": "Conflict or idempotency/revision failure"
+          },
+          "422": {
+            "description": "Bad contract payload"
+          }
+        }
+      }
+    },
+    "/v1/approvals/{approval_id}/decision": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "approval_id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "operationId": "decideApproval",
+        "summary": "Exact-scope human decision after authentication",
+        "responses": {
+          "200": {
+            "description": "Design response"
+          },
+          "403": {
+            "description": "Not authorized"
+          },
+          "409": {
+            "description": "Conflict or idempotency/revision failure"
+          },
+          "422": {
+            "description": "Bad contract payload"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../schemas/hub-record.schema.json#/$defs/APPROVAL_RECORD"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{task_id}/events": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "task_id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "operationId": "getTaskEvents",
+        "summary": "Return sanitized task audit events",
+        "responses": {
+          "200": {
+            "description": "Design response"
+          },
+          "403": {
+            "description": "Not authorized"
+          },
+          "409": {
+            "description": "Conflict or idempotency/revision failure"
+          },
+          "422": {
+            "description": "Bad contract payload"
+          }
+        }
+      }
+    }
+  }
+}
