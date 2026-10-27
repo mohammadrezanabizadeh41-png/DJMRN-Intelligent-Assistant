@@ -1,0 +1,68 @@
+{
+  "profile_id": "djmrn.coordination.hub-and-spoke",
+  "version": "1.0.0-design-baseline",
+  "date": "2026-10-27",
+  "status": "DESIGN_COMPLETE_PENDING_APPROVAL_NO_DEPLOYMENT",
+  "authority": {
+    "task_ledger": "djmrn_hub",
+    "message_audit": "djmrn_hub",
+    "search_workflow_detail": "search_specialist",
+    "knowledge_content": "knowledge_service",
+    "external_provider_state": "provider_system",
+    "inference_gateway": "omniroute_adapter"
+  },
+  "standards": {
+    "ui": {
+      "protocol": "AG-UI",
+      "adoption": "optional",
+      "interface": "hub UI adapter"
+    },
+    "cross_agent": {
+      "protocol": "A2A",
+      "adoption": "only when remote independent agent",
+      "mapping": "hub_task_id to a2a_task_id"
+    },
+    "tools": {
+      "protocol": "MCP",
+      "adoption": "tool boundary or external compatible host; in-process Python allowed"
+    },
+    "api": {
+      "protocol": "OpenAPI 3.1 + JSON Schema 2020-12",
+      "adoption": "from first HTTP boundary"
+    },
+    "authz": {
+      "protocol": "Cedar PARC model",
+      "adoption": "policy vocabulary now, actual policy engine conditional"
+    },
+    "provenance": {
+      "protocol": "W3C PROV-O concepts",
+      "adoption": "source refs/digests now; full RDF later"
+    },
+    "workflow": {
+      "protocol": "Open Workflow spec",
+      "adoption": "only after runtime can pass durability test"
+    },
+    "events": {
+      "protocol": "CloudEvents 1.0",
+      "adoption": "only for cross-worker async"
+    },
+    "identity_external": {
+      "protocol": "OAuth 2.0 PKCE",
+      "adoption": "only with authorized Google login"
+    }
+  },
+  "operational_rules": [
+    "one authoritative task-state owner",
+    "every inter-specialist official dispatch audited",
+    "specialists cannot grant self permissions",
+    "only search_specialist may search web on behalf of others",
+    "knowledge lookup policy depends on freshness",
+    "no LLM permanently active",
+    "no paid fallback",
+    "all side effects require exact action approval when specified",
+    "no blind retry on unknown external side-effect outcome",
+    "minimum content replication; pass scoped refs"
+  ],
+  "first_vertical": "Persian input -> Hub task -> authorized CAP-006 -> evidence -> persisted result/restart",
+  "approval_state": "User requested a completed design document, not runtime installation; design baseline must be reviewed and acceptance-tested"
+}
