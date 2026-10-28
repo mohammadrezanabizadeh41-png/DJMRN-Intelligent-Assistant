@@ -62,7 +62,7 @@ def main():
     policy = json.loads(Path(args.policy).read_text(encoding="utf-8"))
     if policy.get("schema_version") != "djmrn.oh.policy.v1":
         raise ValueError("Unsupported policy version")
-    item = json.loads(Path(args.input).read_text(encoding="utf-8"))
+    item = json.loads(Path(args.input).read_text(encoding="utf-8-sig"))
     print(json.dumps(screen(item, policy), ensure_ascii=False, indent=2))
 
 if __name__ == "__main__":
