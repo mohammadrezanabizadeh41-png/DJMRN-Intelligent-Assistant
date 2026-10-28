@@ -6,8 +6,8 @@
       "plan": "Basic",
       "monthly_application_limit": 10,
       "quota_source": "https://www.freelancermap.com/pricing/freelancer",
-      "quota_reset_rule": "UNVERIFIED",
-      "account_remaining_quota": null,
+      "quota_reset_rule": "UNVERIFIED_USER_ESTIMATE",
+      "account_remaining_quota": 10,
       "automation_permission": "UNVERIFIED",
       "max_daily_applications": 1,
       "send_enabled": false,
@@ -21,7 +21,12 @@
         "AUTOMATION_PERMISSION_UNVERIFIED"
       ],
       "plan_verified_by_user": true,
-      "plan_verified_date": "2026-10-28"
+      "plan_verified_date": "2026-10-28",
+      "quota_remaining_source": "USER_REPORTED",
+      "quota_observed_date": "2026-10-28",
+      "membership_elapsed_days_reported": 10,
+      "next_reset_days_reported": 20,
+      "next_reset_estimate": "2026-11-17"
     }
   },
   "global": {
