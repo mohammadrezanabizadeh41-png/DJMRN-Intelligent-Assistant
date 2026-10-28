@@ -163,3 +163,6 @@ User PowerShell: OH_05_EXPORT_MACRO_DOWNLOAD=PASS; local file C:\Users\Mrn7206\A
 
 ## OH-05 export macro failure — observed
 User supplied Ui.Vision log: Export-Pilot first executeScript failed in 0.25s with 'Could not establish connection to tab 555978241. Receiving end does not exist'. No echo, no verified JSON export. This is a browser extension-to-tab messaging failure; not evidence of a JSON schema or extraction logic error. Next: refresh Freelancermap tab, reselect Export-Pilot, retry once; if persistent, inspect extension connection and reload Ui.Vision. Do not mark export PASS.
+
+## OH-05 real export uploaded and independently inspected — PASS
+User uploaded DJMRN-OH05-freelancermap-2026-10-28T15-12-39-243Z.json. Parsed successfully: schema_version djmrn.oh.export.v1, 22 rows, 22 unique site/external_id keys, 12 numeric, 10 URL fallback, 5712 bytes. Offline field/URL validation PASS. Independent ephemeral SQLite dedup simulation PASS: first pass NEW=22/SEEN=0, second NEW=0/SEEN=22, final 22; temporary database destroyed. This is a schema-compatible simulation, NOT yet a test against the repo's actual ingest.py + ledger_history.py implementation. No operational Windows DB changes. Next: Windows validation via existing ingest.py and actual ledger_history on temporary copy, then consider controlled production import only after approval.
