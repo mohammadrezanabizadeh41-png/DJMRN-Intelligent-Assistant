@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 MACRO = 'DJMRN-OH31-Freelancermap-Auto-Start-One-Page'
+PARENT_REF = '/macros/' + MACRO + '.json'
 HTML_SHA256 = 'D142697C5E1A27338C65DB5D53F3E9C746C396A2B8EA283FD71C45BC2CB579E6'
 MACRO_GIT_BLOB = '9347a0ffd85f0e9f402ebc7c2009beacad8b6372'
 SOURCE_SITE = 'freelancermap'
@@ -101,7 +102,10 @@ def validate_log(text):
     lines = text.splitlines()
     if not lines or lines[0].strip() != 'Status=OK':
         raise RuntimeError('UIVISION_LOG_NOT_OK:' + (lines[0][:150] if lines else 'EMPTY'))
-    if not any('[status] Playing macro ' + MACRO == x.strip() for x in lines):
+    # Ui.Vision CLI v10.0.303 identifies browser-stored macros by /macros/<name>.json.
+    # In-IDE logs may instead use the bare macro name. Accept only these exact identities.
+    if not any(x.strip() in ('[status] Playing macro ' + MACRO,
+                             '[status] Playing macro ' + PARENT_REF) for x in lines):
         raise RuntimeError('WRONG_MACRO_IN_LOG')
     if not any('Finished running' in line and 'DJMRN-OH05-Freelancermap-Export-Pilot' in line and MACRO in line for line in lines):
         raise RuntimeError('CHILD_MACRO_RETURN_MISSING')
@@ -112,6 +116,52 @@ def validate_log(text):
     if any(re.search(r'^\[error\]', line, re.I) for line in lines):
         raise RuntimeError('MACRO_ERROR_IN_LOG')
     return True
+
+
+def verify_existing(log_path, downloads, database):
+    """Check a prior real CLI receipt and corresponding export; no Chrome launch or DB writes."""
+    folder = Path(downloads).resolve(strict=True)
+    log = Path(log_path).resolve(strict=True)
+    db = Path(database).resolve(strict=True)
+    if not folder.is_dir() or log.parent != folder:
+        raise RuntimeError('LOG_NOT_IN_DOWNLOADS')
+    before = sha256(db)
+    old = check_database(db)
+    log_text = log.read_text(encoding='utf-8-sig')
+    validate_log(log_text)
+    prefix = '[echo] DJMRN_OH05_EXPORT='
+    echoes = [line[len(prefix):] for line in log_text.splitlines() if line.startswith(prefix)]
+    if len(echoes) != 1:
+        raise RuntimeError('EXPORT_ECHO_AMBIGUOUS')
+    info = json.loads(echoes[0])
+    if not isinstance(info, dict):
+        raise RuntimeError('EXPORT_ECHO_INVALID')
+    name = info.get('download')
+    if not isinstance(name, str) or not re.fullmatch(
+            r'DJMRN-OH05-freelancermap-\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}-\d{3}Z\.json', name):
+        raise RuntimeError('EXPORT_FILENAME_UNEXPECTED')
+    export = folder / name
+    if not export.is_file() or export.stat().st_size != info.get('bytes'):
+        raise RuntimeError('EXPORT_FILE_MISSING_OR_SIZE_CHANGED')
+    rows = validate_export(export)
+    numeric = sum(str(row['external_id']).isdigit() for row in rows)
+    fallback = len(rows) - numeric
+    if (info.get('rows') != len(rows) or info.get('numeric') != numeric
+            or info.get('fallback') != fallback
+            or info.get('network_actions') != 0 or info.get('database_writes') != 0):
+        raise RuntimeError('EXPORT_ECHO_MISMATCH')
+    counts, samples = reconcile(rows, old)
+    if sha256(db) != before:
+        raise RuntimeError('PRODUCTION_DB_FILE_CHANGED')
+    print('OH31_PRIOR_CLI_LOG=PASS')
+    print('OH31_EXISTING_JSON=PASS')
+    print('OH31_JSON_SHA256=' + sha256(export))
+    print('OH31_EXPORT_FILE=' + str(export))
+    print('OH31_TOTAL_ON_PAGE=' + str(len(rows)))
+    print('OH31_LOCAL_DB_RECONCILIATION=' + json.dumps(counts, sort_keys=True))
+    print('OH31_REVIEW_SAMPLES=' + json.dumps(samples, ensure_ascii=False))
+    print('OH31_OFFLINE_VERIFICATION=PASS')
+    print('BROWSER_LAUNCH=NO; PRODUCTION_SQLITE_WRITES=0; OUTBOUND_ACTIONS=0')
 
 
 def run(opts):
@@ -134,7 +184,7 @@ def run(opts):
     prefix = 'DJMRN-OH05-freelancermap-'
     prior = {p.name for p in downloads.glob(prefix + '*.json') if p.is_file()}
     stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
-    logname = 'DJMRN-OH30-CLI-' + stamp + '.txt'
+    logname = 'DJMRN-OH31-CLI-' + stamp + '.txt'
     log = downloads / logname
     query = urllib.parse.urlencode({
         'direct': '1', 'macro': MACRO, 'storage': 'browser',
@@ -188,11 +238,19 @@ def run(opts):
 
 def main():
     ap = argparse.ArgumentParser()
-    for key in ('launcher', 'chrome', 'macro-file', 'downloads', 'database'):
+    for key in ('launcher', 'chrome', 'macro-file'):
+        ap.add_argument('--'+key)
+    for key in ('downloads', 'database'):
         ap.add_argument('--'+key, required=True)
+    ap.add_argument('--verify-existing-log', help='Read-only verification; does not launch browser')
     args = ap.parse_args()
     try:
-        run(args)
+        if args.verify_existing_log:
+            verify_existing(args.verify_existing_log, args.downloads, args.database)
+        else:
+            if not all((args.launcher, args.chrome, args.macro_file)):
+                raise RuntimeError('CLI_LAUNCH_ARGUMENTS_REQUIRED')
+            run(args)
     except Exception as exc:
         print('OH31_WINDOWS=FAIL; REASON=' + str(exc), file=sys.stderr)
         sys.exit(1)
