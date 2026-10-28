@@ -13,7 +13,7 @@ def classify(title,has_detail):
     if re.search(r"\b(?:6|12)\s*[- ]?months?\b",t):flags.append("LONG_TERM_IN_TITLE")
     if re.search(r"\b(?:on[- ]?site|hybrid|\d+\s*days?\s*on\s*site)\b",t):flags.append("LOCATION_RESTRICTION_IN_TITLE")
     if re.search(r"\b(?:sc cleared|sc clearance|active sc|sc clearable|security clearance)\b",t):flags.append("SECURITY_CLEARANCE_IN_TITLE")
-    if re.search(r"\\(sc\\)",t) and "SECURITY_CLEARANCE_IN_TITLE" not in flags:flags.append("POSSIBLE_SC_CLEARANCE_ABBREVIATION")
+    if re.search(r"\(\s*sc\s*\)",t) and "SECURITY_CLEARANCE_IN_TITLE" not in flags:flags.append("POSSIBLE_SC_CLEARANCE_ABBREVIATION")
     if "inside ir35" in t:flags.append("INSIDE_IR35")
     if any(x in t for x in STRONG):fit="STRONG_TITLE_MATCH"
     elif any(x in t for x in POSSIBLE):fit="POSSIBLE_TITLE_MATCH"
