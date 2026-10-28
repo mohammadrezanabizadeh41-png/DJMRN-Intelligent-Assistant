@@ -46,3 +46,12 @@ User executed the approved local PowerShell setup and reported:
 - `py -I bootstrap.py --root ...` returned `result=PASS`, `schema_version=djmrn.oh.local.v0`, `sqlite_quick_check=ok`, `opportunities=0`, `outbound_actions=0`.
 - SQLite file reported at `data/opportunities.sqlite3`. `OH_W2_BOOTSTRAP_COMMAND=COMPLETED`.
 - **OH-W2 initial deployment PASS**, not full OH-W2 acceptance until persistence/dedup tests. No site or model integration tested; no external messages sent.
+
+
+## OH-W2 SQLite read-only validation — PASS (user PowerShell receipt)
+- `PRAGMA integrity_check` = `ok`.
+- `metadata.schema_version` = `djmrn.oh.local.v0`.
+- `opportunities` row count = 0.
+- `PRAGMA index_list(opportunities)` = `[(0, 'sqlite_autoindex_opportunities_1', 1, 'u', 0)]`: unique index exists.
+- `OH_W2_READONLY_CHECK=COMPLETE`.
+**Interpretation:** actual Windows database integrity/schema/unique index verified. This is NOT yet an insert/dedup or reopen-persistence test. Next: isolated temporary SQLite synthetic insert/reopen/duplicate test without modifying operational database.
