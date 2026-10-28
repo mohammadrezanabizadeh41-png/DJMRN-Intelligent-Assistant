@@ -1,6 +1,8 @@
 import sqlite3
 import tempfile
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ledger import record
 
 with tempfile.TemporaryDirectory(prefix="djmrn-oh04-") as tmp:
