@@ -91,3 +91,6 @@ Windows CLI synthetic sample execution FAILED before screening first sample: jso
 
 ## OH-02 CLI BOM patch Windows retest PASS
 Windows patch installed: app/screen.py SHA256 7F2DBE5CEE460C359863602F1A3898CE916EBD7386825D13F06013C3494DACA7. Three synthetic CLI scenarios matched: ACCEPT_FOR_REVIEW, REJECT, HOLD_FOR_REVIEW. Receipt OH_02_CLI_RETEST=PASS. Combined with earlier 12/12 unit tests, OH-02 initial deterministic screening gate PASS. Still no real listings or browser integration.
+
+## OH-03 initial Windows calculator test — PASS
+User installed app/quote.py from pinned commit 04763eeec30d31ca07441abd715fdd66f9f1766c and ran JSON CLI test. Result CALCULATED, USD, net_amount 250.00, net_effective_hourly_rate 6.25, effective_hours 40, outbound_actions 0; OH_03_INITIAL_TEST=PASS. This is one happy-path test only; invalid/missing costs and screening integration still pending.
