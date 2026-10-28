@@ -1,0 +1,30 @@
+{
+  "Name": "DJMRN-OH32-Freelancermap-Navigation-ReadOnly-Audit",
+  "CreationDate": "2026-10-29",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://www.freelancermap.com/projects",
+      "Value": "",
+      "Description": "Open only one known listings page. No pagination or account changes."
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "css=a[data-testid=\"title\"]",
+      "Value": "",
+      "Description": "Fail safely if no listed project anchors load."
+    },
+    {
+      "Command": "executeScript",
+      "Target": "if(!['freelancermap.com','www.freelancermap.com'].includes(location.hostname)||location.pathname!='/projects')throw Error('OH32_WRONG_PAGE');var cards=document.querySelectorAll('a[data-testid=\"title\"]');if(!cards.length)throw Error('OH32_NO_CARDS');var all=document.querySelectorAll('a,button,[role=\"button\"]');var nav=[],more=[],auth={sign_in:0,sign_out:0,account_links:0};function compact(x){return String(x||'').trim().replace(/\\s+/g,' ').slice(0,70)}for(var i=0;i<Math.min(all.length,1200);i++){  var e=all[i],txt=compact(e.getAttribute('aria-label')||e.getAttribute('title')||e.textContent||''),aria=compact(e.getAttribute('aria-label')||''),cls=typeof e.className==='string'?compact(e.className):'',tid=compact(e.getAttribute('data-testid')||''),href=e.tagName.toLowerCase()==='a'?(e.getAttribute('href')||''):'';  var norm=(txt+' '+aria+' '+cls+' '+tid).toLowerCase();  if(/\\b(log[ -]?in|sign[ -]?in)\\b/i.test(txt))auth.sign_in++;  if(/\\b(log[ -]?out|sign[ -]?out)\\b/i.test(txt))auth.sign_out++;  if(/\\b(my account|my profile|dashboard)\\b/i.test(txt))auth.account_links++;  var pagevalue=null,route=null,querykeys=[];  if(href){try{var url=new URL(href,location.origin);if(url.origin===location.origin){route=url.pathname;querykeys=Array.from(url.searchParams.keys()).slice(0,8);var n=url.searchParams.get('page');if(n&&/^\\d{1,4}$/.test(n))pagevalue=Number(n)}}catch(ex){}}  var inPag=Boolean(e.closest('nav,[class*=\"pagin\"],[class*=\"Pagin\"],[data-testid*=\"pagin\"]'));  var paginationHint=/\\b(next|previous|prev|pagination|paging|page\\s*\\d+|last page|first page)\\b/i.test(norm)||querykeys.some(function(k){return /^(page|p|offset|pageNum|cursor)$/i.test(k)})||(inPag&&/^\\d{1,4}$/.test(txt));  var moreHint=/\\b(load more|show more|more projects|more jobs)\\b/i.test(norm);  var item={type:e.tagName.toLowerCase(),text:txt,aria:aria,selector_hint:tid||cls||null,route:route,page_number:pagevalue,query_keys:querykeys};  if(paginationHint&&nav.length<25)nav.push(item);  if(moreHint&&more.length<10)more.push(item);}return JSON.stringify({schema_version:'djmrn.oh32.navigation-audit.v1',site:'freelancermap',route:location.pathname,card_count:cards.length,controls_examined:Math.min(all.length,1200),controls_truncated:all.length>1200,pagination_candidates:nav,load_more_candidates:more,auth_indicators:auth,authenticated:'UNVERIFIED',automatic_navigation_performed:false,form_submissions:0,database_writes:0});",
+      "Value": "djmrnOH32Nav",
+      "Description": "Bounded read-only inspection of pagination and login indicators. No cookies, identity or credentials."
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH32_NAV=${djmrnOH32Nav}",
+      "Value": "green",
+      "Description": "Emit non-sensitive navigation diagnostic for review; never click."
+    }
+  ]
+}
