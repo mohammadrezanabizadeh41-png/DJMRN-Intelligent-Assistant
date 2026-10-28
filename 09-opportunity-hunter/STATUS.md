@@ -38,3 +38,11 @@ User executed the approved local PowerShell setup and reported:
 - Committed and read-back verified `09-opportunity-hunter/src/bootstrap.py` at commit `ac2b59592937785b106eb43f38fcf5757cd222e2`; Python stdlib only, no browser, network or send. Creates local `data/opportunities.sqlite3`, metadata version, deduplicated opportunity table and quick-check; refuses missing directories and mismatched schema version.
 - Supplied user a PowerShell download/install and run command pinned to commit; **Windows execution result PENDING USER OUTPUT**. No claim of local SQLite success yet.
 - Follow-up after local PASS: add tests for bootstrap repeatability/duplicate rejection, then versioned site policies and deterministic screening.
+
+
+## OH-W2 Windows bootstrap execution receipt — PASS (user console, 2026-10-28)
+- Installed `app/bootstrap.py` from pinned commit `ac2b59592937785b106eb43f38fcf5757cd222e2` at `C:\Users\Mrn7206\AppData\Local\DJMRN\OpportunityHunter\app\bootstrap.py`.
+- File length **2342 bytes**; reported SHA256 `9D6C3A02E676CCB696991119C8CAC63FC3A9A88147598FAE86B28AFF517BCF2F`.
+- `py -I bootstrap.py --root ...` returned `result=PASS`, `schema_version=djmrn.oh.local.v0`, `sqlite_quick_check=ok`, `opportunities=0`, `outbound_actions=0`.
+- SQLite file reported at `data/opportunities.sqlite3`. `OH_W2_BOOTSTRAP_COMMAND=COMPLETED`.
+- **OH-W2 initial deployment PASS**, not full OH-W2 acceptance until persistence/dedup tests. No site or model integration tested; no external messages sent.
