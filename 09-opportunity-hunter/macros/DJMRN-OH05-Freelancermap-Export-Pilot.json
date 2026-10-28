@@ -1,0 +1,18 @@
+{
+  "Name": "DJMRN-OH05-Freelancermap-Export-Pilot",
+  "CreationDate": "2026-10-28",
+  "Commands": [
+    {
+      "Command": "executeScript",
+      "Target": "if(!['freelancermap.com','www.freelancermap.com'].includes(location.hostname)||location.pathname!='/projects')throw Error('WRONG_PAGE');var anchors=Array.from(document.querySelectorAll('a[data-testid=\"title\"]'));var rows=anchors.map(function(a){var raw=a.getAttribute('href');if(!raw)throw Error('MISSING_HREF');var u=new URL(raw,location.origin);if(!['freelancermap.com','www.freelancermap.com'].includes(u.hostname)||!u.pathname.startsWith('/project/'))throw Error('INVALID_PROJECT_URL');var path=u.pathname.replace(/\\/+$/,'');var id=path.match(/-(\\d+)$/);var title=a.textContent.trim();if(!title)throw Error('EMPTY_TITLE');return {external_id:id?id[1]:'url:'+path,title:title,canonical_url:u.origin+path};});if(!rows.length)throw Error('NO_LOADED_PROJECTS');if(new Set(rows.map(function(r){return r.external_id})).size!==rows.length)throw Error('DUPLICATE_IDS');var payload={schema:'djmrn.oh.export.v1',source_site:'freelancermap',items:rows};var content=JSON.stringify(payload,null,2);var blob=new Blob([content],{type:'application/json'});var obj=URL.createObjectURL(blob);var link=document.createElement('a');link.href=obj;link.download='DJMRN-OH05-freelancermap-'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';document.body.appendChild(link);link.click();link.remove();setTimeout(function(){URL.revokeObjectURL(obj)},30000);return JSON.stringify({rows:rows.length,numeric:rows.filter(function(r){return /^\\d+$/.test(r.external_id)}).length,fallback:rows.filter(function(r){return r.external_id.startsWith('url:')}).length,download:link.download,bytes:blob.size,network_actions:0,database_writes:0});",
+      "Value": "djmrnExportSummary",
+      "Description": "Local JSON download of loaded DOM project cards; no site requests or database writes"
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH05_EXPORT=${djmrnExportSummary}",
+      "Value": "green",
+      "Description": "Check export summary in log"
+    }
+  ]
+}
