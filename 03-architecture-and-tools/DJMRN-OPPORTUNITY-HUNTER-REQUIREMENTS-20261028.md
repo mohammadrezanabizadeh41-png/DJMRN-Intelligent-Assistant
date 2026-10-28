@@ -53,3 +53,38 @@ New recommendations:
 - Start with synthetic fixtures and a single permitted site, not mass messaging.
 
 Open decisions needing explicit user input: 5-day target vs 10-day ceiling; economic floor and discount authority; employment hours/schedule, languages and geography; portfolio and actual skill evidence; initial message style; per-site permission and quotas; notification method. Do not make these choices silently.
+
+
+## 2026-10-28 — User refinements: concise audit, permissions, employment economics
+**Status:** user-confirmed requirements, not deployed. This section refines previous roadmap without deleting historical decisions.
+
+### Decision logging — minimal, actionable
+- For rejected opportunities store compact reason codes (e.g., UNPAID, EXPLICIT_LOCATION, HOURS_GT_100, DAYS_GT_10, SITE_EMPLOYMENT_BLOCK) and source listing ID; avoid verbose reasoning for every rejection.
+- For selected opportunities intended for outreach store a short human-readable justification, relevant user capability evidence, proposed scope, estimated hours and deadline, proposed price with evidence and uncertainty, policy/profile version, draft/target, send state and receipt. Record positive/negative/ambiguous responses and status transitions.
+- Keep storage minimal, inspectable and SQLite-based. No unrestricted model chain-of-thought logging.
+
+### Separate permissions and website handling
+- User expressly requests continuing to evaluate sites even when site warns against automation, arguing personal use; preserve sites in research inventory and don't conflate research eligibility with automation eligibility.
+- However, the system must record actual platform restrictions and cannot treat personal intent as authorization to bypass access controls or site rules. Separate discovery/manual/alerts/API/read/draft/quote/send capabilities per site. If automated interaction is not permitted, use permitted methods and mark automatic action blocked rather than evading restrictions.
+- READ, ANALYZE, DRAFT, QUOTE and SEND are distinct capabilities; only enable site-specific live SEND after a successful authorized test. Never retry uncertain sends without reconciliation.
+
+### Employment-specific financial feasibility gate
+- Distinguish standalone fixed-deliverable project from genuine monthly/part-time/full-time employment. Site override: freelancermap employment (even one month) rejected; LinkedIn employment allowed for evaluation. Other sites TBD.
+- Employment economic analysis: effective hourly compensation = net realistically receivable monthly compensation / expected total hours (including meetings, admin, revisions, onboarding and unpaid overhead); assess weekly/monthly workload, schedule/timezone, fixed availability, task complexity, difficulty, learning, software/cloud fees, payment feasibility and sustainability.
+- Project economic analysis: scoped fixed price vs estimated effective hours, direct costs, risk and revision allowance; standalone project caps 100 hours AND 10 days still apply.
+- Different categories (e.g., video editing vs website engineering) require distinct skill/complexity multipliers, time baselines and reference-rate evidence. Do NOT hardcode unsupported market rates or assume all work is equally difficult. Price floor is category- and user-cost-sensitive, not a single arbitrary universal amount.
+- Build a configurable category table (video, web, automation, voice, Windows, tourism, other) with verified skill evidence, effort baseline, uncertainty, minimum acceptable net hourly rate (user to approve), reference price source/date, and risk/overhead factor.
+- For negotiable project prices, calculate competitive quote from grounded comparables, net hourly floor and scope. 30–50% below market is an option only, not an approved automatic discount. Employment monthly/hourly quotes are separate and require approved floor.
+- If key compensation, hours, category or market evidence is missing, classify as NEEDS_REVIEW for pricing rather than invent numbers; missing *listing restrictions* remain nonblocking for initial eligibility screening.
+
+### Updated implementation order and estimates
+1. Inspect existing GitHub Hub, contracts and schemas; avoid duplicate authoritative database/queue (1–3 engineering hours).
+2. Build minimal JSON per-site profiles + category economics config and SQLite audit schema (3–6h).
+3. Implement deterministic eligibility engine with compact reason codes and test fixtures (4–8h).
+4. Implement project estimate/quote and employment net-hourly feasibility calculations with tests (6–12h).
+5. Run 10-record authorized read-only Ui.Vision pilot, measure memory, dedup and capture provenance (4–10h, depends on site).
+6. Validate actual AGNT/OmniRoute structured extraction, drafts, outbound simulation, receipt and reply workflow (6–14h, depends on integration).
+Total rough engineering effort 24–53h; a one-week offline MVP may be possible with focused work but full live site automation is not guaranteed. These are estimates, not measured durations.
+
+### Open user decisions before production quoting/sending
+Minimum net hourly rate per work category or initial shared floor, currency and fee assumptions; acceptable employment hours/week and schedules; 5-day preference vs 10-day cap; automatic discount maximum; languages and portfolio evidence; exact initial message; response notifications; per-site access and sending permissions. Start offline modules without blocking on all decisions.
