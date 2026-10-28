@@ -124,3 +124,6 @@ User output: OH_04_ATOMIC_ROLLBACK=PASS; STATUS_PRESERVED=SENT; HISTORY_EVENTS=N
 
 ## OH-04 operational migration verified by Windows output
 User reported SCHEMA_VERSION=djmrn.oh.local.v1, OPPORTUNITIES=0, HISTORY_ROWS=0, INTEGRITY=ok, OH_04_MIGRATION=PASS. Pre-migration backup previously validated. Next test engine against temporary SQLite copy, without modifying live database.
+
+## OH-04 COMPLETED — Windows v1 compatibility verified
+User reported OH_04_V1_COMPATIBILITY=PASS; EVENTS=NEW,SEEN,UPDATED; HISTORY=NEW,UPDATED; TEST_COPY_RECORDS=1; REAL_DATABASE_MODIFIED=NO; TEMPORARY_COPY_CLEANUP=PASS. Test used a temporary SQLite backup copy of operational v1 database, not the live DB. Prior gates: synthetic dedup, status preservation, injected failure rollback, operational v1 migration and integrity passed. OH-04 baseline completed. OH-05 site ingestion/read-only adapter remains pending; no live website actions or outbound messages authorized.
