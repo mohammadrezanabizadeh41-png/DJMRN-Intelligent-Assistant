@@ -103,3 +103,6 @@ User attempted integrated CLI test; first GOOD case failed before evaluation: Mo
 
 ## OH-03 integrated Windows retest — PASS
 User installed patched app/evaluate.py (SHA256 2A4D0601C7C49BFD3F3F7BC4906C633888C5BBDBB539D44019F43DD1832D9299). Three CLI cases: GOOD ACCEPT_FOR_REVIEW, LOW REJECT, UNKNOWN HOLD_FOR_REVIEW, all matched; OH_03_INTEGRATION_RETEST=PASS. OH-03 initial calculator+screen integration verified on Windows using synthetic inputs. No live sites or outbound actions. Next OH-04 durable opportunity ledger with safe idempotent upsert and tests.
+
+## OH-04 initial Windows synthetic test — IMPORT FAILURE
+User downloaded ledger.py and test_ledger.py successfully, but `py -I test_ledger.py` failed before any database operations with ModuleNotFoundError: No module named 'ledger'. Root cause Python isolated mode omits script directory from import path. Patched test_ledger.py to add its own resolved directory to sys.path, commit 8ebe2e2977a0e6af7dbee6a883c2cfbbbc0dc2d9. Windows retest pending; OH-04 NOT PASS. Test only references temporary database, not operational DB.
