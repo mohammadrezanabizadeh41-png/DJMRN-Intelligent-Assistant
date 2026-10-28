@@ -31,3 +31,10 @@ User executed the approved local PowerShell setup and reported:
 - `DIRECTORY_COUNT=6`
 - `OH_W1_RESULT=CREATED`
 **Status:** OH-W1 COMPLETE on user Windows per console output. No executable, configuration, SQLite database, automation, or live integrations have yet been installed or tested. Next OH-W2: audit existing hub interfaces and prepare a minimal versioned local bootstrap/test, then execute on Windows and record receipts. Do not confuse source commits with local deployment.
+
+
+## OH-W2 initial implementation (2026-10-28)
+- Inspected `05-assistants-and-capabilities/src/coordination_hub_p1/README.md` and `hub_p1.py`: P1 is a synthetic-only in-process CAP-006 reference, not a production coordinator, and cannot yet execute Opportunity Hunter.
+- Committed and read-back verified `09-opportunity-hunter/src/bootstrap.py` at commit `ac2b59592937785b106eb43f38fcf5757cd222e2`; Python stdlib only, no browser, network or send. Creates local `data/opportunities.sqlite3`, metadata version, deduplicated opportunity table and quick-check; refuses missing directories and mismatched schema version.
+- Supplied user a PowerShell download/install and run command pinned to commit; **Windows execution result PENDING USER OUTPUT**. No claim of local SQLite success yet.
+- Follow-up after local PASS: add tests for bootstrap repeatability/duplicate rejection, then versioned site policies and deterministic screening.
