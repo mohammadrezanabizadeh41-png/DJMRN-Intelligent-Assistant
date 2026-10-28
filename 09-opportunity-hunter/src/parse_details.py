@@ -1,4 +1,4 @@
-"""DJMRN OH-23 source: offline Freelancermap detail extractor.
+"""DJMRN OH-28 source: conservative offline Freelancermap detail extractor.
 
 Additive structured-field extension of OH-08. Reads JSON files only; stdout only;
 never opens SQLite or a network connection. Original capture remains canonical.
@@ -33,8 +33,8 @@ SC_NOT_REQUIRED_RE = re.compile(
     r"|no\s+(?:(?:SC|security)\s+)?clearance\s+required)\b", re.I
 )
 DURATION_RE = re.compile(r"\b(?:initial\s+)?(?P<count>\d{1,2})\s*[- ]\s*(?P<unit>months?|weeks?|days?)\b", re.I)
-ONSITE_DAYS_RE = re.compile(r"\b(?P<low>\d)\s*(?:-|to)\s*(?P<high>\d)\s*days?\s*per\s*week\s*on\s*[- ]?site\b", re.I)
-ONE_ONSITE_DAY_RE = re.compile(r"\b(?P<count>\d)\s*days?\s*per\s*week\s*on\s*[- ]?site\b", re.I)
+ONSITE_DAYS_RE = re.compile(r"\b(?P<low>\d)\s*(?:-|to)\s*(?P<high>\d)\s*days?\s*per\s*week\s*(?:on\s*[- ]?site|in\s*(?:the\s*)?office)\b", re.I)
+ONE_ONSITE_DAY_RE = re.compile(r"\b(?P<count>\d)\s*days?\s*per\s*week\s*(?:on\s*[- ]?site|in\s*(?:the\s*)?office)\b", re.I)
 
 
 def _excerpt(s, limit=220):
@@ -127,6 +127,64 @@ def _duration(pre, description):
     }
 
 
+# OH-28: application form is untrusted evidence. No signal here authorizes sending.
+APPLICATION_CLOSED_PATTERNS = (
+    re.compile(r"\bapplications?\s+not\s+(?:possible|accepted|available|open)\b", re.I),
+    re.compile(r"\b(?:project|position|vacancy|role)\s+(?:has\s+)?(?:already\s+)?(?:been\s+)?closed\b", re.I),
+    re.compile(r"\bno\s+longer\s+accept(?:s|ing)?\s+applications?\b", re.I),
+    re.compile(r"\bapplications?\s+(?:are|is)\s+(?:now\s+)?closed\b", re.I),
+    re.compile(r"\bapplications?\s+are\s+no\s+longer\s+accepted\b", re.I),
+    re.compile(r"\bapplication\s+(?:period|window)\s+(?:has\s+)?(?:ended|closed)\b", re.I),
+)
+
+
+def _application_status(form):
+    """Conservative status from THIS listing's form, not similar-project snippets.
+
+    The presence of a submit label never verifies a functioning submission path.
+    A closed signal always beats a visible submit label. Missing data => UNKNOWN.
+    """
+    if not isinstance(form, str) or not form.strip():
+        return {"status": "UNKNOWN", "closed_detected": False,
+                "evidence": None, "automatic_send_allowed": False}
+    for pattern in APPLICATION_CLOSED_PATTERNS:
+        match = pattern.search(form)
+        if match:
+            start = max(0, match.start() - 60)
+            end = min(len(form), match.end() + 70)
+            return {"status": "CLOSED", "closed_detected": True,
+                    "evidence": _excerpt(form[start:end]),
+                    "automatic_send_allowed": False}
+    if re.search(r"\bsend\s+application\b|\bsubmit\s+application\b|\bapply\s+now\b", form, re.I):
+        return {"status": "FORM_VISIBLE_UNVERIFIED", "closed_detected": False,
+                "evidence": "Submit label visible, but acceptance and site permission not verified",
+                "automatic_send_allowed": False}
+    return {"status": "UNKNOWN", "closed_detected": False,
+            "evidence": None, "automatic_send_allowed": False}
+
+
+def _outreach_gate(app, contract_duration, header_modes, description_modes, clearance, truncated):
+    """Deterministic blockers, never a grant to apply; human approval always required."""
+    blockers = []
+    if truncated:
+        blockers.append("SOURCE_TEXT_TRUNCATED")
+    if app["closed_detected"]:
+        blockers.append("APPLICATION_CLOSED")
+    term = contract_duration.get("term")
+    if term and (term["unit"] == "month" or
+                 (term["unit"] == "week" and term["count"] >= 2) or
+                 (term["unit"] == "day" and term["count"] > 10)):
+        blockers.append("PROJECT_DURATION_OVER_10_DAYS")
+    if header_modes == ["On-site"] and not set(description_modes).intersection({"Hybrid", "Remote"}):
+        blockers.append("ONSITE_ONLY")
+    if clearance["status"] in ("REQUIRED_CURRENT", "AMBIGUOUS"):
+        blockers.append("CLEARANCE_REQUIRES_VERIFICATION")
+    return {"state": "BLOCKED" if blockers else "HUMAN_REVIEW_REQUIRED",
+            "reason_codes": blockers,
+            "automatic_send_allowed": False,
+            "human_approval_required": True}
+
+
 def parse(d):
     if d.get("schema_version") != "djmrn.oh.detail.v1" or d.get("site") != "freelancermap":
         raise ValueError("INVALID_SCHEMA")
@@ -197,6 +255,10 @@ def parse(d):
         if days["max"] > 7 or days["min"] > days["max"]:
             days = None
             warnings.append("ONSITE_FREQUENCY_AMBIGUOUS")
+    application_status = _application_status(form)
+    outreach_gate = _outreach_gate(application_status, contract_duration, header_modes, description_modes, clearance, bool(d.get("truncated")))
+    if application_status["closed_detected"]:
+        warnings.append("APPLICATION_CLOSED")
     if d.get("truncated"):
         warnings.append("SOURCE_TEXT_TRUNCATED")
     return {
@@ -208,6 +270,7 @@ def parse(d):
                              "onsite_days_per_week": days, "remote_mentioned": "Remote" in description_modes},
         "duration_months": duration, "contract_duration": contract_duration,
         "budget": rate, "security_clearance": clearance,
+        "application_status": application_status, "outreach_gate": outreach_gate,
         "skills_explicit": skills, "description": description, "application_form": form,
         "source_evidence": {"visible_text_sha256": hashlib.sha256(raw.encode("utf-8")).hexdigest(),
                             "extracted_at_utc": d.get("extracted_at_utc"),
@@ -217,7 +280,7 @@ def parse(d):
 
 
 def main():
-    p = argparse.ArgumentParser(description="OH-23 offline parser; no DB/network")
+    p = argparse.ArgumentParser(description="OH-28 offline parser; no DB/network")
     p.add_argument("files", nargs="+")
     args = p.parse_args()
     seen = set()
@@ -233,7 +296,7 @@ def main():
         report["description_chars"] = len(obj["description"])
         report["application_form_chars"] = len(obj["application_form"] or "")
         print(json.dumps(report, ensure_ascii=False))
-    print(f"OH_23_OFFLINE_PARSE=PASS; UNIQUE_PROJECTS={len(seen)}; DATABASE_WRITES=0; NETWORK_ACTIONS=0")
+    print(f"OH_28_OFFLINE_PARSE=PASS; UNIQUE_PROJECTS={len(seen)}; DATABASE_WRITES=0; NETWORK_ACTIONS=0; OUTBOUND_ACTIONS=0")
 
 
 if __name__ == "__main__":
