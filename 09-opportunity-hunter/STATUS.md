@@ -109,3 +109,6 @@ User downloaded ledger.py and test_ledger.py successfully, but `py -I test_ledge
 
 ## OH-04 Windows retest partial logic PASS, cleanup FAIL
 User test output: NEW/SEEN/UPDATED, final count 1, REAL_DATABASE_MODIFIED=NO; then TemporaryDirectory cleanup failed with Windows WinError 32 on open SQLite file. Therefore full OH-04 gate remains FAIL/PENDING. Cause: sqlite3 connection context manager does not close handle. Both ledger.py and test_ledger.py patched to use contextlib.closing with transaction context, commits 3553f5a944b950a3893f42105535480ac13f89ce and fbfebbe27bf1da065ba3e3a72065a1289c35ad48. Windows retest pending.
+
+## OH-04 Windows synthetic ledger full retest — PASS
+User updated ledger.py SHA256 D796014B3ED5369CEB05867BB320B3989BAD91BA5AB3C6CDEDBF589F6E9AEE22 and test_ledger.py SHA256 B135F00BCBC5F6BEC84A3DD7D1B5C22A4D1E64719C87ECE8DB623259F5CF4FBC. Reported OH_04_SYNTHETIC_LEDGER_TEST=PASS, EVENTS=NEW,SEEN,UPDATED, FINAL_COUNT=1, REAL_DATABASE_MODIFIED=NO, OH_04_FULL_RETEST=PASS. Synthetic basic dedup gate passed including Windows cleanup. Full OH-04 state history, delivery-state preservation and operational DB integration remain pending.
