@@ -127,3 +127,6 @@ User reported SCHEMA_VERSION=djmrn.oh.local.v1, OPPORTUNITIES=0, HISTORY_ROWS=0,
 
 ## OH-04 COMPLETED — Windows v1 compatibility verified
 User reported OH_04_V1_COMPATIBILITY=PASS; EVENTS=NEW,SEEN,UPDATED; HISTORY=NEW,UPDATED; TEST_COPY_RECORDS=1; REAL_DATABASE_MODIFIED=NO; TEMPORARY_COPY_CLEANUP=PASS. Test used a temporary SQLite backup copy of operational v1 database, not the live DB. Prior gates: synthetic dedup, status preservation, injected failure rollback, operational v1 migration and integrity passed. OH-04 baseline completed. OH-05 site ingestion/read-only adapter remains pending; no live website actions or outbound messages authorized.
+
+## OH-05 sample JSON parse test passed
+Windows output confirmed OH_05_SAMPLE_PARSE=PASS, NORMALIZED_RECORDS=2, UNIQUE_RECORDS=2, NETWORK_ACTIONS=0, REAL_DATABASE_MODIFIED=NO. This was inline Python on a synthetic Freelancermap sample, not a reusable ingest module. Next: offline parser with validation and synthetic tests.
