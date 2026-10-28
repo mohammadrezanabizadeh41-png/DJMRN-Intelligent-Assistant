@@ -223,3 +223,6 @@ User did NOT manually change any Freelancermap listing filters between the first
 
 ## OH-19 second production import — WINDOWS VERIFIED PASS (2026-10-28)
 User executed src/import_second_export.py on second 22-row JSON. OH_19_BACKUP=PASS; backup C:\\Users\\Mrn7206\\AppData\\Local\\DJMRN\\OpportunityHunter\\backups\\opportunities-pre-oh19-20261028T164845572924Z.sqlite3. OH_19_PRODUCTION_IMPORT=PASS; EVENTS_NEW=22; BEFORE=22; AFTER=44; HISTORY_AFTER=44; DETAILS=2; OUTBOUND_ATTEMPTS=0; BACKUP_RETAINED=YES; OUTBOUND_ACTIONS=0; APPLICATIONS_USED=0. Filters were not changed by user; new means not in ledger, not verified publication time. Next OH-20 read-only shortlist all 44.
+
+## OH-20 full 44-row read-only screening — WINDOWS VERIFIED PASS (2026-10-28)
+User supplied actual Windows report from report_real_shortlist.py: OH_17_REAL_READ_ONLY_REPORT=PASS; TOTAL=44; DETAIL_ROWS=2; NOT_SUITABLE_OR_CONFLICT=2; LOW_PRIORITY_TITLE_ONLY=24; NEEDS_DETAILS=18; APPLICATION_RECOMMENDATIONS=0; PRODUCTION_WRITES=0; OUTBOUND_ACTIONS=0. This is OH-20 operational reuse of OH-17 script. Caveat: NEEDS_DETAILS is broad fallback, not proof of relevance; some titles explicitly state 6- or 12-month terms and should be downgraded by improved title prefilter. Next OH-21 design read-only evidence-based ranked shortlist and capture plan, no sends.
