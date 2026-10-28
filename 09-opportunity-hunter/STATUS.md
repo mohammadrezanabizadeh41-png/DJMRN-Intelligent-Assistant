@@ -139,3 +139,6 @@ User output: OH_05_VALIDATION=PASS, NORMALIZED_RECORDS=2, INVALID_CASES_REJECTED
 
 ## OH-05 Windows ingest-to-ledger integration — PASS
 User output: OH_05_LEDGER_INTEGRATION=PASS; EVENTS=NEW,SEEN,UPDATED; HISTORY_ROWS=3; FINAL_COUNT=2; STATUS_PRESERVED=SENT; REAL_DATABASE_MODIFIED=NO; TEMP_COPY_CLEANUP=PASS; OH_05_INTEGRATION_COMMAND=COMPLETED. Test used temporary SQLite copy of operational v1 database. Live website ingestion not yet tested; no outbound messages.
+
+## OH-05 Freelancermap real page structure — visual inspection only
+User screenshots show project detail overlay at /projects?id=3066230. Visible: ID 3066230, title IT Cost Optimisation/Cost-Out Specialist, employer Dns Info Ltd, London UK, On-site, Freelance, publication displayed 2026-10-28 17:33, description and skills, and application form requiring email, UK work qualification, CV, name, telephone, availability, salary expectation. Budget and duration not visible. This is visual evidence only; selectors and automated extraction remain UNVERIFIED. No application submitted. Prior synthetic ledger integration PASS.
