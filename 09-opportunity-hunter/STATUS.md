@@ -154,3 +154,6 @@ User PowerShell output: OH_05_MACRO_DOWNLOAD=PASS; file C:\Users\Mrn7206\AppData
 
 ## OH-05 Ui.Vision first execution
 User screenshot: imported macro visible, executeScript and echo both green, Ui.Vision displays '[info] Macro completed (Runtime 0.69s...)'. Execution completed without reported error. Extracted record counts not yet verified from log; awaiting log screenshot. No claim of SQLite import.
+
+## OH-05 Ui.Vision real browser execution — VERIFIED PASS
+User screenshots of Ui.Vision Logs show echo JSON total=22, numeric=12, fallback=10, unique=22, with two example records containing source_site/external_id/title/canonical_url. Macro completed in 0.69 seconds with '100% local execution, no cloud used'. This validates read-only DOM extraction and identity uniqueness on loaded results, not full 931 listings. Macro only logs summary and two samples; it does NOT export all rows, persist to SQLite, or send messages. Next deliverable: safe complete JSON export and local validation before controlled DB ingestion.
