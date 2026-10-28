@@ -1,0 +1,47 @@
+{
+  "schema_version": "djmrn.oh.site-profile.v1",
+  "site": "freelancermap",
+  "account": {
+    "plan": "Basic",
+    "verified_by": "USER",
+    "reported_remaining_applications": 10,
+    "reported_on": "2026-10-28",
+    "reset_estimate": "2026-11-17",
+    "reset_verified": false
+  },
+  "discovery": {
+    "listing_export": "Ui.Vision read-only JSON",
+    "detail_export": "Ui.Vision read-only JSON",
+    "listing_records_imported": 22,
+    "detail_records_imported": 2
+  },
+  "screening": {
+    "max_project_hours": 100,
+    "max_calendar_days": 10,
+    "min_net_usd_per_effective_hour": 5,
+    "employment_default": "REJECT",
+    "missing_budget": "NEEDS_VERIFICATION",
+    "unknown_remote_eligibility": "NEEDS_VERIFICATION",
+    "usdt": "PREFERRED_NOT_HARD_REJECT",
+    "title_only": "INSUFFICIENT_FOR_FINAL_APPLICATION"
+  },
+  "outbound": {
+    "mode": "DRAFT_ONLY",
+    "per_project_message_approval": true,
+    "global_spacing_seconds": 300,
+    "site_monthly_limit": 10,
+    "actual_remaining_quota_source": "USER_REPORTED",
+    "automation_permission": "UNVERIFIED",
+    "send_enabled": false
+  },
+  "selection": {
+    "priority": "verified_fit_then_budget_then_delivery_feasibility",
+    "avoid_spending_quota_on_incomplete_details": true
+  },
+  "notes": [
+    "User-reported remaining quota is not independently verified against website.",
+    "Reset date is approximate, not an asserted site policy.",
+    "Global five-minute cooldown is shared with every other site.",
+    "Do not send messages, log in, or mutate production DB in OH-16."
+  ]
+}
