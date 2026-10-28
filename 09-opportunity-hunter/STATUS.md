@@ -190,3 +190,6 @@ User ran approved src/apply_detail_store.py. Output OH_10_BACKUP=PASS; backup C:
 
 ## OH-11 outbound gate — WINDOWS VERIFIED PASS (2026-10-28)
 User ran src/outbound_gate.py --self-test against config/outbound-policy.v1.json. Output OH_11_GATE_SELF_TEST=PASS; CASES=4; GLOBAL_COOLDOWN_SECONDS=300; FREELANCEMAP_MONTHLY_LIMIT=10; SENDS=0; DB_WRITES=0. All four scenarios HOLD: unknown quota and permission; 10/month cap; unknown site; missing approval plus cross-site cooldown. Five-minute minimum is global across sites; 10/month applies only to Freelancermap Basic. Next OH-12 read-only usage ledger test on temporary SQLite; no outbound actions.
+
+## OH-12 outbound ledger disposable test — WINDOWS VERIFIED PASS (2026-10-28)
+User ran src/test_outbound_ledger.py: OH_12_LEDGER_TEST=PASS; MONTHLY_COUNT=10; DAILY_COUNT=10; GLOBAL_LAST_EVENT_FROM_OTHER_SITE=YES; RESERVED_AND_UNKNOWN_COUNTED=YES; CONFIRMED_FAILURE_EXCLUDED=YES; DUPLICATE_PREVENTED=YES; TEMP_DATABASE_ONLY=YES; PRODUCTION_WRITES=0; SENDS=0. Counts are synthetic test fixtures, NOT real Freelancermap account usage. Next OH-13 production migration needs backup, explicit approval, and read-only preparation first.
