@@ -6,7 +6,10 @@ import pathlib
 import unittest
 import hashlib
 
-spec = importlib.util.spec_from_file_location('oh29', pathlib.Path(__file__).with_name('oh29_uivision_preflight.py'))
+candidate = pathlib.Path(__file__).resolve().with_name('oh29_uivision_preflight.py')
+if not candidate.is_file():
+    candidate = pathlib.Path(__file__).resolve().parent.parent / 'src' / 'oh29_uivision_preflight.py'
+spec = importlib.util.spec_from_file_location('oh29', candidate)
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)
 
