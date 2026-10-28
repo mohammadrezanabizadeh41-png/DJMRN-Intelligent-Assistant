@@ -1,0 +1,18 @@
+{
+  "Name": "DJMRN-OH05-Freelancermap-ReadOnly-Pilot",
+  "CreationDate": "2026-10-28",
+  "Commands": [
+    {
+      "Command": "executeScript",
+      "Target": "if(location.hostname!=='www.freelancermap.com'&&location.hostname!=='freelancermap.com')throw Error('WRONG_SITE');var a=Array.from(document.querySelectorAll('a[data-testid=\"title\"]'));var rows=a.map(function(e){var u=new URL(e.getAttribute('href'),location.origin);var p=u.pathname.replace(/\\/+$/,'');var m=p.match(/-(\\d+)$/);return {source_site:'freelancermap',external_id:m?m[1]:'url:'+p,id_type:m?'numeric':'url_fallback',title:e.textContent.trim(),canonical_url:u.origin+p};});var keys=rows.map(function(x){return x.external_id});if(keys.length!==new Set(keys).size)throw Error('DUPLICATE_KEYS');return JSON.stringify({total:rows.length,numeric:rows.filter(function(x){return x.id_type==='numeric'}).length,fallback:rows.filter(function(x){return x.id_type==='url_fallback'}).length,unique:new Set(keys).size,first:rows.slice(0,2)});",
+      "Value": "djmrnSummary",
+      "Description": "Read only loaded project links; no click, submit, or network request"
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH05=${djmrnSummary}",
+      "Value": "green",
+      "Description": "Show summary and two sample records in Ui.Vision log"
+    }
+  ]
+}
