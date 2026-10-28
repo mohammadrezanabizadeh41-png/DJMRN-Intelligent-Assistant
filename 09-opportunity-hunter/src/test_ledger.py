@@ -1,4 +1,5 @@
 import sqlite3
+from contextlib import closing
 import tempfile
 from pathlib import Path
 import sys
@@ -7,14 +8,14 @@ from ledger import record
 
 with tempfile.TemporaryDirectory(prefix="djmrn-oh04-") as tmp:
     dbpath = str(Path(tmp) / "test.sqlite3")
-    with sqlite3.connect(dbpath) as db:
+    with closing(sqlite3.connect(dbpath)) as db, db:
         db.execute("CREATE TABLE opportunities (id INTEGER PRIMARY KEY AUTOINCREMENT, source_site TEXT NOT NULL, external_id TEXT NOT NULL, canonical_url TEXT, title TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'DISCOVERED', created_utc TEXT NOT NULL, UNIQUE(source_site,external_id))")
     item = {"source_site":"freelancermap","external_id":"synthetic-001","title":"Video editing","canonical_url":"https://example.invalid/001"}
     first = record(dbpath,item)
     second = record(dbpath,item)
     changed = dict(item, title="Video editing revised")
     third = record(dbpath,changed)
-    with sqlite3.connect(dbpath) as db:
+    with closing(sqlite3.connect(dbpath)) as db, db:
         count = db.execute("SELECT COUNT(*) FROM opportunities").fetchone()[0]
         title = db.execute("SELECT title FROM opportunities").fetchone()[0]
     assert [first["event"],second["event"],third["event"]] == ["NEW","SEEN","UPDATED"]
