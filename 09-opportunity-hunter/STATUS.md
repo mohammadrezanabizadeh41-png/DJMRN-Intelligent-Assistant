@@ -217,3 +217,6 @@ User ran src/report_real_shortlist.py on production SQLite: OH_17_REAL_READ_ONLY
 
 ## OH-18 incremental Freelancermap export — WINDOWS VERIFIED PASS (2026-10-28)
 User executed compare_new_export.py on file DJMRN-OH05-freelancermap-2026-10-28T16-44-06-232Z.json. OH_18_READ_ONLY=PASS; TOTAL=22; NEW=22; SEEN=0; UPDATED_TITLE=0; DB_WRITES=0; SENDS=0. File uploaded into conversation. This is a comparison against the then-current production ledger (22 records); 22 additional records NOT YET IMPORTED. Next OH-19 needs preflight/backup and explicit production-import approval. Existing OH-05 import script is hardcoded for first 22 and approval token; do not reuse unmodified.
+
+## OH-18 provenance correction (user clarification)
+User did NOT manually change any Freelancermap listing filters between the first and second 22-row Ui.Vision exports. Do NOT attribute second batch to recommended Remote/End-client/skill filters. OH-18 NEW=22 means absent from local database at comparison time, NOT independently verified newly published projects; site updates, sorting, pagination, or page refresh may explain difference. OH-19 user pasted execution command but has NOT provided execution output; production import remains UNVERIFIED/PENDING. Preserve these distinctions in future reports.
