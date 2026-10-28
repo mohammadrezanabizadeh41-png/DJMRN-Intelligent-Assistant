@@ -1,0 +1,56 @@
+{
+  "schema_version": "djmrn.oh.policy.v1",
+  "global_project_limits": {
+    "max_hours": 100,
+    "max_calendar_days": 10
+  },
+  "markets": {
+    "INTL": {
+      "currency": "USD",
+      "project_hourly_floor": 5,
+      "employment_hourly_floor": null
+    },
+    "IR": {
+      "currency": "TOMAN",
+      "project_hourly_floor": null,
+      "employment_hourly_floor": null
+    }
+  },
+  "sites": {
+    "freelancermap": {
+      "market": "INTL",
+      "employment_allowed": false,
+      "allowed_actions": [
+        "READ",
+        "ANALYZE",
+        "DRAFT"
+      ],
+      "send_enabled": false
+    },
+    "linkedin": {
+      "market": "INTL",
+      "employment_allowed": true,
+      "allowed_actions": [
+        "READ",
+        "ANALYZE",
+        "DRAFT"
+      ],
+      "send_enabled": false
+    },
+    "iranian_template": {
+      "market": "IR",
+      "employment_allowed": null,
+      "allowed_actions": [
+        "READ",
+        "ANALYZE",
+        "DRAFT"
+      ],
+      "send_enabled": false
+    }
+  },
+  "notes": [
+    "Unknown Iranian pricing floor => HOLD_FOR_REVIEW",
+    "USDT is a negotiation preference, not an exclusion filter",
+    "SEND disabled until explicit site approval and verification"
+  ]
+}
