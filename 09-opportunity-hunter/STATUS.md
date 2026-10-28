@@ -130,3 +130,6 @@ User reported OH_04_V1_COMPATIBILITY=PASS; EVENTS=NEW,SEEN,UPDATED; HISTORY=NEW,
 
 ## OH-05 sample JSON parse test passed
 Windows output confirmed OH_05_SAMPLE_PARSE=PASS, NORMALIZED_RECORDS=2, UNIQUE_RECORDS=2, NETWORK_ACTIONS=0, REAL_DATABASE_MODIFIED=NO. This was inline Python on a synthetic Freelancermap sample, not a reusable ingest module. Next: offline parser with validation and synthetic tests.
+
+## OH-05 offline validator code ready; Windows test pending
+Created src/ingest.py commit 4407dd6a7d49940486a7ebffc67bb1ed68845f21 and src/test_ingest.py commit 94588fc06e6e24ab012614532cbdd045203b7aa4. Validation: Freelancermap only, required ID/title, HTTPS URL, duplicate IDs, max 1000 entries. No network or DB writes. NOT YET TESTED ON WINDOWS.
