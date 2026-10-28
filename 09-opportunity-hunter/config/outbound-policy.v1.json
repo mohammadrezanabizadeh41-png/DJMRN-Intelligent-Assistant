@@ -19,7 +19,9 @@
         "UNKNOWN_SEND",
         "QUOTA_UNKNOWN",
         "AUTOMATION_PERMISSION_UNVERIFIED"
-      ]
+      ],
+      "plan_verified_by_user": true,
+      "plan_verified_date": "2026-10-28"
     }
   },
   "global": {
