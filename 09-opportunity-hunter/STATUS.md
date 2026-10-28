@@ -79,3 +79,6 @@ Committed and readback parsed `09-opportunity-hunter/config/policy.v1.json` (sch
 
 ## OH-01 Windows test PASS
 User PowerShell output: OH_01_POLICY_VALIDATION=PASS; SITE_PROFILES=freelancermap,linkedin,iranian_template; AUTOMATIC_SEND=DISABLED. Local policy installed in OpportunityHunter/config/policy.v1.json. Initial deployment verified; advanced override tests pending.
+
+## OH-02 deterministic screening source prepared
+Created src/screen.py commit b5abcaa2f1c75e67959b2220f6892912bf1b7224 and src/test_screen.py commit 75e6d2092a4c4bf7b7e02f769a4deedace143f1e. 12 unit tests authored, not yet executed on Windows. No site connections, sends or real opportunity ingestion. OH-02 pending Windows download, test output, and verification.
