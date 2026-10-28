@@ -55,3 +55,10 @@ User executed the approved local PowerShell setup and reported:
 - `PRAGMA index_list(opportunities)` = `[(0, 'sqlite_autoindex_opportunities_1', 1, 'u', 0)]`: unique index exists.
 - `OH_W2_READONLY_CHECK=COMPLETE`.
 **Interpretation:** actual Windows database integrity/schema/unique index verified. This is NOT yet an insert/dedup or reopen-persistence test. Next: isolated temporary SQLite synthetic insert/reopen/duplicate test without modifying operational database.
+
+
+## OH-W2 synthetic SQLite test — PARTIAL PASS / CLEANUP FAIL (user Windows receipt)
+- Synthetic temporary SQLite: `REOPEN_PERSISTENCE=PASS`, `DUPLICATE_REJECTION=PASS`, `FINAL_SYNTHETIC_COUNT=1`.
+- Then `tempfile.TemporaryDirectory` cleanup raised `PermissionError [WinError 32]` deleting `synthetic-test.sqlite3`; thus `OH_W2_SYNTHETIC_TEST=PASS` was **not** printed and end-to-end test is NOT PASS.
+- Root cause in supplied test script: `with sqlite3.connect(...) as db` commits/rolls back but does not close connection. On Windows open file handle blocks temporary directory deletion.
+- Corrective action: explicit `db.close()` in `finally` or `contextlib.closing` around connection, then rerun; separately verify cleanup. Do not claim operational DB was modified by this synthetic test. No real DB write in script.
