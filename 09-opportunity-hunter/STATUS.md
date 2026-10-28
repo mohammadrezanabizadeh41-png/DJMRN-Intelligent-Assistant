@@ -82,3 +82,6 @@ User PowerShell output: OH_01_POLICY_VALIDATION=PASS; SITE_PROFILES=freelancerma
 
 ## OH-02 deterministic screening source prepared
 Created src/screen.py commit b5abcaa2f1c75e67959b2220f6892912bf1b7224 and src/test_screen.py commit 75e6d2092a4c4bf7b7e02f769a4deedace143f1e. 12 unit tests authored, not yet executed on Windows. No site connections, sends or real opportunity ingestion. OH-02 pending Windows download, test output, and verification.
+
+## OH-02 Windows unit-test receipt — PASS
+User installed app/screen.py SHA256 5697B4198AFB69AEAA63AF55CA59E6AD30CC0F8CD203948FACCE3C54F4349BA6 and app/test_screen.py SHA256 755C5134A305C01385D26BA197514931381F79DBD7E609DAFF96358F05395B2F. Python unit tests: Ran 12 tests in 0.003s, OK, OH_02_WINDOWS_TESTS=PASS. Scope: deterministic synthetic unit tests only; no live-site read, external send, production ingestion, or integration acceptance. Next: CLI sample inputs and edge-case hardening.
