@@ -1,0 +1,114 @@
+{
+  "Name": "DJMRN-OH35-Freelancermap-ThreePage-ReadOnly-Pilot",
+  "CreationDate": "2026-10-29",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://www.freelancermap.com/projects",
+      "Value": "",
+      "Description": "Exactly 3 listed pages, 2 paginator clicks total; no batch loop or schedule."
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "css=a[data-testid=\"title\"]",
+      "Value": "",
+      "Description": "Only proceed with loaded listing card(s)."
+    },
+    {
+      "Command": "executeScript",
+      "Target": "if(!['freelancermap.com','www.freelancermap.com'].includes(location.hostname)||location.pathname!='/projects')throw Error('OH33_WRONG_PAGE');var active=Array.from(document.querySelectorAll('div.paginator-item.active')).map(function(e){return e.textContent.trim()});if(active.length<1||active.some(function(t){return t!=='1'}))throw Error('OH33_NOT_PAGE1');var two=Array.from(document.querySelectorAll('div.paginator-item')).filter(function(e){return e.textContent.trim()==='2'});if(two.length<1||two.length>2)throw Error('OH33_PAGE2_CONTROL_AMBIGUOUS');var cards=Array.from(document.querySelectorAll('a[data-testid=\"title\"]'));if(cards.length<1||cards.length>30)throw Error('OH34_BAD_PAGE1_CARD_COUNT');return JSON.stringify({schema_version:'djmrn.oh34.page-ready.v1',active_page:1,card_count:cards.length,authorized:'UNVERIFIED',no_send:true});",
+      "Value": "djmrnOH35Page1",
+      "Description": "Verify known page1 state and numeric 2 control before any export."
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH35_PAGE1=${djmrnOH35Page1}",
+      "Value": "green",
+      "Description": "Record page1 readiness (not content equivalence)."
+    },
+    {
+      "Command": "run",
+      "Target": "DJMRN-OH05-Freelancermap-Export-Pilot",
+      "Value": "",
+      "Description": "Re-use verified DOM-only OH05 exporter to download page1 JSON, no DB writes."
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=(//div[contains(concat(' ', normalize-space(@class), ' '), ' paginator-item ') and normalize-space(.)='2'])[last()]",
+      "Value": "",
+      "Description": "Exactly one click on previously evidenced page2 numeric paginator; no loop."
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "xpath=//div[contains(concat(' ', normalize-space(@class), ' '), ' paginator-item ') and contains(concat(' ', normalize-space(@class), ' '), ' active ') and normalize-space(.)='2']",
+      "Value": "",
+      "Description": "Wait for page number 2 to become active (two CSS class tokens)."
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": "Bounded 2-second settling; not a repeated or scheduled loop."
+    },
+    {
+      "Command": "executeScript",
+      "Target": "if(!['freelancermap.com','www.freelancermap.com'].includes(location.hostname)||location.pathname!='/projects')throw Error('OH33_WRONG_PAGE_AFTER');var active=Array.from(document.querySelectorAll('div.paginator-item.active')).map(function(e){return e.textContent.trim()});if(active.length<1||active.some(function(t){return t!=='2'}))throw Error('OH33_PAGE2_NOT_ACTIVE');var cards=Array.from(document.querySelectorAll('a[data-testid=\"title\"]'));if(cards.length<1||cards.length>30)throw Error('OH34_BAD_PAGE2_CARD_COUNT');var threes=Array.from(document.querySelectorAll('div.paginator-item')).filter(function(e){return e.textContent.trim()==='3'});if(threes.length<1||threes.length>2)throw Error('OH35_PAGE3_CONTROL_AMBIGUOUS');return JSON.stringify({schema_version:'djmrn.oh34.page-ready.v1',active_page:2,card_count:cards.length,authorized:'UNVERIFIED',no_send:true});",
+      "Value": "djmrnOH35Page2",
+      "Description": "Verify page2 is active and the numeric 3 paginator control exists before export."
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH35_PAGE2=${djmrnOH35Page2}",
+      "Value": "green",
+      "Description": "Record page2 readiness."
+    },
+    {
+      "Command": "run",
+      "Target": "DJMRN-OH05-Freelancermap-Export-Pilot",
+      "Value": "",
+      "Description": "Re-use verified OH05 exporter for page2. Second, final JSON download."
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=(//div[contains(concat(' ', normalize-space(@class), ' '), ' paginator-item ') and normalize-space(.)='3'])[last()]",
+      "Value": "",
+      "Description": "Exactly one click on visible numeric page3 control; cumulative total 2 clicks."
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "xpath=//div[contains(concat(' ', normalize-space(@class), ' '), ' paginator-item ') and contains(concat(' ', normalize-space(@class), ' '), ' active ') and normalize-space(.)='3'",
+      "Value": "",
+      "Description": "Only proceed once actual paginator active page 3."
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": "Allow content to settle; no repetition."
+    },
+    {
+      "Command": "executeScript",
+      "Target": "if(!['freelancermap.com','www.freelancermap.com'].includes(location.hostname)||location.pathname!='/projects')throw Error('OH35_WRONG_PAGE3');var active=Array.from(document.querySelectorAll('div.paginator-item.active')).map(function(e){return e.textContent.trim()});if(active.length<1||active.some(function(t){return t!=='3'}))throw Error('OH35_PAGE3_NOT_ACTIVE');var cards=Array.from(document.querySelectorAll('a[data-testid=\"title\"]'));if(cards.length<1||cards.length>30)throw Error('OH35_BAD_PAGE3_CARD_COUNT');return JSON.stringify({schema_version:'djmrn.oh35.page-ready.v1',active_page:3,card_count:cards.length,authenticated:'UNVERIFIED',no_send:true});",
+      "Value": "djmrnOH35Page3",
+      "Description": "Bounded read-only DOM validation on page3; verify real project listing count."
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH35_PAGE3=${djmrnOH35Page3}",
+      "Value": "green",
+      "Description": "Audit page3 readiness."
+    },
+    {
+      "Command": "run",
+      "Target": "DJMRN-OH05-Freelancermap-Export-Pilot",
+      "Value": "",
+      "Description": "Third and last re-use of OH05; local JSON only."
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH35_END=THREE_PAGES_EXPORTED;RECONCILIATION=PENDING;PAGE_CLICKS=2;OUTBOUND=0;DB_WRITES=0",
+      "Value": "green",
+      "Description": "End after 3 pages. Distinctness and SQLite reconcile pending independent offline check."
+    }
+  ]
+}
