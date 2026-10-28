@@ -97,3 +97,6 @@ User installed app/quote.py from pinned commit 04763eeec30d31ca07441abd715fdd66f
 
 ## OH-03 Windows edge-case receipt — PASS
 User executed five quote.py CLI cases: LOW_RATE CALCULATED (2.00 USD/h); MISSING_COST HOLD_FOR_REVIEW; ZERO_HOURS HOLD_FOR_REVIEW; INVALID_FEE (150%) HOLD_FOR_REVIEW; IRANIAN_PROJECT CALCULATED (62500.00 TOMAN/h). Output OH_03_EDGE_TESTS=PASS. Combined with earlier happy path, calculator has six verified Windows scenarios. Calculator-to-screen integration still pending; Iranian rate floor remains unset.
+
+## OH-03 Windows integration test failure and import fix
+User attempted integrated CLI test; first GOOD case failed before evaluation: ModuleNotFoundError: No module named 'quote' from evaluate.py when invoked via py -I. Cause: Python isolated mode excludes script directory from sys.path. Patch in src/evaluate.py adds resolved application script directory to sys.path before importing quote and screen, commit d70cf1155b3f10deb61091b0615944b921856f9d. Windows deployment/retest PENDING; do not claim integration PASS.
