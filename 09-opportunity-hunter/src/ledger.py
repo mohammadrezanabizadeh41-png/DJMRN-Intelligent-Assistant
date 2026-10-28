@@ -1,4 +1,5 @@
 import sqlite3
+from contextlib import closing
 from datetime import datetime, timezone
 
 def record(db_path, item):
@@ -6,7 +7,7 @@ def record(db_path, item):
     external_id = item["external_id"]
     title = item["title"]
     url = item.get("canonical_url")
-    with sqlite3.connect(db_path) as db:
+    with closing(sqlite3.connect(db_path)) as db, db:
         existing = db.execute("SELECT id,title,canonical_url,status FROM opportunities WHERE source_site=? AND external_id=?", (site, external_id)).fetchone()
         if existing is None:
             cursor = db.execute("INSERT INTO opportunities(source_site,external_id,title,canonical_url,created_utc) VALUES(?,?,?,?,?)", (site,external_id,title,url,datetime.now(timezone.utc).isoformat()))
