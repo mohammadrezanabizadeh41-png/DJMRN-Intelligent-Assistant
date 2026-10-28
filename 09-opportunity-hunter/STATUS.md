@@ -199,3 +199,6 @@ User executed src/migrate_outbound_ledger.py with explicit production-write appr
 
 ## OH-14 operational read-only ledger audit — WINDOWS VERIFIED PASS (2026-10-28)
 User ran src/audit_outbound_ledger.py on production SQLite: OH_14_READ_ONLY_AUDIT=PASS; LEDGER_ROWS=0; LOCAL_MONTH_COUNT=0; LOCAL_DAY_COUNT=0; ACCOUNT_QUOTA_FROM_SITE=UNVERIFIED; LOCAL_LEDGER_NOT_AUTHORITATIVE_FOR_SITE_BALANCE=YES; DECISION=HOLD; REASONS=PROJECT_MESSAGE_APPROVAL_MISSING,SEND_DISABLED,AUTOMATION_PERMISSION_UNVERIFIED,QUOTA_UNKNOWN; PRODUCTION_WRITES=0; OUTBOUND_ACTIONS=0. Next: verify actual site/account plan and quota before any proposed outbound operation.
+
+## OH-15 Freelancermap account plan confirmation (2026-10-28)
+User explicitly confirmed Freelancermap plan = Basic (free). Config updated: plan_verified_by_user=true, plan_verified_date=2026-10-28, monthly_application_limit=10; account_remaining_quota=null and quota_reset_rule=UNVERIFIED pending site-account evidence. Global 300-second cross-site cooldown unchanged. Sending disabled, per-project approval required. No production DB mutation or outbound actions.
