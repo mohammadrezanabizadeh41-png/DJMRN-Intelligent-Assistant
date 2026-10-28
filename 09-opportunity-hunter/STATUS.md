@@ -205,3 +205,6 @@ User explicitly confirmed Freelancermap plan = Basic (free). Config updated: pla
 
 ## OH-15 Freelancermap user-reported quota (2026-10-28)
 User reports Basic account has 10 of 10 applications remaining, membership began ~10 days ago, and next reset expected in ~20 days (estimated 2026-11-17). Recorded in outbound-policy.v1.json as USER_REPORTED; reset rule UNVERIFIED_USER_ESTIMATE, not verified against site. Local outbound_attempts remains empty as of OH-14. Global cooldown 300 seconds applies across all sites. send_enabled=false, automation_permission=UNVERIFIED, per-project approval remains mandatory. No sends or local DB changes.
+
+## OH-16 Freelancermap site dossier and shortlist — READY FOR WINDOWS TEST (2026-10-28)
+Created config/freelancermap-profile.v1.json and src/shortlist_freelancermap.py. Five synthetic screening fixtures cover long/on-site work, work authorization, missing details, fully evidenced short project, and below-minimum rate. All shortlist decisions are offline, no production writes or sends. The script has NOT yet been verified on user's Windows machine. Site account: user-reported Basic, 10/10 remaining; reset estimate unverified. Global cooldown 300 seconds across all sites. Next run local self-test, then integrate actual detail records for read-only review.
