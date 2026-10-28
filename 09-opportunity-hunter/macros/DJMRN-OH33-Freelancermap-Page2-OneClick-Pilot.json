@@ -1,0 +1,54 @@
+{
+  "Name": "DJMRN-OH33-Freelancermap-Page2-OneClick-Pilot",
+  "CreationDate": "2026-10-29",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://www.freelancermap.com/projects",
+      "Value": "",
+      "Description": "Reset to project listing page 1; no alternate or guessed URL."
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "css=a[data-testid=\"title\"]",
+      "Value": "",
+      "Description": "Wait for listing card content on known page."
+    },
+    {
+      "Command": "executeScript",
+      "Target": "if(!['freelancermap.com','www.freelancermap.com'].includes(location.hostname)||location.pathname!='/projects')throw Error('OH33_WRONG_PAGE');var active=Array.from(document.querySelectorAll('div.paginator-item-active')).map(function(e){return e.textContent.trim()});if(active.length<1||active.some(function(t){return t!=='1'}))throw Error('OH33_NOT_PAGE1');var two=Array.from(document.querySelectorAll('div.paginator-item')).filter(function(e){return e.textContent.trim()==='2'});if(two.length<1||two.length>2)throw Error('OH33_PAGE2_CONTROL_AMBIGUOUS');var cards=Array.from(document.querySelectorAll('a[data-testid=\"title\"]'));if(cards.length<1||cards.length>30)throw Error('OH33_BAD_CARD_COUNT');var parts=cards.map(function(e){var raw=e.getAttribute('href');if(!raw)throw Error('OH33_MISSING_HREF');var u=new URL(raw,location.origin);if(u.origin!==location.origin||!u.pathname.startsWith('/project/'))throw Error('OH33_BAD_CARD_DOMAIN');return u.pathname.replace(/\\/+$/,'')});var raw=parts.join('|');var h=2166136261;for(var i=0;i<raw.length;i++)h=Math.imul(h^raw.charCodeAt(i),16777619);return String(cards.length)+':'+String(h>>>0);",
+      "Value": "djmrnOH33Before",
+      "Description": "Read-only page 1 active state, bounded card IDs and fingerprint; require exactly valid page-2 buttons."
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=(//div[contains(concat(' ', normalize-space(@class), ' '), ' paginator-item ') and normalize-space(.)='2'])[last()]",
+      "Value": "",
+      "Description": "ONE Ui.Vision click on visually proven page 2 numeric control. Do not click Next, apply, login or send."
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "xpath=//div[contains(concat(' ', normalize-space(@class), ' '), ' paginator-item-active ') and normalize-space(.)='2']",
+      "Value": "",
+      "Description": "Wait for real page indicator to become 2; fail closed on timeout."
+    },
+    {
+      "Command": "pause",
+      "Target": "1700",
+      "Value": "",
+      "Description": "Allow only this page content to settle. No loop."
+    },
+    {
+      "Command": "executeScript",
+      "Target": "if(!['freelancermap.com','www.freelancermap.com'].includes(location.hostname)||location.pathname!='/projects')throw Error('OH33_WRONG_PAGE_AFTER');var active=Array.from(document.querySelectorAll('div.paginator-item-active')).map(function(e){return e.textContent.trim()});if(active.length<1||active.some(function(t){return t!=='2'}))throw Error('OH33_PAGE2_NOT_ACTIVE');var cards=Array.from(document.querySelectorAll('a[data-testid=\"title\"]'));if(cards.length<1||cards.length>30)throw Error('OH33_BAD_CARD_COUNT_AFTER');var parts=cards.map(function(e){var raw=e.getAttribute('href');if(!raw)throw Error('OH33_MISSING_HREF_AFTER');var u=new URL(raw,location.origin);if(u.origin!==location.origin||!u.pathname.startsWith('/project/'))throw Error('OH33_BAD_CARD_DOMAIN_AFTER');return u.pathname.replace(/\\/+$/,'')});var raw=parts.join('|');var h=2166136261;for(var i=0;i<raw.length;i++)h=Math.imul(h^raw.charCodeAt(i),16777619);var current=String(cards.length)+':'+String(h>>>0);var previous=String('${djmrnOH33Before}');if(!/^\\d{1,2}:\\d{1,10}$/.test(previous))throw Error('OH33_BAD_PRIOR_STATE');if(previous===current)throw Error('OH33_CARDS_UNCHANGED');return JSON.stringify({schema_version:'djmrn.oh33.page2-pilot.v1',source:'freelancermap',active_page:2,previous_page:1,before_count:Number(previous.split(':')[0]),after_count:cards.length,before_signature:previous,after_signature:current,sample_titles:cards.slice(0,3).map(function(e){return e.textContent.trim().slice(0,100)}),page_clicks:1,form_submissions:0,database_writes:0,outbound_messages:0});",
+      "Value": "djmrnOH33After",
+      "Description": "Read-only verify page 2 is active and card canonical paths changed since page 1. No JSON download and no DB touch."
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH33_PAGE2=${djmrnOH33After}",
+      "Value": "green",
+      "Description": "Report one-click outcome; one-page pilot ends here."
+    }
+  ]
+}
