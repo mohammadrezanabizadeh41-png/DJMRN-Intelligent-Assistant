@@ -1,0 +1,24 @@
+{
+  "Name": "DJMRN-OH31-Freelancermap-Auto-Start-One-Page",
+  "CreationDate": "2026-10-28",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://www.freelancermap.com/projects",
+      "Value": "",
+      "Description": "Navigate only to one fixed permitted Freelancermap listing page"
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "css=a[data-testid=\"title\"]",
+      "Value": "",
+      "Description": "Wait for at least one visible project card; fail closed on site layout changes"
+    },
+    {
+      "Command": "run",
+      "Target": "DJMRN-OH05-Freelancermap-Export-Pilot",
+      "Value": "",
+      "Description": "Call the existing read-only JSON exporter; no duplicate extraction or message sending"
+    }
+  ]
+}
