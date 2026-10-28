@@ -208,3 +208,6 @@ User reports Basic account has 10 of 10 applications remaining, membership began
 
 ## OH-16 Freelancermap site dossier and shortlist — READY FOR WINDOWS TEST (2026-10-28)
 Created config/freelancermap-profile.v1.json and src/shortlist_freelancermap.py. Five synthetic screening fixtures cover long/on-site work, work authorization, missing details, fully evidenced short project, and below-minimum rate. All shortlist decisions are offline, no production writes or sends. The script has NOT yet been verified on user's Windows machine. Site account: user-reported Basic, 10/10 remaining; reset estimate unverified. Global cooldown 300 seconds across all sites. Next run local self-test, then integrate actual detail records for read-only review.
+
+## OH-16 shortlist offline self-test — WINDOWS VERIFIED PASS (2026-10-28)
+User executed shortlist_freelancermap.py --self-test: five fixtures correctly classified long on-site project NOT_SUITABLE, long project with unavailable work authorization NOT_SUITABLE, missing details NEEDS_DETAILS, fully specified short project READY_FOR_HUMAN_REVIEW, low rate NOT_SUITABLE. OH_16_SHORTLIST_SELF_TEST=PASS; CASES=5; APPLICATIONS_USED=0; DB_WRITES=0; OUTBOUND_ACTIONS=0. Next OH-17 inspect actual SQLite schema read-only before integration.
