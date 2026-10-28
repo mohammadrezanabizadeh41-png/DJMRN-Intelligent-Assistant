@@ -157,3 +157,6 @@ User screenshot: imported macro visible, executeScript and echo both green, Ui.V
 
 ## OH-05 Ui.Vision real browser execution — VERIFIED PASS
 User screenshots of Ui.Vision Logs show echo JSON total=22, numeric=12, fallback=10, unique=22, with two example records containing source_site/external_id/title/canonical_url. Macro completed in 0.69 seconds with '100% local execution, no cloud used'. This validates read-only DOM extraction and identity uniqueness on loaded results, not full 931 listings. Macro only logs summary and two samples; it does NOT export all rows, persist to SQLite, or send messages. Next deliverable: safe complete JSON export and local validation before controlled DB ingestion.
+
+## OH-05 export macro Windows download — verified
+User PowerShell: OH_05_EXPORT_MACRO_DOWNLOAD=PASS; local file C:\Users\Mrn7206\AppData\Local\DJMRN\OpportunityHunter\exports\DJMRN-OH05-Freelancermap-Export-Pilot.json; COMMANDS=2. Import into Ui.Vision and local browser JSON download still pending verification. Source pinned at GitHub commit 8903cf0c2464d5a307a9f27a920d476772bd11f6.
