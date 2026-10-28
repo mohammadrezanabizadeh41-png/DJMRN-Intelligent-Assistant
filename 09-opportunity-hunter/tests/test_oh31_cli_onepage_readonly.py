@@ -79,6 +79,54 @@ class OH31ReadOnly(unittest.TestCase):
             with self.assertRaises(RuntimeError):
                 m.validate_log(log)
 
+    def test_log_success_real_browser_storage_parent(self):
+        parent = '/macros/' + m.MACRO + '.json'
+        log = ('Status=OK\n'
+               '[status] Playing macro ' + parent + '\n'
+               '[info] Executing:  | open | https://www.freelancermap.com/projects |  | \n'
+               "[status] Running 'DJMRN-OH05-Freelancermap-Export-Pilot', called by '" + parent + "'\n"
+               '[status] Playing macro DJMRN-OH05-Freelancermap-Export-Pilot\n'
+               '[echo] DJMRN_OH05_EXPORT={"rows":22}\n'
+               "[status] Finished running 'DJMRN-OH05-Freelancermap-Export-Pilot', returning to '" + parent + "'\n"
+               '[status] Playing macro ' + parent + '\n'
+               '[info] Macro completed (Runtime 4.38s, 100% local execution, no cloud used)\n')
+        self.assertTrue(m.validate_log(log))
+
+    def test_no_acceptance_of_other_macro_path(self):
+        log = ('Status=OK\n[status] Playing macro /macros/OTHER.json\n'
+               "[status] Finished running 'DJMRN-OH05-Freelancermap-Export-Pilot', returning to '/macros/OTHER.json'\n"
+               '[echo] DJMRN_OH05_EXPORT={"rows":22}\n'
+               '[info] Macro completed\n')
+        with self.assertRaisesRegex(RuntimeError, 'WRONG_MACRO_IN_LOG'):
+            m.validate_log(log)
+
+    def test_verify_prior_log_and_json_without_browser(self):
+        name = 'DJMRN-OH05-freelancermap-2026-10-28T21-20-30-626Z.json'
+        export = self.root / name
+        rows = rows_fixture()
+        export.write_text(json.dumps({'schema_version':'djmrn.oh.export.v1', 'opportunities':rows}),encoding='utf-8')
+        info = {'rows':2,'numeric':1,'fallback':1,'download':name,
+                'bytes':export.stat().st_size,'network_actions':0,'database_writes':0}
+        parent = '/macros/' + m.MACRO + '.json'
+        log = self.root / 'actual-receipt.txt'
+        log.write_text('Status=OK\n[status] Playing macro '+parent+'\n'
+                       "[status] Finished running 'DJMRN-OH05-Freelancermap-Export-Pilot', returning to '"+parent+"'\n"
+                       '[echo] DJMRN_OH05_EXPORT='+json.dumps(info)+'\n'
+                       '[info] Macro completed (Runtime 4.38s)\n',encoding='utf-8')
+        before = m.sha256(self.db)
+        m.verify_existing(log,self.root,self.db)
+        self.assertEqual(m.sha256(self.db),before)
+
+    def test_verify_missing_real_export_fail_closed(self):
+        parent='/macros/'+m.MACRO+'.json'
+        log=self.root/'receipt.txt'
+        log.write_text('Status=OK\n[status] Playing macro '+parent+'\n'
+                       "[status] Finished running 'DJMRN-OH05-Freelancermap-Export-Pilot', returning to '"+parent+"'\n"
+                       '[echo] DJMRN_OH05_EXPORT={"download":"DJMRN-OH05-freelancermap-2026-10-28T21-20-30-626Z.json","rows":22}\n'
+                       '[info] Macro completed\n',encoding='utf-8')
+        with self.assertRaisesRegex(RuntimeError,'EXPORT_FILE_MISSING_OR_SIZE_CHANGED'):
+            m.verify_existing(log,self.root,self.db)
+
     def test_existing_reconciliation(self):
         rows = rows_fixture()
         old = [('3066480','IDAM Infrastructure Engineer',rows[0]['url'])]
