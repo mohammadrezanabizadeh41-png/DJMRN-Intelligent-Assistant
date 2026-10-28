@@ -1,0 +1,78 @@
+{
+  "Name": "DJMRN-OH34-Freelancermap-TwoPage-ReadOnly-Export",
+  "CreationDate": "2026-10-29",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://www.freelancermap.com/projects",
+      "Value": "",
+      "Description": "One known listings route; 2-page pilot only."
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "css=a[data-testid=\"title\"]",
+      "Value": "",
+      "Description": "Only proceed with loaded listing card(s)."
+    },
+    {
+      "Command": "executeScript",
+      "Target": "if(!['freelancermap.com','www.freelancermap.com'].includes(location.hostname)||location.pathname!='/projects')throw Error('OH33_WRONG_PAGE');var active=Array.from(document.querySelectorAll('div.paginator-item.active')).map(function(e){return e.textContent.trim()});if(active.length<1||active.some(function(t){return t!=='1'}))throw Error('OH33_NOT_PAGE1');var two=Array.from(document.querySelectorAll('div.paginator-item')).filter(function(e){return e.textContent.trim()==='2'});if(two.length<1||two.length>2)throw Error('OH33_PAGE2_CONTROL_AMBIGUOUS');var cards=Array.from(document.querySelectorAll('a[data-testid=\"title\"]'));if(cards.length<1||cards.length>30)throw Error('OH34_BAD_PAGE1_CARD_COUNT');return JSON.stringify({schema_version:'djmrn.oh34.page-ready.v1',active_page:1,card_count:cards.length,authorized:'UNVERIFIED',no_send:true});",
+      "Value": "djmrnOH34Page1",
+      "Description": "Fail closed if page1 is not active or page2 numeric control absent. Bounded DOM read."
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH34_PAGE1=${djmrnOH34Page1}",
+      "Value": "green",
+      "Description": "Record page1 readiness (not content equivalence)."
+    },
+    {
+      "Command": "run",
+      "Target": "DJMRN-OH05-Freelancermap-Export-Pilot",
+      "Value": "",
+      "Description": "Re-use verified DOM-only OH05 exporter to download page1 JSON, no DB writes."
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=(//div[contains(concat(' ', normalize-space(@class), ' '), ' paginator-item ') and normalize-space(.)='2'])[last()]",
+      "Value": "",
+      "Description": "Exactly one click on previously evidenced page2 numeric paginator; no loop."
+    },
+    {
+      "Command": "waitForElementPresent",
+      "Target": "xpath=//div[contains(concat(' ', normalize-space(@class), ' '), ' paginator-item ') and contains(concat(' ', normalize-space(@class), ' '), ' active ') and normalize-space(.)='2']",
+      "Value": "",
+      "Description": "Wait for page number 2 to become active (two CSS class tokens)."
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": "Bounded 2-second settling; not a repeated or scheduled loop."
+    },
+    {
+      "Command": "executeScript",
+      "Target": "if(!['freelancermap.com','www.freelancermap.com'].includes(location.hostname)||location.pathname!='/projects')throw Error('OH33_WRONG_PAGE_AFTER');var active=Array.from(document.querySelectorAll('div.paginator-item.active')).map(function(e){return e.textContent.trim()});if(active.length<1||active.some(function(t){return t!=='2'}))throw Error('OH33_PAGE2_NOT_ACTIVE');var cards=Array.from(document.querySelectorAll('a[data-testid=\"title\"]'));if(cards.length<1||cards.length>30)throw Error('OH34_BAD_PAGE2_CARD_COUNT');return JSON.stringify({schema_version:'djmrn.oh34.page-ready.v1',active_page:2,card_count:cards.length,authorized:'UNVERIFIED',no_send:true});",
+      "Value": "djmrnOH34Page2",
+      "Description": "Confirm page2 active and loaded card(s); no cross-page variables."
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH34_PAGE2=${djmrnOH34Page2}",
+      "Value": "green",
+      "Description": "Record page2 readiness."
+    },
+    {
+      "Command": "run",
+      "Target": "DJMRN-OH05-Freelancermap-Export-Pilot",
+      "Value": "",
+      "Description": "Re-use verified OH05 exporter for page2. Second, final JSON download."
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH34_END=TWO_PAGES_EXPORTED;RECONCILIATION=PENDING;PAGE_CLICKS=1;OUTBOUND=0;DB_WRITES=0",
+      "Value": "green",
+      "Description": "Marker only; cross-page distinctness and DB comparison must be checked offline."
+    }
+  ]
+}
