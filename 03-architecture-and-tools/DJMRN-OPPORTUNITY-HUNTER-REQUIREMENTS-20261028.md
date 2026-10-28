@@ -88,3 +88,13 @@ Total rough engineering effort 24–53h; a one-week offline MVP may be possible 
 
 ### Open user decisions before production quoting/sending
 Minimum net hourly rate per work category or initial shared floor, currency and fee assumptions; acceptable employment hours/week and schedules; 5-day preference vs 10-day cap; automatic discount maximum; languages and portfolio evidence; exact initial message; response notifications; per-site access and sending permissions. Start offline modules without blocking on all decisions.
+
+
+## 2026-10-28 — CONFIRMED project hourly floor: USD 5
+User explicitly sets a fixed minimum effective rate of **USD 5 per hour for standalone projects** (including hourly-paid projects). This is an approved hard rule, superseding the prior open question about a project hourly floor.
+- Hourly project: reject a confirmed non-negotiable rate below $5/hour; for a negotiable rate, never quote below $5/hour.
+- Fixed-price project: compute effective hourly = realistically receivable project compensation / estimated total work hours. Reject if a confirmed fixed/non-negotiable budget yields less than $5/hour. If price is negotiable, propose no less than $5 × estimated hours, plus any separately applicable costs/fees.
+- Reject any AI-generated price below this minimum; do not automatically reject a negotiable opportunity solely because the AI initially produced a too-low price—recalculate or flag it.
+- If hours, payment terms, platform fees or net amount are uncertain, mark pricing as pending review instead of inventing a reliable hourly figure. Keep standalone project limits of 100 hours / 10 days.
+- This $5/hour rule is for **projects**; do not silently apply it to monthly employment or salaried jobs. Employment economic policy remains separately pending.
+- Do not assume that $5/hour is a market rate or the optimal bid: it is a user-authorized floor; market-supported higher quotes remain possible.
