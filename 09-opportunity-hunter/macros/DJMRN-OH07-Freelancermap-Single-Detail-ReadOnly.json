@@ -1,0 +1,18 @@
+{
+  "Name": "DJMRN-OH07-Freelancermap-Single-Detail-ReadOnly",
+  "CreationDate": "2026-10-28",
+  "Commands": [
+    {
+      "Command": "executeScript",
+      "Target": "if(!['freelancermap.com','www.freelancermap.com'].includes(location.hostname)||!location.pathname.startsWith('/project/'))throw Error('OPEN_ONE_PROJECT_DETAIL_PAGE_FIRST');var main=document.querySelector('main')||document.querySelector('article');if(!main)throw Error('MAIN_CONTENT_NOT_FOUND');var title=(main.querySelector('h1')||document.querySelector('h1'));var heading=title?title.innerText.trim():'';if(!heading)throw Error('TITLE_NOT_FOUND');var raw=(main.innerText||'').replace(/\\r/g,'').replace(/\\n{3,}/g,'\\n\\n').trim();if(raw.length<100)throw Error('DETAIL_TEXT_TOO_SHORT');var href=location.origin+location.pathname.replace(/\\/+$/,'');var match=location.pathname.match(/-(\\d+)\\/?$/);var payload={schema_version:'djmrn.oh.detail.v1',site:'freelancermap',external_id:match?match[1]:'url:'+location.pathname.replace(/\\/+$/,''),title:heading,url:href,extracted_at_utc:new Date().toISOString(),capture_method:'visible-main-text',visible_text:raw.slice(0,25000),truncated:raw.length>25000};var blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});var objectUrl=URL.createObjectURL(blob);var a=document.createElement('a');a.href=objectUrl;a.download='DJMRN-OH07-detail-'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(objectUrl)},30000);return JSON.stringify({title:heading,chars:payload.visible_text.length,truncated:payload.truncated,filename:a.download,network_actions:0,database_writes:0,outbound_messages:0});",
+      "Value": "djmrnDetailSummary",
+      "Description": "Export visible main section of currently open single project detail as JSON; read-only; no navigation"
+    },
+    {
+      "Command": "echo",
+      "Target": "DJMRN_OH07_DETAIL=${djmrnDetailSummary}",
+      "Value": "green",
+      "Description": "Verify detail export summary"
+    }
+  ]
+}
