@@ -115,3 +115,6 @@ User updated ledger.py SHA256 D796014B3ED5369CEB05867BB320B3989BAD91BA5AB3C6CDED
 
 ## OH-04 history synthetic prototype prepared
 Added src/ledger_history.py commit 583183d7bd303f76e58ee69159684f31c1a03ee9 and src/test_ledger_history.py commit 4381ed9846140f831cf26227c5afcbe5b3f11aa5. Tests designed for NEW/SEEN/UPDATED, history NEW+UPDATED, preserve SENT status, single record, temporary DB. NOT YET RUN ON WINDOWS. Important: prototype writes ledger update and history in separate transactions; not atomic, must harden before operational DB use. Do not migrate real DB yet.
+
+## OH-04 history Windows synthetic test — PASS
+User ran test_ledger_history.py: OH_04_HISTORY_SYNTHETIC=PASS; STATUS_PRESERVED=SENT; HISTORY_EVENTS=NEW,UPDATED; FINAL_COUNT=1; REAL_DATABASE_MODIFIED=NO; OH_04_HISTORY_TEST_COMMAND=COMPLETED. This validates happy-path synthetic history and status preservation, NOT atomicity or failure recovery. Operational DB unchanged. Next implement atomic single-transaction history and rollback test.
