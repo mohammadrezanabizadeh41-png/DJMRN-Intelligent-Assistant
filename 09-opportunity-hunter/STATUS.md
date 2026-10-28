@@ -72,3 +72,7 @@ User executed the approved local PowerShell setup and reported:
 - `REAL_DATABASE_MODIFIED=NO`
 - `OH_W2_SYNTHETIC_TEST=PASS`
 Correction used `contextlib.closing(sqlite3.connect(...))` for both test connections; Windows temporary file handles released before cleanup. **OH-W2 local bootstrap and synthetic persistence/dedup smoke gate COMPLETE**. Scope: isolated synthetic DB and real operational DB integrity check; not yet production opportunity ingestion or site integration. Next OH-01 policy configuration and OH-02 deterministic filtering.
+
+
+## OH-01 configuration started
+Committed and readback parsed `09-opportunity-hunter/config/policy.v1.json` (schema `djmrn.oh.policy.v1`), commit `9aa947de908ba93212fb9ae9f71339e9ffefeb3e`. Contains INTL $5/hour independent-project floor, IR floor null, 100h/10d project bounds, freelancermap employment denied, LinkedIn employment allowed, IR template pending, and SEND disabled for all. **Status: GitHub source ready; Windows local deployment and resolver/tests pending.**
