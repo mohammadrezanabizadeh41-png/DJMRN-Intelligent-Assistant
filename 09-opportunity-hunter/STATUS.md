@@ -196,3 +196,6 @@ User ran src/test_outbound_ledger.py: OH_12_LEDGER_TEST=PASS; MONTHLY_COUNT=10; 
 
 ## OH-13 production outbound ledger migration — WINDOWS VERIFIED PASS (2026-10-28)
 User executed src/migrate_outbound_ledger.py with explicit production-write approval. Output OH_13_BACKUP=PASS; backup C:\\Users\\Mrn7206\\AppData\\Local\\DJMRN\\OpportunityHunter\\backups\\opportunities-pre-oh13-20261028T162727531987Z.sqlite3; OH_13_PRODUCTION_MIGRATION=PASS; OPPORTUNITIES=22; HISTORY=22; DETAILS=2; OUTBOUND_ATTEMPTS=0; ORIGINAL_DATA_UNCHANGED=YES; INTEGRITY=ok; FOREIGN_KEYS=ok; BACKUP_RETAINED=YES; SENDS=0. Next OH-14 read-only actual-ledger gate; never infer external account quota from empty local ledger.
+
+## OH-14 operational read-only ledger audit — WINDOWS VERIFIED PASS (2026-10-28)
+User ran src/audit_outbound_ledger.py on production SQLite: OH_14_READ_ONLY_AUDIT=PASS; LEDGER_ROWS=0; LOCAL_MONTH_COUNT=0; LOCAL_DAY_COUNT=0; ACCOUNT_QUOTA_FROM_SITE=UNVERIFIED; LOCAL_LEDGER_NOT_AUTHORITATIVE_FOR_SITE_BALANCE=YES; DECISION=HOLD; REASONS=PROJECT_MESSAGE_APPROVAL_MISSING,SEND_DISABLED,AUTOMATION_PERMISSION_UNVERIFIED,QUOTA_UNKNOWN; PRODUCTION_WRITES=0; OUTBOUND_ACTIONS=0. Next: verify actual site/account plan and quota before any proposed outbound operation.
