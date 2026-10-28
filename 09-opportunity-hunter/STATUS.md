@@ -160,3 +160,6 @@ User screenshots of Ui.Vision Logs show echo JSON total=22, numeric=12, fallback
 
 ## OH-05 export macro Windows download — verified
 User PowerShell: OH_05_EXPORT_MACRO_DOWNLOAD=PASS; local file C:\Users\Mrn7206\AppData\Local\DJMRN\OpportunityHunter\exports\DJMRN-OH05-Freelancermap-Export-Pilot.json; COMMANDS=2. Import into Ui.Vision and local browser JSON download still pending verification. Source pinned at GitHub commit 8903cf0c2464d5a307a9f27a920d476772bd11f6.
+
+## OH-05 export macro failure — observed
+User supplied Ui.Vision log: Export-Pilot first executeScript failed in 0.25s with 'Could not establish connection to tab 555978241. Receiving end does not exist'. No echo, no verified JSON export. This is a browser extension-to-tab messaging failure; not evidence of a JSON schema or extraction logic error. Next: refresh Freelancermap tab, reselect Export-Pilot, retry once; if persistent, inspect extension connection and reload Ui.Vision. Do not mark export PASS.
