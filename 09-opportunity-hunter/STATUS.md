@@ -214,3 +214,6 @@ User executed shortlist_freelancermap.py --self-test: five fixtures correctly cl
 
 ## OH-17 real Freelancermap shortlist — WINDOWS VERIFIED PASS (2026-10-28)
 User ran src/report_real_shortlist.py on production SQLite: OH_17_REAL_READ_ONLY_REPORT=PASS; TOTAL=22; DETAIL_ROWS=2; NOT_SUITABLE_OR_CONFLICT=2; LOW_PRIORITY_TITLE_ONLY=20; NEEDS_DETAILS=0; APPLICATION_RECOMMENDATIONS=0; PRODUCTION_WRITES=0; OUTBOUND_ACTIONS=0. Details for project ids 18 (Engineering Practice Lead) and 20 (E2E Solution Architect) indicate months-long on-site roles; 20 other titles are low priority based only on titles, NOT definitively excluded. No quota consumed. Next OH-18 improve relevant project discovery/read-only incremental captures, without blanket filtering all potentially viable work.
+
+## OH-18 incremental Freelancermap export — WINDOWS VERIFIED PASS (2026-10-28)
+User executed compare_new_export.py on file DJMRN-OH05-freelancermap-2026-10-28T16-44-06-232Z.json. OH_18_READ_ONLY=PASS; TOTAL=22; NEW=22; SEEN=0; UPDATED_TITLE=0; DB_WRITES=0; SENDS=0. File uploaded into conversation. This is a comparison against the then-current production ledger (22 records); 22 additional records NOT YET IMPORTED. Next OH-19 needs preflight/backup and explicit production-import approval. Existing OH-05 import script is hardcoded for first 22 and approval token; do not reuse unmodified.
