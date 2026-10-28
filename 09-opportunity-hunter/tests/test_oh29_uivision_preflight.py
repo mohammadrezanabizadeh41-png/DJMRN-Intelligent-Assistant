@@ -5,6 +5,16 @@ import sqlite3
 import pathlib
 import unittest
 import hashlib
+from contextlib import closing, contextmanager
+
+
+@contextmanager
+def _fixture_db_transaction(path):
+    """Commit or roll back, then explicitly close SQLite before TempDirectory cleanup."""
+    with closing(sqlite3.connect(path)) as db:
+        with db:
+            yield db
+
 
 candidate = pathlib.Path(__file__).resolve().with_name('oh29_uivision_preflight.py')
 if not candidate.is_file():
@@ -26,7 +36,7 @@ class PreflightTests(unittest.TestCase):
         self.local.mkdir()
         self.program.mkdir()
         self.db = self.root / 'opportunities.sqlite3'
-        with sqlite3.connect(self.db) as db:
+        with _fixture_db_transaction(self.db) as db:
             db.execute('CREATE TABLE metadata (key TEXT, value TEXT)')
             db.execute("INSERT INTO metadata VALUES ('schema_version','djmrn.oh.local.v1')")
             for name in m.EXPECTED_TABLES:
@@ -71,7 +81,7 @@ class PreflightTests(unittest.TestCase):
         self.assertEqual(len(r['local_macro_files'][name]),1)
         self.assertEqual(r['macro_in_browser_storage'],'UNVERIFIED')
     def test_changed_db_count_fails_closed(self):
-        with sqlite3.connect(self.db) as db:
+        with _fixture_db_transaction(self.db) as db:
             db.execute('INSERT INTO opportunities VALUES (100)')
         before=self.checksum()
         with self.assertRaisesRegex(RuntimeError,'DB_COUNTS_CHANGED_REVIEW_REQUIRED'):
@@ -81,7 +91,7 @@ class PreflightTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError,'PRODUCTION_DB_MISSING'):
             m.inspect_local(self.env,self.root/'absent.sqlite3')
     def test_unexpected_schema_fails_closed(self):
-        with sqlite3.connect(self.db) as db:
+        with _fixture_db_transaction(self.db) as db:
             db.execute("UPDATE metadata SET value='broken' WHERE key='schema_version'")
         with self.assertRaisesRegex(RuntimeError,'DB_SCHEMA_UNEXPECTED'):
             m.inspect_local(self.env,self.db)
