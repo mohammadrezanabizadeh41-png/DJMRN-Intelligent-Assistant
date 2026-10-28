@@ -85,3 +85,6 @@ Created src/screen.py commit b5abcaa2f1c75e67959b2220f6892912bf1b7224 and src/te
 
 ## OH-02 Windows unit-test receipt — PASS
 User installed app/screen.py SHA256 5697B4198AFB69AEAA63AF55CA59E6AD30CC0F8CD203948FACCE3C54F4349BA6 and app/test_screen.py SHA256 755C5134A305C01385D26BA197514931381F79DBD7E609DAFF96358F05395B2F. Python unit tests: Ran 12 tests in 0.003s, OK, OH_02_WINDOWS_TESTS=PASS. Scope: deterministic synthetic unit tests only; no live-site read, external send, production ingestion, or integration acceptance. Next: CLI sample inputs and edge-case hardening.
+
+## OH-02 CLI Windows BOM failure and patch
+Windows CLI synthetic sample execution FAILED before screening first sample: json.decoder.JSONDecodeError Unexpected UTF-8 BOM in PowerShell Set-Content -Encoding utf8 output. Unit tests 12/12 previously passed, but did not cover BOM input. Fixed src/screen.py input decoding to utf-8-sig at commit 7e41c2f2a10d326cb79f7fde12c75dfeb0eb50eb. Windows patch deployment and 3-case CLI rerun PENDING; do not mark CLI pass.
