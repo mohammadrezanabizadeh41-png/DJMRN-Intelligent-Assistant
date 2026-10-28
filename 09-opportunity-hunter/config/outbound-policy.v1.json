@@ -9,7 +9,6 @@
       "quota_reset_rule": "UNVERIFIED",
       "account_remaining_quota": null,
       "automation_permission": "UNVERIFIED",
-      "minimum_spacing_seconds": 300,
       "max_daily_applications": 1,
       "send_enabled": false,
       "require_per_project_approval": true,
@@ -22,5 +21,11 @@
         "AUTOMATION_PERMISSION_UNVERIFIED"
       ]
     }
+  },
+  "global": {
+    "minimum_spacing_seconds": 300,
+    "scope": "all_sites_all_accounts",
+    "basis": "last_successful_or_uncertain_send",
+    "note": "minimum spacing, not authorization to automate"
   }
 }
