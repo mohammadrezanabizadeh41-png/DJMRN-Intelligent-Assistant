@@ -88,3 +88,6 @@ User installed app/screen.py SHA256 5697B4198AFB69AEAA63AF55CA59E6AD30CC0F8CD203
 
 ## OH-02 CLI Windows BOM failure and patch
 Windows CLI synthetic sample execution FAILED before screening first sample: json.decoder.JSONDecodeError Unexpected UTF-8 BOM in PowerShell Set-Content -Encoding utf8 output. Unit tests 12/12 previously passed, but did not cover BOM input. Fixed src/screen.py input decoding to utf-8-sig at commit 7e41c2f2a10d326cb79f7fde12c75dfeb0eb50eb. Windows patch deployment and 3-case CLI rerun PENDING; do not mark CLI pass.
+
+## OH-02 CLI BOM patch Windows retest PASS
+Windows patch installed: app/screen.py SHA256 7F2DBE5CEE460C359863602F1A3898CE916EBD7386825D13F06013C3494DACA7. Three synthetic CLI scenarios matched: ACCEPT_FOR_REVIEW, REJECT, HOLD_FOR_REVIEW. Receipt OH_02_CLI_RETEST=PASS. Combined with earlier 12/12 unit tests, OH-02 initial deterministic screening gate PASS. Still no real listings or browser integration.
