@@ -100,3 +100,6 @@ User executed five quote.py CLI cases: LOW_RATE CALCULATED (2.00 USD/h); MISSING
 
 ## OH-03 Windows integration test failure and import fix
 User attempted integrated CLI test; first GOOD case failed before evaluation: ModuleNotFoundError: No module named 'quote' from evaluate.py when invoked via py -I. Cause: Python isolated mode excludes script directory from sys.path. Patch in src/evaluate.py adds resolved application script directory to sys.path before importing quote and screen, commit d70cf1155b3f10deb61091b0615944b921856f9d. Windows deployment/retest PENDING; do not claim integration PASS.
+
+## OH-03 integrated Windows retest — PASS
+User installed patched app/evaluate.py (SHA256 2A4D0601C7C49BFD3F3F7BC4906C633888C5BBDBB539D44019F43DD1832D9299). Three CLI cases: GOOD ACCEPT_FOR_REVIEW, LOW REJECT, UNKNOWN HOLD_FOR_REVIEW, all matched; OH_03_INTEGRATION_RETEST=PASS. OH-03 initial calculator+screen integration verified on Windows using synthetic inputs. No live sites or outbound actions. Next OH-04 durable opportunity ledger with safe idempotent upsert and tests.
