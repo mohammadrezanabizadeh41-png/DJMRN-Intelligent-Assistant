@@ -226,3 +226,6 @@ User executed src/import_second_export.py on second 22-row JSON. OH_19_BACKUP=PA
 
 ## OH-20 full 44-row read-only screening — WINDOWS VERIFIED PASS (2026-10-28)
 User supplied actual Windows report from report_real_shortlist.py: OH_17_REAL_READ_ONLY_REPORT=PASS; TOTAL=44; DETAIL_ROWS=2; NOT_SUITABLE_OR_CONFLICT=2; LOW_PRIORITY_TITLE_ONLY=24; NEEDS_DETAILS=18; APPLICATION_RECOMMENDATIONS=0; PRODUCTION_WRITES=0; OUTBOUND_ACTIONS=0. This is OH-20 operational reuse of OH-17 script. Caveat: NEEDS_DETAILS is broad fallback, not proof of relevance; some titles explicitly state 6- or 12-month terms and should be downgraded by improved title prefilter. Next OH-21 design read-only evidence-based ranked shortlist and capture plan, no sends.
+
+## OH-21 title prefilter — WINDOWS VERIFIED PASS (2026-10-28)
+User-provided run: OH_21_TITLE_PREFILTER=PASS; TOTAL=44; DETAIL_PRIORITY=0; DETAIL_REVIEW=5; DETAIL_REVIEW_WITH_CLEARANCE_CHECK=1; DEFER_CONSTRAINTS=5; DETAIL_ALREADY_CAPTURED=2; LOW_PRIORITY=31; DB_WRITES=0; OUTBOUND_ACTIONS=0; APPLICATIONS_USED=0. Queue IDs 28,35,36,37,38,43. Limitation: title 'Content Designer (SC)' ID 36 has an unrecognized standalone '(SC)' clearance cue; fix before final ranking. No actual applications or site quota consumed.
