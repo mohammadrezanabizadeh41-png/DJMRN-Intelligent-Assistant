@@ -121,3 +121,6 @@ User ran test_ledger_history.py: OH_04_HISTORY_SYNTHETIC=PASS; STATUS_PRESERVED=
 
 ## OH-04 atomic rollback Windows synthetic test — PASS
 User output: OH_04_ATOMIC_ROLLBACK=PASS; STATUS_PRESERVED=SENT; HISTORY_EVENTS=NEW,UPDATED; FINAL_COUNT=1; REAL_DATABASE_MODIFIED=NO; OH_04_ATOMIC_TEST_COMMAND=COMPLETED. This verifies injected history insert failure rolls back opportunity title change in synthetic SQLite DB. Does not establish operational DB schema compatibility or authorize migration. Next: read-only operational schema inspection and explicit backup/migration plan.
+
+## OH-04 operational migration verified by Windows output
+User reported SCHEMA_VERSION=djmrn.oh.local.v1, OPPORTUNITIES=0, HISTORY_ROWS=0, INTEGRITY=ok, OH_04_MIGRATION=PASS. Pre-migration backup previously validated. Next test engine against temporary SQLite copy, without modifying live database.
