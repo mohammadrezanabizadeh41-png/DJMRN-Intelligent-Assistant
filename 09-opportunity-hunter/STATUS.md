@@ -151,3 +151,6 @@ User screenshot confirms DJMRN_TOTAL=22, DJMRN_UNIQUE=22, DJMRN_NUMERIC=12, DJMR
 
 ## OH-05 Ui.Vision macro download — Windows verified
 User PowerShell output: OH_05_MACRO_DOWNLOAD=PASS; file C:\Users\Mrn7206\AppData\Local\DJMRN\OpportunityHunter\exports\DJMRN-OH05-Freelancermap-ReadOnly-Pilot.json; COMMANDS=2. JSON downloaded and parsed; macro import and execution NOT YET TESTED. No SQLite changes reported.
+
+## OH-05 Ui.Vision first execution
+User screenshot: imported macro visible, executeScript and echo both green, Ui.Vision displays '[info] Macro completed (Runtime 0.69s...)'. Execution completed without reported error. Extracted record counts not yet verified from log; awaiting log screenshot. No claim of SQLite import.
