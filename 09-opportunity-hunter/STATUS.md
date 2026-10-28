@@ -94,3 +94,6 @@ Windows patch installed: app/screen.py SHA256 7F2DBE5CEE460C359863602F1A3898CE91
 
 ## OH-03 initial Windows calculator test — PASS
 User installed app/quote.py from pinned commit 04763eeec30d31ca07441abd715fdd66f9f1766c and ran JSON CLI test. Result CALCULATED, USD, net_amount 250.00, net_effective_hourly_rate 6.25, effective_hours 40, outbound_actions 0; OH_03_INITIAL_TEST=PASS. This is one happy-path test only; invalid/missing costs and screening integration still pending.
+
+## OH-03 Windows edge-case receipt — PASS
+User executed five quote.py CLI cases: LOW_RATE CALCULATED (2.00 USD/h); MISSING_COST HOLD_FOR_REVIEW; ZERO_HOURS HOLD_FOR_REVIEW; INVALID_FEE (150%) HOLD_FOR_REVIEW; IRANIAN_PROJECT CALCULATED (62500.00 TOMAN/h). Output OH_03_EDGE_TESTS=PASS. Combined with earlier happy path, calculator has six verified Windows scenarios. Calculator-to-screen integration still pending; Iranian rate floor remains unset.
