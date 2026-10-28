@@ -187,3 +187,6 @@ User ran src/test_detail_store.py with live DB as read-only source and three OH-
 
 ## OH-10 production detail migration — WINDOWS VERIFIED PASS (2026-10-28)
 User ran approved src/apply_detail_store.py. Output OH_10_BACKUP=PASS; backup C:\\Users\\Mrn7206\\AppData\\Local\\DJMRN\\OpportunityHunter\\backups\\opportunities-pre-oh10-20261028T161003058827Z.sqlite3; OH_10_PRODUCTION_IMPORT=PASS; EVENTS=NEW,NEW; DETAIL_ROWS=2; OPPORTUNITIES=22; HISTORY=22; ID_3066185=20; ORIGINAL_ROWS_UNCHANGED=YES; BACKUP_RETAINED=YES; OUTBOUND_ACTIONS=0. Next OH-11 site-specific quota and approval-only outbound gate; do not enable auto sending.
+
+## OH-11 outbound gate — WINDOWS VERIFIED PASS (2026-10-28)
+User ran src/outbound_gate.py --self-test against config/outbound-policy.v1.json. Output OH_11_GATE_SELF_TEST=PASS; CASES=4; GLOBAL_COOLDOWN_SECONDS=300; FREELANCEMAP_MONTHLY_LIMIT=10; SENDS=0; DB_WRITES=0. All four scenarios HOLD: unknown quota and permission; 10/month cap; unknown site; missing approval plus cross-site cooldown. Five-minute minimum is global across sites; 10/month applies only to Freelancermap Basic. Next OH-12 read-only usage ledger test on temporary SQLite; no outbound actions.
