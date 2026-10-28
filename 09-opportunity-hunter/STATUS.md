@@ -145,3 +145,6 @@ User screenshots show project detail overlay at /projects?id=3066230. Visible: I
 
 ## OH-05 Freelancermap URL variants observed
 User Chrome Console evidence: 22 loaded title anchors; 12 URLs end with numeric project IDs; 10 URLs have descriptive slugs only, e.g. /project/middleware-weblogic-lead-developer. The 10 are not extraction errors. Proposed fallback is namespaced URL-path key (not an official site ID), with collision/URL-change risk and explicit provenance. No production DB import or automatic messaging yet. Next: browser-side read-only validation of all 22 unique keys.
+
+## OH-05 real browser DOM identity pilot — PASS (read-only)
+User screenshot confirms DJMRN_TOTAL=22, DJMRN_UNIQUE=22, DJMRN_NUMERIC=12, DJMRN_FALLBACK=10 for loaded Freelancermap project title anchors. 931 is UI total search results, NOT number scanned. Fallback keys are URL-path-derived and are NOT official IDs; slug changes may cause duplicates. No real database writes or applications. Next: persist read-only extraction format, test identity collision/slug-change behavior, then controlled import.
