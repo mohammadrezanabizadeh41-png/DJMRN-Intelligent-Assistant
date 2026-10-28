@@ -211,3 +211,6 @@ Created config/freelancermap-profile.v1.json and src/shortlist_freelancermap.py.
 
 ## OH-16 shortlist offline self-test — WINDOWS VERIFIED PASS (2026-10-28)
 User executed shortlist_freelancermap.py --self-test: five fixtures correctly classified long on-site project NOT_SUITABLE, long project with unavailable work authorization NOT_SUITABLE, missing details NEEDS_DETAILS, fully specified short project READY_FOR_HUMAN_REVIEW, low rate NOT_SUITABLE. OH_16_SHORTLIST_SELF_TEST=PASS; CASES=5; APPLICATIONS_USED=0; DB_WRITES=0; OUTBOUND_ACTIONS=0. Next OH-17 inspect actual SQLite schema read-only before integration.
+
+## OH-17 real Freelancermap shortlist — WINDOWS VERIFIED PASS (2026-10-28)
+User ran src/report_real_shortlist.py on production SQLite: OH_17_REAL_READ_ONLY_REPORT=PASS; TOTAL=22; DETAIL_ROWS=2; NOT_SUITABLE_OR_CONFLICT=2; LOW_PRIORITY_TITLE_ONLY=20; NEEDS_DETAILS=0; APPLICATION_RECOMMENDATIONS=0; PRODUCTION_WRITES=0; OUTBOUND_ACTIONS=0. Details for project ids 18 (Engineering Practice Lead) and 20 (E2E Solution Architect) indicate months-long on-site roles; 20 other titles are low priority based only on titles, NOT definitively excluded. No quota consumed. Next OH-18 improve relevant project discovery/read-only incremental captures, without blanket filtering all potentially viable work.
