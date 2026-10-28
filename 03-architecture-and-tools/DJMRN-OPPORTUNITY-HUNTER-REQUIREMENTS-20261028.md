@@ -98,3 +98,22 @@ User explicitly sets a fixed minimum effective rate of **USD 5 per hour for stan
 - If hours, payment terms, platform fees or net amount are uncertain, mark pricing as pending review instead of inventing a reliable hourly figure. Keep standalone project limits of 100 hours / 10 days.
 - This $5/hour rule is for **projects**; do not silently apply it to monthly employment or salaried jobs. Employment economic policy remains separately pending.
 - Do not assume that $5/hour is a market rate or the optimal bid: it is a user-authorized floor; market-supported higher quotes remain possible.
+
+
+## 2026-10-28 — CONFIRMED: domestic vs international pricing and site policy inheritance
+User requires distinct pricing policies for Iranian (domestic) and foreign (international) opportunity sites, including project and hourly services. Price estimation and minimums must live in the **site-specific policy context**, not a single global minimum applied to every platform.
+
+Policy resolution hierarchy for pricing and opportunity screening:
+1. Universal safety, factual integrity, user-approved work constraints and no duplicate send.
+2. Market region policy: `IR` (Iranian market, prices evaluated in **toman**) or `INTL` (international market, normally USD unless site specifies another currency).
+3. Site profile override: allowed project/employment categories, hourly/project pricing floor, quota, messaging and requirements.
+4. Work-category rules: website development, video, AI automation, voice, Windows, tourism, etc.; complexity, scope, estimated effort, market comparisons and direct costs.
+5. Listing-specific facts: fixed/negotiable budget, currency, time, workload and explicit requirements.
+
+Confirmed international project minimum is **USD 5 effective hourly**; this applies only to international projects by default, not Iranian-site projects. The domestic toman-denominated hourly and fixed-project minimums remain **unset**, and must not be fabricated or converted automatically from the USD 5 minimum. The domestic floor may vary by work category and site; the user will decide the policy after estimates or research. Employment pricing is separately configurable per market/site and is not automatically governed by the project floor.
+
+Implementation: store site profile `market_region`, `default_currency`, `project_hourly_floor`, `employment_hourly_floor` (optional), `fixed_project_quote_policy`, `work_category_overrides`, `fee_policy`, `budget_negotiation_policy`, and `effective_date`. Store source currency and converted/comparison currency separately. Only use FX when necessary for comparison and preserve rate source and timestamp; no hardcoded FX rates. If Iranian listing uses rial, normalize accurately to toman (10 rial = 1 toman), preserving the original advertised unit. User-defined thresholds override estimated market suggestions.
+
+Pricing outputs: proposed amount and currency, estimated hours, effective hourly amount, floor used, market evidence, platform fees, difficulty, confidence and brief explanation. If a relevant floor is not yet approved, mark price decision pending rather than silently using the international floor. Keep a minimal reason code for rejection and fuller justification for intended outreach.
+
+Implementation sequence amendment: implement region/site inheritance and tests **before** pricing calculations; test international USD 4.99/5.00 boundary, Iranian toman without any USD floor, fixed-budget effective-hourly, site overrides, and separate monthly employment policy. No new resident engine needed; Python/SQLite/JSON suffices.
