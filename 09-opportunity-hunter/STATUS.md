@@ -202,3 +202,6 @@ User ran src/audit_outbound_ledger.py on production SQLite: OH_14_READ_ONLY_AUDI
 
 ## OH-15 Freelancermap account plan confirmation (2026-10-28)
 User explicitly confirmed Freelancermap plan = Basic (free). Config updated: plan_verified_by_user=true, plan_verified_date=2026-10-28, monthly_application_limit=10; account_remaining_quota=null and quota_reset_rule=UNVERIFIED pending site-account evidence. Global 300-second cross-site cooldown unchanged. Sending disabled, per-project approval required. No production DB mutation or outbound actions.
+
+## OH-15 Freelancermap user-reported quota (2026-10-28)
+User reports Basic account has 10 of 10 applications remaining, membership began ~10 days ago, and next reset expected in ~20 days (estimated 2026-11-17). Recorded in outbound-policy.v1.json as USER_REPORTED; reset rule UNVERIFIED_USER_ESTIMATE, not verified against site. Local outbound_attempts remains empty as of OH-14. Global cooldown 300 seconds applies across all sites. send_enabled=false, automation_permission=UNVERIFIED, per-project approval remains mandatory. No sends or local DB changes.
