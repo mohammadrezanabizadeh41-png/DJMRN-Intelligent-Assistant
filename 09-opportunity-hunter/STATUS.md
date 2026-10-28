@@ -62,3 +62,13 @@ User executed the approved local PowerShell setup and reported:
 - Then `tempfile.TemporaryDirectory` cleanup raised `PermissionError [WinError 32]` deleting `synthetic-test.sqlite3`; thus `OH_W2_SYNTHETIC_TEST=PASS` was **not** printed and end-to-end test is NOT PASS.
 - Root cause in supplied test script: `with sqlite3.connect(...) as db` commits/rolls back but does not close connection. On Windows open file handle blocks temporary directory deletion.
 - Corrective action: explicit `db.close()` in `finally` or `contextlib.closing` around connection, then rerun; separately verify cleanup. Do not claim operational DB was modified by this synthetic test. No real DB write in script.
+
+
+## OH-W2 corrected synthetic SQLite test — FULL PASS (user Windows receipt)
+- `REOPEN_PERSISTENCE=PASS`
+- `DUPLICATE_REJECTION=PASS`
+- `FINAL_SYNTHETIC_COUNT=1`
+- `TEMP_CLEANUP=PASS`
+- `REAL_DATABASE_MODIFIED=NO`
+- `OH_W2_SYNTHETIC_TEST=PASS`
+Correction used `contextlib.closing(sqlite3.connect(...))` for both test connections; Windows temporary file handles released before cleanup. **OH-W2 local bootstrap and synthetic persistence/dedup smoke gate COMPLETE**. Scope: isolated synthetic DB and real operational DB integrity check; not yet production opportunity ingestion or site integration. Next OH-01 policy configuration and OH-02 deterministic filtering.
