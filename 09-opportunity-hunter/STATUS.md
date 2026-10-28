@@ -148,3 +148,6 @@ User Chrome Console evidence: 22 loaded title anchors; 12 URLs end with numeric 
 
 ## OH-05 real browser DOM identity pilot — PASS (read-only)
 User screenshot confirms DJMRN_TOTAL=22, DJMRN_UNIQUE=22, DJMRN_NUMERIC=12, DJMRN_FALLBACK=10 for loaded Freelancermap project title anchors. 931 is UI total search results, NOT number scanned. Fallback keys are URL-path-derived and are NOT official IDs; slug changes may cause duplicates. No real database writes or applications. Next: persist read-only extraction format, test identity collision/slug-change behavior, then controlled import.
+
+## OH-05 Ui.Vision macro download — Windows verified
+User PowerShell output: OH_05_MACRO_DOWNLOAD=PASS; file C:\Users\Mrn7206\AppData\Local\DJMRN\OpportunityHunter\exports\DJMRN-OH05-Freelancermap-ReadOnly-Pilot.json; COMMANDS=2. JSON downloaded and parsed; macro import and execution NOT YET TESTED. No SQLite changes reported.
