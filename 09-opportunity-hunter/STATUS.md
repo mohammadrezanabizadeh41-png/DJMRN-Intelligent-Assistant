@@ -193,3 +193,6 @@ User ran src/outbound_gate.py --self-test against config/outbound-policy.v1.json
 
 ## OH-12 outbound ledger disposable test — WINDOWS VERIFIED PASS (2026-10-28)
 User ran src/test_outbound_ledger.py: OH_12_LEDGER_TEST=PASS; MONTHLY_COUNT=10; DAILY_COUNT=10; GLOBAL_LAST_EVENT_FROM_OTHER_SITE=YES; RESERVED_AND_UNKNOWN_COUNTED=YES; CONFIRMED_FAILURE_EXCLUDED=YES; DUPLICATE_PREVENTED=YES; TEMP_DATABASE_ONLY=YES; PRODUCTION_WRITES=0; SENDS=0. Counts are synthetic test fixtures, NOT real Freelancermap account usage. Next OH-13 production migration needs backup, explicit approval, and read-only preparation first.
+
+## OH-13 production outbound ledger migration — WINDOWS VERIFIED PASS (2026-10-28)
+User executed src/migrate_outbound_ledger.py with explicit production-write approval. Output OH_13_BACKUP=PASS; backup C:\\Users\\Mrn7206\\AppData\\Local\\DJMRN\\OpportunityHunter\\backups\\opportunities-pre-oh13-20261028T162727531987Z.sqlite3; OH_13_PRODUCTION_MIGRATION=PASS; OPPORTUNITIES=22; HISTORY=22; DETAILS=2; OUTBOUND_ATTEMPTS=0; ORIGINAL_DATA_UNCHANGED=YES; INTEGRITY=ok; FOREIGN_KEYS=ok; BACKUP_RETAINED=YES; SENDS=0. Next OH-14 read-only actual-ledger gate; never infer external account quota from empty local ledger.
