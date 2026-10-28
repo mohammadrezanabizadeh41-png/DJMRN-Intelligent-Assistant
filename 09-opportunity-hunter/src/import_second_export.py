@@ -1,9 +1,10 @@
 """OH-19 approved atomic production import of the second 22 Freelancermap listings."""
-import argparse,sqlite3,hashlib
+import argparse,sqlite3,hashlib,sys
 from pathlib import Path
 from contextlib import closing
 from datetime import datetime,timezone
 from urllib.parse import urlsplit
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 from ingest import load
 
 def snap(db,t):
