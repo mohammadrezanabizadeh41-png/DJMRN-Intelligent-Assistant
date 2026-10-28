@@ -1,6 +1,10 @@
 import argparse
 import json
 from pathlib import Path
+import sys
+
+# Under Python -I, explicitly trust only this script's own application directory.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from quote import quote
 from screen import screen
 
