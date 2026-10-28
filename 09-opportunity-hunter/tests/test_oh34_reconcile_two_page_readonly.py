@@ -5,6 +5,7 @@ import pathlib
 import sqlite3
 import tempfile
 import unittest
+from contextlib import closing
 
 p = pathlib.Path(__file__).resolve().parent.parent / 'src' / 'oh34_reconcile_two_page_readonly.py'
 if not p.exists():
@@ -37,7 +38,7 @@ class OH34Offline(unittest.TestCase):
         self.db=self.root / 'fixture.sqlite3'
         self.write(self.a,self.page1,m.EXPECTED[0][1])
         self.write(self.b,self.page2,m.EXPECTED[1][1])
-        with sqlite3.connect(self.db) as con:
+        with closing(sqlite3.connect(self.db)) as con, con:
             con.execute('CREATE TABLE metadata (key TEXT, value TEXT)')
             con.execute("INSERT INTO metadata VALUES ('schema_version','djmrn.oh.local.v1')")
             for key in m.EXPECTED_COUNTS:
@@ -113,7 +114,7 @@ class OH34Offline(unittest.TestCase):
         self.assertEqual(m.sha256(self.db),before)
 
     def test_db_baseline_drift(self):
-        with sqlite3.connect(self.db) as con:
+        with closing(sqlite3.connect(self.db)) as con, con:
             con.execute('DELETE FROM opportunities WHERE id=0')
         with self.assertRaisesRegex(RuntimeError,'COUNTS_CHANGED'):
             m.database_rows(self.db)
