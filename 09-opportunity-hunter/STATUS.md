@@ -220,3 +220,6 @@ User executed compare_new_export.py on file DJMRN-OH05-freelancermap-2026-10-28T
 
 ## OH-18 provenance correction (user clarification)
 User did NOT manually change any Freelancermap listing filters between the first and second 22-row Ui.Vision exports. Do NOT attribute second batch to recommended Remote/End-client/skill filters. OH-18 NEW=22 means absent from local database at comparison time, NOT independently verified newly published projects; site updates, sorting, pagination, or page refresh may explain difference. OH-19 user pasted execution command but has NOT provided execution output; production import remains UNVERIFIED/PENDING. Preserve these distinctions in future reports.
+
+## OH-19 second production import — WINDOWS VERIFIED PASS (2026-10-28)
+User executed src/import_second_export.py on second 22-row JSON. OH_19_BACKUP=PASS; backup C:\\Users\\Mrn7206\\AppData\\Local\\DJMRN\\OpportunityHunter\\backups\\opportunities-pre-oh19-20261028T164845572924Z.sqlite3. OH_19_PRODUCTION_IMPORT=PASS; EVENTS_NEW=22; BEFORE=22; AFTER=44; HISTORY_AFTER=44; DETAILS=2; OUTBOUND_ATTEMPTS=0; BACKUP_RETAINED=YES; OUTBOUND_ACTIONS=0; APPLICATIONS_USED=0. Filters were not changed by user; new means not in ledger, not verified publication time. Next OH-20 read-only shortlist all 44.
