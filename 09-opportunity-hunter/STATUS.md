@@ -142,3 +142,6 @@ User output: OH_05_LEDGER_INTEGRATION=PASS; EVENTS=NEW,SEEN,UPDATED; HISTORY_ROW
 
 ## OH-05 Freelancermap real page structure — visual inspection only
 User screenshots show project detail overlay at /projects?id=3066230. Visible: ID 3066230, title IT Cost Optimisation/Cost-Out Specialist, employer Dns Info Ltd, London UK, On-site, Freelance, publication displayed 2026-10-28 17:33, description and skills, and application form requiring email, UK work qualification, CV, name, telephone, availability, salary expectation. Budget and duration not visible. This is visual evidence only; selectors and automated extraction remain UNVERIFIED. No application submitted. Prior synthetic ledger integration PASS.
+
+## OH-05 Freelancermap URL variants observed
+User Chrome Console evidence: 22 loaded title anchors; 12 URLs end with numeric project IDs; 10 URLs have descriptive slugs only, e.g. /project/middleware-weblogic-lead-developer. The 10 are not extraction errors. Proposed fallback is namespaced URL-path key (not an official site ID), with collision/URL-change risk and explicit provenance. No production DB import or automatic messaging yet. Next: browser-side read-only validation of all 22 unique keys.
