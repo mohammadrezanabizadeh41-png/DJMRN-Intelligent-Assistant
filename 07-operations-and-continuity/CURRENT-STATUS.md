@@ -1,3 +1,9 @@
+## 2026-10-28 — Opportunity Hunter OH-28 Windows deployment verified PASS
+
+**User-provided production Windows PowerShell receipt:** `REAL_CAPTURE_HASHES=PASS`, `OH28_SOURCE_VERIFIED=PASS`, `OH28_TEST_VERIFIED=PASS`, `OH28_REAL_CAPTURE_VALIDATION=PASS` and `OH28_OUTREACH_GATE=PASS` on pre-install and post-install runs, `OH28_INSTALL=PASS`, `OH28_POST_INSTALL_TEST=PASS`, `BACKUP_HASH=PASS`, `PRODUCTION_SQLITE_WRITES=0`, `OUTBOUND_ACTIONS=0`. Backup `C:\Users\Mrn7206\AppData\Local\DJMRN\OpportunityHunter\backups\parse_details-pre-oh28-20261028T194846324Z.py`. Source pinned to GitHub commit `30544f42d6ed5e89a0ad2c89b71cf423419855da`, SHA256 `9d059a01dcb66334496e25e05a459d3b753a850985cbf817a7ad7650cffb8b94`; test commit `a09e9d09ca18360c8896132ce0c330a216506d59`, SHA256 `3821c8cee94af83d96e234d045a53566723865a0a573d39d65c047f87d4c0607`.
+
+**Real-case gates proven on Windows:** project 3066373 / local ID 38: CLOSED/BLOCKED, 6 months, 3 days in office. Project 3066376 / local ID 35: FORM_VISIBLE_UNVERIFIED/BLOCKED, on-site only. No automatic send or permissions granted. SQLite remains at last verified 44 opportunities/44 histories/4 detail rows/0 outbound attempts (OH-28 did not change DB), and new captured details are NOT yet stored in DB. Next OH-29 is automation bridge/invocation verification using existing Ui.Vision macros, *not* further manual capture or automatic send. Keep documentation in this one existing canonical GitHub status file.
+
 ## 2026-10-28 — Opportunity Hunter OH-28 closed-listing hard gate: SOURCE TESTS PASS; Windows install awaiting receipt
 
 **User purpose:** finish OH-27/28 safely, then return to the desired automated Opportunity Hunter pipeline (rather than more manual site-detail extraction). Read-only/offline, strict no-send and no production SQLite change until validated.
