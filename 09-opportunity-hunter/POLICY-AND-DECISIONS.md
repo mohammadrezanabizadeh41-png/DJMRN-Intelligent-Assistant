@@ -33,3 +33,13 @@ Universal verified requirements -> market region IR/INTL -> per-site overrides -
 ## Proposed implementation data fields
 SiteProfile: site_id, region, currency, employment_policy, allowed_actions, quota, project_hourly_floor, employment_hourly_floor, category_overrides, pricing_rules, version.
 Opportunity: source_id/url, captured_at, title, raw_text_ref, category, engagement_type, compensation/currency, estimated_hours/days/confidence, eligibility, reason_code, quote, draft, send_state, receipt, reply_state.
+
+
+## 2026-10-28 — CONFIRMED Windows-first operational deployment boundary
+The user explicitly requires **Windows 11 on the user's own PC to be the operational host and source of live runtime state**. GitHub is for planning, source code, version control, reusable test fixtures, documentation and deployment instructions; it is NOT the production runtime or authoritative store of actual employer listings, local sessions, API keys, credentials or live execution logs.
+
+Proposed (NOT YET APPROVED OR CREATED) default Windows application root: `%LOCALAPPDATA%\DJMRN\OpportunityHunter\` with `app\`, `config\`, `data\`, `logs\`, `exports\`, `backups\`. The user may choose a different drive/root. Before provisioning, inspect existing AGNT, OmniRoute, Ui.Vision, browser and project folders, disk free space, Windows user permissions and backup location. Do not claim GitHub creation equals Windows deployment.
+
+The repository's `09-opportunity-hunter/` folder is the *development/project-management* source area. Runtime application files and SQLite must be installed/copied onto Windows and executed there. Keep environment-specific configs and secrets out of GitHub. Do not duplicate already-installed software; use adapters and on-demand execution. Real Windows setup and execution require a local deployment workflow and verification receipts.
+
+Deployment gates to add: Windows path selection -> inventory existing installations -> create local folders -> copy/install versioned app code -> local config/SQLite initialization -> run synthetic tests on Windows -> connect Ui.Vision/AGNT/OmniRoute locally -> read-only live site pilot -> controlled sending and reply tracking -> scheduled one-click operation, measured RAM, backups and rollback.
