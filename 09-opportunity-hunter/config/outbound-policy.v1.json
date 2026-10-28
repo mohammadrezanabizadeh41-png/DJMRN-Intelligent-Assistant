@@ -1,0 +1,26 @@
+{
+  "schema_version": "djmrn.oh.outbound-policy.v1",
+  "default_mode": "DRAFT_ONLY",
+  "sites": {
+    "freelancermap": {
+      "plan": "Basic",
+      "monthly_application_limit": 10,
+      "quota_source": "https://www.freelancermap.com/pricing/freelancer",
+      "quota_reset_rule": "UNVERIFIED",
+      "account_remaining_quota": null,
+      "automation_permission": "UNVERIFIED",
+      "minimum_spacing_seconds": 300,
+      "max_daily_applications": 1,
+      "send_enabled": false,
+      "require_per_project_approval": true,
+      "stop_on": [
+        "CAPTCHA",
+        "HTTP_429",
+        "ACCOUNT_WARNING",
+        "UNKNOWN_SEND",
+        "QUOTA_UNKNOWN",
+        "AUTOMATION_PERMISSION_UNVERIFIED"
+      ]
+    }
+  }
+}
