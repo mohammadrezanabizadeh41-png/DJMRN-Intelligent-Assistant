@@ -184,3 +184,6 @@ User executed src/parse_details.py against three OH-07 JSON exports. Output: OH_
 
 ## OH-09 disposable detail SQLite test — WINDOWS VERIFIED PASS (2026-10-28)
 User ran src/test_detail_store.py with live DB as read-only source and three OH-07 exports. Output: OH_09_TEMP_DETAIL_STORE=PASS; FIRST_NEW=2; SECOND_SEEN=2; DETAIL_ROWS=2; OPPORTUNITIES_BEFORE=22; OPPORTUNITIES_AFTER=22; OFFICIAL_ID_3066185_LINKED_TO_EXISTING_ID=20; INTEGRITY=ok; FOREIGN_KEYS=ok; OPERATIONAL_DB_WRITES=0; OUTBOUND_ACTIONS=0; TEMP_CLEANUP=PASS. Next: separate explicit approval for production DB backup/schema migration/detail writes; preserve existing statuses and history.
+
+## OH-10 production detail migration — WINDOWS VERIFIED PASS (2026-10-28)
+User ran approved src/apply_detail_store.py. Output OH_10_BACKUP=PASS; backup C:\\Users\\Mrn7206\\AppData\\Local\\DJMRN\\OpportunityHunter\\backups\\opportunities-pre-oh10-20261028T161003058827Z.sqlite3; OH_10_PRODUCTION_IMPORT=PASS; EVENTS=NEW,NEW; DETAIL_ROWS=2; OPPORTUNITIES=22; HISTORY=22; ID_3066185=20; ORIGINAL_ROWS_UNCHANGED=YES; BACKUP_RETAINED=YES; OUTBOUND_ACTIONS=0. Next OH-11 site-specific quota and approval-only outbound gate; do not enable auto sending.
