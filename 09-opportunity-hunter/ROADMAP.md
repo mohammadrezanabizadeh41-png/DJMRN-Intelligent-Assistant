@@ -36,3 +36,16 @@ OH-00 -> OH-01 -> OH-02; OH-01 -> OH-03; OH-02 + OH-03 -> OH-04; OH-04 -> OH-05/
 
 ## Definition of done
 A controlled, user-configured site profile can ingest a permitted listing, deduplicate it, correctly classify and price or flag it, generate a truthful tailored draft, respect permissions/quotas, send only where enabled and allowed, store receipt, track response, and notify user. All acceptance tests and measured RAM must be logged. No autonomous final contract.
+
+
+## Deployment clarification — Windows-first (2026-10-28)
+**Authoritative operational environment: user's Windows 11 PC, NOT GitHub.** Repo holds source, design, reproducible tests and installer instructions. Live SQLite, site sessions, browser state, local logs and secrets remain on Windows. Proposed root `%LOCALAPPDATA%\DJMRN\OpportunityHunter\` is pending local path approval/inventory and has NOT been created.
+
+Insert operational subgates ahead of OH-01/OH-05:
+- **OH-W0:** Inspect existing Windows installations, program paths, disk space, user permissions and any DJMRN working roots; avoid duplicate installations.
+- **OH-W1:** User confirms local project root/drive; create app/config/data/logs/exports/backups directories locally and record actual paths (do not assume).
+- **OH-W2:** Deploy versioned source from GitHub to Windows, create SQLite and local settings, run synthetic tests on the user's machine; no secrets in repo.
+- **OH-W3:** Verify local Ui.Vision macro invocation and AGNT/OmniRoute integration using read-only inputs before outbound actions; measure actual RAM and capture receipts.
+- **OH-W4:** Implement one-click/Task Scheduler launcher, controlled restart, backup and recovery after safe pilot.
+
+Keep GitHub test fixtures and operational Windows files separate. A GitHub commit is not a Windows installation or working app. First next practical action: local inventory and path selection, not more GitHub-only design.
