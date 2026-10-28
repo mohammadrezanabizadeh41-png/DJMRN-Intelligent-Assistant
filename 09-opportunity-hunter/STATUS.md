@@ -133,3 +133,6 @@ Windows output confirmed OH_05_SAMPLE_PARSE=PASS, NORMALIZED_RECORDS=2, UNIQUE_R
 
 ## OH-05 offline validator code ready; Windows test pending
 Created src/ingest.py commit 4407dd6a7d49940486a7ebffc67bb1ed68845f21 and src/test_ingest.py commit 94588fc06e6e24ab012614532cbdd045203b7aa4. Validation: Freelancermap only, required ID/title, HTTPS URL, duplicate IDs, max 1000 entries. No network or DB writes. NOT YET TESTED ON WINDOWS.
+
+## OH-05 Windows offline validation — PASS
+User output: OH_05_VALIDATION=PASS, NORMALIZED_RECORDS=2, INVALID_CASES_REJECTED=5, NETWORK_ACTIONS=0, REAL_DATABASE_MODIFIED=NO, OH_05_VALIDATION_COMMAND=COMPLETED. Offline Freelancermap import validator passed. Next: validate ingest-to-ledger integration on temporary copy of operational v1 database.
