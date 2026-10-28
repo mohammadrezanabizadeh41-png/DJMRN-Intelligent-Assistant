@@ -136,3 +136,6 @@ Created src/ingest.py commit 4407dd6a7d49940486a7ebffc67bb1ed68845f21 and src/te
 
 ## OH-05 Windows offline validation — PASS
 User output: OH_05_VALIDATION=PASS, NORMALIZED_RECORDS=2, INVALID_CASES_REJECTED=5, NETWORK_ACTIONS=0, REAL_DATABASE_MODIFIED=NO, OH_05_VALIDATION_COMMAND=COMPLETED. Offline Freelancermap import validator passed. Next: validate ingest-to-ledger integration on temporary copy of operational v1 database.
+
+## OH-05 Windows ingest-to-ledger integration — PASS
+User output: OH_05_LEDGER_INTEGRATION=PASS; EVENTS=NEW,SEEN,UPDATED; HISTORY_ROWS=3; FINAL_COUNT=2; STATUS_PRESERVED=SENT; REAL_DATABASE_MODIFIED=NO; TEMP_COPY_CLEANUP=PASS; OH_05_INTEGRATION_COMMAND=COMPLETED. Test used temporary SQLite copy of operational v1 database. Live website ingestion not yet tested; no outbound messages.
