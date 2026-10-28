@@ -106,3 +106,6 @@ User installed patched app/evaluate.py (SHA256 2A4D0601C7C49BFD3F3F7BC4906C63388
 
 ## OH-04 initial Windows synthetic test — IMPORT FAILURE
 User downloaded ledger.py and test_ledger.py successfully, but `py -I test_ledger.py` failed before any database operations with ModuleNotFoundError: No module named 'ledger'. Root cause Python isolated mode omits script directory from import path. Patched test_ledger.py to add its own resolved directory to sys.path, commit 8ebe2e2977a0e6af7dbee6a883c2cfbbbc0dc2d9. Windows retest pending; OH-04 NOT PASS. Test only references temporary database, not operational DB.
+
+## OH-04 Windows retest partial logic PASS, cleanup FAIL
+User test output: NEW/SEEN/UPDATED, final count 1, REAL_DATABASE_MODIFIED=NO; then TemporaryDirectory cleanup failed with Windows WinError 32 on open SQLite file. Therefore full OH-04 gate remains FAIL/PENDING. Cause: sqlite3 connection context manager does not close handle. Both ledger.py and test_ledger.py patched to use contextlib.closing with transaction context, commits 3553f5a944b950a3893f42105535480ac13f89ce and fbfebbe27bf1da065ba3e3a72065a1289c35ad48. Windows retest pending.
