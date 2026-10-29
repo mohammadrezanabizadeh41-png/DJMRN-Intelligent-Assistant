@@ -1,3 +1,7 @@
+## 2026-10-29 — GROQ MODEL #6 GATEWAY PASS (PROMPT GUARD 22M) / 6 OF 11 VERIFIED
+
+Actual user Windows PowerShell receipt: `model=groq/meta-llama/llama-prompt-guard-2-22m`, OmniRoute `POST http://127.0.0.1:20128/v1/chat/completions` with Gateway API key, `HTTP_STATUS=200`, `DURATION_SECONDS=0.83`, `ANSWER=0.9990056157112122`, `CLASSIFICATION_SCORE=0.999005615711212`, `RESULT=PASS_REAL_GATEWAY`. This is **real routed classifier inference**, not only direct Groq reachability. Confirmed Groq models now **6/11**: five previously user screenshot-green Built-ins plus this actual Gateway-pass Custom. No repeat Custom creation, provider edits, billing changes or extra models tested. Model 7 (`groq/meta-llama/llama-prompt-guard-2-86m`) is next for one single-model Gateway test. Single canonical tracking source: [DJMRN Groq Model Validation Tracker](omniroute/DJMRN-GROQ-MODEL-VALIDATION-TRACKER.md). Do not mark all other endpoint modalities verified.
+
 
 ## 2026-10-29 — GROQ-COMPLETE-LIVE-11-MODEL-INVENTORY / NO MISSING TEXT MODELS
 
