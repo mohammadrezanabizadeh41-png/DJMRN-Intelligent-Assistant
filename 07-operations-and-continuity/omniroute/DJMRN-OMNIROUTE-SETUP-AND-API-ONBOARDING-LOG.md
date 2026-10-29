@@ -44,3 +44,12 @@ Track OmniRoute Windows install, login, configuration, provider registration, mo
 
 ## Governance
 Free-first. Never enable billing/paid features or store secrets in repository. Do not treat a listed model or visible quota as a successful API connection. Account/project/model rate limits may overlap. Avoid repeated non-idempotent agent tool execution during automatic retries.
+
+## 2026-10-30 — COHERE-OMNIROUTE-PROVIDER-CONNECTION-PASS-20261030 (latest provider status)
+
+Previous 2026-10-26 queue table was a historical pre-onboarding snapshot; its Cohere/Pending row is now superseded:
+- **Cohere provider CONNECTED / ACTIVE / TESTED** per user Windows `DJMRN COHERE RECOVERY V3`, existing connection `DJMRN-Cohere-Free`, ID `5b4e90eb-b8bd-4c64-84ff-b366d7ba8134`; scoped HTTP proxy `127.0.0.1:20809`; credential validation with `command-r7b-12-2024` returned `VALID=True`, `DIAGNOSIS_TYPE=ok`, 377 ms, `FINAL_ACTIVE=True`, `FINAL_TEST_STATUS=active`.
+- **MODEL GATEWAY TEST NOT YET VERIFIED**; provider-level PASS must not add 19th entry to the existing **18** working-model inventory. Proposed `cohere/command-r7b-12-2024` is a candidate only.
+- Existing Free/Trial key and noncommercial-only restriction retained. Public official Trial quota **1,000 API calls/month shared**, not per model; rate limits vary by model and endpoint (Chat listed Command family 20 requests/min/model, Rerank 10 req/min, etc.). Remaining account usage unknown, no production key or billing changes.
+- Full account/provenance/official sources: [Cohere Trial dossier](../../06-tests-and-evidence/provider-research/COHERE-FREE-TRIAL-ACCOUNT-KEY-MODEL-CATALOG-AND-OMNIROUTE-GATES-2026-10-26.md).
+
