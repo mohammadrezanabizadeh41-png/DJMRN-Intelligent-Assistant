@@ -1,3 +1,19 @@
+## 2026-10-30 — DJMRN-OPENROUTER-NEMOTRON-ULTRA-FREE-UI-GREEN-20261030 — VERIFIED DIRECT FREE MODEL + OMNIROUTE UI-GREEN
+
+**User-authorized continuity record, alongside Gemini/Groq model evidence.** Existing OpenRouter connection under OmniRoute v3.8.52, connection ID `d7ec4dd2-a0b3-477f-99be-9729fc6d926f`, was created with `POST /api/providers` and initially failed its test with `valid=False, diagnosis.type=upstream_auth_error`. Direct OpenRouter authenticated `GET https://openrouter.ai/api/v1/key` passed, reporting `is_free_tier=True`; assigning **connection/key-scoped HTTP proxy** `127.0.0.1:20809` via `PUT /api/settings/proxy` repaired the management connection test: `valid=True, diagnosis.type=ok, OPENROUTER=CONNECTED`. This does not imply other providers were modified.
+
+**Live account inventory (user PowerShell read-only):** `TOTAL_MODELS=420`, `FREE_VARIANTS=16` satisfying model ID suffix `:free` and zero prompt/completion rates, `ACCOUNT_FREE_TIER=True`, `DAILY_QUOTA=50`, `DAILY_REMAINING=50` at inventory time (`DAILY_USED` displayed blank). The 50 is **account-wide across free model variants**, not 50 per model. Availability/rate limits may change. No blanket promise of 50 successful inferences.
+
+**Selected advanced reasoning candidate:** upstream model ID `nvidia/nemotron-3-ultra-550b-a55b:free`; OmniRoute displayed full route/model card `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` with `CUSTOM`, `chat`, `Manual`, `Free`, green check, and `1/1 active` in user screenshot. **UI-registered/green confirmed**; do not add duplicate model or run bulk `Import from /models`. Only this one OpenRouter model is shown registered, not all 16 variants.
+
+**Actual direct upstream inference PASSED:** user PowerShell `POST https://openrouter.ai/api/v1/chat/completions`, `model=nvidia/nemotron-3-ultra-550b-a55b:free`, response `HTTP_STATUS=200`, `RETURNED_MODEL=nvidia/nemotron-3-ultra-550b-a55b:free`, `ANSWER=391` for `17*23`, `FINISH_REASON=stop`, `RESULT=API_RESPONSE_RECEIVED`. This confirms actual OpenRouter model execution and correct basic output, **not advanced reasoning quality**.
+
+**Validation boundaries:** no user-provided receipt yet of actual `POST http://127.0.0.1:20128/v1/chat/completions` via OmniRoute Gateway for this OpenRouter model. The user confirmed direct upstream inference and screenshot green OmniRoute UI card; classify as **DIRECT PASS + OMNIROUTE UI GREEN**, **GATEWAY END-TO-END PENDING**. Do not conflate green UI status, provider connection `valid=True`, and a genuine Gateway completion. Do not add to an operational automatic Combo/family until user chooses and a Gateway test passes. Any `FREE` UI badge is metadata, not an enforced spending cap. Preserve Gemini and Groq statuses and their model rosters.
+
+**Suggested next step (not executed):** one minimal authorized Gateway text test with exact full model ID `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` and OmniRoute Gateway key; inspect HTTP status/model/answer. After actual PASS, update this same entry or canonical file with receipt before routing into existing chat family or dedicated heavy-reasoning route. Avoid leaking credentials and private project data to external free endpoints.
+
+---
+
 ## 2026-10-29 — USER-APPROVED CHAT POOL SHORTLIST (PLANNED, NOT ROUTER-MUTATED)
 
 - User explicitly selected **four Groq models** for the existing Gemini/OmniRoute chat-family planning pool: `groq/openai/gpt-oss-120b`, `groq/openai/gpt-oss-20b`, `groq/qwen/qwen3.8-27b`, `groq/openai/gpt-oss-safeguard-20b`. The last is a **specialized safety classifier**, not a normal chat fallback; keep separately flagged, never silently route ordinary chat to it.
