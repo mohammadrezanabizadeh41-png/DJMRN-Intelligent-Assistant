@@ -1,4 +1,12 @@
 
+## 2026-10-29 — GROQ-COMPLETE-LIVE-11-MODEL-INVENTORY / NO MISSING TEXT MODELS
+
+- User supplied authenticated Windows PowerShell read-only results from `GET https://api.groq.com/openai/v1/models` and OmniRoute `GET http://127.0.0.1:20128/api/provider-models?provider=groq`: `CATALOG=PASS`, `LIVE_MODEL_COUNT=11`, `CUSTOM_MODEL_COUNT=2`, `RESULT=INVENTORY_COMPLETE_READ_ONLY`. The 11 account IDs: `allam-2-7b`, `canopylabs/orpheus-arabic-saudi`, `canopylabs/orpheus-v1-english`, `meta-llama/llama-prompt-guard-2-22m`, `meta-llama/llama-prompt-guard-2-86m`, `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `openai/gpt-oss-safeguard-20b`, `qwen/qwen3.8-27b`, `whisper-large-v3`, `whisper-large-v3-turbo`. No other live model IDs returned.
+- All seven currently available text/classifier models are accounted for in OmniRoute: **five Built-ins** (`allam-2-7b`, GPT-OSS 20B, GPT-OSS 120B, Qwen 3.8 27B, GPT-OSS Safeguard 20B), **two preexisting Custom** (Prompt Guard 22M, 86M). Both Prompt Guards had already passed direct Groq HTTP 200 with numeric classification scores; routed Gateway tests remain pending. Do NOT make new Custom model rows for them.
+- **Audio**: two Whisper STT models have native OmniRoute v3.8.52 Groq transcription adapters but no demonstrated end-to-end routed audio test. Two Orpheus TTS models are accessible in Groq's account catalog, but OmniRoute version's native Groq speech adapter is absent; assess compatible speech provider route before claiming them wired. The Free public table documents 10 rows, while `allam-2-7b` is in user account and has historical screenshot limits but not today's public Free table. Limits are baseline, not live remaining balances.
+- Full verified evidence and recommended next tests: [Groq registration, proxy recovery, live catalog and direct model results](../06-tests-and-evidence/logs/GROQ-OMNIROUTE-PROVIDER-CREATED-TEST-ERROR-20261029.md). This was **read-only local inventory, not a model installation or runtime acceptance test**.
+
+
 ## 2026-10-29 — GROQ-7-BUILTINS-AUDIT: 4 current Free-listed, 2 retired, 1 unresolved; 2 missing Free text safety models
 
 - User OmniRoute v3.8.52 screenshot (actual GUI) proves `DJMRN-Groq-Free` connected and 7/7 built-in cards visible: groq/compound, allam-2-7b, openai/gpt-oss-120b, openai/gpt-oss-20b, qwen/qwen3.6-27b, qwen/qwen3.8-27b and openai/gpt-oss-safeguard-20b (all with local `groq/` routing prefix). A card marked active/Assumed does **not** prove live inference.
