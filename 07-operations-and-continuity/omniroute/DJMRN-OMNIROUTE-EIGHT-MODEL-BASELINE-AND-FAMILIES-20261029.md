@@ -1,6 +1,6 @@
 # DJMRN — OmniRoute Model Baseline and Next-Phase Continuation
 Date: 2026-10-29
-Status: USER-CONFIRMED BASELINE / FAMILY ASSIGNMENT PENDING
+Status: USER-CONFIRMED BASELINE / BOTH INITIAL COMBOS CREATED IN UI; WEB VISION PROPOSED
 Repository: DJMRN-Intelligent-Assistant
 
 ## User decision — authoritative for next phase
@@ -16,7 +16,7 @@ The user confirms **six chat-capable models already prepared in OmniRoute** and 
 | `gemini/gemini-3.1-flash-lite` | text and inline JPEG vision PASS | one-off image PASS |
 | `gemini/gemini-3-flash-preview` | text PASS HTTP 200, 2.11 s | vision NOT TESTED |
 
-The user says all six are already prepared in OmniRoute. This is user-confirmed operational inventory; **do not infer that all six have been enrolled in a specific named Combo or that failover among them has been tested**. Earlier `DJMRN-Persian-L1` AI Horde Combo is a distinct historical pilot, not the six-model final inventory.
+The user says all six are already prepared in OmniRoute. On 2026-10-29 a subsequent user screenshot confirms **DJMRN-PM-Standard** Combo exists with PRIORITY strategy, shows three individual model IDs and '+3 more'; the remaining three expected IDs are from user-confirmed baseline, not separately expanded in that screenshot. **Combo inference and failover are not yet tested.** See the later UI receipt linked below. Earlier `DJMRN-Persian-L1` AI Horde Combo is a distinct historical pilot, not the six-model final inventory.
 
 ## Two embedding models — exact gateway IDs
 | Model route | Endpoint | Recorded smoke evidence |
@@ -24,7 +24,7 @@ The user says all six are already prepared in OmniRoute. This is user-confirmed 
 | `gemini/gemini-embedding-2` | `POST /v1/embeddings` | HTTP 200, 0.71s, 3072-dimensional output |
 | `gemini/gemini-embedding-001` | `POST /v1/embeddings` | HTTP 200, 0.77s, 3072-dimensional output |
 
-These are two distinct vector spaces; do not combine their vectors in the same index without explicit versioning and re-embedding. **Proposed future family**: `DJMRN-EMBEDDING-RETRIEVAL` (working name only, NOT CREATED/VERIFIED in OmniRoute). Because embeddings require the embeddings endpoint, first verify OmniRoute Combo support for this modality before creating a Combo; otherwise use explicit endpoint/model routing. The user approves recording the plan, not asserting creation.
+These are two distinct vector spaces; do not combine their vectors in the same index without explicit versioning and re-embedding. **Actually created in OmniRoute UI on 2026-10-29:** `DJMRN-Semantic-Memory` (PRIORITY); screenshot visibly shows both embedding routes with the existing Gemini account. The earlier working name `DJMRN-EMBEDDING-RETRIEVAL` was superseded. Creating/listing a Combo in UI is NOT evidence that `POST /v1/embeddings` with Combo ID works, nor that cross-model fallback can be used with one persisted vector index. Keep the family reserved until a separate acceptance test.
 
 ## Next work: role-specific model families and free API expansion
 1. Reuse six existing chat models. Evaluate `VISION-BROWSER` using existing five image-tested candidates first; sixth chat model remains eligible for text and may receive one image test only when needed and approved.
@@ -47,3 +47,8 @@ These are two distinct vector spaces; do not combine their vectors in the same i
 
 ## Change boundaries
 Documentation only. No local OmniRoute settings, Combo, model/provider, API key, AGNT integration, database or billing changes were performed by this commit.
+## 2026-10-29 continuity update — source-of-truth cross-references
+
+- **User-created OmniRoute UI Combos:** `DJMRN-PM-Standard` (six chat models by user report; screenshot shows three names and +3 more) and `DJMRN-Semantic-Memory` (both embedding models individually visible), both with PRIORITY badges and apparently ON toggles. See [`DJMRN-OMNIROUTE-TWO-COMBOS-UI-CONFIRMED-20261029.md`](./DJMRN-OMNIROUTE-TWO-COMBOS-UI-CONFIRMED-20261029.md). No claim that endpoints via Combo have been smoke-tested.
+- **Next family planned but NOT yet created:** `DJMRN-Web-Vision` with five locally image-tested models, initial priority suggestion `gemini-3.6-flash`, `gemini-3.5-flash-lite`, `gemini-3.1-flash-lite`, `gemma-4-26b-a4b-it`, `gemma-4-31b-it`; the sixth selected chat route `gemini-3-flash-preview` remains PM-Standard-only for now until local image test. See [`DJMRN-WEB-SEARCH-VISION-COMBO-RESEARCH-AND-SETUP-20261029.md`](./DJMRN-WEB-SEARCH-VISION-COMBO-RESEARCH-AND-SETUP-20261029.md).
+- Existing Combo membership is **reused, not moved**; do not delete original models or provider credentials. All five models use the same Gemini provider account, so failures can correlate and quotas are not independent.
