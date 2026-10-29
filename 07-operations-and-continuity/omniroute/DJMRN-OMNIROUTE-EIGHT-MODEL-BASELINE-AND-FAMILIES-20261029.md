@@ -52,3 +52,36 @@ Documentation only. No local OmniRoute settings, Combo, model/provider, API key,
 - **User-created OmniRoute UI Combos:** `DJMRN-PM-Standard` (six chat models by user report; screenshot shows three names and +3 more) and `DJMRN-Semantic-Memory` (both embedding models individually visible), both with PRIORITY badges and apparently ON toggles. See [`DJMRN-OMNIROUTE-TWO-COMBOS-UI-CONFIRMED-20261029.md`](./DJMRN-OMNIROUTE-TWO-COMBOS-UI-CONFIRMED-20261029.md). No claim that endpoints via Combo have been smoke-tested.
 - **Next family planned but NOT yet created:** `DJMRN-Web-Vision` with five locally image-tested models, initial priority suggestion `gemini-3.6-flash`, `gemini-3.5-flash-lite`, `gemini-3.1-flash-lite`, `gemma-4-26b-a4b-it`, `gemma-4-31b-it`; the sixth selected chat route `gemini-3-flash-preview` remains PM-Standard-only for now until local image test. See [`DJMRN-WEB-SEARCH-VISION-COMBO-RESEARCH-AND-SETUP-20261029.md`](./DJMRN-WEB-SEARCH-VISION-COMBO-RESEARCH-AND-SETUP-20261029.md).
 - Existing Combo membership is **reused, not moved**; do not delete original models or provider credentials. All five models use the same Gemini provider account, so failures can correlate and quotas are not independent.
+
+## 2026-10-30 — Cross-provider operational model roster: OpenRouter Nemotron Ultra added
+
+**Operator update:** User explicitly confirmed the new OpenRouter model has been **activated and made operational in the installed OmniRoute UI**. Add this to the *same saved working-model inventory* alongside the eight Gemini baseline models above and the existing six-model Groq validation tracker. This is a roster/documentation update only; no local application mutation or API call was performed by the GitHub assistant.
+
+### Existing operational-model evidence, unchanged
+
+| Provider | Confirmed prepared / tested inventory | Best verified level | Source of truth |
+|---|---:|---|---|
+| Gemini | 6 chat models + 2 embeddings = **8** | Individual Gemini Gateway tests recorded in this document and linked test receipts; individual modality qualifications vary | Six chat and two embedding tables **above** |
+| Groq | **6** (five built-in cards UI-green, one Prompt Guard 22M real Gateway PASS) | UI-green for five, actual Gateway completion for Prompt Guard 22M; modality-specific testing still pending for other entries | [Groq validation tracker](DJMRN-GROQ-MODEL-VALIDATION-TRACKER.md) |
+
+### Newly added — OpenRouter operational model #1
+
+| Field | Verified / recorded value |
+|---|---|
+| Provider | `OpenRouter` (existing connected provider, **do not create duplicate**) |
+| Upstream model ID | `nvidia/nemotron-3-ultra-550b-a55b:free` |
+| Full OmniRoute card / route ID | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` |
+| Intended role | **Advanced / heavy reasoning**, architecture analysis and difficult multi-step tasks (proposed use; not quality-benchmarked) |
+| User-reported operational state | **ACTIVE AND OPERATIONAL — USER CONFIRMED** (2026-10-30) |
+| UI evidence | Screenshot: **1/1 active**, **CUSTOM**, **chat**, **Manual**, **Free**, and green check indicator |
+| Live direct OpenRouter inference | **PASS**, HTTP 200, model returned correctly, 17 × 23 = **391**, finish_reason `stop` |
+| OmniRoute provider connection | **PASS**, management `valid=True`, `diagnosis.type=ok` after key-scoped HTTP proxy `127.0.0.1:20809` |
+| End-to-end OmniRoute Gateway inference | **Not independently evidenced by a user-posted Gateway completion receipt**; do not claim an observed Gateway HTTP 200 solely from UI operational confirmation |
+| Account free inventory | 16 observed `:free` zero-price variants of 420 catalog models at audit time; **50 shared free requests/day**, remaining 50 at inventory time, not 50 per model |
+| Cost guard | Must retain exact suffix `:free`; UI **Free** badge is metadata, not a payment/billing block |
+| Combo/family membership | **Not yet independently confirmed**; don't silently add it to `DJMRN-PM-Standard` or any Combo |
+
+**Operational roster accounting (evidence-labeled):** existing 8 user-confirmed Gemini baseline + 6 Groq tracker-confirmed test entries + **1 new user-confirmed active OpenRouter model** = **15 entries in the cross-provider working/validated inventory**. This is *not* 15 independent accounts, 15 equivalent chat LLMs or 15 end-to-end tested Combo routes. Specialist classifier, embeddings and modality differences remain clearly distinguished.
+
+**Persistence/provenance:** direct OpenRouter API receipt, screenshot UI card and connection recovery are also documented under the 2026-10-30 OpenRouter Nemotron Ultra heading in [CURRENT-STATUS.md](../CURRENT-STATUS.md). Continue updating **this existing roster** instead of creating a parallel operational-model list. Do not alter Gemini/Groq historical statuses or report a Gateway call not observed.
+
