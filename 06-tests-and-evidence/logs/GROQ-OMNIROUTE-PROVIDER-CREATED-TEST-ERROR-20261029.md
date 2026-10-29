@@ -114,3 +114,11 @@ RESULT=GROQ_CONNECTION_ACTIVE
 **Later nontext modalities** (not part of "all text models"): Whisper V3/Turbo speech-to-text; Orpheus English/Arabic audio-speech. These require correct specialized endpoint and separate free/gateway tests; do not force Chat Completions Custom.
 
 **Free pricing disclaimer:** UI "Free" badge is metadata and official model catalog's Developer pricing is not Free plan billing. Confirm per-account Free tier, no unexpected paid use; no use of model merely because a catalog row exists.
+
+## 2026-10-29 — User reports BOTH Prompt Guard 2 variants BLOCKED
+
+- User reports both `meta-llama/llama-prompt-guard-2-22m` and `meta-llama/llama-prompt-guard-2-86m` are **blocked** in their current setup. Evidence level: USER-REPORTED BLOCKED. No exact HTTP code, Groq upstream error, screenshot of block reason, or model creation receipt was included in this statement. Do not infer geographical denial or a provider-wide shutdown.
+- **Correction to earlier provisional onboarding recommendation:** Groq's public docs still list these two model IDs as preview/content-moderation and the rate-limit table lists nominal Free request budgets. Public catalog presence or rate-limit rows **do not establish user-specific entitlement/access**. Treat both as **NOT USABLE / BLOCKED IN USER ENVIRONMENT** pending explicit contrary evidence, and **exclude them from activation, general chat Combos, or automated fallback**. Do not advise re-creating Custom entries or repeated tests as a prerequisite for proceeding.
+- Five previously screenshot-green built-ins remain the available user-tested inventory: `groq/allam-2-7b`, `groq/openai/gpt-oss-120b`, `groq/openai/gpt-oss-20b`, `groq/qwen/qwen3.8-27b`, and `groq/openai/gpt-oss-safeguard-20b`. Their green UI indicators are not a benchmark of text, vision or structured extraction.
+- If diagnostic access is later desired, check one existing sanitized error log and `GET /models` membership, without multiple speculative retries; proceed with already working models now.
+- Sources (public docs): https://console.groq.com/docs/models ; https://console.groq.com/docs/rate-limits ; https://console.groq.com/docs/content-moderation .
