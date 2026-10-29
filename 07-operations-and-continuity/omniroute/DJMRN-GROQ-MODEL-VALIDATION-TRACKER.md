@@ -90,3 +90,18 @@ User explicitly requires: after a successful *actual PowerShell model test*, the
 **No changes recommended yet:** Do not delete/re-add models, turn off global free/paid safeguards, or label as upstream banned. Next bounded diagnostic: use management token to GET only `/api/settings` `hidePaidModels` and `/api/provider-models?provider=groq` fields for exact 22M existing Custom (id, format, endpoints, free flag, hidden flag), then invoke exactly one user-approved `POST /api/models/test` with same model and connection ID and show sanitized status/error. If it's 403 `Paid model blocked...`, investigate specific model free-tag recognition without disabling no-paid policy. If other error, check streaming/probe output before changing settings.
 
 **Status:** Root cause pending, existing 22M Gateway REAL PASS is preserved. Model 86M Gateway remains pending and should not be marked failed because of card UI alone.
+
+
+## 2026-10-29 — Newly isolated UI mismatch: Custom model ID is almost certainly double-prefixed (readback confirmation pending)
+
+User ran management read-only diagnostic for the already Gateway-passed 22M and obtained:
+```text
+HIDE_PAID_MODELS=False
+MODEL_RECORDS=0
+RESULT=MODEL_RECORD_NEEDS_REVIEW
+```
+The probe looked for the exact proper upstream Custom row ID `meta-llama/llama-prompt-guard-2-22m`. Earlier the same account's management `GET /api/provider-models?provider=groq` returned `CUSTOM_MODEL_COUNT=2` and classified BOTH Prompt Guard models as `KEEP_CUSTOM`, where `KEEP_CUSTOM` accepted either `<raw-id>` or `groq/<raw-id>`. Thus combined evidence implies 22M was stored with a **mistaken `groq/` prefix in Custom model ID**, and 86M very likely likewise; list actual IDs before edits to prove exact content.
+
+Exact OmniRoute `release/v3.8.52` implementation `CustomModelsSection.tsx` computes `fullModel = `${providerAlias}/${model.id}`` unconditionally. So a stored ID `groq/meta-llama/...` would become incorrect `groq/groq/meta-llama/...` in UI. Editing Custom metadata (format/endpoints/Free) does not edit its `id`, and the user has observed UI error despite real Gateway 22M PASS. The UI test `/api/models/test` was NOT executed by the user's last diagnostic script because it returned early on the missing exact record; **do not claim a 403 or test-status from this run**. `hidePaidModels=False` excludes that specific global paid-only test-block branch currently.
+
+**Next bounded step:** read-only GET Custom model rows, print only stored `id`, computed provider-prefixed route, Chat/Free/Hidden fields, and classify DOUBLE_PREFIX. If proven, create a correctly identified Custom row `meta-llama/...` with `apiFormat=chat-completions, supportedEndpoints=[chat], isFree=true` (FREE is metadata only); verify readback before deleting only the specifically identified malformed row (if user authorizes cleanup), one model at a time. Preserve existing provider and proxy; do not blindly re-register credentials. Maintain 6/11 confirmed model runtime count (this is UI registration defect, not a new Gateway failure).
