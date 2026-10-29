@@ -85,3 +85,23 @@ Documentation only. No local OmniRoute settings, Combo, model/provider, API key,
 
 **Persistence/provenance:** direct OpenRouter API receipt, screenshot UI card and connection recovery are also documented under the 2026-10-30 OpenRouter Nemotron Ultra heading in [CURRENT-STATUS.md](../CURRENT-STATUS.md). Continue updating **this existing roster** instead of creating a parallel operational-model list. Do not alter Gemini/Groq historical statuses or report a Gateway call not observed.
 
+
+## 2026-10-30 — Mistral Ministral 3 14B added to operational roster
+
+**User-requested update to the established cross-provider working-model inventory.** The user reported that the newly registered Custom model `mistral/ministral-14b-2512` **passed the model test in OmniRoute** (`اوکی بود`). The preceding Mistral built-in `mistral/mistral-small-latest` and subsequent Custom `mistral/mistral-small-2603` had **failed/been reported blocked**; do not count them as operational. No claim is made about their underlying root causes.
+
+| Field | State and evidence |
+|---|---|
+| Provider | Mistral, using the existing user-created Mistral account/connection (do not duplicate) |
+| Upstream model ID | `ministral-14b-2512` |
+| OmniRoute full model route | `mistral/ministral-14b-2512` |
+| Format | Custom model; Chat Completions / Default (auto); Chat; Vision-capable proposed (vision has **not** been individually tested); Free badge OFF |
+| Status | **OPERATIONAL UI TEST PASS — USER CONFIRMED**, 2026-10-30 |
+| Intended usage | DJMRN Opportunity Hunter: analyzing job listings, assessing suitability/risks, drafting multilingual outreach/proposals, assistant decision-making alongside independent browser extraction |
+| Live Gateway HTTP 200 transcript | **Not yet provided**; user-confirmed OmniRoute model test success must remain distinct from a direct `POST /v1/chat/completions` receipt and from actual autonomous Web Use/send workflows |
+| Combo/group membership | User said they were going to add it to a group; **group membership not independently confirmed**, do not claim it was added or select a group by guess |
+| Account finance context | Mistral Studio Free snapshot dated 2026-10-26 showed an included $10/month API/Studio allowance, no payment method and pay-as-you-go not enabled. This model has token-based list pricing and is **not** intrinsically free; do not represent UI Free badge as spending protection, or infer current remaining allowance without new readback |
+| Recorded account throttling | Historical screenshot limits for `ministral-14b-2512`: **937,500 tokens/min**, **0.50 requests/sec**; limits are account screenshot ceilings, not promised throughput or entitlement |
+
+**Running cross-provider inventory, evidence-qualified:** Gemini **8** (six chat + two embedding), Groq **6** previously confirmed in Groq tracker, OpenRouter **1** (Nemotron Ultra direct API pass + OmniRoute UI green and user-affirmed operational), Mistral **1** (Ministral 14B user-affirmed OmniRoute UI model test pass). **Total: 16 working/validated entries across providers**, not 16 independently live Gateway-inferenced text-chat models. Preserve prior Gemini, Groq and OpenRouter test evidence. The total excludes failed Mistral Small 4 and other unticked built-ins. This is a documentation-only GitHub change; no local router, model, Combo, billing or credentials were changed.
+
