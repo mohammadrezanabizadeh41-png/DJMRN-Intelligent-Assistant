@@ -1,6 +1,6 @@
 # DJMRN Groq — Existing Provider Connection Created, Auto-Test Error (2026-10-29)
 
-Status: PROVIDER_CONNECTION_CREATED / PROXY_RECOVERED / CREDENTIAL_TEST_PASS / ACTIVE_TRUE / CHAT_GATEWAY_PENDING
+Status: GROQ_PROXY_RECOVERED / FIVE_UI_GREEN_BUILTINS / TWO_PROMPT_GUARD_DIRECT_HTTP200 / INVENTORY_RECONCILIATION_PENDING
 Evidence: Actual full Windows PowerShell execution stdout supplied by the user. No upstream or local test was executed by the assistant.
 
 ## Exact observed output (secrets excluded)
@@ -122,3 +122,34 @@ RESULT=GROQ_CONNECTION_ACTIVE
 - Five previously screenshot-green built-ins remain the available user-tested inventory: `groq/allam-2-7b`, `groq/openai/gpt-oss-120b`, `groq/openai/gpt-oss-20b`, `groq/qwen/qwen3.8-27b`, and `groq/openai/gpt-oss-safeguard-20b`. Their green UI indicators are not a benchmark of text, vision or structured extraction.
 - If diagnostic access is later desired, check one existing sanitized error log and `GET /models` membership, without multiple speculative retries; proceed with already working models now.
 - Sources (public docs): https://console.groq.com/docs/models ; https://console.groq.com/docs/rate-limits ; https://console.groq.com/docs/content-moderation .
+
+## 2026-10-29 — Decisive correction: both Prompt Guard models DIRECT-GROQ HTTP 200
+
+**New actual user PowerShell stdout** from direct upstream requests to `https://api.groq.com/openai/v1` with their own private Groq API key via local HTTP proxy `127.0.0.1:20809`, bypassing OmniRoute:
+
+```text
+CATALOG=PASS
+MODEL_COUNT=11
+CATALOG_HAS[meta-llama/llama-prompt-guard-2-22m]=True
+CATALOG_HAS[meta-llama/llama-prompt-guard-2-86m]=True
+MODEL=meta-llama/llama-prompt-guard-2-22m
+HTTP_STATUS=200
+SECONDS=0.45
+RESPONSE=0.9990056157112122
+DIRECT_TEST=PASS
+MODEL=meta-llama/llama-prompt-guard-2-86m
+HTTP_STATUS=200
+SECONDS=0.48
+RESPONSE=0.9995385408401489
+DIRECT_TEST=PASS
+```
+
+**Correction:** This overrides the preceding USER-REPORTED BLOCKED status **for upstream Groq access**. The two Prompt Guard models are directly accessible to the tested key and returned valid classification scores to a short injected-instruction test (values near 1, not normal chat text). **Their actual routing through OmniRoute remains unverified / prior UI block discrepancy unresolved**. Do not mark blocked at Groq; do not conflate `model text reply` with probability-classifier output. No new model metadata creation was reported.
+
+**User's next goal:** obtain the exact live 11-row upstream model list again and compare with current OmniRoute native + Custom inventory and documented Groq Free base RPD/RPM/TPM/TPD; install only actual missing, compatible models without duplicates or paid routing. The Groq public Free table currently lists 10 models (six chat/classifiers and four voice); `allam-2-7b` came from user Oct 26 account Limits screenshot (7000 RPD, 500000 TPD), but current public Free table omits it; account-specific daily cap and continued free entitlement must be independently confirmed in console. Historical 11 model IDs cannot be inferred from just the count, so produce full ID inventory via fresh user-local GET /models.
+
+**OmniRoute v3.8.52 exact native audio-registry source:** `open-sse/config/audioRegistry.ts` already includes `groq/whisper-large-v3` and `groq/whisper-large-v3-turbo` at `/v1/audio/transcriptions`. Audio transcribe is not Chat and does not need duplicate Chat Custom rows. Same audio registry currently has **no Groq TTS `AUDIO_SPEECH_PROVIDERS.groq`**. Orpheus may need a dedicated adapter/compatible provider node rather than an incorrectly typed Chat Custom row. Both are future specialist tests; do not claim operational proof from catalog-only listing.
+
+**Public sources:** https://console.groq.com/docs/rate-limits (Free table of 10 rows), https://console.groq.com/docs/models, https://console.groq.com/docs/deprecations (native built-in `groq/compound` and `qwen/qwen3.6-27b` already retired), https://console.groq.com/docs/speech-to-text, https://console.groq.com/docs/text-to-speech/orpheus.
+
+Next outcome PENDING: user executes one read-only, key-safe PowerShell inventory to print all upstream IDs and identify only missing entries; neither software installation nor model/provider config mutation performed here.
