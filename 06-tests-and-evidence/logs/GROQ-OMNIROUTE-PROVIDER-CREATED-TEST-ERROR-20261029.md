@@ -1,6 +1,6 @@
 # DJMRN Groq — Existing Provider Connection Created, Auto-Test Error (2026-10-29)
 
-Status: PROVIDER_CONNECTION_CREATED_IN_OMNIROUTE / AUTO_TEST_ERROR / INACTIVE
+Status: PROVIDER_CONNECTION_CREATED / PROXY_RECOVERED / CREDENTIAL_TEST_PASS / ACTIVE_TRUE / CHAT_GATEWAY_PENDING
 Evidence: Actual full Windows PowerShell execution stdout supplied by the user. No upstream or local test was executed by the assistant.
 
 ## Exact observed output (secrets excluded)
@@ -65,3 +65,36 @@ RESOLVED_PROXY_PORT=
 **Next plan, not yet executed:** First check proxy listener and whether the Groq connection carries an explicit operator-disable marker. Only if safe, assign the observed HTTP proxy to the **existing Groq connection ID only** by management `PUT /api/settings/proxy` with `{level:"key",id:existingId,proxy:{type:"http",host:"127.0.0.1",port:20809}}`, then GET resolved proxy and one `POST /api/providers/<id>/test`. Log true status and `isActive` read-back. Do not touch Gemini, global proxy, account credentials or billing; do not create a second Groq connection.
 
 **User-visible action pending.** No management writes, inference tests or gateway activation have been observed for Groq during this note.
+
+## Verified recovery (2026-10-29): connection-level proxy and successful credential check
+
+**Evidence:** User-supplied Windows PowerShell stdout from the previously proposed bounded recovery script; not remotely executed by this assistant:
+
+```text
+ACCOUNT=DJMRN-Groq-Free
+INITIAL_ACTIVE=False
+INITIAL_TEST_STATUS=active
+PROXY_TCP=True
+PROXY_ASSIGNMENT=SUBMITTED
+PROXY_LEVEL=key
+PROXY_TYPE=http
+PROXY_HOST=127.0.0.1
+PROXY_PORT=20809
+CONNECTION_TEST_VALID=True
+CONNECTION_TEST_HTTP=
+CONNECTION_TEST_MS=441
+DIAGNOSIS_TYPE=ok
+FINAL_ACTIVE=True
+FINAL_TEST_STATUS=active
+FINAL_ERROR_TYPE=
+FINAL_ERROR_CODE=
+RESULT=GROQ_CONNECTION_ACTIVE
+```
+
+**Technical conclusion:** The existing Groq account connection has now been configured with a *key/connection-scoped* HTTP proxy `127.0.0.1:20809`, the effective settings read back correctly, an explicit OmniRoute management connection test returned `valid=True` in 441 ms with diagnosis `ok`, and the subsequent provider GET confirmed `isActive=True`, `testStatus=active`, and no final error type/code. This recovers the account credential-validation/activation stage. The exact cached auto-test failure root cause was not conclusively identified, but proxy-path mismatch is supported by analogous Gemini incident and successful post-change probe. No HTTP status was printed for the connection test itself (`CONNECTION_TEST_HTTP=`); **do not invent 200** from an empty field.
+
+**Important separation:** Groq authenticated direct API catalog `GET /models` and OmniRoute's now successful credential test do **NOT** prove a routed chat completion worked, model-level output, token limits, 429 handling, Combo failover or free-only safety. The next planned single model is existing Free-account candidate `openai/gpt-oss-20b` sent as `groq/openai/gpt-oss-20b` through the local OmniRoute **Gateway** (not Groq upstream, and not Management API). Model prefix from `cheaper-inference/OmniRoute` `release/v3.8.52` provider registry: `open-sse/config/providers/registry/groq/index.ts` declares `id:"groq"` and `models:[{id:"openai/gpt-oss-20b"}]`. Gateway route must be verified by actual user test. Ask for privately entered **OmniRoute Gateway API Key**, not Groq upstream key and not Management token. Use one minimal non-streaming text request and record actual status, safe answer and seconds only.
+
+**Affected scope:** only existing Groq connection proxy assignment and one validation probe. Gemini accounts, provider credentials, other Combos, Windows proxy, global proxy, API keys, billing and user-installed software unchanged. This is a verified user-run recovery, not an assistant-executed local action.
+
+**Next:** One bounded real Groq GPT-OSS 20B Gateway smoke test. If fails, diagnose exact sanitized status rather than adding another Groq account or flipping activation by hand.
