@@ -40,3 +40,28 @@ Groq upstream API key, OmniRoute Management token, Gateway key, and dashboard pa
 - `06-tests-and-evidence/provider-research/GROQ-FREE-TIER-MODEL-REVIEW-20261029.md`
 - `06-tests-and-evidence/provider-research/GROQ-ACCOUNT-AND-MODEL-ONBOARDING-2026-10-26.md`
 - `07-operations-and-continuity/CURRENT-STATUS.md` for earlier Gemini's similar UI validation issues.
+
+## Follow-up 2026-10-29 — Windows proxy ON, Groq has no effective resolved proxy
+
+**Actual user Windows PowerShell read-only output:**
+
+```text
+WINDOWS_PROXY_ENABLED=1
+WINDOWS_PROXY_SERVER=127.0.0.1:20809
+GROQ_CONNECTIONS=1
+CONNECTION=DJMRN-Groq-Free
+ACTIVE=False
+TEST_STATUS=active
+PROXY_ENABLED=True
+RESOLVED_PROXY_TYPE=
+RESOLVED_PROXY_HOST=
+RESOLVED_PROXY_PORT=
+```
+
+**Important correction to previous status:** The connection's `testStatus` changed from `error` to `active`, while `isActive` remained `False`. These are distinct fields. The effective proxy GET `GET /api/settings/proxy?resolve=<connectionId>` yielded no proxy type/host/port with the user's extraction script. Exact OmniRoute v3.8.52 route implementation returns a top-level `proxy` field, so the result supports `NO_EFFECTIVE_CONNECTION_PROXY`. It does not prove the validator must fail, or that the upstream key is invalid.
+
+**Close historical comparison:** `07-operations-and-continuity/CURRENT-STATUS.md`, section `OMNIROUTE-GEMINI-403-HTML-PROXY-RECOVERY-20261027`, records that the existing Gemini connection had `proxyEnabled=True` but no resolved proxy. Its connection-only `PUT /api/settings/proxy` assignment with `level=key` and the then-active Windows HTTP proxy `127.0.0.1:20809` followed by a gateway HTTP 200 fixed Gemini chat. This is corroborating history, not proof the same fix will cure Groq.
+
+**Next plan, not yet executed:** First check proxy listener and whether the Groq connection carries an explicit operator-disable marker. Only if safe, assign the observed HTTP proxy to the **existing Groq connection ID only** by management `PUT /api/settings/proxy` with `{level:"key",id:existingId,proxy:{type:"http",host:"127.0.0.1",port:20809}}`, then GET resolved proxy and one `POST /api/providers/<id>/test`. Log true status and `isActive` read-back. Do not touch Gemini, global proxy, account credentials or billing; do not create a second Groq connection.
+
+**User-visible action pending.** No management writes, inference tests or gateway activation have been observed for Groq during this note.
