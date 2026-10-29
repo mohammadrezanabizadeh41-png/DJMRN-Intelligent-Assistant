@@ -60,3 +60,18 @@ RESULT=PASS_REAL_GATEWAY
 ```
 
 **Conclusion:** User-confirmed Gateway chat request and numeric classifier output are real and valid for this specific model. It moves from pending to CONFIRMED (#6 of 11), without requiring a new Custom entry or changing any connection/proxy. The earlier reported red “Blacklist” UI action does not by itself negate this runtime success. All other model states remain unchanged; classification quality, real adversarial robustness, and free-cost enforcement remain untested.
+
+
+## Standing operator rule — after each successful test, provide exact OmniRoute UI registration settings
+
+User explicitly requires: after a successful *actual PowerShell model test*, the assistant must immediately give copy/paste-ready UI settings to add **or review/adjust** that model in OmniRoute's **Groq provider → Custom Models**, and only then move to the next model. Distinguish an API model test success from a UI model registration or green icon; only mark a UI registration completed after user evidence.
+
+**Two Prompt Guard entries are already stored**: user management `GET /api/provider-models?provider=groq` returned `CUSTOM_MODEL_COUNT=2`, plus both rows were `KEEP_CUSTOM`. Therefore **do not click + Add for either again**. If they are absent from the broader `Models & Combos` page, use Groq provider → Custom Models (existing row), refresh, clear model filters / show hidden, and review/Edit the existing row; do not infer missing DB row from missing global card. OmniRoute v3.8.52 source `src/app/(dashboard)/dashboard/providers/[id]/ProviderDetailPageClient.tsx` merges `modelMeta.customModels` into the provider's Available Models listing, and `CustomModelsSection.tsx` supports editing rather than duplicate insertion.
+
+**Current tested 22M settings** (`modelId` must be upstream ID without `groq/` prefix): `meta-llama/llama-prompt-guard-2-22m`; display `DJMRN Groq Prompt Guard 22M`; `API Format=Chat Completions`; `Target Format=Default (auto)`; `Supported Endpoints=[Chat]` only; `Vision capable=OFF`; `FREE=ON` (documentation Free tier; metadata only, not a spending guard); context/output overrides leave blank; expected full gateway model `groq/meta-llama/llama-prompt-guard-2-22m`. Real Gateway HTTP200 / 0.83s / numeric score pass already user-confirmed.
+
+**86M pending Gateway test settings** likewise: upstream ID `meta-llama/llama-prompt-guard-2-86m`; display `DJMRN Groq Prompt Guard 86M`; same Chat Completions / Default / Chat only / no Vision / Free tag; expected full route `groq/meta-llama/llama-prompt-guard-2-86m`. Already present as a Custom row; no duplicate. Only mark gateway confirmed after user test.
+
+**Non-chat modalities:** For Groq Whisper 3/Turbo, OmniRoute 3.8.52 already includes native `AUDIO_TRANSCRIPTION_PROVIDERS.groq`; use Audio Transcriptions endpoint and a real audio sample, not Chat Custom. Orpheus English and Arabic in the actual upstream catalog lack built-in Groq `AUDIO_SPEECH_PROVIDERS.groq` in this version, so after verifying direct API speech propose compatible audio-speech adapter configuration; do not pretend merely setting Custom `API Format=Audio Speech` activates the missing executor. Preserve one Groq provider connection and key-scoped proxy.
+
+**Next after 22M registration review:** 86M PowerShell real OmniRoute Gateway test, then check its existing Custom settings and make it visible where applicable, then Whisper and Orpheus one by one. Five UI-green Built-ins remain unchanged.
