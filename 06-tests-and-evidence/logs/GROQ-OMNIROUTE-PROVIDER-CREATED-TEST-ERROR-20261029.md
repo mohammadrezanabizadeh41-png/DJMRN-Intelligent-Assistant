@@ -153,3 +153,47 @@ DIRECT_TEST=PASS
 **Public sources:** https://console.groq.com/docs/rate-limits (Free table of 10 rows), https://console.groq.com/docs/models, https://console.groq.com/docs/deprecations (native built-in `groq/compound` and `qwen/qwen3.6-27b` already retired), https://console.groq.com/docs/speech-to-text, https://console.groq.com/docs/text-to-speech/orpheus.
 
 Next outcome PENDING: user executes one read-only, key-safe PowerShell inventory to print all upstream IDs and identify only missing entries; neither software installation nor model/provider config mutation performed here.
+
+## 2026-10-29 — COMPLETE LIVE GROQ CATALOG reconciled with OmniRoute Custom entries (user PowerShell evidence)
+
+**Command result:**
+```text
+CATALOG=PASS
+LIVE_MODEL_COUNT=11
+CUSTOM_MODEL_COUNT=2
+LIVE_MODEL=allam-2-7b
+LIVE_MODEL=canopylabs/orpheus-arabic-saudi
+LIVE_MODEL=canopylabs/orpheus-v1-english
+LIVE_MODEL=meta-llama/llama-prompt-guard-2-22m
+LIVE_MODEL=meta-llama/llama-prompt-guard-2-86m
+LIVE_MODEL=openai/gpt-oss-120b
+LIVE_MODEL=openai/gpt-oss-20b
+LIVE_MODEL=openai/gpt-oss-safeguard-20b
+LIVE_MODEL=qwen/qwen3.8-27b
+LIVE_MODEL=whisper-large-v3
+LIVE_MODEL=whisper-large-v3-turbo
+RESULT=INVENTORY_COMPLETE_READ_ONLY
+```
+
+**Per-model comparison from actual script:**
+| Model ID | Model modality | User's live account | OmniRoute status | Public free RPD/TPD (nominal) |
+|---|---|---|---|---|
+| `allam-2-7b` | Chat | TRUE | KEEP_BUILTIN | historic user account limit 7000/500000; currently absent from public Free list, verify |
+| `openai/gpt-oss-20b` | Chat | TRUE | KEEP_BUILTIN | 1000/200000 |
+| `openai/gpt-oss-120b` | Chat | TRUE | KEEP_BUILTIN | 1000/200000 |
+| `qwen/qwen3.8-27b` | Chat + Vision | TRUE | KEEP_BUILTIN | 1000/200000 |
+| `openai/gpt-oss-safeguard-20b` | Chat + safety | TRUE | KEEP_BUILTIN | 1000/200000 |
+| `meta-llama/llama-prompt-guard-2-22m` | Classifier | TRUE | KEEP_CUSTOM | 14400/500000 |
+| `meta-llama/llama-prompt-guard-2-86m` | Classifier | TRUE | KEEP_CUSTOM | 14400/500000 |
+| `whisper-large-v3` | Audio transcriptions | TRUE | NATIVE_AUDIO_ROUTE | 2000 RPD / 28800 audio seconds daily |
+| `whisper-large-v3-turbo` | Audio transcriptions | TRUE | NATIVE_AUDIO_ROUTE | 2000 RPD / 28800 audio seconds daily |
+| `canopylabs/orpheus-v1-english` | Audio speech | TRUE | REVIEW_TTS_ADAPTER | 100/3600 |
+| `canopylabs/orpheus-arabic-saudi` | Audio speech | TRUE | REVIEW_TTS_ADAPTER | 100/3600 |
+
+There were **no OTHER LIVE MODELS NOT IN REVIEWED TABLE**, so the authenticated catalog is exhaustively accounted for by these 11 rows. `CUSTOM_MODEL_COUNT=2` plus both Prompt Guard rows marked `KEEP_CUSTOM` confirm they are already registered as Groq Custom metadata. **NO MISSING TEXT/SAFETY Custom models**, and none should be duplicated.
+
+**Crucial capability boundary:** Account's `GET /models` shows upstream availability, not routed model inference or voice endpoint support inside OmniRoute. Native Groq Whisper transcription adapters are present in v3.8.52 `open-sse/config/audioRegistry.ts` but still require a real authorized audio test. Groq Orpheus official endpoint `POST https://api.groq.com/openai/v1/audio/speech` exists (https://console.groq.com/docs/text-to-speech), whereas the same OmniRoute registry does not include `AUDIO_SPEECH_PROVIDERS.groq`, so existing Groq provider's TTS routing is NOT established. Need a dedicated OpenAI-compatible speech provider node or adapter assessment, not Chat Custom or a duplicate Groq API-key provider registration.
+
+**Official public rate limits verified 2026-10-29**: https://console.groq.com/docs/rate-limits (ten Free model rows, ALLaM not in public Free table). `Free Plan Limits` refer organization-wide base limits, not real-time remaining quotas or per-key fresh allowances; no actual authenticated account Limits-page scrape was performed.
+
+**Next operational checkpoints:** (1) one bounded and key-safe Gateways test for both already-existing Custom Prompt Guards (`groq/meta-llama/llama-prompt-guard-2-22m`, `groq/meta-llama/llama-prompt-guard-2-86m`), distinguishing numeric score from ordinary assistant prose; (2) Groq Whisper input-audio transcribe smoke via native audio route, (3) resolve Orpheus TTS compatible adapter and optionally test upstream direct speech. No blind creation of additional models, no family assembly yet. Preserve existing Gemini provider, existing Groq scoped proxy, keys and free-only policy.
