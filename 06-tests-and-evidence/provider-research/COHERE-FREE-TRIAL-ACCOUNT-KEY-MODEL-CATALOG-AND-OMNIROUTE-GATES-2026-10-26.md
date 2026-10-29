@@ -1,5 +1,37 @@
 # Cohere — DJMRN Trial Account, Model Catalog, Free Quotas and OmniRoute Integration Dossier
 
+## 2026-10-30 — COHERE-OMNIROUTE-PROVIDER-CONNECTION-PASS-20261030 — verified user Windows PowerShell receipt
+
+**Supersedes previous 2026-10-26 'NOT_CONNECTED_TO_OMNIROUTE / NO_COHERE_HTTP_TEST' status only as to provider connection.** User ran `DJMRN COHERE RECOVERY V3` against local OmniRoute 3.8.52 and supplied complete console output. This establishes an **active and successful provider-connection/credential test**, NOT a routed Chat Completion/model-inference acceptance test.
+
+| Field | User-observed result |
+|---|---|
+| Provider / alias | `cohere` / `cohere` |
+| Connection display name | `DJMRN-Cohere-Free` |
+| Existing connection ID | `5b4e90eb-b8bd-4c64-84ff-b366d7ba8134` |
+| Local OmniRoute endpoint | `http://127.0.0.1:20128` |
+| Connection reused | `COHERE_CONNECTION_COUNT=1`, `CONNECTION_ACTION=REUSE_EXISTING` (no new duplicate) |
+| Account-scoped proxy | `level=key`, HTTP `127.0.0.1:20809`; `PROXY_ACTION=ASSIGNED_TO_COHERE`; subsequent readback type/host/port match |
+| Validation probe ID | `command-r7b-12-2024` |
+| Test result | `VALID=True`, `DIAGNOSIS_TYPE=ok`, `LATENCY_MS=377` |
+| Persisted connection | `FINAL_ACTIVE=True`, `FINAL_TEST_STATUS=active` |
+| HTTP status code | Console showed blank `STATUS_CODE=`; **do not invent an HTTP 200 receipt** |
+| API key | Existing user-controlled `DJMRN-OmniRoute-Cohere` **Trial** key; actual value not stored, shared, rotated or replaced |
+| Billing/commercial | User screenshot on 2026-10-30 confirmed **Free Account / Trial Keys FREE**, expressly **not for commercial use**; no Production upgrade requested or performed |
+
+**Troubleshooting provenance:** Initial POST `/api/providers` had apparently created the connection but the original assistant script wrongly looked for `$created.id`; release v3.8.52 actually returns `{ connection: { id: ... } }`, so original script halted with `COHERE_CREATED_BUT_CONNECTION_ID_MISSING` before proxy configuration. A subsequent V3 run initially encountered HTTP 403 from local OmniRoute management `GET /api/providers` (not from Cohere); final V3 run using a valid management credential passed, found one existing connection, installed only the Cohere account-scoped proxy, and confirmed connection/test active. Do not ascribe the earlier management 403 to an evidenced specific user mistake.
+
+**Official Cohere Trial allowance and models, rechecked 2026-10-30:**
+- `https://docs.cohere.com/v2/docs/rate-limits`: **1,000 Trial API calls per month across Trial usage; NOT 1,000 per model**. Under Chat API 'per model' table, Command R7B/R/R+, Command A/A+/Reasoning/Vision/Translate, North Mini Code are **20 requests/minute per listed Chat model**. RPM and monthly budget are separate limits. Do not multiply shared monthly budget by available model count or trial-key count.
+- Non-Chat trial throughput limits differ: Rerank **10 req/min**, Audio Transcriptions **5 req/min**, Embed text **2,000 inputs/min**, Embed images **5 inputs/min**, EmbedJob **5 req/min**, Tokenize **100 req/min**, Parse **500 req/min**. These are different units/capabilities; do not treat an input as a request or route embeddings/rerank into Chat Completions.
+- `https://docs.cohere.com/docs/cohere-faqs` corroborates global 1,000 calls/month for trial; `https://cohere.com/pricing` states Trial API calls free but **not allowed in production or commercial use**; Production keys generally billed by usage.
+- Precise **account-specific consumed/remaining monthly calls**, monthly reset timestamp/timezone, cross-key aggregation/account enforcement, and entitlement for each candidate model are **NOT yet observed**. Dashboard historical October 26 `$0` does not establish current remaining quota. Do not infer a separate 1,000-call allocation for each model, each new trial key, or model family.
+- An OmniRoute `/api/providers/{id}/test` `valid=True` **does not establish** actual `POST /v1/chat/completions` Gateway inference for `cohere/command-r7b-12-2024`. Route-specific `HTTP 200`, actual content, tool-use, and Combo membership remain **PENDING**. Keep cross-provider working model total **18** (Gemini 8, Groq 6, OpenRouter 1, Mistral 1, Cloudflare 2); a *provider connection* is not a newly verified *model*.
+
+**Next approved action boundary:** Low-token synthetic Gateway test using user's **OmniRoute Gateway API key** (distinct from Management and upstream Trial key), one model only; do not send actual paid freelance/client work through Trial Cohere. No GitHub records contain credentials; this research amendment did not mutate Windows OmniRoute, account billing, permissions or Combo routes.
+
+---
+
 ## 2026-10-26 — VERIFIED KEY RENAME + MODEL ONBOARDING HANDOFF (USER SCREENSHOT)
 
 **Most recent account-key observation / supersedes only earlier `default` key-label notes**:
