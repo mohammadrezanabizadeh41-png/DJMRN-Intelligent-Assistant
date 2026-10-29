@@ -53,3 +53,11 @@ Previous 2026-10-26 queue table was a historical pre-onboarding snapshot; its Co
 - Existing Free/Trial key and noncommercial-only restriction retained. Public official Trial quota **1,000 API calls/month shared**, not per model; rate limits vary by model and endpoint (Chat listed Command family 20 requests/min/model, Rerank 10 req/min, etc.). Remaining account usage unknown, no production key or billing changes.
 - Full account/provenance/official sources: [Cohere Trial dossier](../../06-tests-and-evidence/provider-research/COHERE-FREE-TRIAL-ACCOUNT-KEY-MODEL-CATALOG-AND-OMNIROUTE-GATES-2026-10-26.md).
 
+
+## 2026-10-30 — HUGGINGFACE-FUTURE-PAID-OPTION-DEFERRED-20261030 — Hold for future economic paid tier
+
+- User decision: **retain Hugging Face as potential low-cost future paid inference route**. Current policy: **NO paid use, NO model auto-routing, NO paid imports or subscription/credit purchase**; do not add it to the operational free models count (still **18**).
+- Latest user-supplied OmniRoute **Add HuggingFace API Key** screenshot: API key masked, green `Valid`, provider add form visible; **Save not confirmed** and no persisted connection ID, active test, or Gateway completion observed. Earlier token exists in HF browser, secret deliberately absent from GitHub.
+- Official HF `https://huggingface.co/docs/inference-providers/pricing`, checked 2026-10-30, now says **Free Users: None monthly included inference credits**. The older provider dossier mentions `$0.10/month` in 2026-10-26 historical text; **superseded** by current published guidance. A previous account screenshot displayed a proposed/visible `$300` monthly spending limit; neither $300 nor `Valid` means free access.
+- For later approved paid usage, assess live cost per model/provider against direct vendor access and enforce tested paid budget and failure-stop boundaries. Source dossier: `06-tests-and-evidence/provider-research/HUGGINGFACE-FREE-ACCOUNT-TOKEN-INFERENCE-PROVIDERS-OMNIROUTE-2026-10-26.md`. No other OmniRoute connections, tokens, local configuration or billing changed in this documentation step.
+
