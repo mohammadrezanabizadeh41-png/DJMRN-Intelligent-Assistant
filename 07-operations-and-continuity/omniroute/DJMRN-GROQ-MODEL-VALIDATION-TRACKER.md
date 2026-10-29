@@ -1,32 +1,32 @@
 # DJMRN — Groq Model Validation Tracker
 
 Reference date: 2026-10-29
-Purpose: One stable, append/update-in-place roster for the user's **Groq provider** `DJMRN-Groq-Free` under OmniRoute Desktop v3.8.52. Append each model to **UI GREEN** only when the user presents a fresh green OmniRoute test result; separate routing, text and voice verification evidence. Never silently mark a model validated based solely on the upstream catalog or an imported Custom row. Do not create duplicate models or provider connections.
+Purpose: One stable, append/update-in-place roster for the user's **Groq provider** `DJMRN-Groq-Free` under OmniRoute Desktop v3.8.52. Add to the confirmed list only when user evidence shows an OmniRoute green test indicator or a real Gateway HTTP 200 with valid output; distinguish UI-green from Gateway-real verification and from direct upstream calls. Never silently mark a model validated based solely on the upstream catalog or an imported Custom row. Do not create duplicate models or provider connections.
 
 ## Summary
 - Groq account authenticated upstream GET `https://api.groq.com/openai/v1/models`: **11 live IDs**, evidenced by user PowerShell output on 2026-10-29.
 - **Five Groq Built-in models visibly have green test indicators in OmniRoute** (user screenshot). This confirms the UI test result only; not all endpoints, multimodal or sustained inference.
-- **Two additional Prompt Guard models** are already present as **two Custom entries** (user's GET OmniRoute model inventory), and both have independently passed **direct Groq chat HTTP 200** returning numeric prompt-injection classifier scores. Their OmniRoute model test status remains **PENDING/NOT CONFIRMED GREEN**.
+- **Both Prompt Guard Custom models are already registered**, and both had previously passed direct Groq HTTP 200. **Prompt Guard 22M is NOW GATEWAY REAL PASS** with user-supplied HTTP 200, 0.83s, numeric score 0.9990056157112122; Prompt Guard 86M remains Gateway PENDING.
 - **Two Whisper speech-to-text models** occur in upstream account and the bundled native `groq` transcription adapter; actual routed audio-transcription test not yet observed.
 - **Two Orpheus TTS models** occur in upstream account; native `groq` speech adapter not present in release/v3.8.52; routed TTS pending adapter evaluation.
-- Five **UI GREEN** is a user-confirmed operational shortlist; do not claim complete Gateway text/vision/transcription/speech HTTP 200 for each without real evidence.
+- **6/11 confirmed models** in total: five native Built-ins from user screenshot green tests + one Prompt Guard 22M Custom with actual OmniRoute Gateway HTTP 200 and valid numeric classifier score. Do not claim all other modalities verified.
 - Two other built-in catalog-only models `groq/compound` and `qwen/qwen3.6-27b` are retired upstream; exclude them from the 11 current live and from candidates.
 
-## GREEN — confirmed user screenshot of OmniRoute model test (five)
+## CONFIRMED — five OmniRoute UI-green Built-ins + one Gateway-real Custom (six)
 
-| # | OmniRoute gateway model ID | Source | UI status | Application idea (future, not yet grouped) |
+| # | OmniRoute gateway model ID | Source | Verification evidence | Application idea (future, not yet grouped) |
 |---|---|---|---|---|
-| 1 | `groq/allam-2-7b` | Built-in | GREEN (user screenshot) | Arabic text |
-| 2 | `groq/openai/gpt-oss-120b` | Built-in | GREEN (user screenshot) | Deeper text reasoning/coding |
-| 3 | `groq/openai/gpt-oss-20b` | Built-in | GREEN (user screenshot) | General/light text |
-| 4 | `groq/qwen/qwen3.8-27b` | Built-in | GREEN (user screenshot) | Text, potential vision (vision modality test not yet proved) |
-| 5 | `groq/openai/gpt-oss-safeguard-20b` | Built-in | GREEN (user screenshot) | Safety and moderation |
+| 1 | `groq/allam-2-7b` | Built-in | UI GREEN (user screenshot) | Arabic text |
+| 2 | `groq/openai/gpt-oss-120b` | Built-in | UI GREEN (user screenshot) | Deeper text reasoning/coding |
+| 3 | `groq/openai/gpt-oss-20b` | Built-in | UI GREEN (user screenshot) | General/light text |
+| 4 | `groq/qwen/qwen3.8-27b` | Built-in | UI GREEN (user screenshot) | Text, potential vision (vision modality test not yet proved) |
+| 5 | `groq/openai/gpt-oss-safeguard-20b` | Built-in | UI GREEN (user screenshot) | Safety and moderation |
+| 6 | `groq/meta-llama/llama-prompt-guard-2-22m` | Existing Custom | **REAL GATEWAY PASS**: HTTP 200, 0.83 s, score `0.9990056157112122`, test `PASS_REAL_GATEWAY` (user PowerShell 2026-10-29); prior direct Groq HTTP 200 / 0.45 s | Prompt injection classifier (numeric risk score, not chat text) |
 
-## NOT YET GREEN — pending OmniRoute modality-specific validation
+## STILL PENDING — five models awaiting actual OmniRoute modality-specific validation
 
 | # | Upstream model ID | OmniRoute registration/route status | Evidence and pending check |
 |---|---|---|---|
-| 6 | `meta-llama/llama-prompt-guard-2-22m` | Existing Custom model, Groq | Direct Groq HTTP 200 / 0.45s / score 0.9990056157112122, but OmniRoute test/route GREEN not confirmed |
 | 7 | `meta-llama/llama-prompt-guard-2-86m` | Existing Custom model, Groq | Direct Groq HTTP 200 / 0.48s / score 0.9995385408401489, but OmniRoute test/route GREEN not confirmed |
 | 8 | `whisper-large-v3` | Native Groq STT route in OmniRoute source | Actual audio through `/v1/audio/transcriptions` pending |
 | 9 | `whisper-large-v3-turbo` | Native Groq STT route in OmniRoute source | Actual audio through `/v1/audio/transcriptions` pending |
@@ -40,7 +40,23 @@ Purpose: One stable, append/update-in-place roster for the user's **Groq provide
 3. Do not duplicate two Prompt Guard Custom rows; do not re-create the five native Built-ins. Every model is under existing `DJMRN-Groq-Free` account, with its connection-scoped HTTP proxy.
 4. The account’s public Free quotas are **plan-level nominal**, not an actual per-key guaranteed daily balance or paid-use safety control. Avoid automatic spillover or model batch tests without the user's request.
 5. Source receipt with full model inventory, Groq proxy recovery and direct two-classifier HTTP 200 tests: `06-tests-and-evidence/logs/GROQ-OMNIROUTE-PROVIDER-CREATED-TEST-ERROR-20261029.md`. Limits study: `06-tests-and-evidence/provider-research/GROQ-FREE-TIER-MODEL-REVIEW-20261029.md`.
-6. This file is the single canonical **Groq model test progress tracker**. When a new model succeeds, update this same file instead of creating multiple unrelated lists. Current accepted count: **5 of 11 GREEN in OmniRoute**.
+6. This file is the single canonical **Groq model test progress tracker**. When a new model succeeds, update this same file instead of creating multiple unrelated lists. Current accepted count: **6 of 11 VERIFIED**, comprising 5 user screenshot UI GREEN and 1 real Gateway HTTP 200.
 
 ## Next
-User chooses the next Groq model to test. Recommended: `groq/meta-llama/llama-prompt-guard-2-22m` then 86M, with a single low-cost Gateway text request each; afterwards test STT using a sample audio clip; then resolve the TTS adapter for Orpheus. There is no active Combo grouping request yet.
+User chooses the next Groq model to test. Next: `groq/meta-llama/llama-prompt-guard-2-86m` one real Gateway classifier call using the private Gateway API Key. Then STT using a sample audio clip, then Orpheus TTS adapter research. Keep 22M result and the 5 UI-green records unchanged. There is no active Combo grouping request yet.
+
+
+## Receipt — 2026-10-29 — model #6 Prompt Guard 22M confirmed through REAL OmniRoute Gateway
+
+User ran a single local PowerShell `POST http://127.0.0.1:20128/v1/chat/completions` with `model=groq/meta-llama/llama-prompt-guard-2-22m`, `stream=false`, `max_tokens=32`, and a test prompt resembling a prompt-injection instruction. Exact safe stdout:
+
+```text
+MODEL=groq/meta-llama/llama-prompt-guard-2-22m
+HTTP_STATUS=200
+DURATION_SECONDS=0.83
+ANSWER=0.9990056157112122
+CLASSIFICATION_SCORE=0.999005615711212
+RESULT=PASS_REAL_GATEWAY
+```
+
+**Conclusion:** User-confirmed Gateway chat request and numeric classifier output are real and valid for this specific model. It moves from pending to CONFIRMED (#6 of 11), without requiring a new Custom entry or changing any connection/proxy. The earlier reported red “Blacklist” UI action does not by itself negate this runtime success. All other model states remain unchanged; classification quality, real adversarial robustness, and free-cost enforcement remain untested.
