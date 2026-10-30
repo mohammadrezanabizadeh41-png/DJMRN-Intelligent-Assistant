@@ -1,3 +1,12 @@
+## 2026-10-31 — DJMRN-FREE-API-N01-USER-SELECTION — new 62-candidate screening
+
+**Explicit user decision:** In N01 (source positions 1–20 of the separate 62-candidate discovery set), set 9 IDs to USER_SELECTED_PENDING_FUTURE_MERGE and 11 IDs to USER_EXCLUDED_FROM_NEW_SHORTLIST. This is a user selection decision, **not** API operational verification, account activation, provider deletion, or authorization to merge into the original 137.
+
+- **N01 selected 9 (original source position → technical ID):** 4 `pinecone-inference`; 5 `contextual-ai`; 6 `datalab`; 7 `llamaparse`; 8 `runware`; 9 `bria`; 12 `infomaniak-ai`; 13 `berget-ai`; 17 `sail-research`.
+- **N01 excluded 11 (original source position → technical ID):** 1 `hume`; 2 `murf-api`; 3 `rtzr`; 10 `deepl-api`; 11 `lingvanex`; 14 `aiping`; 15 `bharatrouter`; 16 `codiv`; 18 `talonic`; 19 `zerodoc`; 20 `dokyumi`.
+- **Cumulative new-pool accounting:** 62 total = 20 reviewed (9 selected + 11 excluded) + 42 pending (N02 positions 21–40; N03 positions 41–62). No user decisions for N02/N03 yet.
+- **Canonical original shortlist remains exactly 137 approved / 23 excluded (R01–R08), unchanged.** New selected IDs are only staged for possible future user-authorized addition. No original 252/160 research source, 39/80 discovery evidence, Gateway, account, credentials, or Notion modified. Card/payment conditions are informational only and must never automatically trigger exclusion; only the user's explicit numbered decisions govern selection.
+
 ## 2026-10-31 — DJMRN-AGTEAM-001 — DOCTOR-TOKEN-AND-SKILLS-20261031 — Gateway token PASS; Doctor repair side effects reviewed, Companion pairing pending
 
 **Scope:** Isolated `DJMRN-AGTEAM-001` under [10-agent-teams-and-workflows](../10-agent-teams-and-workflows/README.md). Owner requested recording every observed operational phase only in this canonical CURRENT-STATUS. Preserve unrelated projects / gateway settings. Evidence: owner's pasted full local OpenClaw Doctor terminal output (`OpenClaw 2026.10.9 (8b18b55)`, 2026-10-31 local, approx. 02:44–02:45), not an independent remote machine inspection.
