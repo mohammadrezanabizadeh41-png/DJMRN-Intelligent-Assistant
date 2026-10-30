@@ -134,7 +134,7 @@
       }
     ],
     "execution_contract": {
-      "allowed_now": "APPROVED_RULE_STORAGE_AND_FUTURE_COMPOSITION_ONLY__DO_NOT_LAUNCH_AGENT",
+      "allowed_now": "STAGES_1_AND_2_APPROVED_FOR_FUTURE_COMPOSITION_ONLY__NO_AGENT_RUNNING",
       "filter_application_procedure": [
         "Open https://www.freelancermap.com/projects public search page.",
         "Clear any preselected workplace, contract, country or extra active chips, including Exclude projects from German speaking countries; never assume unselected from filter counter alone.",
@@ -147,11 +147,11 @@
         "After applying filters, report displayed result count as an observation with timestamp; never hardcode count."
       ],
       "blocked_until_next_user_instructions": [
-        "Approving stages for result collection and storage",
-        "Approving how many results/pages and what to do with duplicates",
-        "Approving screening and detailed read/report rules",
-        "Issuing the complete unified Browser Use instruction",
-        "Any real account interaction, applying, messaging, sending, or account changes"
+        "Choosing/confirming the actual Windows site-specific local persistence path and storage format during implementation",
+        "Permission and rate/usage feasibility review before any full live crawl",
+        "Approving Stage 3 suitability analysis and later reporting stages",
+        "Issuing and executing the assembled full Browser Use instruction",
+        "Any employer contact, apply, submit, account or security changes"
       ],
       "dynamic_counts": "No fixed counts: results change as the site updates.",
       "no_browser_task_sent": true
@@ -162,7 +162,7 @@
       "scope": "Only step 1 of future unified Browser Use/Codex task: visit public freelancermap projects page and apply search filters.",
       "approved_by": "USER_EXPLICIT_DIRECTIVE",
       "no_agent_execution_now": true,
-      "next_steps": "Await user-approved definitions of subsequent stages; combine all stages into one instruction only after they are individually approved.",
+      "next_steps": "Stage 2 approved and stored separately. Await owner-defined Stage 3 and any later phases; assemble one unified instruction only after review, including run cost/access safety gate.",
       "no_extra_assumptions": true
     },
     "approved_session_stage": {
@@ -193,7 +193,7 @@
         "Evidence of failure or discrepancy explicitly reported"
       ],
       "execution_authorization": "NOT_YET__ASSEMBLE_WITH_FUTURE_APPROVED_STAGES",
-      "later_phases_defined": false
+      "later_phases_defined": true
     },
     "codex_trial_policy": {
       "testing_intent": "When the complete unified task has been approved, test what the existing ChatGPT-authenticated Codex subscription can successfully do and where usage limits or reliability fail.",
@@ -202,6 +202,90 @@
       "available_usage_evidence": "UNKNOWN; inspect only real Codex/Browser Use usage indicators when running",
       "no_new_api_billing_or_paid_credits_without_user_approval": true,
       "no_test_now": true
+    }
+  },
+  "site_rule_scope": {
+    "scope_id": "FREELANCEMAP_ONLY",
+    "allowed_site": "freelancermap.com",
+    "applies_only_to": [
+      "https://www.freelancermap.com/projects",
+      "freelancermap's publicly navigable filtered project-result pages"
+    ],
+    "explicitly_not_shared_with_other_sites": true,
+    "not_global_policy": true,
+    "instruction_library_for": "Future single unified Browser Use/Codex instruction for freelancermap only",
+    "status": "USER_EXPLICITLY_CONFIRMED_2026-10-30",
+    "rules_for_other_websites": "NOT_SPECIFIED__REQUIRE_SEPARATE_SITE_PROFILES_AND_USER_APPROVAL"
+  },
+  "collection_policy": {
+    "revision": "FM-COLLECT-01",
+    "state": "STAGE_2_APPROVED_FOR_FUTURE_UNIFIED_INSTRUCTION__NOT_EXECUTED",
+    "user_approval": {
+      "status": "APPROVED",
+      "approved_by": "USER_EXPLICIT_DIRECTIVE",
+      "approved_date": "2026-10-30",
+      "scope": "After stage 1 filtering, traverse ALL available public results pages from the current filtered freelancermap search, extract every listing visible from those pages, save the collected listings on owner's Windows computer to a freelancermap-only profile/location for future NEW vs SEEN duplicate recognition.",
+      "scope_note": "No screening or detail inspection in stage 2. Third stage will be defined later by user.",
+      "standalone_agent_execution_now": false
+    },
+    "dependency": {
+      "stage_1": "FREELANCEMAP-SEARCH-01",
+      "filtered_search_scope": "Workplace=Remote only, Contract type=Freelance only, all countries, no other filters; refer to approved search_policy without duplicating its authority."
+    },
+    "requirements": {
+      "traverse_all_pages": true,
+      "page_limit": "NO_USER_SPECIFIED_PAGE_CAP",
+      "stop_condition": "Reach the actual last publicly accessible search results page for the approved active filter state; do not infer a complete crawl from a single page.",
+      "capture_scope": "ALL search-result listings seen across every accessible results page matching approved filters, including listings previously seen; no relevance/skills/budget filtering at this stage.",
+      "on_first_run": "Build the site's local baseline collection and distinguish distinct IDs within the run.",
+      "on_later_runs": "Compare each captured listing against the site's previously persisted local records; mark NEW if unseen before, SEEN if already present; preserve the previous collection for future comparisons.",
+      "duplicate_identity": "Site + stable project/listing ID when available, otherwise site + canonical project URL; this reuses the existing Opportunity Hunter dedup policy, not a new global rule.",
+      "preserve_prior_records": true,
+      "persist_site_data_to": "USER_WINDOWS_COMPUTER__SITE_DEDICATED_FOLDER",
+      "site_folder": "FREELANCEMAP_ONLY",
+      "actual_windows_root": "UNDECIDED__DO_NOT_ASSUME_PATH",
+      "existing_local_project_home_hint": "Existing DJMRN OpportunityHunter local installation has been used; determine the actual site-specific local folder during implementation without modifying unrelated data.",
+      "storage_format": "UNDECIDED_BY_USER__MUST_SUPPORT_REAL_LOCAL_PERSISTENCE_AND_LATER_COMPARISON",
+      "record_fields": "Retain available stable listing ID/URL, shown title and original available listing result data, capture timestamp, page/source references, and NEW/SEEN status. Preserve raw source evidence for later stage 3 without inventing unavailable fields.",
+      "safe_repeat": "Use durable saved records as the source for NEW/SEEN, not agent conversational memory; avoid accidental overwriting or erasing earlier run data.",
+      "reporting_end_of_stage": "Total visible pages navigated, total captured records, unique identifiers, NEW count, SEEN count, local save/readback outcome, and whether all accessible pages were reached; if not, state PARTIAL and reason.",
+      "stage_boundary": "Do not apply suitability rules, reject/screen, read full detail pages, communicate with employers or alter accounts; stage 3 will be separately owner-defined."
+    },
+    "bounded_real_world_safeguards": {
+      "site_terms_source": "https://www.freelancermap.com/term-and-conditions.html",
+      "source_note": "Freelancermap conditions §4 require appropriate use and prohibit overloading the infrastructure; a full unlimited crawl's permitted rate/scale is not verified.",
+      "hard_guards": "Use normal public browser navigation only; no restriction bypass, login, captcha solving, bulk parallelization, or high-frequency requests. Respect access restrictions, service limits and errors.",
+      "completeness": "ALL means all accessible filtered listings if technically permitted and reachable. If pages/rate limits/blockers prevent completing, save already collected local records and report PARTIAL/blocked without claiming all pages completed.",
+      "preflight_required_before_full_real_run": "Verify permitted access/usage limits, operational cost/quota of Codex subscription, true Windows output path and write ability with a small real test first. No paid APIs or subscription upgrades.",
+      "current_website_terms_assessment": "Official terms located; automated full-scan permission/rate not verified, so NO_UNBOUNDED_EXECUTION_YET"
+    },
+    "approved_session_stage": {
+      "stage_id": "FREELANCEMAP-COLLECT-02",
+      "stage_order": 2,
+      "status": "APPROVED_FOR_FUTURE_UNIFIED_INSTRUCTION_ONLY",
+      "stage_name": "Capture and locally persist all public search result listings; recognize new vs seen on subsequent runs",
+      "prompt_segment": [
+        "STEP 2 — FREELANCEMAP RESULTS COLLECTION AND LOCAL HISTORY.",
+        "Proceed only after Step 1's Remote-only + Freelance-only filtered search has been verified, with ALL countries included and no additional filters.",
+        "Navigate through EVERY available, publicly accessible search-results page for that filtered search, following normal site pagination until the actual last accessible page. Do not impose an arbitrary page-count limit or skip pages.",
+        "Extract ALL listings shown in those result pages, including ones already found in an earlier run; do not screen them for fit or read their full detail pages yet.",
+        "Persist the collected raw listing results on the user's Windows computer in an isolated, site-specific FREELANCEMAP folder/profile, not GitHub or another website's records. The final exact Windows folder and file format require separate user confirmation during implementation.",
+        "Reuse the existing site's local baseline from previous runs, if available; identify listings by freelancermap project ID or canonical URL, mark NEW vs SEEN, and do not erase or overwrite older saved data.",
+        "Record run-time evidence: filtered search URL/state, page references, timestamp, visible listing fields and identifiers, per-run totals, and saved-data verification.",
+        "Report visited pages, total captured, distinct/new/seen listings, exact verified local save path and whether all accessible pages were covered.",
+        "If loading is blocked, pages are inaccessible, service throttles, permission/rate restrictions arise, or Codex usage is exhausted, stop safely, preserve already-saved progress, and report PARTIAL with the exact blocker. No bypass, retry storm, or false claim of 100% completeness.",
+        "Do NOT perform Stage 3 suitability filtering, open every detail page, apply, message, submit or change accounts. Stage 3 will be defined and approved separately."
+      ],
+      "execution_authorization": "NOT_YET__ONLY_ASSEMBLE_WITH_FUTURE_APPROVED_STAGE_3_AND_OTHER_REQUIRED_USER_RULES",
+      "approved_stage_count_so_far": 2
+    },
+    "codex_trial": {
+      "intent": "Measure how far existing Browser Use plus ChatGPT-authenticated Codex can perform the unified workflow when separately instructed to run.",
+      "subscription_quota": "UNKNOWN",
+      "total_pages_and_token_demand": "UNKNOWN",
+      "full_scan_within_quota": "UNVERIFIED",
+      "no_charge_or_upgrade_without_explicit_approval": true,
+      "actual_test_status": "NOT_RUN"
     }
   }
 }
