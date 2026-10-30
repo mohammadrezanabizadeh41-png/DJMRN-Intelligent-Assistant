@@ -18,6 +18,12 @@
 5. After stage execution, prepare a separate **stage findings** file under `06-tests-and-evidence/provider-research/` (suggested `DJMRN-FREE-API-SCAN-SNN-RESULTS-YYYYMMDD.md`) only if the user has asked to save it or the ongoing workflow explicitly directs archiving; cite links per row. Track completed/remaining stages and preserve audit trail without retroactively altering frozen roster.
 6. At the end of each stage report how many were found recurring free, one-time trial, paid only, mixed, and unverified. Prioritize unresolved official corroboration as follow-up, never claim the whole 252 done from a partial batch.
 
+### CONDITIONAL-FREE-API-INCLUSION-POLICY-20261030 — policy for stages S04–S09
+
+Record **real renewable free API** as **POSITIVE even if conditional** on GitHub signup/history, noncommercial/research use, manual approvals, daily Check-in, region, identity, privacy terms, or other requirements. Keep it in the same cumulative positive master. Write the condition and a `POSITIVE_CONDITIONAL` secondary status, and expressly distinguish **free API existence** from **commercial-use approval** and **DJMRN account eligibility**.
+
+Only mandatory up-front paid balance/deposit or paid subscription (without another genuine zero-payment API route), non-replenished trial credit, and time-limited free promotions are excluded from the strict zero-payment recurring list. Ordinary quota limits are documented, not disqualifiers. For otherwise positive entries not thoroughly assessed for eligibility conditions, use `CONDITIONS_NOT_YET_AUDITED`, **never assume unconditional**.
+
 ## 9 locked stages
 
 | Stage trigger | Source rows | Entries | Initial status |
