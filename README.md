@@ -34,6 +34,8 @@
 | [06 — Tests & Evidence](06-tests-and-evidence/README.md) | شواهد، fixture، آزمون واقعی/ساختگی و محدودیت‌ها |
 | [07 — Operations & Continuity](07-operations-and-continuity/README.md) | CURRENT، تاریخچه، تحویل، بازیابی و وقایع |
 | [08 — Knowledge Base](08-project-knowledge-base/README.md) | مدخل‌های curated، فهرست منابع، اعتبار و ارجاع‌ها |
+| [09 — Opportunity Hunter](09-opportunity-hunter/STATUS.md) | پایش فرصت‌های کاری | 
+| [10 — Agent Teams & Workflows](10-agent-teams-and-workflows/README.md) | پروژه آینده تیم ایجنت‌های خودگردان، OpenClaw + OpenAgents و نظارت تخصصی |
 
 ## مرجعیت و تاریخچه
 
