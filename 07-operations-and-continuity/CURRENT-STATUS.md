@@ -1,3 +1,57 @@
+## 2026-10-30 — DJMRN-FREE-API-R02-USER-APPROVAL-20261030 — R02 user-approved list: 18 new accepted, 2 excluded; 35 cumulative user-selected IDs
+
+- **Explicit user direction (R02 only):** exclude R02 #1 `mixlayer` (source catalog #26) and R02 #6 `ofoxai` (catalog #32) from the NEW USER-SELECTED approved list, **accept ALL other 18 R02 IDs exactly as in the original 160-provider research roster**. Preserve R01 decisions: accepted 17, excluded `charm-hyper`, `openrouter`, `lyceum`. No assistant-selected exclusions, no provider-level alias collapsing, no inference from eligibility or credit size.
+- **CURRENT / CANONICAL NEW USER-SELECTED APPROVED LIST (R01+R02): 35 distinct exact technical IDs, all source-catalog order**: `onomeo`, `unifically`, `oneminai`, `unorouter`, `opper`, `requesty`, `zylo-api`, `fastrouter`, `anyapi`, `electronhub`, `llmgateway`, `llm-kiwi`, `literouter`, `greenpt`, `y-api`, `mnn-ai`, `meganova-ai`, `speka`, `tokenreply`, `yolo-auto`, `dxnt`, `zerolimitai`, `chatanywhere`, `helyxai`, `poixe-ai`, `naga-ai`, `chat-oripe`, `freeinference`, `free-ai`, `dgrid`, `qiniu`, `orcarouter`, `api-airforce`, `bazaarlink`, `kilo-gateway`.
+- **User-excluded so far (5 distinct IDs; from NEW shortlist only):** `charm-hyper`, `openrouter`, `lyceum`, `mixlayer`, `ofoxai`. **This does NOT delete/alter** the original [160-candidate published-research master](../06-tests-and-evidence/provider-research/DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md), source 252-ID roster, or gateway models. Selection is user preference, NOT an actual successful API call, current free-account certification, no-charge guarantee, commercial-use permission, or install/connection approval.
+- **Round status:** R01: 17 accepted / 3 excluded; R02: **18 accepted / 2 excluded**; grand total **35 accepted / 5 excluded** = 40 manually decided out of 160. **120 remain undecided**, next R03 (20 IDs from positions 41–60 in sorted original 160-candidate list). Retain prior R01 receipt below as HISTORICAL; this block is now the sole current approved-list authority in status file.
+
+### CURRENT approved IDs, R01 + R02, 35 rows
+
+| Stage | Stage item # | Catalog row # | Exact technical ID | Provider label |
+|---|---:|---:|---|---|
+| R01 | 1 | 1 | `onomeo` | onomeo |
+| R01 | 2 | 2 | `unifically` | Unifically |
+| R01 | 3 | 3 | `oneminai` | 1min.AI |
+| R01 | 5 | 8 | `unorouter` | UnoRouter |
+| R01 | 7 | 11 | `opper` | Opper |
+| R01 | 8 | 12 | `requesty` | Requesty |
+| R01 | 9 | 13 | `zylo-api` | Zylo API |
+| R01 | 10 | 14 | `fastrouter` | FastRouter |
+| R01 | 11 | 15 | `anyapi` | AnyAPI AI |
+| R01 | 12 | 16 | `electronhub` | Electron Hub |
+| R01 | 13 | 17 | `llmgateway` | LLM Gateway |
+| R01 | 15 | 19 | `llm-kiwi` | LLM.Kiwi |
+| R01 | 16 | 20 | `literouter` | LiteRouter |
+| R01 | 17 | 21 | `greenpt` | GreenPT |
+| R01 | 18 | 23 | `y-api` | Y-API |
+| R01 | 19 | 24 | `mnn-ai` | MNN AI |
+| R01 | 20 | 25 | `meganova-ai` | MegaNova AI |
+| R02 | 2 | 27 | `speka` | Speka AI |
+| R02 | 3 | 28 | `tokenreply` | TokenReply |
+| R02 | 4 | 29 | `yolo-auto` | Yolo-Auto |
+| R02 | 5 | 30 | `dxnt` | DXNT / DX Token |
+| R02 | 7 | 33 | `zerolimitai` | ZeroLimitAI |
+| R02 | 8 | 34 | `chatanywhere` | ChatAnywhere |
+| R02 | 9 | 35 | `helyxai` | Helyx AI |
+| R02 | 10 | 37 | `poixe-ai` | Poixe AI |
+| R02 | 11 | 38 | `naga-ai` | Naga AI |
+| R02 | 12 | 39 | `chat-oripe` | Chat Oripe |
+| R02 | 13 | 40 | `freeinference` | FreeInference |
+| R02 | 14 | 41 | `free-ai` | Free.ai |
+| R02 | 15 | 42 | `dgrid` | DGrid |
+| R02 | 16 | 43 | `qiniu` | Qiniu |
+| R02 | 17 | 44 | `orcarouter` | OrcaRouter |
+| R02 | 18 | 45 | `api-airforce` | Api.airforce |
+| R02 | 19 | 47 | `bazaarlink` | BazaarLink |
+| R02 | 20 | 49 | `kilo-gateway` | Kilo Gateway |
+
+### R02 excluded on user's decision (2 rows)
+
+| Stage item # | Catalog row # | Exact technical ID | Provider label |
+|---:|---:|---|---|
+| 1 | 26 | `mixlayer` | Mixlayer |
+| 6 | 32 | `ofoxai` | OfoxAI |
+
 ## 2026-10-30 — DJMRN-FREE-API-R01-USER-APPROVAL-20261030 — New user-selected screening list, R01 decisions (17 accepted, 3 excluded)
 
 - **Owner explicitly authorized a second, separate user-selected shortlist from the fixed 160-ID original candidate research. This is an OWNER CHOICE, not an assistant inference from provider pricing, quota or model overlap.** Fixed R01 contains the first 20 candidates sorted by original 252-provider catalog row (not by list ID). User deliberately excluded **R01 item #4 `charm-hyper` (catalog #6), #6 `openrouter` (catalog #10), #14 `lyceum` (catalog #18)**. All the other **17 R01 candidates were explicitly approved and entered into the new cumulative USER-SELECTED screening list** below. Preserve their exact original catalog IDs and ordering; no implicit inclusion of future stages.
