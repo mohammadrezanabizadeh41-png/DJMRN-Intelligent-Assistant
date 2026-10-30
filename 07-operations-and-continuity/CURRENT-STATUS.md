@@ -1,3 +1,41 @@
+## 2026-10-30 — DJMRN-FREE-API-R01-USER-APPROVAL-20261030 — New user-selected screening list, R01 decisions (17 accepted, 3 excluded)
+
+- **Owner explicitly authorized a second, separate user-selected shortlist from the fixed 160-ID original candidate research. This is an OWNER CHOICE, not an assistant inference from provider pricing, quota or model overlap.** Fixed R01 contains the first 20 candidates sorted by original 252-provider catalog row (not by list ID). User deliberately excluded **R01 item #4 `charm-hyper` (catalog #6), #6 `openrouter` (catalog #10), #14 `lyceum` (catalog #18)**. All the other **17 R01 candidates were explicitly approved and entered into the new cumulative USER-SELECTED screening list** below. Preserve their exact original catalog IDs and ordering; no implicit inclusion of future stages.
+- **Current NEW SCREENED LIST — approved IDs from R01 (canonical in this single status file, 17/17 unique):** `onomeo`, `unifically`, `oneminai`, `unorouter`, `opper`, `requesty`, `zylo-api`, `fastrouter`, `anyapi`, `electronhub`, `llmgateway`, `llm-kiwi`, `literouter`, `greenpt`, `y-api`, `mnn-ai`, `meganova-ai`. Source: [original 160-provider research master](../06-tests-and-evidence/provider-research/DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md).
+- **Important:** 'USER_ACCEPTED_FOR_NEW_SCREENED_LIST' means the user chose this candidate for the next selection round; it does NOT mean an account test, verified zero-cost key, suitability for paid client work, permission to connect, or operational deployment. User excluded three from the *NEW shortlist only*, NOT the original 160-provider research master, which is unchanged. Do not reinsert `charm-hyper`, `openrouter`, or `lyceum` absent an explicit user reversal. Original No-Payment security and approval gates remain in effect.
+
+### R01 — user-approved additions (17)
+
+| R01 item | Original catalog row | Exact technical provider ID | Name | User decision |
+|---:|---:|---|---|---|
+| 1 | 1 | `onomeo` | onomeo | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 2 | 2 | `unifically` | Unifically | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 3 | 3 | `oneminai` | 1min.AI | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 5 | 8 | `unorouter` | UnoRouter | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 7 | 11 | `opper` | Opper | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 8 | 12 | `requesty` | Requesty | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 9 | 13 | `zylo-api` | Zylo API | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 10 | 14 | `fastrouter` | FastRouter | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 11 | 15 | `anyapi` | AnyAPI AI | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 12 | 16 | `electronhub` | Electron Hub | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 13 | 17 | `llmgateway` | LLM Gateway | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 15 | 19 | `llm-kiwi` | LLM.Kiwi | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 16 | 20 | `literouter` | LiteRouter | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 17 | 21 | `greenpt` | GreenPT | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 18 | 23 | `y-api` | Y-API | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 19 | 24 | `mnn-ai` | MNN AI | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+| 20 | 25 | `meganova-ai` | MegaNova AI | USER_ACCEPTED_FOR_NEW_SCREENED_LIST |
+
+### R01 — user-rejected additions (3)
+
+| R01 item | Original catalog row | Exact technical provider ID | Name | User decision |
+|---:|---:|---|---|---|
+| 4 | 6 | `charm-hyper` | Charm Hyper | USER_EXCLUDED_FROM_NEW_SCREENED_LIST |
+| 6 | 10 | `openrouter` | OpenRouter | USER_EXCLUDED_FROM_NEW_SCREENED_LIST |
+| 14 | 18 | `lyceum` | Lyceum | USER_EXCLUDED_FROM_NEW_SCREENED_LIST |
+
+- **Selection campaign progress:** 1/8 new rounds decided, **17 accepted, 3 excluded, 140 not yet user-reviewed**. R02 is the next review batch (original 160 candidates' positions 21–40). Only the user selects keep/remove after the provider-free-terms research; do not auto-filter by company similarity, condition, expiry, payment prerequisite, initial credit, or model operator.
+
 ## 2026-10-30 — DJMRN-AGTEAM-001 — Isolated OpenClaw Windows project kickoff / download-only phase
 
 - User explicitly started the professional multi-agent team project while requiring **strict non-interference with all parallel DJMRN workstreams**, including OmniRoute, Opportunity Hunter, browser automation and AGNT. The user-approved detailed initial operating strategy is in [Agent Teams & Workflows README](../10-agent-teams-and-workflows/README.md); same subproject remains sole thematic home, and this CURRENT file sole status/continuity log.
