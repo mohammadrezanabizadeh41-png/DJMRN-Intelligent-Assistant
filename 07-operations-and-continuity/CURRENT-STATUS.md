@@ -1,3 +1,123 @@
+## 2026-10-31 — DJMRN-FREE-API-R06-USER-APPROVAL-20261031 — CURRENT shortlist 100 accepted exact provider IDs
+
+- **Explicit owner selection R06:** exclude from **new user-screened shortlist only** R06 position 4 `sap` (source 168), R06 position 6 `cloudflare-ai` (source 172), and R06 position 15 `kimi` (source 188). Approve other **17** R06 provider catalog technical IDs, with no additional exclusions, no operator-level dedup, and no amendments to previous R01–R05 choices.
+- **R06 newly accepted (17 distinct IDs):** `bedrock`, `watsonx`, `oci`, `vertex`, `scaleway`, `ovhcloud`, `databricks`, `datarobot`, `snowflake`, `qianfan`, `bigmodel`, `qwen-cloud`, `minimax-cn`, `zai`, `alibaba`, `alibaba-cn`, `longcat`.
+- **Current cumulative newly screened list: 100/100 unique exact IDs**, 20 user-excluded, **120/160 reviewed**, 40 remaining in rounds R07–R08. Prior round decisions **R01 17/3, R02 18/2, R03 16/4, R04 15/5, R05 17/3, R06 17/3** (approved/excluded). Excluded by user from new list: `charm-hyper`, `openrouter`, `lyceum`, `mixlayer`, `ofoxai`, `vercel-ai-gateway`, `novita`, `piapi`, `freemodel-dev`, `gemini`, `groq`, `mistral`, `cohere`, `liquid`, `openference-api`, `fireworks`, `bytez`, `sap`, `cloudflare-ai`, `kimi`. No API registration, usage, model activation, spend, personal-data or access-control action authorized by this selection.
+- **Single CURRENT shortlist authority = this top section/table.** Older R01–R05 sections below are historical snapshots superseded by this exact cumulative selection. **DO NOT modify** the separate [160-candidate original research master](../06-tests-and-evidence/provider-research/DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md); omission here means only *owner choice*, not technical disqualification and not disconnection of existing providers. Next research step R07, 20 IDs at original positive-master positions 121–140, then user approval/selection.
+
+### CURRENT cumulative user-approved provider IDs R01–R06 (100)
+
+| Round | Round position | Original catalog row | Exact provider ID | Provider name |
+|---|---:|---:|---|---|
+| R01 | 1 | 1 | `onomeo` | onomeo |
+| R01 | 2 | 2 | `unifically` | Unifically |
+| R01 | 3 | 3 | `oneminai` | 1min.AI |
+| R01 | 5 | 8 | `unorouter` | UnoRouter |
+| R01 | 7 | 11 | `opper` | Opper |
+| R01 | 8 | 12 | `requesty` | Requesty |
+| R01 | 9 | 13 | `zylo-api` | Zylo API |
+| R01 | 10 | 14 | `fastrouter` | FastRouter |
+| R01 | 11 | 15 | `anyapi` | AnyAPI AI |
+| R01 | 12 | 16 | `electronhub` | Electron Hub |
+| R01 | 13 | 17 | `llmgateway` | LLM Gateway |
+| R01 | 15 | 19 | `llm-kiwi` | LLM.Kiwi |
+| R01 | 16 | 20 | `literouter` | LiteRouter |
+| R01 | 17 | 21 | `greenpt` | GreenPT |
+| R01 | 18 | 23 | `y-api` | Y-API |
+| R01 | 19 | 24 | `mnn-ai` | MNN AI |
+| R01 | 20 | 25 | `meganova-ai` | MegaNova AI |
+| R02 | 2 | 27 | `speka` | Speka AI |
+| R02 | 3 | 28 | `tokenreply` | TokenReply |
+| R02 | 4 | 29 | `yolo-auto` | Yolo-Auto |
+| R02 | 5 | 30 | `dxnt` | DXNT / DX Token |
+| R02 | 7 | 33 | `zerolimitai` | ZeroLimitAI |
+| R02 | 8 | 34 | `chatanywhere` | ChatAnywhere |
+| R02 | 9 | 35 | `helyxai` | Helyx AI |
+| R02 | 10 | 37 | `poixe-ai` | Poixe AI |
+| R02 | 11 | 38 | `naga-ai` | Naga AI |
+| R02 | 12 | 39 | `chat-oripe` | Chat Oripe |
+| R02 | 13 | 40 | `freeinference` | FreeInference |
+| R02 | 14 | 41 | `free-ai` | Free.ai |
+| R02 | 15 | 42 | `dgrid` | DGrid |
+| R02 | 16 | 43 | `qiniu` | Qiniu |
+| R02 | 17 | 44 | `orcarouter` | OrcaRouter |
+| R02 | 18 | 45 | `api-airforce` | Api.airforce |
+| R02 | 19 | 47 | `bazaarlink` | BazaarLink |
+| R02 | 20 | 49 | `kilo-gateway` | Kilo Gateway |
+| R03 | 1 | 53 | `dahl` | Dahl |
+| R03 | 2 | 54 | `freetheai` | FreeTheAi |
+| R03 | 4 | 61 | `llm7` | LLM7.io |
+| R03 | 5 | 64 | `gitlawb-gmi` | Gitlawb Opengateway (GMI Cloud) |
+| R03 | 8 | 70 | `getgoapi` | GoAPI |
+| R03 | 9 | 71 | `laozhang` | LaoZhang AI |
+| R03 | 10 | 73 | `bai` | b.ai |
+| R03 | 11 | 79 | `bluesminds` | BluesMinds |
+| R03 | 13 | 81 | `freeaiapikey` | FreeAIAPIKey |
+| R03 | 14 | 83 | `openadapter` | OpenAdapter |
+| R03 | 15 | 85 | `tokenrouter` | TokenRouter |
+| R03 | 16 | 88 | `x5lab` | X5Lab |
+| R03 | 17 | 90 | `kenari` | Kenari |
+| R03 | 18 | 92 | `navy` | NavyAI |
+| R03 | 19 | 93 | `ainative` | AINative Studio |
+| R03 | 20 | 94 | `aion` | Aion Labs |
+| R04 | 1 | 95 | `routeway` | Routeway |
+| R04 | 2 | 96 | `nara` | NaraRouter |
+| R04 | 3 | 97 | `xkiro` | xKiro |
+| R04 | 4 | 98 | `regolo` | Regolo AI |
+| R04 | 5 | 99 | `naga-ac` | Naga.ac |
+| R04 | 6 | 100 | `void-ai` | Void AI |
+| R04 | 7 | 102 | `logfare` | Logfare |
+| R04 | 8 | 105 | `demonroute` | Demon Route |
+| R04 | 9 | 107 | `beatapi` | BeatAPI |
+| R04 | 14 | 122 | `morph` | Morph |
+| R04 | 15 | 124 | `ai21` | AI21 Labs |
+| R04 | 16 | 127 | `upstage` | Upstage |
+| R04 | 17 | 129 | `nous-research` | Nous Research |
+| R04 | 18 | 130 | `arcee-ai` | Arcee AI |
+| R04 | 20 | 132 | `inception` | Inception |
+| R05 | 1 | 135 | `openvecta` | OpenVecta |
+| R05 | 3 | 137 | `poolside` | Poolside |
+| R05 | 5 | 139 | `cerebras` | Cerebras |
+| R05 | 6 | 140 | `nvidia` | NVIDIA NIM |
+| R05 | 7 | 141 | `nebius` | Nebius AI |
+| R05 | 8 | 143 | `siliconflow` | SiliconFlow |
+| R05 | 9 | 144 | `hyperbolic` | Hyperbolic |
+| R05 | 10 | 145 | `ollama-cloud` | Ollama Cloud |
+| R05 | 11 | 149 | `sambanova` | SambaNova |
+| R05 | 12 | 150 | `nscale` | nScale |
+| R05 | 13 | 151 | `baseten` | Baseten |
+| R05 | 14 | 152 | `publicai` | PublicAI |
+| R05 | 15 | 153 | `featherless-ai` | Featherless AI |
+| R05 | 16 | 154 | `friendliai` | FriendliAI |
+| R05 | 17 | 155 | `wandb` | Weights & Biases Inference |
+| R05 | 19 | 160 | `modelscope` | ModelScope |
+| R05 | 20 | 161 | `byteplus` | BytePlus ModelArk |
+| R06 | 1 | 165 | `bedrock` | Amazon Bedrock |
+| R06 | 2 | 166 | `watsonx` | IBM watsonx.ai |
+| R06 | 3 | 167 | `oci` | OCI Generative AI |
+| R06 | 5 | 170 | `vertex` | Vertex AI |
+| R06 | 7 | 173 | `scaleway` | Scaleway Generative APIs |
+| R06 | 8 | 174 | `ovhcloud` | OVHcloud AI Endpoints |
+| R06 | 9 | 176 | `databricks` | Databricks Foundation Model APIs |
+| R06 | 10 | 177 | `datarobot` | DataRobot |
+| R06 | 11 | 179 | `snowflake` | Snowflake Cortex |
+| R06 | 12 | 180 | `qianfan` | Baidu Qianfan |
+| R06 | 13 | 183 | `bigmodel` | BigModel.cn / Zhipu |
+| R06 | 14 | 186 | `qwen-cloud` | QwenCloud |
+| R06 | 16 | 191 | `minimax-cn` | MiniMax China open API |
+| R06 | 17 | 193 | `zai` | Z.AI (global) |
+| R06 | 18 | 194 | `alibaba` | Alibaba Cloud Model Studio |
+| R06 | 19 | 195 | `alibaba-cn` | Alibaba (China, compatibility alias) |
+| R06 | 20 | 196 | `longcat` | LongCat AI |
+
+### R06 excluded exactly by owner (3)
+
+| Round | Round position | Original catalog row | Exact provider ID | Provider name |
+|---|---:|---:|---|---|
+| R06 | 4 | 168 | `sap` | SAP Generative AI Hub |
+| R06 | 6 | 172 | `cloudflare-ai` | Cloudflare Workers AI |
+| R06 | 15 | 188 | `kimi` | Kimi (Legacy Moonshot API) |
+
 ## 2026-10-31 — DJMRN-FREE-API-R05-USER-APPROVAL-20261031 — CURRENT user-approved screening list: 83 exact unique IDs (R01–R05)
 
 - **Explicit R05 owner decision:** EXCLUDE from the NEW USER-APPROVED SHORTLIST ONLY R05 #2 `openference-api` (original catalog #136), #4 `fireworks` (#138), #18 `bytez` (#158); ACCEPT all other **17/20 R05 IDs**. These removals do not alter the historical 160-ID original published-research master or any live provider connection.
