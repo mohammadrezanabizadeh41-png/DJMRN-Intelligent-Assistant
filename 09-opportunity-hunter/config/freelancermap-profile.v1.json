@@ -45,8 +45,8 @@
     "Do not send messages, log in, or mutate production DB in OH-16."
   ],
   "search_policy": {
-    "revision": "FM-SEARCH-02",
-    "state": "USER_CONFIRMED_SEARCH_FILTERS__NO_AGENT_RUN",
+    "revision": "FM-SEARCH-03",
+    "state": "APPROVED_SITE_SEARCH_STAGE__PENDING_UNIFIED_INSTRUCTION",
     "observed_on": "2026-10-30",
     "authoritative_page": "https://www.freelancermap.com/projects",
     "source_evidence": [
@@ -134,7 +134,7 @@
       }
     ],
     "execution_contract": {
-      "allowed_now": "RULE_DOCUMENTATION_ONLY__NO_BROWSER_AGENT_COMMAND_SENT",
+      "allowed_now": "APPROVED_RULE_STORAGE_AND_FUTURE_COMPOSITION_ONLY__DO_NOT_LAUNCH_AGENT",
       "filter_application_procedure": [
         "Open https://www.freelancermap.com/projects public search page.",
         "Clear any preselected workplace, contract, country or extra active chips, including Exclude projects from German speaking countries; never assume unselected from filter counter alone.",
@@ -147,12 +147,61 @@
         "After applying filters, report displayed result count as an observation with timestamp; never hardcode count."
       ],
       "blocked_until_next_user_instructions": [
-        "Result pagination depth or volume, scan schedule, capture and storage of live opportunities.",
-        "Detail reading, shortlist/rejection, pricing/skills/work eligibility evaluation.",
-        "Contact, apply, messaging, account changes."
+        "Approving stages for result collection and storage",
+        "Approving how many results/pages and what to do with duplicates",
+        "Approving screening and detailed read/report rules",
+        "Issuing the complete unified Browser Use instruction",
+        "Any real account interaction, applying, messaging, sending, or account changes"
       ],
       "dynamic_counts": "No fixed counts: results change as the site updates.",
       "no_browser_task_sent": true
+    },
+    "user_approval": {
+      "status": "APPROVED",
+      "approved_date": "2026-10-30",
+      "scope": "Only step 1 of future unified Browser Use/Codex task: visit public freelancermap projects page and apply search filters.",
+      "approved_by": "USER_EXPLICIT_DIRECTIVE",
+      "no_agent_execution_now": true,
+      "next_steps": "Await user-approved definitions of subsequent stages; combine all stages into one instruction only after they are individually approved.",
+      "no_extra_assumptions": true
+    },
+    "approved_session_stage": {
+      "stage_id": "FREELANCEMAP-SEARCH-01",
+      "stage_order": 1,
+      "stage_name": "Open public listings and apply user-approved site search filters",
+      "status": "APPROVED_FOR_FUTURE_UNIFIED_INSTRUCTION_ONLY",
+      "language": "English (browser-agent instructions); preserve Persian owner-facing summary",
+      "prompt_segment": [
+        "STEP 1 — FREELANCEMAP PUBLIC PROJECT SEARCH.",
+        "Open https://www.freelancermap.com/projects in the Browser Use browser, using the public Projects search page.",
+        "Inspect and clear any preselected filters or chips incompatible with the following exact scope, including any geographic exclusion.",
+        "Workplace: select ONLY Remote. Explicitly unselect Hybrid and On-site. Do not infer remote eligibility merely from an advertisement title containing the word Remote.",
+        "Contract type: select ONLY Freelance. Do not select Permanent or Agency contract.",
+        "Countries: ALL countries. Do not choose a country filter. Turn OFF 'Exclude projects from German speaking countries' if it is enabled. Germany, Austria, and Switzerland are included.",
+        "Do NOT add other search filters: no keywords, publication date, industry, professional field, direct-client-only, or any additional exclusion. Do not force a particular sorting option; keep the site's default.",
+        "Verify the actual active controls/chips after applying the filters. If any required control is unavailable or the page behaves unexpectedly, report the discrepancy instead of claiming success.",
+        "Treat filtered results as potential remote/freelance listings, not as globally eligible opportunities: eligibility comes from later, separately approved stages.",
+        "Stop this stage after verifying and reporting the effective filters, without collecting listings, reading full details, saving records, applying, or contacting anyone. Later stages, once approved and combined, may add those actions."
+      ],
+      "verification_outputs": [
+        "Public URL reached",
+        "Remote selected, Hybrid and On-site not selected",
+        "Freelance selected, Permanent and Agency contract not selected",
+        "All countries included; German-speaking-countries exclusion off",
+        "No extra filters; default sort unchanged",
+        "Any visible result count recorded as an observation rather than a guaranteed constant",
+        "Evidence of failure or discrepancy explicitly reported"
+      ],
+      "execution_authorization": "NOT_YET__ASSEMBLE_WITH_FUTURE_APPROVED_STAGES",
+      "later_phases_defined": false
+    },
+    "codex_trial_policy": {
+      "testing_intent": "When the complete unified task has been approved, test what the existing ChatGPT-authenticated Codex subscription can successfully do and where usage limits or reliability fail.",
+      "current_state": "NOT_TESTED_FOR_COMBINED_WORKFLOW",
+      "quota_amount": "UNKNOWN",
+      "available_usage_evidence": "UNKNOWN; inspect only real Codex/Browser Use usage indicators when running",
+      "no_new_api_billing_or_paid_credits_without_user_approval": true,
+      "no_test_now": true
     }
   }
 }
