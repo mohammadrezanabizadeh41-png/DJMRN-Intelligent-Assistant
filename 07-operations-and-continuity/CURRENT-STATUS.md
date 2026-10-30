@@ -1,3 +1,180 @@
+## 2026-10-31 — DJMRN-FREE-API-R08-USER-APPROVAL-20261031 — FINAL USER-SELECTED shortlist: 137 approved, 23 excluded, full 160/160 decided
+
+- **Explicit owner decision R08 (final round):** EXCLUDE **only** R08 position #12 `stability-ai` (original source catalog #241) from the NEW user-selected approved shortlist; ACCEPT the other 19 R08 technical IDs, listed below. No assistant-side exclusions or operator-level dedup. Preserve all R01–R07 choices unchanged. This exclusion does NOT delete/change the original 160-row research source or any external account/gateway.
+- **R08 new accepted 19 exact technical IDs (original source order):** `ant-ling`, `sarvam`, `plamo`, `typhoon`, `apmix`, `nlpcloud`, `kie`, `pollinations`, `gitlab`, `voyage-ai`, `jina-ai`, `black-forest-labs`, `topaz`, `segmind`, `dify`, `nomic`, `mixedbread`, `jina-reader`, `tinyfish`.
+- **CURRENT/CANONICAL FINAL approved user-shortlist:** **137 distinct exact technical IDs**; **23 distinct excluded IDs**; **160 of 160 reviewed; 0 undecided.** R01=17 approved/3 excluded, R02=18/2, R03=16/4, R04=15/5, R05=17/3, R06=17/3, R07=18/2, R08=19/1. User-selected inclusion is *NOT* proof of a technically working free API, account eligibility, acceptable data policy, or unlimited/recurring free quota; credentials, provider configuration, fees and production activation require separate verification and explicit authority.
+- **Cumulative exclusions (from NEW user-selected list only):** `charm-hyper`, `openrouter`, `lyceum`, `mixlayer`, `ofoxai`, `vercel-ai-gateway`, `novita`, `piapi`, `freemodel-dev`, `gemini`, `groq`, `mistral`, `cohere`, `liquid`, `openference-api`, `fireworks`, `bytez`, `sap`, `cloudflare-ai`, `kimi`, `moonshot`, `agnes-cn`, `stability-ai`. The original [160-provider research master](../06-tests-and-evidence/provider-research/DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md) is deliberately UNCHANGED. Prior CURRENT snapshots in R01–R07 entries below are HISTORICAL; this R08 section is the ONLY active user-selected canonical shortlist. No provider was registered, activated, funded, disabled or charged by this decision.
+
+### CURRENT FINAL approved provider technical IDs R01–R08 (137)
+
+| Round | Round position | Original catalog row | Exact provider technical ID | Provider |
+|---|---:|---:|---|---|
+| R01 | 1 | 1 | `onomeo` | onomeo |
+| R01 | 2 | 2 | `unifically` | Unifically |
+| R01 | 3 | 3 | `oneminai` | 1min.AI |
+| R01 | 5 | 8 | `unorouter` | UnoRouter |
+| R01 | 7 | 11 | `opper` | Opper |
+| R01 | 8 | 12 | `requesty` | Requesty |
+| R01 | 9 | 13 | `zylo-api` | Zylo API |
+| R01 | 10 | 14 | `fastrouter` | FastRouter |
+| R01 | 11 | 15 | `anyapi` | AnyAPI AI |
+| R01 | 12 | 16 | `electronhub` | Electron Hub |
+| R01 | 13 | 17 | `llmgateway` | LLM Gateway |
+| R01 | 15 | 19 | `llm-kiwi` | LLM.Kiwi |
+| R01 | 16 | 20 | `literouter` | LiteRouter |
+| R01 | 17 | 21 | `greenpt` | GreenPT |
+| R01 | 18 | 23 | `y-api` | Y-API |
+| R01 | 19 | 24 | `mnn-ai` | MNN AI |
+| R01 | 20 | 25 | `meganova-ai` | MegaNova AI |
+| R02 | 2 | 27 | `speka` | Speka AI |
+| R02 | 3 | 28 | `tokenreply` | TokenReply |
+| R02 | 4 | 29 | `yolo-auto` | Yolo-Auto |
+| R02 | 5 | 30 | `dxnt` | DXNT / DX Token |
+| R02 | 7 | 33 | `zerolimitai` | ZeroLimitAI |
+| R02 | 8 | 34 | `chatanywhere` | ChatAnywhere |
+| R02 | 9 | 35 | `helyxai` | Helyx AI |
+| R02 | 10 | 37 | `poixe-ai` | Poixe AI |
+| R02 | 11 | 38 | `naga-ai` | Naga AI |
+| R02 | 12 | 39 | `chat-oripe` | Chat Oripe |
+| R02 | 13 | 40 | `freeinference` | FreeInference |
+| R02 | 14 | 41 | `free-ai` | Free.ai |
+| R02 | 15 | 42 | `dgrid` | DGrid |
+| R02 | 16 | 43 | `qiniu` | Qiniu |
+| R02 | 17 | 44 | `orcarouter` | OrcaRouter |
+| R02 | 18 | 45 | `api-airforce` | Api.airforce |
+| R02 | 19 | 47 | `bazaarlink` | BazaarLink |
+| R02 | 20 | 49 | `kilo-gateway` | Kilo Gateway |
+| R03 | 1 | 53 | `dahl` | Dahl |
+| R03 | 2 | 54 | `freetheai` | FreeTheAi |
+| R03 | 4 | 61 | `llm7` | LLM7.io |
+| R03 | 5 | 64 | `gitlawb-gmi` | Gitlawb Opengateway (GMI Cloud) |
+| R03 | 8 | 70 | `getgoapi` | GoAPI |
+| R03 | 9 | 71 | `laozhang` | LaoZhang AI |
+| R03 | 10 | 73 | `bai` | b.ai |
+| R03 | 11 | 79 | `bluesminds` | BluesMinds |
+| R03 | 13 | 81 | `freeaiapikey` | FreeAIAPIKey |
+| R03 | 14 | 83 | `openadapter` | OpenAdapter |
+| R03 | 15 | 85 | `tokenrouter` | TokenRouter |
+| R03 | 16 | 88 | `x5lab` | X5Lab |
+| R03 | 17 | 90 | `kenari` | Kenari |
+| R03 | 18 | 92 | `navy` | NavyAI |
+| R03 | 19 | 93 | `ainative` | AINative Studio |
+| R03 | 20 | 94 | `aion` | Aion Labs |
+| R04 | 1 | 95 | `routeway` | Routeway |
+| R04 | 2 | 96 | `nara` | NaraRouter |
+| R04 | 3 | 97 | `xkiro` | xKiro |
+| R04 | 4 | 98 | `regolo` | Regolo AI |
+| R04 | 5 | 99 | `naga-ac` | Naga.ac |
+| R04 | 6 | 100 | `void-ai` | Void AI |
+| R04 | 7 | 102 | `logfare` | Logfare |
+| R04 | 8 | 105 | `demonroute` | Demon Route |
+| R04 | 9 | 107 | `beatapi` | BeatAPI |
+| R04 | 14 | 122 | `morph` | Morph |
+| R04 | 15 | 124 | `ai21` | AI21 Labs |
+| R04 | 16 | 127 | `upstage` | Upstage |
+| R04 | 17 | 129 | `nous-research` | Nous Research |
+| R04 | 18 | 130 | `arcee-ai` | Arcee AI |
+| R04 | 20 | 132 | `inception` | Inception |
+| R05 | 1 | 135 | `openvecta` | OpenVecta |
+| R05 | 3 | 137 | `poolside` | Poolside |
+| R05 | 5 | 139 | `cerebras` | Cerebras |
+| R05 | 6 | 140 | `nvidia` | NVIDIA NIM |
+| R05 | 7 | 141 | `nebius` | Nebius AI |
+| R05 | 8 | 143 | `siliconflow` | SiliconFlow |
+| R05 | 9 | 144 | `hyperbolic` | Hyperbolic |
+| R05 | 10 | 145 | `ollama-cloud` | Ollama Cloud |
+| R05 | 11 | 149 | `sambanova` | SambaNova |
+| R05 | 12 | 150 | `nscale` | nScale |
+| R05 | 13 | 151 | `baseten` | Baseten |
+| R05 | 14 | 152 | `publicai` | PublicAI |
+| R05 | 15 | 153 | `featherless-ai` | Featherless AI |
+| R05 | 16 | 154 | `friendliai` | FriendliAI |
+| R05 | 17 | 155 | `wandb` | Weights & Biases Inference |
+| R05 | 19 | 160 | `modelscope` | ModelScope |
+| R05 | 20 | 161 | `byteplus` | BytePlus ModelArk |
+| R06 | 1 | 165 | `bedrock` | Amazon Bedrock |
+| R06 | 2 | 166 | `watsonx` | IBM watsonx.ai |
+| R06 | 3 | 167 | `oci` | OCI Generative AI |
+| R06 | 5 | 170 | `vertex` | Vertex AI |
+| R06 | 7 | 173 | `scaleway` | Scaleway Generative APIs |
+| R06 | 8 | 174 | `ovhcloud` | OVHcloud AI Endpoints |
+| R06 | 9 | 176 | `databricks` | Databricks Foundation Model APIs |
+| R06 | 10 | 177 | `datarobot` | DataRobot |
+| R06 | 11 | 179 | `snowflake` | Snowflake Cortex |
+| R06 | 12 | 180 | `qianfan` | Baidu Qianfan |
+| R06 | 13 | 183 | `bigmodel` | BigModel.cn / Zhipu |
+| R06 | 14 | 186 | `qwen-cloud` | QwenCloud |
+| R06 | 16 | 191 | `minimax-cn` | MiniMax China open API |
+| R06 | 17 | 193 | `zai` | Z.AI (global) |
+| R06 | 18 | 194 | `alibaba` | Alibaba Cloud Model Studio |
+| R06 | 19 | 195 | `alibaba-cn` | Alibaba (China, compatibility alias) |
+| R06 | 20 | 196 | `longcat` | LongCat AI |
+| R07 | 2 | 198 | `volcengine` | Volcengine Ark |
+| R07 | 3 | 201 | `gigachat` | GigaChat (Sber) |
+| R07 | 4 | 202 | `xiaomi-mimo` | Xiaomi MiMo API |
+| R07 | 5 | 203 | `xiaomi-mimo-token-plan` | Xiaomi MiMo Token Plan |
+| R07 | 6 | 204 | `baidu` | Baidu ERNIE |
+| R07 | 7 | 205 | `tencent` | Tencent Hunyuan |
+| R07 | 8 | 206 | `iflytek` | iFlytek Spark |
+| R07 | 9 | 207 | `baichuan` | Baichuan Open Platform |
+| R07 | 10 | 209 | `stepfun` | StepFun |
+| R07 | 11 | 210 | `coze` | Coze Agent API |
+| R07 | 12 | 211 | `360ai` | 360 AI / 360智脑 |
+| R07 | 13 | 212 | `doubao` | Doubao (ByteDance Ark) |
+| R07 | 14 | 213 | `sensenova` | SenseNova / SenseTime |
+| R07 | 15 | 214 | `sparkdesk` | SparkDesk (iFlytek) |
+| R07 | 16 | 215 | `hcnsec` | Huancheng Public AI Gateway |
+| R07 | 17 | 216 | `agnes` | Agnes AI |
+| R07 | 19 | 218 | `sealion` | AI Singapore SEA-LION |
+| R07 | 20 | 220 | `internlm` | InternLM / Intern-S1 |
+| R08 | 1 | 221 | `ant-ling` | Ant Ling / Ring |
+| R08 | 2 | 222 | `sarvam` | Sarvam AI |
+| R08 | 3 | 223 | `plamo` | PLaMo (Preferred Networks) |
+| R08 | 4 | 224 | `typhoon` | Typhoon AI / SCB10X |
+| R08 | 5 | 225 | `apmix` | Apmix |
+| R08 | 6 | 226 | `nlpcloud` | NLP Cloud |
+| R08 | 7 | 228 | `kie` | KIE.AI |
+| R08 | 8 | 229 | `pollinations` | Pollinations AI |
+| R08 | 9 | 236 | `gitlab` | GitLab Duo PAT |
+| R08 | 10 | 237 | `voyage-ai` | Voyage AI |
+| R08 | 11 | 238 | `jina-ai` | Jina AI (Foundation API) |
+| R08 | 13 | 242 | `black-forest-labs` | Black Forest Labs FLUX |
+| R08 | 14 | 244 | `topaz` | Topaz Labs Image and Video API |
+| R08 | 15 | 245 | `segmind` | Segmind |
+| R08 | 16 | 246 | `dify` | Dify Cloud Sandbox |
+| R08 | 17 | 247 | `nomic` | Nomic Atlas Embed API |
+| R08 | 18 | 248 | `mixedbread` | Mixedbread AI |
+| R08 | 19 | 249 | `jina-reader` | Jina Reader (r.jina.ai) |
+| R08 | 20 | 250 | `tinyfish` | TinyFish Fetch |
+
+### FINAL user-excluded technical IDs R01–R08 (23)
+
+| Round | Round position | Original catalog row | Exact provider technical ID | Provider |
+|---|---:|---:|---|---|
+| R01 | 4 | 6 | `charm-hyper` | Charm Hyper |
+| R01 | 6 | 10 | `openrouter` | OpenRouter |
+| R01 | 14 | 18 | `lyceum` | Lyceum |
+| R02 | 1 | 26 | `mixlayer` | Mixlayer |
+| R02 | 6 | 32 | `ofoxai` | OfoxAI |
+| R03 | 3 | 60 | `vercel-ai-gateway` | Vercel AI Gateway |
+| R03 | 6 | 68 | `novita` | Novita AI |
+| R03 | 7 | 69 | `piapi` | PiAPI |
+| R03 | 12 | 80 | `freemodel-dev` | FreeModel.dev |
+| R04 | 10 | 113 | `gemini` | Gemini (Google AI Studio) |
+| R04 | 11 | 114 | `groq` | Groq |
+| R04 | 12 | 117 | `mistral` | Mistral |
+| R04 | 13 | 120 | `cohere` | Cohere |
+| R04 | 19 | 131 | `liquid` | Liquid AI |
+| R05 | 2 | 136 | `openference-api` | Openference API |
+| R05 | 4 | 138 | `fireworks` | Fireworks AI |
+| R05 | 18 | 158 | `bytez` | Bytez |
+| R06 | 4 | 168 | `sap` | SAP Generative AI Hub |
+| R06 | 6 | 172 | `cloudflare-ai` | Cloudflare Workers AI |
+| R06 | 15 | 188 | `kimi` | Kimi (Legacy Moonshot API) |
+| R07 | 1 | 197 | `moonshot` | Moonshot / Kimi API |
+| R07 | 18 | 217 | `agnes-cn` | Agnes AI (China) |
+| R08 | 12 | 241 | `stability-ai` | Stability AI |
+
 ## 2026-10-31 — DJMRN-FREE-API-R07-USER-APPROVAL-20261031 — CURRENT approved shortlist 118 unique IDs after R07
 
 - **Explicit owner-approved R07 decision**: Exclude **only** R07 item #1 `moonshot` (original 252-source row #197), item #18 `agnes-cn` (original #217) from the NEW user-approved candidate shortlist. ACCEPT the other **18** distinct R07 technical IDs; no other exclusions. **Do not** infer that excluding `moonshot` or `agnes-cn` removes similar provider IDs; previous R01–R06 decisions stand unchanged. The R07 decisions do NOT modify deployed gateway models or any actual account.
