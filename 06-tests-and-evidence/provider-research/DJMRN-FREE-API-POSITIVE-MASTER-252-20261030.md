@@ -1,6 +1,6 @@
 # DJMRN — Cumulative positively-identified recurring Free Hosted AI API providers
 
-**Master list status:** LIVE RESEARCH REGISTER / **Stages 01 and 02 of 09 recorded (2026-10-30)**; stages 03-09 remain pending. This file is intended to be **updated in place** after every later stage, not recreated under new names. It contains **all positive results so far**, deduplicated by OmniRoute v3.8.52 provider technical ID.
+**Master list status:** LIVE RESEARCH REGISTER / **Stages 01–03 of 09 recorded (2026-10-30)**; stages 04–09 remain pending. This file is intended to be **updated in place** after every later stage, not recreated under new names. It contains **all positive results so far**, deduplicated by OmniRoute v3.8.52 provider technical ID.
 
 **Scope definition:** Positive means a public provider/operator document advertises **ongoing zero-priced hosted MODEL inference API calls** or **replenishing $0-plan credits usable for model inference via API**; it does NOT require an account test in this research phase. One-time signup/trial credit is excluded; free hosted web chat without programmatic API is excluded; $0/month access with per-token paid inference is excluded. A `:free` route requiring a paid deposit/balance is excluded from the strict no-payment list. Not all positives promise perpetual, commercial, scalable use. Differentiate advertised terms from independently account-tested reality.
 
@@ -12,7 +12,7 @@
 |---|---|---|---:|
 | S01 | 1–30 | RESEARCHED_PUBLIC_2026-10-30 | 20 |
 | S02 | 31–60 | RESEARCHED_PUBLIC_2026-10-30 | 14 |
-| S03 | 61–90 | PENDING | — |
+| S03 | 61–90 | RESEARCHED_PUBLIC_2026-10-30 | 5 |
 | S04 | 91–120 | PENDING | — |
 | S05 | 121–150 | PENDING | — |
 | S06 | 151–180 | PENDING | — |
@@ -20,7 +20,7 @@
 | S08 | 211–240 | PENDING | — |
 | S09 | 241–252 | PENDING | — |
 
-**Current cumulative positive providers: 34 unique IDs** from S01 (20) and S02 (14), comprising **29 zero-cost model/API free-request allowances and 5 recurring free-credit allowances**. All are source-supported public eligibility candidates, NOT 34 active connections or completed Gateway model calls. S01 DXNT has only linked-brand evidence; S02 Chat Oripe claims are operator-advertised but untested. S02 FreeInference is research-oriented; ChatAnywhere free access is noncommercial; OrcaRouter free API access requires eligible GitHub history; BazaarLink may automatically bill on overflow; Vercel gives $5/month only while its team remains on the Free tier.
+**Current cumulative positive providers: 39 unique IDs** (S01 20 + S02 14 + S03 5): **34 zero-cost model API/free-request providers** and **5 recurring free-credit providers**, all only published-eligibility candidates, NOT 39 working or billable production model routes. Stage 03 noteworthy: LLM7 uses rolling 100K tokens/day; Gitlawb GMI free Nemotron route newly published despite older static catalog note; FreeAIAPIKey models can rotate; OpenAdapter limits weighted credits 50/day and 200/month; Kenari no-topup :free model access. Unverified provider promises remain excluded.
 
 ## Cumulative positive-only register
 
@@ -62,6 +62,12 @@
 | 54 | `freetheai` | FreeTheAi | `RECURRING_FREE_API` | Official limits: 50 free requests/day to email-confirmed account, +50 if Discord linked, reset at 00:00 UTC; daily check-in unlocks free models. OpenAI-compatible API key at freetheai.org. | [Source](https://docs.freetheai.org/concepts/limits) | OFFICIAL_CHECKIN | S02 — 2026-10-30 |
 | 60 | `vercel-ai-gateway` | Vercel AI Gateway | `RECURRING_FREE_CREDIT` | Official Vercel docs updated Sep 8 2026 show $5 monthly AI Gateway credits for Free tier, restricted to eligible models, without BYOK; buying paid credits transitions to paid tier and forfeits recurring $5 benefit. | [Source](https://vercel.com/docs/ai-gateway/pricing) | OFFICIAL | S02 — 2026-10-30 |
 
+| 61 | `llm7` | LLM7.io | `RECURRING_FREE_API` | Free developer token: 100,000 combined input/output tokens per rolling 24h; 1 request/s, 60/min, 250/hour. Educational/research service and capacity not guaranteed. | [Source](https://llm7.io/) | OFFICIAL | S03 — 2026-10-30 |
+| 64 | `gitlawb-gmi` | Gitlawb Opengateway (GMI Cloud) | `RECURRING_FREE_API` | Official shared Opengateway currently advertises nvidia/nemotron-3-ultra-550b-a55b:free, zero input/cache/output prices, rate-limited, no credits needed. This GMI-type entry is a match to the free NVIDIA route; static OmniRoute registry 3.8.52 contains superseded 2026-06 'promo ended' note; live Gateway test pending. | [Source](https://gitlawb.com/opengateway) | OFFICIAL_CHANGED_SINCE_REGISTRY | S03 — 2026-10-30 |
+| 81 | `freeaiapikey` | FreeAIAPIKey | `RECURRING_FREE_API` | Verified Free accounts get up to 100,000 free tokens/day according to official home page, with free :free model routes and daily request caps per official docs. Free model IDs are limited-time/replaceable; data provenance and terms require vetting. | [Source](https://freeaiapikey.com/docs) | OFFICIAL_FREE_MODELS_ROTATE | S03 — 2026-10-30 |
+| 83 | `openadapter` | OpenAdapter | `RECURRING_FREE_API` | Official $0 Free API plan: 50 weighted request credits/day with 200 credits/month limit, variable credit cost per model, replenishing daily; free models and other tiers depending eligibility, no card required. | [Source](https://openadapter.dev/rate-limits) | OFFICIAL | S03 — 2026-10-30 |
+| 90 | `kenari` | Kenari | `RECURRING_FREE_API` | Zero-balance accounts can call :free models and kenari-free route. Operator publishes free-model request quotas and 50 calls/day, 5 RPM for no-topup Solo plan. Higher allowance with paid top-up is separate. | [Source](https://kenari.id/en/docs/free-models) | OFFICIAL | S03 — 2026-10-30 |
+
 ## Deferred but NOT counted as verified positive
 
 - **AgentRouter** (`agentrouter`, row 7): independent reports of daily login credit, but original operator source not independently readable; **UNVERIFIED**, not in the 20 positives.
@@ -74,7 +80,7 @@
 3. Update the stage progress row, totals and per-type subtotals, then refetch this GitHub file to verify the cumulative positive count. Future Stage N reports should link to this single file.
 4. Never treat positive public eligibility as registration, model inference success or approval to spend. Paid-credit trial and no-free-inference entries belong in stage reports only, not this master.
 
-**Related results:** [S01 30-provider findings](DJMRN-FREE-API-SCAN-S01-RESULTS-20261030.md) · [S02 30-provider findings](DJMRN-FREE-API-SCAN-S02-RESULTS-20261030.md). **Original source:** [252-entry OmniRoute provider catalog](OMNIROUTE-252-APIKEY-PROVIDER-CATALOG-V3852-20261030.md).
+**Related results:** [S01 30-provider findings](DJMRN-FREE-API-SCAN-S01-RESULTS-20261030.md) · [S02 30-provider findings](DJMRN-FREE-API-SCAN-S02-RESULTS-20261030.md) · [S03 30-provider findings](DJMRN-FREE-API-SCAN-S03-RESULTS-20261030.md). **Original source:** [252-entry OmniRoute provider catalog](OMNIROUTE-252-APIKEY-PROVIDER-CATALOG-V3852-20261030.md).
 
 
 ## 2026-10-30 — S02 merge receipt
@@ -82,3 +88,10 @@
 - Added **14** unique technical IDs from catalog rows **31–60**, all directly supported by linked operator or operator-linked primary documentation. Current cumulative tally: **34 = 20 (S01) + 14 (S02)**.
 - Excluded S02 paid, trial-only, temporary free promotions (including Qiniu ending 2026-11-30), PoW-gated third-party proxies, and direct-API-ineligible OpenCode Zen Free models.
 - No credentials, account tests or payments; previous 20 S01 IDs preserved unchanged. Detailed [S02 evidence](DJMRN-FREE-API-SCAN-S02-RESULTS-20261030.md).
+
+
+## 2026-10-30 — S03 merge receipt
+
+- Appended **5 unique positive provider IDs** from source rows 61–90: `llm7`, `gitlawb-gmi`, `freeaiapikey`, `openadapter`, `kenari`; cumulative master now **39 distinct IDs = 20 S01 + 14 S02 + 5 S03**.
+- Particularly important false-positive exclusions: `zenmux` free Builder plan does not include API (PAYG zero-model eligibility unresolved); `bluesminds` free 500 pi signup credits do not demonstrate replenishment; `bai` zero-price offers are temporary promos; `nanogpt` one free model is only on website; `getgoapi` free-model marketing conflicts with finite signup credit and lacks verifiable recurring model details.
+- Positive results remain published operator claims (not account use, free billing stop, or production permission). Source [S03 research receipt](DJMRN-FREE-API-SCAN-S03-RESULTS-20261030.md). S04-S09 pending.
