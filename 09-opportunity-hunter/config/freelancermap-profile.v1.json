@@ -134,7 +134,7 @@
       }
     ],
     "execution_contract": {
-      "allowed_now": "STAGES_1_AND_2_APPROVED_FOR_FUTURE_COMPOSITION_ONLY__NO_AGENT_RUNNING",
+      "allowed_now": "STAGES_1_2_3_RULES_DOCUMENTED__NO_AGENT_RUNNING",
       "filter_application_procedure": [
         "Open https://www.freelancermap.com/projects public search page.",
         "Clear any preselected workplace, contract, country or extra active chips, including Exclude projects from German speaking countries; never assume unselected from filter counter alone.",
@@ -147,11 +147,11 @@
         "After applying filters, report displayed result count as an observation with timestamp; never hardcode count."
       ],
       "blocked_until_next_user_instructions": [
-        "Choosing/confirming the actual Windows site-specific local persistence path and storage format during implementation",
-        "Permission and rate/usage feasibility review before any full live crawl",
-        "Approving Stage 3 suitability analysis and later reporting stages",
-        "Issuing and executing the assembled full Browser Use instruction",
-        "Any employer contact, apply, submit, account or security changes"
+        "Approving actual Windows local folder and storage behavior via a bounded test",
+        "Verifying permitted crawl coverage/rate and Codex usage before a full live run",
+        "Defining subsequent full details review and reporting requirements",
+        "Issuing and executing the complete unified Browser Use instruction",
+        "Any client contact, application, messaging or account/security changes"
       ],
       "dynamic_counts": "No fixed counts: results change as the site updates.",
       "no_browser_task_sent": true
@@ -162,7 +162,7 @@
       "scope": "Only step 1 of future unified Browser Use/Codex task: visit public freelancermap projects page and apply search filters.",
       "approved_by": "USER_EXPLICIT_DIRECTIVE",
       "no_agent_execution_now": true,
-      "next_steps": "Stage 2 approved and stored separately. Await owner-defined Stage 3 and any later phases; assemble one unified instruction only after review, including run cost/access safety gate.",
+      "next_steps": "Stages 1, 2 and 3 defined. Await user-defined later-stage rules and operational details; do not run a unified agent command yet.",
       "no_extra_assumptions": true
     },
     "approved_session_stage": {
@@ -218,7 +218,7 @@
     "rules_for_other_websites": "NOT_SPECIFIED__REQUIRE_SEPARATE_SITE_PROFILES_AND_USER_APPROVAL"
   },
   "collection_policy": {
-    "revision": "FM-COLLECT-01",
+    "revision": "FM-COLLECT-02",
     "state": "STAGE_2_APPROVED_FOR_FUTURE_UNIFIED_INSTRUCTION__NOT_EXECUTED",
     "user_approval": {
       "status": "APPROVED",
@@ -236,9 +236,9 @@
       "traverse_all_pages": true,
       "page_limit": "NO_USER_SPECIFIED_PAGE_CAP",
       "stop_condition": "Reach the actual last publicly accessible search results page for the approved active filter state; do not infer a complete crawl from a single page.",
-      "capture_scope": "ALL search-result listings seen across every accessible results page matching approved filters, including listings previously seen; no relevance/skills/budget filtering at this stage.",
+      "capture_scope": "Scan all accessible public result pages under approved filters, observe current listing identifiers for dedup, capture raw data for genuinely NEW items only; recognize previously seen items without re-importing old opportunities into the new intake/screening queue.",
       "on_first_run": "Build the site's local baseline collection and distinguish distinct IDs within the run.",
-      "on_later_runs": "Compare each captured listing against the site's previously persisted local records; mark NEW if unseen before, SEEN if already present; preserve the previous collection for future comparisons.",
+      "on_later_runs": "Compare each captured listing to the site's durable local records. Only NEW, previously unseen listings enter the fresh ingest and Stage 3 screening queue. SEEN listings must NOT be re-imported as new records or re-screened by default. Preserve prior records and record accurate SEEN counts.",
       "duplicate_identity": "Site + stable project/listing ID when available, otherwise site + canonical project URL; this reuses the existing Opportunity Hunter dedup policy, not a new global rule.",
       "preserve_prior_records": true,
       "persist_site_data_to": "USER_WINDOWS_COMPUTER__SITE_DEDICATED_FOLDER",
@@ -247,7 +247,7 @@
       "existing_local_project_home_hint": "Existing DJMRN OpportunityHunter local installation has been used; determine the actual site-specific local folder during implementation without modifying unrelated data.",
       "storage_format": "UNDECIDED_BY_USER__MUST_SUPPORT_REAL_LOCAL_PERSISTENCE_AND_LATER_COMPARISON",
       "record_fields": "Retain available stable listing ID/URL, shown title and original available listing result data, capture timestamp, page/source references, and NEW/SEEN status. Preserve raw source evidence for later stage 3 without inventing unavailable fields.",
-      "safe_repeat": "Use durable saved records as the source for NEW/SEEN, not agent conversational memory; avoid accidental overwriting or erasing earlier run data.",
+      "safe_repeat": "Use durable saved records for NEW/SEEN and a stable site+listing ID (or canonical URL) key. Do not overwrite or erase history, do not create duplicate new records for SEEN IDs; retain old items in original site history.",
       "reporting_end_of_stage": "Total visible pages navigated, total captured records, unique identifiers, NEW count, SEEN count, local save/readback outcome, and whether all accessible pages were reached; if not, state PARTIAL and reason.",
       "stage_boundary": "Do not apply suitability rules, reject/screen, read full detail pages, communicate with employers or alter accounts; stage 3 will be separately owner-defined."
     },
@@ -266,18 +266,16 @@
       "stage_name": "Capture and locally persist all public search result listings; recognize new vs seen on subsequent runs",
       "prompt_segment": [
         "STEP 2 — FREELANCEMAP RESULTS COLLECTION AND LOCAL HISTORY.",
-        "Proceed only after Step 1's Remote-only + Freelance-only filtered search has been verified, with ALL countries included and no additional filters.",
-        "Navigate through EVERY available, publicly accessible search-results page for that filtered search, following normal site pagination until the actual last accessible page. Do not impose an arbitrary page-count limit or skip pages.",
-        "Extract ALL listings shown in those result pages, including ones already found in an earlier run; do not screen them for fit or read their full detail pages yet.",
-        "Persist the collected raw listing results on the user's Windows computer in an isolated, site-specific FREELANCEMAP folder/profile, not GitHub or another website's records. The final exact Windows folder and file format require separate user confirmation during implementation.",
-        "Reuse the existing site's local baseline from previous runs, if available; identify listings by freelancermap project ID or canonical URL, mark NEW vs SEEN, and do not erase or overwrite older saved data.",
-        "Record run-time evidence: filtered search URL/state, page references, timestamp, visible listing fields and identifiers, per-run totals, and saved-data verification.",
-        "Report visited pages, total captured, distinct/new/seen listings, exact verified local save path and whether all accessible pages were covered.",
-        "If loading is blocked, pages are inaccessible, service throttles, permission/rate restrictions arise, or Codex usage is exhausted, stop safely, preserve already-saved progress, and report PARTIAL with the exact blocker. No bypass, retry storm, or false claim of 100% completeness.",
-        "Do NOT perform Stage 3 suitability filtering, open every detail page, apply, message, submit or change accounts. Stage 3 will be defined and approved separately."
+        "After Stage 1's public project search has been verified (Remote only, Freelance only, all countries, no other filters), visit every publicly accessible filtered results page until the last reachable page, subject to website access and usage limits. Never claim full coverage if blocked.",
+        "Observe all listed IDs/URLs across pages, but compare them with the site's local persistent baseline before importing.",
+        "Import and locally save only opportunities whose site-specific stable project ID (or fallback canonical URL) has not appeared before. Do not import or pass SEEN/previously stored advertisements to the fresh Stage 3 queue. Keep existing records intact.",
+        "Keep the persistent baseline and this run's NEW/SEEN counts within this site's own Windows profile/folder, not shared with other website profiles. Exact Windows path and storage format remain unselected until local verification.",
+        "Save new raw listing data with available original text, source link/ID and capture timestamp. Store any detected changes to old advertisements only if later explicitly defined; never silently reinterpret SEEN as NEW.",
+        "Report actual page coverage, records observed, truly NEW imported, SEEN not imported, local save/readback status, and reasons for PARTIAL failures. Respect access restrictions and quotas. Do not bypass controls.",
+        "Stage 2 does not perform suitability filtering or full-detail research, nor contact clients or submit anything. Stage 3 will screen only newly imported raw listings."
       ],
       "execution_authorization": "NOT_YET__ONLY_ASSEMBLE_WITH_FUTURE_APPROVED_STAGE_3_AND_OTHER_REQUIRED_USER_RULES",
-      "approved_stage_count_so_far": 2
+      "approved_stage_count_so_far": 3
     },
     "codex_trial": {
       "intent": "Measure how far existing Browser Use plus ChatGPT-authenticated Codex can perform the unified workflow when separately instructed to run.",
@@ -286,6 +284,94 @@
       "full_scan_within_quota": "UNVERIFIED",
       "no_charge_or_upgrade_without_explicit_approval": true,
       "actual_test_status": "NOT_RUN"
+    },
+    "user_clarification": {
+      "date": "2026-10-30",
+      "source": "USER_EXPLICIT_CLARIFICATION_DURING_STAGE_3_DISCUSSION",
+      "requirement": "Old/previously known adverts should not be imported again; Stage 3 takes new records only.",
+      "preserve_historical_dedup": true,
+      "retroactive_data_modification": false
+    }
+  },
+  "preliminary_screening_policy": {
+    "revision": "FM-SCREEN-01",
+    "state": "STAGE_3_USER_DEFINED__SAVED_FOR_FUTURE_UNIFIED_INSTRUCTION__NOT_EXECUTED",
+    "site_scope": "FREELANCEMAP_ONLY",
+    "user_approval": {
+      "status": "USER_SPECIFIED_STAGE_3_REQUIREMENTS",
+      "date": "2026-10-30",
+      "source": "User describes Stage 3 quick exclusion and moving preliminary survivors into a different site-specific folder.",
+      "no_agent_execution_now": true
+    },
+    "stage": {
+      "stage_id": "FREELANCEMAP-PRESCREEN-03",
+      "stage_order": 3,
+      "input": "Only NEW listings that Stage 2 has durably saved for freelancermap, never SEEN/previously ingested listings.",
+      "purpose": "Fast preliminary suitability exclusion based on evidence available in the saved listing title, excerpt, tags and any saved publicly visible description; do not yet perform exhaustive per-project detail reading.",
+      "applicant_context": "Owner is Iranian and needs work that can legally and practically be contracted and delivered remotely from Iran. Do not assume unrestricted global eligibility from a Remote tag or employer location.",
+      "evaluate_original_language": "Interpret or translate any available non-Persian description sufficiently to assess actual restrictions and implicit mandatory conditions, not merely keyword matching.",
+      "screen_conditions": [
+        {
+          "id": "FM-S3-01",
+          "topic": "Nationality, residency, citizenship and work authorization",
+          "rule": "Reject where the ad actually states an incompatible mandatory nationality, citizenship, residence, local work authorization, territorial restriction or national-only eligibility that prevents an Iranian person working from Iran. Worldwide/explicit cross-border eligibility is positive evidence, but silence is not proof of eligibility."
+        },
+        {
+          "id": "FM-S3-02",
+          "topic": "Work mode and mandatory physical participation",
+          "rule": "Reject mandatory on-site visits, hybrid attendance, office presence, physical implementation, site inspection, travel, mandatory relocation, or other physical requirements preventing fully remote delivery from Iran; do not accept a Remote listing badge as overriding incompatible text."
+        },
+        {
+          "id": "FM-S3-03",
+          "topic": "Special permissions or professional licensing",
+          "rule": "Reject if performance or contracting strictly requires an unavailable professional license, regulated registration, security clearance, government certification, restricted status or other legally necessary approval. A project mentioning German or other national law is not automatically rejected unless a mandatory incompatible license, presence, authorization or legal condition is evidenced."
+        },
+        {
+          "id": "FM-S3-04",
+          "topic": "Project feasibility and weight",
+          "rule": "Reject when the available evidence clearly shows the standalone project is infeasibly large/complex or needs mandatory resources, specialist authorization or capabilities unavailable to the owner; reuse already-approved site/project limits (over 100 estimated hours OR over 10 calendar days for standalone projects) only when sufficiently grounded. Do not guess hours from a vague title or infer that AI can safely perform professional obligations."
+        },
+        {
+          "id": "FM-S3-05",
+          "topic": "Other material contract/delivery barriers",
+          "rule": "Reject a concrete, mandatory incompatible condition that prevents accepting or delivering the assignment from Iran, including restrictive location/physical or non-obtainable legal or regulatory duties. Record exact reason and evidence; do not invent restrictions."
+        }
+      ],
+      "decision_rules": {
+        "definite_reject": "REJECT_PRELIMINARY only for actual, identifiable incompatible mandatory requirements supported by cited listing text or verified site evidence.",
+        "no_visible_blocker": "PASS_PRELIMINARY when no incompatible condition is evidenced; this means NOT YET REJECTED, not confirmed global eligibility or fit.",
+        "missing_or_ambiguous": "NEEDS_VERIFICATION when saved listing text is insufficient, unclear or conflicting about a material restriction; do not auto-reject or claim it is definitely eligible. Carry it forward marked uncertain for later detailed inspection rather than dropping it silently.",
+        "title_only": "Title or remote badge alone is insufficient for a final eligibility approval; maintain uncertainty when key conditions are not available.",
+        "evidence": "Each excluded item must retain link/project ID, original relevant text when available, translated/paraphrased interpretation, reason code and provenance; no assertion based on hallucinated legal restrictions."
+      },
+      "persistence": {
+        "raw_source": "Keep Stage 2 original local site-specific archive and dedup baseline unchanged, including rejected listings for future repeat detection.",
+        "next_stage_folder": "SEPARATE_SITE_SPECIFIC_PRELIMINARY_SURVIVORS_FOLDER_ON_USERS_WINDOWS_COMPUTER",
+        "exact_windows_path": "UNDECIDED__USER_DID_NOT_SPECIFY",
+        "format": "UNDECIDED__REUSE_EXISTING_STORAGE_WHERE_FEASIBLE",
+        "routing": "Put PASS_PRELIMINARY and NEEDS_VERIFICATION (with explicit uncertainty flags) into the site's separate next-stage folder/queue. Keep REJECT_PRELIMINARY out of it but retain its raw record and rejection reason in the original site-specific history; do not delete original records.",
+        "duplication_policy": "Do not create new copies of old SEEN listings in the next-stage intake. Stage 3 does not erase any existing Windows files or database rows.",
+        "stage_boundary": "Only quick preliminary screen here. Full reading of survivor project details, final fit/economic evaluation and reporting are reserved for user-defined later steps."
+      },
+      "approved_prompt_segment": [
+        "STEP 3 — FREELANCEMAP PRELIMINARY ELIGIBILITY FILTER.",
+        "Screen only the genuinely NEW freelancermap advertisements saved by Step 2; never re-import old/SEEN opportunities.",
+        "Use the available saved original listing text, title, snippets, tags and other already-captured information. Translate where needed to understand mandatory conditions, not just match isolated keywords. Do not yet browse every full project detail page.",
+        "Assess whether an Iranian freelancer can realistically and lawfully contract for and deliver the work fully remotely from Iran. Look for explicit or clear mandatory nationality, citizenship, country, residence, work permit, local hiring, on-site/hybrid/travel, professional license, security clearance, jurisdiction-specific regulated-qualification, or other incompatible restrictions.",
+        "Reject only if evidence supports a real blocking requirement. For standalone work, rely on the project's existing approved 100-hour/10-day hard limits only when the data supports a sound estimate. Do not invent hours, licensing or country restrictions.",
+        "An employer located in Germany or another country, or a local legal/regulatory topic, does not alone disqualify a remote job; look for an actual binding restriction. A Remote label does not guarantee worldwide eligibility.",
+        "If no disqualifier is visible, tag PASS_PRELIMINARY; if essential eligibility information is absent or ambiguous, tag NEEDS_VERIFICATION. Neither is final acceptance.",
+        "Place PASS_PRELIMINARY and NEEDS_VERIFICATION advertisements in a different, FREELANCEMAP-ONLY local folder/queue for a later, separately approved stage, with uncertainty labels. Keep rejected items out of that next-stage queue; preserve all original raw records and rejection reasons in the site history; do not delete historical data.",
+        "Record count and grounded reason codes for NEW assessed, PASS_PRELIMINARY, NEEDS_VERIFICATION and REJECT_PRELIMINARY. Report data/cost/permission failure as PARTIAL rather than claiming completion.",
+        "Stop at Stage 3. Do not send applications, contact clients, take payment, modify accounts or execute unsanctioned full-detail inspection."
+      ]
+    },
+    "unresolved_for_later": {
+      "user_final_fit_criteria": "NOT_DEFINED_FOR_THIS_UNIFIED_INSTRUCTION_YET",
+      "full_detail_review_stage": "NEXT_STAGE_NOT_YET_DEFINED",
+      "local_directory_layout": "UNDECIDED; do not invent or create Windows folders in the rules-only discussion",
+      "cadence": "UNDECIDED",
+      "codex_feasibility": "UNTESTED_FOR_FULL_END_TO_END_PIPELINE"
     }
   }
 }
