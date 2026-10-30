@@ -6,6 +6,25 @@
 
 **Research-to-operation gate:** all rows are **PUBLISHED_ELIGIBILITY_CANDIDATE**, **NOT DJMRN account-tested, model Gateway-PASS, current registered accounts, or commercial-allowed certifications**. No API keys/account purchases were used for this research. Check account-specific terms, country/ID verification, actual model ID, pricing and hard no-spend guard before trying any route.
 
+## CONDITIONAL-FREE-API-INCLUSION-POLICY-20261030 — Keep genuine recurring free APIs even when conditional
+
+**Owner decision:** A provider with actual no-payment renewable hosted MODEL inference API access stays in the **same cumulative positive master** even when its free tier is conditional on a **GitHub account/history, email verification, research/educational or noncommercial use, application approval, daily Check-in, eligible region, or comparable requirements**. The required condition must be recorded as a separate operational eligibility tag **`POSITIVE_CONDITIONAL`**. In other words, **free API exists** does not mean **DJMRN commercially eligible**, and this is NOT an operational model-acceptance test.
+
+**Not positive under the no-payment criterion:** compulsory upfront paid balance/deposit, required paid API subscription, a one-off signup/trial credit with no renewable free route, or a strictly time-limited promotion. Recurrent free rate/token limits do not disqualify the provider but must be documented. All positive entries remain public/official claims requiring actual account validation.
+
+### Known conditional-positive examples (identified during S01–S03)
+
+| Catalog row | Provider ID | Eligibility and safety condition |
+|---:|---|---|
+| 34 | `chatanywhere` | Free API key linked to GitHub; free tier **noncommercial/personal/research only**. Retain as positive; DO NOT route paid freelance work under this tier |
+| 44 | `orcarouter` | Free model access without payment requires an **established GitHub account/history**; paid-purchase alternative doesn't count as free eligibility |
+| 40 | `freeinference` | Research/education-focused API; **manual approval and possible prompt/response logging and release of anonymized data**; never use for confidential client work without consent |
+| 54 | `freetheai` | Free models require **daily Check-in/activation**, with optional Discord-based allowance changes |
+| 8 | `unorouter` | Shared/free pool, strict rate limits and intermittent free-model availability; do not infer commercial permission |
+| 47 | `bazaarlink` | Free quota can automatically fall back to PAID models on funded accounts; verify `X-Free-Fallback: false` spend-block before automation |
+
+**Tagging rule for later stages:** The main type remains `RECURRING_FREE_API` or `RECURRING_FREE_CREDIT`. Attach `POSITIVE_CONDITIONAL` for a documented eligibility or policy restriction; otherwise `CONDITIONS_NOT_YET_AUDITED` rather than `UNCONDITIONAL`. This example table is **not an exhaustive audit** of all current 39 master entries. Do not change the number of positives merely because of conditions.
+
 ## Progress
 
 | Stage | Catalog rows | Research status | Positive entries from this stage |
