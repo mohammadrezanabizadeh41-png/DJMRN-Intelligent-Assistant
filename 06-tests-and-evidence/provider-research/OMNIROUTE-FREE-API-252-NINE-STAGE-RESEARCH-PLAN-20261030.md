@@ -36,7 +36,7 @@
 
 ## Stage 1 — DJMRN-FREE-API-SCAN-S01 (source rows 1–30)
 
-**Trigger:** «مرحله 1» · **Entries:** 30 · **Status:** READY / NOT RESEARCHED
+**Trigger:** «مرحله 1» · **Entries:** 30 · **Status:** PUBLIC RESEARCH COMPLETED 2026-10-30; [full 30-provider result](DJMRN-FREE-API-SCAN-S01-RESULTS-20261030.md); [master 20 positives](DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md).
 
 | Source row | Provider ID (exact) | Catalog name | UI status |
 |---:|---|---|---|
