@@ -1,0 +1,253 @@
+﻿Catalog_Row,ID,Provider,Catalog_Alias,Catalog_Website,R08_Decision,Website_Verification
+1,onomeo,onomeo,onomeo,https://onomeo.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+2,unifically,Unifically,unifically,https://unifically.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+3,oneminai,1min.AI,1min,https://1min.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+4,cheaperinference,Cheaper Inference,cinf,https://cheaperinference.com/?utm_source=omniroute,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+5,freebuff,Freebuff,freebuff,https://freebuff.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+6,charm-hyper,Charm Hyper,charm-hyper,https://hyper.charm.land,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+7,agentrouter,AgentRouter,agentrouter,https://agentrouter.org,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+8,unorouter,UnoRouter,unorouter,https://unorouter.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+9,command-code,Command Code,cmd,https://commandcode.ai/,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+10,openrouter,OpenRouter,openrouter,https://openrouter.ai,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+11,opper,Opper,opper,https://opper.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+12,requesty,Requesty,requesty,https://requesty.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+13,zylo-api,Zylo API,zylo,https://zyloai.net,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+14,fastrouter,FastRouter,fastrouter,https://fastrouter.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+15,anyapi,AnyAPI AI,anyapi,https://anyapi.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+16,electronhub,Electron Hub,electronhub,https://www.electronhub.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+17,llmgateway,LLM Gateway,llmgateway,https://llmgateway.io,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+18,lyceum,Lyceum,lyceum,https://lyceum.technology,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+19,llm-kiwi,LLM.Kiwi,llmkiwi,https://llm.kiwi,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+20,literouter,LiteRouter,literouter,https://literouter.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+21,greenpt,GreenPT,greenpt,https://greenpt.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+22,eurouter,EURouter,eurouter,https://eurouter.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+23,y-api,Y-API,y-api,https://y-api.bestvirtualgoods.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+24,mnn-ai,MNN AI,mnn-ai,https://mnnai.ru,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+25,meganova-ai,MegaNova AI,meganova-ai,https://meganova.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+26,mixlayer,Mixlayer,mixlayer,https://www.mixlayer.com,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+27,speka,Speka AI,speka,https://speka.me,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+28,tokenreply,TokenReply,tokenreply,https://www.tokenreply.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+29,yolo-auto,Yolo-Auto,yolo-auto,https://yolo-auto.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+30,dxnt,DXNT / DX Token,dxnt,https://www.dxnt.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+31,cloudcode-one,CloudCode.ONE,cloudcode-one,https://cloudcode.one,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+32,ofoxai,OfoxAI,ofoxai,https://ofox.ai,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+33,zerolimitai,ZeroLimitAI,zerolimitai,https://www.zerolimitai.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+34,chatanywhere,ChatAnywhere,chatanywhere,https://chatanywhere.tech,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+35,helyxai,Helyx AI,helyxai,https://helyxai.space,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+36,auriko,Auriko,auriko,https://www.auriko.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+37,poixe-ai,Poixe AI,poixe-ai,https://poixe.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+38,naga-ai,Naga AI,naga-ai,https://naga.ac,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+39,chat-oripe,Chat Oripe,chat-oripe,https://api.oriper.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+40,freeinference,FreeInference,freeinference,https://freeinference.org,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+41,free-ai,Free.ai,free-ai,https://free.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+42,dgrid,DGrid,dgrid,https://dgrid.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+43,qiniu,Qiniu,qiniu,https://www.qiniu.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+44,orcarouter,OrcaRouter,orcarouter,https://www.orcarouter.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+45,api-airforce,Api.airforce,af,https://api.airforce,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+46,crof,CrofAI,crof,https://crof.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+47,bazaarlink,BazaarLink,bzl,https://bazaarlink.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+48,synthetic,Synthetic,synthetic,https://synthetic.new,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+49,kilo-gateway,Kilo Gateway,kg,https://kilo.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+50,wafer,Wafer AI,wafer,https://wafer.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+51,opencode-zen,OpenCode Zen,opencode-zen,https://opencode.ai/zen,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+52,opencode-go,OpenCode Go,opencode-go,https://opencode.ai/go,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+53,dahl,Dahl,dahl,https://inference.dahl.global,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+54,freetheai,FreeTheAi,fta,https://freetheai.org,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+55,g4f-groq,g4f.space — Groq,g4fgroq,https://g4f.space,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+56,g4f-gemini,g4f.space — Gemini,g4fgem,https://g4f.space,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+57,g4f-pollinations,g4f.space — Pollinations,g4fpol,https://g4f.space,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+58,g4f-ollama,g4f.space — Ollama,g4foll,https://g4f.space,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+59,g4f-nvidia,g4f.space — NVIDIA,g4fnv,https://g4f.space,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+60,vercel-ai-gateway,Vercel AI Gateway,vag,https://vercel.com/docs/ai-gateway,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+61,llm7,LLM7.io,llm7,https://llm7.io,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+62,llamagate,LlamaGate,llamagate,https://llamagate.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+63,gitlawb,Gitlawb Opengateway (MiMo),glb,https://opengateway.gitlawb.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+64,gitlawb-gmi,Gitlawb Opengateway (GMI Cloud),glb-gmi,https://opengateway.gitlawb.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+65,nanogpt,NanoGPT,nanogpt,https://nano-gpt.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+66,nan,NaN.Builders,nan,https://nan.builders,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+67,aimlapi,AI/ML API,aiml,https://aimlapi.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+68,novita,Novita AI,novita,https://novita.ai,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+69,piapi,PiAPI,pi,https://piapi.ai,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+70,getgoapi,GoAPI,ggo,https://api.getgoapi.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+71,laozhang,LaoZhang AI,lz,https://api.laozhang.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+72,thebai,TheB.AI,thebai,https://theb.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+73,bai,b.ai,bai,https://b.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+74,fenayai,FenayAI,fenayai,https://fenayai.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+75,empower,Empower,empower,https://docs.empower.dev,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+76,poe,Poe,poe,https://creator.poe.com/api-reference,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+77,chutes,Chutes.ai,chutes,https://chutes.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+78,factory,Factory,factory,https://factory.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+79,bluesminds,BluesMinds,bm,https://www.bluesminds.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+80,freemodel-dev,FreeModel.dev,fmd,https://freemodel.dev,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+81,freeaiapikey,FreeAIAPIKey,faik,https://freeaiapikey.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+82,zenmux,ZenMux,zm,https://zenmux.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+83,openadapter,OpenAdapter,oad,https://openadapter.dev,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+84,dit,DIT.ai,dai,https://dit.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+85,tokenrouter,TokenRouter,trk,https://tokenrouter.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+86,token-kiosk,Token Kiosk,tk,https://agent-router.gaib.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+87,sumopod,SumoPod,sumopod,https://ai.sumopod.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+88,x5lab,X5Lab,x5lab,https://x5lab.dev,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+89,chenzk,Chenzk API,chenzk,https://chenzk.top,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+90,kenari,Kenari,kenari,https://kenari.id,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+91,tokenmarket,Token Market,tokenmarket,https://www.tokensmarket.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+92,navy,NavyAI,navy,https://api.navy,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+93,ainative,AINative Studio,ainative,https://ainative.studio,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+94,aion,Aion Labs,aion,https://www.aionlabs.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+95,routeway,Routeway,routeway,https://routeway.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+96,nara,NaraRouter,nara,https://bynara.id,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+97,xkiro,xKiro,xkiro,https://xkiro.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+98,regolo,Regolo AI,regolo,https://regolo.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+99,naga-ac,Naga.ac,naga,https://naga.ac,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+100,void-ai,Void AI,void-ai,https://voidai.app,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+101,helixmind,HelixMind,helixmind,https://helixmind.online,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+102,logfare,Logfare,logfare,https://logfare.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+103,tabitoken,TabiToken,tabitoken,https://tabitoken.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+104,seekai,SeekAi,ska,https://seekai.cc,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+105,demonroute,Demon Route,demonroute,https://demonroute.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+106,daoxe,DaoXE,daoxe,https://daoxe.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+107,beatapi,BeatAPI,beatapi,https://beatapi.io,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+108,openai,OpenAI,openai,https://platform.openai.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+109,reka,Reka,reka,https://docs.reka.ai/chat/overview,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+110,pioneer,Pioneer AI,pn,https://pioneer.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+111,uc-direct,UC Direct (uncensored.com),ucd,https://uncensored.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+112,anthropic,Anthropic,anthropic,https://platform.claude.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+113,gemini,Gemini (Google AI Studio),gemini,https://aistudio.google.com,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+114,groq,Groq,groq,https://groq.com,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+115,blackbox,Blackbox AI,bb,https://blackbox.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+116,xai,xAI (Grok),xai,https://x.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+117,mistral,Mistral,mistral,https://mistral.ai,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+118,perplexity,Perplexity,pplx,https://www.perplexity.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+119,perplexity-agent,Perplexity Agent,pplx-agent,https://www.perplexity.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+120,cohere,Cohere,cohere,https://cohere.com,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+121,meta-llama,Meta Llama API,meta,https://llama.developer.meta.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+122,morph,Morph,morph,https://morphllm.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+123,galadriel,Galadriel,galadriel,https://galadriel.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+124,ai21,AI21 Labs,ai21,https://www.ai21.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+125,venice,Venice.ai,venice,https://venice.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+126,codestral,Codestral,codestral,https://mistral.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+127,upstage,Upstage,upstage,https://www.upstage.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+128,maritalk,Maritalk,maritalk,https://www.maritaca.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+129,nous-research,Nous Research,nous,https://portal.nousresearch.com/help,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+130,arcee-ai,Arcee AI,arcee,https://arcee.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+131,liquid,Liquid AI,liquid,https://liquid.ai,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+132,inception,Inception,inception,https://docs.inceptionlabs.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+133,writer,Writer,writer,https://dev.writer.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+134,together,Together AI,together,https://www.together.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+135,openvecta,OpenVecta,openvecta,https://openvecta.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+136,openference-api,Openference API,ofa,https://openference.com,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+137,poolside,Poolside,poolside,https://poolside.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+138,fireworks,Fireworks AI,fireworks,https://fireworks.ai,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+139,cerebras,Cerebras,cerebras,https://inference.cerebras.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+140,nvidia,NVIDIA NIM,nvidia,https://build.nvidia.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+141,nebius,Nebius AI,nebius,https://nebius.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+142,nube,Nube.sh,nube,https://nube.sh,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+143,siliconflow,SiliconFlow,siliconflow,https://cloud.siliconflow.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+144,hyperbolic,Hyperbolic,hyp,https://hyperbolic.xyz,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+145,ollama-cloud,Ollama Cloud,ollamacloud,https://ollama.com/settings/keys,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+146,huggingface,HuggingFace,hf,https://huggingface.co,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+147,deepinfra,DeepInfra,deepinfra,https://deepinfra.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+148,lambda-ai,Lambda AI,lambda,https://lambda.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+149,sambanova,SambaNova,samba,https://sambanova.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+150,nscale,nScale,nscale,https://nscale.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+151,baseten,Baseten,baseten,https://baseten.co,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+152,publicai,PublicAI,publicai,https://publicai.co,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+153,featherless-ai,Featherless AI,featherless,https://featherless.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+154,friendliai,FriendliAI,friendli,https://friendli.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+155,wandb,Weights & Biases Inference,wandb,https://wandb.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+156,inference-net,Inference.net,inet,https://inference.net,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+157,predibase,Predibase,predibase,https://predibase.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+158,bytez,Bytez,bytez,https://bytez.com,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+159,monsterapi,MonsterAPI,monster,https://monsterapi.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+160,modelscope,ModelScope,ms,https://modelscope.cn,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+161,byteplus,BytePlus ModelArk,bpm,https://console.byteplus.com/ark,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+162,digitalocean,DigitalOcean,digitalocean,https://docs.digitalocean.com/products/ai-platform/,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+163,azure-openai,Azure OpenAI,azure,https://azure.microsoft.com/products/ai-services/openai-service,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+164,azure-ai,Azure AI Foundry,azure-ai,https://learn.microsoft.com/azure/ai-foundry,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+165,bedrock,Amazon Bedrock,bedrock,https://aws.amazon.com/bedrock,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+166,watsonx,IBM watsonx.ai Gateway,watsonx,https://www.ibm.com/products/watsonx-ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+167,oci,OCI Generative AI,oci,https://www.oracle.com/artificial-intelligence/generative-ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+168,sap,SAP Generative AI Hub,sap,https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/generative-ai-hub-in-sap-ai-core,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+169,modal,Modal,mdl,https://modal.com/docs,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+170,vertex,Vertex AI,vertex,https://cloud.google.com/vertex-ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+171,vertex-partner,Vertex AI Partners,vp,https://cloud.google.com/vertex-ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+172,cloudflare-ai,Cloudflare Workers AI,cf,https://developers.cloudflare.com/workers-ai,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+173,scaleway,Scaleway AI,scw,https://www.scaleway.com/en/docs/ai-data/generative-apis/,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+174,ovhcloud,OVHcloud AI,ovh,https://www.ovhcloud.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+175,heroku,Heroku AI,heroku,https://www.heroku.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+176,databricks,Databricks,databricks,https://www.databricks.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+177,datarobot,DataRobot,datarobot,https://docs.datarobot.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+178,clarifai,Clarifai,clarifai,https://docs.clarifai.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+179,snowflake,Snowflake Cortex,snowflake,https://www.snowflake.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+180,qianfan,Baidu Qianfan,qianfan,https://cloud.baidu.com/product-s/qianfan_home,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+181,glm,GLM Coding,glm,https://z.ai/subscribe,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+182,glm-cn,GLM Coding (China),glmcn,https://open.bigmodel.cn,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+183,bigmodel,BigModel.cn (Zhipu),bigmodel,https://open.bigmodel.cn,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+184,glmt,GLM Thinking,glmt,https://open.bigmodel.cn,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+185,bailian-coding-plan,Alibaba Token Plan,bcp,https://www.alibabacloud.com/help/en/model-studio/token-plan-overview,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+186,qwen-cloud,Qwen Cloud,qwc,https://www.qwencloud.com/,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+187,qwen-cloud-token-plan,Qwen Cloud Token Plan,qct,https://www.qwencloud.com/pricing/token-plan,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+188,kimi,Kimi (Legacy Moonshot API),kimi,https://platform.kimi.ai?aff=omniroute,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+189,kimi-coding-apikey,Kimi Code API Key,kmca,https://www.kimi.ai/code?aff=omniroute,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+190,minimax,Minimax Coding,minimax,https://www.minimax.io,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+191,minimax-cn,Minimax (China),minimax-cn,https://www.minimaxi.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+192,deepseek,DeepSeek,ds,https://platform.deepseek.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+193,zai,Z.AI,zai,https://z.ai/model-api,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+194,alibaba,Alibaba Cloud Model Studio,ali,https://bailian.console.alibabacloud.com/,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+195,alibaba-cn,Alibaba (China),ali-cn,https://dashscope.console.aliyun.com/,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+196,longcat,LongCat AI,lc,https://longcat.chat/platform/docs,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+197,moonshot,Kimi,moonshot,https://platform.kimi.ai?aff=omniroute,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+198,volcengine,Volcengine,volcengine,https://www.volcengine.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+199,volcengine-agent-plan,Volcengine Ark Agent Plan,veap,https://console.volcengine.com/ark/region:cn-beijing/subscription/agent-plan,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+200,volcengine-coding-plan,Volcengine Ark Coding Plan,vecp,https://console.volcengine.com/ark/region:cn-beijing/subscription/coding-plan,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+201,gigachat,GigaChat (Sber),gigachat,https://developers.sber.ru,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+202,xiaomi-mimo,Xiaomi MiMo,mimo,https://mimo.mi.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+203,xiaomi-mimo-token-plan,Xiaomi MiMo Token Plan,mimotp,https://mimo.mi.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+204,baidu,Baidu (ERNIE),baidu,https://ernie.baidu.com/,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+205,tencent,Tencent Hunyuan,tencent,https://hunyuan.tencent.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+206,iflytek,iFlytek Spark,iflytek,https://xinghuo.xfyun.cn,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+207,baichuan,Baichuan,baichuan,https://www.baichuan-ai.com/,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+208,yi,Yi (01.AI),yi,https://01.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+209,stepfun,StepFun,stepfun,https://stepfun.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+210,coze,Coze,coze,https://coze.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+211,360ai,360 AI,360ai,https://ai.360.cn,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+212,doubao,Doubao,doubao,https://doubao.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+213,sensenova,SenseNova,sensenova,https://platform.sensenova.cn,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+214,sparkdesk,SparkDesk,sparkdesk,https://xinghuo.xfyun.cn,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+215,hcnsec,Huancheng Public API,hcnsec,https://api.hcnsec.cn,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+216,agnes,Agnes AI,agnes,https://agnes-ai.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+217,agnes-cn,Agnes AI (China),agnescn,https://api.agnes-ai.cn,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+218,sealion,SEA-LION,sealion,https://sea-lion.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+219,clova-studio,Naver CLOVA Studio,clova,https://api.ncloud-docs.com/docs/en/ai-naver-clovastudio-summary,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+220,internlm,InternLM (Intern-S1),internlm,https://internlm.intern-ai.org.cn/,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+221,ant-ling,Ant Ling / Ring (inclusionAI),ling,https://developer.ant-ling.com/en/docs/,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+222,sarvam,Sarvam AI,sarvam,https://docs.sarvam.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+223,plamo,PLaMo,plamo,https://plamo.preferredai.jp/api,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+224,typhoon,Typhoon,typhoon,https://docs.opentyphoon.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+225,apmix,Apmix,apmix,https://apmix.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+226,nlpcloud,NLP Cloud,nlpc,https://docs.nlpcloud.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+227,runwayml,Runway,runway,https://docs.dev.runwayml.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+228,kie,KIE.AI,kie,https://kie.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+229,pollinations,Pollinations AI,pol,https://pollinations.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+230,haiper,Haiper,hp,https://haiper.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+231,leonardo,Leonardo AI,leo,https://leonardo.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+232,ideogram,Ideogram,ideo,https://ideogram.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+233,magnific,Magnific,freepik,https://www.magnific.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+234,udio,Udio,udio,https://udio.com,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+235,v0-vercel,v0 (Vercel),v0,https://v0.dev,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+236,gitlab,GitLab Duo PAT,gitlab,https://docs.gitlab.com/user/duo_agent_platform/code_suggestions/,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+237,voyage-ai,Voyage AI,voyage,https://www.voyageai.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+238,jina-ai,Jina AI (Foundation API),jina,https://jina.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+239,typesafe,TypeSafe AI,typesafe,https://docs.typesafe.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+240,fal-ai,Fal.ai,fal,https://fal.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+241,stability-ai,Stability AI,stability,https://stability.ai,EXCLUDED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+242,black-forest-labs,Black Forest Labs,bfl,https://blackforestlabs.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+243,recraft,Recraft,recraft,https://recraft.ai,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+244,topaz,Topaz,topaz,https://topazlabs.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+245,segmind,Segmind,segmind,https://segmind.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+246,dify,Dify,dify,https://dify.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+247,nomic,Nomic,nomic,https://nomic.ai,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+248,mixedbread,Mixedbread AI,mxbai,https://www.mixedbread.com,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+249,jina-reader,Jina Reader (r.jina.ai),jr,https://jina.ai/reader,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+250,tinyfish,TinyFish Fetch,tf,https://docs.tinyfish.ai/fetch-api,APPROVED,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+251,deepai,DeepAI,deepai,https://deepai.org,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED
+252,cursor-api,Cursor API,cua,https://cursor.com/dashboard/api,NOT_IN_160_POSITIVE_DECISIONS,FROM_CANONICAL_CATALOG_NOT_REVERIFIED

@@ -1,0 +1,137 @@
+﻿Number,Batch,Engine,Query
+1,1,SYSTEM2,free AI inference API providers 2026 free credits list
+2,1,SYSTEM2,free speech to text API developer credits pricing
+3,1,SYSTEM2,free embedding reranking API providers
+4,1,SYSTEM2,AI API startup developer credits free inference
+5,2,SYSTEM2,2026 免费 大模型 API 每日 额度 新 平台
+6,2,SYSTEM2,無料 AI API クレジット 推論 2026
+7,2,SYSTEM2,무료 AI API 크레딧 추론 2026
+8,2,SYSTEM2,API inteligencia artificial grátis créditos 2026 Brasil
+9,3,SYSTEM1,new AI inference API providers free tier October 2026 startups
+10,3,SYSTEM1,free AI API OCR document extraction monthly credits
+11,3,SYSTEM1,free text to speech API pricing Cartesia Fish Audio Resemble PlayHT
+12,3,SYSTEM1,free inference API India Middle East Arabic Korea Japan startup
+13,4,SYSTEM2,free AI API inference Europe provider credits OVH Infomaniak Euria IONOS
+14,4,SYSTEM2,API IA gratis créditos México España Latinoamérica inferencia
+15,4,SYSTEM2,واجهة API ذكاء اصطناعي مجانية رصيد AI71 Core42
+16,4,SYSTEM2,AI inference API free credits Parasail kluster Prime Intellect TensorOpera
+17,5,SYSTEM2,Parasail kluster.ai Prime Intellect TensorOpera API free credits pricing
+18,5,SYSTEM2,AI71 Core42 Inception G42 API free credits pricing
+19,5,SYSTEM2,Krutrim Soket BharatGPT inference API free credits
+20,5,SYSTEM2,Japan Korea AI API free trial Upstage Rinna HyperCLOVA Friendli LG EXAONE
+21,6,SYSTEM2,free image video generation API credits WaveSpeed Bria Luma Pixverse Vidu
+22,6,SYSTEM2,free AI OCR API Mindee Veryfi Datalab Reducto LandingAI
+23,6,SYSTEM2,free AI search API Tavily Exa neural search credits
+24,6,SYSTEM2,new AI inference API 2026 launch free credits site:news.ycombinator.com
+25,7,SYSTEM1,site:deepgram.com pricing free 200 credits expiration
+26,7,SYSTEM1,site:assemblyai.com pricing free credits 50
+27,7,SYSTEM1,site:speechmatics.com pricing free 100 credits
+28,7,SYSTEM1,site:cartesia.ai pricing free commercial credits
+29,8,SYSTEM2,site:elevenlabs.io pricing free API 10000 commercial
+30,8,SYSTEM2,site:hume.ai pricing free credits API
+31,8,SYSTEM2,site:murf.ai api free 100000 characters
+32,8,SYSTEM2,site:fish.audio free API November 30 2026
+33,9,SYSTEM2,site:pinecone.io inference free starter embedding rerank pricing
+34,9,SYSTEM2,site:contextual.ai pricing free credits 25 API
+35,9,SYSTEM2,site:datalab.to pricing free monthly credits
+36,9,SYSTEM2,site:llamaindex.ai llamacloud pricing free 1000 credits
+37,10,SYSTEM2,site:runware.ai free credits API startup pricing
+38,10,SYSTEM2,site:bria.ai API free credits trial pricing
+39,10,SYSTEM2,site:tripo3d.ai API free credits pricing
+40,10,SYSTEM2,site:synexa.ai free credits API pricing
+41,11,SYSTEM2,site:akashml.com free 100 credits API
+42,11,SYSTEM2,site:kluster.ai free credits API
+43,11,SYSTEM2,site:primeintellect.ai inference API free credits
+44,11,SYSTEM2,site:embercloud.ai pricing free credits
+45,12,SYSTEM2,site:deepL.com API free 500000 characters card
+46,12,SYSTEM2,site:lingvanex.com translation API free trial characters
+47,12,SYSTEM2,site:modernmt.com API free trial
+48,12,SYSTEM2,site:ai71.ai API free credits
+49,13,SYSTEM2,site:neuphonic.com pricing free API
+50,13,SYSTEM2,site:smallest.ai pricing API free credits
+51,13,SYSTEM2,site:soniox.com pricing free credits
+52,13,SYSTEM2,site:gladia.io pricing free API
+53,14,SYSTEM2,site:braintrust.dev pricing gateway free credits 10
+54,14,SYSTEM2,site:jigsawstack.com pricing free tokens AI
+55,14,SYSTEM2,site:livekit.io inference free credits 2.50 pricing
+56,14,SYSTEM2,site:exa.ai pricing free credits monthly
+57,15,SYSTEM2,site:infomaniak.com ai services free credits API
+58,15,SYSTEM2,site:berget.ai pricing free credits
+59,15,SYSTEM2,site:ionos.com AI Model Hub free trial credit
+60,15,SYSTEM2,site:cortecs.ai free credits pricing
+61,16,SYSTEM1,site:developer.amd.com.cn radeon 免费 API
+62,16,SYSTEM1,site:aiping.cn 免费 API 额度
+63,16,SYSTEM1,site:cloud.olakrutrim.com free credits inference
+64,16,SYSTEM1,site:core42.ai compass free credits
+65,17,SYSTEM2,AI API free credits 2026 launch site:producthunt.com
+66,17,SYSTEM2,"site:news.ycombinator.com ""API"" ""free credits"" ""2026"" inference"
+67,17,SYSTEM2,бесплатный API нейросетей 2026 токены
+68,17,SYSTEM2,API AI gratis Indonesia Vietnam free credits inference
+69,18,SYSTEM2,site:yandex.cloud AI Studio free grant trial
+70,18,SYSTEM2,site:rtzr.ai API free 600 minutes
+71,18,SYSTEM2,site:inworld.ai TTS API free credits pricing
+72,18,SYSTEM2,site:camb.ai API free credits pricing
+73,19,SYSTEM1,site:parasail.io pricing free card
+74,19,SYSTEM1,site:kluster.ai free trial credits 2026
+75,19,SYSTEM1,site:replicate.com docs billing free models trial
+76,19,SYSTEM1,site:tensoropera.ai free credits inference
+77,20,SYSTEM2,site:isaacus.com pricing free API credits
+78,20,SYSTEM2,site:zeroentropy.dev pricing free rerank
+79,20,SYSTEM2,site:moondream.ai pricing free cloud
+80,20,SYSTEM2,site:reducto.ai pricing free credits
+81,21,SYSTEM2,site:you.com API free credits 100 pricing
+82,21,SYSTEM2,site:parallel.ai pricing free credits
+83,21,SYSTEM2,site:landing.ai pricing agentic document extraction free credits
+84,21,SYSTEM2,site:unstructured.io pricing free API
+85,22,SYSTEM2,site:mindee.com pricing API free trial
+86,22,SYSTEM2,site:veryfi.com free forever 100 documents API
+87,22,SYSTEM2,site:ocr.space OCR API free 25000
+88,22,SYSTEM2,site:extend.ai pricing free credits
+89,23,SYSTEM1,"""free"" ""API"" ""Inkling"" ""Thinking Machines"""
+90,23,SYSTEM1,"""Flint"" ""API"" ""free credits"""
+91,23,SYSTEM1,"""free credits"" ""inference"" ""2026"" -site:aifree.dev -site:freecredits.ai -site:freellm.site"
+92,23,SYSTEM1,"""API"" ""créditos grátis"" ""inferência"""
+93,24,SYSTEM2,site:thinkingmachines.ai Inkling free API
+94,24,SYSTEM2,site:recursive.ai Flint API free
+95,24,SYSTEM2,site:api.together.ai startup credits DeepStart site:deepinfra.com
+96,24,SYSTEM2,site:developer.amd.com.cn/radeon API
+97,25,SYSTEM2,Deference inference.net rebrand deference.si company
+98,25,SYSTEM2,Codiv TypeSafe Jev System One company operator
+99,25,SYSTEM2,Sail Research sail.computer sailresearch.com company
+100,25,SYSTEM2,BharatRouter Krutrim company terms
+101,26,SYSTEM1,IteraCompute free API 30M tokens pricing
+102,26,SYSTEM1,Infron free models API pricing
+103,26,SYSTEM1,SmarToken signup free credits pricing
+104,26,SYSTEM1,YepAPI free 5 credits pricing
+105,27,SYSTEM2,site:infron.ai/docs/overview/free-models
+106,27,SYSTEM2,SmarToken official API free trial 5
+107,27,SYSTEM2,site:iteracompute.com free models commercial privacy
+108,27,SYSTEM2,site:deference.si terms free credit
+109,28,SYSTEM1,free AI inference API Africa Latin America provider developer credits
+110,28,SYSTEM1,new OpenAI compatible inference provider 2026 free credits -site:aifree.dev -site:freecredits.ai
+111,28,SYSTEM1,AI API no credit card free quota Japan Korea new provider 2026
+112,28,SYSTEM1,free video generation API developer credits Vidu Luma Kling 2026 official
+113,29,SYSTEM2,site:magichour.ai API free credits pricing
+114,29,SYSTEM2,site:tavus.io pricing free API
+115,29,SYSTEM2,site:vidu.com API free credits 200
+116,29,SYSTEM2,site:rantera.ai API docs credits
+117,30,SYSTEM2,site:iteracompute.com terms commercial data training
+118,30,SYSTEM2,"site:infron.ai/docs/overview/free-models ""1000"""
+119,30,SYSTEM2,site:braintrust.dev/pricing credits
+120,30,SYSTEM2,"site:exa.ai/pricing ""Free"""
+121,31,SYSTEM2,"""free API"" ""inference"" ""credits"" October 2026 Europe new providers"
+122,31,SYSTEM2,"""免费 API"" ""每日"" ""额度"" 2026 新平台"
+123,31,SYSTEM2,"""API gratis"" ""modelos"" ""créditos"" Latinoamérica 2026"
+124,31,SYSTEM2,"""free AI API"" ""Africa"" ""Middle East"""
+125,32,SYSTEM2,site:deapi.ai free credits API 5 90 days
+126,32,SYSTEM2,site:tokengate.info free credit API 20
+127,32,SYSTEM2,site:firecrawl.dev pricing free credits AI extract
+128,32,SYSTEM2,site:ai.horde.gg OR site:aihorde.net API free
+129,33,SYSTEM2,free LLM API providers October 2026 global directory inference API
+130,33,SYSTEM2,free speech vision embedding reranking AI API October 2026
+131,33,SYSTEM2,API IA gratuita créditos América Latina 2026 proveedores
+132,33,SYSTEM2,무료 API AI 2026 無料 API 推論 クレジット
+133,34,SYSTEM2,Gonka Broker free API monthly tokens official
+134,34,SYSTEM2,"site:freeinferencing.com ""###"" ""API"""
+135,34,SYSTEM2,"site:free-llm.com ""Provider"" ""free"""
+136,34,SYSTEM2,"""AI API"" ""free credits"" ""Latin America"""

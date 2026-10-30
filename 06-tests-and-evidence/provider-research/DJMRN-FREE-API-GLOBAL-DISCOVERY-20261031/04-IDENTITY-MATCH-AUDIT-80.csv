@@ -1,0 +1,81 @@
+﻿ID,Pool,Exact252,Exact375,Domain375_Matches,Normalized_Name_ID_Alias375_Matches,Identity_Class,Identity_Notes
+deepgram,KNOWN_OUTSIDE_252,False,True,deepgram,deepgram,ALREADY_KNOWN_OUTSIDE_BASELINE,Initial no-card grant confirmed. Credit expiry and training opt-out require targeted follow-up; terms 5.5 permits overage liability. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered.
+assemblyai,KNOWN_OUTSIDE_252,False,True,assemblyai,assemblyai,ALREADY_KNOWN_OUTSIDE_BASELINE,Free tier excludes LLM Gateway. Do not infer free chat inference from its paid gateway. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered.
+speechmatics,KNOWN_OUTSIDE_252,False,True,speechmatics,speechmatics,ALREADY_KNOWN_OUTSIDE_BASELINE,No renewal asserted. Expiry UNKNOWN; recurring 8-hour claims from older lists not carried forward. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered.
+cartesia,KNOWN_OUTSIDE_252,False,True,cartesia,cartesia,ALREADY_KNOWN_OUTSIDE_BASELINE,API access confirmed on Sonic product page; voice credits and agent dollars are separate. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered.
+elevenlabs,KNOWN_OUTSIDE_252,False,True,elevenlabs,elevenlabs,ALREADY_KNOWN_OUTSIDE_BASELINE,"Most API endpoints available on free plan. Shared allowance, not 10k per modality. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered."
+hume,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Free $0 monthly subscription does not establish $20 recurring grant. Treat $20 as initial only.
+murf-api,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Free tier 5 concurrent / 1000 requests per minute. Startup 50M characters for 3 months is separate.
+fishaudio,KNOWN_OUTSIDE_252,False,True,fishaudio,fishaudio,ALREADY_KNOWN_OUTSIDE_BASELINE,No SLA/latency guarantee. LiveKit lists its own Fish free route retired; do not assume direct Fish route is retired. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered.
+gladia,KNOWN_OUTSIDE_252,False,True,gladia,gladia,ALREADY_KNOWN_OUTSIDE_BASELINE,"Old monthly hours replaced by one-time wallet grant. Startup Studio banner offers $3000, eligibility not fully audited. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered."
+rtzr,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Does not reset monthly; results retained 3 days. Card and account eligibility UNKNOWN.
+pinecone-inference,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Embedding/reranking budget separate from database and Assistant. Do not assign 500 to every reranker.
+contextual-ai,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Older per-model launch allocations not added to current $25. Work-email bonus observed but not assumed universal.
+datalab,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"Current limits 25 RPM/concurrency, superseding older 10 RPM/5 concurrency directory claims. No free-tier SLA. Direct launch says add a card and switch to PAYG only after free allowance; exact hard-stop error UNKNOWN."
+llamaparse,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"Credits not pages; model mode changes consumption. Fast mode may skip AI reconstruction. LlamaParse and LlamaCloud one pool, not two providers."
+runware,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Current direct pricing fetch no longer displays $2; indexed official FAQ still does. Main verified route is application-based Starter grant; larger Growth grants require deposit.
+bria,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Use current pricing 100; another official product page advertises 1000. Conflict recorded; do not sum.
+tripo-api,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Direct current docs require purchase and omit free credit. Free Studio 200/month is not API. Do not count as confirmed free.
+deepl-api,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Legacy API Free 500k/month no longer purchasable. Existing accounts may retain it; not offered as new recurring tier.
+lingvanex,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"Docs last indexed six months earlier; publish-only verification, no renewal/expiry inferred."
+infomaniak-ai,MAIN,False,False,NONE,NONE,NEW_PROVIDER,UNKNOWN
+berget-ai,MAIN,False,False,NONE,NONE,NEW_PROVIDER,No renewable allowance established; paid plan bonuses not free grants.
+aiping,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Referral CNY10 requires verified inviter; not added to unconditional grant. Regional eligibility UNKNOWN.
+bharatrouter,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"Krutrim group product; krutrim absent baseline. Keep distinct product from upstream Krutrim; one company, not two independent grants."
+embercloud,PAYMENT_CONDITIONAL,False,False,NONE,NONE,NEW_PROVIDER,No card required to apply does not mean no payment to use. Activation denied under current mission.
+codiv,MAIN,False,False,NONE,NONE,NEW_DISTINCT_API_PRODUCT,"Wire compatible with baseline typesafe, but serves OpenJev at api.codiv.ai; not same API product. Corporate affiliation UNKNOWN; do not count an independent legal company."
+deference,HOLD,False,False,NONE,NONE,UNCERTAIN_IDENTITY,Two direct timeouts. Free credits exclude Claude and Incognito; first $5 purchase unlocks extra $1. Full no-pay subtotal and identity vs inference-net remain UNKNOWN.
+sail-research,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"sail.computer / sail.systems / sail.industries aliases not additional providers. Prepaid, exact overage behavior UNKNOWN."
+talonic,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Current page internally conflicts 100 vs 200 credits per page. Keep credit allowance; do not convert into fixed pages.
+zerodoc,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"Operator says documents processed in memory using local AI, no external LLM. Claims not security-audited."
+dokyumi,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Longer docs consume extra credits. REST POST /api/v1/extract; proprietary model name not published.
+nutrient-data-extraction,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Modes consume different credits. Do not equate 5000 credits with 5000 pages; extraction product distinct from PDF processing APIs.
+habla-cloud,HOLD,False,False,NONE,NONE,NEW_PROVIDER,"Direct page extraction returned zero lines. Callable contract, operator and credit restrictions need verification."
+gammal-tech-ai,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Signed-in user and allowed web domains required. General server-to-server gateway use unverified.
+exa-search,KNOWN_OUTSIDE_252,False,True,exa-search,exa-search,ALREADY_KNOWN_OUTSIDE_BASELINE,Startup/education grants up to $1000 separately conditional. Connected tool is not a new connection; not proposing duplicate activation. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered.
+tavily-search,KNOWN_OUTSIDE_252,False,True,tavily-search,tavily-search,ALREADY_KNOWN_OUTSIDE_BASELINE,Search basic/advanced credit cost differs. Scope includes search/retrieval; not a general chat model host. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered.
+parallel-search,KNOWN_OUTSIDE_252,False,True,parallel-search,parallel-search,ALREADY_KNOWN_OUTSIDE_BASELINE,Do not treat up to $250 marketing headline as automatic grant or $80 as unconditional. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered.
+youcom-search,KNOWN_OUTSIDE_252,False,True,youcom-search,youcom-search,ALREADY_KNOWN_OUTSIDE_BASELINE,Daily MCP search not proven to fund Answer/Research inference. Signup inference eligibility needs account-specific check. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered.
+veryfi-api,MAIN,False,False,NONE,NONE,NEW_PROVIDER,100 is published current Free. Old 50/month release superseded. Paid AnyDocs may only be trial-eligible; don't assume all APIs always free.
+ocr-space,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"1MB files, 3 PDF pages on Free; output searchable PDF watermark. Related to user's Ui.Vision, not installed or called."
+mindee,MAIN,False,False,NONE,NONE,NEW_PROVIDER,No indefinite free quota inferred. Numeric allowance UNKNOWN.
+extend-ai,MAIN,False,False,NONE,NONE,NEW_PROVIDER,No monthly renewal claimed. YC-specific no-expiry/no-card page is not generalized to all applicants.
+reducto,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"Older 15k credits and free-page claims not added. Migration grant conditional, not a general signup benefit."
+unstructured-api,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Current direct pricing says at start; don't reuse older recurring 1000/15000-page claims.
+jigsawstack,HOLD,False,False,NONE,NONE,NEW_PROVIDER,"Tokens are processing-time units, not LLM text tokens. Badge condition only directory claim; current commercial eligibility UNKNOWN."
+braintrust-models,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Credit covers built-in models without own key. Not all arbitrary BYOK Gateway traffic is funded; exact external direct API entitlement needs verification. Do not count as confirmed direct funded API until contract mapped.
+livekit-inference,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"Separate from 1000 session minutes; shared across user's free projects. SDK/voice workload fit, gateway protocol untested."
+isaacus,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"Startup eligibility limited to listed incorporated countries, age/funding/ARR constraints."
+iteracompute,MAIN,False,False,NONE,NONE,NEW_PROVIDER,128K context; 160k TPM; 8192 output cap; shared capacity/no SLA. $10/$50 topups increase allowance but are separate paid conditions.
+infron,PAYMENT_CONDITIONAL,False,False,NONE,NONE,NEW_PROVIDER,Official endpoint llm.onerouter.pro; Infron alias not separate discovery. July28 promo expired; standard balance gate remains.
+smartoken,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Offer page shows $5. Exact deadline/card from third-party not promoted. smartoken.com and smartokenx.com not automatically aliases.
+yepapi,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Only AI-model routes in scope. Claimed model counts differ; no operational roster assumed.
+deapi,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Daily per-modality limits do not mean renewable credits. Image 100/day until first topup; credits finite.
+tokengate,MAIN,False,False,NONE,NONE,NEW_PROVIDER,"Wallet connection and screening required. Upstream authorization, operator and data policy not independently verified; no wallet connection authorized."
+magic-hour,MAIN,False,False,NONE,NONE,NEW_PROVIDER,No-signup daily web allowance does not replenish API credit; route/model/resolution eligibility must be checked.
+tavus,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Separate from PAL consumer plan. Historical 5min generation/month not guaranteed by every current section.
+vidu-api,MAIN,False,False,NONE,NONE,NEW_PROVIDER,No general 200-credit grant assumed; web-app credits and paid API packs separate. Redemption availability untested.
+yamify-inference,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Work email/project required; private beta not generally callable by all. Keep out of main confirmed-access pool.
+rantera,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Homepage says API live; pricing says public API expected 2026. Account usability not established.
+prime-inference,HOLD,False,False,NONE,NONE,NEW_PROVIDER,"Public release 2026-10-02; no generally offered free inference quota verified. Migration credit for existing Moondream customers is conditional, not general signup credit."
+moondream-cloud,HOLD,False,False,NONE,NONE,UNCERTAIN_IDENTITY,Old docs claim $5/month; current pricing pay per token; joined Prime Intellect in October2026. Do not count independent operator or confirmed current grant.
+krutrim,HOLD,False,False,NONE,NONE,NEW_PROVIDER,"Inference documented; start free marketing does not establish API allowance. Same parent as BharatRouter; keep distinct API products, no double count of grant."
+core42-compass,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Team-activated subscription required; no verified free amount. A minute rate quota is not a free-tier credit.
+ai71-ask,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Real REST API documented; no current public no-payment grant established. Older Falcon developer API not assumed equivalent.
+tensoropera,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Paid per-token API confirmed. Free templates do not fund inference.
+parasail,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Directory free Serverless rate row insufficient to prove entitlement. Current free access/card policy unresolved.
+synexa,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Operator quickstart and priced models found; third-party free-trial claim unconfirmed.
+wavespeed-ai,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Real model API verified; no current no-pay signup grant established. wavespeed.lol third-party/identity not treated as official.
+neuphonic,HOLD,False,False,NONE,NONE,NEW_PROVIDER,"Cloud API exists; numeric grant, recurrence and commercial terms not verified."
+smallest-ai,HOLD,False,False,NONE,NONE,NEW_PROVIDER,$10 voice-agent trial official; allocation to standalone TTS/STT inference API not sufficiently verified.
+camb-ai,MAIN,False,False,NONE,NONE,NEW_PROVIDER,Up to33M TTS API credits via startup application. Free2000 web-plan credits not assumed API eligible.
+inworld,KNOWN_OUTSIDE_252,False,True,inworld,inworld,ALREADY_KNOWN_OUTSIDE_BASELINE,Free On-Demand API plan exists; current amount/renewal not fully resolved. Older up-to70min TTS not converted to dollars. Present in repository 375-provider inventory outside API-key family; not claimed as previously undiscovered.
+zeroentropy,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Current pricing/FAQ results mention free-tier question; amount and answer not retrieved. No grant inferred.
+replicate,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Official try-free flow clearly website; external API entitlement before billing not established. Limited runs not recurring.
+gonkabroker,HOLD,False,False,NONE,NONE,UNCERTAIN_IDENTITY,Monthly conditional grant tied to verified mobile. Amount UNKNOWN. Do not merge gonkabroker.com with gonka.broker solely by name.
+amd-developer-cloud,OUT_OF_SCOPE,False,False,NONE,NONE,NEW_PROVIDER,$100 compute credits and developer points confirmed; no ready hosted model endpoint grant verified. Compute grant outside current model-API pool.
+kluster-ai,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Current official search result promotes IDE code review; old inference/API free-credit claims not verified.
+ionos-model-hub,HOLD,False,False,NONE,NONE,NEW_PROVIDER,Cloud$200/30days requires billing details; applicability to AI Model Hub grant needs confirmation.
+aihorde,KNOWN_OUTSIDE_252,False,True,aihorde,aihorde,ALREADY_KNOWN_OUTSIDE_BASELINE,Already in 375 inventory and user project context. Not a fresh discovery. Commercial permission per model.
+firecrawl,KNOWN_OUTSIDE_252,False,True,firecrawl,firecrawl,ALREADY_KNOWN_OUTSIDE_BASELINE,Already in 375 Search Providers. Agent inference/extraction is in scope; raw scrape alone not model inference. Quotas route-specific.
+soniox,KNOWN_OUTSIDE_252,False,True,soniox,soniox,ALREADY_KNOWN_OUTSIDE_BASELINE,Official announcement removed new signup API credits on2025-10-27. App weekly credits not API. Already in375.

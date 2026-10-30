@@ -1,3 +1,14 @@
+## 2026-10-31 — DJMRN-FREE-API-GLOBAL-DISCOVERY-2026-001 — research archive saved for reuse
+
+**Explicit user authorization:** پس از تحویل مستقل، کاربر خواست نتایج کنار آمارها و پژوهش‌های قبلی در همین مخزن ثبت شوند. دامنهٔ این تغییر فقط آرشیو اسناد و این یادداشت است؛ منع تغییر مخزن در مرحلهٔ تحقیق اولیه، با درخواست فعلی فقط برای ثبت همین خروجی‌ها رفع شد.
+
+- **Archive / start here:** [Global Free AI API Discovery 20261031](../06-tests-and-evidence/provider-research/DJMRN-FREE-API-GLOBAL-DISCOVERY-20261031/README.md). شامل گزارش فارسی، Excel و دادهٔ ۸۰ رکورد، مخزن تمیز ۳۹ نامزد، شواهد رسمی/ابهامات، تطبیق ۲۵۲/۱۳۷/۲۳، فرصت‌های اعتبار، shortlist، جست‌وجوها، رسید و یادداشت ادامه است.
+- **Baseline:** فایل مثبت Source A تنها ۱۶۰ مورد دارد؛ فهرست کامل ۲۵۲ شناسه جداگانه بازیابی شد: **BASELINE_COMPLETE**. کاتالوگ وسیع‌تر ۳۷۵تایی نیز برای جلوگیری از معرفی دوباره مقایسه شد.
+- **Research counts:** ۱۳۶ جست‌وجو / ۳۴ دور؛ ۸۰ رکورد تفصیلی پس از غربال اولیه = **۳۹ نامزد تازه با پیشنهاد رایگان منتشرشده + ۱۵ مورد قبلاً شناخته‌شده در ۳۷۵ + ۲۳ HOLD + دو پرداخت‌شرطی + یک خارج از محدوده**. ۳۹ MAIN = ۱۴ دوره‌ای + ۲۱ یک‌باره + ۳ کمپین + یک برنامهٔ درخواست اعتبار. تعداد خام تمام search hits و تکراری‌های baseline در غربال اولیه جدا ثبت نشده است.
+- **Evidence / limitations:** zero account/API operational tests; zero weighted scores because INSUFFICIENT_EVIDENCE. عدم اشتراک exact ID مخزن MAIN با ۲۵۲ و ۳۷۵ بررسی شده؛ هویت/alias/parent و محدودیت‌ها در dedup report آمده‌اند. منبع رسمی/ادعای عمومی با اتصال واقعی برابر نیست. سهمیه‌ها و شرایط قبل از مصرف نیازمند بازبینی روز هستند.
+- **Status:** **DELIVERABLES_COMPLETE_RESEARCH_CONTINUATION_REQUIRED / AWAITING USER REVIEW**. اشباع بازار ثابت نشده؛ ادامهٔ پژوهش و غربال دستی لازم است. این یادداشت نه تأیید provider است و نه پایان کامل کشف بازار.
+- **Preserved:** تمام تصمیم‌های R01–R08، فهرست ۱۳۷ پذیرفته / ۲۳ حذف‌شده، فایل مثبت ۱۶۰تایی و baseline252 بدون تغییر. هیچ provider فعال یا به shortlist اضافه نشد؛ هیچ تغییر Notion، Gateway، حساب، کلید، پرداخت، نصب یا کد اجرایی انجام نشد. سایر workstreamها دست‌نخورده‌اند.
+
 ## 2026-10-31 — DJMRN-AGTEAM-001 — WINDOWS-CLI-COMPANION-SETUP-20261031 — complete staged operational evidence and next setup decision
 
 **Scope / user directive:** The owner explicitly requested a complete record of all work so far for **only** the existing subproject [10-agent-teams-and-workflows](../10-agent-teams-and-workflows/README.md) within `DJMRN-Intelligent-Assistant`, and wants each subsequent evidenced step continued in this ONE canonical `CURRENT-STATUS.md` file. **Do not change other workstreams** (OmniRoute, Opportunity Hunter, Browser Automation, AGNT, 252/API screening, other repos). No parallel progress logs, duplicated status databases, separate Git branch, automatic changes to external apps or Notion writes. Future record only completed, user-shared/verified steps; no fabricated background monitoring.

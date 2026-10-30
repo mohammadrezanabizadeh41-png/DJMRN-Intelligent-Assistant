@@ -1,0 +1,24 @@
+﻿Round,Round_Position,Catalog_Row,ID,Provider,Decision
+R01,4,6,charm-hyper,Charm Hyper,EXCLUDED
+R01,6,10,openrouter,OpenRouter,EXCLUDED
+R01,14,18,lyceum,Lyceum,EXCLUDED
+R02,1,26,mixlayer,Mixlayer,EXCLUDED
+R02,6,32,ofoxai,OfoxAI,EXCLUDED
+R03,3,60,vercel-ai-gateway,Vercel AI Gateway,EXCLUDED
+R03,6,68,novita,Novita AI,EXCLUDED
+R03,7,69,piapi,PiAPI,EXCLUDED
+R03,12,80,freemodel-dev,FreeModel.dev,EXCLUDED
+R04,10,113,gemini,Gemini (Google AI Studio),EXCLUDED
+R04,11,114,groq,Groq,EXCLUDED
+R04,12,117,mistral,Mistral,EXCLUDED
+R04,13,120,cohere,Cohere,EXCLUDED
+R04,19,131,liquid,Liquid AI,EXCLUDED
+R05,2,136,openference-api,Openference API,EXCLUDED
+R05,4,138,fireworks,Fireworks AI,EXCLUDED
+R05,18,158,bytez,Bytez,EXCLUDED
+R06,4,168,sap,SAP Generative AI Hub,EXCLUDED
+R06,6,172,cloudflare-ai,Cloudflare Workers AI,EXCLUDED
+R06,15,188,kimi,Kimi (Legacy Moonshot API),EXCLUDED
+R07,1,197,moonshot,Moonshot / Kimi API,EXCLUDED
+R07,18,217,agnes-cn,Agnes AI (China),EXCLUDED
+R08,12,241,stability-ai,Stability AI,EXCLUDED
