@@ -134,7 +134,7 @@
       }
     ],
     "execution_contract": {
-      "allowed_now": "STAGES_1_2_3_RULES_DOCUMENTED__NO_AGENT_RUNNING",
+      "allowed_now": "FOUR_STAGE_SITE_RULES_APPROVED_FOR_UNIFIED_COMMAND_PREPARATION_ONLY__NOT_LAUNCHED",
       "filter_application_procedure": [
         "Open https://www.freelancermap.com/projects public search page.",
         "Clear any preselected workplace, contract, country or extra active chips, including Exclude projects from German speaking countries; never assume unselected from filter counter alone.",
@@ -147,11 +147,11 @@
         "After applying filters, report displayed result count as an observation with timestamp; never hardcode count."
       ],
       "blocked_until_next_user_instructions": [
-        "Approving actual Windows local folder and storage behavior via a bounded test",
-        "Verifying permitted crawl coverage/rate and Codex usage before a full live run",
-        "Defining subsequent full details review and reporting requirements",
-        "Issuing and executing the complete unified Browser Use instruction",
-        "Any client contact, application, messaging or account/security changes"
+        "Validating actual user Windows site-only persistence path and local write capacity with a bounded read-only preflight",
+        "Confirming website allowable request rate/access for a full results scan",
+        "Confirming available Codex subscription usage and stopping on limit without purchasing credits",
+        "User review and explicit launch of unified four-stage Browser Use instruction",
+        "Sending proposals, messaging employers, account changes, billing, or any fifth stage"
       ],
       "dynamic_counts": "No fixed counts: results change as the site updates.",
       "no_browser_task_sent": true
@@ -162,7 +162,7 @@
       "scope": "Only step 1 of future unified Browser Use/Codex task: visit public freelancermap projects page and apply search filters.",
       "approved_by": "USER_EXPLICIT_DIRECTIVE",
       "no_agent_execution_now": true,
-      "next_steps": "Stages 1, 2 and 3 defined. Await user-defined later-stage rules and operational details; do not run a unified agent command yet.",
+      "next_steps": "Four stages of FREELANCEMAP-ONLY pilot now specified; no more stages requested. Before a single unified Browser Use run, validate Windows storage path/write/readback, full crawl access limits, Codex allowance and safe execution; then owner reviews and authorizes launch.",
       "no_extra_assumptions": true
     },
     "approved_session_stage": {
@@ -367,11 +367,107 @@
       ]
     },
     "unresolved_for_later": {
-      "user_final_fit_criteria": "NOT_DEFINED_FOR_THIS_UNIFIED_INSTRUCTION_YET",
-      "full_detail_review_stage": "NEXT_STAGE_NOT_YET_DEFINED",
+      "user_final_fit_criteria": "USE_ONLY_PRIOR_DOCUMENTED_OWNER_APPROVED_APPLICABLE_POLICY__NO_NEW_AUTONOMOUS_CRITERIA",
+      "full_detail_review_stage": "DEFINED_AS_FM-DETAIL-01__NOT_EXECUTED",
       "local_directory_layout": "UNDECIDED; do not invent or create Windows folders in the rules-only discussion",
       "cadence": "UNDECIDED",
       "codex_feasibility": "UNTESTED_FOR_FULL_END_TO_END_PIPELINE"
     }
+  },
+  "full_detail_policy": {
+    "revision": "FM-DETAIL-01",
+    "state": "USER_DEFINED_END_OF_PILOT_WORKFLOW__SAVED__NOT_RUN",
+    "only_for_site": "freelancermap.com",
+    "authorized_intent": {
+      "owner_instruction_date": "2026-10-30",
+      "stage_order": 4,
+      "stop_after_stage": true,
+      "scope": "For ALL Stage 3 survivors, open and read complete publicly accessible project description, persist full descriptions locally, accurately evaluate against previously user-defined conditions and place truly suitable items into a distinct site-only 'آگهی‌های مناسب برای ما' folder; notify owner with results, then STOP.",
+      "no_outbound_authorization": true
+    },
+    "dependency": {
+      "stage_3": "FREELANCEMAP-PRESCREEN-03",
+      "input": "All newly collected listings marked PASS_PRELIMINARY or NEEDS_VERIFICATION. Do not re-import or re-evaluate previously SEEN listings by default.",
+      "no_arbitrary_survivor_cap": true
+    },
+    "read_and_persist": {
+      "navigate": "Visit each public project detail URL in the Stage 3 survivor queue, sequentially or with site's permitted normal browsing behavior; do not expand beyond the user-defined queue.",
+      "read_scope": "Read complete accessible original description, including sections on project deliverables, eligibility, location/remote requirements, legal/professional qualifications, workload, timeframe, pay/budget and other mandatory conditions when present.",
+      "no_truncation_claims": "If the full text is gated, partially hidden, empty, changed, or inaccessible, record incomplete capture and explicitly mark evidence as insufficient. Do not claim full-text review.",
+      "persist_raw": "Save the original-language full text and existing project ID, canonical URL, capture timestamp, relevant page metadata, read completeness and evidence provenance in the site's own Windows working records. Preserve previously captured raw listings and prior-run history; never delete originals.",
+      "local_profile": "FREELANCEMAP_ONLY",
+      "full_details_folder": "SITE_SPECIFIC_FULL_DETAILS_FOLDER__WINDOWS_PATH_UNDECIDED",
+      "no_private_account_content": true,
+      "save_verification": "Verify a real file/record exists on Windows before claiming saved, and report any persistence failure as PARTIAL."
+    },
+    "final_evaluation": {
+      "policy_inputs": [
+        "Stage 1 Remote-only/Freelance-only search scope and Stage 3 Iranian contractor from Iran with no mandatory incompatible location/nationality/residency/citizenship/work-permit/physical attendance restrictions",
+        "Stage 3 qualification, security clearance, mandatory professional licensing, jurisdiction-specific regulatory eligibility and feasibility requirements",
+        "Previously approved applicable freelancermap and Opportunity Hunter project rules already present in this profile and POLICY-AND-DECISIONS.md (including 100h/10-calendar-day standalone project ceiling and a USD 5/effective-hour foreign independent-project floor where calculable, without inventing budgets or hours)",
+        "Any other explicitly mandatory incompatible requirements found in original full description"
+      ],
+      "method": "Understand/translate original text as needed, inspect all relevant mandatory conditions and practical feasibility. Evaluate only against documented owner-approved rules; do not create new limits or claim legal eligibility without evidence.",
+      "status": {
+        "suitable": "SUITABLE_VERIFIED: only with enough evidence that previously defined constraints are satisfied and a realistic, supportable feasibility/payment assessment; do not conflate 'not rejected' with verified suitable.",
+        "unsuitable": "NOT_SUITABLE: genuine disqualifying text or supported infeasibility, with cited evidence and precise reasons.",
+        "unresolved": "NEEDS_CLARIFICATION: key evidence missing or conflicting, such as contractor eligibility from Iran, required qualifications, rate basis, workload or budget; keep it out of the verified suitable folder and retain full text/notes for manual review."
+      },
+      "evidence": "For each decision, retain project ID/URL and excerpt or precise source-section references supporting conditions. Preserve unverified assumptions separately from observed text.",
+      "no_external_contact": "Do not send proposals, message, request application quota, or contact an employer to resolve uncertainty; that is outside the approved four-stage pilot."
+    },
+    "outputs": {
+      "suitable_folder_name": "آگهی‌های مناسب برای ما",
+      "suitable_location": "SEPARATE_LOCAL_WINDOWS_FOLDER_UNDER_FREELANCEMAP_SITE_PROFILE__EXACT_PATH_UNDECIDED",
+      "suitable_content": "Only SUITABLE_VERIFIED opportunities with ID, title, direct URL, full saved original description reference/text, evidence-based rationale, cost/work feasibility notes grounded in available facts and capture time.",
+      "unsuitable_and_uncertain": "Preserve in site-specific full-detail history with outcome and reason; neither enters the suitable folder. Do not delete the original record or falsely mark unsupported as suitable.",
+      "owner_notification": {
+        "requirement": "Tell owner which ads qualified, with direct links, reasons, and counts. Report if no qualified ads found.",
+        "channel": "NOT_YET_SPECIFIED_BY_USER__FOR_INITIAL_GUI_TEST_REPORT_IN_BROWSER_USE_SESSION_IF_OWNER_ACCEPTS",
+        "external_email_push_or_scheduled_notice": "NOT_AUTHORIZED"
+      },
+      "completion_receipt": "Summarize number of new records from Stage 2, Stage 3 survivors, detail pages attempted and fully read, SUITABLE_VERIFIED count, NOT_SUITABLE count, NEEDS_CLARIFICATION count, Windows storage readback, inability/blockers, Codex usage/limit signals when visible, and observed timing if measured.",
+      "no_autonomous_next_step": true
+    },
+    "approved_session_stage": {
+      "stage_id": "FREELANCEMAP-FULL-DETAIL-04",
+      "order": 4,
+      "status": "USER_APPROVED_REQUIREMENTS_SAVED_FOR_UNIFIED_COMMAND",
+      "prompt_segment": [
+        "STEP 4 — FREELANCEMAP COMPLETE PROJECT DETAIL REVIEW AND FINAL REPORT. FINAL STEP: STOP.",
+        "From Step 3's FREELANCEMAP-ONLY preliminary survivors, take EVERY newly saved PASS_PRELIMINARY and NEEDS_VERIFICATION listing. Do not revisit historical SEEN listings by default.",
+        "Open each selected publicly accessible detail page and read its COMPLETE available project description, in the original language. Save its full original text, project ID, canonical link, capture timestamp and a completeness indicator in the website's own separate Windows local full-detail storage. Verify persistence and do not overwrite or delete raw/original history.",
+        "Translate or interpret the actual wording accurately and assess remote delivery and contracting by an Iranian working from Iran; mandatory country/nationality/citizenship/residency/work authorization, office visits/hybrid/travel, professional license, legal jurisdiction, clearance, mandatory communication, cost, duration, effort and practical specialist requirements.",
+        "Use ONLY previously owner-approved applicable Stage 3 and site/project policy; apply pre-existing 100-hour/10-day standalone-project boundaries and USD 5/effective-hour foreign-market minimum when calculations are actually supported by evidence. No unsupported guesses of hours or rate units. A country mentioned in a project does not automatically bar a global remote freelancer.",
+        "Mark SUITABLE_VERIFIED only if sufficient actual evidence supports meeting the applicable requirements. Mark NOT_SUITABLE with concrete reason if a mandatory condition blocks the owner. Mark NEEDS_CLARIFICATION if essential facts remain missing, contradictory or inaccessible; do not falsely label these suitable.",
+        "Write SUITABLE_VERIFIED opportunities only into a distinct 'آگهی‌های مناسب برای ما' collection/folder belonging to freelancermap on the user's Windows computer, keeping the full-description source and direct link. Preserve unsuitable and unclear records and reasons in local website history without putting them in the suitable folder.",
+        "Present an owner-facing report in the application's session listing suitable ads and direct links or explicitly report zero; summarize total read, statuses, actual save locations, partial failures and observed execution time/usage when available. Any other notification channel requires separate owner approval.",
+        "Stop after the report; no applications, messaging, account changes, purchases, external notifications or further stages."
+      ]
+    },
+    "trial_constraints": {
+      "run_not_started": true,
+      "expected_duration": "UNKNOWN__MEASURE_ON_REAL_PILOT; depends on filtered page count, new listings, full detail pages, site speed, Codex usage and local write support.",
+      "codex_subscription_capacity": "UNKNOWN__NO_ACCOUNT_USAGE_CHECK_PERFORMED",
+      "full_crawl_term_or_rate_allowance": "UNVERIFIED__BEFORE_REAL_UNBOUNDED_CRAWL_VERIFY_SITE_USAGE_LIMITS",
+      "Windows_save_path": "UNDECIDED__REQUIRES_LOCAL_PREFLIGHT",
+      "no_paid_credit_or_provider_switch_approved": true,
+      "no_browser_use_run_yet": true
+    }
+  },
+  "workflow_scope": {
+    "site": "freelancermap",
+    "source_of_truth": "This site-specific file only; other site files are out-of-scope.",
+    "approved_stages": [
+      "FREELANCEMAP-SEARCH-01",
+      "FREELANCEMAP-COLLECT-02",
+      "FREELANCEMAP-PRESCREEN-03",
+      "FREELANCEMAP-FULL-DETAIL-04"
+    ],
+    "stop_after": "FREELANCEMAP-FULL-DETAIL-04",
+    "unified_browser_use_instruction": "TO_BE_ASSEMBLED_FROM_FOUR_APPROVED_STAGE_SEGMENTS__NOT_EXECUTED",
+    "stage_status": "REQUIREMENTS_APPROVED__OPERATIONAL_FEASIBILITY_UNTESTED",
+    "cost_and_site_access_gates_required": true,
+    "user_requested_no_stage_5": true
   }
 }
