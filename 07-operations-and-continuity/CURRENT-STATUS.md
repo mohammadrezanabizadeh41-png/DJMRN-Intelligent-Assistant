@@ -1,3 +1,106 @@
+## 2026-10-31 — DJMRN-FREE-API-R05-USER-APPROVAL-20261031 — CURRENT user-approved screening list: 83 exact unique IDs (R01–R05)
+
+- **Explicit R05 owner decision:** EXCLUDE from the NEW USER-APPROVED SHORTLIST ONLY R05 #2 `openference-api` (original catalog #136), #4 `fireworks` (#138), #18 `bytez` (#158); ACCEPT all other **17/20 R05 IDs**. These removals do not alter the historical 160-ID original published-research master or any live provider connection.
+- **Newly approved R05 17 IDs (in source order):** `openvecta`, `poolside`, `cerebras`, `nvidia`, `nebius`, `siliconflow`, `hyperbolic`, `ollama-cloud`, `sambanova`, `nscale`, `baseten`, `publicai`, `featherless-ai`, `friendliai`, `wandb`, `modelscope`, `byteplus`.
+- **Total CURRENT / CANONICAL user-selected shortlist: 83 exact distinct IDs** (R01 17, R02 18, R03 16, R04 15, R05 17). Cumulative user-excluded 17 IDs (3 + 2 + 4 + 5 + 3), 100 source IDs user-reviewed, **60 remain undecided** (R06–R08). Preserve original operator-specific technical IDs and all previous R01–R04 selections exactly; exact-ID dedup only. Selection is user preference and is NOT a successfully tested free model API or an authorization to pay, sign up or activate.
+- **User-excluded cumulative technical IDs** (only from NEW shortlist): `charm-hyper`, `openrouter`, `lyceum`, `mixlayer`, `ofoxai`, `vercel-ai-gateway`, `novita`, `piapi`, `freemodel-dev`, `gemini`, `groq`, `mistral`, `cohere`, `liquid`, `openference-api`, `fireworks`, `bytez`. **Master unchanged**: [160-source reference](../06-tests-and-evidence/provider-research/DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md). **Next** user-driven R06 free-API terms recheck (original source positions 101–120), then await owner keep/exclude selections. Prior R01–R04 shortlist sections below are HISTORICAL and superseded by this one CURRENT list.
+
+### CURRENT approved shortlist R01–R05 (83 unique IDs)
+
+| Stage | Stage # | Original catalog # | Exact technical ID | Name |
+|---|---:|---:|---|---|
+| R01 | 1 | 1 | `onomeo` | onomeo |
+| R01 | 2 | 2 | `unifically` | Unifically |
+| R01 | 3 | 3 | `oneminai` | 1min.AI |
+| R01 | 5 | 8 | `unorouter` | UnoRouter |
+| R01 | 7 | 11 | `opper` | Opper |
+| R01 | 8 | 12 | `requesty` | Requesty |
+| R01 | 9 | 13 | `zylo-api` | Zylo API |
+| R01 | 10 | 14 | `fastrouter` | FastRouter |
+| R01 | 11 | 15 | `anyapi` | AnyAPI AI |
+| R01 | 12 | 16 | `electronhub` | Electron Hub |
+| R01 | 13 | 17 | `llmgateway` | LLM Gateway |
+| R01 | 15 | 19 | `llm-kiwi` | LLM.Kiwi |
+| R01 | 16 | 20 | `literouter` | LiteRouter |
+| R01 | 17 | 21 | `greenpt` | GreenPT |
+| R01 | 18 | 23 | `y-api` | Y-API |
+| R01 | 19 | 24 | `mnn-ai` | MNN AI |
+| R01 | 20 | 25 | `meganova-ai` | MegaNova AI |
+| R02 | 2 | 27 | `speka` | Speka AI |
+| R02 | 3 | 28 | `tokenreply` | TokenReply |
+| R02 | 4 | 29 | `yolo-auto` | Yolo-Auto |
+| R02 | 5 | 30 | `dxnt` | DXNT / DX Token |
+| R02 | 7 | 33 | `zerolimitai` | ZeroLimitAI |
+| R02 | 8 | 34 | `chatanywhere` | ChatAnywhere |
+| R02 | 9 | 35 | `helyxai` | Helyx AI |
+| R02 | 10 | 37 | `poixe-ai` | Poixe AI |
+| R02 | 11 | 38 | `naga-ai` | Naga AI |
+| R02 | 12 | 39 | `chat-oripe` | Chat Oripe |
+| R02 | 13 | 40 | `freeinference` | FreeInference |
+| R02 | 14 | 41 | `free-ai` | Free.ai |
+| R02 | 15 | 42 | `dgrid` | DGrid |
+| R02 | 16 | 43 | `qiniu` | Qiniu |
+| R02 | 17 | 44 | `orcarouter` | OrcaRouter |
+| R02 | 18 | 45 | `api-airforce` | Api.airforce |
+| R02 | 19 | 47 | `bazaarlink` | BazaarLink |
+| R02 | 20 | 49 | `kilo-gateway` | Kilo Gateway |
+| R03 | 1 | 53 | `dahl` | Dahl |
+| R03 | 2 | 54 | `freetheai` | FreeTheAi |
+| R03 | 4 | 61 | `llm7` | LLM7.io |
+| R03 | 5 | 64 | `gitlawb-gmi` | Gitlawb Opengateway (GMI Cloud) |
+| R03 | 8 | 70 | `getgoapi` | GoAPI |
+| R03 | 9 | 71 | `laozhang` | LaoZhang AI |
+| R03 | 10 | 73 | `bai` | b.ai |
+| R03 | 11 | 79 | `bluesminds` | BluesMinds |
+| R03 | 13 | 81 | `freeaiapikey` | FreeAIAPIKey |
+| R03 | 14 | 83 | `openadapter` | OpenAdapter |
+| R03 | 15 | 85 | `tokenrouter` | TokenRouter |
+| R03 | 16 | 88 | `x5lab` | X5Lab |
+| R03 | 17 | 90 | `kenari` | Kenari |
+| R03 | 18 | 92 | `navy` | NavyAI |
+| R03 | 19 | 93 | `ainative` | AINative Studio |
+| R03 | 20 | 94 | `aion` | Aion Labs |
+| R04 | 1 | 95 | `routeway` | Routeway |
+| R04 | 2 | 96 | `nara` | NaraRouter |
+| R04 | 3 | 97 | `xkiro` | xKiro |
+| R04 | 4 | 98 | `regolo` | Regolo AI |
+| R04 | 5 | 99 | `naga-ac` | Naga.ac |
+| R04 | 6 | 100 | `void-ai` | Void AI |
+| R04 | 7 | 102 | `logfare` | Logfare |
+| R04 | 8 | 105 | `demonroute` | Demon Route |
+| R04 | 9 | 107 | `beatapi` | BeatAPI |
+| R04 | 14 | 122 | `morph` | Morph |
+| R04 | 15 | 124 | `ai21` | AI21 Labs |
+| R04 | 16 | 127 | `upstage` | Upstage |
+| R04 | 17 | 129 | `nous-research` | Nous Research |
+| R04 | 18 | 130 | `arcee-ai` | Arcee AI |
+| R04 | 20 | 132 | `inception` | Inception |
+| R05 | 1 | 135 | `openvecta` | OpenVecta |
+| R05 | 3 | 137 | `poolside` | Poolside |
+| R05 | 5 | 139 | `cerebras` | Cerebras |
+| R05 | 6 | 140 | `nvidia` | NVIDIA NIM |
+| R05 | 7 | 141 | `nebius` | Nebius AI |
+| R05 | 8 | 143 | `siliconflow` | SiliconFlow |
+| R05 | 9 | 144 | `hyperbolic` | Hyperbolic |
+| R05 | 10 | 145 | `ollama-cloud` | Ollama Cloud |
+| R05 | 11 | 149 | `sambanova` | SambaNova |
+| R05 | 12 | 150 | `nscale` | nScale |
+| R05 | 13 | 151 | `baseten` | Baseten |
+| R05 | 14 | 152 | `publicai` | PublicAI |
+| R05 | 15 | 153 | `featherless-ai` | Featherless AI |
+| R05 | 16 | 154 | `friendliai` | FriendliAI |
+| R05 | 17 | 155 | `wandb` | Weights & Biases Inference |
+| R05 | 19 | 160 | `modelscope` | ModelScope |
+| R05 | 20 | 161 | `byteplus` | BytePlus ModelArk |
+
+### R05 exclusions on user's explicit choice (3 technical IDs)
+
+| Stage | Stage # | Original catalog # | Exact technical ID | Name |
+|---|---:|---:|---|---|
+| R05 | 2 | 136 | `openference-api` | Openference API |
+| R05 | 4 | 138 | `fireworks` | Fireworks AI |
+| R05 | 18 | 158 | `bytez` | Bytez |
+
 ## 2026-10-31 — DJMRN-FREE-API-R04-USER-APPROVAL-20261031 — Current user-screened shortlist: 66 accepted IDs out of 80 reviewed
 
 - **Owner's explicit R04 decision:** Exclude from NEW USER-SCREENED SHORTLIST **only** R04 #10 `gemini` (original OmniRoute catalog row 113), #11 `groq` (#114), #12 `mistral` (#117), #13 `cohere` (#120), #19 `liquid` (#131). **Approve the other 15 R04 IDs** listed below. No automatic selection/filtering; maintain R01–R03 choices and exact provider technical IDs, even when companies or underlying pools overlap. Removing from shortlist does NOT disconnect an already configured provider or change its actual operational state.
