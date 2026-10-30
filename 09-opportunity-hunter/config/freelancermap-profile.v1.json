@@ -45,114 +45,113 @@
     "Do not send messages, log in, or mutate production DB in OH-16."
   ],
   "search_policy": {
-    "revision": "FM-SEARCH-01",
-    "state": "PARTIALLY_DEFINED__NO_AGENT_EXECUTION_AUTHORIZED",
+    "revision": "FM-SEARCH-02",
+    "state": "USER_CONFIRMED_SEARCH_FILTERS__NO_AGENT_RUN",
     "observed_on": "2026-10-30",
     "authoritative_page": "https://www.freelancermap.com/projects",
     "source_evidence": [
       "https://www.freelancermap.com/projects",
-      "https://www.freelancermap.com/help.html",
-      "09-opportunity-hunter/POLICY-AND-DECISIONS.md"
+      "https://www.freelancermap.com/projects/remote",
+      "09-opportunity-hunter/POLICY-AND-DECISIONS.md",
+      "User explicit instructions in current conversation, 2026-10-30"
     ],
     "site_scope": {
       "value": "public_project_listings",
       "status": "USER_CONFIRMED",
-      "notes": "Use the public projects search/results page only. Do not infer other site search surfaces."
+      "notes": "Use public projects page https://www.freelancermap.com/projects; no other search surface selected."
     },
     "selected_filters": {
       "workplace": {
         "selected": [
           "Remote"
         ],
-        "unselected": [
-          "On-site",
-          "Hybrid"
+        "excluded": [
+          "Hybrid",
+          "On-site"
         ],
-        "status": "USER_CONFIRMED",
-        "validation": "Verify only Remote is selected, not a prefiltered URL that also selects Hybrid; inspect actual result badges, not just title text. Remote does not imply worldwide eligibility."
+        "status": "USER_EXPLICITLY_CONFIRMED_2026-10-30",
+        "validation": "Use the actual Workplace control; require only Remote selected. A title containing 'Remote' is insufficient if the listing badge says On-site/Hybrid. If results contradict active filters, report mismatch, do not assert eligibility."
       },
       "contract_type": {
         "selected": [
           "Freelance"
         ],
-        "unselected": [
+        "excluded": [
           "Permanent",
           "Agency contract (e.g. ANÜ)"
         ],
-        "status": "DERIVED_FROM_EXISTING_USER_CONFIRMED_SITE_POLICY",
-        "basis": "09-opportunity-hunter/POLICY-AND-DECISIONS.md: freelancermap rejects employment roles; freelance-only search narrows results before later screening."
+        "status": "USER_EXPLICITLY_CONFIRMED_2026-10-30",
+        "validation": "Use site Contract type and require only Freelance selected; do not include permanent or agency-contract results."
+      },
+      "country": {
+        "selection": "ALL_COUNTRIES",
+        "excluded_countries": [],
+        "special_exclusion_german_speaking_countries": "OFF",
+        "status": "USER_EXPLICITLY_CONFIRMED_2026-10-30",
+        "validation": "No Country entries selected. Disable 'Exclude projects from German speaking countries' if active, including when it appears as an active chip. Do not reject country-labeled advertisements at search stage."
       }
     },
     "sort": {
-      "selected": "Newest projects first",
-      "alternative": "Relevant first",
-      "status": "ASSISTANT_SELECTED_FOR_SEARCH_PHASE__USER_REVIEW_OPEN",
-      "reason": "Most recent listings first enables future change detection; not a substantive opportunity eligibility condition."
+      "selection": "SITE_DEFAULT_UNCONSTRAINED",
+      "status": "NO_USER_SORT_CONSTRAINT__PREVIOUS_NEWEST_SUGGESTION_NOT_ADOPTED",
+      "notes": "Do not force Newest or Relevant; sorting is not an opportunity filter."
     },
     "observed_site_filters_and_unresolved_selections": [
       {
         "field": "Publication date",
-        "site_options": "Days / No filter (0-30 days shown as range)",
-        "selection": null,
-        "status": "OPEN__USER_VALUE_NOT_SET"
+        "selection": "NO_FILTER",
+        "status": "USER_CONFIRMED_NO_OTHER_FILTERS"
       },
       {
         "field": "Industry",
-        "site_options": "IT, Plant and Mechanical Engineering, Automotive, Finance, Energy Industry, Medicine and Pharmaceuticals, Manufacturing, and other categories",
-        "selection": null,
-        "status": "OPEN__NOT_RESTRICTED"
+        "selection": "ALL",
+        "status": "USER_CONFIRMED_NO_OTHER_FILTERS"
       },
       {
         "field": "Professional fields",
-        "site_options": "Web and software development; Writing and translation services; Graphic design and Creative services; Digital Marketing; Engineering; Finance and Accounting; Show more",
-        "selection": null,
-        "status": "OPEN__NOT_RESTRICTED"
+        "selection": "ALL",
+        "status": "USER_CONFIRMED_NO_OTHER_FILTERS"
       },
       {
         "field": "Keywords",
-        "site_options": "Search by title/skill/company and Keywords",
-        "selection": null,
-        "status": "OPEN__NOT_RESTRICTED"
+        "selection": "EMPTY",
+        "status": "USER_CONFIRMED_NO_OTHER_FILTERS"
       },
       {
         "field": "Country",
-        "site_options": "Selectable country values, Show more",
-        "selection": null,
-        "status": "OPEN__NOT_RESTRICTED"
+        "selection": "ALL_COUNTRIES",
+        "status": "USER_CONFIRMED"
       },
       {
         "field": "End client projects only",
-        "site_options": "On/off",
-        "selection": null,
-        "status": "OPEN__DO_NOT_ENABLE_WITHOUT_USER_DECISION",
-        "note": "Would remove intermediary/recruiter projects."
+        "selection": "OFF",
+        "status": "USER_CONFIRMED_NO_OTHER_FILTERS"
       },
       {
         "field": "Exclude projects from German speaking countries",
-        "site_options": "On/off",
-        "selection": null,
-        "status": "OPEN__MUST_CHECK_ACTIVE_UI_STATE",
-        "note": "Observed as an active chip in .com results; hidden default exclusions may omit eligible listings. Do not interpret Worldwide alone as worldwide coverage."
+        "selection": "OFF",
+        "status": "USER_CONFIRMED_ALL_COUNTRIES"
       }
     ],
     "execution_contract": {
-      "allowed_now": "RULE_DOCUMENTATION_ONLY",
-      "planned_steps": [
-        "Open canonical public project search page",
-        "Read current active filter chips and user-selected scope before altering anything",
-        "Select only Remote and only Freelance, ensure On-site/Hybrid/Agency/Permanent not additionally selected",
-        "Select Newest projects first",
-        "Report any implicit country/exclusion filters and request a decision before claiming comprehensive coverage",
-        "Verify UI badges and applied filter state before capturing counts"
+      "allowed_now": "RULE_DOCUMENTATION_ONLY__NO_BROWSER_AGENT_COMMAND_SENT",
+      "filter_application_procedure": [
+        "Open https://www.freelancermap.com/projects public search page.",
+        "Clear any preselected workplace, contract, country or extra active chips, including Exclude projects from German speaking countries; never assume unselected from filter counter alone.",
+        "Select only Workplace=Remote and Contract type=Freelance.",
+        "Do not select a country or turn on any exclusion; keep all countries including Germany, Austria and Switzerland.",
+        "Do not impose publication date, industry, professional fields, keyword, end-client only or sort restrictions.",
+        "Verify applied controls/chips: Remote and Freelance only; no Hybrid/On-site/Permanent/Agency or regional exclusion.",
+        "For inconsistent result badges, note the discrepancy; do not treat a title containing Remote as proof of remote status.",
+        "Do not infer worldwide work eligibility from any-country search; eligibility assessment is a separate future step.",
+        "After applying filters, report displayed result count as an observation with timestamp; never hardcode count."
       ],
       "blocked_until_next_user_instructions": [
-        "Choosing date/industry/professional field/keyword/country restrictions",
-        "Applying unknown default exclusions as accepted",
-        "Choosing number of result pages or a scan schedule",
-        "Bulk capture, storage of actual opportunities, or detail review",
-        "Contacting clients, applying or changing account state"
+        "Result pagination depth or volume, scan schedule, capture and storage of live opportunities.",
+        "Detail reading, shortlist/rejection, pricing/skills/work eligibility evaluation.",
+        "Contact, apply, messaging, account changes."
       ],
-      "dynamic_counts": "Counts are date/time/active-filter dependent and must never be hard-coded into rules.",
+      "dynamic_counts": "No fixed counts: results change as the site updates.",
       "no_browser_task_sent": true
     }
   }
