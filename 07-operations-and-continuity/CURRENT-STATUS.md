@@ -1,3 +1,75 @@
+## 2026-10-30 — DJMRN-FREE-API-R03-USER-APPROVAL-20261030 — 16 new approved, 4 excluded; CURRENT new shortlist 51 unique technical IDs
+
+- **OWNER EXPLICIT R03 DECISION**: exclude ONLY R03 positions #3 `vercel-ai-gateway` (original catalog #60), #6 `novita` (#68), #7 `piapi` (#69) and #12 `freemodel-dev` (#80). Include ALL other 16 R03 items. No assistant-side additional exclusions based on operator overlap, free API conditions, paid balance, identity or trial expiry. Preserve R01 and R02 selections unchanged. Applies only to NEW selection list, not original 160-provider research master.
+- **CURRENT/CANONICAL USER-APPROVED SHORTLIST (51 technical IDs; exact catalog source order; no duplicates)**: `onomeo`, `unifically`, `oneminai`, `unorouter`, `opper`, `requesty`, `zylo-api`, `fastrouter`, `anyapi`, `electronhub`, `llmgateway`, `llm-kiwi`, `literouter`, `greenpt`, `y-api`, `mnn-ai`, `meganova-ai`, `speka`, `tokenreply`, `yolo-auto`, `dxnt`, `zerolimitai`, `chatanywhere`, `helyxai`, `poixe-ai`, `naga-ai`, `chat-oripe`, `freeinference`, `free-ai`, `dgrid`, `qiniu`, `orcarouter`, `api-airforce`, `bazaarlink`, `kilo-gateway`, `dahl`, `freetheai`, `llm7`, `gitlawb-gmi`, `getgoapi`, `laozhang`, `bai`, `bluesminds`, `freeaiapikey`, `openadapter`, `tokenrouter`, `x5lab`, `kenari`, `navy`, `ainative`, `aion`.
+- **Cumulative excluded by user (9 distinct IDs; do NOT add again without explicit reversal)**: `charm-hyper`, `openrouter`, `lyceum`, `mixlayer`, `ofoxai`, `vercel-ai-gateway`, `novita`, `piapi`, `freemodel-dev`.
+- **Progress**: R01 17 accepted / 3 rejected; R02 18 / 2; R03 **16 / 4**. **51 accepted + 9 excluded = 60 user-decided of 160**; **100 remain**, R04 next (20). No API/model/account activation or spend; shortlist approval is NOT technical/account verification. The separate [original 160-candidate research master](../06-tests-and-evidence/provider-research/DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md) remains UNCHANGED. Prior R01/R02 CURRENT blocks below are historical superseded snapshots; this top block is the active current shortlist.
+
+### Current approved shortlist — R01, R02, R03 (51 exact technical IDs)
+
+| Round | Round position | Source catalog row | Exact provider technical ID | Provider |
+|---|---:|---:|---|---|
+| R01 | 1 | 1 | `onomeo` | onomeo |
+| R01 | 2 | 2 | `unifically` | Unifically |
+| R01 | 3 | 3 | `oneminai` | 1min.AI |
+| R01 | 5 | 8 | `unorouter` | UnoRouter |
+| R01 | 7 | 11 | `opper` | Opper |
+| R01 | 8 | 12 | `requesty` | Requesty |
+| R01 | 9 | 13 | `zylo-api` | Zylo API |
+| R01 | 10 | 14 | `fastrouter` | FastRouter |
+| R01 | 11 | 15 | `anyapi` | AnyAPI AI |
+| R01 | 12 | 16 | `electronhub` | Electron Hub |
+| R01 | 13 | 17 | `llmgateway` | LLM Gateway |
+| R01 | 15 | 19 | `llm-kiwi` | LLM.Kiwi |
+| R01 | 16 | 20 | `literouter` | LiteRouter |
+| R01 | 17 | 21 | `greenpt` | GreenPT |
+| R01 | 18 | 23 | `y-api` | Y-API |
+| R01 | 19 | 24 | `mnn-ai` | MNN AI |
+| R01 | 20 | 25 | `meganova-ai` | MegaNova AI |
+| R02 | 2 | 27 | `speka` | Speka AI |
+| R02 | 3 | 28 | `tokenreply` | TokenReply |
+| R02 | 4 | 29 | `yolo-auto` | Yolo-Auto |
+| R02 | 5 | 30 | `dxnt` | DXNT / DX Token |
+| R02 | 7 | 33 | `zerolimitai` | ZeroLimitAI |
+| R02 | 8 | 34 | `chatanywhere` | ChatAnywhere |
+| R02 | 9 | 35 | `helyxai` | Helyx AI |
+| R02 | 10 | 37 | `poixe-ai` | Poixe AI |
+| R02 | 11 | 38 | `naga-ai` | Naga AI |
+| R02 | 12 | 39 | `chat-oripe` | Chat Oripe |
+| R02 | 13 | 40 | `freeinference` | FreeInference |
+| R02 | 14 | 41 | `free-ai` | Free.ai |
+| R02 | 15 | 42 | `dgrid` | DGrid |
+| R02 | 16 | 43 | `qiniu` | Qiniu |
+| R02 | 17 | 44 | `orcarouter` | OrcaRouter |
+| R02 | 18 | 45 | `api-airforce` | Api.airforce |
+| R02 | 19 | 47 | `bazaarlink` | BazaarLink |
+| R02 | 20 | 49 | `kilo-gateway` | Kilo Gateway |
+| R03 | 1 | 53 | `dahl` | Dahl |
+| R03 | 2 | 54 | `freetheai` | FreeTheAi |
+| R03 | 4 | 61 | `llm7` | LLM7.io |
+| R03 | 5 | 64 | `gitlawb-gmi` | Gitlawb Opengateway (GMI Cloud) |
+| R03 | 8 | 70 | `getgoapi` | GoAPI |
+| R03 | 9 | 71 | `laozhang` | LaoZhang AI |
+| R03 | 10 | 73 | `bai` | b.ai |
+| R03 | 11 | 79 | `bluesminds` | BluesMinds |
+| R03 | 13 | 81 | `freeaiapikey` | FreeAIAPIKey |
+| R03 | 14 | 83 | `openadapter` | OpenAdapter |
+| R03 | 15 | 85 | `tokenrouter` | TokenRouter |
+| R03 | 16 | 88 | `x5lab` | X5Lab |
+| R03 | 17 | 90 | `kenari` | Kenari |
+| R03 | 18 | 92 | `navy` | NavyAI |
+| R03 | 19 | 93 | `ainative` | AINative Studio |
+| R03 | 20 | 94 | `aion` | Aion Labs |
+
+### R03 excluded by user — four exact IDs
+
+| Round | Round position | Source catalog row | Exact provider technical ID | Provider |
+|---|---:|---:|---|---|
+| R03 | 3 | 60 | `vercel-ai-gateway` | Vercel AI Gateway |
+| R03 | 6 | 68 | `novita` | Novita AI |
+| R03 | 7 | 69 | `piapi` | PiAPI |
+| R03 | 12 | 80 | `freemodel-dev` | FreeModel.dev |
+
 ## 2026-10-30 — DJMRN-FREE-API-R02-USER-APPROVAL-20261030 — R02 user-approved list: 18 new accepted, 2 excluded; 35 cumulative user-selected IDs
 
 - **Explicit user direction (R02 only):** exclude R02 #1 `mixlayer` (source catalog #26) and R02 #6 `ofoxai` (catalog #32) from the NEW USER-SELECTED approved list, **accept ALL other 18 R02 IDs exactly as in the original 160-provider research roster**. Preserve R01 decisions: accepted 17, excluded `charm-hyper`, `openrouter`, `lyceum`. No assistant-selected exclusions, no provider-level alias collapsing, no inference from eligibility or credit size.
