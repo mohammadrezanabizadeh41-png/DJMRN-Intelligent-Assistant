@@ -1,5 +1,8 @@
 # DJMRN — OmniRoute v3.8.52 provider cards inventory from 8 user screenshots (2026-10-30)
 
+> **COMPLETENESS CORRECTION (2026-10-30):** This file faithfully preserves **152 screenshot-visible** provider cards, but is **NOT** the full API-key provider catalog. The user indicated there should be 249 visible cards, confirmed via `release/v3.8.52` source: **252 total API-key provider definitions; 249 visible; 3 hidden**. The complete authoritative, source-derived [252-provider inventory](OMNIROUTE-252-APIKEY-PROVIDER-CATALOG-V3852-20261030.md) is now available. All original 152 screenshot names matched the source catalog exactly. Do not use this file as the full 249/252 source list.
+
+
 **Evidence:** Eight user-supplied screenshots of OmniRoute Providers UI taken 2026-10-29/30, in screenshot order, grid left-to-right and top-to-bottom. **Scope:** all **152 visible PROVIDER / API SERVICE CARDS**, NOT 152 models. A provider may expose many model IDs, may be costly or free, and may not work with this account. This is the screenshot-visible subset of OmniRoute's larger provider registry; do not claim 152 is the full supported provider count.
 
 **Counting:** 8 screenshot slices = 7 × 20 + 1 × 12 = **152 distinct names**. **6 cards visibly show `1 Connected`**, **146 do not show an existing connection** (including the 4 visually disabled cards). Among the 146: **142 standard `No connections` cards** and **4 grayed/disabled UI cards** (`Blackbox AI`, `Galadriel`, `MonsterAPI`, `Predibase`). Some cards show orange/green dots even when `No connections`; these dots **are NOT proof of account connection, free pricing or valid API**. No account tokens, passwords, identity data, screenshots, or account identifiers stored here.
