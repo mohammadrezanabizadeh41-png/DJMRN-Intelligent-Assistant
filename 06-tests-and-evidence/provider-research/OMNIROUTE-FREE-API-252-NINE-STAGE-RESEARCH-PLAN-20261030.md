@@ -1,6 +1,6 @@
 # DJMRN — 9-stage free API availability research queue (252 OmniRoute providers)
 
-**Reference date:** 2026-10-30  |  **Status:** PREPARED; no provider in these stages has been newly researched or judged by this plan.
+**Reference date:** 2026-10-30  |  **Status:** Stage 1 PUBLIC RESEARCH COMPLETE, remaining stages 2–9 pending. The roster and membership are immutable. See the separate S01 findings and cumulative positive register.
 **Frozen source:** [OmniRoute v3.8.52 complete 252 API-key provider catalog](OMNIROUTE-252-APIKEY-PROVIDER-CATALOG-V3852-20261030.md). Stage IDs and memberships remain immutable until the user explicitly asks for a new partition.
 
 ## Exactly one research question
@@ -22,7 +22,7 @@
 
 | Stage trigger | Source rows | Entries | Initial status |
 |---|---:|---:|---|
-| `DJMRN-FREE-API-SCAN-S01` / «مرحله 1» | 1–30 | 30 | READY / NOT RESEARCHED |
+| `DJMRN-FREE-API-SCAN-S01` / «مرحله 1» | 1–30 | 30 | COMPLETED PUBLIC RESEARCH 2026-10-30 · [S01 findings](DJMRN-FREE-API-SCAN-S01-RESULTS-20261030.md) · [positive master](DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md) |
 | `DJMRN-FREE-API-SCAN-S02` / «مرحله 2» | 31–60 | 30 | READY / NOT RESEARCHED |
 | `DJMRN-FREE-API-SCAN-S03` / «مرحله 3» | 61–90 | 30 | READY / NOT RESEARCHED |
 | `DJMRN-FREE-API-SCAN-S04` / «مرحله 4» | 91–120 | 30 | READY / NOT RESEARCHED |
