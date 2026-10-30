@@ -1,6 +1,6 @@
 # DJMRN — 9-stage free API availability research queue (252 OmniRoute providers)
 
-**Reference date:** 2026-10-30  |  **Status:** Stages 1–3 PUBLIC RESEARCH COMPLETE, remaining stages 4–9 pending. The roster and membership are immutable. See the separate S01 findings and cumulative positive register.
+**Reference date:** 2026-10-30  |  **Status:** Stages 1–4 PUBLIC RESEARCH COMPLETE, remaining stages 5–9 pending. The roster and membership are immutable. See the separate S01 findings and cumulative positive register.
 **Frozen source:** [OmniRoute v3.8.52 complete 252 API-key provider catalog](OMNIROUTE-252-APIKEY-PROVIDER-CATALOG-V3852-20261030.md). Stage IDs and memberships remain immutable until the user explicitly asks for a new partition.
 
 ## Exactly one research question
@@ -31,7 +31,7 @@ Only mandatory up-front paid balance/deposit or paid subscription (without anoth
 | `DJMRN-FREE-API-SCAN-S01` / «مرحله 1» | 1–30 | 30 | COMPLETED PUBLIC RESEARCH 2026-10-30 · [S01 findings](DJMRN-FREE-API-SCAN-S01-RESULTS-20261030.md) · [positive master](DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md) |
 | `DJMRN-FREE-API-SCAN-S02` / «مرحله 2» | 31–60 | 30 | COMPLETED PUBLIC RESEARCH 2026-10-30 · [S02 findings](DJMRN-FREE-API-SCAN-S02-RESULTS-20261030.md) · [34-positive master](DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md) |
 | `DJMRN-FREE-API-SCAN-S03` / «مرحله 3» | 61–90 | 30 | COMPLETED PUBLIC RESEARCH 2026-10-30 · [S03 findings](DJMRN-FREE-API-SCAN-S03-RESULTS-20261030.md) · [39-positive master](DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md) |
-| `DJMRN-FREE-API-SCAN-S04` / «مرحله 4» | 91–120 | 30 | READY / NOT RESEARCHED |
+| `DJMRN-FREE-API-SCAN-S04` / «مرحله 4» | 91–120 | 30 | COMPLETED PUBLIC RESEARCH 2026-10-30 · [S04 findings](DJMRN-FREE-API-SCAN-S04-RESULTS-20261030.md) · [52-positive-ID master](DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md) |
 | `DJMRN-FREE-API-SCAN-S05` / «مرحله 5» | 121–150 | 30 | READY / NOT RESEARCHED |
 | `DJMRN-FREE-API-SCAN-S06` / «مرحله 6» | 151–180 | 30 | READY / NOT RESEARCHED |
 | `DJMRN-FREE-API-SCAN-S07` / «مرحله 7» | 181–210 | 30 | READY / NOT RESEARCHED |
@@ -156,7 +156,7 @@ Only mandatory up-front paid balance/deposit or paid subscription (without anoth
 
 ## Stage 4 — DJMRN-FREE-API-SCAN-S04 (source rows 91–120)
 
-**Trigger:** «مرحله 4» · **Entries:** 30 · **Status:** READY / NOT RESEARCHED
+**Trigger:** «مرحله 4» · **Entries:** 30 · **Status:** PUBLIC RESEARCH COMPLETED 2026-10-30 · [S04 30-provider findings](DJMRN-FREE-API-SCAN-S04-RESULTS-20261030.md) · [cumulative 52 positive provider IDs](DJMRN-FREE-API-POSITIVE-MASTER-252-20261030.md).
 
 | Source row | Provider ID (exact) | Catalog name | UI status |
 |---:|---|---|---|
