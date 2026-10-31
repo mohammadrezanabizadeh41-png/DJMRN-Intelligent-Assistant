@@ -1,3 +1,12 @@
+## 2026-10-31 — DJMRN-FREE-API-N02-USER-SELECTION — new 62-candidate screening
+
+**Explicit user decision:** N02 positions 21–40: 12 IDs USER_SELECTED_PENDING_FUTURE_MERGE and 8 IDs USER_EXCLUDED_FROM_NEW_SHORTLIST. No service removed from original discovery evidence, no provider account action, and no change to original 137-approved list.
+
+- **N02 selected 12:** 21 `nutrient-data-extraction`; 22 `gammal-tech-ai`; 24 `ocr-space`; 27 `reducto`; 28 `unstructured-api`; 30 `isaacus`; 31 `iteracompute`; 33 `yepapi`; 34 `deapi`; 36 `magic-hour`; 37 `tavus`; 40 `tripo-api`.
+- **N02 excluded 8:** 23 `veryfi-api`; 25 `mindee`; 26 `extend-ai`; 29 `livekit-inference`; 32 `smartoken`; 35 `tokengate`; 38 `vidu-api`; 39 `camb-ai`.
+- **Cumulative:** N01 selected 9, excluded 11; N02 selected 12, excluded 8; selected **21**, excluded **19**, N03 positions 41–62 pending **22**; total 62.
+- **Authority:** Selection is user preference only; free-API quotas and OmniRoute compatibility are research findings, not account-tested operational proof. Existing R01–R08 137-approved shortlist stays unchanged. Payment/card restrictions are informational and never automatic exclusions.
+
 ## 2026-10-31 — DJMRN-FREE-API-N01-USER-SELECTION — new 62-candidate screening
 
 **Explicit user decision:** In N01 (source positions 1–20 of the separate 62-candidate discovery set), set 9 IDs to USER_SELECTED_PENDING_FUTURE_MERGE and 11 IDs to USER_EXCLUDED_FROM_NEW_SHORTLIST. This is a user selection decision, **not** API operational verification, account activation, provider deletion, or authorization to merge into the original 137.
