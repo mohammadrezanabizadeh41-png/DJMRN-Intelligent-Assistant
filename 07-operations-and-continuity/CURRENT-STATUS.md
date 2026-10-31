@@ -1,4 +1,6 @@
 ## 2026-10-31 — DJMRN-FREE-API-N03-FINAL-MERGE — CURRENT CANONICAL USER-SELECTED LIST: 169
+**PURPOSE / FOLLOW-UP CLASSIFICATION (explicit owner clarification, 2026-10-31):** These **169 user-selected entries form the DJMRN FREE AI API PROVIDER FOLLOW-UP LIST** (فهرست ۱۶۹ ارائه‌دهنده API هوش مصنوعی رایگان برای پیگیری بعدی). They are **candidates to investigate and pursue later** for genuinely free API tiers, recurring quotas, conditional free access, or free trial/granted credits. Inclusion is NOT confirmation that every provider has a currently usable free API, permanent quota, valid eligibility, or tested connection. Future work: verify current official pricing/free quota, signup/card/region/commercial restrictions, overage safeguards, API compatibility, and operational tests before activation. Keep all 169 in this follow-up list unless the owner explicitly changes membership.
+
 
 **Explicit owner decision:** N03 excluded 11, selected 11; append all 32 selected N01–N03 technical IDs to original R01–R08 137 approved IDs. Original 137 table preserved verbatim; its 137-only status is HISTORICAL after this merge. **Current user-selected list = 169 unique exact technical IDs (137 + 32, verified no duplicate technical IDs).** No provider activation, account creation, billing, or technical API test authorized by selection.
 
