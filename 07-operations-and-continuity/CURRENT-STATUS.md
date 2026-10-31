@@ -1,3 +1,50 @@
+## 2026-10-31 — DJMRN-FREE-API-N03-FINAL-MERGE — CURRENT CANONICAL USER-SELECTED LIST: 169
+
+**Explicit owner decision:** N03 excluded 11, selected 11; append all 32 selected N01–N03 technical IDs to original R01–R08 137 approved IDs. Original 137 table preserved verbatim; its 137-only status is HISTORICAL after this merge. **Current user-selected list = 169 unique exact technical IDs (137 + 32, verified no duplicate technical IDs).** No provider activation, account creation, billing, or technical API test authorized by selection.
+
+**N03 excluded (11):** 41 `deference`; 42 `habla-cloud`; 45 `yamify-inference`; 46 `rantera`; 47 `prime-inference`; 49 `krutrim`; 50 `core42-compass`; 53 `parasail`; 56 `neuphonic`; 57 `smallest-ai`; 61 `kluster-ai`.
+**N03 selected (11):** 43 `jigsawstack`; 44 `braintrust-models`; 48 `moondream-cloud`; 51 `ai71-ask`; 52 `tensoropera`; 54 `synexa`; 55 `wavespeed-ai`; 58 `zeroentropy`; 59 `replicate`; 60 `gonkabroker`; 62 `ionos-model-hub`.
+**New 62-candidate screening:** N01 9 selected/11 excluded; N02 12/8; N03 11/11. **Total 32 selected, 30 excluded, 0 pending**. No research evidence deleted. Payment card/region constraints are metadata only, never automatic exclusions.
+
+### CANONICAL APPEND — 32 new selected IDs, positions 138–169
+
+| Combined position | Batch | Original candidate number | Exact technical ID |
+|---:|---|---:|---|
+| 138 | N01 | 4 | `pinecone-inference` |
+| 139 | N01 | 5 | `contextual-ai` |
+| 140 | N01 | 6 | `datalab` |
+| 141 | N01 | 7 | `llamaparse` |
+| 142 | N01 | 8 | `runware` |
+| 143 | N01 | 9 | `bria` |
+| 144 | N01 | 12 | `infomaniak-ai` |
+| 145 | N01 | 13 | `berget-ai` |
+| 146 | N01 | 17 | `sail-research` |
+| 147 | N02 | 21 | `nutrient-data-extraction` |
+| 148 | N02 | 22 | `gammal-tech-ai` |
+| 149 | N02 | 24 | `ocr-space` |
+| 150 | N02 | 27 | `reducto` |
+| 151 | N02 | 28 | `unstructured-api` |
+| 152 | N02 | 30 | `isaacus` |
+| 153 | N02 | 31 | `iteracompute` |
+| 154 | N02 | 33 | `yepapi` |
+| 155 | N02 | 34 | `deapi` |
+| 156 | N02 | 36 | `magic-hour` |
+| 157 | N02 | 37 | `tavus` |
+| 158 | N02 | 40 | `tripo-api` |
+| 159 | N03 | 43 | `jigsawstack` |
+| 160 | N03 | 44 | `braintrust-models` |
+| 161 | N03 | 48 | `moondream-cloud` |
+| 162 | N03 | 51 | `ai71-ask` |
+| 163 | N03 | 52 | `tensoropera` |
+| 164 | N03 | 54 | `synexa` |
+| 165 | N03 | 55 | `wavespeed-ai` |
+| 166 | N03 | 58 | `zeroentropy` |
+| 167 | N03 | 59 | `replicate` |
+| 168 | N03 | 60 | `gonkabroker` |
+| 169 | N03 | 62 | `ionos-model-hub` |
+
+**Canonical list definition:** preserved R01–R08 137-item table further below, in its original order, followed by these 32 appended IDs in positions 138–169. Older N01/N02 entries and 137-only status below are historical. Research quota/pricing statements remain untested unless separately verified from official provider sources; USER_SELECTED does not mean OPERATIONAL.
+
 ## 2026-10-31 — DJMRN-FREE-API-N02-USER-SELECTION — new 62-candidate screening
 
 **Explicit user decision:** N02 positions 21–40: 12 IDs USER_SELECTED_PENDING_FUTURE_MERGE and 8 IDs USER_EXCLUDED_FROM_NEW_SHORTLIST. No service removed from original discovery evidence, no provider account action, and no change to original 137-approved list.
