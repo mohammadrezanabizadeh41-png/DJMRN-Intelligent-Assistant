@@ -1,3 +1,19 @@
+## 2026-10-31 — DJMRN-EMAIL-OPPORTUNITY-AUTOMATION-001 — مدیریت اتوماتیک هوشمند شناسایی فرصت‌های کار از طریق ایمیل — PROPOSED / NOT IMPLEMENTED
+
+**Owner request:** ثبت اولیه پروژه در مخزن اصلی، پیش از اجرای آزمایش یا تغییر سیستم. این ثبت صرفاً برنامه و محدوده آزمایش است؛ هیچ موتور، اتصال مرورگر، زمان‌بندی، مجوز یا پردازش Gmail ساخته یا تأیید عملیاتی نشده است.
+
+**هدف:** موتور سبک Python با اجرای زمان‌بندی‌شده از Windows Task Scheduler/PowerShell، کنترل برنامه‌نویسی‌شده مرورگر Browser Use موجود (در صورت اثبات سازگاری)، خواندن ایمیل‌های فرصت شغلی و مکاتبات مرتبط از نشست مجاز، استخراج عنوان/فرستنده/زمان/متن/لینک، تحویل خروجی ساختاریافته به Python، تطبیق و حذف تکراری‌ها، بررسی جزئیات آگهی در سایت مقصد، اعمال قواعد پذیرش و آماده‌سازی پیش‌نویس پاسخ برای تأیید کاربر. **AI در runtime مرورگر الزامی نیست**؛ کد قطعی و adapter سایت‌ها اولویت دارند.
+
+**طرح کوچک پیشنهادی (نه معماری مصوب):** Scheduler → Python coordinator → browser-control adapter → browser/session → site-specific extraction → existing SQLite state (پس از بررسی schema) → deterministic filters/report → optional draft for human approval. از مرورگر/ابزار موجود استفاده شود؛ مرورگر یا دیتابیس یا سرویس جدید بدون اثبات نیاز ساخته نشود. ارتباط Python با مرورگر محلی است؛ مرورگر همچنان به شبکه نیاز دارد، اما تنظیم پروکسی مستقل Python برای Gmail در مسیر UI-based لازم نیست، مشروط به اینکه خود مرورگر دسترسی داشته باشد.
+
+**قواعد عملیاتی و امنیت:** read-only pilot؛ بدون ارسال/حذف/علامت‌گذاری عمدی ایمیل، بدون درخواست/کپی رمز، cookie یا token؛ حداقل مجوز؛ نشست مرورگر موجود فقط از روش پشتیبانی‌شده و با اجازه کاربر؛ no CAPTCHA bypass؛ توقف امن در صورت تغییر DOM، انقضای نشست، قطعی شبکه، تکرار و خطای استخراج؛ idempotency، checkpoint، گزارش و log بدون اسرار؛ ارسال پاسخ و هر تغییر حساس صرفاً پس از تأیید صریح. اجرای محلی هنگام خواب/خاموشی دستگاه تضمین نمی‌شود.
+
+**آزمایش‌های بعدی (NOT RUN):** (1) PowerShell read-only inventory برای Python، Browser Use، Playwright و اجزای OpportunityHunter موجود؛ (2) اثبات کنترل برنامه‌نویسی‌شده مرورگر با صفحه آزمایشی غیرحساس؛ (3) پس از تأیید روش نشست، استخراج محدود ۵ ایمیل Gmail با جلوگیری از تغییر وضعیت؛ (4) آزمایش قطع/تغییر VPN و بازیابی؛ (5) بررسی خروجی و dedup در SQLite موجود؛ (6) سپس در صورت موفقیت، سایت کاری و زمان‌بندی ۳–۴ ساعته. هیچ نصب، schedule، مرور حساب یا ارسال پیام با این ثبت مجاز نشده است.
+
+**وضعیت:** REGISTERED AS PROPOSAL ONLY. Browser Use موجود، API/CLI واقعی آن، اتصال به نشست فعلی، هزینه/مجوز ابزار جایگزین و fitness در دستگاه: **UNVERIFIED**. Canonical ongoing record: همین CURRENT-STATUS.md؛ بدون فایل یا ثبت روزمره موازی.
+
+---
+
 ## 2026-10-31 — DJMRN-AGTEAM-001 — THREE-FUTURE-AGENTS-SEQUENTIAL-PLAN — OWNER-REQUESTED REGISTRATION
 
 **Owner instruction (2026-10-31):** Record **all three previously recommended complementary agent roles**, with detailed intended responsibilities, for **step-by-step creation later** using the **same OpenClaw Agent Creator workflow**, not PowerShell and not simultaneous creation. This is authorization to **record the construction plan**, **not** an assertion that any new agent has been created, assigned tools, granted permissions or put on a schedule. Status for all three: **PLANNED / NOT CREATED**. The already created four-agent team remains `djmrn-pm-01`, `djmrn-arch-01`, `djmrn-cap-01`, `djmrn-web-01` (see FOUR-AGENT-TEAM-20261031 below).
