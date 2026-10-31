@@ -1,3 +1,50 @@
+## 2026-10-31 — DJMRN-AGTEAM-001 — THREE-FUTURE-AGENTS-SEQUENTIAL-PLAN — OWNER-REQUESTED REGISTRATION
+
+**Owner instruction (2026-10-31):** Record **all three previously recommended complementary agent roles**, with detailed intended responsibilities, for **step-by-step creation later** using the **same OpenClaw Agent Creator workflow**, not PowerShell and not simultaneous creation. This is authorization to **record the construction plan**, **not** an assertion that any new agent has been created, assigned tools, granted permissions or put on a schedule. Status for all three: **PLANNED / NOT CREATED**. The already created four-agent team remains `djmrn-pm-01`, `djmrn-arch-01`, `djmrn-cap-01`, `djmrn-web-01` (see FOUR-AGENT-TEAM-20261031 below).
+
+### Phase 1 — `djmrn-verify-01` — Independent Research, Evidence Verification & QA Reviewer
+
+- **Core purpose:** independent cross-checking of agent assertions and conclusions; rigorous research, source verification, fact-checking and critical review. Combines the complementary original RESEARCH and REVIEW ideas **for now**, to avoid redundant agents.
+- **Inputs:** specific claims/questions, agent reports, source links, proposed technologies, official docs, code/test receipts, timestamped evidence; requested by PM/ARCH/CAP/WEB or proactively flagged during bounded reviews.
+- **Responsibilities:** find primary/canonical current sources, distinguish observed evidence vs assumption vs agent opinion, compare meaningful alternatives, check dates/licensing/free-tier/quota/security claims, detect fabricated successes, examine technical tests and counterexamples; challenge and classify results as VERIFIED / PARTIAL / DISPUTED / UNVERIFIED / FAILED; recommend smallest reproducible re-test. When relevant, obtain external material through existing authorized WEB capabilities instead of building duplicate web access.
+- **Output:** concise sourced evidence verdict, contradictions, confidence/limitations, what remains unverified, actionable next test, cost/security concern and escalation to PM; consult ARCH for systemic architectural implications, CAP for engineering facts.
+- **Permissions / boundaries:** read-only by default, no unilateral approval of code, deployment, payments or sensitive changes; do not become a second PM, web tool builder or executor. Avoid unnecessary model/web usage. Distinguish own judgement from independent evidence.
+- **Acceptance:** one real independent claim/test review against raw evidence, successful report to PM, and a material correction or independently confirmed PASS with source provenance. Agent creation/identity alone is not DONE.
+- **Priority:** **FIRST** of three; most immediate complementary gap seen in CAP self-reported test results.
+
+### Phase 2 — `djmrn-qa-security-01` — Independent Software QA, Reliability & Security Test Engineer
+
+- **Core purpose:** dedicated technical quality verification of implementations and security boundaries **when the work volume/risks justify a separate reviewer**; distinct from VERIFY's research/fact-checking.
+- **Inputs:** CAP/WEB code and test cases, explicit requirements/contracts, approved target and environment, applicable threat boundaries, observed bugs and failure logs.
+- **Responsibilities:** design/execute independently reproducible functional, regression, negative-input, failure/recovery and security tests *within a pre-approved isolated scope*; review least-privilege handling, untrusted web input, secret redaction, idempotency and rollback; detect weak assertions or superficial mock-only PASS; report risks and evidence. Test engineering may be deterministic and should not always call AI.
+- **Output:** defect reproduction, exact sanitized command/input/output, severity, acceptance checklist, risk and retest guidance to PM, ARCH and implementer. No unauthorized exploit activity, scanning third-party sites, penetration tests, permission expansion, credential access, production changes or publication.
+- **Separation:** VERIFY assesses correctness of knowledge/claims and evidence; QA-SECURITY independently exercises code and defenses; ARCH owns architecture/security decisions; CAP/WEB implement fixes after approval. A second reviewer is **conditional on demonstrated workload or material independent-test need**, not automatically justified by title.
+- **Acceptance:** scoped real test reveals a defect or reproduces a validated safe PASS on a CAP/WEB capability; evidence includes failure and success cases, effective permission bounds and report to PM.
+- **Priority:** **SECOND**; before creating, inspect whether VERIFY+ARCH+CAP already provide sufficient coverage for the actual workload. If yes, keep this phase PLANNED/DEFERRED and request owner direction rather than manufacturing a capability gap.
+
+### Phase 3 — `djmrn-ops-01` — Autonomous Runtime Operations, Reliability & Recovery Engineer
+
+- **Core purpose:** operational oversight of **real, approved** background/periodic workflows, health and failure recovery on the Windows/OpenClaw/OmniRoute stack, only after actual workloads exist.
+- **Inputs:** approved job inventory, runtime/session/task status, local health/diagnostic outputs, observed repeated failures, wake/sleep/restart events, consumption measurements.
+- **Responsibilities:** identify stalled, failed and duplicate jobs; propose retry/idempotency/checkpoint/recovery plans; detect missed schedules and degraded resource conditions; provide actionable status and escalation; use Windows/OpenClaw built-in scheduling/telemetry where adequate. Do not claim laptop-local execution during sleep/power-off. Keep operational state local.
+- **Output:** concise health and incident summaries, real recovery evidence, CPU/RAM/token cost impact, pending owner approvals and next action to PM; coordinate internals with CAP and architecture with ARCH.
+- **Separation:** PM retains business task priority/supervision, CAP retains engineering of deterministic recovery/monitoring mechanisms, OPS would own observing and executing **preapproved operational procedures**; no second scheduler/runtime/database or always-on agent created without demonstrated demand.
+- **Safety:** read-only observation by default; restart services, modify startup schedule, change security, read secrets, delete/migrate state or trigger external consequences only with separate explicit owner approval. No heartbeat/cron configured merely by constructing an identity.
+- **Acceptance:** one real, bounded, approved job incident/failure/recovery or missed-run detection with observable local logs and correct human escalation; overhead measured on 8GB Windows machine.
+- **Priority:** **THIRD**; before creation, confirm actual recurring workloads and the insufficiency of PM+CAP; otherwise leave PLANNED/DEFERRED pending further owner instruction.
+
+### Shared construction procedure / hard boundaries
+
+1. **Sequential only:** first VERIFY → after clear CREATED/IDENTITY_CONFIGURED/TESTED or BLOCKED report, reconsider and proceed to QA-SECURITY → then OPS. Each phase requires the owner's specific go-ahead for the concrete agent creation and any consequential permissions. The user wants all three registered for later construction; registration does not skip the need check for the conditional later roles.
+2. **Use the same OpenClaw Agent Creator and independent local Workspace** as the existing four. Before creating, check duplicate IDs and actual built-in role support; keep `purpose` separate from bundled-role config to avoid the previously observed validation error. Choose model from existing approved OmniRoute free route, after verifying it is still usable. Configure `IDENTITY.md`, `SOUL.md`, `AGENTS.md` within the correct **local agent workspace** using actual file I/O and read-back, not invented `config.set` keys or a plausible chat-only claim.
+3. **Operational proof, not profiles:** check available tools with real receipts, at least one bounded useful real I/O test, peer send/reply, one negative/failure case, evidence/permissions/resource reporting. Prompt identity is not evidence of runtime tool access. No repeated broad diagnostics or elaborate infrastructure without a blocker.
+4. **Local-first / free-first / least privilege:** no operational memory or workspace contents uploaded to GitHub/Notion/cloud, no shared folder/new DB/daemon/scheduler unless real need plus explicit approval, no installing tools, paying/overages, sensitive permissions, external side-effect write or production mutation without owner approval. Existing models/Gateway/OmniRoute and four agents must remain intact.
+5. **Continuity:** only this `07-operations-and-continuity/CURRENT-STATUS.md` is the canonical ongoing progress record; this section records a planned agent roster and boundaries, **not** a change to live Notion architecture authority or local OpenClaw state. At each real future creation, report the actual `agents.create` receipt and distinguish SUCCESS/UNVERIFIED before writing an explicit authorized update.
+
+**Phase gate currently open:** prepare and obtain approval for **Phase 1 `djmrn-verify-01`** in a later user-requested step. **No fifth, sixth or seventh specialized agent has been created by this record.**
+
+---
+
 ## 2026-10-31 — DJMRN-AGTEAM-001 — FOUR-AGENT-TEAM-20261031 — four agents created; local identities reported; further agent needs reviewed
 
 **Scope and evidence:** Owner explicitly requested a consolidated record of the OpenClaw team work and a review of genuinely complementary next roles. Evidence for local operations consists of user-pasted OpenClaw Agent Creator receipts and agent-written reports dated 2026-10-31, **not direct filesystem access or raw tool traces**. Read this newer section before the historical AGTEAM-001 snapshot farther below (which still says two agents and K5 not tested). **No new agents, local changes, installations, permissions, or cloud data transfers were performed by this GitHub documentation update.** Topic/design folder: [10-agent-teams-and-workflows](../10-agent-teams-and-workflows/README.md).
