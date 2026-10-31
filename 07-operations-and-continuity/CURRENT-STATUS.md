@@ -1,3 +1,23 @@
+## 2026-10-31 — DJMRN-AGTEAM-001 — OPENAGENTS-INTEGRATION-FOLLOWUP-20261031 — DEFERRED, required next phase after two-agent pilot
+
+**User directive:** The owner explicitly asked to retain the plan to link the two desktop applications shown in the screenshot: **OpenClaw Companion** (red octopus desktop shortcut) and **OpenAgents** (black/white desktop shortcut), so it is not forgotten. This is **a future integration requirement**, NOT authorization to connect, install, expose access, create a second runner or change settings now. Screenshot shows shortcuts only, not verified OpenAgents installation/version/session readiness.
+
+**Existing canonical design reused (no new architecture):** [DJMRN-AGTEAM-001 README](../10-agent-teams-and-workflows/README.md), "تقسیم نقش قطعی دو نرم‌افزار و مراحل اتصال" and K0–K7 gates:
+- **OpenClaw Gateway** owns actual agent execution, separate identities/sessions/tool rights and durable operational agent state; the already paired **Companion** is its Windows client, NOT a second agent runtime.
+- **OpenAgents Launcher / Workspace** is a **candidate coordination/presentation/collaboration layer** for the SAME team after the OpenClaw two-agent test. The requested integration is **OpenClaw runtime/agents ↔ OpenAgents Workspace**, not simply pairing two GUI app windows or duplicating each agent.
+- Existing **OmniRoute** provides inference through the current local API gateway only; **FENIX network readiness → OmniRoute → OpenClaw Gateway → clients/agents** must be respected. Do not let Workspace invent duplicate source-of-truth for agents, states, permissions, scheduling or model/provider usage.
+
+**Decision / priority:** **DEFER OpenAgents integration until a minimal 2-agent independent-identity and peer-exchange pilot passes in OpenClaw (K5), then evaluate/try OpenAgents bridge (K6).** This is a sequencing recommendation consistent with the existing phase plan, not a completed feature or proof of technical compatibility. Current GUI chat works but had `chat.send` timeout and a GUI freeze, FENIX was restored after Windows re-login, and gated startup reliability/security/RAM are not fully validated. Avoid adding another resident process to the Windows 8GB machine before measuring a realistic workload.
+
+**K6 readiness checklist (future, after explicit owner approval):**
+1. Stabilize FENIX/OmniRoute/OpenClaw launch sequence, repeat chat, review existing gateway service env-secret warning, check actual RAM if freeze repeats.
+2. Build/test **two** genuinely independent OpenClaw agents with distinct IDs, sessions and bounded permissions; demonstrate a real handoff and reply/review trace, not manually copied chat text. No broad permissions or costs without specific approval.
+3. Inspect the installed **OpenAgents app version** and current official documentation/API/Launcher bridge support; verify free tier, quota/cost, local Windows compatibility, authorization/authentication, whether agents map 1:1 to separate Workspace members and whether the connection actually supports two-way communication. **Compatibility currently UNVERIFIED; do not claim native integration.**
+4. If supported, run the **smallest read-only pilot** with synthetic data and least privilege; one job owner, no new duplicate scheduler/LLM runtime/database. Record PASS/FAIL evidence (distinct identities, cross-agent message, trace, resource overhead, stop/restart recovery). If unsupported, compare one lightweight adapter or keeping OpenClaw-only, then seek decision before implementation.
+5. Do not modify other project tracks, expose Gateway beyond loopback, transmit secrets/credentials to third-party Workspace, install new providers or incur paid/unknown-cost operations without explicit approval.
+
+**Present state:** OpenClaw Companion and OpenAgents icons visible on owner's desktop; prior OpenClaw/OmniRoute chat path user-confirmed working; OpenAgents integration **NOT STARTED / UNVERIFIED**, marked for **K6 after K5**. **This commit changes only this canonical CURRENT-STATUS.md; no Windows or app configuration changed.**
+
 ## 2026-10-31 — DJMRN-AGTEAM-001 — POST-LOGIN-GATEWAY-FENIX-COMPANION-RECOVERY-20261031 — Windows login recovery; FENIX restored; OpenClaw GUI freeze recovered
 
 **Scope/authority:** One user-requested continuity update for the OpenClaw/Agent Teams workstream only. Evidence is the owner's 2026-10-31 pasted `openclaw.cmd gateway status --deep` terminal output, GUI screenshots and follow-up self-reports. Do **not** infer independent access to the Windows machine. Existing provider screening, Opportunity Hunter, other projects, and OmniRoute configuration were not modified in this recording.
