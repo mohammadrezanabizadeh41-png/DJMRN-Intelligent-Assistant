@@ -1,3 +1,19 @@
+## 2026-11-01 — DJMRN-OPENCLAW-AGENT-ROSTER-RECONCILIATION-001 — Owner reports SEVEN; live device reconciliation required
+
+**Explicit owner correction (2026-11-01):** The owner states there are **seven OpenClaw agents** and directs a verified roster review and registration to prevent future incorrect counts. Prior assistant replies saying "four agents" as the current total are **OUTDATED / REJECTED AS CURRENT INVENTORY**. The owner's seven count is a direct report, **not yet corroborated by a fresh device inventory**. Do not silently claim that the prior three PLANNED agents have been created.
+
+**Evidence and provisional identity candidates from existing project records:**
+- **Previously created/owner-pasted receipt:** `djmrn-pm-01` (project/team coordinator), `djmrn-arch-01` (system architect), `djmrn-cap-01` (internal capabilities/engineering), `djmrn-web-01` (web/external capabilities). These were shown as created in the FOUR-AGENT-TEAM-20261031 section below.
+- **Previously PLANNED only in Oct-31 records; CURRENT CREATION UNVERIFIED:** `djmrn-verify-01` (research/evidence verification), `djmrn-qa-security-01` (technical QA/security), `djmrn-ops-01` (runtime operations). Treat as candidates, not verified members of the owner's current seven.
+- **Default built-in agent:** `main` existed in an earlier actual `openclaw.cmd agents list` receipt; do not assume whether the owner's stated count of seven includes or excludes `main`.
+- The latest proposal also refers to "existing seven agents" but supplies no current `agents list` result. Identity IDs, number of registrations, models, workspaces, readiness, and role descriptions **must be reconciled against the device**, not invented.
+
+**Next mandatory read-only reconciliation:** On the owner's Windows machine run `openclaw.cmd agents list` (PowerShell must use `.cmd`, because `.ps1` execution is blocked). Record exact seven registered IDs (and any `main` distinction), name/role, model, workspace and routing as actually displayed; if the command exposes less than seven, classify discrepancy instead of inventing missing entries. Optionally capture `openclaw.cmd agents list --help` for supported structured formatting. Then, **on explicit owner direction to register results**, replace this provisional count with the verified current roster in this SAME CURRENT-STATUS.md (no separate registry or Notion duplicate).
+
+**Safety/boundary:** This registration records the user's correction and historical evidence; no new agent is created, disabled, renamed or changed; no account, gateway, provider, SQLite, permission or Windows changes. The complete *live* seven-agent roster remains **UNVERIFIED pending device output**. Use this note as a high-priority warning against repeating the four-agent current-count error.
+
+---
+
 ## 2026-11-01 — AGENT PROGRAM BACKLOG: PROXY / VPN RESEARCH & ENGINEERING AGENT (USER-REQUESTED)
 
 **Status: PLANNED / NOT CREATED.** Add one future specialist agent to the existing DJMRN agent/team/workflow program (topic: `10-agent-teams-and-workflows/`). Purpose: investigate proxy/VPN/network connectivity options, collect authorized diagnostics and technical evidence, compare solutions (free-first, security, privacy, reliability), and design/write/test configuration or software when separately approved. Proposed role: **DJMRN Proxy & Connectivity Research/Engineering Agent** (final agent ID and placement TBD after reviewing existing seven agents to avoid duplication). Initial scope: read-only research and diagnostics; no automatic proxy/VPN changes, credential access, installation, privileged network changes, or external paid activation. Must work with existing network stack and retain clear owner approval gates for consequential changes. **This entry records a requested future capability only; no new agent, tool, provider, or infrastructure has been deployed.**
