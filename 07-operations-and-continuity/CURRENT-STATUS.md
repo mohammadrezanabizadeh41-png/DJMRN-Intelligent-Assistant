@@ -15,19 +15,31 @@
 
 ---
 
-## 2026-11-01 — DJMRN-OPENCLAW-AGENT-ROSTER-RECONCILIATION-001 — Owner reports SEVEN; live device reconciliation required
+## 2026-11-01 — DJMRN-OPENCLAW-AGENT-ROSTER-RECONCILIATION-001 — CURRENT / VERIFIED WINDOWS INVENTORY (7 DJMRN + main)
 
-**Explicit owner correction (2026-11-01):** The owner states there are **seven OpenClaw agents** and directs a verified roster review and registration to prevent future incorrect counts. Prior assistant replies saying "four agents" as the current total are **OUTDATED / REJECTED AS CURRENT INVENTORY**. The owner's seven count is a direct report, **not yet corroborated by a fresh device inventory**. Do not silently claim that the prior three PLANNED agents have been created.
+**Canonical current roster (supersedes old 2026-10-31 4-agent / 3-planned snapshots):** Owner ran read-only PowerShell on Windows 11 using `openclaw.cmd agents list --json`, parsed the returned array and checked each reported workspace and the existence of `IDENTITY.md`, `SOUL.md`, and `AGENTS.md`. Version: **OpenClaw 2026.10.9 (8b18b55)**. Direct owner-pasted output: `TOTAL_REGISTERED=8`, `MAIN_PRESENT=True`, `NON_MAIN_COUNT=7`, `UNIQUE_IDS=8`. **EXACT COUNT: seven named DJMRN specialist agents + one built-in/default `main` = eight total.** The script's `COUNT_CHECK=RECONCILIATION_REQUIRED` was triggered only because it compared *total including main* to seven, not because actual IDs are missing/duplicated. No eighth specialized DJMRN agent is implied.
 
-**Evidence and provisional identity candidates from existing project records:**
-- **Previously created/owner-pasted receipt:** `djmrn-pm-01` (project/team coordinator), `djmrn-arch-01` (system architect), `djmrn-cap-01` (internal capabilities/engineering), `djmrn-web-01` (web/external capabilities). These were shown as created in the FOUR-AGENT-TEAM-20261031 section below.
-- **Previously PLANNED only in Oct-31 records; CURRENT CREATION UNVERIFIED:** `djmrn-verify-01` (research/evidence verification), `djmrn-qa-security-01` (technical QA/security), `djmrn-ops-01` (runtime operations). Treat as candidates, not verified members of the owner's current seven.
-- **Default built-in agent:** `main` existed in an earlier actual `openclaw.cmd agents list` receipt; do not assume whether the owner's stated count of seven includes or excludes `main`.
-- The latest proposal also refers to "existing seven agents" but supplies no current `agents list` result. Identity IDs, number of registrations, models, workspaces, readiness, and role descriptions **must be reconciled against the device**, not invented.
+### CURRENT — seven registered DJMRN specialist agents
 
-**Next mandatory read-only reconciliation:** On the owner's Windows machine run `openclaw.cmd agents list` (PowerShell must use `.cmd`, because `.ps1` execution is blocked). Record exact seven registered IDs (and any `main` distinction), name/role, model, workspace and routing as actually displayed; if the command exposes less than seven, classify discrepancy instead of inventing missing entries. Optionally capture `openclaw.cmd agents list --help` for supported structured formatting. Then, **on explicit owner direction to register results**, replace this provisional count with the verified current roster in this SAME CURRENT-STATUS.md (no separate registry or Notion duplicate).
+| Registered Agent ID | CLI display name | Project-documented responsibility (not CLI-verified `Role`) | Workspace | Workspace + IDENTITY.md + SOUL.md + AGENTS.md exist |
+|---|---|---|---|---|
+| `djmrn-pm-01` | DJMRN-PM-01 | Project manager / agent coordination | `~\.openclaw\workspace-djmrn-pm-01` | YES |
+| `djmrn-arch-01` | DJMRN-ARCH-01 | System architecture and governance | `~\.openclaw\workspace-djmrn-arch-01` | YES |
+| `djmrn-cap-01` | DJMRN-CAP-01 | Internal capabilities and infrastructure engineering | `~\.openclaw\workspace-djmrn-cap-01` | YES |
+| `djmrn-web-01` | DJMRN-WEB-01 | Web access and external tools | `~\.openclaw\workspace-djmrn-web-01` | YES |
+| `djmrn-verify-01` | DJMRN-VERIFY-01 | Independent research/evidence review | `~\.openclaw\workspace-djmrn-verify-01` | YES |
+| `djmrn-qa-security-01` | DJMRN-QA-SECURITY-01 | Software QA and security testing | `~\.openclaw\workspace-djmrn-qa-security-01` | YES |
+| `djmrn-ops-01` | DJMRN-OPS-01 | Runtime operations, recovery and health | `~\.openclaw\workspace-djmrn-ops-01` | YES |
 
-**Safety/boundary:** This registration records the user's correction and historical evidence; no new agent is created, disabled, renamed or changed; no account, gateway, provider, SQLite, permission or Windows changes. The complete *live* seven-agent roster remains **UNVERIFIED pending device output**. Use this note as a high-priority warning against repeating the four-agent current-count error.
+**Default agent outside the seven:** `main` — `IsDefault=True`, `~\.openclaw\workspace`, Workspace and all three identity/instruction files exist; CLI `Name` and `IdentityName` fields empty; `CreatedVia` empty. Seven specialist agents have `IsDefault=False`, `IdentitySource=config`, `CreatedVia=agent`, and names shown in the table.
+
+**Model as of this device evidence:** **all eight registrations**, including `main`, report `djmrn-omniroute/DJMRN-PM-Standard`. An OAuth account login for OpenAI was reported separately, but this roster **does not establish that the agent model assignments changed to Codex**. No changes to model, gateway, authentication or routing are implied by this inventory.
+
+**Evidence confidence / scope:** VERIFIED from owner-pasted CLI JSON-derived inventory: exactly 8 distinct IDs, all 8 workspace directories exist, all 24 checked files exist, names/default flags/model/workspace listed above. `Role` and `Status` were blank in CLI JSON-derived output; therefore the role descriptions in this table are **project-documented intended responsibilities**, not verified running functionality. Real inference, cross-agent communication, authorization, service health, job scheduling, and tool permissions were **NOT TESTED**. File existence is not proof of the content/quality/activation of agent identity instructions.
+
+**Historical supersession:** The Oct-31 `FOUR-AGENT-TEAM-20261031` row set is an earlier snapshot. The Oct-31 `THREE-FUTURE-AGENTS-SEQUENTIAL-PLAN` marked VERIFY / QA-SECURITY / OPS PLANNED at that time; this **Nov-01 device inventory proves all three IDs are now registered** and their workspaces/files exist. Do not use the earlier planned status for current roster. Any future additions (e.g. Proxy/VPN candidate) remain PLANNED unless new device evidence establishes creation.
+
+**Authority / next steps:** This section in the existing `07-operations-and-continuity/CURRENT-STATUS.md` is the single CURRENT OpenClaw agent inventory and counts source for DJMRN continuity until superseded by fresh device evidence; for live changing state, run `openclaw.cmd agents list --json` again. No duplicate registry, Notion write, new agent, configuration modification, process stop, paid API or external action. This owner-requested change only updates canonical project documentation.
 
 ---
 
@@ -166,7 +178,7 @@ Never assume folder `Move-Item` was atomic; never merge, delete or separately re
 
 **Scope and evidence:** Owner explicitly requested a consolidated record of the OpenClaw team work and a review of genuinely complementary next roles. Evidence for local operations consists of user-pasted OpenClaw Agent Creator receipts and agent-written reports dated 2026-10-31, **not direct filesystem access or raw tool traces**. Read this newer section before the historical AGTEAM-001 snapshot farther below (which still says two agents and K5 not tested). **No new agents, local changes, installations, permissions, or cloud data transfers were performed by this GitHub documentation update.** Topic/design folder: [10-agent-teams-and-workflows](../10-agent-teams-and-workflows/README.md).
 
-### Current agents / roles / workspaces
+### HISTORICAL (2026-10-31) — four-agent snapshot; superseded by Nov-01 verified roster above
 
 | ID | Intended specialization | Built-in role | Model | Owner-reported local workspace | Evidence / current status |
 | --- | --- | --- | --- | --- | --- |
