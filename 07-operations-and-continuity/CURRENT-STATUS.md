@@ -1,3 +1,20 @@
+## 2026-11-01 — DJMRN-JOB-DETAIL-AND-CONTACT-COEXTRACTION-20261101 — OWNER-APPROVED CANONICAL WORKFLOW
+
+**Owner explicit decision:** از این پس در **هر بررسی جزئیات آگهی شغلی**، مرحلهٔ استخراج متن کامل و استخراج **هم‌زمان اطلاعات تماس رسمی و علنی کارفرما** الزامی است؛ نباید برای جست‌وجوی ایمیل نیاز به اجرای مجدد همان آگهی باشد. این تصمیم برای همه منابع فرصت شغلی اعمال می‌شود (LinkedIn، Voice123، freelancermap و سایر سایت‌ها)، نه فقط یک آزمایش خاص.
+
+**Single-pass read-only I/O:**
+1. متن کامل آگهی در زبان اصلی، شناسه/URL، عنوان، کارفرما، زمان، وضعیت درخواست، بودجه/ارز، نوع قرارداد، دورکاری/حضور، شرح خروجی، مهارت، زبان، نمونه‌کار، شرایط اقامت/مجوز و لینک رسمی Apply را دقیقاً مطابق منبع استخراج کن؛ unknown = UNVERIFIED، بدون حدس.
+2. در همان بازدید **ایمیل‌های داخل آگهی**، صفحهٔ رسمی **Careers/Jobs** و **Contact** کارفرما، مشخصات عمومی استخدام‌کنندهٔ معرفی‌شده، ایمیل رسمی جذب نیرو/همکاری پروژه‌ای و URL فرم رسمی را بررسی کن. برای هر تماس: address، exact source URL، purpose، verification status و timestamp ثبت کن.
+3. ردهٔ شواهد تماس: `VERIFIED_RECRUITMENT_CONTACT` / `VERIFIED_PROJECT_COLLABORATION_CONTACT` / `GENERAL_COMPANY_CONTACT` / `UNVERIFIED_CONTACT` / `NO_CONTACT_FOUND`. ایمیل عمومی/حقوقی/پشتیبانی به‌صورت پیش‌فرض مسیر مجاز استخدام فرض نشود؛ ایمیل حدسی، اطلاعات خصوصی یا دورزدن محدودیت ممنوع.
+4. حتی اگر ایمیل پیدا نشد، متن آگهی حفظ شود و `NO_CONTACT_FOUND` یا `UNVERIFIED` به‌صورت صریح خروجی داده شود. تغییر عنوان، منبع، شمارش و dedup با job ID و URL انجام شود؛ چند انتشار یک شغل بدون تفکیک بررسی نشود.
+5. **فقط استخراج**: هیچ پیام، ایمیل، Easy Apply، درخواست ارتباط، رزومه/فایل، پرداخت یا تغییر حساب بدون **مجوز عملیاتی صریح جداگانهٔ صاحب پروژه** ارسال/انجام نشود. بررسی اطلاعات تماس به‌تنهایی اجازهٔ مکاتبه نیست.
+
+**Architecture/authority:** آگهی و وب‌سایت رسمی کارفرما = مرجع دادهٔ فرصت و تماس؛ Browser Use/ابزار استخراج = Observer، ChatGPT = Analyzer، ارسال از کانال مجاز فقط پس از approval = Executor. خروجی‌های اجرایی موقت در فایل‌های مأموریت مجازند؛ مرجع واحدِ ثبت تصمیم و ادامهٔ پیشرفت پروژه همین `CURRENT-STATUS.md` است. هیچ Agent، Plugin، سرویس، پایگاه داده یا مخزن موازی جدید با این تصمیم ساخته نشود.
+
+**Status:** POLICY REGISTERED / applies to future job-detail extraction prompts and workflows; اجرای عملی خودکار یا به‌روزرسانی موتورهای محلی هنوز ادعا نشده است.
+
+---
+
 ## 2026-11-01 — DJMRN-OPENCLAW-AGENT-ROSTER-RECONCILIATION-001 — Owner reports SEVEN; live device reconciliation required
 
 **Explicit owner correction (2026-11-01):** The owner states there are **seven OpenClaw agents** and directs a verified roster review and registration to prevent future incorrect counts. Prior assistant replies saying "four agents" as the current total are **OUTDATED / REJECTED AS CURRENT INVENTORY**. The owner's seven count is a direct report, **not yet corroborated by a fresh device inventory**. Do not silently claim that the prior three PLANNED agents have been created.
