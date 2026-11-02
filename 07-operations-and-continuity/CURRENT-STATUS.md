@@ -1,3 +1,9 @@
+## 2026-11-02 — Tehran loan lead T01 classification
+
+Owner classification: T01 Ava/Nava = «خریدوفروش امتیاز وام» only. Not verified as a direct lender. T02 Vamyar is next for review. No outreach or transaction.
+
+---
+
 ## 2026-11-02 — DJMRN-TEHRAN-LOAN-CONTACT-FOLLOWUP-001 — مؤسساتی که می‌توانیم از آن‌ها وام بگیریم و پیگیری کنیم
 
 **Owner request:** فهرست یکپارچه همه سرنخ‌های معرفی‌شده برای مراجعه حضوری یا تماس در تهران؛ بررسی تک‌تک توسط مالک در مراحل بعد. **Status: LEADS / NOT VERIFIED / NOT CONTACTED.** نام، آدرس، تلفن و ادعاهای خدمات صرفاً از پاسخ پژوهشی قبلی در گفتگو نقل شده‌اند؛ حضور دفتر، صحت شماره‌ها، اعتبار قانونی، مجازبودن انتقال امتیاز و امکان دریافت وام تأیید نشده‌اند. هیچ تماس یا پرداختی انجام نشده است. **Source:** user-visible ChatGPT Tehran search answer on 2026-11-02 (secondary research; individual underlying citations not independently revalidated).
