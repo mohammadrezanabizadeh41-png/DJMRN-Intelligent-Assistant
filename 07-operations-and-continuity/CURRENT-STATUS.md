@@ -1,3 +1,10 @@
+## 2026-11-02 — Tehran loan fresh leads: Arsham follow-up
+
+- **Lead 01: Holding Arsham (هلدینگ آرشام)** — Phone **09904040609**; contact person **Ms. Rad (خانم راد)**, per owner's telephone conversation. Owner reports the provider has loans available, including conditional loan offers. **Status: CONTACTED / KEEP FOR FUTURE LOAN FOLLOW-UP**. Do not infer eligibility, exact amount, guarantees, pricing, or approval from this conversation; details remain unverified. Tehran address previously listed: District 4, 196th East St (not independently validated).
+- This is owner-reported call evidence. No assistant outreach or transaction.
+
+---
+
 ## 2026-11-02 — Tehran loan contacts T03/T04 follow-up
 
 - T03 Aghaye Vam: owner reports contact numbers disconnected. Status INVALID / excluded from active outreach; retained in historical list.
