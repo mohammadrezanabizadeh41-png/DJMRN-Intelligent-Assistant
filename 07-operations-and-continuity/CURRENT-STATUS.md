@@ -1,3 +1,11 @@
+## 2026-11-02 — Tehran loan contacts T03/T04 follow-up
+
+- T03 Aghaye Vam: owner reports contact numbers disconnected. Status INVALID / excluded from active outreach; retained in historical list.
+- T04 Vamtak: owner called; no answer. Status NO ANSWER / RETRY LATER; not invalidated.
+- Next T05 Vam Vanak. Source: owner's direct reported calls; no independent phone testing by assistant.
+
+---
+
 ## 2026-11-02 — Tehran loan lead T01 classification
 
 Owner classification: T01 Ava/Nava = «خریدوفروش امتیاز وام» only. Not verified as a direct lender. T02 Vamyar is next for review. No outreach or transaction.
