@@ -1,3 +1,14 @@
+## 2026-11-02 — Fresh Tehran loan leads: pause until next session (no scheduling)
+
+- Lead 01 Arsham, Ms Rad, 09904040609: contacted; potential loans including conditional offers; keep for future reference.
+- Lead 02 Nikan, 09125950717: owner reports 50 million toman / 10 months; additional conditions unclear; UNDER REVIEW.
+- **Lead 03 Etemad Sarmayeh Tashilat Mehvar**, 02165369001: NO ANSWER TODAY; possible office closed for day only, NOT verified permanently closed. **START NEXT SESSION HERE, RETRY LEAD 03.** Andisheh, phase 1, Velayat Blvd, No. 170; etemadsarmayeh.ir (website not independently validated).
+- Lead 04 **Fori Vam**: NO VERIFIED CONTACT NUMBER or office; keep as research lead, NOT ready to call.
+- Lead 05 **Heka Card**, 02191004821; Tehran, Valiasr above Vanak Sq No.248; heka-card.com; purchase credit rather than cash loan; retain reference only.
+- User explicitly requests NO reminder, automation, schedule or timed task. Resume manually in this chat tomorrow.
+
+---
+
 ## 2026-11-02 — Tehran loan fresh leads: Arsham follow-up
 
 - **Lead 01: Holding Arsham (هلدینگ آرشام)** — Phone **09904040609**; contact person **Ms. Rad (خانم راد)**, per owner's telephone conversation. Owner reports the provider has loans available, including conditional loan offers. **Status: CONTACTED / KEEP FOR FUTURE LOAN FOLLOW-UP**. Do not infer eligibility, exact amount, guarantees, pricing, or approval from this conversation; details remain unverified. Tehran address previously listed: District 4, 196th East St (not independently validated).
