@@ -1,3 +1,11 @@
+## 2026-11-06 — CRYPTO CLI VERIFIED / FIRST PUBLIC MARKET DATA ATTEMPT (CURRENT)
+
+On remote `DJMRN-LAPTOP`, Freqtrade CLI `--version` succeeded (exit code 0): Windows 11 build 26300, Python 3.14.7, CCXT 4.5.92, Freqtrade 2026.10. `download-data --help` also succeeded, confirming supported flags.
+
+Started a small bounded, **public read-only** Kraken spot OHLCV download: `download-data --exchange kraken --pairs BTC/USD ETH/USD --days 3 --timeframes 1h --trading-mode spot --data-format-ohlcv feather --datadir %LOCALAPPDATA%\DJMRN\CryptoMarket\market-data`. Remote process PID 3768, first log `freqtrade 2026.10`; at last check it remained running with **no completion or exchange result yet**. Do not mark data acquired until successful exit and files/candle counts verified. No exchange keys, orders, subscriptions or background scheduler enabled. Next: poll PID 3768, inspect output; on network errors diagnose exchange reachability/proxy without modifying VPN; verify persisted OHLCV and provenance.
+
+---
+
 ## 2026-11-06 — CRYPTO P1 INSTALL VERIFIED, EXECUTABLE CHECK PENDING (CURRENT)
 
 Remote Desktop Commander returned completed install process PID 1740, exit code 0, 82 installed packages; Freqtrade 2026.10, CCXT 4.5.92, pandas 3.1.0, NumPy 2.5.4, TA-Lib 0.8.3, SciPy 1.18.1. Installation location: `%LOCALAPPDATA%\DJMRN\CryptoMarket\freqtrade\.venv`, isolated Python 3.14.7. **Package installation confirmed.**
