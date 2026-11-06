@@ -1,3 +1,13 @@
+## 2026-11-06 — DJMRN-CRYPTO-MARKET-001 — HYBRID ROADMAP APPROVED (CURRENT)
+
+**User decision:** DJMRN is an independent hybrid/modular crypto intelligence system, NOT locked to any one application. Reuse multiple open-source programs as replaceable modules and write minimal glue code only when necessary. Headless background analysis; technical + fundamental + competitors + tokenomics/on-chain + news/macro + quantitative validation + AI evidence review + risk-adjusted entry/exit/abstention. No permanent chart UI, no 100 agents, no real orders.
+
+**Canonical roadmap updated:** [11-crypto-market-intelligence/README.md](../11-crypto-market-intelligence/README.md), commit `ffd34c1c89fdef1ab2930da805498faf7c1723ae`. Contains candidate matrix (Freqtrade/FreqAI, onchain-research-desk, SignalDesk, TradingAgents, FinRobot, Fincept, Superalgos, Qlib, CCXT), P0–P7 sequence, acceptance/failure criteria, data contracts, free-first and licensing gates. Candidate capabilities/costs/licenses are NOT all verified; do not assume ready-to-run integration.
+
+**NEXT ACTION:** Start with official Freqtrade docs/version/license and select reversible Windows PowerShell isolated installation route; provide **one install command and first public exchange data-fetch test** after user explicitly approves installation. No separate hardware benchmark prerequisite. VPN runs in background; test real network connectivity only when the application is running. If Freqtrade fails fit, test CCXT alternative. Then fundamental onchain research (P2). Preserve current state here and roadmap in topical README. No software installed, no trading, no payment, no credentials, no scheduling.
+
+---
+
 ## 2026-11-06 — DJMRN-CRYPTO-MARKET-001 — پروژه رمز ارز (CURRENT / PLANNING)
 
 **User-authorized project registration.** Dedicated topical project created: [11-crypto-market-intelligence/README.md](../11-crypto-market-intelligence/README.md), commit `9b916b540e9e9670a590046b9e97c1bba10c411b`. This project aims at an **autonomous intelligent crypto opportunity analyst**, not a chart-only terminal: continuous monitoring, discovery beyond watchlist, technical + fundamental + news/on-chain/macro reasoning, historical and forward model validation, ranked entry/exit zones, invalidation, risk and alerts; target up to 100 assets on Windows 11 8GB RAM. User's ultimate objective is real investment decision support, but **NO real trading or account access authorized**.
