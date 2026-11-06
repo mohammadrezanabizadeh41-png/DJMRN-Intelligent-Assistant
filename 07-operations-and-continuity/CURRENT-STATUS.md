@@ -1,3 +1,9 @@
+## 2026-11-06 — BITCOIN PILOT USERDIR FIXED; RETRY ACTIVE (CURRENT)
+
+Reviewed Remote Desktop Commander approved call result: `freqtrade create-userdir --userdir %LOCALAPPDATA%\DJMRN\CryptoMarket\user_data` **succeeded** (PID 11360 finished; log explicitly reports created directory). Re-ran isolated Freqtrade 2026.10 public-data test for **BTC/USD only**, Kraken spot, 1h, last 3 days, Feather output, explicit userdir and datadir `%LOCALAPPDATA%\DJMRN\CryptoMarket\market-data`. Remote process PID 10800; initial logs confirm accepted userdir, created datadir, accepted pair/timeframe, Kraken officially supported, and configuration validation. **No download success or persisted candle count yet verified; process remains running as of last poll.** No keys, orders, paid APIs, or VPN changes. Next: poll PID 10800; verify Feather file, UTC time bounds, row count, duplicates/gaps; if network failure, diagnose without changing VPN. Scope: Bitcoin asset-first pilot; BTC/USD is one venue-specific quote feed.
+
+---
+
 ## 2026-11-06 — CRYPTO CLI VERIFIED / FIRST PUBLIC MARKET DATA ATTEMPT (CURRENT)
 
 On remote `DJMRN-LAPTOP`, Freqtrade CLI `--version` succeeded (exit code 0): Windows 11 build 26300, Python 3.14.7, CCXT 4.5.92, Freqtrade 2026.10. `download-data --help` also succeeded, confirming supported flags.
