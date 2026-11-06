@@ -1,3 +1,9 @@
+## 2026-11-06 — CRYPTO P0 INSTALL PROGRESS (LATEST)
+
+Remote laptop `DJMRN-LAPTOP`: official Freqtrade stable branch cloned successfully at `%LOCALAPPDATA%\DJMRN\CryptoMarket\freqtrade`, Git commit `4cf0351`, origin `https://github.com/freqtrade/freqtrade.git`. The source's setup.ps1 supports Python 3.12/3.13/3.14; pyproject requires >=3.12. Existing Python 3.14.7 and uv were reused. Isolated `.venv` created successfully with `uv venv --python 3.14 .venv`. Dependency install `uv pip install --python .venv\Scripts\python.exe -e .` started as remote process PID 1740; **STILL RUNNING / NOT VERIFIED COMPLETE** at last inspection; `freqtrade.exe` not yet present and uv process observed. No trading keys, real orders, Windows execution-policy changes, Docker or WSL installation. **NEXT:** poll remote PID 1740; confirm success/failure and `.venv\Scripts\freqtrade.exe --version`; if successful, fetch small public OHLCV data with `download-data` (no trading). Document actual outcome and errors. The roadmap remains in `11-crypto-market-intelligence/IMPLEMENTATION-PLAN.md`.
+
+---
+
 ## 2026-11-06 — CRYPTO P0 REMOTE INSTALL ATTEMPT (CURRENT)
 
 User explicitly approved remote download/install with reporting. Verified GitHub roadmap files: `11-crypto-market-intelligence/README.md` and `11-crypto-market-intelligence/IMPLEMENTATION-PLAN.md`. Remote Desktop Commander device `DJMRN-LAPTOP` online. Read-only prerequisites: Git 2.55.0, Python 3.14 (py launcher), uv present, wsl command present, docker command not found. Official Freqtrade docs recommend Docker/WSL for Windows, with native `setup.ps1` as fallback; Python 3.14 compatibility NOT established. Do not change system-wide execution policy or install large dependencies without evaluating actual installer requirements.
