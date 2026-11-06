@@ -1,3 +1,15 @@
+## 2026-11-06 — DJMRN-CRYPTO-MARKET-001 — پروژه رمز ارز (CURRENT / PLANNING)
+
+**User-authorized project registration.** Dedicated topical project created: [11-crypto-market-intelligence/README.md](../11-crypto-market-intelligence/README.md), commit `9b916b540e9e9670a590046b9e97c1bba10c411b`. This project aims at an **autonomous intelligent crypto opportunity analyst**, not a chart-only terminal: continuous monitoring, discovery beyond watchlist, technical + fundamental + news/on-chain/macro reasoning, historical and forward model validation, ranked entry/exit zones, invalidation, risk and alerts; target up to 100 assets on Windows 11 8GB RAM. User's ultimate objective is real investment decision support, but **NO real trading or account access authorized**.
+
+**Work research synthesis:** Freqtrade + FreqUI + lightweight research layer + SQLite + optional approved cloud AI is a **conditional candidate**, NOT an approved install or proven intelligent analyst. Other candidates include Superalgos, Fincept, TradingAgents, FinRobot, Qlib, FreqAI and newer GitHub agent projects. Full Work evidence package and 53 citations not yet supplied for independent verification. Windows RAM 3–4GB, live source access, prediction quality and 100-asset capacity remain UNVERIFIED.
+
+**Stages:** S0 independent GitHub engine selection and evidence → S1 authorized local baseline/install → S2 real 10-asset automated analysis → S3 out-of-sample/walk-forward prediction validation → S4 discovery/ranked paper alerts/recovery → S5 scale 10→25→60→100 with measured RAM/quality → S6 separately approved readiness for real-money use. Detailed criteria and research provenance in topical README; **this file remains the only current progress ledger**.
+
+**NEXT:** Execute S0 read-only: inspect 4–6 promising GitHub intelligent-analysis engines and official docs/code/license, compare all-in-one versus Freqtrade + one analytical engine, verify free quotas, Windows fit and tests; propose smallest viable real-data pilot before requesting installation permission. No installation, costs, API key, trades, schedules, or additional writes performed.
+
+---
+
 ## 2026-11-02 — Fresh Tehran loan leads: pause until next session (no scheduling)
 
 - Lead 01 Arsham, Ms Rad, 09904040609: contacted; potential loans including conditional offers; keep for future reference.
