@@ -1,3 +1,11 @@
+## 2026-11-06 — CRYPTO INTELLIGENCE PRACTICAL START (CURRENT)
+
+**New approved detailed execution plan:** [11-crypto-market-intelligence/IMPLEMENTATION-PLAN.md](../11-crypto-market-intelligence/IMPLEMENTATION-PLAN.md), commit `28196342a3fa0c4d482dcb55c62b8b0eeaad20d1`. Multi-source historical/fundamental/competitor/news/macro/on-chain/credibility/tokenized-assets research, quantitative validation, optional AI tool orchestration, risk-aware entry/exit, headless alerts. Candidate module inventory and P0–P7 acceptance criteria are in that plan.
+
+**NEXT:** P0 verify official Freqtrade Windows isolated-install and public-data instructions, then request approval for installation and run the first 3–10-pair data test. No separate hardware benchmark prerequisite. Freqtrade is replaceable; CCXT is fallback. **Not yet installed, no trading or credentials.** This file remains the only current status authority.
+
+---
+
 ## 2026-11-06 — DJMRN-CRYPTO-MARKET-001 — HYBRID ROADMAP APPROVED (CURRENT)
 
 **User decision:** DJMRN is an independent hybrid/modular crypto intelligence system, NOT locked to any one application. Reuse multiple open-source programs as replaceable modules and write minimal glue code only when necessary. Headless background analysis; technical + fundamental + competitors + tokenomics/on-chain + news/macro + quantitative validation + AI evidence review + risk-adjusted entry/exit/abstention. No permanent chart UI, no 100 agents, no real orders.
