@@ -1,3 +1,55 @@
+## 2026-11-07 — DJMRN-CRYPTO-OSS-FORK-TEST-QUEUE-2026-11-07 (CURRENT / TEST QUEUE, NOT INSTALL APPROVAL)
+
+**User explicit save request:** Maintain a **single categorized, sequential test queue** for existing open-source / source-available crypto/financial GUI programs and potential reuse, code customization, removal of unnecessary modules, and a lightweight DJMRN build. This is the canonical *test queue/progress* entry for mission \`DJMRN-CRYPTO-MARKET-001\`; topical project specification: [11-crypto-market-intelligence/README.md](../11-crypto-market-intelligence/README.md). Do not create a second mutable task list or duplicate the queue in Notion. **Status for ALL candidates: RESEARCH / NOT INSTALLED / NOT BENCHMARKED**, unless separately verified later.
+
+**Objective and constraints:** An understandable, locally usable Windows 11 desktop market-intelligence GUI, 8GB total RAM (target app budget ~3–4GB, verify on device), historical 3-year OHLCV and efficient incremental refresh for BTC then ETH/SOL/10→25→60→100 crypto markets; 15/30-minute read-only monitoring while PC is on; configurable historical/technical/ML strategy laboratory (walk-forward/OOS, fees/slippage, robustness); news, on-chain, fundamental, liquidity and macro inputs; source-backed ranked WATCH / ENTRY-CANDIDATE / EXIT-CANDIDATE / NO-SIGNAL alerts with risk/invalidation and outcome tracking. **No promise of profitable signals, fixed win rate, paid usage, key sharing, execution of real trades, or API subscription.** Free-first; unknown prices/limits = UNKNOWN/DENY. Existing local Coinbase BTC history and pilot reports preserved; previously installed **Freqtrade/FreqAI was deliberately uninstalled** with its shortcut and background processes; *do not reinstall by default*.
+
+### A. Complete product / GUI candidates — test in this order (one at a time)
+
+| Queue | Product and canonical source | Initial suitability; license *provisional, verify at test time* | What must be tested or simplified | Status |
+|---|---|---|---|---|
+| 01 | **OpenTerminalUI (upstream)** — https://github.com/Hitheshkaranth/OpenTerminalUI | Broad financial GUI, charts, crypto/fundamentals, screening, research, alerts, backtesting; reportedly MIT; promising feature coverage but high integration/runtime risk | Audit *implemented vs README* features, actual crypto refresh/3y charts/backtests/news, provider gating, local resources, frontend/backend/DB/Redis and ability to disable/remove stock/derivatives/unneeded modules. Check source provenance and legal terms. | UNTESTED — NEXT READ-ONLY SOURCE AUDIT |
+| 01-F | **OpenTerminalUI (laanito fork)** — https://github.com/laanito/OpenTerminalUI | Same underlying product family, NOT an independent second product; potentially different supported modules/provider gating; claimed MIT | Compare diff, current branch, upstream relationship, active maintainers, reproducible operation, crypto model/research/privacy. Choose **one** base only after evidence. | UNTESTED — COMPARE WITH 01 |
+| 02 | **Superalgos** — https://github.com/Superalgos/Superalgos | Crypto-first visual charting/data-mining/backtesting/strategy automation; Apache-2.0 reported | Inspect memory-minimized mode, browser/Node overhead, disable heavy/social/trading modules, strategy API, multi-market read-only monitoring, extensibility of news/fundamentals | UNTESTED |
+| 03 | **OctoBot** — https://github.com/Drakkar-Software/OctoBot | Python crypto framework, web GUI, paper/backtesting, alerts; GPL-3.0-or-later reported | Verify Windows build/version, RAM with no exchange keys, isolate live execution, GUI/custom adapters, licensing obligations, ability to strip bot-specific trading features | UNTESTED |
+| 04 | **Jesse** — https://github.com/jesse-ai/jesse | Quant backtesting, strategies/optimization, charts; quant-research module candidate | Confirm which features are actually OSS/free, license, headless + GUI availability, crypto data sources and integration effort | UNTESTED |
+| 05 | **Fincept Terminal** — https://github.com/Fincept-Corporation/FinceptTerminal | Native desktop financial terminal/research; open edition AGPL-3.0 reported; Enterprise has different feature availability | Verify open-edition availability of backtest/ML/AI vs paid features, source/Qt/Python complexity, external API/LLM cost and RAM, can it be slimmed legally | UNTESTED — COST/FEATURE GATE |
+| 06 | **OpenTraderWorld** — https://github.com/G-OTW/OpenTraderWorld | Broad self-hosted GUI/news/backtest/optimizer/alerts; FSL-1.1-MIT reported, **source-available, not automatically OSI-open-source** | Verify Competing Use/license limits, Docker dependency/Windows RAM, which features are free, provider limits, possible partial module reuse | UNTESTED — LICENSE GATE |
+| 07 | **Hummingbot Dashboard** — https://github.com/hummingbot/dashboard | Trading dashboard + strategies; prior source suggests old dashboard no longer actively maintained | Check current maintenance/archival, whether a newer supported replacement exists and whether any pieces are relevant; no install if obsolete | UNTESTED — LOWER PRIORITY |
+
+### B. Complementary quant engines / specialized OSS (not replacements for a complete GUI)
+
+| Queue | Repo | Proposed role / test |
+|---|---|---|
+| 08 | **QuantConnect LEAN** — https://github.com/QuantConnect/Lean | Institutional-style quant/backtest engine, Python/C# integration; assess embedded/offline usage and license |
+| 09 | **Microsoft Qlib** — https://github.com/microsoft/qlib | Research/model evaluation and forecasting; MIT reported; test fit for crypto data and resource budget |
+| 10 | **TradingAgents** — https://github.com/TauricResearch/TradingAgents | Optional AI analyst; test source evidence, LLM costs/privacy/quality before activation |
+| 11 | **FinRobot** — https://github.com/AI4Finance-Foundation/FinRobot | Optional multi-source research/AI patterns, check finance vs crypto fit and provider costs |
+| 12 | **onchain-research-desk** — https://github.com/elakumuk/onchain-research-desk | Optional on-chain/fundamental research; verify repo/license/API availability |
+| 13 | **SignalDesk** — https://github.com/vendoriaai/SignalDesk | Optional signal scanning/ranking; repo authenticity, license, and working implementation **UNVERIFIED** |
+
+### C. Extra exploratory programs to screen after main shortlist (not certified recommendations)
+
+| Repo | Intended verification |
+|---|---|
+| **Scanstream** — https://github.com/litmajor/Scanstream | Claims integrated crypto React GUI, backtesting, multi-agent signals; independently verify code, license, deployment and heavy-resource footprint |
+| **CryptoRadar** — https://github.com/artyomsv/crypto-radar | Claims multi-dimensional crypto signal engine, news, outcomes; inspect microservices/DB overhead, licensing, safety of any trade-execution module |
+| **TerminalCrypt** — https://github.com/mangoostaa/TerminalCrypt | Python/Rust low-footprint live crypto terminal; **TUI not the required rich desktop GUI**, evaluate only as component |
+| **alpha-terminal** — https://github.com/ronitg1/alpha-terminal | Research terminal with ML/alerts; equity/options oriented, check crypto fit |
+| **Freqtrade/FreqAI** — https://github.com/freqtrade/freqtrade | HISTORICAL / DESELECTED: tried and then explicitly removed from laptop; do **not** reintroduce without a new evidence-based decision and explicit install approval |
+
+### D. One-at-a-time evaluation contract / acceptance gate
+
+1. **Read-only audit first** for candidate 01: source/license and fork relationship; actual implemented functionality vs README/screenshots; edition restrictions, external data/API costs/rate limits, security/maintainer health, Windows prerequisites, RAM/disk/startup, code module boundaries, tests/CI and ability to fork and maintain.
+2. **No blanket installation**. For any approved bounded local test, use an isolated and reversible environment; never alter VPN, activate paid APIs, connect a trading account or enable execution. Record baseline RAM/CPU/disk, and restore/delete cleanly if rejected.
+3. **Real I/O vertical test**: ingest existing locally preserved Coinbase BTC OHLCV, show ≥3 years of actual candles interactively, incremental 15/30-min updates, source/timestamp tracking, missing-data recovery and API-failure handling; first test BTC only, then 3→10 markets. Avoid cloud-only/API-paid features.
+4. **Quant/alerts test**: run one deterministic baseline and one model with chronological/OOS walk-forward, realistic friction and clear rejection thresholds; inspect no-lookahead, alert dedup, risk explanation, zero real trades. News/AI/100 markets only after proven value.
+5. **Slimming/fork comparison**: estimate what modules can be **disabled by config** vs safely **removed in code**, effects on UI/API/schema/dependencies/tests and upstream upgrade path. Prefer disabling/feature flags over destructive source changes initially. Compare **fork one product** vs **reuse select libraries with slim Python GUI**; select whichever genuinely minimizes complexity, memory and upkeep. Do not clone all candidates, duplicate data authorities or automatically add services/agents.
+6. **Outcome per candidate**: PASS / CONDITIONAL / REJECT / UNVERIFIED + evidence URL/commit/version, Windows run results, RAM/CPU, data completeness, GUI/backtest/alert behavior, code/license/security implications, free-tier validity, required modifications, and next-candidate decision.
+7. **NEXT ACTION (not executed):** audit OpenTerminalUI upstream and laanito fork read-only, compare supported and real modules + dependencies/licenses, then propose a *single* reversible low-memory test if justified. Remaining rows are queued, not already tested. Future test results update this **single canonical CURRENT-STATUS entry** when the user explicitly asks to save.
+
+---
+
 ## 2026-11-06 — BITCOIN PILOT USERDIR FIXED; RETRY ACTIVE (CURRENT)
 
 Reviewed Remote Desktop Commander approved call result: `freqtrade create-userdir --userdir %LOCALAPPDATA%\DJMRN\CryptoMarket\user_data` **succeeded** (PID 11360 finished; log explicitly reports created directory). Re-ran isolated Freqtrade 2026.10 public-data test for **BTC/USD only**, Kraken spot, 1h, last 3 days, Feather output, explicit userdir and datadir `%LOCALAPPDATA%\DJMRN\CryptoMarket\market-data`. Remote process PID 10800; initial logs confirm accepted userdir, created datadir, accepted pair/timeframe, Kraken officially supported, and configuration validation. **No download success or persisted candle count yet verified; process remains running as of last poll.** No keys, orders, paid APIs, or VPN changes. Next: poll PID 10800; verify Feather file, UTC time bounds, row count, duplicates/gaps; if network failure, diagnose without changing VPN. Scope: Bitcoin asset-first pilot; BTC/USD is one venue-specific quote feed.
