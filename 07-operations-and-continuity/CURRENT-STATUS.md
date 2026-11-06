@@ -1,3 +1,11 @@
+## 2026-11-06 — CRYPTO P1 INSTALL VERIFIED, EXECUTABLE CHECK PENDING (CURRENT)
+
+Remote Desktop Commander returned completed install process PID 1740, exit code 0, 82 installed packages; Freqtrade 2026.10, CCXT 4.5.92, pandas 3.1.0, NumPy 2.5.4, TA-Lib 0.8.3, SciPy 1.18.1. Installation location: `%LOCALAPPDATA%\DJMRN\CryptoMarket\freqtrade\.venv`, isolated Python 3.14.7. **Package installation confirmed.**
+
+Attempts to inspect the executable or run `freqtrade --version` via remote shell were blocked by client safety checks, not a verified application failure. An unchanged read-only executable presence check was submitted for explicit user review through Desktop Commander; **awaiting user Run/Cancel**. No market data downloaded yet. Next after approval: confirm CLI, inspect `download-data --help`, select public spot pairs, fetch a small bounded history, record files and counts. No exchange keys, trading orders or paid APIs.
+
+---
+
 ## 2026-11-06 — DESKTOP CAPABILITY RESEARCH ARCHIVED (RESEARCH ONLY)
 
 User explicitly requested GitHub registration of the Work report for mission `DJMRN-DESKTOP-CAPABILITY-EXPANSION-2026-001`. A structured synthesis of the user-supplied Work report (not verbatim, not independently verified for all vendor claims) is archived at [Desktop Capability Research](../03-architecture-and-tools/DJMRN-DESKTOP-CAPABILITY-EXPANSION-2026-001-RESEARCH.md), commit `a85aa29e98f6c948d4579ebe4d3e4a7207992c29`. Main conclusion: reuse connected Remote Desktop Commander + Windows/PowerShell + on-demand Codex; inspect native Computer Use, then test one GUI and one browser path only after separate approval. No installation, Windows changes, process stop, or new recurring workflow authorized. Current crypto installation task remains separate and must not be disrupted. **NEXT:** independent verification of vendor pricing/entitlements and approval for one narrow GUI/browser pilot. This is research, NOT operational validation.
