@@ -1,3 +1,11 @@
+## 2026-11-06 — CRYPTO P0 REMOTE INSTALL ATTEMPT (CURRENT)
+
+User explicitly approved remote download/install with reporting. Verified GitHub roadmap files: `11-crypto-market-intelligence/README.md` and `11-crypto-market-intelligence/IMPLEMENTATION-PLAN.md`. Remote Desktop Commander device `DJMRN-LAPTOP` online. Read-only prerequisites: Git 2.55.0, Python 3.14 (py launcher), uv present, wsl command present, docker command not found. Official Freqtrade docs recommend Docker/WSL for Windows, with native `setup.ps1` as fallback; Python 3.14 compatibility NOT established. Do not change system-wide execution policy or install large dependencies without evaluating actual installer requirements.
+
+**Action initiated:** `git clone --depth 1 --branch stable https://github.com/freqtrade/freqtrade.git` to `%LOCALAPPDATA%\DJMRN\CryptoMarket\freqtrade`, remote process PID 13560. Initial output `Cloning into...`; **completion NOT YET VERIFIED** as of this checkpoint. No Freqtrade dependencies installed, no trading keys, no orders. Need poll process and inspect actual source/requirements; select isolated Python version if necessary, then perform reversible installation and `freqtrade --version`, followed by public `download-data` test. Do not mistake cloned source for installed program. Record failures and outcome here.
+
+---
+
 ## 2026-11-06 — CRYPTO INTELLIGENCE PRACTICAL START (CURRENT)
 
 **New approved detailed execution plan:** [11-crypto-market-intelligence/IMPLEMENTATION-PLAN.md](../11-crypto-market-intelligence/IMPLEMENTATION-PLAN.md), commit `28196342a3fa0c4d482dcb55c62b8b0eeaad20d1`. Multi-source historical/fundamental/competitor/news/macro/on-chain/credibility/tokenized-assets research, quantitative validation, optional AI tool orchestration, risk-aware entry/exit, headless alerts. Candidate module inventory and P0–P7 acceptance criteria are in that plan.
