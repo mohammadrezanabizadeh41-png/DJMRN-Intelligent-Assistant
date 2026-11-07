@@ -1,3 +1,30 @@
+## 2026-11-07 — DJMRN-OPENTERMINALUI-BTC4H-LIVE-PROBE-20261107 (CURRENT / READ-ONLY BTC 4H AUDIT; USER-REQUESTED GITHUB RECORD)
+
+**Scope and authorization:** User expressly requested checking actual BTC-USD 4H history available **from the running OpenTerminalUI itself** on DJMRN-LAPTOP (1y, 2y, maximum accessible), and saving the outcome in this one canonical GitHub status file. This entry supersedes the earlier *INSTALL PAUSED* snapshot **for the application's operational status only**. No installation, source modification, database migration, strategy configuration, training, trading, provider signup, payment, or architecture adoption was performed.
+
+**Verified runtime:** Original upstream Hitheshkaranth/OpenTerminalUI clone at `%LOCALAPPDATA%\DJMRN\OpenTerminalUI`; Git HEAD `48912fb`, tracked diff count 0; full Python uvicorn backend listening on `127.0.0.1:8000`, `/healthz` returned HTTP 200, and Edge app window `OpenTerminalUI` open. User had registered and entered graphical UI in this session. Read-only direct-source test used *installed program code* `backend.core.yahoo_client.YahooClient.get_chart("BTC-USD", range_str=..., interval="4h")`, which fetches Yahoo Finance chart data; **not** the separately authored DJMRN Coinbase Python fetcher, and not an authenticated end-to-end browser/UI export.
+
+### Live BTC/USD 4H history evidence (observed 2026-11-07 14:30–14:32 UTC)
+
+| Requested Yahoo range | Returned timestamps | First UTC | Closed 4H timestamps | Closed rows with complete OHLCV | Outcome |
+|---|---:|---|---:|---:|---|
+| `6mo` | 1,106 | 2026-05-07 12:00 | 1,104 | 1,099 | **PASS**, 5 closed rows with missing OHLCV |
+| `1y` | 2,192 | 2025-11-07 12:00 | 2,190 | 2,146 | **PASS**, 44 closed rows with missing OHLCV |
+| `2y` | 4,382 | 2024-11-07 12:00 | 4,380 | **4,336** | **PASS**, 44 closed rows with missing OHLCV |
+| `3y` / `5y` | — | — | — | — | HTTP **422** for requested 4H |
+| `max` | 147 | 2014-10-01 00:00 | not applicable | not applicable | **NOT 4H:** Yahoo silently returned `dataGranularity=1mo` (monthly). Never accept as 4H. |
+
+**Data quality:** For the `2y` result, standard completed 4H timestamps had no duplicates, no >4h timestamp jumps, no OHLC ordering/negative-volume violations among complete rows, and no unexpected UTC alignment. However **44 time-stamped rows have ALL `open,high,low,close,volume` null** and MUST NOT be treated as usable bars: 2025-11-17 08:00 to 2025-11-21 04:00 UTC (24); 2025-11-29 00:00–12:00 (4); 2025-11-29 20:00–2025-12-01 00:00 (8); 2026-05-05 12:00–20:00 (3); 2026-07-13 04:00–20:00 (5). The newest completed candle starts **2026-11-07 08:00 UTC**; two later dynamic/unfinished entries must be excluded. Distinguish timestamp continuity from valid **OHLCV continuity**. Before any BTC model/strategy backtest: reconcile missing candles against an independent credible exchange source, preserve provenance and candle-close-only alignment, and avoid simulated/fabricated candles.
+
+**Existing tools vs mission requirement (evidence from live installed source/testing):** OpenTerminalUI has **20 built-in technical strategy presets** with configurable contexts, `Portfolio Lab / Blends` persistent `strategies_json` definitions with maximum **10** strategies, and Backtesting `/backtests/compare` maximum **6 historical strategy runs** (not a cap on operational models). The inspected portfolio blend service currently combines **backtested returns** and forces market `NSE`; UI option `WEIGHTED_SUM_SIGNALS` does NOT establish implemented live signal voting. Crypto UI refreshes market panels regularly using Yahoo data; live BTC multi-timeframe rules, per-asset strategy orchestration, alert qualification with fundamental/news/market-regime conditions and persistence/reload checks are **not operationally verified**. A separate read-only compute-only performance simulation with repeated 4H BTC history (4,337 bars) ran 10 existing strategies across 30 repeated virtual market slots (300 computations) in ~22s without error; this did **not** benchmark 30 independent live market fetches or production stability.
+
+**Open questions / next user-controlled test:** Keep the existing app and code intact until needed changes are proven. (1) Audit and repair/exclude OHLCV-null 4H bars via source-aware read-only verification; (2) try one BTC 4H technical strategy/preset with chosen parameters in GUI, save and reopen app to verify persistence; (3) run a small multi-timeframe strategy comparison with complete data and fees/slippage, ensuring no synthetic fallback; (4) check whether existing Blend/Alerts can express 4 entry/exit plus 2 validation conditions and dynamically updated levels, then propose the *smallest* connection/extension only if missing; (5) expand to multiple crypto pairs with scheduled read-only monitoring after proven real I/O, repeatability, resource and API-limit tests. No trading orders, paid API credits, local ML/LLM agent activation or GitHub source fork changes authorized.
+
+**Persistence scope of this test:** The remote 4H candles were fetched **in memory** for validation; neither this historical series nor trained models were imported into OpenTerminalUI database or committed as raw time-series to GitHub. This GitHub entry is the single durable evidence/continuity record.
+
+
+---
+
 ## 2026-11-07 — DJMRN-OPENTERMINALUI-INSTALL-PAUSED-2026-11-07 (CURRENT / INSTALLATION PAUSED BY USER)
 
 **Mission:** DJMRN-CRYPTO-MARKET-001; candidate **01 OpenTerminalUI upstream** from the canonical [OSS review/test queue below](#2026-11-07--djmrn-crypto-oss-fork-test-queue-2026-11-07-current--test-queue-not-install-approval). **Scope:** User explicitly authorized download and installation of full **graphical** version on DJMRN-LAPTOP, but then explicitly said **STOP** during installation. All further installation, customization, execution and configuration changes are **ON HOLD pending new instruction**. This is the canonical single-source status/continuity record; no duplicate project log/Notion write.
