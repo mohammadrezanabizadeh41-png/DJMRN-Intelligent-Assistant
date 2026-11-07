@@ -1,3 +1,44 @@
+## 2026-11-07 — DJMRN-OPENTERMINALUI-INSTALL-PAUSED-2026-11-07 (CURRENT / INSTALLATION PAUSED BY USER)
+
+**Mission:** DJMRN-CRYPTO-MARKET-001; candidate **01 OpenTerminalUI upstream** from the canonical [OSS review/test queue below](#2026-11-07--djmrn-crypto-oss-fork-test-queue-2026-11-07-current--test-queue-not-install-approval). **Scope:** User explicitly authorized download and installation of full **graphical** version on DJMRN-LAPTOP, but then explicitly said **STOP** during installation. All further installation, customization, execution and configuration changes are **ON HOLD pending new instruction**. This is the canonical single-source status/continuity record; no duplicate project log/Notion write.
+
+### Actions actually performed and evidence (chronological)
+
+| # | Action / evidence | Result |
+|---|---|---|
+| 1 | Remote Desktop Commander device initially offline following closure of its PowerShell remote process; user ran `npx.cmd @wonderwhy-er/desktop-commander@latest remote`; rechecked `DJMRN-LAPTOP` device id `e9a54f71-f73f-4082-8dcc-874cab32c67b` | **Online verified**, no changes to remote agent configuration |
+| 2 | Environment inventory on Windows: Git available; Node `v24.22.1`, npm `11.19.1`, `uv`, Python launcher `3.14`; Docker **not installed**; no pre-existing `%LOCALAPPDATA%\DJMRN\OpenTerminalUI`; port 8000 not listening at baseline; free disk ~146.69 GiB, free physical RAM ~2.43 GiB | **Verified baseline**. RAM figures are snapshots, not benchmarks |
+| 3 | Fetched official upstream `https://github.com/Hitheshkaranth/OpenTerminalUI.git` using `git clone --depth 1 --single-branch --branch main --filter=blob:none` into `C:\Users\Mrn7206\AppData\Local\DJMRN\OpenTerminalUI` | **Clone PASS**; HEAD `48912fb420b1d16d6e412e9dec69871b242b93b2`; 1,823 working-tree files checked out; frontend source present |
+| 4 | Acquired `uv`-managed standalone CPython `3.11.17` and created isolated virtual environment `%LOCALAPPDATA%\DJMRN\OpenTerminalUI\.venv` with seeded pip/setuptools/wheel; ran Python version check | **PASS** (`ISOLATED_PYTHON=3.11.17`, `VENV_EXISTS=True`). System Python 3.14 untouched. Initial Python download was slow but finished after ~2m48s |
+| 5 | Started installing full upstream backend requirements with `uv pip install --python ...\.venv\Scripts\python.exe --no-progress -r ...\backend\requirements.txt` | Resolver reported **135 packages**, downloads including scipy/pandas/pyarrow and ~97 MiB xgboost; build of empyrical and mibian verified. **No final backend install success or import test recorded before stop.** Must check environment rather than assume it finished |
+| 6 | Inspected upstream local environment/entry logic in read-only mode. Created `.env` from `.env.example` with cryptographically random JWT signing and cache signing secrets plus an initial local admin password, email `admin@openterminal.local`; set optional `FINNHUB_WS_ENABLED=false`, `AGENT_DEBATE_ENABLED=false`, `LM_STUDIO_ENABLED=false`, `OPENTERMINALUI_PREFETCH_ENABLED=0`; no market/broker/paid AI API keys added | **Local config file created**. Values of secrets/password are **NOT committed or written here**. First random-generation attempt used unsupported Windows PowerShell .NET static `RandomNumberGenerator.Fill` and failed before file creation; retry using `RandomNumberGenerator.Create().GetBytes` succeeded. **Important:** user needs a secure local bootstrap/login procedure later, never copy the credential into GitHub or chat |
+| 7 | Installed graphical frontend dependencies via `npm.cmd ci --no-audit --no-fund --progress=false` in `frontend` | **PASS**, `471 packages` added in 59–60 seconds; `frontend\node_modules` exists. npm warned that `esbuild@0.25.12` postinstall script was not automatically permitted; verify build/runtime consequences before relying on frontend |
+| 8 | Started production graphical frontend build via `npm.cmd run build` (`tsc -b && vite build && node scripts/install-landing-page.mjs`), with `NODE_OPTIONS=--max-old-space-size=1200` | **Build started**, but no successful final exit, `frontend\dist\index.html`, or GUI render confirmation captured. At interim check `dist\index.html` **absent** |
+| 9 | Observed peak interim build/dependency-load snapshot: free system RAM ~**1.08 GiB**; one Node process ~**953 MiB** resident; uv process ~**120 MiB**; other Node instances active. This is **concurrent install/build** consumption, not measured idle/runtime application usage | **Resource warning** for 8GB laptop. Must build/test one workload at a time; do not infer GUI runtime RAM from build snapshot |
+| 10 | User said **«متوقف بشو»**. Assistant stopped any further installation. A termination attempt for original remote terminal PIDs reported “no active session found”; a separate scoped process inspection found `ACTIVE_INSTALL_BUILD=0` (no matching installation/build process) | **PAUSED**. No active install/build found at verification time. Do **not** claim binary/UI installed or ready without a new explicit instruction and actual verification |
+
+### Exact incomplete/unknown items at time of pause
+
+- **Complete backend installation**: UNVERIFIED (dependency download began; no finished/exit code available).
+- **React frontend build**: UNVERIFIED (build command began; `dist/index.html` not yet observed).
+- **Database creation/migrations**: NOT VERIFIED / NOT RUN as operational step.
+- **Backend HTTP health/local port / live GUI login**: NOT RUN / NOT VERIFIED.
+- **Desktop shortcut or independent app-mode browser window**: NOT CREATED.
+- **App idle/runtime RAM and CPU usage**: NOT MEASURED.
+- **No Docker install, no exchange keys, no real trading, no paid API/LLM services or remote hosting activated.** The UI architecture is a localhost-served web graphical app, not a native standalone EXE.
+
+### Continuation / safe resume (only after user explicitly says continue)
+
+1. First check device Online and **read-only** inspect installed `.venv`, backend imports, `frontend\dist\index.html`, active processes, disk/RAM and local `.env` existence **without disclosing any secrets**; do not repeat successful downloads/install blindly.
+2. Complete missing dependency steps one by one with RAM control. Confirm whether esbuild's postinstall restriction affects build. Never overwrite `.env`, reset authentication, change VPN or run untrusted/paid keys by default.
+3. Start backend on **loopback only**; verify endpoint health and actual graphical page response, then user-visible UI and local login. Do not present installation as successful without these checks.
+4. Create a desktop shortcut only once the program launches reliably; record exact runtime RAM/CPU and whether disabling optional modules is sufficient.
+5. Proceed to source map/architecture/customization of upstream as the **next** phase, not during install; the existing trial queue/R0–R7 roadmap remains current.
+
+**State as of this entry:** Download/clone PASS; isolated Python PASS; frontend npm package install PASS; backend install and graphical build PENDING/UNKNOWN; GUI/shortcut NOT VERIFIED; INSTALL STOPPED ON USER REQUEST. **No additional action authorized by this recording request.**
+
+---
+
 ## 2026-11-07 — DJMRN-CRYPTO-OSS-FORK-TEST-QUEUE-2026-11-07 (CURRENT / TEST QUEUE, NOT INSTALL APPROVAL)
 
 **User explicit save request:** Maintain a **single categorized, sequential test queue** for existing open-source / source-available crypto/financial GUI programs and potential reuse, code customization, removal of unnecessary modules, and a lightweight DJMRN build. This is the canonical *test queue/progress* entry for mission \`DJMRN-CRYPTO-MARKET-001\`; topical project specification: [11-crypto-market-intelligence/README.md](../11-crypto-market-intelligence/README.md). Do not create a second mutable task list or duplicate the queue in Notion. **Status for ALL candidates: RESEARCH / NOT INSTALLED / NOT BENCHMARKED**, unless separately verified later.
