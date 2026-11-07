@@ -1,0 +1,722 @@
+{
+  "experiment": "DJMRN HMA-MULTI-CONFIRM V1 / exploratory only",
+  "source": "Bitstamp BTC/USD 4H continuous OHLCV 2024-11-07 through 2026-11-07",
+  "data_sha256": "d8f286a9b64be2b6b54b87302ef55bd5f9f7962774f3ab12b016a661190a664a",
+  "train_first_bar": "2024-11-07T12:00:00+00:00",
+  "test_first_bar": "2025-11-07T12:00:00+00:00",
+  "test_last_bar": "2026-11-07T08:00:00+00:00",
+  "candidate_families": 12,
+  "candidate_variants": 46,
+  "selection": "training ONLY; 5% high before -5% low within 30d; at least 16 eligible events",
+  "events_definition": "transition/crossing events, deduped >=24h apart per model, signal computed after complete 4H close",
+  "event_outcome": "enter next 4H OPEN, conservative stop first if high and low hit same 4H bar; censored near end",
+  "trading_exit": "20% target / 10% stop / 8% prev-high trailing / HMA21 turn down / max 30days; fee+slippage 15 bps each side",
+  "models": [
+    {
+      "family": "hma_turn",
+      "selected_params": {
+        "n": 34
+      },
+      "train_selection_score": 0.5352,
+      "train_events": 72,
+      "test_events": 72,
+      "train_target_5pct_30d": {
+        "eligible": 67,
+        "hit_target_before_10pct_stop": 36,
+        "stopped_first": 31,
+        "hit_rate_pct": 53.73,
+        "max_optimistic_excursion_pct_median": 5.03
+      },
+      "test_target_5pct_30d": {
+        "eligible": 63,
+        "hit_target_before_10pct_stop": 32,
+        "stopped_first": 28,
+        "hit_rate_pct": 50.79,
+        "max_optimistic_excursion_pct_median": 5.01
+      },
+      "test_target_20pct_30d": {
+        "eligible": 63,
+        "hit_target_before_10pct_stop": 6,
+        "stopped_first": 15,
+        "hit_rate_pct": 9.52,
+        "max_optimistic_excursion_pct_median": 8.28
+      },
+      "test_target_50pct_60d": {
+        "eligible": 58,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 25,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 10.73
+      },
+      "test_target_50pct_90d": {
+        "eligible": 52,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 33,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 13.08
+      },
+      "test_exit_trading": {
+        "trades": 72,
+        "win_pct": 26.39,
+        "net_return_pct": -37.97,
+        "median_return_pct": -0.87,
+        "profit_factor": 0.424,
+        "exit_reasons": {
+          "HMA_turn_down": 72
+        }
+      }
+    },
+    {
+      "family": "hma_price_cross",
+      "selected_params": {
+        "n": 16
+      },
+      "train_selection_score": 0.5606,
+      "train_events": 68,
+      "test_events": 65,
+      "train_target_5pct_30d": {
+        "eligible": 62,
+        "hit_target_before_10pct_stop": 35,
+        "stopped_first": 27,
+        "hit_rate_pct": 56.45,
+        "max_optimistic_excursion_pct_median": 5.05
+      },
+      "test_target_5pct_30d": {
+        "eligible": 58,
+        "hit_target_before_10pct_stop": 31,
+        "stopped_first": 24,
+        "hit_rate_pct": 53.45,
+        "max_optimistic_excursion_pct_median": 5.04
+      },
+      "test_target_20pct_30d": {
+        "eligible": 58,
+        "hit_target_before_10pct_stop": 6,
+        "stopped_first": 20,
+        "hit_rate_pct": 10.34,
+        "max_optimistic_excursion_pct_median": 7.12
+      },
+      "test_target_50pct_60d": {
+        "eligible": 53,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 26,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 10.75
+      },
+      "test_target_50pct_90d": {
+        "eligible": 46,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 32,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 10.25
+      },
+      "test_exit_trading": {
+        "trades": 54,
+        "win_pct": 20.37,
+        "net_return_pct": -27.25,
+        "median_return_pct": -1.02,
+        "profit_factor": 0.494,
+        "exit_reasons": {
+          "HMA_turn_down": 54
+        }
+      }
+    },
+    {
+      "family": "hma_dual",
+      "selected_params": {
+        "fast": 9,
+        "slow": 34
+      },
+      "train_selection_score": 0.5543,
+      "train_events": 97,
+      "test_events": 106,
+      "train_target_5pct_30d": {
+        "eligible": 88,
+        "hit_target_before_10pct_stop": 49,
+        "stopped_first": 38,
+        "hit_rate_pct": 55.68,
+        "max_optimistic_excursion_pct_median": 5.04
+      },
+      "test_target_5pct_30d": {
+        "eligible": 94,
+        "hit_target_before_10pct_stop": 49,
+        "stopped_first": 42,
+        "hit_rate_pct": 52.13,
+        "max_optimistic_excursion_pct_median": 5.07
+      },
+      "test_target_20pct_30d": {
+        "eligible": 94,
+        "hit_target_before_10pct_stop": 7,
+        "stopped_first": 24,
+        "hit_rate_pct": 7.45,
+        "max_optimistic_excursion_pct_median": 8.19
+      },
+      "test_target_50pct_60d": {
+        "eligible": 88,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 42,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 11.24
+      },
+      "test_target_50pct_90d": {
+        "eligible": 81,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 54,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 11.94
+      },
+      "test_exit_trading": {
+        "trades": 104,
+        "win_pct": 29.81,
+        "net_return_pct": -46.02,
+        "median_return_pct": -0.94,
+        "profit_factor": 0.515,
+        "exit_reasons": {
+          "HMA_turn_down": 103,
+          "stop_or_trail": 1
+        }
+      }
+    },
+    {
+      "family": "hma_pullback",
+      "selected_params": {
+        "n": 16
+      },
+      "train_selection_score": 0.5645,
+      "train_events": 64,
+      "test_events": 61,
+      "train_target_5pct_30d": {
+        "eligible": 58,
+        "hit_target_before_10pct_stop": 33,
+        "stopped_first": 25,
+        "hit_rate_pct": 56.9,
+        "max_optimistic_excursion_pct_median": 5.05
+      },
+      "test_target_5pct_30d": {
+        "eligible": 55,
+        "hit_target_before_10pct_stop": 30,
+        "stopped_first": 22,
+        "hit_rate_pct": 54.55,
+        "max_optimistic_excursion_pct_median": 5.0
+      },
+      "test_target_20pct_30d": {
+        "eligible": 55,
+        "hit_target_before_10pct_stop": 6,
+        "stopped_first": 19,
+        "hit_rate_pct": 10.91,
+        "max_optimistic_excursion_pct_median": 6.87
+      },
+      "test_target_50pct_60d": {
+        "eligible": 50,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 25,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 9.97
+      },
+      "test_target_50pct_90d": {
+        "eligible": 43,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 30,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 9.74
+      },
+      "test_exit_trading": {
+        "trades": 51,
+        "win_pct": 19.61,
+        "net_return_pct": -25.4,
+        "median_return_pct": -1.02,
+        "profit_factor": 0.498,
+        "exit_reasons": {
+          "HMA_turn_down": 51
+        }
+      }
+    },
+    {
+      "family": "rsi_reclaim",
+      "selected_params": {
+        "level": 40
+      },
+      "train_selection_score": 0.5179,
+      "train_events": 58,
+      "test_events": 75,
+      "train_target_5pct_30d": {
+        "eligible": 52,
+        "hit_target_before_10pct_stop": 27,
+        "stopped_first": 25,
+        "hit_rate_pct": 51.92,
+        "max_optimistic_excursion_pct_median": 5.03
+      },
+      "test_target_5pct_30d": {
+        "eligible": 65,
+        "hit_target_before_10pct_stop": 38,
+        "stopped_first": 27,
+        "hit_rate_pct": 58.46,
+        "max_optimistic_excursion_pct_median": 5.26
+      },
+      "test_target_20pct_30d": {
+        "eligible": 65,
+        "hit_target_before_10pct_stop": 8,
+        "stopped_first": 17,
+        "hit_rate_pct": 12.31,
+        "max_optimistic_excursion_pct_median": 9.52
+      },
+      "test_target_50pct_60d": {
+        "eligible": 60,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 25,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 12.84
+      },
+      "test_target_50pct_90d": {
+        "eligible": 55,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 34,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 16.95
+      },
+      "test_exit_trading": {
+        "trades": 73,
+        "win_pct": 23.29,
+        "net_return_pct": -38.05,
+        "median_return_pct": -0.42,
+        "profit_factor": 0.179,
+        "exit_reasons": {
+          "HMA_turn_down": 71,
+          "stop_or_trail": 1,
+          "time_exit": 1
+        }
+      }
+    },
+    {
+      "family": "rsi_oversold_rebound",
+      "selected_params": {
+        "level": 35
+      },
+      "train_selection_score": 0.6111,
+      "train_events": 35,
+      "test_events": 40,
+      "train_target_5pct_30d": {
+        "eligible": 32,
+        "hit_target_before_10pct_stop": 20,
+        "stopped_first": 11,
+        "hit_rate_pct": 62.5,
+        "max_optimistic_excursion_pct_median": 5.11
+      },
+      "test_target_5pct_30d": {
+        "eligible": 35,
+        "hit_target_before_10pct_stop": 17,
+        "stopped_first": 18,
+        "hit_rate_pct": 48.57,
+        "max_optimistic_excursion_pct_median": 3.84
+      },
+      "test_target_20pct_30d": {
+        "eligible": 35,
+        "hit_target_before_10pct_stop": 3,
+        "stopped_first": 12,
+        "hit_rate_pct": 8.57,
+        "max_optimistic_excursion_pct_median": 8.68
+      },
+      "test_target_50pct_60d": {
+        "eligible": 33,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 15,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 12.45
+      },
+      "test_target_50pct_90d": {
+        "eligible": 32,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 21,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 13.91
+      },
+      "test_exit_trading": {
+        "trades": 40,
+        "win_pct": 30.0,
+        "net_return_pct": -24.51,
+        "median_return_pct": -0.41,
+        "profit_factor": 0.311,
+        "exit_reasons": {
+          "HMA_turn_down": 39,
+          "stop_or_trail": 1
+        }
+      }
+    },
+    {
+      "family": "macd_positive_cross",
+      "selected_params": {
+        "zero_filter": false
+      },
+      "train_selection_score": 0.5,
+      "train_events": 76,
+      "test_events": 78,
+      "train_target_5pct_30d": {
+        "eligible": 70,
+        "hit_target_before_10pct_stop": 35,
+        "stopped_first": 35,
+        "hit_rate_pct": 50.0,
+        "max_optimistic_excursion_pct_median": 4.96
+      },
+      "test_target_5pct_30d": {
+        "eligible": 68,
+        "hit_target_before_10pct_stop": 37,
+        "stopped_first": 28,
+        "hit_rate_pct": 54.41,
+        "max_optimistic_excursion_pct_median": 5.14
+      },
+      "test_target_20pct_30d": {
+        "eligible": 68,
+        "hit_target_before_10pct_stop": 6,
+        "stopped_first": 17,
+        "hit_rate_pct": 8.82,
+        "max_optimistic_excursion_pct_median": 9.35
+      },
+      "test_target_50pct_60d": {
+        "eligible": 62,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 34,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 10.92
+      },
+      "test_target_50pct_90d": {
+        "eligible": 59,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 40,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 11.38
+      },
+      "test_exit_trading": {
+        "trades": 76,
+        "win_pct": 28.95,
+        "net_return_pct": -33.28,
+        "median_return_pct": -0.77,
+        "profit_factor": 0.528,
+        "exit_reasons": {
+          "HMA_turn_down": 75,
+          "stop_or_trail": 1
+        }
+      }
+    },
+    {
+      "family": "donchian_break",
+      "selected_params": {
+        "period": 30
+      },
+      "train_selection_score": 0.5417,
+      "train_events": 46,
+      "test_events": 43,
+      "train_target_5pct_30d": {
+        "eligible": 44,
+        "hit_target_before_10pct_stop": 24,
+        "stopped_first": 20,
+        "hit_rate_pct": 54.55,
+        "max_optimistic_excursion_pct_median": 5.08
+      },
+      "test_target_5pct_30d": {
+        "eligible": 41,
+        "hit_target_before_10pct_stop": 16,
+        "stopped_first": 22,
+        "hit_rate_pct": 39.02,
+        "max_optimistic_excursion_pct_median": 3.35
+      },
+      "test_target_20pct_30d": {
+        "eligible": 41,
+        "hit_target_before_10pct_stop": 2,
+        "stopped_first": 15,
+        "hit_rate_pct": 4.88,
+        "max_optimistic_excursion_pct_median": 5.09
+      },
+      "test_target_50pct_60d": {
+        "eligible": 38,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 21,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 8.54
+      },
+      "test_target_50pct_90d": {
+        "eligible": 33,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 23,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 7.24
+      },
+      "test_exit_trading": {
+        "trades": 34,
+        "win_pct": 23.53,
+        "net_return_pct": -28.83,
+        "median_return_pct": -1.34,
+        "profit_factor": 0.382,
+        "exit_reasons": {
+          "HMA_turn_down": 34
+        }
+      }
+    },
+    {
+      "family": "bollinger_reclaim",
+      "selected_params": {
+        "period": 30,
+        "sigma": 2
+      },
+      "train_selection_score": 0.5429,
+      "train_events": 36,
+      "test_events": 48,
+      "train_target_5pct_30d": {
+        "eligible": 31,
+        "hit_target_before_10pct_stop": 17,
+        "stopped_first": 14,
+        "hit_rate_pct": 54.84,
+        "max_optimistic_excursion_pct_median": 5.13
+      },
+      "test_target_5pct_30d": {
+        "eligible": 44,
+        "hit_target_before_10pct_stop": 22,
+        "stopped_first": 22,
+        "hit_rate_pct": 50.0,
+        "max_optimistic_excursion_pct_median": 4.99
+      },
+      "test_target_20pct_30d": {
+        "eligible": 44,
+        "hit_target_before_10pct_stop": 5,
+        "stopped_first": 13,
+        "hit_rate_pct": 11.36,
+        "max_optimistic_excursion_pct_median": 9.55
+      },
+      "test_target_50pct_60d": {
+        "eligible": 40,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 19,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 12.66
+      },
+      "test_target_50pct_90d": {
+        "eligible": 37,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 23,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 13.33
+      },
+      "test_exit_trading": {
+        "trades": 48,
+        "win_pct": 35.42,
+        "net_return_pct": -9.05,
+        "median_return_pct": -0.3,
+        "profit_factor": 0.517,
+        "exit_reasons": {
+          "HMA_turn_down": 48
+        }
+      }
+    },
+    {
+      "family": "volume_hma",
+      "selected_params": {
+        "n": 16,
+        "vol_period": 20,
+        "mult": 1.5
+      },
+      "train_selection_score": 0.5122,
+      "train_events": 80,
+      "test_events": 89,
+      "train_target_5pct_30d": {
+        "eligible": 78,
+        "hit_target_before_10pct_stop": 40,
+        "stopped_first": 38,
+        "hit_rate_pct": 51.28,
+        "max_optimistic_excursion_pct_median": 5.01
+      },
+      "test_target_5pct_30d": {
+        "eligible": 83,
+        "hit_target_before_10pct_stop": 44,
+        "stopped_first": 35,
+        "hit_rate_pct": 53.01,
+        "max_optimistic_excursion_pct_median": 5.01
+      },
+      "test_target_20pct_30d": {
+        "eligible": 83,
+        "hit_target_before_10pct_stop": 6,
+        "stopped_first": 25,
+        "hit_rate_pct": 7.23,
+        "max_optimistic_excursion_pct_median": 7.25
+      },
+      "test_target_50pct_60d": {
+        "eligible": 74,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 42,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 9.57
+      },
+      "test_target_50pct_90d": {
+        "eligible": 66,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 48,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 9.29
+      },
+      "test_exit_trading": {
+        "trades": 74,
+        "win_pct": 25.68,
+        "net_return_pct": -43.36,
+        "median_return_pct": -1.1,
+        "profit_factor": 0.443,
+        "exit_reasons": {
+          "HMA_turn_down": 73,
+          "stop_or_trail": 1
+        }
+      }
+    },
+    {
+      "family": "supertrend_flip",
+      "selected_params": {
+        "period": 10,
+        "mult": 3.0
+      },
+      "train_selection_score": 0.52,
+      "train_events": 22,
+      "test_events": 31,
+      "train_target_5pct_30d": {
+        "eligible": 21,
+        "hit_target_before_10pct_stop": 11,
+        "stopped_first": 10,
+        "hit_rate_pct": 52.38,
+        "max_optimistic_excursion_pct_median": 5.06
+      },
+      "test_target_5pct_30d": {
+        "eligible": 28,
+        "hit_target_before_10pct_stop": 14,
+        "stopped_first": 13,
+        "hit_rate_pct": 50.0,
+        "max_optimistic_excursion_pct_median": 4.86
+      },
+      "test_target_20pct_30d": {
+        "eligible": 28,
+        "hit_target_before_10pct_stop": 2,
+        "stopped_first": 8,
+        "hit_rate_pct": 7.14,
+        "max_optimistic_excursion_pct_median": 7.52
+      },
+      "test_target_50pct_60d": {
+        "eligible": 25,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 13,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 8.78
+      },
+      "test_target_50pct_90d": {
+        "eligible": 23,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 17,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 8.78
+      },
+      "test_exit_trading": {
+        "trades": 31,
+        "win_pct": 25.81,
+        "net_return_pct": -25.94,
+        "median_return_pct": -1.11,
+        "profit_factor": 0.258,
+        "exit_reasons": {
+          "HMA_turn_down": 31
+        }
+      }
+    },
+    {
+      "family": "keltner_break",
+      "selected_params": {
+        "period": 20,
+        "mult": 1.5
+      },
+      "train_selection_score": 0.5818,
+      "train_events": 54,
+      "test_events": 56,
+      "train_target_5pct_30d": {
+        "eligible": 51,
+        "hit_target_before_10pct_stop": 30,
+        "stopped_first": 21,
+        "hit_rate_pct": 58.82,
+        "max_optimistic_excursion_pct_median": 5.21
+      },
+      "test_target_5pct_30d": {
+        "eligible": 54,
+        "hit_target_before_10pct_stop": 25,
+        "stopped_first": 25,
+        "hit_rate_pct": 46.3,
+        "max_optimistic_excursion_pct_median": 4.3
+      },
+      "test_target_20pct_30d": {
+        "eligible": 54,
+        "hit_target_before_10pct_stop": 2,
+        "stopped_first": 17,
+        "hit_rate_pct": 3.7,
+        "max_optimistic_excursion_pct_median": 6.26
+      },
+      "test_target_50pct_60d": {
+        "eligible": 49,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 29,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 8.73
+      },
+      "test_target_50pct_90d": {
+        "eligible": 44,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 32,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 8.3
+      },
+      "test_exit_trading": {
+        "trades": 44,
+        "win_pct": 22.73,
+        "net_return_pct": -26.67,
+        "median_return_pct": -0.73,
+        "profit_factor": 0.447,
+        "exit_reasons": {
+          "HMA_turn_down": 44
+        }
+      }
+    }
+  ],
+  "confirmation": {
+    "picked_by_train_only": [
+      "rsi_oversold_rebound",
+      "keltner_break",
+      "hma_pullback",
+      "hma_price_cross",
+      "hma_dual"
+    ],
+    "rule": "at least 2 of top 5 families within last 12h + completed 12H HMA16 and daily HMA20 both rising; 1-day rearm",
+    "training_events": 41,
+    "test_events": 36,
+    "test_goal_5pct_30d": {
+      "eligible": 36,
+      "hit_target_before_10pct_stop": 20,
+      "stopped_first": 13,
+      "hit_rate_pct": 55.56,
+      "max_optimistic_excursion_pct_median": 5.08
+    },
+    "test_goal_20pct_30d": {
+      "eligible": 36,
+      "hit_target_before_10pct_stop": 4,
+      "stopped_first": 12,
+      "hit_rate_pct": 11.11,
+      "max_optimistic_excursion_pct_median": 6.28
+    },
+    "test_exit": {
+      "trades": 31,
+      "win_pct": 29.03,
+      "net_return_pct": -18.08,
+      "median_return_pct": -0.73,
+      "profit_factor": 0.359,
+      "exit_reasons": {
+        "HMA_turn_down": 31
+      }
+    }
+  },
+  "warnings": [
+    "Results are exploratory only; no calibrated probability, no live positions, no financial advice.",
+    "A signal event count is not an executable trade count. Confluence does not guarantee fewer errors.",
+    "Forward 20%-30d and 50%-60/90d targets are hypotheses, not parameter selection objectives.",
+    "More variants and repeated inspection of the same holdout increases multiple-testing / overfitting risk.",
+    "No point-in-time macro news or external fundamentals have been included; prior 40/20/40 scores are not active.",
+    "Higher timeframes resampled from completed 4H data only; 1H not used.",
+    "HMA periods are measured in four-hour candles, not days. Trade exit ordering is conservative where ambiguous.",
+    "The horizon-metric and trading-exit metrics use different stop logic and must not be compared as identical outcomes."
+  ]
+}
