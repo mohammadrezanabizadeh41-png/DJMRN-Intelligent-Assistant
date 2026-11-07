@@ -1,0 +1,637 @@
+{
+  "label": "DJMRN BTC 4H HMA V1 RESEARCH-ONLY timing/exit sensitivity",
+  "provenance": "Bitstamp BTC/USD snapshot SHA256 d8f286a9b64be2b6b54b87302ef55bd5f9f7962774f3ab12b016a661190a664a",
+  "train_split_index": 2190,
+  "model_selection": "first year ONLY, including train-selected exit periods, five families and HMA periods",
+  "chosen_families": [
+    "rsi_oversold_rebound",
+    "keltner_break",
+    "hma_pullback",
+    "hma_price_cross",
+    "hma_dual"
+  ],
+  "exit_and_confluence": [
+    {
+      "confirmation_votes": 2,
+      "train_events": 41,
+      "test_events": 36,
+      "all_train_exit_variants": [
+        {
+          "hma_exit_period": 16,
+          "train": {
+            "trades": 32,
+            "win_pct": 37.5,
+            "net_return_pct": -0.05,
+            "median_return_pct": -0.47,
+            "profit_factor": 1.036,
+            "exit_reasons": {
+              "HMA_turn_down": 32
+            }
+          }
+        },
+        {
+          "hma_exit_period": 21,
+          "train": {
+            "trades": 32,
+            "win_pct": 28.12,
+            "net_return_pct": -2.03,
+            "median_return_pct": -0.63,
+            "profit_factor": 0.974,
+            "exit_reasons": {
+              "HMA_turn_down": 32
+            }
+          }
+        },
+        {
+          "hma_exit_period": 34,
+          "train": {
+            "trades": 29,
+            "win_pct": 34.48,
+            "net_return_pct": -1.73,
+            "median_return_pct": -0.87,
+            "profit_factor": 0.982,
+            "exit_reasons": {
+              "HMA_turn_down": 29
+            }
+          }
+        },
+        {
+          "hma_exit_period": 55,
+          "train": {
+            "trades": 22,
+            "win_pct": 40.91,
+            "net_return_pct": 9.44,
+            "median_return_pct": -0.2,
+            "profit_factor": 1.556,
+            "exit_reasons": {
+              "HMA_turn_down": 21,
+              "stop_or_trail": 1
+            }
+          }
+        },
+        {
+          "hma_exit_period": 89,
+          "train": {
+            "trades": 20,
+            "win_pct": 30.0,
+            "net_return_pct": 1.12,
+            "median_return_pct": -0.9,
+            "profit_factor": 1.094,
+            "exit_reasons": {
+              "stop_or_trail": 3,
+              "HMA_turn_down": 17
+            }
+          }
+        }
+      ],
+      "train_selected_hma_exit": 55,
+      "holdout_exit_result": {
+        "trades": 22,
+        "win_pct": 27.27,
+        "net_return_pct": -6.9,
+        "median_return_pct": -0.68,
+        "profit_factor": 0.839,
+        "exit_reasons": {
+          "HMA_turn_down": 20,
+          "stop_or_trail": 1,
+          "take_profit": 1
+        }
+      },
+      "test_target_20pct_30days": {
+        "eligible": 36,
+        "hit_target_before_10pct_stop": 4,
+        "stopped_first": 12,
+        "hit_rate_pct": 11.11,
+        "max_optimistic_excursion_pct_median": 6.28
+      },
+      "test_target_50pct_90days": {
+        "eligible": 30,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 19,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 11.75
+      }
+    },
+    {
+      "confirmation_votes": 3,
+      "train_events": 26,
+      "test_events": 23,
+      "all_train_exit_variants": [
+        {
+          "hma_exit_period": 16,
+          "train": {
+            "trades": 25,
+            "win_pct": 32.0,
+            "net_return_pct": -3.54,
+            "median_return_pct": -0.78,
+            "profit_factor": 0.898,
+            "exit_reasons": {
+              "HMA_turn_down": 25
+            }
+          }
+        },
+        {
+          "hma_exit_period": 21,
+          "train": {
+            "trades": 23,
+            "win_pct": 26.09,
+            "net_return_pct": -4.68,
+            "median_return_pct": -0.99,
+            "profit_factor": 0.854,
+            "exit_reasons": {
+              "HMA_turn_down": 23
+            }
+          }
+        },
+        {
+          "hma_exit_period": 34,
+          "train": {
+            "trades": 20,
+            "win_pct": 30.0,
+            "net_return_pct": -5.23,
+            "median_return_pct": -0.97,
+            "profit_factor": 0.787,
+            "exit_reasons": {
+              "HMA_turn_down": 20
+            }
+          }
+        },
+        {
+          "hma_exit_period": 55,
+          "train": {
+            "trades": 16,
+            "win_pct": 37.5,
+            "net_return_pct": 2.53,
+            "median_return_pct": -0.2,
+            "profit_factor": 1.228,
+            "exit_reasons": {
+              "HMA_turn_down": 15,
+              "stop_or_trail": 1
+            }
+          }
+        },
+        {
+          "hma_exit_period": 89,
+          "train": {
+            "trades": 14,
+            "win_pct": 28.57,
+            "net_return_pct": -1.93,
+            "median_return_pct": -1.27,
+            "profit_factor": 0.945,
+            "exit_reasons": {
+              "stop_or_trail": 3,
+              "HMA_turn_down": 11
+            }
+          }
+        }
+      ],
+      "train_selected_hma_exit": 55,
+      "holdout_exit_result": {
+        "trades": 14,
+        "win_pct": 21.43,
+        "net_return_pct": -5.18,
+        "median_return_pct": -1.02,
+        "profit_factor": 0.781,
+        "exit_reasons": {
+          "HMA_turn_down": 13,
+          "stop_or_trail": 1
+        }
+      },
+      "test_target_20pct_30days": {
+        "eligible": 23,
+        "hit_target_before_10pct_stop": 2,
+        "stopped_first": 7,
+        "hit_rate_pct": 8.7,
+        "max_optimistic_excursion_pct_median": 6.26
+      },
+      "test_target_50pct_90days": {
+        "eligible": 21,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 12,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 12.21
+      }
+    },
+    {
+      "confirmation_votes": 4,
+      "train_events": 7,
+      "test_events": 7,
+      "all_train_exit_variants": [
+        {
+          "hma_exit_period": 16,
+          "train": {
+            "trades": 7,
+            "win_pct": 42.86,
+            "net_return_pct": -1.44,
+            "median_return_pct": -0.42,
+            "profit_factor": 0.643,
+            "exit_reasons": {
+              "HMA_turn_down": 7
+            }
+          }
+        },
+        {
+          "hma_exit_period": 21,
+          "train": {
+            "trades": 7,
+            "win_pct": 42.86,
+            "net_return_pct": -2.58,
+            "median_return_pct": -0.86,
+            "profit_factor": 0.444,
+            "exit_reasons": {
+              "HMA_turn_down": 7
+            }
+          }
+        },
+        {
+          "hma_exit_period": 34,
+          "train": {
+            "trades": 7,
+            "win_pct": 28.57,
+            "net_return_pct": -6.37,
+            "median_return_pct": -0.86,
+            "profit_factor": 0.102,
+            "exit_reasons": {
+              "HMA_turn_down": 7
+            }
+          }
+        },
+        {
+          "hma_exit_period": 55,
+          "train": {
+            "trades": 7,
+            "win_pct": 0.0,
+            "net_return_pct": -8.43,
+            "median_return_pct": -1.04,
+            "profit_factor": 0.0,
+            "exit_reasons": {
+              "HMA_turn_down": 7
+            }
+          }
+        },
+        {
+          "hma_exit_period": 89,
+          "train": {
+            "trades": 6,
+            "win_pct": 33.33,
+            "net_return_pct": -11.19,
+            "median_return_pct": -2.58,
+            "profit_factor": 0.238,
+            "exit_reasons": {
+              "stop_or_trail": 2,
+              "HMA_turn_down": 4
+            }
+          }
+        }
+      ],
+      "train_selected_hma_exit": 16,
+      "holdout_exit_result": {
+        "trades": 7,
+        "win_pct": 71.43,
+        "net_return_pct": 13.3,
+        "median_return_pct": 0.49,
+        "profit_factor": 13.052,
+        "exit_reasons": {
+          "HMA_turn_down": 7
+        }
+      },
+      "test_target_20pct_30days": {
+        "eligible": 7,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 2,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 4.46
+      },
+      "test_target_50pct_90days": {
+        "eligible": 5,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 4,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 5.5
+      }
+    }
+  ],
+  "hma_multi_timeframe": [
+    {
+      "timeframe_hours": 4,
+      "valid_resampled_bars": 4380,
+      "train_selected_hma_period": 34,
+      "all_period_results": [
+        {
+          "hma_period_bars": 9,
+          "period_hours": 36,
+          "train_events": 182,
+          "test_events": 195,
+          "train_score": 0.4941,
+          "test_target_20pct_30days": {
+            "eligible": 177,
+            "hit_target_before_10pct_stop": 18,
+            "stopped_first": 50,
+            "hit_rate_pct": 10.17,
+            "max_optimistic_excursion_pct_median": 8.01
+          }
+        },
+        {
+          "hma_period_bars": 16,
+          "period_hours": 64,
+          "train_events": 114,
+          "test_events": 129,
+          "train_score": 0.4818,
+          "test_target_20pct_30days": {
+            "eligible": 117,
+            "hit_target_before_10pct_stop": 12,
+            "stopped_first": 30,
+            "hit_rate_pct": 10.26,
+            "max_optimistic_excursion_pct_median": 7.95
+          }
+        },
+        {
+          "hma_period_bars": 21,
+          "period_hours": 84,
+          "train_events": 98,
+          "test_events": 116,
+          "train_score": 0.5053,
+          "test_target_20pct_30days": {
+            "eligible": 106,
+            "hit_target_before_10pct_stop": 10,
+            "stopped_first": 29,
+            "hit_rate_pct": 9.43,
+            "max_optimistic_excursion_pct_median": 8.45
+          }
+        },
+        {
+          "hma_period_bars": 34,
+          "period_hours": 136,
+          "train_events": 72,
+          "test_events": 72,
+          "train_score": 0.5352,
+          "test_target_20pct_30days": {
+            "eligible": 63,
+            "hit_target_before_10pct_stop": 6,
+            "stopped_first": 15,
+            "hit_rate_pct": 9.52,
+            "max_optimistic_excursion_pct_median": 8.28
+          }
+        },
+        {
+          "hma_period_bars": 55,
+          "period_hours": 220,
+          "train_events": 49,
+          "test_events": 53,
+          "train_score": 0.5,
+          "test_target_20pct_30days": {
+            "eligible": 49,
+            "hit_target_before_10pct_stop": 4,
+            "stopped_first": 13,
+            "hit_rate_pct": 8.16,
+            "max_optimistic_excursion_pct_median": 7.79
+          }
+        },
+        {
+          "hma_period_bars": 89,
+          "period_hours": 356,
+          "train_events": 33,
+          "test_events": 43,
+          "train_score": 0.5,
+          "test_target_20pct_30days": {
+            "eligible": 38,
+            "hit_target_before_10pct_stop": 3,
+            "stopped_first": 7,
+            "hit_rate_pct": 7.89,
+            "max_optimistic_excursion_pct_median": 7.38
+          }
+        }
+      ]
+    },
+    {
+      "timeframe_hours": 12,
+      "valid_resampled_bars": 1460,
+      "train_selected_hma_period": 34,
+      "all_period_results": [
+        {
+          "hma_period_bars": 9,
+          "period_hours": 108,
+          "train_events": 65,
+          "test_events": 73,
+          "train_score": 0.5156,
+          "test_target_20pct_30days": {
+            "eligible": 65,
+            "hit_target_before_10pct_stop": 4,
+            "stopped_first": 15,
+            "hit_rate_pct": 6.15,
+            "max_optimistic_excursion_pct_median": 7.94
+          }
+        },
+        {
+          "hma_period_bars": 16,
+          "period_hours": 192,
+          "train_events": 47,
+          "test_events": 47,
+          "train_score": 0.4468,
+          "test_target_20pct_30days": {
+            "eligible": 43,
+            "hit_target_before_10pct_stop": 4,
+            "stopped_first": 12,
+            "hit_rate_pct": 9.3,
+            "max_optimistic_excursion_pct_median": 7.62
+          }
+        },
+        {
+          "hma_period_bars": 21,
+          "period_hours": 252,
+          "train_events": 36,
+          "test_events": 43,
+          "train_score": 0.4872,
+          "test_target_20pct_30days": {
+            "eligible": 39,
+            "hit_target_before_10pct_stop": 3,
+            "stopped_first": 11,
+            "hit_rate_pct": 7.69,
+            "max_optimistic_excursion_pct_median": 8.33
+          }
+        },
+        {
+          "hma_period_bars": 34,
+          "period_hours": 408,
+          "train_events": 23,
+          "test_events": 27,
+          "train_score": 0.6154,
+          "test_target_20pct_30days": {
+            "eligible": 25,
+            "hit_target_before_10pct_stop": 2,
+            "stopped_first": 5,
+            "hit_rate_pct": 8.0,
+            "max_optimistic_excursion_pct_median": 9.06
+          }
+        },
+        {
+          "hma_period_bars": 55,
+          "period_hours": 660,
+          "train_events": 15,
+          "test_events": 14,
+          "train_score": 0.5556,
+          "test_target_20pct_30days": {
+            "eligible": 13,
+            "hit_target_before_10pct_stop": 2,
+            "stopped_first": 4,
+            "hit_rate_pct": 15.38,
+            "max_optimistic_excursion_pct_median": 7.32
+          }
+        },
+        {
+          "hma_period_bars": 89,
+          "period_hours": 1068,
+          "train_events": 11,
+          "test_events": 10,
+          "train_score": -1,
+          "test_target_20pct_30days": {
+            "eligible": 10,
+            "hit_target_before_10pct_stop": 2,
+            "stopped_first": 2,
+            "hit_rate_pct": 20.0,
+            "max_optimistic_excursion_pct_median": 10.5
+          }
+        }
+      ]
+    },
+    {
+      "timeframe_hours": 24,
+      "valid_resampled_bars": 729,
+      "train_selected_hma_period": 16,
+      "all_period_results": [
+        {
+          "hma_period_bars": 9,
+          "period_hours": 216,
+          "train_events": 35,
+          "test_events": 41,
+          "train_score": 0.4444,
+          "test_target_20pct_30days": {
+            "eligible": 37,
+            "hit_target_before_10pct_stop": 3,
+            "stopped_first": 10,
+            "hit_rate_pct": 8.11,
+            "max_optimistic_excursion_pct_median": 7.23
+          }
+        },
+        {
+          "hma_period_bars": 16,
+          "period_hours": 384,
+          "train_events": 19,
+          "test_events": 24,
+          "train_score": 0.6364,
+          "test_target_20pct_30days": {
+            "eligible": 22,
+            "hit_target_before_10pct_stop": 2,
+            "stopped_first": 6,
+            "hit_rate_pct": 9.09,
+            "max_optimistic_excursion_pct_median": 7.68
+          }
+        },
+        {
+          "hma_period_bars": 21,
+          "period_hours": 504,
+          "train_events": 16,
+          "test_events": 21,
+          "train_score": 0.6316,
+          "test_target_20pct_30days": {
+            "eligible": 19,
+            "hit_target_before_10pct_stop": 2,
+            "stopped_first": 4,
+            "hit_rate_pct": 10.53,
+            "max_optimistic_excursion_pct_median": 7.87
+          }
+        },
+        {
+          "hma_period_bars": 34,
+          "period_hours": 816,
+          "train_events": 12,
+          "test_events": 9,
+          "train_score": -1,
+          "test_target_20pct_30days": {
+            "eligible": 9,
+            "hit_target_before_10pct_stop": 2,
+            "stopped_first": 1,
+            "hit_rate_pct": 22.22,
+            "max_optimistic_excursion_pct_median": 10.64
+          }
+        },
+        {
+          "hma_period_bars": 55,
+          "period_hours": 1320,
+          "train_events": 7,
+          "test_events": 9,
+          "train_score": -1,
+          "test_target_20pct_30days": {
+            "eligible": 9,
+            "hit_target_before_10pct_stop": 1,
+            "stopped_first": 1,
+            "hit_rate_pct": 11.11,
+            "max_optimistic_excursion_pct_median": 10.72
+          }
+        },
+        {
+          "hma_period_bars": 89,
+          "period_hours": 2136,
+          "train_events": 4,
+          "test_events": 3,
+          "train_score": -1,
+          "test_target_20pct_30days": {
+            "eligible": 3,
+            "hit_target_before_10pct_stop": 0,
+            "stopped_first": 0,
+            "hit_rate_pct": 0.0,
+            "max_optimistic_excursion_pct_median": 7.6
+          }
+        }
+      ]
+    }
+  ],
+  "unconditional_baselines": [
+    {
+      "name": "every_4h",
+      "samples": 2190,
+      "target_20pct_30days": {
+        "eligible": 2010,
+        "hit_target_before_10pct_stop": 187,
+        "stopped_first": 601,
+        "hit_rate_pct": 9.3,
+        "max_optimistic_excursion_pct_median": 7.49
+      },
+      "target_50pct_90days": {
+        "eligible": 1650,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 1146,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 11.38
+      }
+    },
+    {
+      "name": "once_per_day",
+      "samples": 365,
+      "target_20pct_30days": {
+        "eligible": 335,
+        "hit_target_before_10pct_stop": 31,
+        "stopped_first": 100,
+        "hit_rate_pct": 9.25,
+        "max_optimistic_excursion_pct_median": 7.74
+      },
+      "target_50pct_90days": {
+        "eligible": 275,
+        "hit_target_before_10pct_stop": 0,
+        "stopped_first": 192,
+        "hit_rate_pct": 0.0,
+        "max_optimistic_excursion_pct_median": 11.25
+      }
+    }
+  ],
+  "causality_selftest": "210 prefix-regression checks separately passed",
+  "no_financial_advice": true,
+  "warnings": [
+    "Results are exploratory; 7 trades in a test year is a tiny sample and cannot establish a reliable success rate.",
+    "No 50%-within-90d target hit appeared on held-out sample under specified 10% stop.",
+    "Higher timeframe trends use only fully closed groups of 4H Bitstamp bars.",
+    "Train-optimal exit HMA is selected without looking at test outcomes; repeated test inspection risks data snooping.",
+    "Fundamental/news 20% weight and rolling annual behavior 40% are NOT active.",
+    "Trading results use assumed fee plus slippage 15 bps each side, not execution venue price guarantees."
+  ]
+}
