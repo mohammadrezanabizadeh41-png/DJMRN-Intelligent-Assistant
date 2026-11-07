@@ -1,0 +1,163 @@
+{
+  "label": "DJMRN RESEARCH-ONLY BTC/USD 4H deterministic rule experiment v0",
+  "source": "Bitstamp historical OHLCV; fixed dataset SHA256",
+  "sha256": "d8f286a9b64be2b6b54b87302ef55bd5f9f7962774f3ab12b016a661190a664a",
+  "candles": 4380,
+  "train_candles": 2190,
+  "holdout_candles": 2190,
+  "train_begin_utc": "2024-11-24T04:00:00+00:00",
+  "train_end_before_utc": "2025-11-07T12:00:00+00:00",
+  "holdout_begin_utc": "2025-11-07T12:00:00+00:00",
+  "last_candle_utc": "2026-11-07T08:00:00+00:00",
+  "cost_bps_each_entry_and_exit": 15.0,
+  "execution": "Rule evaluated after close; fill at next 4H bar OPEN",
+  "selection": "training net return - 0.5*max drawdown, at least 4 closed trades",
+  "warnings": [
+    "TEST year untouched in parameter selection; ranking test winners retroactively is not live validation",
+    "Model means fixed technical rules, not neural-network ML",
+    "Trade win rate is not calibrated probability of profit",
+    "No news, fundamental, annual-range 40/20/40 scoring, stop-loss or short selling yet"
+  ],
+  "strategies": [
+    {
+      "strategy": "bollinger",
+      "chosen_by_train_only": {
+        "period": 30,
+        "sigma": 2
+      },
+      "train": {
+        "net_return_pct": 20.661,
+        "max_drawdown_pct": 16.383,
+        "closed_trades": 30,
+        "trade_win_rate_pct": 76.67,
+        "buy_hold_net_pct": 1.8,
+        "long_exposure_pct": 24.02
+      },
+      "holdout": {
+        "net_return_pct": -3.532,
+        "max_drawdown_pct": 32.108,
+        "closed_trades": 36,
+        "trade_win_rate_pct": 75.0,
+        "buy_hold_net_pct": -24.602,
+        "long_exposure_pct": 32.97
+      }
+    },
+    {
+      "strategy": "breakout",
+      "chosen_by_train_only": {
+        "lookback": 55,
+        "exit": 20
+      },
+      "train": {
+        "net_return_pct": -7.415,
+        "max_drawdown_pct": 16.634,
+        "closed_trades": 16,
+        "trade_win_rate_pct": 37.5,
+        "buy_hold_net_pct": 1.8,
+        "long_exposure_pct": 33.64
+      },
+      "holdout": {
+        "net_return_pct": -6.423,
+        "max_drawdown_pct": 19.501,
+        "closed_trades": 12,
+        "trade_win_rate_pct": 33.33,
+        "buy_hold_net_pct": -24.602,
+        "long_exposure_pct": 26.62
+      }
+    },
+    {
+      "strategy": "ema",
+      "chosen_by_train_only": {
+        "fast": 8,
+        "slow": 21
+      },
+      "train": {
+        "net_return_pct": -34.193,
+        "max_drawdown_pct": 38.415,
+        "closed_trades": 98,
+        "trade_win_rate_pct": 18.37,
+        "buy_hold_net_pct": 1.8,
+        "long_exposure_pct": 45.12
+      },
+      "holdout": {
+        "net_return_pct": -43.294,
+        "max_drawdown_pct": 44.089,
+        "closed_trades": 97,
+        "trade_win_rate_pct": 21.65,
+        "buy_hold_net_pct": -24.602,
+        "long_exposure_pct": 40.09
+      }
+    },
+    {
+      "strategy": "macd",
+      "chosen_by_train_only": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "train": {
+        "net_return_pct": -25.73,
+        "max_drawdown_pct": 35.92,
+        "closed_trades": 63,
+        "trade_win_rate_pct": 25.4,
+        "buy_hold_net_pct": 1.8,
+        "long_exposure_pct": 30.14
+      },
+      "holdout": {
+        "net_return_pct": -39.454,
+        "max_drawdown_pct": 39.77,
+        "closed_trades": 68,
+        "trade_win_rate_pct": 22.06,
+        "buy_hold_net_pct": -24.602,
+        "long_exposure_pct": 27.85
+      }
+    },
+    {
+      "strategy": "rsi",
+      "chosen_by_train_only": {
+        "period": 14,
+        "buy": 30,
+        "sell": 55
+      },
+      "train": {
+        "net_return_pct": 26.871,
+        "max_drawdown_pct": 14.145,
+        "closed_trades": 16,
+        "trade_win_rate_pct": 75.0,
+        "buy_hold_net_pct": 1.8,
+        "long_exposure_pct": 18.33
+      },
+      "holdout": {
+        "net_return_pct": -16.519,
+        "max_drawdown_pct": 29.233,
+        "closed_trades": 16,
+        "trade_win_rate_pct": 75.0,
+        "buy_hold_net_pct": -24.602,
+        "long_exposure_pct": 24.84
+      }
+    },
+    {
+      "strategy": "sma",
+      "chosen_by_train_only": {
+        "fast": 20,
+        "slow": 50
+      },
+      "train": {
+        "net_return_pct": -0.498,
+        "max_drawdown_pct": 21.749,
+        "closed_trades": 47,
+        "trade_win_rate_pct": 31.91,
+        "buy_hold_net_pct": 1.8,
+        "long_exposure_pct": 43.35
+      },
+      "holdout": {
+        "net_return_pct": -21.31,
+        "max_drawdown_pct": 28.888,
+        "closed_trades": 44,
+        "trade_win_rate_pct": 22.73,
+        "buy_hold_net_pct": -24.602,
+        "long_exposure_pct": 33.97
+      }
+    }
+  ]
+}
