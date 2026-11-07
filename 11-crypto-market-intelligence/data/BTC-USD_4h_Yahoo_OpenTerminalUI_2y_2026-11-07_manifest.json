@@ -1,0 +1,40 @@
+{
+  "dataset_id": "DJMRN-BTC-USD-4H-YAHOO-2Y-20261107",
+  "source_software": "OpenTerminalUI Hitheshkaranth upstream cloned @48912fb",
+  "source_code": "backend.core.yahoo_client.YahooClient.get_chart",
+  "data_origin": "Yahoo Finance",
+  "endpoint": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD",
+  "request": {
+    "symbol": "BTC-USD",
+    "range": "2y",
+    "interval": "4h",
+    "events": "div,splits",
+    "includePrePost": "false"
+  },
+  "actual_granularity": "4h",
+  "fetched_at_utc": "2026-11-07T14:52:42.277118+00:00",
+  "start_utc": "2024-11-07T12:00:00Z",
+  "end_closed_bar_start_utc": "2026-11-07T08:00:00Z",
+  "raw_closed_rows": 4380,
+  "model_ready_rows": 4336,
+  "null_or_invalid_rows": 44,
+  "excluded_unfinished_or_unaligned": 2,
+  "currency": "USD",
+  "empty_candles_preserved_in_raw": true,
+  "missing_price_filling": "NONE - model_ready removes incomplete rows but does not impute",
+  "known_issue": "Model-ready rows have genuine 4h timestamp gaps after excluded missing rows; do not silently treat as contiguous.",
+  "files": {
+    "raw_closed": {
+      "path": "C:\\Users\\Mrn7206\\AppData\\Local\\DJMRN\\CryptoMarket\\market-data\\openterminalui\\BTC-USD_4h_Yahoo_OpenTerminalUI_2y_2026-11-07_raw_closed.csv",
+      "bytes": 397558,
+      "sha256": "a556531c093c3182ae89b0e14a33cd7996da24016b73078ecffafd0ca1839d11",
+      "rows": 4380
+    },
+    "model_ready": {
+      "path": "C:\\Users\\Mrn7206\\AppData\\Local\\DJMRN\\CryptoMarket\\market-data\\openterminalui\\BTC-USD_4h_Yahoo_OpenTerminalUI_2y_2026-11-07_model_ready.csv",
+      "bytes": 395578,
+      "sha256": "c05f1742d9a7c3510e8f7209f976f383c84d0ce59c2822d9b8c5c04cdaadab38",
+      "rows": 4336
+    }
+  }
+}
