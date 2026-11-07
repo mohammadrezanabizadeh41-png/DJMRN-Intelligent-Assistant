@@ -36,5 +36,15 @@
       "sha256": "c05f1742d9a7c3510e8f7209f976f383c84d0ce59c2822d9b8c5c04cdaadab38",
       "rows": 4336
     }
-  }
+  },
+  "price_valid_rows_with_zero_volume": 801,
+  "model_ready_gap_count_after_dropping_incomplete_rows": 5,
+  "model_ready_gap_durations_hours": [
+    100,
+    20,
+    36,
+    16,
+    24
+  ],
+  "warning": "Model-ready file is price-field complete but has 5 time gaps and 801 zero-volume candles. Suitable for exploratory price-indicator research with gap-aware features; not approved for volume-sensitive features or production/backtesting until independent exchange validation."
 }
