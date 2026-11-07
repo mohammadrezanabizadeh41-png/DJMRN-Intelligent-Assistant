@@ -1,0 +1,53 @@
+{
+  "id": "DJMRN-BTC-USD-4H-BITSTAMP-20261107",
+  "provider": "Bitstamp Public API",
+  "market": "BTC/USD",
+  "pair": "BTC-USD",
+  "quote_currency": "USD",
+  "volume_unit": "BTC",
+  "endpoint": "https://www.bitstamp.net/api/v2/ohlc/btcusd/",
+  "query_step_seconds": 14400,
+  "start_utc_inclusive": "2024-11-07T12:00:00Z",
+  "end_utc_exclusive": "2026-11-07T12:00:00Z",
+  "expected_four_hour_candles": 4380,
+  "actual_rows": 4380,
+  "missing_candles": 0,
+  "missing_timestamps": [],
+  "zero_volume_rows": 0,
+  "duplicate_conflicts": 0,
+  "api_requests": 5,
+  "request_errors": [],
+  "data_origin_policy": "Single independent exchange; direct 4h candles; no imputation or mixing.",
+  "created_utc": "2026-11-07T15:56:51.294674+00:00",
+  "file": {
+    "path": "C:\\Users\\Mrn7206\\AppData\\Local\\DJMRN\\CryptoMarket\\market-data\\bitstamp\\BTC-USD_4h_Bitstamp_2y_2026-11-07_complete_4h.csv",
+    "rows": 4380,
+    "bytes": 296629,
+    "sha256": "d8f286a9b64be2b6b54b87302ef55bd5f9f7962774f3ab12b016a661190a664a"
+  },
+  "verification": {
+    "time_step_seconds": 14400,
+    "timestamp_gap_count": 0,
+    "timestamp_duplicate_count": 0,
+    "invalid_ohlcv_count": 0,
+    "zero_volume_candles": 0,
+    "btc_volume_min": 14.9502277,
+    "btc_volume_median_approx": 211.969,
+    "comparison_coinbase": {
+      "matched_candles": 4376,
+      "median_close_abs_disagreement_pct": 0.00838,
+      "p95_close_abs_disagreement_pct": 0.0311,
+      "max_close_abs_disagreement_pct": 0.88746,
+      "disagreement_gt_2pct_count": 0
+    },
+    "comparison_yahoo": {
+      "matched_valid_candles": 4336,
+      "median_close_abs_disagreement_pct": 0.01548,
+      "p95_close_abs_disagreement_pct": 0.09706,
+      "max_close_abs_disagreement_pct": 0.87797,
+      "disagreement_gt_2pct_count": 0
+    },
+    "note": "Independent Bitstamp BTC/USD spot exchange price/volume, not identical to Coinbase or Yahoo. Clean OHLCV for exploratory research, still requires no-lookahead strategy evaluation and point-in-time fundamentals."
+  },
+  "usage": "Reference dataset for DJMRN BTC/USD 4H strategy experiments. Do not merge candle values across exchanges. Split train/test chronologically; no forward-looking information. Different market venue and order execution prices affect live performance."
+}
