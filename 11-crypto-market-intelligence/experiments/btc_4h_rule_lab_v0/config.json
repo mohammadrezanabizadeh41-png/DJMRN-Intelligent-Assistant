@@ -1,0 +1,71 @@
+{
+  "holdout_start_utc": "2025-11-07T12:00:00Z",
+  "fee_bps": 10,
+  "slippage_bps": 5,
+  "candidates": {
+    "sma": [
+      {
+        "fast": 20,
+        "slow": 50
+      },
+      {
+        "fast": 10,
+        "slow": 30
+      }
+    ],
+    "ema": [
+      {
+        "fast": 12,
+        "slow": 26
+      },
+      {
+        "fast": 8,
+        "slow": 21
+      }
+    ],
+    "macd": [
+      {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      }
+    ],
+    "rsi": [
+      {
+        "period": 14,
+        "buy": 30,
+        "sell": 55
+      },
+      {
+        "period": 14,
+        "buy": 25,
+        "sell": 60
+      }
+    ],
+    "bollinger": [
+      {
+        "period": 20,
+        "sigma": 2
+      },
+      {
+        "period": 30,
+        "sigma": 2
+      }
+    ],
+    "breakout": [
+      {
+        "lookback": 30,
+        "exit": 15
+      },
+      {
+        "lookback": 55,
+        "exit": 20
+      }
+    ]
+  }
+}
