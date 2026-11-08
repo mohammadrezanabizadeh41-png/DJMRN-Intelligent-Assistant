@@ -13,6 +13,7 @@ Find suitable freelance projects and eligible employment opportunities across re
 2. [POLICY-AND-DECISIONS.md](POLICY-AND-DECISIONS.md): current requirements, policy precedence, open approvals.
 3. [STATUS.md](STATUS.md): authoritative status and next checkpoint for this vertical.
 4. [Original discussion requirements](../03-architecture-and-tools/DJMRN-OPPORTUNITY-HUNTER-REQUIREMENTS-20261028.md): chronological decision history; latest approved refinements take precedence over earlier open questions.
+5. [سازنده سایت رایگان برای نمونه‌کارهای فریلنسری — شش سرویس تأییدشده](FREE-WEBSITE-BUILDERS-FREELANCE-PORTFOLIO.md): فهرست کاربر برای نمونه‌سازی وب‌سایت با پرامپت، محدودیت‌های طرح رایگان و معیارهای انتخاب.
 
 ## Existing project components to inspect before coding
 - [Global project rules](../PROJECT-RULES.md)
