@@ -1,3 +1,83 @@
+## 2026-11-10 — DJMRN-OPENAGENTS-API-CREDITS-100USD-LIVE-PRICE-RESEARCH — USER-REQUESTED VERIFIED RESEARCH RECORD
+
+**Scope and continuity:** This is the user-requested full consolidation of the OpenAgents Launcher/Workspace promotional API-credit research, live gateway pricing probe, historical 23-model comparison and estimated capacities. It updates the earlier `2026-11-02 — DJMRN-FREE-API-PRIORITY-00-OPENAGENTS-LAUNCHER` finding in THIS canonical CURRENT-STATUS file. No separate tracker/file/new architecture authority is created. Read this section before treating the earlier “not verified as a model gateway” statement as current.
+
+### A. Confirmed vs account-reported vs unverified (2026-11-10)
+
+- **OWNER-REPORTED (account-specific):** User reports their OpenAgents account has now unlocked **USD 100 of free promotional API credits**. Accept this as owner-reported award amount, **not** independent verification of *remaining spendable balance*. On-account `costLimitUsd`, `costUsdUsed`, available model list, expiration, billing/overage and active credit state were NOT read successfully. Do not promise $100 unused or enable paid usage without account-specific read-only evidence.
+- **VERIFIED, Windows installed app:** DJMRN-LAPTOP had `OpenAgents 1.1.9` in Windows uninstall inventory; launcher EXE `%LOCALAPPDATA%\Programs\OpenAgents\OpenAgents.exe`; user desktop shortcut `OpenAgents.lnk`. App was opened. Authenticated `My Workspace` and 8 agents (Yumi plus existing DJMRN agents) were visible; seven DJMRN agent health checks showed missing model API key / not configured. Version 1.1.13 displayed as downloaded/ready to install, NOT installed. The existing agent registration does **not** verify successful inference or promotional credit routing. No model inference, API-key extraction, purchase, update or account configuration was performed in this investigation.
+- **VERIFIED, gateway unauthenticated live metadata:** On 2026-11-10, directly from DJMRN-LAPTOP, `GET https://api-gateway.openagents.org/v1/models` returned HTTP 200 and **one model**: `deepseek-v4.1-flash`, `input_price_per_1m_usd=0.60`, `output_price_per_1m_usd=2.40`, `owned_by=demo-model-gateway`. This no-auth public model listing was fetched twice with the same result. **Account-specific eligibility and active authenticated model inventory remain UNVERIFIED**, and the gateway catalog can change.
+- **VERIFIED code-level integration:** OpenAgents official source supports a promotional OpenAI-compatible model gateway and per-user quota, plus one-click **Use my OpenAgents promo credits** setup in agent configuration (examples: Codex, Pi, Hermes, OpenClaw, DeepSeek, OpenCode, Kimi, OpenWorker). A usable model must actually be served by the promo gateway. The agent executes via its supported runtime, while model requests are metered against the promotional gateway key. **The $100 does not buy model weights, local model ownership, unlimited messages, permanent paid subscriptions or third-party tool subscriptions.**
+- **CURRENT LIMITATION:** The 23-model dataset below is **HISTORICAL RESEARCH** from an open, unmerged third-party models.dev GitHub PR that asserts it queried the same gateway on **2026-11-05**. It is not a guaranteed or account-verified 2026-11-10 inventory. There is an observed divergence: **23 historically reported vs 1 currently publicly returned**. Do not assume other 22 are selectable today.
+
+### B. Grant mechanics from OpenAgents official implementation
+
+OpenAgents official campaign Python source describes the ordinary reward ladder: sign-up **+$5**; first qualifying agent connection **+$20**; first agent response after human message **+$10** (cumulative $35); a qualifying second DIFFERENT-type connected agent **+$10**; its response **+$5** (initial milestones cumulatively $50); then an eligible active UTC day **+$10** until the normal cumulative ladder cap **$100**. This is an **increment to the credit key's cumulative spend cap**, not $10 free cash every day forever nor a daily spending ceiling. Key budget is consumed by billed tokens; remaining budget = cost limit minus cost used. Admin/pilot extra grants are a distinct mechanism and not assumed for this account.
+
+Daily reward eligibility in campaign code requires an eligible actual connected launcher/CLI agent (NOT default Yumi cloud agent), a human message in the owner's Workspace and an eligible agent response; one `daily:YYYY-MM-DD` grant max per UTC day; server records and anti-abuse/eligibility checks apply. Merely opening desktop/Workspace or sending a human-only message does not satisfy daily award conditions. Campaign may be disabled or ended; status has to be checked for this account.
+
+Code-of-record sources:
+- https://github.com/openagents-org/openagents/blob/develop/workspace/backend/app/services/campaign.py
+- https://github.com/openagents-org/openagents/blob/develop/workspace/backend/app/config.py
+- https://github.com/openagents-org/openagents/blob/develop/workspace/backend/app/routers/campaign.py
+- https://github.com/openagents-org/openagents/blob/develop/workspace/frontend/components/campaign/campaign-feedback.tsx
+- https://github.com/openagents-org/openagents/blob/develop/workspace/frontend/app/%5BworkspaceId%5D/settings/api-credits/page.tsx
+
+### C. LIVE verified public model rate and $100 capacity examples
+
+**As of 2026-11-10: `deepseek-v4.1-flash` only VERIFIED by unauthenticated public GET:** $0.60 / one million text input tokens; $2.40 / one million text output tokens. For a full hypothetical **$100 still unspent**, formula for ONE API completion/request is `(input_tokens * 0.60 + output_tokens * 2.40) / 1,000,000`; request capacity `floor(100/cost)` assuming stable tariffs and no other charges. Scenarios:
+
+| Usage scenario | Input tokens / model request | Output tokens / model request | Estimated cost / model request | Approx. $100 requests |
+|---|---:|---:|---:|---:|
+| Short chat | 1,000 | 500 | $0.0018 | 55,555 |
+| Standard chat | 3,000 | 1,000 | $0.0042 | 23,809 |
+| Long chat | 10,000 | 3,000 | $0.0132 | 7,575 |
+| Agent-heavy model call | 40,000 | 8,000 | $0.0432 | 2,314 |
+
+**Agent caveat:** “Model request” is not the same as one human chat message, one task, or one Agent mission. Tools, reasoning, input history, document embeddings if separately billed, multiple rounds, retries and retained context can increase total token/call cost. Illustrative 20-step Agent mission where each step is 40k input + 8k output tokens = `20 * $0.0432 = $0.864`; approximately `floor(100/0.864) = 115` such missions at unchanged price. Do not present as measured runtime throughput or actual usage quota.
+
+### D. HISTORICAL 23-model cost comparison (third-party PR, researched 2026-11-05 — availability NOW UNVERIFIED)
+
+**Source:** https://github.com/anomalyco/models.dev/pull/12679 (open/unmerged PR as observed 2026-11-10, claims its model rates from gateway `GET /v1/models` on 2026-11-05). Prices USD per 1M text tokens. “Requests” assume hypothetical full $100, with **3,000 input + 1,000 output tokens PER call** (no cache, reasoning/tool overhead or provider-specific additional fees). Numbers are indicative arithmetic only, *not* actual message allotments or currently enabled models. The current public gateway inventory contradicted the historical 23-model availability, as documented in §A.
+
+| Historical model | Input USD / 1M tokens | Output USD / 1M tokens | Approx. 3k/1k requests per $100 |
+|---|---:|---:|---:|
+| DeepSeek V4 Flash 0731 | 0.16 | 0.504 | 101,626 |
+| DeepSeek V4 Flash | 0.224 | 0.448 | 89,285 |
+| GPT-OSS 120B | 0.12 | 0.78 | 87,719 |
+| GPT-OSS 20B | 0.1 | 0.9 | 83,333 |
+| Mistral 3 14B | 0.4 | 0.4 | 62,500 |
+| GLM 5.3 Flash | 0.3 | 1 | 52,631 |
+| Gemma 4 31B | 0.36 | 1 | 48,076 |
+| Nemotron Nano 12B VL | 0.4 | 1.2 | 41,666 |
+| MiniMax M2.5 | 0.45 | 1.8 | 31,746 |
+| Llama 4 Maverick | 0.5 | 1.74 | 30,864 |
+| DeepSeek V4.1 Flash | 0.6 | 2.4 | 23,809 |
+| Nemotron 3 Nano Omni | 1 | 1.8 | 20,833 |
+| DeepSeek 3.2 | 0.85 | 2.72 | 18,975 |
+| Qwen 3.5 397B | 0.77 | 4.9 | 13,869 |
+| Nemotron 3 Ultra 550B | 1.8 | 3.4 | 11,363 |
+| MiMo V2.5 Pro | 1.2 | 6 | 10,416 |
+| Kimi K2.6 | 1.52 | 6.4 | 9,124 |
+| GLM 5.3 | 1.9 | 6.8 | 8,000 |
+| DeepSeek V4 Pro | 2.784 | 5.568 | 7,183 |
+| GLM 5.2 | 2.1 | 8.8 | 6,622 |
+| DeepSeek V4 Pro 0813 | 2.64 | 7.92 | 6,313 |
+| Qwen 3.8 Max | 4 | 12 | 4,166 |
+| Kimi K3 | 5.1 | 25.9 | 2,427 |
+
+### E. Use, limits, safety and next validation gate
+
+- The correct pathway is authenticated **OpenAgents Workspace → Settings → API credits**. Read `costLimitUsd`, `costUsdUsed`, key active state, campaign enabled/ended, remaining validity and its **account-specific** available models. Protect credentials: do NOT expose, store or print actual promo API keys, bearer/session tokens or screenshots with visible secrets. The public gateway `/v1/models` listing alone is not an account-specific eligibility proof.
+- Before selecting an agent, use existing agents/roles rather than creating duplicates. OpenAgents can route eligible Agent model calls via the promo gateway only after correct Model Access configuration; *do not* presume existing DJMRN agents are currently ready (observed missing keys). No activation, credential transfer, paid-overage, billing setup, new agent, new provider, model download, migration or desktop update authorized by this research or this status registration.
+- Verify official per-key token pricing and provider/model inventory again close to actual use. For free-first safe trial, choose the smallest working agent, per-task explicit credit cap, low token/step limits, usage monitoring and stop before remaining budget is exhausted. Unknown overage/auto-recharge = **DENY** until verified.
+- **No architectural promotion:** This is a provider credit capability finding, not approval to replace OmniRoute/OpenClaw authority, create a parallel multi-agent runtime, or change canonical agent team structure. The prior AGTEAM plan remains separately gated.
+- **Sources / provenance:** user report of $100; Desktop Commander read-only installed-software inventory and observed GUI; two 2026-11-10 on-device HTTP GET public metadata responses; OpenAgents official GitHub source files above; third-party models.dev PR dated 2026-11-05. **Not tested:** actual promotional 100-dollar account spend, account-specific model availability/expiry, cost tracking on a completed inference request, and tool permissions.
+
+**Outcome:** Historical provider status upgraded from “unknown whether it offers a model gateway” to **VERIFIED promo model-gateway *mechanism***; **public live eligible model inventory = one observed `deepseek-v4.1-flash` at quoted rates**; **specific account residual credit and access still UNVERIFIED**. No payment/usage/new install approved.
+
+---
+
 ## 2026-11-08 — DJMRN-KARLANCER-932-BUDGET-BASELINE-20261108 (USER-REQUESTED SAVE / BASELINE; NOT LIVE-VERIFIED)
 
 **Scope:** Owner explicitly asked to register all **932** Karlancer project candidates filtered from **5,029** preliminary high / possible / constraint-review groups, ahead of a new detailed read-only re-screen of every candidate. This is a **frozen baseline of derived local output**, **NOT** a claim that any of the 932 is still open, current, suitable, or approved for contact. No outbound actions, applications, paid usage, account changes, or live project-status checks are included in this record.
