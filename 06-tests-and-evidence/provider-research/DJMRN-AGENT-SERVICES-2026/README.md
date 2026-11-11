@@ -30,3 +30,14 @@
 | DJMRN-Free-Agent-Services-2026.md | 65925 | `db4d7c6ddaa9aa77e78fea157d59cffa650c24149b94c960d695b1537f3b3b6e` |
 
 این پوشه آرشیو پژوهشی موضوع «سرویس‌های ایجنت» است؛ تغییرات وضعیت اجرایی در مراجع canonical پروژه نگهداری می‌شوند. وجود این کاتالوگ به معنی نصب/تأیید استفاده از تمام ۱۵۱ گزینه نیست.
+
+## CURRENT EXPANDED CATALOG — ChatGPT Apps / Plugins (2026-11-12)
+
+**[MASTER catalog, 252 records](DJMRN-Agent-Services-MASTER-2026.csv)** contains 151 original Work services plus 101 newly discovered ChatGPT App/Plugin names. This is a research inventory, not installed functionality.
+
+- [ChatGPT App/Plugin delta — 101 records](CHATGPT-APPS-DISCOVERY-2026-11-12.csv)
+- [Discovery comparison and caveats](CHATGPT-APPS-DISCOVERY-2026-11-12.md)
+- [Source discovery snapshot (118 app labels)](CHATGPT-PLUGIN-DISCOVERY-SNAPSHOT-2026-11-12.json)
+- Original 151-row Work CSV and Markdown preserved unchanged for provenance.
+
+118 distinct ChatGPT app/plugin names were recovered through topical directory searches plus two existing tools. 17 overlap by name; 101 added; 4 are currently NOT_AVAILABLE in the account. The search is not exhaustive. All new entries have **U/UNKNOWN-DENY** free-tier/cost/region/transport statuses until the actual provider is independently verified. ChatGPT App installation does not establish OpenMausBot compatibility or permission. No install, OAuth or spend was performed.
