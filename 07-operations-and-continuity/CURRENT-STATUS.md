@@ -23,6 +23,111 @@
 - **REPAIR STATUS: NOT STARTED / NOT AUTHORIZED**. **NO** data files moved/overwritten, no services restarted, no programs installed, no registry changes, no SQL queries/maintenance, no test transactions, no USB customer-data copies, no software/server reboot. User's explicit approval is required for any consequential repair after verified backup and rollback plan.
 - **OUTCOME:** Windows disk health indicators are reassuring but not definitive. SQL availability is clearly anomalous. User-visible CRM save/restart reproduction and full root cause determination are PENDING; customer data recovery is NOT CLAIMED.
 
+
+### DJMRN-CLIENT-ACCOUNTING-DATA-RECOVERY-001 — Itemized component and evidence register (2026-11-11)
+
+**Scope:** Read-only diagnostic evidence collected **2026-11-11** from the user-confirmed customer device, for **PayamGostar CRM** only. This is an itemized *technical status record*, not customer-data recovery proof. The earlier Holoo app is explicitly OUT OF SCOPE. **Source/provenance:** Remote Desktop Commander read-only Windows CIM/PowerShell inventory, Windows Event Log metadata, limited anonymized application-config keyword checks, local database-file metadata, binary SQL MDF page-header samples, backup TAPE signature checks, and full-file SHA-256 computation of three BAK files. All observations refer to time of collection, not guaranteed current runtime state.
+
+**Publication/privacy gate:** GitHub repository visibility was verified **PUBLIC**. No real customer financial records, user/host names, machine IDs, complete customer-specific paths, IP addresses, connection strings, database logical names, proprietary config contents, credential values, or event log payloads are recorded here. Detailed local evidence remains on the customer device; this public ledger is not the customer's backup store.
+
+#### A. Operating system, storage and restart evidence
+
+| ID | Component | Observed fact | Status / diagnostic implication |
+|---|---|---|---|
+| SYS-01 | Windows platform | Windows Server 2025 Datacenter x64, build 26100 | OBSERVED; not a normal Windows 11 client; compatibility with CRM vendor not yet verified |
+| SYS-02 | Main physical storage | NVMe SSD; Windows physical-disk health/operational status Healthy/OK | OBSERVED, **not** a complete SSD/media-health certification |
+| SYS-03 | OS/data volumes | Two NTFS fixed volumes, both Healthy/OK; approximately 55 GB and 328 GB free | OBSERVED; disk-full explanation unsupported by this sample |
+| SYS-04 | NTFS dirty flags | Both C/D reported NOT Dirty by read-only query | OBSERVED; not proof of logical database integrity |
+| SYS-05 | Storage errors | No targeted Disk/NTFS/storport/volsnap storage warning/error among the examined bounded 30-day System events | NEGATIVE BOUNDED RESULT; not proof of no past I/O errors |
+| SYS-06 | Abnormal reboots | Six Kernel-Power event ID 41 instances in sampled last 30 days | OBSERVED; **possible risk**, causal connection with data-loss events UNVERIFIED |
+| SYS-07 | Language/locale | UI culture en-US; system locale fa-IR; Windows ANSI code page 1256; several Persian/English input languages | OBSERVED; a language-caused save defect is **NOT PROVEN** |
+| SYS-08 | Permissions/time | Diagnostic session administrative; time zone Iran Standard Time | OBSERVED; customer-specific user identity intentionally omitted |
+
+#### B. PayamGostar CRM application and host process
+
+| ID | Component | Observed fact | Status / diagnostic implication |
+|---|---|---|---|
+| CRM-01 | PayamGostar installed software | PayamGostar product version 2.0.0 in installed app metadata; Server v2.0 package present | OBSERVED; exact deployed build/patch level UNVERIFIED |
+| CRM-02 | Host executable | `PayamGostar2Host.exe` present; PE product-version metadata reported `0.0.0.0` | FILE EXISTS; 0.0.0.0 alone does **not** prove corrupt/incomplete executable |
+| CRM-03 | Agent executable | `PayamGostar2Agent.exe` present | FILE EXISTS; file presence alone does not validate operation |
+| CRM-04 | Host Windows service | `PayamGostar2Host`: configured Automatic, observed **Stopped**, exit code **1067** | CONFIRMED ANOMALY; reason requires further diagnosis |
+| CRM-05 | Agent Windows service | `PayamGostar2Agent`: configured Automatic, observed **Running**, exit code 0 | OBSERVED; Agent uptime does not imply Host/database connectivity |
+| CRM-06 | Service crash frequency | **44** matching Service Control Manager unexpected Host-termination events (ID 7034) in examined 30-day history | REPEATED HOST FAILURE; exact full history and impact on transactions UNVERIFIED |
+| CRM-07 | Application crash evidence | .NET Runtime ID 1026 and Application Error ID 1000 around 2026-11-11 10:04, 10:40, 11:17 and 11:34 | OBSERVED; errors accompanied Host instability |
+| CRM-08 | Exception classes | `System.Data.SqlClient.SqlException` and `System.ComponentModel.Win32Exception` detected in Host crash events | SQL-RELATED CRASH EVIDENCE; exact SQL error number/connection cause not established |
+| CRM-09 | Source code/save logic | No proprietary source code was available or inspected; no decompilation or runtime modification attempted | APPLICATION-CODE ROOT CAUSE **UNVERIFIED**, not demonstrated |
+| CRM-10 | Actual user-facing reproduction | No safe test save, user-record search, locale change, program restart or Windows reboot performed | UNTESTED, because no verified backup and user directed read-only work |
+
+#### C. SQL Server, services, hosting and connectivity
+
+| ID | Component | Observed fact | Status / diagnostic implication |
+|---|---|---|---|
+| SQL-01 | SQL installation artifacts | SQL Server 2022 setup, shared components, drivers and management tools listed in Windows installed software | PRESENT, not evidence that an SQL engine is operational |
+| SQL-02 | Named application SQL instance | Registry contains named instance metadata associated with the CRM | OBSERVED; live target resolution and active use **NOT CONFIRMED** |
+| SQL-03 | Database Engine service | Corresponding `MSSQL$...` Database Engine service **not present** in enumerated Windows services/registry service key | CONFIRMED LOCAL ANOMALY; not evidence of remote host failing |
+| SQL-04 | Database Engine executable | `sqlservr.exe` **not found** in the bounded SQL Server installation subtree searched | OBSERVED MISSING IN SEARCH SCOPE; do **not** assert it was deleted, maliciously removed, or never installed |
+| SQL-05 | Database Engine runtime | No `sqlservr.exe` process observed | OFFLINE/UNAVAILABLE AT SAMPLE TIME |
+| SQL-06 | SQL Server Browser | SQL Browser service Running and UDP listener present | OBSERVED; Browser is discovery, **not** Database Engine |
+| SQL-07 | SQL telemetry and VSS | Telemetry service for named instance Running; SQL VSS Writer service Running | OBSERVED; neither proves SQL database online or backups valid |
+| SQL-08 | Historical SQL engine logs | SQL instance ERRORLOG files present, most recent observed modification **2026-10-22**; newest logical data files also carry that date | OBSERVED TIMESTAMP; does not establish a precise stop/removal time without validated chronological records |
+| SQL-09 | SQL ERRORLOG bounded scan | Tail of one log contained SQL error-number markers 17054, 17892, 3903; no targeted 823/824/825 disk-error markers detected in that tail | BOUNDED EVIDENCE; meaning/causality not established; no raw confidential logs exported |
+| SQL-10 | App config metadata | At least one CRM Agent JSON/config artifact mentions the named SQL instance and SQL connection concepts | INDICATOR ONLY; no passwords, hostnames or actual connection strings copied |
+| SQL-11 | Actual configured DB destination | No validated active connection string could be attributed to current Host or Agent session | **UNKNOWN** local vs LAN vs external host; the instance name alone is insufficient |
+| SQL-12 | Active network observation | CRM Agent process and its local listener observed; no live SQL engine process observed; SQL Browser UDP endpoint observed. Snapshot did not prove an active remote SQL session | **NO VERIFIED SQL DESTINATION**; no packet capture, probe, login or network change |
+| SQL-13 | Why engine service/exe missing | Checked available installer-event metadata; did not establish uninstall, corruption, removal cause or date | **UNKNOWN**; do not presume missing components were caused by a particular event |
+| SQL-14 | Server vs Host vs client code | Host is repeatedly crashing with SqlException while local SQL engine is unavailable; a code defect, wrong target instance, broken local service or separate remote server remain distinct hypotheses | HIGH-PRIORITY INFRASTRUCTURE HYPOTHESIS, **NOT final root cause** |
+
+#### D. Local database candidates and database-file metadata
+
+| ID | Candidate / file type | Size / observed latest timestamp | Read-only evidence | What is NOT proven |
+|---|---|---|---|---|
+| DATA-01 | Historical candidate MDF-A in separate CRM data area | ~**430.38 MB**, 2026-08-02 | SQL file/boot page structure and, in first 32 MiB, ~**3,088 apparent data pages with slots** and 428 index pages with slots | Whether these include real customer records or deleted/missing transactions |
+| DATA-02 | Historical candidate MDF-B in nested CRM data area | ~**178.12 MB**, 2026-07-29 | SQL file/boot page structure; first 32 MiB ~**1,812 apparent data pages with slots** and 432 index pages with slots | Which user/company/CRM version owns this data |
+| DATA-03 | Packaged CRM Server-area MDF-C | ~**181.12 MB**, 2026-10-22 | First 16 MiB ~**1,091 apparent data pages with slots** and 287 index pages with slots; page types are SQL-like | This may be production data, copied data, an older restored file, or bundled data; actual role UNKNOWN |
+| DATA-04 | Accompanying LDFs | LDF files observed near MDF sets; examples ~61.94 MB and ~214.12 MB | PRESENT AS FILES; do not treat as complete/matching transaction-log sets | MDF↔LDF pairing, consistency, last committed transaction and currentness |
+| DATA-05 | SQL instance system data | Multiple smaller MDF/LDF and NDF files present in engine instance's DATA area | Some MDF page headers examined and had SQL-like data/index pages | These may be system databases; do not count as CRM business records |
+| DATA-06 | Actual active authoritative database | Several alternative files present with different timestamp/size | **NOT IDENTIFIED** due nonrunning SQL engine and missing verified connection | No reliable claim where the latest save writes went |
+| DATA-07 | Logical record contents | No SQL queries, table/schema reads, record identifiers, financial fields or customer records were retrieved | **UNVERIFIED**: missing old records could be saved, unsaved, filtered, or on another instance |
+| DATA-08 | Binary comparison | A three-MDF whole-page exact comparison was attempted as read-only but terminated before producing a trustworthy result | **NO VALID COMPARISON RESULT**; no conclusion about database equivalence |
+| DATA-09 | Database corruption status | No SQL DBCC CHECKDB, offline restore, integrity scan using SQL engine, attach, recovery or repair executed | **UNVERIFIED**; presence of page structures is not a full database-integrity check |
+
+*Important distinction:* SQL MDF page type 1 and slot count indicate physical row-storage structures, but the numbers above **are page counts, not counts of CRM transactions or proof of past customer records.**
+
+#### E. Three previously found BAK backup files (metadata only)
+
+| ID | Last modified | File size | Physical read-only checks | Recovery proof |
+|---|---|---|---|---|
+| BAK-01 | 2026-10-09 04:54 | ~182.15 MB | `TAPE` backup-format signature found; header and mid-file nonzero bytes; full-file SHA-256 calculation succeeded | **UNVERIFIED** |
+| BAK-02 | 2026-05-11 12:59 | ~295.16 MB | `TAPE` signature; nonzero binary contents; full-file SHA-256 succeeded | **UNVERIFIED** |
+| BAK-03 | 2026-05-11 12:06 | ~412.12 MB | `TAPE` signature; nonzero binary contents; full-file SHA-256 succeeded | **UNVERIFIED** |
+
+- All three have **distinct computed SHA-256 values** (hash values deliberately not published); all were readable end-to-end for hashing at check time.
+- BAK files are **not blank**, but TAPE signature/hash success/size do **not** show table names, row existence, backup-set integrity, successful restore, or a particular customer's missing records.
+- No `RESTORE HEADERONLY`, `RESTORE VERIFYONLY`, restoration, attachment, query, copying to USB, cloud export or file modification was done.
+- Existing BAK files were **not validated as complete, current, restorable backups**. **BACKUP STATUS: UNVERIFIED.**
+
+#### F. Hypotheses, gaps, safety stop
+
+| ID | Hypothesis or missing proof | Classification |
+|---|---|---|
+| HYP-01 | Local SQL engine unavailable leads CRM Host to throw SqlException and become unusable | **STRONG SUPPORTED HYPOTHESIS**, not yet confirmed causal chain |
+| HYP-02 | The CRM saves to a different database/server than the one displayed after a restart | **POSSIBLE / UNVERIFIED** |
+| HYP-03 | Prior business records are stored in one of the historical MDF/BAK files but are no longer shown | **POSSIBLE / UNVERIFIED** |
+| HYP-04 | Previous records never committed successfully because save/connection failed | **POSSIBLE / UNVERIFIED** |
+| HYP-05 | CRM's source-code save logic has a software defect | **UNVERIFIED; source code not examined** |
+| HYP-06 | UI/Unicode/locale changes caused the observed data loss | **UNVERIFIED**; locale mismatch alone cannot demonstrate it |
+| HYP-07 | Power interruptions caused incomplete commits/corruption | **RISK OBSERVED**, causality UNVERIFIED |
+| HYP-08 | SQL executable or instance metadata was removed, installation partially damaged, or configuration drift occurred | **POSSIBLE / UNVERIFIED**; no cause/timestamp established |
+| GAP-01 | Definitive classification of SQL endpoint (same machine vs other LAN/external server) | PENDING |
+| GAP-02 | Which MDF/backup corresponds to current CRM company/year and missing-record time | PENDING |
+| GAP-03 | Specific previously disappeared records (anonymized IDs/dates) present in SQL tables | PENDING; requires vendor-compatible logical DB access |
+| GAP-04 | Full official vendor-compatible backup, customer-approved independent destination, and verified recovery | PENDING; **hard prerequisite before repair** |
+| GAP-05 | Exact proposed fix, risks, rollback and owner approval | PENDING |
+
+**Actions not performed:** No service start/stop/restart, SQL engine repair/reinstallation, firewall/UAC/antivirus change, database attach/restore/migration, SQL write or checkdb, filesystem repair, account changes, language changes, client financial-data access/export, removal of files, OS reboot, or repair. One blocked read-only utility call did not run; separate nested-shell parsing errors were non-mutating; one read-only long-running comparison was cancelled and no resulting comparison conclusion is claimed. Any future action on the customer system must observe Backup First / Verified Restorability / Explicit Approval.
+
+**Current disposition:** `READ-ONLY DIAGNOSTICS ONLY`; `BACKUP=UNVERIFIED`; `DATA_RECOVERY=NOT_PROVEN`; `ROOT_CAUSE=UNCONFIRMED`; `REPAIR=NOT_STARTED`; `CUSTOMER_SYSTEM_UNCHANGED`. The public GitHub entry is an evidence index, **not** a backup or substitute for on-device proof.
+
 ---
 
 ## 2026-11-10 — DJMRN-WINDOWS-AGENT-DOWNLOADS-20261110-COMPLETE (USER-REQUESTED / DOWNLOAD-ONLY; DEVICE VERIFIED)
