@@ -1,3 +1,14 @@
+## پروژه عیب‌یابی ۱ — مأموریت حسابداری مشتری (2026-11-11; PENDING DEVICE CONFIRMATION)
+
+- **Mission ID:** DJMRN-CLIENT-ACCOUNTING-DATA-RECOVERY-001. Objective: safe, backup-first investigation of accounting data reportedly not displayed after language changes or restart. No deletion or repair is presumed.
+- **Authorization:** User requested this minimal non-confidential activity record in the canonical DJMRN GitHub status file. No customer accounting records, paths, credentials, logs, hardware IDs, device identifiers, screenshots, or other customer-identifying details may be committed to this **public** repository.
+- **Observed (read-only, Desktop Commander device listing):** Two devices online: the user's known personal laptop and a second online Windows-service device (app version 0.3.2). The second device is a **CANDIDATE**, not yet user-confirmed as the customer's computer. Device listing does not prove filesystem access or customer identity.
+- **Actions completed:** Read-only device enumeration; consulted current Notion operating memory and tool governance; inspected canonical GitHub repository and status path. **No commands executed on either device; no customer data accessed; no backup attempted; no settings changed; no repairs performed.**
+- **Gate:** STOP before all device inspection until the user explicitly identifies and approves the customer device. Then perform read-only inventory only, followed by database-specific verified backup and a separate approved repair proposal.
+- **Backup status:** UNVERIFIED. **Diagnosis:** NOT STARTED. **Fix:** NOT AUTHORIZED. **Final resolution:** NOT RESOLVED / NOT ASSESSED.
+
+---
+
 ## 2026-11-10 — DJMRN-WINDOWS-AGENT-DOWNLOADS-20261110-COMPLETE (USER-REQUESTED / DOWNLOAD-ONLY; DEVICE VERIFIED)
 
 **Scope and evidence:** On Windows 11 device `DJMRN-LAPTOP`, downloads completed by 2026-11-10 **19:40:45 Asia/Tehran**. Three sequential PowerShell downloader queues finished with no remaining curl processes: `%TEMP%\DJMRN-Agent-Sequential-Downloads.log`, `%TEMP%\DJMRN-Supplemental-Serial-Downloads.log`, `%TEMP%\DJMRN-Orkas-2.0.0-Sequential-Download.log`. The final output of all three queues was examined at 19:42:26 local time together with Downloads directory inventory and active processes. Destination: `C:\Users\Mrn7206\Downloads`. Each finished download had a local SHA-256 matching the official GitHub release digest (or official Hermes installer-script SHA-256). No installer was run; no API, account, provider, paid service, WSL, driver, or system setting was activated.
