@@ -145,3 +145,98 @@ For target opportunities record: link, timestamp, employer source, freelance/con
 **Next user-approvable action:** Read-only P0 verification of account-specific Google quotas/rights and compatibility, conflict/dedup review of existing three scheduled Gmail reports, and design of the smallest safe synthetic test. Do NOT deploy or request secrets in chat.
 
 **Continuity rule:** This README is project charter/research/specification. All future daily execution progress and most-current state must live only in the single canonical CURRENT-STATUS.md when owner explicitly asks for saving. Other documents remain supporting artifacts; no parallel state authorities.
+---
+
+## 9. Google Agent Development Kit (ADK 2.0) — Cloud Multi-Agent Extension
+
+**Research date: 2026-11-12.** Owner explicitly directed including ADK in this exact cloud Gmail opportunity project. **Status: DOCUMENTED / EVALUATION CANDIDATE / NOT DEPLOYED.** This is a part of DJMRN-CLOUD-GMAIL-OPPORTUNITY-001, not a second project or new running agent. No installation, model activation, IAM/Google account permission, OAuth grant, deployment or fee has been authorized.
+
+### 9.1 Identity, version, licensing and purpose
+
+- **Google Agent Development Kit (ADK)** is Google's modular, code-first, open-source framework for building, evaluating and running AI agents, including multi-agent coordination. License: **Apache-2.0**. Official source: https://github.com/google/adk-python ; documentation: https://adk.dev/ .
+- **ADK 2.0 is now current**. Official GA dates: Python 2.0 **May 19, 2026**; Go 2.0 **June 30, 2026**; TypeScript 2.0 **August 21, 2026**. Docs: https://adk.dev/2.0/ . Existing old ADK 1.x examples require compatibility review.
+- Official Python package: google-adk, with Python **3.11+** in the current pyproject metadata. Current project machine/package compatibility, installed version and running state are **UNVERIFIED**. Source: https://github.com/google/adk-python/blob/main/pyproject.toml .
+- **ADK software is free, but it is NOT itself free cloud hosting, an always-on server, an OAuth grant, a Gmail mailbox account, a scheduler or free Gemini inference.** All external model/host/identity/privacy quotas and terms are separate.
+
+### 9.2 ADK 2.0 capabilities relevant to this project
+
+| Capability | Value for the DJMRN job-follow-up project | Important limit |
+|---|---|---|
+| Multi-agent coordinator and subagents | Intake, opportunity review, proposal composing, QA, reply tracking | Roles do not justify deploying all agents at once |
+| Graph / dynamic workflow execution | Conditional task routing, loops, deterministic decisions, retries | Use plain deterministic code if sufficient |
+| Agent-as-tool and delegation | Specialist can return a review to coordinator, or receive handoff | Explicit ownership and approval rules needed |
+| Tool calls: functions, OpenAPI, MCP and integrations | Reuse Google and other approved tools | Tool availability is not an authorization grant |
+| Tool confirmation / human-in-the-loop | Gate Gmail sends, site application, meeting invitations and financial commitments | Actual approval is user's decision, not a model instruction |
+| Evaluation / tracing / sessions | Compare failures, quality, workload and costs | Do not store credentials, private mail or tokens in insecure session state |
+| Model-agnostic design | Gemini primarily; other providers may be possible | Groq/OpenRouter and tool-calling compatibilities need separate real tests |
+
+Evidence: https://adk.dev/2.0/ ; https://github.com/google/adk-python ; https://adk.dev/tools-custom/function-tools/ ; https://adk.dev/integrations/ .
+
+### 9.3 Critical native integration: Google Apps Toolsets with Gmail OAuth
+
+Google now provides **official Google Apps Toolsets** for ADK, supporting **Gmail, Google Calendar, Docs, Sheets, Slides and YouTube**. The toolsets are built from the respective Google API discovery definitions and handle OAuth 2.0 authentication. Documentation says **Python supported starting v1.0.0** and **TypeScript supported starting v2.4.0, experimental in TypeScript**. Official: https://adk.dev/integrations/google-api-toolsets/ .
+
+**DJMRN use case:** a future ADK agent could locate/read appropriate Gmail threads, extract public opportunity details, coordinate an analyst and an independent reviewer, prepare an owner-reviewable response, watch for a reply and update selected durable job status. Calendar/Sheets integration might support approved appointment preparation and status reporting. This is only a conceptual capability until OAuth scopes, API methods and actual data handling are tested.
+
+**Security boundary:** Automatically generated toolsets can expose APIs that mutate accounts. **Do not provide the model with a full write-capable Gmail/Calendar toolset.** Start with explicitly allowlisted Gmail read-only methods and least-privilege OAuth; use independent owner approval for Gmail Drafts, sending/replying, labeling/deleting, account changes, Calendar invitations or employer-site submissions. The Gmail body-reading scopes are restricted; relevant verification and security assessment requirements are account/use-case dependent and need a dedicated review. **Gemini API keys cannot authenticate Gmail**. Never pass credentials, passwords, cookies, OTPs or refresh tokens into GitHub, prompts or unsecured agent session states. ADK docs warn explicitly about token security. References: https://adk.dev/tools-custom/authentication/ ; https://developers.google.com/workspace/gmail/api/auth/scopes .
+
+### 9.4 Logical roles, not necessarily independent cloud processes
+
+1. **Cloud Gmail Observer (Read only):** identify new message/thread IDs, check sender and trusted source; do not change mailbox state.
+2. **Deterministic Eligibility Checker:** contract/freelance classification, location, remote, payout feasibility, fit, deadline, fraud signals and duplicate checks.
+3. **Opportunity Analyst:** use only approved public/non-sensitive job information for optional Gemini calls; no raw private email in unpaid Gemini.
+4. **Research Verifier:** validate public job listing link, company evidence, working conditions and policy conflicts before recommendation.
+5. **Proposal Composer:** draft Persian/English reply using an approved public portfolio and verified facts; cannot invent skills, cost, deliverables or availability.
+6. **Quality/Safety Reviewer:** spot hallucinations, privacy issues, duplicate outreach, policy violations and unfair/wrong matching.
+7. **Follow-up Tracker / Coordinator:** monitor actual replies and create reminders; maintain one authoritative task ID/state; escalate sending/meeting/application to human.
+
+**Initial pilot = one small workflow, not seven running agents.** Only grow into coordinator/specialist ADK calls if their benefit is measured. The Windows MausBot/OpenMausBot team stays the owner of local Windows tasks, with outbound pull/sync when laptop reconnects.
+
+### 9.5 Decision: Apps Script first, ADK as the advanced agent layer
+
+**Option A — Minimal Google-first deployment candidate:**
+
+Gmail API (owner-authorized read-only) -> Google Apps Script time-trigger -> rule-based filter / source IDs / dedup -> optional privacy-safe Gemini API -> one chosen durable store -> owner notification -> separately approved Gmail drafts.
+
+- This is smaller, simpler, time-triggered and needs no long-lived ADK server.
+- Google Apps Script has consumer quotas (90 minutes/day aggregate trigger time; 6 min/execution; 20,000 email read/write operations and 20,000 URL Fetch calls per day) that do NOT equal Gemini model quotas. Official: https://developers.google.com/apps-script/guides/services/quotas .
+- If this covers real use, do not build additional runtime/agents.
+
+**Option B — Advanced multi-agent upgrade if evidence requires:**
+
+An approved scheduler (Apps Script or other existing capability) -> **one ADK service/worker** -> specialized agent and tool calls -> **one** canonical job-state store + Gmail-owned messages/drafts -> gated, human-reviewed outgoing action -> optional Windows sync.
+
+- ADK = agent semantics and tool orchestration; scheduler = clock/event trigger; Gmail = message authority; selected DB = job-state authority; Gemini/other approved API = model inference; Windows team = local executor.
+- Do not build second scheduler/queue/DB just because ADK supports multiple agents.
+- Cloud service must remain **authenticated and private**. ADK Cloud Run docs describe deployments, service accounts, secrets, build permissions and multiple-agent services; an unauthenticated endpoint connected to Gmail is unacceptable. Source: https://adk.dev/deploy/cloud-run/ .
+
+### 9.6 Cloud hosting, free limits and cost caution
+
+**ADK != free unlimited 24/7 cloud processing.** Google Cloud Run offers a measurable **monthly free allowance** but can bill beyond free limits and depends on region, billing and resource configuration. Request-based Cloud Run pricing currently describes up to **2 million free requests per month** plus vCPU/RAM free allowances; a call is not equivalent to a completed AI-agent task. Cloud Build, Artifact Registry, Secret Manager, networking, Cloud Scheduler and model calls have distinct quota/cost conditions. **Billing account and overage handling must be verified; do not enable billing or deploy without explicit approval.** Source: https://cloud.google.com/run/pricing .
+
+Google-managed Agent Engine / Agent Runtime is another possible ADK deployment target; current personal-account free eligibility, sessions/memory pricing and total cost are **UNVERIFIED**. Under FREE-FIRST, unknown cost = **DENY activation**. Gemini free inference has its own project/model RPM/TPM/RPD and geographical restrictions. The Google **Unpaid Services data terms** may allow submitted data to be used for product improvements and human review: **do not send raw private Gmail or confidential employer correspondence, personal CV fields, account identifiers or secrets to unpaid Gemini**. Source: https://ai.google.dev/gemini-api/terms .
+
+### 9.7 Proof gates before ADK adoption
+
+- Compare **the same synthetic 10 email threads** in deterministic Apps Script and a minimal 1-coordinator/1-specialist ADK workflow, only after independent future approval. Measure output accuracy, false positives, missing requirements, token costs, CPU/time, operational complexity and maintenance.
+- Verify read-only Gmail method allowlists and simulate prompt injection from malicious email body that requests sending email, exfiltrating secrets, downloading files or bypassing approval: expected result = **DENY**.
+- Validate owner review for every draft/send action, thread ID correctness, retries, idempotency, Gmail history cursor expiry, OAuth revocation, 429/5xx, deployment cold-start and outage, notifications and immutable audit.
+- Prove the cloud job can execute while laptop is off, save durable state, then synchronize by authenticated outbound Windows pull without opening the Windows PC to the public internet.
+- Before cloud deployment require an explicit cost report including Gemini and runtime quota limits, hard non-paid stopping policy, account-region eligibility, IAM scopes, security and rollback.
+- **Promotion criterion:** ADK must deliver a demonstrated, meaningful benefit over the smallest Apps Script pipeline (e.g. superior multi-stage verification / structured delegation) while meeting Free-first, privacy, security and reliability criteria.
+
+### 9.8 Official references and final classification
+
+- ADK 2.0 GA releases/workflows: https://adk.dev/2.0/
+- Apache-2.0 / Python package / README: https://github.com/google/adk-python
+- Python dependency requirements: https://github.com/google/adk-python/blob/main/pyproject.toml
+- Direct ADK Gmail/Google Apps tools: https://adk.dev/integrations/google-api-toolsets/
+- OAuth tool authentication and token safety: https://adk.dev/tools-custom/authentication/
+- Agent-as-a-tool / delegation: https://adk.dev/tools-custom/function-tools/
+- Cloud Run deployment: https://adk.dev/deploy/cloud-run/
+- Cloud Run allowance and pricing: https://cloud.google.com/run/pricing
+- Apps Script quotas: https://developers.google.com/apps-script/guides/services/quotas
+- Gmail OAuth scope classes: https://developers.google.com/workspace/gmail/api/auth/scopes
+- Gemini Unpaid Services terms: https://ai.google.dev/gemini-api/terms
+
+**PROJECT DECISION STATUS:** ADK 2.0 is **explicitly retained as a FIRST-CLASS, ON-DEMAND candidate for future cloud multi-agent logic**; Apps Script remains the smaller P0 candidate. No software deployed, no OAuth grant added, no new application or model paid for, no unrelated documents changed and no authorization to send messages granted by this registration.
