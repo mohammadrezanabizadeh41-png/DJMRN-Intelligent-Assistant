@@ -1,43 +1,30 @@
-# سرویس‌های ایجنت — DJMRN Agent Services Research 2026
+# سرویس‌های ایجنت — DJMRN AGENT SERVICES RESEARCH 2026
 
-**وضعیت:** RESEARCH / REFERENCE ONLY — اتصال، نصب، فعال‌سازی و معماری مصوب نیست  
-**ماموریت:** DJMRN-AGENT-TOOLS-RESEARCH-001 (Discovery Expansion)  
-**تاریخ snapshot:** ۱۲ نوامبر ۲۰۲۶  
-**موضوع:** سرویس‌ها و ابزارهای قابل بررسی برای OpenMausBot 0.1.152 و ایجنت‌های DJMRN
+**CURRENT / CANONICAL RESEARCH CATALOG:** [DJMRN-Agent-Services-MASTER-2026.csv](DJMRN-Agent-Services-MASTER-2026.csv)  
+**Snapshot date:** ۱۲ نوامبر ۲۰۲۶  
+**Mission lineage:** `DJMRN-AGENT-TOOLS-RESEARCH-001`, `DJMRN-AGENT-SERVICES-DISCOVERY-002`
 
-## فایل‌های مرجع این مجموعه
+## وضعیت کنونی
 
-- [DJMRN-Free-Agent-Services-2026.csv](DJMRN-Free-Agent-Services-2026.csv) — **کاتالوگ کامل ۱۵۱ سرویس در ۲۶ حوزه** با ۲۷ ستون؛ مناسب فیلتر در Excel، برنامه‌نویسی و تحلیل.
-- [DJMRN-Free-Agent-Services-2026.md](DJMRN-Free-Agent-Services-2026.md) — گزارش کامل Work، جدول‌ها، دایرکتوری MCP، ابزارهای مرورگری، گزینه‌های مقایسه و محدودیت‌های منابع.
+**۴۲۲ رکورد در ۲۸ حوزه:** ۲۵۲ رکورد قبلی + ۱۶۳ نامزد با شواهد جزئی + ۷ نامزد با شواهد ناکافی. این یک *کاتالوگ پژوهشی* است، نه فهرست ۴۲۲ سرویس رایگان قطعی یا سرویس MCP متصل.
 
-**نتیجه گزارش:** ۷۷ ردیف VERIFIED، ۶۸ ردیف PARTIALLY VERIFIED و ۶ ردیف UNVERIFIED. این برچسب‌ها به معنای تایید عرضه/منبع در سطح ذکرشده‌اند، نه تایید عملی اتصال به ایجنت، دسترسی منطقه‌ای، هزینه نهایی یا مجوز استفاده تجاری.
+| Reference | Content |
+|---|---|
+| [CURRENT MASTER — 422](DJMRN-Agent-Services-MASTER-2026.csv) | **۷۷ ستون**: ۲۷ ستون قدیمی + ۴۷ ستون D002 با پیشوند + ۳ ستون provenance/status |
+| [Frozen PRE-MERGE MASTER — 252](DJMRN-Agent-Services-MASTER-252-SNAPSHOT-2026-11-12.csv) | نسخه دقیق پیش از ادغام؛ بدون تغییر |
+| [MERGE-AUDIT](DJMRN-Agent-Services-D002-MERGE-AUDIT-2026-11-12.md) | قواعد تجمیع، شمارها، وضعیت تکرار، منبع و احتیاط‌ها |
+| [Work recovered 184-row checkpoint CSV](DJMRN-Discovery-002-Checkpoint.csv) | ۱۷۱ نام اصلی + ۱۲ حذف baseline + یک نام نامشخص؛ کپی نرمال‌شده |
+| [Work recovered checkpoint Markdown](DJMRN-Discovery-002-Checkpoint.md) | تمام ۱۷۱ نام، منابع و نمایه ۶۹ فایل پاسخ قبلی |
+| [Excluded 14](DJMRN-Discovery-002-EXCLUSIONS-2026-11-12.csv) | ۱۳ تکراری و یک سرنخ هویت‌تأییدنشده؛ خارج از master |
+| [Original 151 catalog](DJMRN-Free-Agent-Services-2026.csv) | منشأ مرحله نخست؛ بدون تغییر |
+| [Original 151 report](DJMRN-Free-Agent-Services-2026.md) | پژوهش Work اصلی؛ بدون تغییر |
+| [101 ChatGPT app additions](CHATGPT-APPS-DISCOVERY-2026-11-12.csv) | منشأ مرحله دوم؛ بدون تغییر |
+| [ChatGPT discovery report](CHATGPT-APPS-DISCOVERY-2026-11-12.md) | توضیح مقایسه اپ‌ها؛ بدون تغییر |
 
-## نحوه جست‌وجو و استفاده
+## دستور برای Work بعدی
 
-فایل CSV با **UTF-8 BOM** ذخیره شده است؛ آن را با فیلتر روی ستون‌های «حوزه»، «رده رایگان»، «سهمیه»، «کلید حساب کارت»، «هزینه اضافه»، «MCP و نوع»، «مسیر OpenMausBot»، «ایران و منطقه» و «وضعیت مدرک» بررسی کنید.
+ابتدا کل فایل **CURRENT MASTER 422** را بخوان و هویت، نام‌های مستعار، دامنه‌ها و subproductها را برای جلوگیری از تکرار بررسی کن. از `D002__...` به‌عنوان منبع شاهد دست‌نخورده استفاده کن. تمام ۴۲۲ رکورد، حتی ۷ ردیف UNVERIFIED، بخشی از فهرست حذف تکرار در پژوهش بعدی هستند؛ نتیجه‌های تازه نباید با نام یا هویت همین سرویس‌ها دوباره NEW اعلام شوند. موارد شک‌برانگیز را POSSIBLE DUPLICATE ثبت کن.
 
-رده‌ها: F0 = عمومی و بدون کلید؛ F1 = سهمیه رایگان دوره‌ای؛ F2 = اعتبار اولیه/Trial؛ F3 = متن‌باز محلی یا self-host؛ F4 = رابط رایگان مرورگری؛ P = بدون گزینه رایگان مناسب؛ U = وضعیت نامشخص. یک سرویس ممکن است چند رده داشته باشد.
+شاخه‌های اصلی ۲۶گانه محفوظ‌اند؛ حوزه ۲۷ «فرصت‌های کاری و فریلنسری» و ۲۸ «احراز هویت و مدیریت دسترسی» افزوده شده‌اند. دسته A–L پژوهش ۰۰۲ در ستون جدا باقی است.
 
-**سیاست اقدام:** هر اتصال MCP، فعال‌سازی Provider، دریافت دسترسی حساب، نصب و مصرف اعتبار باید جداگانه با منابع رسمی جاری، قیمت و quota، شرایط منطقه‌ای و حقوق داده بررسی شود؛ بدون تایید کاربر انجام نشود. UNKNOWN cost / eligibility = DENY. تا زمانی که تست عملی انجام نشده، اتصال به OpenMausBot را UNVERIFIED تلقی کنید.
-
-## تمامیت و منشأ
-
-دو فایل اصلی دقیقاً مطابق فایل‌های تحویلی Work/کاربر در تاریخ snapshot، بدون خلاصه‌سازی یا حذف ردیف، نگهداری شده‌اند.
-
-| فایل | اندازه (bytes) | SHA-256 |
-| --- | ---: | --- |
-| DJMRN-Free-Agent-Services-2026.csv | 180000 | `f239548e43b91889a47aff39ce81fa65bf4e37c57a189d357d9d405874963d63` |
-| DJMRN-Free-Agent-Services-2026.md | 65925 | `db4d7c6ddaa9aa77e78fea157d59cffa650c24149b94c960d695b1537f3b3b6e` |
-
-این پوشه آرشیو پژوهشی موضوع «سرویس‌های ایجنت» است؛ تغییرات وضعیت اجرایی در مراجع canonical پروژه نگهداری می‌شوند. وجود این کاتالوگ به معنی نصب/تأیید استفاده از تمام ۱۵۱ گزینه نیست.
-
-## CURRENT EXPANDED CATALOG — ChatGPT Apps / Plugins (2026-11-12)
-
-**[MASTER catalog, 252 records](DJMRN-Agent-Services-MASTER-2026.csv)** contains 151 original Work services plus 101 newly discovered ChatGPT App/Plugin names. This is a research inventory, not installed functionality.
-
-- [ChatGPT App/Plugin delta — 101 records](CHATGPT-APPS-DISCOVERY-2026-11-12.csv)
-- [Discovery comparison and caveats](CHATGPT-APPS-DISCOVERY-2026-11-12.md)
-- [Source discovery snapshot (118 app labels)](CHATGPT-PLUGIN-DISCOVERY-SNAPSHOT-2026-11-12.json)
-- Original 151-row Work CSV and Markdown preserved unchanged for provenance.
-
-118 distinct ChatGPT app/plugin names were recovered through topical directory searches plus two existing tools. 17 overlap by name; 101 added; 4 are currently NOT_AVAILABLE in the account. The search is not exhaustive. All new entries have **U/UNKNOWN-DENY** free-tier/cost/region/transport statuses until the actual provider is independently verified. ChatGPT App installation does not establish OpenMausBot compatibility or permission. No install, OAuth or spend was performed.
+**FREE-FIRST:** سهمیه/هزینه/اوورج/مجوز/ایران/میزبانی/API/MCP باید پیش از فعال‌سازی جداگانه از منبع رسمی راستی‌آزمایی شود. **UNKNOWN/DENY**؛ اتصال ChatGPT معادل سازگاری OpenMausBot نیست. هیچ ثبت‌نام، نصب، پرداخت، انتقال داده حساس یا تغییر اجرایی در این ادغام صورت نگرفته است.
