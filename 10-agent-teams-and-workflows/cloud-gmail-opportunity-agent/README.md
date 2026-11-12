@@ -1,6 +1,7 @@
 # DJMRN — ایجنت ابری پیگیری کارها، Gmail و فرصت‌های فریلنسری
 
 **Project ID:** DJMRN-CLOUD-GMAIL-OPPORTUNITY-001
+**Operational implementation roadmap (R0–R10):** [IMPLEMENTATION-ROADMAP.md](IMPLEMENTATION-ROADMAP.md) — Google Apps Script → Gmail API/OAuth → approved portfolio → bounded Gemini → Gmail drafts/reply watcher → optional ADK 2.0 → Windows MausBot sync. Planning only; no accounts or triggers activated.
 **Registered:** 2026-11-12
 **Priority:** NEXT PROJECT — next planned execution workstream, not an automatically running service.
 **Status:** PROJECT CREATED / SPECIFICATION & RESEARCH REGISTERED / IMPLEMENTATION NOT STARTED.
