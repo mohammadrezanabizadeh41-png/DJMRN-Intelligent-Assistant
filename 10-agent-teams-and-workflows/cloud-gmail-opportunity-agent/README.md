@@ -1,14 +1,28 @@
-# DJMRN — ایجنت ابری پیگیری کارها، Gmail و فرصت‌های فریلنسری
+# DJMRN — بستر ایجنت‌های ابری چندمنظوره | Cloud Agent Foundation
 
 **Project ID:** DJMRN-CLOUD-GMAIL-OPPORTUNITY-001
-**Operational implementation roadmap (R0–R10):** [IMPLEMENTATION-ROADMAP.md](IMPLEMENTATION-ROADMAP.md) — Google Apps Script → Gmail API/OAuth → approved portfolio → bounded Gemini → Gmail drafts/reply watcher → optional ADK 2.0 → Windows MausBot sync. Planning only; no accounts or triggers activated.
+**CURRENT IMPLEMENTATION ROADMAP (C0–C10 / FOUNDATION-FIRST):** [IMPLEMENTATION-ROADMAP.md](IMPLEMENTATION-ROADMAP.md) — verify renewable-free cloud hosts → choose/create ONE cloud runtime → run first independent agent/tool/model on public data → durable state → permissions, scheduling and recovery → optional Google ADK multi-agent → optional Windows sync → later domain applications (Gmail, jobs, others). The older R0–R10 Gmail/portfolio-first order is SUPERSEDED.
 **Registered:** 2026-11-12
 **Priority:** NEXT PROJECT — next planned execution workstream, not an automatically running service.
 **Status:** PROJECT CREATED / SPECIFICATION & RESEARCH REGISTERED / IMPLEMENTATION NOT STARTED.
 **Owner:** DJMRN; approval authority: the user.
 **Repository:** DJMRN-Intelligent-Assistant, main.
-**Scope:** Cloud-first monitoring, triage, draft preparation, reply-follow-up and later permitted job-site opportunity collection; integrates eventually with existing Windows agent team while laptop is offline.
+**CURRENT SCOPE (owner correction, 2026-11-12):** Create an independent, reusable, secure and free-first CLOUD AGENT EXECUTION SPACE. Runtime/provider/tools/state/permissions/scheduling/observability first; applications including Gmail, jobs, portfolios and market analysis later and only when explicitly selected. Existing folder path and project ID are kept for link continuity.
 **Safety/privacy:** This repository has been observed PUBLIC. No Gmail address, employer email, customer record, email body, personal identity, API key, OAuth token, secret, resume private details, browser session or credential is stored here.
+
+## 0. CURRENT CHARTER — Multi-purpose cloud-agent foundation FIRST (2026-11-12)
+
+**Owner-corrected priority — this section and the C0–C10 roadmap supersede any Gmail-first / portfolio-first implied priority in the historical sections below.** The project's business objective is now to obtain an actual FREE-FIRST multi-purpose cloud execution environment where one or more agents can operate without the laptop, call the owner's legitimately available free model APIs, use approved tools, persist state, run scheduled tasks, expose status/outputs, recover failures and later synchronize with local agents.
+
+**Build order, not vendor preselection:** (1) live account/free-tier and regional/billing audit; (2) compare Neon Functions (existing), Activepieces Hosted Free, Google Cloud/ADK, Supabase, Apps Script and Cloudflare against a small measurable workload; (3) choose a **single** host and activate it only after approval; (4) cloud-first one-worker public I/O + a free verified model call; (5) durable results/restart, security/tools, scheduled execution and monitoring; (6) optional ADK 2.0 collaborative agents if its overhead is justified; (7) Windows sync if desired; **(8) only then** domain-specific applications. Serverless/on-demand is acceptable if it operates while the Windows laptop is off; permanent VM is not a requirement.
+
+**MVP is platform readiness, NOT Gmail:** Verify real cloud job execution, independent connectivity and legally permitted provider use, one non-sensitive tool and model, persisted results, retry/idempotency, budget, a safe stop and human-readable cloud outputs. Building a project folder or merely running tests is not a functioning cloud agent. **Gmail OAuth, drafts/sends, web job application, CV/portfolio creation and employer messaging are downstream modules, not current work.** No API key, Gmail OAuth scope or private account data is involved in the first foundation smoke.
+
+**Google placement:** Gemini is a *candidate model provider*, not the cloud host. Google ADK 2.0 is a *candidate agent-development framework*, not included free hosted runtime. Google Apps Script is a *small cloud job runner*, not synonymous with ADK or the only architecture. Cloud Run hosting demands an independently verified billing/IAM/region/free-tier assessment. Do not force a Google-only architecture just because model keys exist. Compare simpler supported managed providers (and current existing DJMRN cloud resources) fairly.
+
+**Relation to earlier notes:** The remaining numbered sections 1–9 were written before the owner corrected the scope. They are preserved for research/history and for a **possible future Gmail/job-follow-up Domain**, not as active implementation steps. For **current** architecture priority, use [C0–C10 foundation roadmap](IMPLEMENTATION-ROADMAP.md). No existing Gmail automation, model key, secret, cloud trigger, account, or environment was changed by this documentation amendment.
+
+
 
 ## 1. Formal mission / intended value
 
