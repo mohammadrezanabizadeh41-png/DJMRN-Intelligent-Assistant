@@ -13,7 +13,7 @@
 | [CURRENT MASTER — 422](DJMRN-Agent-Services-MASTER-2026.csv) | **۷۷ ستون**: ۲۷ ستون قدیمی + ۴۷ ستون D002 با پیشوند + ۳ ستون provenance/status |
 | [Frozen PRE-MERGE MASTER — 252](DJMRN-Agent-Services-MASTER-252-SNAPSHOT-2026-11-12.csv) | نسخه دقیق پیش از ادغام؛ بدون تغییر |
 | [MERGE-AUDIT](DJMRN-Agent-Services-D002-MERGE-AUDIT-2026-11-12.md) | قواعد تجمیع، شمارها، وضعیت تکرار، منبع و احتیاط‌ها |
-| [Work recovered 184-row checkpoint CSV](DJMRN-Discovery-002-Checkpoint.csv) | ۱۷۱ نام اصلی + ۱۲ حذف baseline + یک نام نامشخص؛ کپی نرمال‌شده |
+| [Work recovered 184-row checkpoint CSV](DJMRN-Discovery-002-Checkpoint.csv) | ۱۷۱ نام اصلی + ۱۲ حذف baseline + یک نام نامشخص؛ نسخهٔ اصلی بدون تغییر، بایت‌به‌بایت |
 | [Work recovered checkpoint Markdown](DJMRN-Discovery-002-Checkpoint.md) | تمام ۱۷۱ نام، منابع و نمایه ۶۹ فایل پاسخ قبلی |
 | [Excluded 14](DJMRN-Discovery-002-EXCLUSIONS-2026-11-12.csv) | ۱۳ تکراری و یک سرنخ هویت‌تأییدنشده؛ خارج از master |
 | [Original 151 catalog](DJMRN-Free-Agent-Services-2026.csv) | منشأ مرحله نخست؛ بدون تغییر |

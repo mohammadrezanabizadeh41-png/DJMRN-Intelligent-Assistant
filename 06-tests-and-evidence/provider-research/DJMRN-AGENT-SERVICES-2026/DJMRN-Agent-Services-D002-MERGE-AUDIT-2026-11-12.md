@@ -33,13 +33,13 @@ Original 252 records are preserved without altering their first 27 cells. Their 
 ## Preservation and provenance
 
 - [Frozen 252 baseline CSV](DJMRN-Agent-Services-MASTER-252-SNAPSHOT-2026-11-12.csv) — exact original Git blob reference, not rewritten.
-- [Recovery checkpoint CSV (184 records)](DJMRN-Discovery-002-Checkpoint.csv) — parser-normalized CSV copy retaining all 47 source fields; original uploaded byte-level source SHA-256: `f95729707857ca43d8a07979253a0056b062acff49e727e325972114eee5247b`.
+- [Recovery checkpoint CSV (184 records)](DJMRN-Discovery-002-Checkpoint.csv) — byte-identical original CSV retaining all 47 source fields; original uploaded byte-level source SHA-256: `f95729707857ca43d8a07979253a0056b062acff49e727e325972114eee5247b`.
 - [Recovery checkpoint Markdown](DJMRN-Discovery-002-Checkpoint.md) — originally uploaded source SHA-256: `82ed944f28ef03c4a3d85b72dba947bad90131adfdd7be634fd0884498963554`.
 - [Excluded 14 rows](DJMRN-Discovery-002-EXCLUSIONS-2026-11-12.csv) — 13 known duplicates and unverified «تیگر زو», separately preserved without inflating master.
 - [Original Work 151 CSV](DJMRN-Free-Agent-Services-2026.csv) and [original report](DJMRN-Free-Agent-Services-2026.md), unchanged.
 - [ChatGPT 101 additions](CHATGPT-APPS-DISCOVERY-2026-11-12.csv), unchanged.
 
-Note: The CSV file-reading bridge normalizes numeric display (e.g. `1` may be rendered as `1.0`) and serializes CSV again, so the archival CSV should be treated as **semantically faithful**, not claimed byte-identical to the uploaded source. The original source bytes remain in the user's conversation attachment, referenced by its SHA-256 above. The original source Markdown is also retained here as read.
+**Integrity correction:** both recovered checkpoint files in this repository are now **byte-identical** to the uploaded original sources. The CSV `N/A` quota-reset value for SambaNova Cloud was restored after the spreadsheet parsing bridge had displayed it as blank; the canonical master reflects the source value in both legacy and D002 fields. Source SHA-256 values listed above remain authoritative.
 
 ## Free-first and use gates
 
