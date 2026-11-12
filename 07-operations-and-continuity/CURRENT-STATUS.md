@@ -1,3 +1,19 @@
+## 2026-11-12 — DJMRN-CLOUD-GMAIL-OPPORTUNITY-001 — NEXT PROJECT REGISTERED
+
+**Owner instruction / authorized action:** Formally register **Cloud Gmail & Opportunity Agent** as DJMRN's **NEXT PROJECT**, capturing the Google-first research and cloud + Windows hybrid follow-up workflow. **Completed:** one dedicated project specification/README created and independently read back on GitHub main: [10-agent-teams-and-workflows/cloud-gmail-opportunity-agent/README.md](../10-agent-teams-and-workflows/cloud-gmail-opportunity-agent/README.md). Project charter commit: 28e20e7eda0815d363c75b1ce12cb3d774f16b2e. This CURRENT entry is the sole ongoing status; README is the supporting scope/design document, not a second daily log.
+
+**Purpose:** periodic cloud Gmail opportunity monitoring while laptop is off; rules-based triage, suitable freelance project screening, optional privacy-appropriate Gemini analysis, human-reviewed drafts, replies/notifications; later approved job-site workflows and outbound sync to existing Windows MausBot agents. The cloud runner must not depend on laptop VPN/proxy or an online local OmniRoute.
+
+**Google-first PROPOSAL, not deployed:** Google Apps Script clock triggers + Advanced Gmail API with minimum owner-authorized OAuth scopes + deterministic screening + Gemini Free Tier for public/non-sensitive permitted text only + Gmail-owned drafts/threads and a single selected job-state store. Official Apps Script consumer reference: 90 trigger-runtime min/day, 6 min/execution, 20k email read/write/day excluding send, 20k URL Fetch/day; quotas may change. Gemini RPM/TPM/RPD are account/project/model-dependent. Gmail readonly/compose scopes are restricted and require Google policy review. Google's unpaid Gemini terms allow submitted-data product improvement and possible human review: DO NOT send private Gmail, personal/confidential correspondence or secrets to free inference.
+
+**Reuse / avoid duplicate authority:** cloud track extends Oct-31 DJMRN-EMAIL-OPPORTUNITY-AUTOMATION-001 (unimplemented Windows/Browser Use proposal); avoid building a parallel Gmail pipeline. Three existing ChatGPT Gmail tasks remain unchanged; review overlap before new schedules. Existing email-triggered site follow-up scope is exactly Creativepool, Joberz, Voice123, LinkedIn and iEstekhdam; others follow separate Opportunity Hunter listing discovery. Existing Cloud Agents research and Neon/agent-team assets may be reused after audit.
+
+**STATUS:** NEXT PROJECT / REGISTERED / DESIGN ONLY / NOT IMPLEMENTED. No Gmail or Google changes, OAuth scopes, paid activation, scheduler, cloud runtime, mailbox read, drafts, email sends, account login, agent installs or current automations altered. No secrets or personal mailbox content added to repository (previously observed PUBLIC).
+
+**NEXT approval gate:** P0 read-only Google quota/region/OAuth requirements and existing job overlap check; P1 synthetic test; P2 separately approved Gmail read-only pilot. Each sensitive permission, private data transfer, Gmail write, outbound send, site submission or production deployment needs a dedicated proposal and approval.
+
+---
+
 ## پروژه عیب‌یابی ۱ — پیام‌گستر CRM (2026-11-11; READ-ONLY DIAGNOSIS / NO REPAIR)
 
 **Mission:** DJMRN-CLIENT-ACCOUNTING-DATA-RECOVERY-001. User confirmed the connected secondary device as the authorized customer's computer and clarified that **PayamGostar CRM, not Holoo**, is the affected application. Only that confirmed device was inspected. All commands were read-only and targeted to its Windows/PayamGostar/SQL metadata. No command was sent to the user's own laptop.
