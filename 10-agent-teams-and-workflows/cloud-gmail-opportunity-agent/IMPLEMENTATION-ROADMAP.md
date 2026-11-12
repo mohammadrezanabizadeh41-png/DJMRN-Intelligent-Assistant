@@ -1,225 +1,204 @@
-# DJMRN — نقشه راه عملی ساخت ایجنت ابری Gmail، پیگیری کار و پورتفولیو
+# DJMRN — نقشه راه اجرایی ساخت بستر ابری چندمنظوره ایجنت‌ها
 
-**Project:** DJMRN-CLOUD-GMAIL-OPPORTUNITY-001
-**Date / research snapshot:** 2026-11-12
-**Scope:** Google-first cloud opportunity assistant + approved portfolio + future Windows agent-team integration
-**Status:** EXECUTION ROADMAP APPROVED FOR DOCUMENTATION ONLY / NO PROVIDER OR GMAIL ACTIVATION
-**Execution priority:** Next DJMRN project; this document is the numbered work plan, not a separate daily status ledger.
-**Canonical progress:** ../../07-operations-and-continuity/CURRENT-STATUS.md
-**Companion project specification:** README.md
-**No secrets or personal content in this public GitHub project.**
+**Project home:** DJMRN-CLOUD-GMAIL-OPPORTUNITY-001 (historical identifier retained to avoid breaking links)
+**Current project meaning:** DJMRN Cloud Agent Foundation — reusable cloud agent execution capability; Gmail and job follow-up are future applications.
+**Revision:** 2026-11-12 — FOUNDATION-FIRST / OWNER CORRECTION. This document **SUPERSEDES the previous Gmail/portfolio-first R0–R10 roadmap**. Preserve old Git version in commit history rather than mixing two current plans.
+**Priority:** next DJMRN project; first build cloud environment, then prove agents/model/tools/state/scheduling, then select applications.
+**Status:** ROADMAP / NOT DEPLOYED / NO HOST SELECTED / NO CLOUD AGENT RUNNING.
+**Authority:** GitHub code/spec/tests; Notion accepted architecture/decisions; one selected database for runtime state; cloud service for actual runtime; human for permissions. Sole rolling progress: 07-operations-and-continuity/CURRENT-STATUS.md.
+**Safety:** Repository observed PUBLIC; no personal data, account IDs, email body, secrets, API keys, OAuth tokens, session cookies or private customer information in this document.
 
-## هدف نهایی و تعریف نتیجه قابل‌استفاده
+## 0. تعریف درست هدف، معیار موفقیت و مرز پروژه
 
-در نبود لپ‌تاپ، در زمان‌بندی‌های محدود و بدون هزینه، فرصت‌های کاری از Gmail و بعداً منابع مجاز عمومی کشف شوند؛ از نظر مهارت، نوع پروژه، بودجه، دورکاری، امکان پرداخت و محدودیت حقوقی ارزیابی شوند؛ با پورتفولیوی تأییدشده تطبیق یابند؛ پیش‌نویس پیشنهاد فارسی/انگلیسی و یادآوری پیگیری تولید شود؛ و نتیجه مستند و قابل بازیابی به کاربر برسد. ارسال واقعی، مذاکرات و درخواست‌های سایت‌ها فقط بعد از عبور از دروازه مجوز انجام شود.
+هدف فعلی **ساخت فضای ابری مستقل، امن، کم‌هزینه و چندمنظوره** است که در زمان خاموش‌بودن لپ‌تاپ نیز بتواند چند وظیفه محدود را روی سرویس ابری انجام دهد، با مدل‌های دارای API رسمی کار کند، ابزارهای مجاز را فراخوانی کند، وضعیت را نگه دارد، نتیجه و خطا را ثبت کند و در آینده بتواند با ایجنت‌های ویندوز و چند کاربرد متفاوت همکاری کند.
 
-**حداقل خروجی موفق نسخه اول (MVP):** یک مأموریت Gmail واقعی و محدود به‌صورت خواندنی اجرا شود، پیام‌های مربوط به فرصت‌ها بدون تغییر mailbox دسته‌بندی شوند، نتیجه مرتبط با شناسه/لینک منبع ارائه شود، موارد تکراری حذف شوند، مدل برای ایمیل خصوصی فراخوانی نشود، یک گزارش قابل‌اقدام فارسی تحویل شود و سیستم در خطاهای OAuth/Quota/VPN درست متوقف یا بازیابی شود. مرحله بعدی ساخت Draft جداگانه تأیید می‌شود.
+**این پروژه در فاز زیرساخت به Gmail، رزومه، پورتفولیو، استخدام یا معاملات وابسته نیست.** اینها بعداً ماژول/مأموریت‌های قابل اتصال خواهند بود؛ حق ساخت امروز را ایجاد نمی‌کنند.
 
-**این نقشه راه اجازه انجام مراحل نیست؛ هر مرحله مستقل بررسی و اقدام حساس جداگانه تأیید می‌شود.** ثبت‌نام، نصب، فعال‌سازی Gmail/Google OAuth، کلیدها، ارسال، انتشار، اتصال ارائه‌دهنده جدید، تغییر Trigger/DB/Automations و هزینه بدون مجوز ممنوع.
+**Definition of first operational value (Cloud Agent V0):**
+1. یک سرویس ابری با پلن رایگان پایدار و مجاز، مستقل از لپ‌تاپ و VPN محلی، وجود داشته باشد.
+2. یک وظیفه محدود و بی‌خطر با ورودی واقعی عمومی (برای مثال خواندن یک URL مستندات عمومی یا RSS) اجرا شود؛ اگر لازم بود یک مدل با API موجود و مجاز آن را خلاصه کند. اجرای نمادین/صرفاً نصب = DONE نیست.
+3. خروجی، منبع، شناسه job، وضعیت و خطا در یک محل پایدار مورد تأیید نگه‌داری شود، اجرای تکراری باعث کار تکراری نشود، و پس از خاموشی/اجرای دوباره قابل بازیابی باشد.
+4. زمان‌بندی محدود، سقف رایگان و توقف در quota/error قابل آزمون باشد؛ کاربر بتواند خروجی را از تلفن/وب بدون لپ‌تاپ دریافت کند.
+5. هیچ پورت ویندوزی باز، داده خصوصی منتشر، هزینه پرداخت یا ابزار اضافی بدون approval ایجاد نشود.
 
-## اصل انتخاب فناوری و ترتیب عملی
+**بستر ابری لزوماً VM همیشه‌روشن نیست.** Serverless/Functions که با schedule یا HTTP بیدار می‌شوند و state پایدار دارند، برای مأموریت‌های دوره‌ای ممکن است بهتر و رایگان‌تر باشند. اگر بعداً واقعاً agent session زنده و طولانی یا UI دائمی نیاز شد، میزبان دائم را جدا ارزیابی می‌کنیم.
 
-| نقش | گزینه اولیه برای بررسی | چرا / شرط تغییر |
+## 1. نقشه لایه‌ها و نقش‌های قابل جایگزینی (PROPOSAL)
+
+- **Cloud Runtime / Executor:** فضای واقعی اجرای کد/Agent، فراخوانی ابزارها و نگهداری حداقل session در حافظه هنگام اجرا. یک مالک اجرایی برای هر job.
+- **Agent Logic:** فعلاً یک agent/worker با قرارداد ورودی/خروجی مشخص؛ Google ADK 2.0 یا چارچوب آماده فقط در صورت نیاز عملی و سازگاری runtime. بدون تیم دائمی ۷ ایجنت از ابتدا.
+- **Model Providers:** Gemini API و سایر کلیدهای رسمی قبلاً موجود نزد مالک؛ *هیچ کلیدی در GitHub/چت کپی نشود*. مدل و سهمیه را مستقل از runtime مدیریت کن. Cloud runtime نباید به OmniRoute لوکال در زمان خاموشی PC وابسته باشد.
+- **Tool Adapters:** ابتدا یک ابزار عمومی بی‌خطر HTTP GET برای منبع عمومی و یک ابزار deterministic. MCP/Google APIs/GitHub/Email/Browser بعداً با مجوز کمینه و نقش مشخص.
+- **Durable State / Jobs:** یک store منتخب برای job ID, status, timestamps, retries, result pointer, provenance, model usage, budget و errors. Reuse پیش از ساخت DB/queue تازه.
+- **Scheduler / Trigger:** زمان‌بندی کوتاه و قابل توقف؛ نه daemon غیرضروری یا چند scheduler همزمان.
+- **Observability / Control:** health, sanitized logs, per-model usage, hard stop, approval log و دسترسی کاربر به نتیجه.
+- **Windows Bridge (future):** اتصال خروجی امن به ایجنت‌های MausBot/Windows وقتی لپ‌تاپ روشن شد؛ بدون بازکردن inbound port و بدون authority موازی.
+- **Applications (future):** Gmail/job follow-up، پایش فرصت‌ها، پژوهش اینترنتی، تحلیل مالی و دیگر مأموریت‌های منتخب؛ هرکدام boundary/permissions/contract خودش را دارد، نه یک agent با دسترسی نامحدود.
+
+## 2. گزینه‌های میزبانی و انتخاب Free-First: هنوز هیچ گزینه‌ای برنده قطعی نیست
+
+| نامزد | شکل اجرای واقعی | سهمیه/هزینه شناخته‌شده از اسناد رسمی | نسبت با نیاز کنونی | گیت یا مانع |
+|---|---|---|---|---|
+| **Neon Functions + Postgres (موجود در DJMRN)** | Node.js Functions, Cron/HTTP و DB کنار runtime | Free: 1M invocation/month, 10 active + 400 waiting capacity-hours/month, 1GB DB/project, 100 CU-hours/month | **اولین مسیر برای بررسی دوباره و reuse**؛ job کوتاه، ذخیره پایدار، مدل Gemini با fetch | شاخه‌های پروژه موجود در مشاهده قبلی Archived و triggers خاموش بودند؛ بررسی plan/branch/liveness؛ ADK Python مستقیم در Node Functions اجرا نمی‌شود |
+| **Activepieces Hosted Free** | Flow/Agent managed UI در Cloud | فعلاً Free forever، 100 credits/day؛ BYOK AI keys در Plus تبلیغ می‌شود | رقیب GUI برای ساخت سریع Agent و workflow محدود؛ می‌تواند اولین میزبان شود اگر امکانات/هزینه کافی باشند | آیا کلیدهای موجود روی Free از مسیر API/HTTP پشتیبانی امن و مجاز دارند؟ quota per AI action و data privacy باید بررسی شوند |
+| **Google Cloud Run + Google ADK 2.0** | سرویس Python/TS/Go قابل استقرار، scale-to-zero | free usage resource allowances ولی نیازمند Google Cloud billing setup و سایر هزینه‌های محتمل؛ **هزینه صفر تضمین‌نشده** | بهترین candidate برای agent runtime کامل و code-first ADK در صورت نیاز واقعی | **UNKNOWN/DENY** تا billing/overage/IAM/region/secret/deploy costs و امکان hard spending stop تأیید نشود |
+| **Google Apps Script** | JavaScript cloud script + time-driven triggers | Consumer: 90 min aggregate trigger runtime/day و 6 min per execution | گزینه سبک برای worker محدود، API polling و Dispatcher؛ **کل بستر full ADK نیست** | مجوزهای اکوسیستم Google و محدودیت وقت اجرا/Storage؛ برای چندایجنت پیچیده کافی نیست |
+| **Supabase Edge Functions** | Deno Edge worker + Postgres/backend | Free: 500k invocations/month، 500MB database؛ function free duration و sleep limits | گزینه آماده backend + triggers/REST، قابل مقایسه با Neon | اضافه‌کردن authority دوم، inactivity pause؛ Node/Python ADK قابل‌حمل مستقیم نیست |
+| **Cloudflare Workers Free** | HTTP/Cron short-lived JS Worker | 100k requests/day؛ 10ms CPU/request/cron؛ 5 Cron triggers/account | مناسب dispatch سبک، proxy مجاز API، webhook و اعلان | CPU بسیار محدود برای agent واقعی و پردازش حجیم؛ no default |
+| **GitHub Actions Free** | ephemeral scheduled CI job | GitHub Free private-hosted minutes 2000/month baseline; cron may delay/drop | CI و smoke / fallback scheduler | برای state/runtime اصلی و job با زمان دقیق مناسب نیست |
+| **n8n Cloud** | managed workflow UI | **فقط trial 14-day**؛ Free پایدار hosted ندارد | برای پایه free-forever رد می‌شود | n8n Community خودمیزبان می‌تواند بعداً مکمل شود، اما میزبان رایگان مجزا لازم دارد |
+
+**مقایسه بر اساس:** تمدید دائمی Free، واقعی‌بودن اجرای خارج از لپ‌تاپ، امکان استفاده قانونی از APIهای موجود، محدودیت call/token/CPU/wall time، انتخاب مدل، Agent/Tool/MCP، UI/API، storage/state، مجوز کاربری تجاری/منطقه‌ای، private networking، billing/card/auto-charge، تعمیر و migration، observability و قابلیت توقف کامل.
+
+**No vendor lock-in at project-level:** قرارداد ساده input -> execution -> result/status کافی است؛ یک سامانه routing عمومی، چند پایگاه‌داده، event bus یا multi-agent orchestration تا وقتی آزمون نیاز را اثبات نکرده مجاز نیست.
+
+## فاز C0 — ممیزی زیرساخت‌های ابری موجود و محدودیت‌های واقعی (فقط‌خواندنی)
+
+1. از Notion/GitHub canonical فهرست پروژه‌های مرتبط، معماری‌های قبلی و provider decisions را بررسی کن؛ از ابتدا استک جدید حدس نزن.
+2. وضعیت اکانت‌های متصل/قبلی Neon, Supabase, Google Cloud/AI Studio/Apps Script, Activepieces, Cloudflare, GitHub Actions و سایر نامزدهای قبلی را **تنها با دسترسی موجود و در صورت ارزش واقعی فقط خواندنی** بررسی کن؛ ثبت‌نام یا فعال‌سازی API جدید نکن.
+3. تفاوت پلن رایگان تجدیدپذیر با trial/credit ثبت‌نامی، نیاز به کارت، auto-overage، محدودیت منطقه‌ای/حریم خصوصی و commercial terms را از official docs و داشبورد حساب تأیید کن.
+4. وضعیت Neon قبلی (free_v3، شاخه‌های Archived و schedules disabled در مشاهده 2026-11-12) مجدداً فقط خواندنی ارزیابی شود. هیچ restore/wake/schedule enable به‌عنوان اثر جانبی انجام نشود.
+5. به جای انتخاب از پیش، خروجی یک ماتریس معتبر با FACT / ASSUMPTION / UNKNOWN و فقط ۲ گزینه منتخب برای آزمایش باشد.
+
+**PASS:** حداقل یک نامزد در سطح Free تجدیدپذیر، مجاز، با cloud runtime واقعی و بدون هزینه ناخواسته؛ همچنین توان حذف/rollback و مدیریت secret مشخص باشد. **STOP:** cost UNKNOWN، billing الزام‌آور بدون hard-stop مورد تأیید، شرایط منطقه‌ای مبهم یا تعارض با canonical DB.
+**نتیجه مرحله:** پیشنهاد تأییدمحور برای انتخاب *یک* میزبان اولیه.
+
+## فاز C1 — انتخاب یک Cloud Host و تعریف کوچک‌ترین هسته ایجنتی
+
+1. بین **مسیر A: serverless code-first (اول Neon موجود)**، **B: GUI hosted (Activepieces Free)** و **C: ADK full runtime on verified-free host** روی سناریوی مشترک سبک مقایسه عملی/قیمت/مجوز کن. ADK یک framework است نه حساب ابری مستقل.
+2. یک deployment boundary و یک job owner انتخاب کن. Provider role: Runtime, Model, State, Tool, Observer و Alternative مشخص باشد.
+3. قرارداد پایه CloudJob v0 محدود به: job_id, purpose, public_input_ref, requested_tool, model_alias, budget_limit, created_at, status, result_ref, source_provenance, error و attempts. از ساخت domain registry و policy engine حجیم پرهیز کن.
+4. test/health endpoint و مسیر نتیجه/خطا و stop button/disable schedule از همان اول در تعریف باشد.
+5. مشخص کن که source code اصلی در همین GitHub و runtime/secret/state در میزبان منتخب می‌مانند.
+
+**PASS:** یک plan اجرایی قابل برگشت، جداسازی مسئولیت، هزینه صفر قابل دفاع، تایید کاربر برای انتخاب/ایجاد محیط. **STOP:** اضافه‌کردن host دوم بدون نیاز یا وابستگی به سیستم روشن محلی.
+
+## فاز C2 — ایجاد Cloud Workspace/Runtime پایه (با تأیید مستقل)
+
+1. در میزبان تأییدشده کوچک‌ترین project/service/function یا workspace لازم ایجاد شود؛ مجوزهای IAM/API/secret را حداقلی تعریف کن؛ دسترسی public و token در URL ممنوع.
+2. اگر سرویس قبلی مناسب است، **Reuse existing**؛ پروژه دوم فقط در صورت نیاز واقعی به جداسازی محیط، اعتبار یا مرز امنیتی.
+3. ابتدا یک hello/health endpoint یا اجرای job deterministic با داده ساختگی؛ هیچ مدل/کلید/اکانت شخصی لازم نیست.
+4. log sanitized، quota meter و stop/rollback واقعی را تست کن؛ هنگام fail و restart سناریوی bounded را تکرار کن.
+5. داشبورد/URL داخلی مشاهده نتیجه از مرورگر موبایل (بدون دسترسی عمومی ناامن) مشخص شود.
+
+**PASS:** اجرای Cloud مستقل از لپ‌تاپ + دسترسی مجاز به وضعیت + صفر هزینه + توقف. **NOT DONE:** صرفاً ساخته‌شدن project یا نصب package.
+
+## فاز C3 — اولین ایجنت ابری و اتصال محدود به یک مدل موجود
+
+1. ابتدا **یک agent/worker**، نه چند agent؛ وظیفه سنجش‌پذیر غیرحساس تعریف کن: گرفتن یک منبع عمومی رسمی با HTTP GET، استخراج بخش کوچک، در صورت نیاز خلاصه با مدل و ارائه نتیجه/منبع.
+2. یکی از APIهای مدل *از قبل موجود نزد کاربر* مثل Gemini یا free model verified از روتر مستقل cloud را از طریق secret storage رسمی host متصل کن؛ **کلید را در chat/GitHub/log چاپ یا کپی نکن**.
+3. با یک free model متناسب، tool calling واقعی و خروجی structured JSON را بررسی کن. ابتدا deterministic test بدون مدل و بعد یک call واقعی/مجاز با سقف مصرف سخت.
+4. محدودیت region/account و privacy را بررسی کن: نباید از هویت جعلی، VPN bypass غیرمجاز یا تغییرات proxy برای نقض ToS استفاده شود؛ cloud IP حل تضمینی مشکل API نیست.
+5. نسخه مدل، تعداد call، tokens/requests، latency و هزینه (صفر مورد تأیید) ثبت شود؛ اگر Free provider محدود/قطع شد، fail-safe بدون paid fallback.
+
+**PASS:** یک کار واقعی و قابل تکرار public I/O + ابزار واقعی + مدل مجاز + نتیجه قابل مشاهده؛ لپ‌تاپ می‌تواند خاموش باشد. **STOP:** مدل/منطقه یا هزینه unverifiable.
+
+## فاز C4 — حافظه و وضعیت پایدار به‌اندازه نیاز واقعی
+
+1. از یک DB منتخب/موجود استفاده کن؛ پیش از ایجاد جدول schema و اختیارات writes را با canonical وضعیت قبلی تطبیق بده (schema migration فقط پس از approval).
+2. حداقل fields برای job: ID, input hash/ref, model, tool, status, timestamps, result, retryCount, last_error, expected_next_run, budget_used. نگهداری raw evidence فقط در منبع مجاز و با retention روشن.
+3. دو بار اجرای همان job نباید دو نتیجه/اقدام خارجی ثبت کند؛ restart باید resume یا terminal failure واضح داشته باشد.
+4. Job history و یک view انسانی برای خواندن نتایج، نه لزوماً UI اختصاصی یا Vector DB، بساز.
+5. مالک state مشخص شود؛ local Windows صرفاً نسخه sync/observer است، authority دوم برای همان job نشود.
+
+**PASS:** پس از shutdown/idle دوباره نتایج قابل بازیابی؛ duplicate/delay/error درست مدیریت شود.
+
+## فاز C5 — سیستم ابزارها و دسترسی‌ها، ساده و قابل توسعه
+
+1. فقط ابزارهایی را اضافه کن که نخستین مأموریت به آنها نیاز دارد: HTTP public read، parsers، یک bounded public search اگر نیاز واقعی بود، one permitted model call؛ ابزار داخلی deterministic ارجح.
+2. برای هر ابزار input/output schema, required scopes, source provenance, timeout, rate limit, sensitive actions و fallback روشن باشد.
+3. MCP و Google Apps Toolsets به‌عنوان **tool interface گزینه آینده** ثبت می‌شوند؛ MCP خودِ permission یا OAuth نیست.
+4. ابزارهای دارای Gmail/send/browser/GitHub-write/financial/provider activation باید مستقل مورد تأیید قرار گیرند؛ به agent عمومی full toolset نده.
+5. prompt injection از متن سایت یا پیام نمی‌تواند دستور تغییردسترسی/ارسال/ذخیره secret محسوب شود. deny by default.
+
+**PASS:** یک ابزار واقعی بدون privilege creep، تست failure/timeout، reproducible results.
+
+## فاز C6 — زمان‌بندی، سهمیه رایگان، بازیابی و گزارش‌گیری
+
+1. یک Trigger مشخص، مثلاً اجرای محدود روزانه روی داده عمومی/ساختگی؛ schedule ownership واحد، بدون Cron تکراری در ۳ ابزار.
+2. سقف RPM/TPM/RPD برای مدل و محدودیت request/CPU/time برای میزبان را در اندازه‌گیری واقعی کنترل کن.
+3. 429 → backoff؛ 5xx/timeout → retry محدود؛ duplicate job → idempotent skip؛ rate-limit/unknown billing → STOP؛ provider downtime → گزارش status.
+4. قبل از آزمایش disconnect/local VPN، مطمئن شو هیچ dependency به localhost/Windows وجود ندارد.
+5. اعلان نتیجه یا گزارش خلاصه از کانال کم‌مجوز و مورد تأیید کاربر، با لینک وضعیت نه متن حساس.
+6. نتیجه را در دسترس مرورگر موبایل/کاربر نگه دار؛ برای استفاده نیازی به PowerShell روی ویندوز نباشد.
+
+**PASS:** اجرای واقعی Cloud در یک بازه زمان‌بندی‌شده حتی با لپ‌تاپ خاموش؛ نتیجه پایدار و گزارش خطا و مصرف صفر.
+
+## فاز C7 — سنجش نیاز به Google ADK 2.0 و چندایجنتی واقعی
+
+1. **ADK 2.0 کاندید مهم و ثبت‌شده** برای multi-agent, graph workflow, subagents, tool delegation, testing. اما هیچ ضرورت ندارد نخستین Worker ساده را با آن بسازی.
+2. اگر C3–C6 نشان داد یک job به تفکیک coordinator/reviewer/worker نیاز دارد، مقایسه ۱ agent با ۲ agent (Coordinator + Reviewer) روی داده عمومی یکسان انجام شود. معیار: کیفیت مستقل، زمان، خطای factual، trace، quota.
+3. اگر Runtime انتخابی Node Functions باشد، ADK Python را نمی‌توان بدون سازگاری و میزبان دیگری مستقیم در Neon Node Function اجرا کرد؛ **host migration** فقط با نیاز و approval. می‌توان TypeScript ADK را با host سازگار بررسی کرد، نه فرض سازگاری.
+4. Google ADK Cloud Run گزینه رسمی اما service account/IAM/secret/billing/auto-scaling/region و قیمت جداگانه دارد. هیچ public unauthenticated ADK UI/API در پروژه خصوصی.
+5. MCP/agent-to-agent protocol/skills فقط برای قابلیت واقعی و با ownership و security جداگانه.
+6. از ساخت تیم بزرگ یا سرویس کنترل مرکزی قبل از سنجش ساده‌ترین راه پرهیز شود.
+
+**PASS:** multi-agent بهبود قابل اندازه‌گیری و بدون cost/security regression؛ در غیراینصورت single-agent باقی می‌ماند.
+
+## فاز C8 — ارتباط با تیم ایجنت‌های ویندوز DJMRN (اختیاری)
+
+1. ابتدا Cloud بدون لپ‌تاپ کاملاً قابل استفاده باشد؛ سپس Windows MausBot هنگام اتصال outbound pull به job/result store بزند، نه پورت باز inbound.
+2. Job ownership و acknowledge دقیق، جلوگیری از دو بار اجرای task، فاصله قطع/وصل و تغییر VPN تست شود.
+3. Cloud به gateway/OmniRoute محلی به‌عنوان primary provider تکیه نکند؛ فقط زمانی که laptop روشن است تکمیل‌کننده باشد.
+4. حداقل یک نتیجه cloud در ویندوز توسط یک عامل تخصصی خوانده و receipt ثبت شود.
+
+**PASS:** laptop offline → cloud job completed → laptop online → safe sync once.
+
+## فاز C9 — اضافه‌کردن نخستین اپلیکیشن واقعی پس از آماده شدن هسته
+
+**این مرحله عمداً بعد از ایجاد و اثبات فضای Cloud قرار گرفته است.** انتخاب application با درخواست آینده مالک است. مثال‌ها:
+- Gmail/job follow-up با OAuth scopes و privacy review مستقل؛ Gmail App Script می‌تواند یک **Domain Executor** باشد نه Host واحد برای تمام مأموریت‌ها.
+- فرصت‌های عمومی فریلنسری با API/RSS/Job Hunter موجود.
+- پژوهش فناوری‌ها/ابزارهای رایگان، هشدارهای دوره‌ای یا تحلیل اطلاعات عمومی.
+- تحلیل بازارهای مالی عمومی/قیمت بدون معاملات خودکار.
+- تولید محتوا، پرسش‌وپاسخ یا برنامه‌های دیگر با contracts جدا.
+
+**پورتفولیو، رزومه فارسی/انگلیسی، Gmail Draft، پاسخ خودکار کارفرما و پیگیری شغلی الان مرحله زیرساخت نیستند.** اینها در صورت انتخاب مأموریت بعدی تعریف و مجوزدهی می‌شوند و نسخه قبلی roadmap که آنها را R1 قرار داده بود SUPERSEDED است.
+
+**PASS:** یک domain adapter واقعی با مجوز خودش و بدون تخریب cloud base موجود.
+
+## فاز C10 — معیار نهایی عملیاتی شدن فونداسیون
+
+فونداسیون ابری فقط وقتی **OPERATIONAL** است که موارد زیر با شواهد واقعی و اجازه مستقل PASS باشند:
+- Host واقعی انتخاب، مستقر و قابل دسترس بدون لپ‌تاپ.
+- Agent کوچک یک درخواست/وظیفه عمومی واقعی با حداقل یک ابزار انجام داده.
+- Model call مجاز با مصرف رایگان ثبت‌شده؛ خروجی منبع‌دار.
+- durable job state پس از stop/resume، dedup و retries.
+- schedule مستقل، metrics, alerts, health, stop switch, no unexpected charge.
+- permission/security audit و مسیر انتقال/خروج از host.
+- نتیجه قابل مشاهده به کاربر، راه توسعه به domainهای آینده.
+- مزیت استفاده واقعی اندازه‌گیری‌شده، نه فقط تست مصنوعی.
+
+**اگر عملیات شدن به انبوه agent framework, service, queue, database, control plane و registry وابسته شد، STOP و راه ساده‌تر را بررسی کن.**
+
+## ترتیب approval و اجرای نوبت بعد
+
+| Gate | قبل از اقدام چه باید روشن شود | مجوز/اقدام |
 |---|---|---|
-| اجرای ابری دوره‌ای | Google Apps Script (V8) time-driven trigger | سبک؛ بدون لپ‌تاپ همیشه روشن؛ نیازمند مجوز Gmail و محدودیت زمان/سهمیه |
-| دسترسی به Gmail | Advanced Gmail Service/Gmail API با OAuth محدود | API رسمی؛ مجوز فقط خواندن در پایلوت؛ Gemini API key جای آن نیست |
-| شناسایی و فیلتر | کد قطعی JS قبل از LLM | هزینه صفر و خطای کمتر؛ شرایط و محرمانگی قابل بازرسی |
-| مدل تحلیل | Gemini API موجود؛ مدل سبک منتخب و Free واقعی | فقط متن عمومی/غیرحساس با شرایط مجاز؛ RPM/TPM/RPD پروژه باید بررسی شوند |
-| پورتفولیو | فهرست تأییدشده + اصل فایل در Drive/مخزن مالک مناسب | GitHub فقط فایل‌ها/لینک‌های عمومیِ مجاز؛ عدم افشای رزومه خصوصی |
-| ذخیره وضعیت عملیاتی | انتخاب فقط یک محل پس از آزمون: ساده در Google یا Neon موجود | هیچ حالت موازی/دو authority؛ Gmail مرجع پیام و Draft است |
-| ارتباط با کاربر | گزارش فارسی/لینک‌های مرور و بعداً اعلان مصوب | گزارش‌های موجود ChatGPT نباید دوباره‌کاری تولید کنند |
-| تیم پیشرفته | Google ADK 2.0 (در صورت مزیت اثبات‌شده) | چارچوب ایجنت نه هاست رایگان؛ اتصال Gmail Toolset و scope باید ممیزی شود |
-| ایجنت‌های ویندوز | MausBot/OpenMausBot موجود | خروجی Cloud را فقط پس از روشن شدن دستگاه Pull کند |
-| ابزارهای جایگزین | Activepieces Free، Neon Functions، Cloudflare Workers، Make، n8n Community | فقط اگر یک نیاز مشخص توسط Google-first پوشش داده نشود؛ هزینه و سهمیه تازه تأیید شود |
+| C0 | وضعیت حساب‌ها/سهمیه/Terms/آلترناتیوها | فقط‌خواندنی؛ هیچ provision |
+| C1 | یک Host از روی مقایسه، رایگان و قابل توقف | انتخاب طرح؛ تأیید مستقل برای ایجاد پروژه |
+| C2 | runtime/IAM/secrets/environment | ایجاد/فعال‌سازی سرویس فقط با proposal و approval |
+| C3 | Gemini یا سایر کلیدهای موجود و privacy | اتصال مجاز یک provider، بدون دسترسی به کلید در گفتگو |
+| C4–C6 | DB، schedule، API cost، endpoints و permissions | write/schema/deploy/scheduler هرکدام gate جدا |
+| C7 | مزیت واقعی Google ADK یا چند Agent | approval آزمایش جدید و هر provider/host اضافی |
+| C8 | Windows Bridge و identity | authorization جدا؛ no inbound Windows port |
+| C9 | یک کاربرد مشخص Gmail یا موارد دیگر | قرارداد و مجوز مخصوص Domain |
 
-**سهمیه مرجع در تاریخ پژوهش (برای حساب Gmail عادی، نه ضمانت حساب واقعی):** Apps Script اجرای Trigger در مجموع ۹۰ دقیقه/روز؛ ۶ دقیقه/اجرا؛ ایمیل read/write غیر از send تا ۲۰٬۰۰۰ عملیات/روز؛ URL Fetch تا ۲۰٬۰۰۰ فراخوانی/روز؛ Properties Store حداکثر ۵۰۰KB و هر value حداکثر ۹KB. Google ممکن است این سقف‌ها را تغییر دهد. سهمیه Gemini جداگانه و در سطح پروژه است، نه در سطح API Key؛ Free Tier فقط برخی مدل‌ها را پشتیبانی می‌کند. بررسی زنده AI Studio و شرایط منطقه‌ای پیش‌شرط مدل است.
+**First next action (NOT EXECUTED):** C0 read-only inventory and host comparison in the existing connected accounts. Then present **one minimal architecture + one genuine free hosted alternative** for owner approval. No registration, payment, cloud deployment, API activation, secret transfer, production job, Gmail permission, portfolio work, or message send during this roadmap revision.
 
-### معماری هدف پیشنهادی، نه استقرار قطعی
+## شواهد رسمی / تاریخ بازبینی 2026-11-12
 
-زمان‌بند مجاز Google → دریافت حداقلی Gmail (OAuth) → طبقه‌بندی قطعی/حذف تکراری → بررسی قابلیت و تطبیق پورتفولیو → فراخوانی Gemini فقط برای محتوای عمومی مجاز → نتیجه/وضعیت در تنها state store منتخب → گزارش انسانی → (در فاز بعد) Draft با تأیید → پیگیری پاسخ‌ها → همگام‌سازی خروجی با MausBot هنگام آنلاین شدن لپ‌تاپ.
-
-Gmail مالک پیام/Thread/Draft است؛ GitHub مالک کد/تست/نقشه؛ Notion مالک تصمیم معماری نهایی؛ یک پایگاه‌داده منتخب مالک job state. متن محرمانه Gmail به Google Gemini **Unpaid**، سرویس مدل دیگر یا مخزن GitHub ارسال نشود. سرویس Apps Script و Gemini هر دو متعلق به Google باشند، انتقال داده را خودکار مجاز نمی‌کند.
-
-## فاز R0 — آماده‌سازی پروژه و انتخاب یک وظیفه واقعی (نقطه شروع بعدی)
-
-**اقدامات به ترتیب:**
-1. بازخوانی همین README و همین ROADMAP و تک‌محل CURRENT-STATUS؛ بررسی سابقه پیشنهاد محلی DJMRN-EMAIL-OPPORTUNITY-AUTOMATION-001 و پروژه Opportunity Hunter؛ عدم راه‌اندازی سامانه چهارم بدون تصمیم درباره سه گزارش تکراری Gmail ChatGPT موجود.
-2. تعیین یک مأموریت کوچک و قابل سنجش: مثال «شناسایی ۱۰ فرصت مناسب در ۲۴ ساعت گذشته از ایمیل‌های اعلان کار و ساخت گزارش فارسی بدون ارسال». نوع پروژه فریلنس/قراردادی، ریموت، حداقل بودجه/پرداخت، حساسیت مهلت و شرایط قبول/رد باید به تأیید کاربر برسد.
-3. بررسی صرفاً خواندنیِ دسترس‌پذیری Google AI Studio، project tier، فهرست مدل‌های رایگان قابل استفاده، RPM/TPM/RPD و نیاز به فعال‌بودن billing. **کلید واقعی خوانده، درخواست، کپی یا در GitHub درج نشود.**
-4. بررسی موجودی Google Apps Script/Cloud project و Gmail API/Consent فقط در محدوده مجاز؛ بدون ایجاد برنامه، Scope یا OAuth جدید. شرایط حساب مصرف‌کننده، منطقه، محرمانگی، کاربری شخصی/تجاری و هزینه پنهان را مستند و با صاحب حساب تأیید کن.
-5. تصمیم اولیه درباره پورتفولیو و محل اصلی job state، بدون ایجاد پایگاه‌داده جدید.
-
-**خروجی:** صورت‌مسئله یک‌صفحه‌ای؛ ماتریس ظرفیت/مجوز/هزینه واقعی؛ فهرست استفاده مجدد؛ و مجوزهای لازم برای R1 تا R3.
-**PASS:** یک use case دقیق و بدون تداخل، مشخص بودن داده‌های مجاز و سقف هزینه صفر، بدون تغییر حساب. **STOP:** هزینه ناشناخته، مجوز Gmail نامعتبر، حریم خصوصی حل‌نشده یا عدم انطباق منطقه.
-
-## فاز R1 — پورتفولیو و مدارک آماده ارسال، قبل از مدل و پیشنهاد
-
-**کارهای اصلی:**
-1. فهرست خدمات واقعی قابل تحویل را از سابقه‌های موجود بازبینی کن: وب/فروشگاه، Python/API/اتوماسیون، AI و ابزارها، گرافیک/ویدئو، اکسل/داده، محتوا، پشتیبانی Windows در صورت مرتبط بودن. مهارت یا نتیجه انجام‌نشده ادعا نشود.
-2. فهرست منبع نمونه‌کارهای سابق را بساز (آدرس‌ها/فایل‌ها **UNVERIFIED until found**): ویدئوی نمونه «Ursala/Orsola» از Text-3 دسکتاپ؛ HTML فروشگاهی/نمونه «خانه جوانه»؛ هر نمونه کد قابل نمایش موجود در GitHub؛ نمونه تحلیل/اتوماسیون با داده ساختگی. لینک‌های عمومی فقط بعد از تأیید مالکیت، دسترسی، حق انتشار و بازشدن واقعی پذیرفته شوند.
-3. یک «portfolio manifest» با ستون‌های نوع کار، مهارت اثبات‌شده، توضیح کوتاه FA/EN، لینک مجاز، تصویر/فایل منبع، حقوق نشر/اجازه، تاریخ آزمون، میزان آمادگی، دسته فرصت و وضعیت APPROVED/PRIVATE/UNVERIFIED بساز. **این سند شامل اطلاعات شخصی، شماره تماس/نشانی محرمانه یا فایل اصلی مشتری نشود.**
-4. قالب رزومه/معرفی مستقل فارسی و انگلیسی، نسخه‌های تخصصی و پاسخ کوتاه/بلند به کارفرما را آماده کن؛ **نام، تجربه، پرداخت/زمان‌بندی و لینک‌ها فقط بر اساس تأیید کاربر**.
-5. سیاست انتخاب نمونه برای هر آگهی: تنها ۱–۳ نمونه مرتبط، بدون ادعای ساخت سیستم منتشرنشده یا دستاورد مشتری که مجاز به افشا نیست.
-6. نگهداری فایل‌های نمونه و رزومه: Drive برای مدیا/فایل‌های قابل ارائه در صورت تأیید؛ GitHub برای کد عمومی مجاز؛ در pipeline فقط ارجاع به asset ID و وضعیت انتشار؛ بدون بارگذاری خودکار اسناد شخصی در سرویس‌های AI.
-
-**خروجی:** Portfolio Manifest تأییدشده، حداقل ۲ بسته معرفی تخصصی FA/EN، یک متن اصلی شرایط همکاری، راهنمای موارد ممنوع در پیشنهاد.
-**PASS:** هر نمونه لینک واقعاً کار کند، اجازه انتشار داشته باشد و با مهارت/فرصت مرتبط باشد. **STOP:** نمونه نامعتبر یا اطلاعات محرمانه/حق نشر نامعلوم. انتشار یا اتصال Drive نیازمند approval مستقل.
-
-## فاز R2 — طراحی قرارداد داده و شبیه‌ساز بدون حساب واقعی
-
-1. از APIهای موجود و کدهای Opportunity Hunter قرارداد مشترک ورودی/خروجی را استخراج و reuse کن؛ ابتدا قرارداد ساده در کد و تست، نه ساخت registry/queue framework جدید.
-2. فیلدهای کمینه Opportunity: شناسه منبع/پیام/thread، زمان مشاهده، نوع آگهی، URL، دسته مهارت، سقف/کف بودجه اگر معلوم، ریموت/محدودیت، deadline، fit reason، سطح اطمینان، وضعیت، next_action و timestamps.
-3. برای هر فرصت کلید یکتا source + externalID یا messageID و dedup با historyId Gmail تعریف کن. داده متنی پیام فقط در Gmail بماند؛ در job state حداکثر خلاصه پالایش‌شده/ارجاع.
-4. وضعیت‌ها: NEW → FILTERED → QUALIFIED/REJECTED/REVIEW → REPORT_READY → DRAFT_REQUESTED → DRAFT_READY → HUMAN_APPROVAL → SENT_BY_HUMAN → WAIT_REPLY → REPLIED/FOLLOW_UP_DUE → CLOSED. ERROR, RATE_LIMITED, PRIVACY_BLOCKED و AUTH_REVOKED حالت‌های مستقل‌اند. فازهای بدون مجوز به حالت send نباید برسند.
-5. ۱۰–۲۰ ایمیل و آگهی ساختگی شامل اعلان واقعی‌نما، کلاه‌برداری، لینک خراب، تکرار، محدودیت کشور و پیام حاوی prompt injection بساز؛ از داده شخصی استفاده نشود.
-6. قواعد تشخیص نوع اعلان، fit و انتخاب نمونه‌کار را به‌صورت pure deterministic functions با تست‌های مصنوعی بساز. مبدأ/دلیل تصمیم حفظ شود.
-7. آزمون offline: دو اجرای تکراری باید خروجی تکراری نسازند؛ «متن پیام» نباید اجازه ارسال، تغییر دسترسی یا درخواست رمز ایجاد کند.
-
-**خروجی:** قرارداد قابل آزمون، ماژول فیلتر، state machine، تست و نمونه گزارش فارسی.
-**PASS:** تست‌های طبقه‌بندی و idempotency، ۰ ارسال، ۰ درخواست API و ۰ استفاده از داده واقعی.
-
-## فاز R3 — نمونه اجرایی ابری Apps Script با داده ساختگی
-
-1. تنها بعد از تأیید، یک Apps Script آزمایشی جدا از حساب‌های production ایجاد و کد ساده R2 را وارد کن.
-2. ابتدا تابع دستی دریافت ۱۰ رویداد ساختگی و گزارش خروجی بساز؛ نه Gmail API، نه Gemini، نه هیچ Trigger فعال.
-3. محدودیت زمان اجرا، خطا، ذخیره حداقلی cursor و فرصت‌های تکراری را اندازه‌گیری کن؛ log را از محتوای شخصی پاک کن.
-4. بعداً با مجوز مستقل یک زمان‌بندی آزمایشی کوتاه، مثلاً یک یا دو اجرای محدود، با stop switch بررسی کن؛ از همین‌جا به‌بعد هر Cron فعال، خودش یک اقدام زمان‌بندی‌شده است.
-5. Google Apps Script installable triggers تحت حساب سازنده اجرا می‌شوند، ممکن است دقیقاً در دقیقه اعلام‌شده اجرا نشوند و Runtime کل روز سقف دارد؛ برای SLA سخت مناسب نیست.
-
-**خروجی:** اجرای ابری تستی قابل بازبینی بدون روشن بودن لپ‌تاپ.
-**PASS:** نتیجه قابل‌تکرار، گزارش اجرا/خطا، ۰ داده خصوصی و ۰ هزینه؛ توقف/غیرفعال‌سازی واقعی قابل آزمون.
-
-## فاز R4 — Gmail اتصال OAuth حداقلی و پایلوت فقط‌خواندنی
-
-**گیت مجوز:** دسترسی به Gmail یا Consent، حتی اگر همان حساب قبلی باشد، باید برای این برنامه و Scopeهای دقیق تأیید شود.
-
-1. از Gmail API Advanced Service / مسیر رسمی OAuth استفاده کن، نه رمز عبور، OTP، ذخیره کوکی یا key Gemini برای ورود Gmail. خواندن بدنه نیازمند gmail.readonly (Restricted) است؛ metadata-only scope فقط header/label را می‌دهد و **Gmail API search parameter q با gmail.metadata قابل استفاده نیست**؛ بنابراین طرح فیلتر انتخابی باید مطابق Scope واقعی اصلاح شود.
-2. قبل از هر Scope در سند مجوز مشخص کن چه می‌خوانیم و کجا نگه می‌داریم. Audit الزامات Google OAuth restricted scope، استثنائات personal-use/testing و امکان نیاز به security assessment؛ فعال‌کردن سرویس شخصی را به‌طور خودکار «بدون مجوز» یا «بدون الزام ارزیابی» فرض نکن.
-3. از یک بازه کوچک و allowlist محدود شروع کن: مثلاً ۵ تا ۱۰ ایمیل مرتبط کاری، label/فرستنده و تاریخ مشخص، فقط پس از تأیید؛ بدون علامت‌گذاری read، جابه‌جایی، حذف، Draft یا ارسال.
-4. داده پیام در Gmail بماند. فقط شناسه/زمان/تگ/نتیجه تصمیم در state store مجاز ذخیره شود. اگر بدنه برای تصمیم لازم است، دسترسی in-memory محدود؛ هیچ انتقال به سرویس AI رایگان در این مرحله.
-5. بعد از اولین full sync محدود، historyId ثبت و برای ادامه از history.list استفاده شود. historyId قدیمی ممکن است 404 بدهد؛ fallback bounded resync، بدون تکرار پیام.
-6. با سه ChatGPT automations موجود تطبیق بده؛ منبع گزارش تکراری/مالک واحد هر فرآیند باید مشخص شود؛ هیچ Automation قبلی بدون مجوز تغییر نکند.
-
-**خروجی:** گزارش ۵–۱۰ ایمیل واقعی در محدوده مجاز همراه شناسه/دلیل، بدون افشای محتوا در logs.
-**PASS:** عدم تغییر Gmail، dedup، OAuth revocation → توقف امن، 429 → backoff، history 404 → sync محدود.
-
-## فاز R5 — امتیازدهی و تحلیل محدود با Gemini Free
-
-1. تأیید فعال بودن Free Tier حساب/پروژه موجود و اینکه مدل منتخب در منطقه و شرایط رسمی مجاز است؛ بررسی quota از AI Studio (RPM/TPM/RPD)، سقف روزانه برای همین workflow و عدم billing/overage.
-2. قبل از هر مدل یک فیلتر «PUBLIC_SHAREABLE» بگذار: تنها متن آگهی عمومی/مجاز، بدون نام یا اطلاعات شناسایی شخصی، اطلاعات نامه خصوصی، پیوست، شماره تماس/حساب/رزومه شخصی. موارد محرمانه با قواعد deterministic یا review انسانی، بدون ارسال به unpaid Gemini.
-3. قرارداد prompt ساختاریافته: fit score، دلایل با ارجاع، شواهد کافی/ناکافی، خطرها، دسته پیشنهادی از R1 و JSON schema؛ هیچ ادعای ناشی از مدل evidence نیست.
-4. کم‌مصرف‌ترین مدل مجاز را با نمونه‌های ساختگی/عمومی آزمایش کن؛ خروجی ۲ مدل فقط اگر تفاوت قابل‌ارزیابی یا نیاز واقعی وجود دارد. نرخ و تعداد call را ثبت کن؛ با 429 و حریم خصوصی معیوب fail closed.
-5. سیستم بدون مدل باید همچنان نسخه حداقلی فرصت‌های واجدشرایط را گزارش دهد.
-
-**خروجی:** گزارش امتیازدار و مستند فرصت‌های عمومی + مقایسه دقت/هزینه/تاخیر در مقابل فیلتر قطعی.
-**PASS:** کیفیت بهترِ قابل اندازه‌گیری، داده مجاز، بدون کلید در log، سقف رایگان محقق. **STOP:** حریم خصوصی نامشخص یا هزینه غیرصفر.
-
-## فاز R6 — ساخت پیشنهاد/رزومه متناسب و Gmail Draft
-
-**گیت جدید:** این مرحله WRITE روی Gmail است و نیازمند مجوز gmail.compose جدا از خواندن؛ این scope می‌تواند عملیات ارسال هم پوشش دهد، بنابراین **ابزار ارسال نباید در کد یا در اختیار ایجنت باشد**. استفاده از gmail.send نیز تنها در مرحله مجاز بعدی ممکن است.
-
-1. برای هر فرصت QUALIFIED در portfolio manifest بهترین نمونه‌ها، متن معرفی، تعهدات مجاز و پرسش‌های لازم را انتخاب کن. ساخت متن می‌تواند template-based باشد؛ مدل فقط برای متن عمومی مجاز استفاده شود.
-2. پیش‌نویس در ابتدا فقط داخل خود برنامه و بدون Gmail Draft واقعی تولید شود، با QA منبع و بررسی فارسی/انگلیسی.
-3. بعد از مجوز، Gmail drafts.create را با MIME صحیح، threadId، Subject و References/In-Reply-To سازگار برای پاسخ به رشته قبلی آزمایش کن؛ اگر thread پیوست نیست، ایمیل جدید نساخته/ارسال نکن تا کاربر تصمیم بگیرد.
-4. قبل از هر Gmail Draft دوم، وضعیت همان job و draft ID را بخوان؛ به ازای یک opportunity یک draft تأییدشده حفظ شود؛ duplicate drafts ممنوع.
-5. ارسال پیشنهاد، دعوت جلسه، قیمت‌گذاری، تعهد، فایل پیوست و مذاکره حساس به طور پیش‌فرض MANUAL_APPROVAL باشد.
-
-**خروجی:** یک پیش‌نویس Gmail صحیح و آماده تصمیم انسانی؛ لینک فرصت + منابع نمونه‌کار و چرایی تناسب.
-**PASS:** ۰ ارسال ناخواسته، ۰ ادعای غیرواقعی، thread درست و بازرسی انسانی.
-
-## فاز R7 — پیگیری جواب کارفرما و اطلاع‌رسانی
-
-1. threadIDهای پیگیری را با Gmail API بررسی کن؛ پاسخ جدید واقعی را از پیام خودکار/بازگشت خطا جدا کن.
-2. اعلان کوتاه فارسی ایجاد کن: کارفرما، درخواست، موعد، مرحله، متن پیشنهادی برای پاسخ و لینک thread. داده محرمانه در کانال اعلان بدون اجازه منتشر نشود.
-3. برای موارد بدون پاسخ، next_followup_at با سیاست تعداد دفعات، فاصله و opt-out ثبت شود؛ spam و تکرار ممنوع.
-4. فقط Draft پیگیری بساز، ارسال خودکار را فعلاً مسدود نگه دار. ارسال خودکار تنها در یک پیشنهاد مجوز جدا با مخاطبان/قالب/حدود دقیق و kill switch قابل بحث است.
-5. در صورت لغو دسترسی، پایان پروژه یا اعلام عدم تمایل طرف مقابل، همه پیگیری‌های بعدی متوقف شوند.
-
-**خروجی:** وضعیت هر مکاتبه به‌روز و یک اعلان قابل اقدام برای کاربر.
-**PASS:** پاسخ جدید از قلم نیفتد؛ دوباره یادآوری بیجا نشود؛ هیچ ارسال بدون approval.
-
-## فاز R8 — توسعه سایت‌ها و فرصت‌های عمومی، از کارنامه موجود
-
-1. جریان «ورود از ایمیل → سایت» قبلاً فقط برای این پنج پلتفرم در DJMRN تعیین شده: Creativepool، Joberz (هویت/دامنه دقیق تأیید شود)، Voice123، LinkedIn، iEstekhdam. بقیه سایت‌ها در گردش‌کار مستقل کشف عمومی Opportunity Hunter بررسی می‌شوند.
-2. برای هر سایت ابتدا Terms/robots/API/RSS و دسترسی واقعی/رایگان ارسال پیشنهاد را بررسی کن؛ ادعاهای ۲۰۲۶ درباره اپلای رایگان باید دوباره تأیید شوند.
-3. عمومی/بدون ورود: API یا RSS و پایش با cron؛ ورود/درخواست کارفرما: فقط با OAuth یا نشست مجاز و approve، بدون ذخیره رمز، CAPTCHA bypass، KYC bypass یا ارسال خودکار گسترده.
-4. هر درخواست فقط یک owner و jobID، با مدل/رزومه مناسب R1 و check واقعی confirmation after submit.
-5. از data store و پورتفولیوی فازهای قبلی reuse کن؛ crawler/API gateway دوم بدون نیاز اثبات‌شده نساز.
-
-**خروجی:** یک سایت منتخب با فیلتر درست و خروجی پیش‌نویس مرتبط؛ درخواست/ارسال تا approval متوقف.
-**PASS:** لینک واقعی، قوانین سایت رعایت شود، صفر پیشنهاد نامجاز.
-
-## فاز R9 — Google ADK 2.0: ارزیابی عملی و ارتقا فقط در صورت مزیت
-
-**Google ADK فراموش نشود؛ اما برای نسخه اول الزام نصب نیست.** شامل agent/tool orchestration، graph-based/dynamic/collaborative workflows، evaluator و Google Apps Toolsets برای Gmail، Calendar، Sheets، Docs. مدل Gemini جداگانه و با API/سهمیه مستقل است؛ ADK یک Cloud رایگان آماده یا scheduler نیست.
-
-1. پس از R4–R7 تنها اگر مسئله واقعی حل‌نشده پیدا شد (مثل نیاز به بازبینی مستقل یا گردش‌کار پیچیده چندسایته)، ADK Python 2.0 را در محیط غیرحساس با داده ساختگی آزمایش کن؛ با یک coordinator + یک reviewer، نه هفت ایجنت مقیم.
-2. **گیت امنیتی مهم:** GmailToolset آماده در ADK Python بر اساس docs ممکن است به‌طور پیش‌فرض scope بسیار وسیع https://mail.google.com/ بخواهد؛ tool_filter صرفاً ابزار قابل‌فراخوانی را محدود می‌کند، **Scope را محدود نمی‌کند**. راه ادغام least-privilege مثل OAuth جداگانه و function-tool wrapper بر Gmail API بررسی شود. بدون رفع این گیت، اتصال ADK به Gmail واقعی DENY.
-3. لاگ‌ها و ترسیم جریان داده را با نمونه بدون PII تست کن؛ ایمیل دریافتی untrusted است و نباید از طریق prompt دسترسی دیگر ابزارها یا ارسال را باز کند.
-4. اجرای ابری ADK می‌تواند در Cloud Run یا میزبان دیگر باشد، اما **Cloud Run free usage = تعهد هزینه صفر نیست**. نیاز به billing/IAM/secret manager/egress/scheduler و overage باید رسمی و با حساب واقعی تأیید شود؛ Unknown cost=DENY.
-5. معیار مقایسه: درصد تشخیص درست، کیفیت Draft، مدیریت خرابی، زمان پردازش و تعداد token/API calls، سطح دسترسی و نگهداری در مقایسه با Apps Script ساده.
-6. اگر بهبود معنادار و هزینه صفر تأیید نشد، **ADK در نقش ON_DEMAND** باقی می‌ماند و سیستم Google Apps Script ادامه می‌یابد.
-
-**خروجی:** گزارش قابل سنجش ADK vs Apps Script و توصیه KEEP/INTEGRATE/DEFER؛ نه مهاجرت بدون مجوز.
-**PASS:** نیاز واقعی، ابزار کم‌دسترسی، بدون داده حساس و هزینه، و کیفیت بهتر؛ در غیر این صورت DEFER.
-
-## فاز R10 — همکاری ابری و دسکتاپ، مقاوم در برابر خاموشی/VPN
-
-1. فقط پس از اینکه Cloud مستقلاً خروجی مفید و durable state اثبات کرد، یک API/adapter کم‌مجوز برای Windows MausBot در نظر بگیر.
-2. Cloud وظایف محدود و ساختاریافته را انجام دهد و نتیجه را با شناسه و زمان در **همان** محل state مورد تأیید ذخیره کند. لپ‌تاپ وقتی آنلاین شد با اتصال خروجی امن Pull، ack/idempotency، و در صورت لزوم درخواست کمک agent تخصصی انجام دهد.
-3. هیچ پورتی روی Windows برای دسترسی inbound باز نشود؛ VPN/proxy local تغییر کند نباید jobهای Cloud متوقف شوند. اما eligibility و network-policy سرور ابری تضمین‌شده نیست.
-4. مقاومت: restart، duplicate event، تغییر token، 429، timeout، webhook missed، conflict between cloud and local owners، sync-after-days.
-5. سنجش مصرف واقعی و ارزش: فرصت‌های واجدشرایط، نرخ تبدیل به مذاکره، draftهای تأییدشده، کیفیت پاسخ کارفرما، هزینه و مصرف quota.
-
-**خروجی:** مسیر end-to-end Cloud (laptop off) → persisted result → online Windows acknowledgment.
-**PASS:** بدون تکرار/افشای داده/هزینه و با امکان توقف/بازیابی.
-
-## ترتیب اجرایی کوتاه و فهرست گیت‌های Approval
-
-| ترتیب | اولین اقدام مجاز در آن گیت | مجوز موردنیاز | معیار خروج |
-|---|---|---|---|
-| 0 | ممیزی read-only Google API availability و سه Gmail automation | فقط‌خواندنی در محدوده موجود | روشن شدن scope، free quota، تداخل و داده مجاز |
-| 1 | تکمیل پورتفولیو و قالب‌های پاسخ بدون انتشار خودکار | بررسی و تأیید نمونه/رزومه | دارایی قابل استناد و قابل‌استفاده |
-| 2 | نوشتن/تست کد با داده ساختگی | approval ساخت source در مخزن | تست dedup/filter/report PASS |
-| 3 | ایجاد محیط آزمایشی Apps Script بدون Gmail | approval ایجاد/تنظیم محیط | synthetic cloud run PASS |
-| 4 | اتصال Gmail read-only محدود | OAuth/Scope + موافقت برای خواندن پیام واقعی | ۵–۱۰ پیام مرتبط، صفر side effect |
-| 5 | اتصال Gemini فقط برای آگهی‌های عمومی | تأیید Free Tier/داده/مدل | نتیجه بهتر و مصرف صفر |
-| 6 | ساخت Gmail Draft | مجوز WRITE محدود | draft صحیح، صفر send |
-| 7 | پیگیری پاسخ و گزارش | مجوز Trigger و سیاست پیگیری | reply watcher بدون duplicate |
-| 8 | اتصال سایت‌های کاری | مجوز مستقل هر سایت/اکانت | فرصت واقعی، بدون ارسال نامجاز |
-| 9 | ارزیابی ADK 2.0 | تأیید آزمون کم‌دسترسی و هزینه صفر | برتری سنجیده یا DEFER |
-| 10 | هماهنگی با MausBot و deploy | approval security/deploy/state migration | real I/O + recovery + observable value |
-
-## تست‌های الزام‌آور و کنترل هزینه/امنیت
-
-- **Secrets:** Gemini API Key پیشاپیش نزد کاربر است ولی نباید در پیام، GitHub، log، Portfolio یا خروجی مدل درج شود. نگهداری در مکان runtime-specific با محدودیت دسترسی و rollback؛ برای Gmail OAuth هیچ رمز/OTP/cookie مستقیم گرفته نشود.
-- **OAuth:** gmail.metadata و gmail.readonly از نظر گوگل Restricted هستند؛ gmail.compose نیز Restricted؛ gmail.send Sensitive؛ mail.google.com بسیار گسترده و غیرقابل قبول برای MVP. انتقال داده محدودشده به سرور ثالث ممکن است نیازمند ممیزی امنیتی باشد؛ وضعیت personal-use exception باید طبق docs بررسی شود، نه حدس.
-- **Privacy:** Gemini Unpaid ورودی/خروجی را ممکن است برای بهبود محصولات استفاده کند و بازبین انسانی داشته باشد. اطلاعات شخصی/محرمانه/متن کامل Gmail و مشخصات خصوصی کارفرما به آن فرستاده نمی‌شود.
-- **Quota:** وضعیت واقعی RPM/TPM/RPD را از AI Studio و نرخ refresh و reset بگیر. قبل از هر فراخوانی check budget، توقف در quota/price anomaly، بدون automatic top-up، بدون charge یا paid fallback.
-- **Model quality:** prompt injection و hallucination، false positive/false negative، فریب آگهی، محتوای حساس، لینک‌های مشکوک، تداخل ده‌ها اتوماسیون و اشتباه در thread reply تست شوند.
-- **Reliability:** Timeout + retry with jitter/backoff، per-message idempotency، safe cursor resync، kill switch، هشدار failure، ثبت provenance و استفاده از داده تازه؛ monitor logs metadata only.
-- **Definition of DONE:** مدرک real I/O، ذخیره پایدار، آزمون، نظارت، مالکیت داده، امنیت، بازگشت‌پذیری، هزینه صفر تأییدشده، کمک واقعی به دریافت پروژه. یک ماژول/نسخه/پرونده به تنهایی DONE نیست.
-
-## راهنمای ادامه در پنجره یا ایجنت جدید
-
-**شروع کار:** فایل همین ROADMAP و README پروژه و ابتدای CURRENT-STATUS را از مخزن اصلی/شاخه main بخوان. سپس تنها گیت بعدیِ صریحاً مجاز را بررسی کن. هر بار مورد انجام‌شده را با واقعیت GitHub/Google/Gmail مستقل verify کن؛ هیچ موفقیت آزمایش/اجرا را از متن پلان استنباط نکن. مسیر پیشرفت فقط CURRENT-STATUS است؛ فایل نقشه راه برای ترتیب و قرارداد کار ثابت می‌ماند و با تصمیم رسمی بعدی نسخه‌دار می‌شود. Notion برای rationale/تصمیم معماری پذیرش‌یافته و یک کانون حقیقت باقی بماند؛ این سند صرفاً SPEC/PROPOSAL است.
-
-**نخستین مأموریت اجرایی که بعداً می‌توان به تیم سپرد:**
-«R0 را فقط به‌صورت READ-ONLY اجرا کن: اسناد موجود، وضعیت سه اتوماسیون Gmail، Google Apps Script/Gmail OAuth و Free Tier Gemini را بررسی کن. هیچ API Key یا رمز نخواه، هیچ حساب/API/Trigger/Scope ایجاد نکن، هیچ Gmail خصوصی نخوان و هیچ هزینه‌ای ایجاد نکن. یک پیشنهاد R1/R2 با معیار قبول/رد و درخواست مجوز گیت بعد بده.»
-
-## منابع رسمی مبنای تصمیم (بازبینی 2026-11-12)
-
-- Apps Script quotas: https://developers.google.com/apps-script/guides/services/quotas
-- Apps Script time triggers: https://developers.google.com/apps-script/guides/triggers/installable
-- Advanced Gmail service: https://developers.google.com/apps-script/advanced/gmail
-- Gmail OAuth scopes & restricted permissions: https://developers.google.com/workspace/gmail/api/auth/scopes
-- Gmail messages.list query (metadata restriction): https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/list
-- Gmail synchronization/history error: https://developers.google.com/workspace/gmail/api/guides/sync
-- Gmail threading reply rules: https://developers.google.com/workspace/gmail/api/guides/threads
-- Gmail Drafts: https://developers.google.com/workspace/gmail/api/guides/drafts
-- Gemini pricing/free tier: https://ai.google.dev/gemini-api/docs/pricing
-- Gemini rate limits: https://ai.google.dev/gemini-api/docs/rate-limits
-- Gemini Unpaid privacy: https://ai.google.dev/gemini-api/terms
+- Neon Functions & Free quotas: https://neon.com/blog/neon-free-plan-1-gb-per-project
+- Neon Backend/AI Gateway separate price: https://neon.com/blog/neon-backend-is-ga
+- Activepieces Hosted Free / BYOK key distinction: https://www.activepieces.com/pricing
+- Cloudflare Worker limits: https://developers.cloudflare.com/workers/platform/limits/
+- Supabase Edge Functions quota/limits: https://supabase.com/docs/guides/platform/billing-on-supabase ; https://supabase.com/docs/guides/functions/limits
+- Google Apps Script quotas: https://developers.google.com/apps-script/guides/services/quotas
 - Google ADK 2.0: https://adk.dev/2.0/
-- ADK Google Apps Toolsets and default Gmail scope warning: https://adk.dev/integrations/google-api-toolsets/
-- Google OAuth restricted-scope verification/exceptions: https://developers.google.com/identity/protocols/oauth2/production-readiness/restricted-scope-verification
+- ADK cloud deployment options: https://adk.dev/deploy/
+- ADK Cloud Run deploy and security: https://adk.dev/deploy/cloud-run/
+- Google Cloud Run pricing: https://cloud.google.com/run/pricing
+- n8n Cloud trial vs Community: https://support.n8n.io/article/how-do-i-cancel-my-trial ; https://n8n.io/pricing/
+- Canonical DJMRN governance: https://app.notion.com/p/3edc8c684690814a9707cb880534f462 ; https://app.notion.com/p/3edc8c68469081cc90abdd5183f1bdb1
+
+**Documentation change only, not architecture adoption.** Previous Gmail-first roadmap is retained by Git history and remains useful only as a future domain plan; this C0–C10 foundation-first roadmap is CURRENT in this project path.
