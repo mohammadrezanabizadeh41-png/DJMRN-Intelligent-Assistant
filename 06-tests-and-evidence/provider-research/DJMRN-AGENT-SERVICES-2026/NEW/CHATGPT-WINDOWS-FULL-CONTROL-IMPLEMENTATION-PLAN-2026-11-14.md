@@ -1,7 +1,7 @@
 # DJMRN — NEW — ChatGPT ↔ Windows / Browser / Coding: Operational Implementation Plan
 
 **Date:** 2026-11-14  
-**Status:** PROPOSED / NOT YET IMPLEMENTED  
+**Status:** PARTIAL IMPLEMENTATION — 19 downloads + 19 Windows shortcuts verified; CLI/GUI installation attempted, blockers tracked in section J; full same-chat operation NOT yet verified  
 **Repository branch:** main. This is a new document in the NEW subfolder, not a new Git branch.  
 **Purpose:** Resume and implement the minimum adequate toolset so the existing ordinary ChatGPT conversation can control the user's authorized Windows PC, browser, coding workflow and compatible desktop apps.
 **Parent discovery catalog:** [19 ChatGPT connection, Windows, Browser and MCP tools](../CHATGPT-CONNECTION-WINDOWS-BROWSER-MCP-TOOLS-2026-11-14.md). This parent research list stays unchanged.
@@ -187,3 +187,55 @@ No capability is DONE just because a package was installed, a server started, or
 5. **Continuity:** this is the current user-authorized installation checklist. Return to the S0–S5 end-to-end operating tests in the same file afterward. The connected remote desktop transport may have quota, so installing local MCP tools alone is not a replacement for an authorized bridge into this conversation.
 
 **At registration:** the initial tool inventory confirmed 19/19 files exist, and these already installed/staged executables were detected: Windows-MCP, OpenDesk, Browser Use, Playwright MCP, Chrome DevTools MCP, Windows Commander MCP, chatgpt-use, chrome-use and codex-browser-bridge. GUI installer execution and real browser/session integration **not yet confirmed**. Exact completed work to be verified from the Windows machine before claiming a completed item.
+
+
+---
+
+## J. Verified Windows installation results — 2026-11-14 (supersedes previous NOT YET INSTALLED statements)
+
+**User authorization:** after the archival registration in section I, the owner explicitly instructed sequential installation of all 19 downloaded artifacts, and Windows shortcuts for later use. The subsequent actions were carried out on the authorized local laptop via the already-connected remote bridge. No account/session authorization, payments, production deployment, or global security policy changes were authorized or performed.
+
+**Evidence summary:** 19/19 source download files verified by size and recorded hash; 19/19 numbered Windows shortcuts created in a single Desktop folder named `DJMRN ChatGPT Tools`; local evidence files `GUI-INSTALL-RESULTS.csv`, `CLI-VALIDATION.csv`, and the two download-queue CSVs remain in `Desktop\DJMRN-ChatGPT-Downloads`. The new Windows shortcuts folder contains `README-STATUS.txt` reflecting real states and blockers. A shortcut is **not** independent proof of a runnable application.
+
+| # | Item | Verified result | Real evidence / remaining action |
+|---:|---|---|---|
+| 01 | Windows-MCP | **INSTALLED, EXECUTION BLOCKED** | Python virtual environment and `windows-mcp.exe` exist, but `--help` returned Windows Application Control WinError 4551; use signed/approved distribution or scoped policy review, not blanket security disabling |
+| 02 | Microsoft Playwright MCP | **INSTALLED; CLI HELP PASS** | Local npm executable exists, `--help` exit 0; browser connection and same-chat navigation not yet tested |
+| 03 | Chrome DevTools MCP | **INSTALLED; CLI HELP PASS** | npm executable exists, `--help` exit 0; Chrome debugging end-to-end not yet tested |
+| 04 | OpenDesk | **INSTALLED; CLI HELP PASS** | Python venv and `opendesk.exe` exist, `--help` exit 0; no actual screenshot/mouse/browser data access yet |
+| 05 | Backboard Desktop | **SOURCE ONLY / BUILD BLOCKED** | Official pinned source ZIP valid; no verified native release binary in prior GitHub releases; Bun absent; full source extraction via Windows tar encountered unsupported symlink fixture; no runnable desktop build; existing 8 GB RAM is a constraint |
+| 06 | Chat On Steroids | **GUI INSTALLER BLOCKED** | Official download validated; silent per-user launch rejected by Windows Code Integrity / Application Control; event ID 3077 observed; not installed |
+| 07 | Chat On Steroids extension | **UNPACKED / NOT ENABLED** | Chrome extension ZIP extracted, manifest located; browser permissions not granted |
+| 08 | Windows Commander MCP | **PORTABLE STAGED / RUNTIME ERROR** | official ZIP unpacked with `WindowsCommander.McpServer.exe`; `--help` produced `System.IO.FileLoadException`; contemporary Code Integrity 3077 events reported DLL blocking |
+| 09 | chatgpt-use | **PORTABLE STAGED / EXECUTION BLOCKED** | Windows ZIP extracted; `--help` returned WinError 4551; no logged-in ChatGPT web session accessed |
+| 10 | MCP Plugins With ChatGPT Web | **BUILD PASS / NOT CONNECTED** | npm dependencies installed; TypeScript `tsc` build succeeded and `dist/index.js` exists; no browser/ChatGPT account permission set |
+| 11 | Browser MCP | **BUILD PASS / EXTENSION STAGED** | pnpm dependencies installed; `pnpm -r build` produced MCP server `dist/index.js` and Chrome MV3 extension; no browser permissions granted |
+| 12 | codex-browser-bridge | **PORTABLE STAGED / EXECUTION BLOCKED** | official EXE present; `--help` returned WinError 4551; no browser bridge established |
+| 13 | Browser Use | **INSTALLED; CLI HELP PASS** | isolated Python venv has `browser-use.exe`; `--help` exit 0; no billable/browser cloud provider used |
+| 14 | chrome-use | **PORTABLE READY; CLI HELP PASS** | official Windows archive extracted, `chrome-use.exe --help` exit 0; no ChatGPT Web session accessed |
+| 15 | gptme Desktop | **GUI INSTALLED / REGISTRY VERIFIED** | silent install exit 0; Windows uninstall registration gptme 0.36.0 and app EXE existence verified; no model account connected |
+| 16 | ChatGPT Desktop Community | **GUI INSTALLER BLOCKED** | download verified but silent install rejected by Windows Application Control; not installed |
+| 17 | Yep Anywhere | **GUI INSTALLED / REGISTRY VERIFIED** | signed installer, exit 0, Windows uninstall registration YepAnywhere 0.10.0 and app EXE verified; no agent connection configured |
+| 18 | Web GPT Agent | **GUI INSTALLED / REGISTRY VERIFIED** | silent install exit 0, Windows uninstall registration Web GPT Agent 2.3.1 and EXE verified; no account/session connected |
+| 19 | Web GPT Agent extension | **UNPACKED / NOT ENABLED** | browser extension ZIP extracted with manifest; Chrome permissions not granted |
+
+### Result categories (mutually exclusive)
+
+- **3 native GUI applications installed:** gptme, Yep Anywhere, Web GPT Agent (first-run sign-in/functional use not tested).
+- **5 tools pass safe CLI-help smoke test:** Playwright MCP, Chrome DevTools MCP, OpenDesk, Browser Use and chrome-use. CLI success is not an end-to-end integration test.
+- **2 source tools compiled locally but are not browser/account connected:** MCP Plugins With ChatGPT Web and Browser MCP.
+- **2 browser extensions staged but not activated:** Chat On Steroids and Web GPT Agent extensions.
+- **6 blocked or runtime-failing executables/installers:** Windows-MCP, Chat On Steroids, Windows Commander MCP, chatgpt-use, codex-browser-bridge, ChatGPT Desktop Community. Windows Code Integrity/App Control events were observed; do not claim these are fully usable.
+- **1 source-only app not fully installed:** Backboard Desktop. Full build requires a separately justified Windows toolchain and resource plan, or a verified official Windows binary.
+
+**Controls:** Microsoft Defender real-time protection was observed active, and targeted scans of five GUI installers completed without scan command errors (not a security guarantee). No global App Control rule, UAC, Firewall, Secure Boot, Chrome extension permission or account security setting was relaxed. Installed apps were not given access to private provider accounts or authentication tokens. No 19-tool autostart policy was created.
+
+### Remaining next-action gates, ordered by user value
+
+1. **Prioritize operational same-chat value:** use the already-connected Remote Desktop Commander + **runnable OpenDesk** to attempt a harmless visual screenshot/window pilot, then runnable Playwright CLI for isolated browser workflow. Do not wait for blocked parallel tools; record real I/O and errors.
+2. **Blocked tools:** ask owner for separate, narrowly scoped review/authorization to use an OS-approved signed release or per-application code-integrity allow rule, with clear risks and rollback. Do not silently bypass/disable Windows Application Control.
+3. **Backboard:** identify a verifiable official Windows installer from the publisher (desktop page: https://bbstudio.io/app/desktop), or plan a resource-bounded Code-OSS source build if official binary cannot be confirmed; cannot claim compiled/install success yet.
+4. **Extensions:** request specific owner consent to enable the unpacked extensions in Chrome and review exactly what sites/data they can access. Do not auto-install permission-sensitive extensions.
+5. **End-to-end confirmation:** after compatible connection, validate screenshot/click/keyboard, browser DOM/forms, code build/tests, browser DevTools, stop/recovery, all in this existing ChatGPT conversation. Only then consider this overall desktop control capability OPERATIONAL/DONE.
+
+**This section is the verified latest state.** Older sections above describe the earlier proposal/registration state and are historical for those statements. No additional parallel GitHub installation tracker was created.
