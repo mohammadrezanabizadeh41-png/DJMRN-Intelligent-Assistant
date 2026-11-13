@@ -200,9 +200,9 @@ No capability is DONE just because a package was installed, a server started, or
 | # | Item | Verified result | Real evidence / remaining action |
 |---:|---|---|---|
 | 01 | Windows-MCP | **INSTALLED, EXECUTION BLOCKED** | Python virtual environment and `windows-mcp.exe` exist, but `--help` returned Windows Application Control WinError 4551; use signed/approved distribution or scoped policy review, not blanket security disabling |
-| 02 | Microsoft Playwright MCP | **INSTALLED; CLI HELP PASS** | Local npm executable exists, `--help` exit 0; browser connection and same-chat navigation not yet tested |
+| 02 | Microsoft Playwright MCP | **INSTALLED; CLI HELP PASS** | Local npm executable exists, `--help` exit 0; a later no-account local browser pilot passed via the preinstalled remote executor (section K); MCP bridge still not connected |
 | 03 | Chrome DevTools MCP | **INSTALLED; CLI HELP PASS** | npm executable exists, `--help` exit 0; Chrome debugging end-to-end not yet tested |
-| 04 | OpenDesk | **INSTALLED; CLI HELP PASS** | Python venv and `opendesk.exe` exist, `--help` exit 0; no actual screenshot/mouse/browser data access yet |
+| 04 | OpenDesk | **INSTALLED; CLI HELP PASS** | Python venv and `opendesk.exe` exist, `--help` exit 0; a later memory-only screenshot using OpenDesk's installed mss dependency passed (section K); OpenDesk MCP and real mouse control not yet tested |
 | 05 | Backboard Desktop | **SOURCE ONLY / BUILD BLOCKED** | Official pinned source ZIP valid; no verified native release binary in prior GitHub releases; Bun absent; full source extraction via Windows tar encountered unsupported symlink fixture; no runnable desktop build; existing 8 GB RAM is a constraint |
 | 06 | Chat On Steroids | **GUI INSTALLER BLOCKED** | Official download validated; silent per-user launch rejected by Windows Code Integrity / Application Control; event ID 3077 observed; not installed |
 | 07 | Chat On Steroids extension | **UNPACKED / NOT ENABLED** | Chrome extension ZIP extracted, manifest located; browser permissions not granted |
@@ -239,3 +239,17 @@ No capability is DONE just because a package was installed, a server started, or
 5. **End-to-end confirmation:** after compatible connection, validate screenshot/click/keyboard, browser DOM/forms, code build/tests, browser DevTools, stop/recovery, all in this existing ChatGPT conversation. Only then consider this overall desktop control capability OPERATIONAL/DONE.
 
 **This section is the verified latest state.** Older sections above describe the earlier proposal/registration state and are historical for those statements. No additional parallel GitHub installation tracker was created.
+
+
+---
+
+## K. Safe real-I/O smoke tests after installation — 2026-11-14
+
+**Scope:** user-authorized installation smoke checks using existing Remote Desktop Commander to execute small local scripts. No authenticated website, password, cookies, paid provider, browser extension permission or persistent agent configuration was used.
+
+- **Browser actual I/O: PASS.** Playwright Core from the installed Microsoft Playwright MCP dependency launched installed Microsoft Edge in a temporary headless browser session, opened a self-contained local `data:` test page, clicked a harmless button, confirmed the rendered text changed to `clicked`, captured a screenshot in memory and shut down cleanly. Script exit code 0. No external web request or sign-in.
+- **Windows screenshot primitive: PASS.** `mss` available in OpenDesk's isolated Python environment acquired an in-memory desktop screenshot, returned only monitor count, dimensions and a short SHA256 digest. Script exit code 0. Screenshot bytes were **not** sent to ChatGPT, persisted to GitHub or saved as a new image.
+- **Limitations:** These pilots validate the current chat → existing remote command bridge → local browser/screen primitives → returned result. They do **not** validate direct ChatGPT Custom MCP availability, Windows-MCP execution (still Code Integrity blocked), OpenDesk's own MCP protocol, keyboard/mouse events on a real desktop window, user login, or any app's subscription/quota compatibility.
+- **Local evidence:** `Desktop\DJMRN-ChatGPT-Downloads\validate-browser.cjs` and `validate-screen.py` contain the test source; stdout returned `PLAYWRIGHT_REAL_IO result=clicked` and `OPENDESK_SCREENSHOT_CAPTURE_PASS` with zero exit codes. Only non-sensitive proof is recorded here.
+
+**Resume:** choose OpenDesk's operational computer-use interface and an approved local bridge path for a visible app click test (S1), then use Playwright to validate a browser automation end-to-end from this chat (S2). Do not modify Windows Application Control or add sensitive browser permissions without separately scoped proposal and owner approval.
