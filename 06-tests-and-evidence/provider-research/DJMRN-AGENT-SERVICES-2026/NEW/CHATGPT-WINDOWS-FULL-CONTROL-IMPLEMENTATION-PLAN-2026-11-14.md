@@ -287,3 +287,45 @@ No capability is DONE just because a package was installed, a server started, or
 5. After end-to-end local Work/Codex validation, mark the status **OPERATIONAL**; until then this is **Codex-configured and locally smoke-tested; native ChatGPT Desktop integration awaits validation**.
 
 **Official references:** [OpenAI Plugins](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt); [Connecting custom MCP](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt); [Local Work sync](https://help.openai.com/en/articles/20001548-agent-security-and-local-work-sync-in-chatgpt); [Package local plugins](https://developers.openai.com/plugins/build/plugins); [Codex MCP](https://developers.openai.com/learn/docs-mcp).
+
+
+---
+
+## M. Private DJMRN ChatGPT plugin and tested independent local execution packaging — 2026-11-14
+
+**Objective and authority:** Owner explicitly authorized broad browser extension permissions and establishing a direct local ChatGPT Desktop/Codex integration before the Remote Desktop Commander quota ends. This section is an updated implementation/verification record, not a claim of browser/mobile same-thread access.
+
+### Private plugin registered in ChatGPT
+
+- OpenAI **Plugin Creator** was connected in this conversation and successfully created a **PRIVATE, USER-scoped** plugin `djmrn-windows-local` **v0.1.0**, using the portable `plugin.json` + `mcp.json` local STDIO format. This differs from the earlier `djmrn-desktop-control` local Codex plugin and is a separately selected candidate, **not** an additional remote authority.
+- Bundle defines four on-demand local MCP backends: `djmrn_windows_commander`, `djmrn_opendesk`, `djmrn_windows_mcp`, `djmrn_playwright`. The bundled Node.js `server/launch.mjs` only launches the known locally installed executable from the owner desktop and pipes stdio; **no public listener, secret or paid model required**.
+- Private plugin creation success is verified by the Plugin Creator release/metadata response. **It has NOT been proven installed/selected inside the user's ChatGPT Desktop local Work conversation**, nor in this mobile/web thread. The user must select the plugin and run a fresh local Work tool call where supported; some plans and local-host policies can block full write tools. Do not mark direct remote ChatGPT connection DONE.
+
+### Installed local plugin and Codex compatibility
+
+- The same plugin source was placed at `~/.agents/plugins/plugins/djmrn-windows-local/`; the personal marketplace manifest `~/.agents/plugins/marketplace.json` now has `djmrn-local-marketplace` entry and was written as UTF-8 **without BOM** after an initial malformed BOM was detected and corrected.
+- `codex plugin add djmrn-windows-local@djmrn-local-marketplace --json` returned successful installation; cached at `~/.codex/plugins/cache/djmrn-local-marketplace/djmrn-windows-local/0.1.0/`. Node launcher syntax check exited 0.
+- Independent local `server/launch.mjs` + MCP initialization/list-tools smoke tests passed for **Windows Commander (57 tools)**, **OpenDesk (22)**, and **Windows-MCP (21)**. Prior Playwright isolated browser click/screenshot test had passed; bundled Playwright launcher remains configured but a separate plugin-hosted Playwright call was not yet run.
+- Previous Codex `djmrn-desktop-control@djmrn-local-tools` remains **installed/enabled**, and the older five `djmrn_*` MCP server identities were detected enabled by Codex. No other plugin or Codex configuration was deleted. Running both overlapping sets at once is not advised on the 8 GB laptop. The new local plugin is an alternative; consolidate only after a verified replacement test.
+
+### Owner-authorized browser extension readiness (isolated profiles)
+
+- Created and tested **three persistent, separate Microsoft Edge profiles** under `Desktop/DJMRN-ChatGPT-Downloads/browser-profiles/`: `browser-mcp` v2.2.3, `chat-on-steroids` v2.1.53, `web-gpt-agent` v2.3.1. For each, a real Edge browser started, the Manifest V3 extension background service worker was observed, and the browser exited cleanly.
+- Created three named launch-on-demand shortcuts in `Desktop/DJMRN ChatGPT Tools/` for the above profiles. The extension's declared broad site/debugger/tabs permissions apply in its own testing/working profile. These do **not** silently install the extension into the user's personal Chrome profile or copy cookies, passwords or existing sessions.
+- Earlier `DJMRN ChatGPT Tools/Agent Browsers/` shortcuts use other isolated profile directories; those were found and preserved. This duplication is **UNRECONCILED** and should be evaluated before scaling/launching both sets. Keep one preferred launcher per integration after an explicit reversible consolidation decision.
+
+### Remote bridge and supported fallback boundary
+
+- The Remote Desktop Commander account reported **62% remote calls remaining at one snapshot**; this may change. The already-connected remote service remains the transport for **this mobile chat**.
+- **Documented OpenAI constraints:** local STDIO MCP plugins work in supported ChatGPT Desktop **local** tasks, not automatically in mobile/web threads. Custom **remote** MCP full write support has plan/workspace restrictions, and remote ChatGPT cannot directly call localhost. OpenAI local Work sync is a separate feature requiring workspace/rollout eligibility and applies to **new desktop-created tasks only**; entitlement **UNVERIFIED** for this account.
+- Current truly quota-independent fallback: open **ChatGPT Desktop Work** (if eligible and local plugin install succeeds) or **Codex local task** on the Windows computer, where MCP processes launch locally. This is **not** proof that the current mobile chat will continue controlling Windows without the Remote Desktop Commander app.
+- No public tunnel, account token extraction, API billing, unknown credit consumption, or browser cookie export was used. Installation and isolated permissions authorized by user do not authorize bypass of platform entitlements or silent consequential external actions.
+
+### Latest NEXT gate
+
+1. In ChatGPT Desktop, verify the new private plugin and/or installed local `djmrn-desktop-control` appears in Plugins for a new **local Work** thread; perform a read-only `list_windows` and an approved test Calc click without calling Remote Desktop Commander. Confirm with observable result and check quota unchanged.
+2. Verify whether the current account has an enabled **local Work sync** permission; if absent, mobile continuity remains unavailable. Do not guess.
+3. Test `djmrn_playwright` through the installed local plugin and choose a single production browser-extension launcher/profile after reviewing permission scope; avoid keeping three browsers/MCP clients running continuously.
+4. After true independent local Work/ChatGPT success, update the architecture authority in Notion and this GitHub test result to `OPERATIONAL` and retire redundant bridges only with separate approval.
+
+**Sources:** [OpenAI desktop-only plugins](https://developers.openai.com/plugins/deploy/desktop-only), [Plugins in ChatGPT](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt), [Custom MCP in ChatGPT](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt), [local Work sync](https://help.openai.com/en/articles/20001548-agent-security-and-local-work-sync-in-chatgpt), [packaging local plugins](https://developers.openai.com/plugins/build/plugins).
