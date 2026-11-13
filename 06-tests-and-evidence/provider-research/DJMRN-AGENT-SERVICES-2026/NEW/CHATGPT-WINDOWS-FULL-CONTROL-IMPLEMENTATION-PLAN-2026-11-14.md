@@ -146,3 +146,44 @@ No capability is DONE just because a package was installed, a server started, or
 **NEXT USER COMMAND EXPECTED:** authorize a concrete S0/S1 action after reviewing this plan. Start with S0 read-only checks and one reversible Windows visual test; don't install the whole stack in one batch. Advance S1 → S2 → S3 → S4 → S5 only when each prior stage has verified real I/O in this same ChatGPT conversation. Keep this file as the single static execution plan in NEW; do not create further redundant plan files.
 
 **Archive action only:** this GitHub document does NOT mean any Windows software was downloaded, installed, activated, connected, tested, or granted new rights.
+
+
+---
+
+## I. Owner-authorized 19-file installation register — 2026-11-14
+
+**Authority / intent:** Owner explicitly requested this exact 19-file set to be installed sequentially, tested where feasible, and given Windows shortcuts where an interactive launcher exists. This updates the **existing NEW execution plan**, not the historical 19-tool discovery catalog.
+
+**Download audit:** 19/19 local download artifacts verified on DJMRN Windows staging area in the preceding run. This does **NOT** imply 19 separate installable applications: five are packaged CLI libraries, two are browser extensions, one is source-only, and several are portable programs or GUI installers. Installation, compatibility and ChatGPT connection have different acceptance gates.
+
+| # | Software/artifact | Delivery | State at registration | Next installation/verification task |
+|---:|---|---|---|---|
+| 01 | Windows-MCP | Python wheel | Downloaded; isolated venv executable present | Verify import, CLI/help, visual MCP transport; create on-demand shortcut |
+| 02 | Playwright MCP | npm package | Downloaded; local npm executable present | Verify CLI, isolated non-authenticated browser run; launcher shortcut |
+| 03 | Chrome DevTools MCP | npm package | Downloaded; local npm executable present | Verify CLI and browser compatibility; launcher shortcut |
+| 04 | OpenDesk | Python wheel | Downloaded; isolated venv interpreter present | Verify installed module/CLI and GUI transport; shortcut if invocable |
+| 05 | Backboard Desktop | Pinned GitHub source ZIP | Downloaded; source only; no installed Windows app observed | Inspect build/install prerequisites; resource/cost gate before building VS Code-sized app |
+| 06 | Chat On Steroids | Windows x64 installer | Downloaded; not installed | Review installer/signature/Windows Defender; user-scoped installation if safe; shortcut |
+| 07 | Chat On Steroids browser extension | ZIP extension | Downloaded; not activated | Extract staged extension; browser permission grants require separate owner action |
+| 08 | Windows Commander MCP | Windows ZIP | Downloaded; portable EXE extracted | Check .NET runtime, CLI, safe execution; launcher shortcut |
+| 09 | chatgpt-use | Windows ZIP | Downloaded; portable EXE extracted | Verify --help and tool requirements; only launch locally after terms/privacy review |
+| 10 | MCP Plugins With ChatGPT Web | GitHub source ZIP | Downloaded; npm dependencies installed | Inspect build scripts; build if safe; launcher, no authenticated Chrome access |
+| 11 | Browser MCP | GitHub source ZIP | Downloaded; pnpm dependencies installed | Inspect build scripts; build if safe; extension remains disabled until permission review |
+| 12 | codex-browser-bridge | Windows EXE | Downloaded; portable file staged | Verify CLI/help and setup; create on-demand shortcut |
+| 13 | Browser Use | Python wheel | Downloaded; isolated venv installed | Verify import/CLI, optional browser dependencies, no cloud billing |
+| 14 | chrome-use | Windows archive | Downloaded; portable EXE extracted | Verify CLI/help, shortcut; no account automation without review |
+| 15 | gptme | Windows x64 installer | Downloaded; not installed | Review signature/Defender; user-scope install and shortcut where safe |
+| 16 | ChatGPT Desktop Community | Windows x64 installer | Downloaded; not installed | Review installer; user-scope install and shortcut; do not migrate credentials |
+| 17 | Yep Anywhere | Windows x64 installer | Downloaded; not installed | Review installer; user-scope install and shortcut; no external agent connections |
+| 18 | Web GPT Agent | Windows x64 installer | Downloaded; not installed | Review installer; user-scope install and shortcut; no ChatGPT account takeover |
+| 19 | Web GPT Agent browser extension | ZIP extension | Downloaded; not activated | Extract staged extension; owner approval needed for Chrome permissions |
+
+### Required install sequence and acceptance
+
+1. **Before each change:** verify provenance/official source and SHA where published; inspect executable signature/Defender results, free use and dependencies; do not force elevation/disable UAC or Defender; install per-user/in isolated directories if possible. If an installer needs privileged rights, unexpected account access or provider billing, **stop that item, record blocker**, and continue other independent items.
+2. **Installed means:** executable/module is present and verified via version/help/import or a smoke test; browser extension staging does not equal browser-activated; source extraction does not equal compiled app. The user asked for full installation; differentiate VERIFIED/INSTALLED, PARTIAL/EXTRACTED, BLOCKED and NOT-STARTED rather than asserting success.
+3. **Shortcuts:** add only useful on-demand shortcuts to the Windows Desktop, preferably inside one `DJMRN ChatGPT Tools` folder. For MCP servers/CLI tools use explicitly named `Launch ...` shortcuts or documentation; never start 19 persistent agents automatically. For extensions, keep setup documentation and unpacked files until browser permissions are reviewed.
+4. **Validation:** no secrets/passwords/cookies transferred; do not log in to ChatGPT Web through automation until account/platform terms are reviewed; no paid credits or new remote exposing ports; report local state honestly.
+5. **Continuity:** this is the current user-authorized installation checklist. Return to the S0–S5 end-to-end operating tests in the same file afterward. The connected remote desktop transport may have quota, so installing local MCP tools alone is not a replacement for an authorized bridge into this conversation.
+
+**At registration:** the initial tool inventory confirmed 19/19 files exist, and these already installed/staged executables were detected: Windows-MCP, OpenDesk, Browser Use, Playwright MCP, Chrome DevTools MCP, Windows Commander MCP, chatgpt-use, chrome-use and codex-browser-bridge. GUI installer execution and real browser/session integration **not yet confirmed**. Exact completed work to be verified from the Windows machine before claiming a completed item.
