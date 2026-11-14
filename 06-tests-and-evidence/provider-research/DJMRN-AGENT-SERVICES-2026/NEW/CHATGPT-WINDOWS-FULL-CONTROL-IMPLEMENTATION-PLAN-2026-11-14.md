@@ -389,3 +389,43 @@ No capability is DONE just because a package was installed, a server started, or
 **Status:** **HOST_PROJECT_REGISTRATION_REPAIRED / ANDROID_REMOTE_SYNC_UNVERIFIED**. Mobile Codex may need refreshing/reopening (not reinstalling or revoking device) to reload project list; actual Android list update needs a user screenshot or a mobile-initiated task result. If phone still shows perpetual spinner despite now-populated desktop projects, the remaining fault is likely **Android project-list cache, app-server remote synchronization, or service bug** rather than missing local folder, and must be diagnosed from phone version/connection state and narrow remote diagnostics. Do not assign blanket trust to all newly generated paths, disable Firewall/Defender, delete mobile storage or re-pair the phone without evidence.
 
 **External issue evidence (not proof of exact user bug):** Official Codex issue [Windows/Android Remote picker stale #44582](https://github.com/openai/codex/issues/44582); official [Remote connections](https://learn.chatgpt.com/docs/remote-connections) and [Codex on mobile](https://learn.chatgpt.com/docs/mobile).
+
+
+---
+
+## Q. Browser-open remote bridge research and Commander quota fallback — 2026-11-14
+
+**User goal:** With Chrome/Edge on the laptop and ChatGPT web page open, find a free-first method for **this existing mobile ChatGPT conversation** to use local Windows tools without consuming Remote Desktop Commander. Also reassess already installed 19 artifacts versus a real remote endpoint. **Research/proposal only, no new provider, tunnel, remote server, security permission, or billable service activated.**
+
+### Verified snapshot
+
+- Remote Desktop Commander `who_am_i` live reported **remote_calls_left_pct = 60** (40% consumed). `DJMRN-LAPTOP` **Online**, agent version `0.3.2`. Service exposes a percentage, **not** an exact count of calls. Source: connected Remote Desktop Commander account API, same conversation.
+- Existing chat context: ChatGPT Desktop Work `On your computer` used the private `DJMRN Windows Local` plugin to complete `djmrn_windows_commander.list_windows` with result `Succeeded. 7 windows returned.` This is independent **local task execution**, not proof of mobile/browser same-thread remote access. Codex Remote Android project picker still failed to load projects after host project registration; remain UNVERIFIED.
+- Actual connected Browser plugin call from **this mobile chat** failed with `Browser access requires the originating browser context. Open ChatGPT in the browser with the connected extension and try again.` Therefore ChatGPT's browser-tab reader **does not** currently see the PC's browser tabs from this thread. Browser must be origin-connected.
+
+### Candidate transports and boundaries
+
+| Mechanism / evidence | Existing installed desktop tools reused | Same-mobile-chat path | Cost/availability gate | Assessment |
+|---|---|---|---|---|
+| Official ChatGPT Chrome/Edge extension + ChatGPT web / Desktop | Existing browser/profile/Chrome tabs | **Not automatically**: browser control requires correct originating browser session and account permissions; does not expose whole Windows desktop | Existing subscription permissions, no new provider budget evidenced | Strong **local-origin browser** route, NOT replacement for mobile-to-Windows full-device bridge |
+| ChatGPT Desktop local Work + `DJMRN Windows Local` | Windows Commander/OpenDesk/Windows-MCP/Playwright | **Local on PC tested**; mobile continuation via *new* locally-originated Work tasks requires optional Local Work Sync rollout and workspace permissions. The old current mobile chat does not migrate. | Local Work Sync eligibility UNVERIFIED | Best **already-working fallback** when operating ChatGPT on PC |
+| OpenAI Secure MCP Tunnel (`openai/tunnel-client`, official) | Any compatible existing local stdio MCP, with scoped permission proxy | **Architecturally correct**: OpenAI-hosted authenticated outbound HTTPS tunnel connects private host to ChatGPT custom remote MCP | Requires Platform `tunnel_id`, runtime API key and org/workspace Tunnels roles; **pricing/overage and account remote write entitlement UNKNOWN => DENY deployment** | Best candidate for **genuine remote MCP**, not yet available/installed; no inbound port necessary |
+| `Mirochill/browser-pilot` (GitHub Cloudflare Worker + Chrome MV3 extension + OAuth) | Chrome tabs only; not the installed local Windows Commander | Potential web remote browser MCP, **author explicitly says mobile ChatGPT not validated** | Cloudflare Workers + KV + SQLite Durable Objects have a limited Free tier, but ChatGPT custom MCP write permissions remain workspace-gated; highly young project, 1 commit/0 stars at inspection | Research alternative only, not an established Windows desktop replacement |
+| `Officially-aditya/browserControl` (remote HTTPS/OAuth + extension WSS) | Existing Chrome browser session only | Remote browser MCP in architecture; cannot control full Windows/apps | Relay/free usage and security review unverified | Alternative to Browser Pilot with the same remote MCP entitlement boundary |
+| `Draivix/chatgpt-gateway` or `DrA1ex/chatgpt-bridge` (logged-in chatgpt.com tab automation) | Uses signed-in ChatGPT browser tab as an unofficial message client | Exposes/automates **ChatGPT UI or messages**, does NOT register OS tools in this remote thread or act as authenticated remote MCP | Reliability, terms, security and account/session risk unverified | **Do not treat as a quota-free same-chat desktop control solution** |
+| Other 19 local executables/GUI agents (`OpenDesk`, Windows-MCP, Windows Commander, Browser MCP, Playwright, codex-browser-bridge, Chat On Steroids, Backboard, gptme, etc.) | Locally installed/tested | No standalone internet relay from a mobile ChatGPT thread unless paired with **separate supported transport and entitlement** | No external model/provider billing assumed | Local execution layer only, **not** 19 alternative remote conduits |
+
+**Official sources:**
+- https://help.openai.com/en/articles/20001277-using-the-built-in-browser-in-the-chatgpt-desktop-app
+- https://help.openai.com/en/articles/20001256-plugins-in-chatgpt
+- https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt (full custom web MCP currently Business/Enterprise/Edu; plan/workspace-specific gating)
+- https://help.openai.com/en/articles/20001548-agent-security-and-local-work-sync-in-chatgpt (new desktop-originated local Work tasks; member/workspace rollout)
+- https://developers.openai.com/api/docs/guides/secure-mcp-tunnels
+- https://github.com/openai/tunnel-client/releases (Windows build with checksum files; no installation authorized by this research)
+- https://github.com/Mirochill/browser-pilot
+- https://github.com/Officially-aditya/browserControl
+- https://developers.cloudflare.com/workers/platform/pricing/ (Workers free 100,000 requests/day; KV + SQLite Durable Objects free tier within limits)
+
+**Recommendation, not action:** (1) Preserve remaining Commander quota for high-value diagnosis/management. (2) Use verified ChatGPT Desktop local Work/Codex for on-PC Windows and coding tasks. (3) To regain mobile remote access, first check existing account's Local Work Sync access; if unsupported, check **official Secure MCP Tunnel entitlement and zero-overage pricing** before asking authorization to create any Platform credentials, tunnel, or plugin. If not accessible, **STOP for same-chat mobile remote**, rather than deploying a risky unvetted third-party relay or pretending that opening ChatGPT web creates a local tool bridge.
+
+**Current decision:** no new installs, charges or remote listeners; this is a technology/availability discovery. **Status: fallback-local PROVEN; fallback-mobile SAME CHAT UNVERIFIED.**
