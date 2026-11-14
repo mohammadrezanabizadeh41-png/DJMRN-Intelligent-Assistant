@@ -429,3 +429,29 @@ No capability is DONE just because a package was installed, a server started, or
 **Recommendation, not action:** (1) Preserve remaining Commander quota for high-value diagnosis/management. (2) Use verified ChatGPT Desktop local Work/Codex for on-PC Windows and coding tasks. (3) To regain mobile remote access, first check existing account's Local Work Sync access; if unsupported, check **official Secure MCP Tunnel entitlement and zero-overage pricing** before asking authorization to create any Platform credentials, tunnel, or plugin. If not accessible, **STOP for same-chat mobile remote**, rather than deploying a risky unvetted third-party relay or pretending that opening ChatGPT web creates a local tool bridge.
 
 **Current decision:** no new installs, charges or remote listeners; this is a technology/availability discovery. **Status: fallback-local PROVEN; fallback-mobile SAME CHAT UNVERIFIED.**
+
+
+### 2026-11-14 follow-up: verified permission, quotas, licenses and setup gates
+
+**Research-only.** Inspected current official Secure MCP Tunnel documentation, official GitHub tunnel-client README/releases, direct GitHub source README for `Mirochill/browser-pilot` and `Officially-aditya/browserControl`, Cloudflare Durable Objects Free pricing and OpenAI ChatGPT custom-MCP plan/permission help. No deployment, browser permission change, tunnel, token or charge made.
+
+| Dimension | Official Secure MCP Tunnel | Browser Pilot | browserControl |
+|---|---|---|---|
+| Scope | Private **Windows MCP**, browser or file tools exposed to supported product | Chrome tabs only, no arbitrary Windows UI/files | Existing Chrome tabs only, no arbitrary Windows UI/files |
+| Working transport | Outbound HTTPS `api.openai.com:443` → OpenAI-hosted tunnel → private stdio/HTTP MCP; Platform tunnel ID + runtime API key | Self-host Cloudflare Workers/KV/SQLite Durable Object + GitHub OAuth + MV3 Chrome extension/CDP | Local stdio/loopback OR hosted HTTPS OAuth/WSS relay (author-operated Railway endpoint) + Chrome extension/CDP; selfhosting possible with persistent state and relay secrets |
+| Current mobile-chat availability | **UNVERIFIED/BLOCKED by entitlement** for full write MCP on current personal plan; ChatGPT custom MCP connections created on web, not mobile | **NOT VALIDATED** for ChatGPT mobile per project author; ChatGPT custom MCP entitlement remains independent | Remote MCP-compatible agent supported by project, but **not demonstrated inside this existing mobile ChatGPT chat**; entitlement remains |
+| Official service/software costs | Client source/release public, no explicit tunnel per-call/free pricing stated in official tunnel doc; Platform key/role required, API usage could bill if Responses API used; **cost UNKNOWN -> DENY** until account billing controls and feature access confirmed | No extra AI API key required for project; Cloudflare Workers Free includes SQLite Durable Objects with hard daily caps. Actual Workers/KV/DO usage and all service permissions require preflight verification | Project README claims MIT but root LICENSE file was not found by GitHub fetch; hosted Relay price/uptime/privacy terms **UNVERIFIED**; self-host hosting/Redis costs unknown |
+| Security controls | Workspace + Platform RBAC; outbound-only; bound server permissions; operational health; default 600 MCP req/min, max 10 MiB serialized payload, 120 s request deadline | GitHub OAuth allowlist, 6-character pairing, 2-hour browser session, 30-day device token; global signed-in tabs readable, heuristic sensitive action controls; no desktop/clipboard/file-upload APIs; root LICENSE not found and README has no explicit project license → rights **UNVERIFIED** | OAuth PKCE, per-device relay credentials, pause/tab leases, URLs limited to HTTP(S); hosted relay carries screenshots/browser commands and accesses signed-in pages; security trust and hosted terms need assessment |
+| Maturity/test evidence | Official OpenAI repository latest inspected release v0.0.20 (2026-11-06), Windows amd64/arm64 release assets and SHA256SUMS | README version 0.2.3, describes 257 **mostly mocked** checks and limited native Chrome probes; no mobile end-to-end | README documents local and remote real Chrome canaries; source code public, claims MIT; no confirmed mobile ChatGPT test |
+
+**Formal finding:** Secure MCP Tunnel is the strongest **OS-wide bridge architecture**, but not a confirmed viable feature for this ChatGPT mobile plan. As of the reviewed 2026 Help Center article, full custom MCP on ChatGPT web is Business/Enterprise/Edu, Pro supports read/fetch only, and **creating custom MCP connections from mobile is unsupported**. Do not infer that the inability to *create* on mobile proves already-created tools never work in mobile; that specifically remains untested. Tunnel does not expand ChatGPT entitlements.
+
+**Preference:** Continue using already-proven local `DJMRN Windows Local` / Work for PC-side tool operations. If a *supported* ChatGPT workspace/Platform tunnel permission and zero-overage billing become confirmed, prototype official tunnel with a single harmless read-only MCP `list_windows` instead of all 57 filesystem/UI operations. For browser-only fallback, `browserControl` has clearer local/remote architecture and a hosted relay but greater third-party session risk; `Browser Pilot` demands selfhosting setup and has unverified software license. Neither solves Android mobile same-chat privilege bottleneck today.
+
+**Source URLs:**
+- https://developers.openai.com/api/docs/guides/secure-mcp-tunnels
+- https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt
+- https://github.com/openai/tunnel-client/releases
+- https://github.com/Mirochill/browser-pilot/blob/main/README.md
+- https://github.com/Officially-aditya/browserControl/blob/main/README.md
+- https://developers.cloudflare.com/durable-objects/platform/pricing/
