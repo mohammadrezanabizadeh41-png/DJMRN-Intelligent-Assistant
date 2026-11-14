@@ -530,3 +530,20 @@ No capability is DONE just because a package was installed, a server started, or
 **Cleanup and residuals:** Inline PowerShell `try/finally` stopped only the two known pilot child processes after identity verification. Confirmed zero listeners on TCP 18677 and no leftover pilot cloudflared or Python processes. No full-access Chat On Steroids service was published; its login and scoped workspace were not changed. A `.ps1` file attempt was blocked by existing Windows PowerShell ExecutionPolicy, which was **not** modified; the same legitimate console commands were run directly and completed. Retest local logs remain in `Desktop/DJMRN-ChatGPT-Downloads/` for debugging; no secrets or public hostname committed.
 
 **Next decision:** Do not retry by weakening Windows Firewall, disabling security policy or exposing the full Windows controller. If further remote access is needed, test only this same isolated read-only MCP probe on a **different reliable VPN/network route** or evaluate an approved official tunnel. It is still not proven that ordinary mobile ChatGPT Plus can invoke a custom remote MCP tool; first obtain reliable remote transport. User-facing conclusion: permission alone did not fix the 502/530 problem; remote fallback remains **NOT OPERATIONAL**.
+
+
+---
+
+## U. Browser-only CoS route examined on live Windows UI — no remote MCP bypass
+
+**User asked:** Return to browser settings to avoid tunnel / API / Cloudflare / alternative remote-relay steps while retaining goal of same ordinary ChatGPT mobile thread directly calling Windows tools.
+
+**Live GUI evidence (2026-11-14):** On the connected Windows laptop, `Chat On Steroids → Settings → Setup → Browser` displayed `Signed in. ChatGPT is connected.` and the two choices `In Chat On Steroids — Use the app's built-in browser` and `In your browser — Use Edge and your existing profile`. The browser extension remains paired; these choices affect **where ordinary ChatGPT chat renders / interacts with the browser**, not network access from OpenAI's remote MCP tool execution to local Windows.
+
+`Settings → Setup → Tunnel → Advanced → METHOD` ComboBox was directly expanded using Windows UI Automation and returned exactly: `OpenAI Secure MCP Tunnel (recommended)`, `Cloudflare quick tunnel`, `Local only - I run my own tunnel`. The third mode explicitly presupposes a separately supplied external tunnel; it is **not** a standalone browser-only bridge usable from ChatGPT mobile. The CoS UI still reads `Not connected` for Core. The developer's official setup documentation mandates completing `Tunnel → API key → Connect → ChatGPT`, then registering the Core plugin before full Windows/file/terminal tools can be invoked.
+
+**Finding:** The installed browser extension can support ChatGPT UI communication / login locally but there is **no documented or observed browser-only configuration** that makes this same mobile ChatGPT chat call local desktop MCP without a reachable registered MCP transport or other supported remote bridge. Using `In Chat On Steroids` built-in browser instead of Edge does not remove that gate. Do not misrepresent a paired browser session as an operating remote control connection, and do not attempt unsafe scraping/DOM automation to bypass ChatGPT platform MCP permissions.
+
+**Action/side effects:** Read-only inspection of live GUI / expansion of dropdown; METHOD preserved unchanged on `OpenAI Secure MCP Tunnel`. Browser step left showing successful account login. No new tunnel, public port, key, app/plugin, API charges, or chat turn was initiated.
+
+**Source:** https://github.com/totec448-spec/chat-on-steroids/blob/main/docs/setup.md . Same-mobile-thread access remains through the already connected Remote Desktop Commander while quota is available; alternate local Work can use independently tested plugins on the PC but it is not the user-requested mobile ordinary chat route.
