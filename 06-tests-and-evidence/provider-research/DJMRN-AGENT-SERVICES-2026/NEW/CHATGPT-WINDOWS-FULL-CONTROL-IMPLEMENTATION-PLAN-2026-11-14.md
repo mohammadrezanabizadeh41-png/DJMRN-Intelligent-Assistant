@@ -455,3 +455,27 @@ No capability is DONE just because a package was installed, a server started, or
 - https://github.com/Mirochill/browser-pilot/blob/main/README.md
 - https://github.com/Officially-aditya/browserControl/blob/main/README.md
 - https://developers.cloudflare.com/durable-objects/platform/pricing/
+
+
+---
+
+## R. Chat On Steroids local zero-paid setup — 2026-11-14
+
+**Action approved:** User requested completion of all free/local Chat On Steroids settings after authenticating to ChatGPT in an isolated Edge browser, explicitly excluding any paid settings, API/Platform billing, credit usage or tunnel cost. Execution on the authorized Windows device was done via existing Remote Desktop Commander; no external ChatGPT API calls were made.
+
+**Observed and VERIFIED on PC:**
+
+- **Chat On Steroids v2.1.53** Windows GUI open at `Settings → Setup`, app remains `Not connected` to Core plugin. Existing isolated Edge profile `Desktop/DJMRN-ChatGPT-Downloads/browser-profiles/chat-on-steroids` loaded the v2.1.53 MV3 extension; ChatGPT authenticated under the owner's account in this dedicated profile. Setup advanced to Step 2/7 after pairing.
+- Selected exactly the preexisting, empty local `C:\Users\Mrn7206\Documents\Codex\DJMRN-Remote-Workspace` folder in the OS picker. CoS registered share identity `/djmrn-remote-workspace` and `Settings → Workspace` confirmed exactly **one shared folder** and matching Windows absolute path. No user files were copied; the preexisting directory was empty and no `.git` repo existed.
+- Access wizard `Full access` was already selected; all four categories `Look at files`, `Change files`, `Browser and desktop control`, `Run programs` were On. `Sub-agent tools` was On. This is a capability scope *within the authorized CoS app*, **not yet a successful tool call from ChatGPT**. `Save a checkpoint before each turn's first edit` changed **Off → On**; snapshots are temporary and are not a substitute for backup/testing.
+- CoS `Settings → Agents & automation → Browser & history`: reports **`browser extension 2.1.53 connected and provisioned`** and **`browser wake channel (browser) authenticated`**, plus `Disconnect browser` button. Model discovery initially timed out; a single Refresh resulted in **`Available in your ChatGPT account — checked [local time]`**, i.e. free browser UI-based model discovery passed. No model/API inference was initiated.
+- Corrected dangerous inherited browser-tool authorizations: `Allow unattributed calls` **On → Off**; `Trust only selected chats` **Off → On**. This avoids using full Windows tools from unidentified/untrusted chats. New CoS chats will need individual trust before desktop tool actions. Do not switch these back for ease.
+- Low-RAM/no-unrequested-usage controls: `Automatically recover unfinished answers` On→Off; `Background chats` On→Off; `Open tabs only when asked` Off→On; `End background processes of workers asleep for more than 30 minutes` Off→On. `Browser bridge port` left at Auto, `Local control API` Off and `Allow actions` Off, no broad local HTTP listener, auto-start unconfigured. This 8 GB laptop had <1 GB free at some snapshots, so avoid unattended multi-agent runs.
+- Inspected `Settings → Setup → Tunnel` and expanded optional Desktop control. **Core and Desktop are separate ChatGPT MCP plugins/tunnels**; Desktop asks for a second tunnel ID. **No OpenAI Platform tunnel, no restricted API key, no custom remote ChatGPT MCP plugin, no paid provider, no Cloudflare relay was created or activated.** Tunnel and API key stages intentionally STOPPED, as price/entitlement unknown under Free First.
+- The program was left on **Setup → Tunnel** with banner **`Not connected`**. It must NOT be described as a functional replacement for Remote Desktop Commander from this existing mobile ChatGPT chat. Local browser pairing/permission setup is completed; remote Core/desktop MCP transport is not.
+
+**Security/authority:** User directly completed OAuth/sign-in; no passwords, OTPs, cookies, session tokens, API keys or screenshots containing them were saved to GitHub/Notion. The extension can observe/automate ChatGPT page content locally according to the developer's own responsible-use notice, and this browser interface is not an official public API. Keep it in the dedicated Edge profile and only use user-trusted chats.
+
+**Future gate:** Verify user has supported custom ChatGPT MCP entitlements, official Platform tunnel access and clear zero-overage pricing before proposing a read-only Core tunnel test. Never create Platform credentials or connect by bypassing plan/workspace capabilities. Do not enable extra desktop tunnel as a shortcut. Existing ChatGPT Desktop local Work and Windows Commander MCP remain the proven zero-additional-provider execution path.
+
+**Upstream reference:** https://github.com/totec448-spec/chat-on-steroids/blob/main/docs/setup.md and https://github.com/totec448-spec/chat-on-steroids/blob/main/README.md.
