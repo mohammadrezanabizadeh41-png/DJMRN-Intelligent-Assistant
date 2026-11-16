@@ -1,3 +1,15 @@
+## 2026-11-16 — PENDING: REMOTE COMPUTER SUPPORT SERVICE EXPANSION (USER-REQUESTED HOLD)
+
+**نوع کار:** ثبت ایده و اقدام آینده؛ به‌روزرسانی خدمات کامپیوتری فعلی DJMRN. **وضعیت:** PENDING / NOT STARTED؛ درخواست صریح کاربر در ۲۰۲۶-۱۱-۱۶: اکنون به‌دلیل درگیری با پروژه‌های دیگر، فقط ثبت و یادآوری، **نه اجرای تغییر در آگهی‌ها/پروفایل‌ها**.
+
+- **خدمات موجود حفظ شوند:** خدمات حضوری نصب و راه‌اندازی ویندوز، نرم‌افزار و خدمات کامپیوتری که قبلاً در سایت‌های خدماتی ثبت شده‌اند. از همان سوابق و فهرست سایت‌های ثبت‌نام‌شده در GitHub شروع شود؛ هیچ پروفایل تازه یا جایگزینِ ناخواسته ایجاد نشود.
+- **خدمات جدید برای افزودن بعداً:** پشتیبانی کامپیوتر از راه دور (Remote Support) شامل عیب‌یابی و رفع مشکل ویندوز و نرم‌افزارها، تنظیمات و مشکلات شبکه/اینترنت، بازیابی و رفع مشکلات فایل/سیستم در حد امکان و با رعایت بکاپ، نصب/پیکربندی برنامه و سایر سفارش‌های نرم‌افزاری قابل انجام از طریق نشست ریموت با رضایت مشتری.
+- **شرایط عملی ارائه:** دستگاه مشتری بالا بیاید و اینترنت/راه اتصال امن برقرار باشد؛ فقط با تأیید و مجوز صاحب دستگاه، محدوده مشخص، بکاپ قبل از تغییر پرخطر، رعایت امنیت و حریم خصوصی؛ هیچ تضمین حل همه مشکلات از راه دور داده نشود.
+- **اجرای آینده (پس از اعلام فرصت توسط کاربر):** ۱) فهرست و متن فعلی خدمات/سایت‌های ثبت‌شده را از GitHub و خود پروفایل‌ها بخوان؛ ۲) متن مستقل خدمات حضوری و ریموت + دامنه و محدودیت‌ها را آماده کن؛ ۳) با تأیید کاربر پروفایل‌های موجود را به‌روزرسانی و نتیجه را بررسی کن؛ ۴) بعد از تکمیل، یادآوری مرتبط را غیرفعال کن.
+- **پیگیری:** یادآوری تکراری ChatGPT هر ۱۲ ساعت، ساعت ۱۰:۲۱ و ۲۲:۲۱ به وقت تهران، فعال از ۲۰۲۶-۱۱-۱۶؛ یادآوری صرفاً فرصت اجرا را می‌پرسد و هیچ انتشار/ویرایشی خودکار انجام نمی‌دهد.
+
+---
+
 ## 2026-11-12 — GOOGLE-STACK-FIRST CLOUD AGENT WORKSPACE — OWNER CLARIFICATION (CURRENT)
 
 **Owner corrected two prior misunderstandings:** (1) Building Gmail/job automation or portfolio FIRST is wrong; (2) restarting vendor/host search and treating previously researched Google services as only one among new alternatives is ALSO wrong. The CURRENT NEXT PROJECT is **create an operational, reusable Google-based cloud agent environment FIRST** with the existing researched Google services, then define user-selected applications (Gmail/job/market/research etc.) later. Keep all earlier Google/Gmail/ADK research and future business workflows, do not lose them.
