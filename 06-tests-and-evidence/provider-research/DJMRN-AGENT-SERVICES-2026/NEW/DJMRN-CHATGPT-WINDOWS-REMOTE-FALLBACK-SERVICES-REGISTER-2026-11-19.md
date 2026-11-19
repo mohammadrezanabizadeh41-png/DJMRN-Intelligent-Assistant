@@ -1,0 +1,95 @@
+# DJMRN — ChatGPT ⇄ Windows: Remote Commander fallback services and native alternatives
+
+**Research snapshot:** 2026-11-19. **Status:** CANDIDATE REGISTER / NOT APPROVED TO INSTALL OR PURCHASE. **Canonical live operational log:** [existing Windows control implementation plan](CHATGPT-WINDOWS-FULL-CONTROL-IMPLEMENTATION-PLAN-2026-11-14.md), sections N–V. This page catalogs investigated options and a proposed test order, not a second CURRENT operational authority.
+
+**User's practical goal:** When Remote Desktop Commander runs out of its free quota, continue user-authorized Windows 11 file, process, coding, browser and GUI work from ChatGPT on Android or on the laptop, ideally free; only consider an independently verified USD $4–5/month capped plan after approval. Do not assume a local MCP server is automatically callable from an existing phone-originated Chat thread.
+
+## A — First-party ChatGPT routes: these are not the same feature
+
+| ID | Route | How it works / prerequisite | Proven DJMRN state or blocker |
+|---|---|---|---|
+| O01 | **ChatGPT Desktop Work (local)** | Native desktop Work task executes on the PC and may call approved local plugin tools; host app/session running, computer awake | **PASS** historical 2026-11-14: private **DJMRN Windows Local** v0.1.0 had four MCP servers enabled in Windows desktop Work; one real **djmrn_windows_commander.list_windows** call returned **Succeeded. 7 windows returned.** Independent of Remote Commander relay, but consumes applicable Work usage |
+| O02 | **ChatGPT Remote / Control this Mac or PC** | In desktop app, Settings → Connections → Control this Mac or PC; pair Android via QR; start, approve or supervise supported desktop-hosted tasks from mobile **Remote** tab | Windows **Allow connections On**, **Keep this PC awake On**, and previously paired Android seen; mobile E2E result **UNVERIFIED**; prior Codex remote project picker was blocked |
+| O03 | **Local Work Sync** | Newly created local **Work** task on desktop continues **the same Work conversation** on mobile/web, if both Local Work and Cloud Work + workspace/rollout Sync are enabled; requires awake connected PC for local tools | **NOT TESTED**, user account/workspace entitlement **UNVERIFIED**. Existing tasks and this ordinary mobile Chat do not migrate to local Work automatically |
+| O04 | **Codex Remote on Android** | Supervises suitable desktop Codex project/task from mobile Remote, not identical to Work Sync or Cloud Codex | Historical phone **Loading recent projects…**. Local Codex project was registered again on PC, but mobile verification after repair **UNVERIFIED**. Parent plan §§O–P |
+| O05 | **Native ChatGPT Windows Computer Use plugin** | First-party desktop Work/Codex computer GUI/app controls where available; no third-party relay necessarily required for desktop-local invocation | Computer Use toggle was previously On, but native GUI E2E and Android remote follow-through not proven. Account/rollout and tool capabilities must be checked |
+| O06 | **DJMRN Windows Local private Plugin Creator plugin** | Existing private plugin that routes local Work to four existing installed Windows/browser MCP backends | One native Work tool proven (§N), not all tools tested; *this normal phone chat's* plugin lookup later said **not_installed**, which does not prove removal from desktop Work |
+| O07 | **Windows Commander MCP / Windows-MCP / OpenDesk / Playwright / Chrome DevTools MCP** | Local backends only, not an internet bridge | 57/21/22 tool enumeration and Calculator 2+2=4 local smoke, plus Playwright browser task proven (§V); mobile Chat remote use not proven |
+| O08 | **OpenAI Secure MCP Tunnel / tunnel-client** | Authenticated outbound private-to-OpenAI MCP bridge; needs Platform tunnel, role, API credential and supported ChatGPT connector | Research only; zero-overage pricing, account entitlement **UNKNOWN → DENY**. No tunnel activated |
+| O09 | **Cloud Work or Codex Cloud** | OpenAI cloud computer/hosted coding; not direct control of owner's existing Windows machine | Can act on synced source repositories but is **not equivalent** to local file/GUI access; Work/Codex allowance applies |
+| O10 | **Work/Codex Voice** | Input method for existing Work/Codex, inherits selected tool permissions | Not an independent remote bridge or MCP quota substitute |
+| O11 | **Dots connected-computer workflow (subject to availability)** | Potential future first-party proactive computer interaction | Availability, device pairing and cost **UNVERIFIED**; do not assume accessible or necessary |
+
+**Names:** The user's spoken “Local Voice Saying Scenes” is provisionally interpreted as **Local Work Sync**. “Workcast” is treated as the previously tested **Work + MCP** route, not as a confirmed separate product. Neither interpretation grants new capability.
+
+**Core distinction:** ChatGPT Remote pairs a mobile surface to supervise/start desktop tasks; Local Work Sync synchronizes a new desktop-originated local Work conversation across devices. Codex Remote is a third, separately scoped Codex route. None guarantees that ordinary preexisting mobile Chat can directly use Windows-local stdio tools.
+
+**Official:** [OpenAI mobile Remote walkthrough](https://developers.openai.com/training/walkthroughs/working-on-your-phone) · [ChatGPT Work, Codex, Cloud and Remote distinctions](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex) · [Local Work Sync requirements](https://help.openai.com/en/articles/20001548-agent-security-and-local-work-sync-in-chatgpt) · [Secure MCP Tunnels](https://developers.openai.com/api/docs/guides/secure-mcp-tunnels) · [custom MCP connections](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt).
+
+## B — Hosted remote Windows MCP services: vendor-published offers, NOT field-tested
+
+All estimates are from vendor pages retrieved/reviewed by 2026-11-19, **not confirmations of the user's signup, availability or Windows permission security**. Prices may vary by tax/location, and provider MCP calls are separate from ChatGPT/Work/Codex allowances.
+
+| ID | Provider and official source | Free allowance claimed | Paid allowance/price claimed | Verified status and notable caution |
+|---|---|---|---|---|
+| R00 | [Desktop Commander Remote](https://desktopcommander.app/pricing/) | **10,000 calls per month** | **USD $20/month + tax** Pro; recurring, no monthly cap subject to other limits | **Existing working connected remote agent**; latest account tool said **9% of monthly calls remaining**, exact count/date not returned; keep emergency access |
+| R01 | [BCD](https://bcd.snack-wrap.com/) · [pricing](https://bcd.snack-wrap.com/pricing) · [comparison](https://bcd.snack-wrap.com/compare/chatgpt-remote) | **1 computer / 20,000 calls per month** appears on main/comparison; other copy talks about no monthly call credits → **CONFLICT** | **Personal from USD $7.99/month** and further tiers | Windows beta/remote MCP marketed, **no DJMRN installation**; free plan consistency and operator/permissions require acceptance |
+| R02 | [PC Remote Commander](https://pc-remote-commander.pcremotecommander.workers.dev/pricing/) · [terms](https://pc-remote-commander.pcremotecommander.workers.dev/terms/) | **15,000 calls/UTC month**, 1 PC | **USD $15/month + tax** Pro recurring | **Windows beta**; terms mention sandbox/staging checkout, production availability needs check; vendor provides install script which MUST be inspected before use |
+| R03 | [Bridgerator](https://bridgerator.recondeck.com/pricing) · [MCP guide](https://bridgerator.recondeck.com/ai-apps) | **10,000 calls/month** | **USD $10/month** Pro | Remote bridge over outbound HTTPS/WSS; no proof of user account/ChatGPT integration or reliability |
+| R04 | [EXZA Remote](https://remote.exza.de/) · [help](https://remote.exza.de/help) · [terms](https://remote.exza.de/legal/agb) | **10,000 accepted calls/UTC month** | **Current paid checkout price UNKNOWN/UNVERIFIED**. Earlier research suggested around EUR 20, not reliable enough to purchase | Proprietary hosted service; free tier explicitly documented, no installed agent verified |
+| R05 | [Shellway](https://getshellway.com/) | **7-day Pro trial, then 50 free actions/day** on one PC | **USD $19/month** Pro | Older $5 Starter mentioned historically but **NOT CURRENTLY verified**; not a confirmed $5/25k offer; monthly free amount would be about 1,500 if used daily |
+| R06 | [Local Commander — localcmd.app](https://localcmd.app/) · [open-source](https://localcmd.app/open-source) · [security](https://localcmd.app/security) | Website says **up to 5 computers and unlimited executions** with concurrency/fair-use caveats | Additional paid computer/device packs are offered; precise current prices **UNKNOWN until confirmed** | Remote cloud MCP plus separate open-source no-account **local-only** edition. **Distinct vendor from R07**. Security page mentions historical antivirus detections: review signed/downloaded binary and risks before activation |
+| R07 | [LocalCommander — localcommander.com.pl](https://localcommander.com.pl/en/pricing) · [terms](https://localcommander.com.pl/terms) | **5,000 remote actions/month**, 1 device per terms; another page mentions 2,000 → conflict to resolve | **Pro €12.99/month; Power €24.99/month** as published | A DIFFERENT domain/product from R06. Discovered during validation; no prior local test; need verify app and geographical support |
+| R08 | [Desktop Commander Local MCP](https://desktopcommander.app/help/getting-started/what-is-desktop-commander) | **Free open-source, no remote-provider quota** if invoked by local MCP client | No vendor remote subscription for local-only use | Not automatically visible to ordinary mobile Chat. User recalls previously connected then disconnected; **current local state unverified** |
+
+**No verified $4–5 capped plan:** No public/current, independently verified offer was found that sells 10k extra Windows remote-MCP calls for $4–5. Prefer usable free plans above and no purchases. Published “unlimited” typically has fair-use/device/rate/client quotas that must be verified at activation. **ZERO paid usage authorized**.
+
+## C — Previously investigated bridges, plugins and adjacent tools
+
+| ID | Candidate | Fit and provenance | DJMRN observed status |
+|---|---|---|---|
+| T01 | [Cloudflare Quick Tunnel](https://developers.cloudflare.com/tunnel/get-started/quick-tunnels/) | Free ephemeral external HTTPS relay to private local MCP, not intrinsically authenticated for full PC | §§S–T: narrow **read-only local MCP PASS**, public tunnel **HTTP 502/530 FAIL twice**, all processes/ports cleaned up; do not expose full-access Windows tools or retry without a new safe reason |
+| T02 | [Chat On Steroids / CoS](https://github.com/totec448-spec/chat-on-steroids) | Browser/desktop integration, optional external MCP tunnel | §§R–U: isolated Edge ChatGPT logged in, extension paired, **Core Not connected**, public access not functional |
+| T03 | **Browser MCP** (existing locally built extension/server) | Browser tabs/actions only, not general Windows filesystem | Local installed/built, **mobile-chat origin still unconnected** |
+| T04 | **Web GPT Agent / MCP Plugins With ChatGPT Web** | Local browser bridge tools, not proof of remote Windows connection | Installed/isolated tests, no proven same-mobile-chat remote path |
+| T05 | [Mirochill/browser-pilot](https://github.com/Mirochill/browser-pilot) | Cloudflare Workers + browser extension, browser-only relay | Previous research §Q; ChatGPT mobile untested, earlier license/usage verification gaps; no installation |
+| T06 | [Officially-aditya/browserControl](https://github.com/Officially-aditya/browserControl) | Hosted browser-only relay and browser extension | §Q researched; hosted relay pricing/security uncertain, no Windows OS-wide authority |
+| T07 | [OpenAI Secure MCP Tunnel official source](https://github.com/openai/tunnel-client) | Reuse local backend with authenticated outbound OpenAI tunnel | Same as O08, **approval/pricing/entitlement blocked** |
+| T08 | **Local coding agents**: Codex CLI, gptme, Backboard Studio, Browser Use, chatgpt-use, Yep Anywhere, Playwright | On-host task executor, not phone-to-Windows transport | Some installed, but model quota and actual remote relay still separate; prefer deterministic Python/Node for simple work |
+| T09 | **Cloud-only browsers** such as TinyFish / Cloud Work browser | Website/cloud use without running an agent on Windows PC | Not a substitute for interacting with owner's real installed Windows apps/files |
+| T10 | **GitHub handoff / cloud repository** | Remote task storage, code and provenance | Working GitHub source authority, NOT a live Windows execution channel |
+| T11 | **Browser tab connector from this ordinary mobile chat** | Requires browser-origin context; mobile cannot see PC tab without supported linkage | §Q: returned origin-context access error, not same-chat Windows control |
+| T12 | **Chat On Steroids built-in browser instead of tunnel** | Changes ChatGPT UI surface, not MCP transport | §U explicitly tested: pairing does not eliminate need for registered remote MCP bridge |
+
+## D — Prior experiments: what was actually proven, what remains open
+
+Historical **PASS:** ChatGPT Desktop Work + DJMRN Windows Local + Windows Commander **list_windows → seven windows**. Independent local Windows-MCP/Commander/OpenDesk test and browser Playwright smoke. Windows desktop `Control this PC` and awake were On, Android paired in settings. Isolated test MCP had one harmless read-only tool and worked only on loopback.
+
+Historical **BLOCKED / UNVERIFIED:** Android Codex Remote picker stuck on Loading recent projects; desktop-side project registration repaired, Android re-test missing. Local Work Sync feature entitlement and phone E2E are unverified. Native Computer Use on Windows/phone end-to-end not proven. CoS Core not connected. Cloudflare public MCP 502/530. This mobile Chat cannot access PC-local DJMRN private plugin from plugin lookup (not_installed context-specific); never equate that with deleted PC package.
+
+## E — Proposed free-first test order (not authorized to execute by this register)
+
+1. **P0 ChatGPT Remote / paired Windows host:** Inspect *mobile Remote* and native desktop Control this PC settings, reuse paired Android, avoid revoking or reconnecting blindly. One safe **read-only** task in preexisting trusted Windows project; confirm actual PC-local result and **no Remote Commander MCP invocation**, and watch Work/Codex usage. If UI absent, record **ENTITLEMENT_UNVERIFIED** rather than assume access.
+2. **P1 Local Work Sync:** Verify local+cloud Work and sync eligibility on the account. Start a **NEW** desktop-originated Work local task using previously proven private plugin; continue on Android; show real tool result from Windows. Do not assume existing Chat task migrates or Work Sync is available on personal Plus.
+3. **P2 Native Desktop Work + Computer Use:** If phone paths blocked, reuse desktop local agent (one proven backend) and check native Computer Use for harmless window listing/Calculator, within existing permission boundaries; this supports on-PC workflows without buying another relay.
+4. **P3 Hosted alternative, ONE only:** Research/verify first-party vendor docs, explicit call accounting, region, payment/overage cutoff, Windows installer signature, scopes, OAuth, client availability; initially compare BCD / PC Remote Commander / Bridgerator / EXZA / localcmd.app. Start no new account/installer without approval. On first approved trial use dedicated *read-only test directory*, observe tool-result provenance and rollback; test mobile Chat connection independently.
+5. **P4 Guardrails:** preserve existing 9% Desktop Commander as emergency; verify next reset from provider UI; no paid plans, no passwords/OTP/API keys, no firewall weakening, no public full-access MCP. If an unknown usage or additional credit is required: **STOP**.
+6. **P5 Canonical completion:** Update only the parent Implementation Plan's CURRENT status after verified live I/O tests and report the exact provider, call quota, real cost, account permissions, RAM, uptime, phone ↔ Windows proof and failure modes; Notion remains architecture/continuity authority.
+
+## F — Current vendor-evidence URLs and caveats
+
+- OpenAI Remote and mobile task pairing: https://developers.openai.com/training/walkthroughs/working-on-your-phone
+- Work versus Codex/Remote and local vs cloud: https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex
+- Local Work Sync limits: https://help.openai.com/en/articles/20001548-agent-security-and-local-work-sync-in-chatgpt
+- OpenAI Secure MCP Tunnel: https://developers.openai.com/api/docs/guides/secure-mcp-tunnels
+- Desktop Commander plans: https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits
+- BCD official main, pricing and compare: https://bcd.snack-wrap.com/ ; https://bcd.snack-wrap.com/pricing ; https://bcd.snack-wrap.com/compare/chatgpt-remote
+- PC Remote Commander beta terms: https://pc-remote-commander.pcremotecommander.workers.dev/terms/
+- Bridgerator pricing: https://bridgerator.recondeck.com/pricing
+- EXZA terms: https://remote.exza.de/legal/agb
+- Shellway pricing: https://getshellway.com/
+- Local Commander free/security: https://localcmd.app/security
+- Distinct LocalCommander pricing/terms: https://localcommander.com.pl/en/pricing ; https://localcommander.com.pl/terms
+- Cloudflare Quick Tunnel docs: https://developers.cloudflare.com/tunnel/get-started/quick-tunnels/
+
+**Caution:** Vendor marketing is not an audited penetration test, entitlement or plan purchase. Always separate facts (official pages, real on-device test outputs), assumptions (availability/compatibility unproven) and judgment (priority). Do not execute unknown remote installer with PowerShell pipe-to-exec, handle secrets in chat or expand privileges without discrete user approval. **No purchase, remote service sign-up, installation, tunnel, API key, privilege change, or Windows test occurred during this registration.**
